@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>0. 知识储备</title>
-    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>$<br>\begin{aligned}<br>&amp;{\large a}_1+{\large a}_2+\cdots+{\large a}_n=\sum\limits_{i=1}^n {\large a}_i\\<br>&amp;{\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}=\sum\limits_{j=1}^n {\large a}_{1j}\\<br>&amp;{\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3=\sum\limits_{i=1}^3 {\large a}_ix_i\\<br>&amp;\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i=\sum\limits_{i=1}^3 {\large a}_ix_i+\sum\limits_{i=1}^3 {\large b}_ix_i\\<br>&amp;\sum\limits_{i=1}^n {\large a}_i=\sum\limits_{j=1}^n {\large a}_j\\<br>&amp;\sum\limits_{i=1}^n k{\large a}_i=k\sum\limits_{i=1}^n {\large a}_i\\<br>\end{aligned}<br>$<br><br><br><br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n} = \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n} = \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm} = \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;\sum\limits_{i=1}^m {\large a}_{in}\\<br>先横着相加再竖着相加：\Rightarrow\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n {\large a}_{2j}+\cdots+\sum\limits_{j=1}^n {\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}\\<br>按竖着相加再横着相加：\Rightarrow\sum\limits_{i=1}^m {\large a}_{i1}+\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m {\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}\\<br>所以\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}<br>\end{array}<br>$<br><br>未完待续……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/06/15/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>1.行列式</title>
     <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
@@ -99,6 +72,19 @@
       </tags>
   </entry>
   <entry>
+    <title>0. 知识储备</title>
+    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>$<br>\begin{aligned}<br>&amp;{\large a}_1+{\large a}_2+\cdots+{\large a}_n=\sum\limits_{i=1}^n {\large a}_i\\<br>&amp;{\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}=\sum\limits_{j=1}^n {\large a}_{1j}\\<br>&amp;{\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3=\sum\limits_{i=1}^3 {\large a}_ix_i\\<br>&amp;\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i=\sum\limits_{i=1}^3 {\large a}_ix_i+\sum\limits_{i=1}^3 {\large b}_ix_i\\<br>&amp;\sum\limits_{i=1}^n {\large a}_i=\sum\limits_{j=1}^n {\large a}_j\\<br>&amp;\sum\limits_{i=1}^n k{\large a}_i=k\sum\limits_{i=1}^n {\large a}_i\\<br>\end{aligned}<br>$<br><br><br><br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n} = \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n} = \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm} = \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;\sum\limits_{i=1}^m {\large a}_{in}\\<br>先横着相加再竖着相加：\Rightarrow\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n {\large a}_{2j}+\cdots+\sum\limits_{j=1}^n {\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}\\<br>按竖着相加再横着相加：\Rightarrow\sum\limits_{i=1}^m {\large a}_{i1}+\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m {\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}\\<br>所以\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}<br>\end{array}<br>$<br><br>未完待续……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.矩阵</title>
     <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是<span class="mark">同型矩阵</span></p>
@@ -116,9 +102,10 @@
 <h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$ \quad A=[{\large a}_{1j}]_{1\times s}\\ \quad A^T=[{\large a}_{j1}]_{s\times1}\\ \quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
 <p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
 <h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><p>$<br>A=<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>B=<br>\begin{pmatrix}<br>     \displaystyle\frac{1}{ {\large a}_{11} }\\<br>     &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$</p>
-<p><br><br><br>$<br>\because<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>    {\large b}_{11}\\<br>    \\<br>     &amp; {\large b}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>\quad=\quad<br>\begin{pmatrix}<br>    {\large a}_{11}{\large b}_{11} \\<br>    \\<br>     &amp; {\large a}_{22}{\large b}_{22}\\<br>     \\<br>     &amp;     &amp; \ddots\\<br>     \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</p>
-<p><br><br><br>$<br>\therefore AB=BA=I\\<br>\therefore A^{-1}=B<br>$</p>
-<p><br><br><br><span class="mark">$AA^<em>=A^</em>A=|A|I$</span></p>
+<p>$<br>\because<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>    {\large b}_{11}\\<br>    \\<br>     &amp; {\large b}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>\quad=\quad<br>\begin{pmatrix}<br>    {\large a}_{11}{\large b}_{11} \\<br>    \\<br>     &amp; {\large a}_{22}{\large b}_{22}\\<br>     \\<br>     &amp;     &amp; \ddots\\<br>     \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</p>
+<p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$</p>
+<hr>
+<p>$AA^{*}=A^{*}A=|A|I$</p>
 <p>推论：</p>
 <p>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</p>
 <p>$\therefore$求逆矩阵先<span class="mark">看行列式是否为零</span></p>
@@ -128,9 +115,7 @@
 <p><br></p>
 <p>$\because P_t\cdots P_2P_1A=I\\ $</p>
 <p>$\therefore A^{-1}=P_t\cdots P_2\;P_1\\ $</p>
-<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}\\ $</p>
-<p><br></p>
-<p>$<br>P_t\cdots P_2\;P_1\;A=I\\<br>P_t\cdots P_2\;P_1\;I=A^{-1}<br>$</p>
+<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}\\ $<br><br><br><br>$P_t\cdots P_2\;P_1\;A=I$<br><br>$P_t\cdots P_2\;P_1\;I=A^{-1}$</p>
 <p>由这两个式子可得：</p>
 <p>A经过多少次行初等变换变成初等矩阵</p>
 <p>单位矩阵就经过同样的行初等变换变成$A^{-1}$</p>
@@ -139,7 +124,7 @@
 <p>$AX=B$<br>如果A可逆，$X=A^{-1}B$</p>
 <p>令$P=A^{-1}$</p>
 <p>由</p>
-<p>$\;PA=I\\<br>PB=X$</p>
+<p>$\;PA=I$<br><br>$PB=X$</p>
 <p>有$\;[A|B]=[I|X]$</p>
 <p>即$\;$遇到$A^{-1}B$时，可以将$A，B$拼在一起将$A$化成单位矩阵就是所求的$X$</p>
 <h2 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h2><h3 id="分成四块"><a href="#分成四块" class="headerlink" title="分成四块"></a>分成四块</h3><p>$<br>\left(\begin{array}{cc|ccc}<br>     1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\<br>     3 &amp; 4 &amp; 0 &amp; 0 &amp; 0\\<br>     \hline<br>     0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br>\end{array}\right)<br>=<br>\left(\begin{array}{cc}<br>     A &amp; O\\<br>     O &amp; B<br>\end{array}\right)<br>$</p>
@@ -164,9 +149,9 @@
 <li><p>如P.Q可逆，则<br>$r(PAQ)=r(A)$<br><br><br></p>
 </li>
 <li>$\;r\left[\begin{array}{cc} A&amp;O\\O&amp;B\end{array}\right]=r(A)+r(B)$<br><br><br></li>
-<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$</li>
+<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$<br><br><br><br>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br><br>$<br>\begin{aligned}<br>&amp;设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>&amp;\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>&amp;A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\end{aligned}<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示$<br><br>$则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\rightarrow在向量组线性表示里$<br><br><br>$<br>\begin{aligned}<br>\therefore r(A+B)&amp;=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\\<br>&amp;\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>\end{aligned}<br>$</li>
 </ol>
-<p>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br><br><br>$<br>设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示\\<br>则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\;\rightarrow\;向量组线性表示里的定理\\<br>$<br><br><br>$<br>\therefore r(A+B)=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>$<br><br><br><br>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
+<p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -175,6 +160,20 @@
         <tag>数学</tag>
         <tag>线性代数</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/06/15/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>初入</title>
