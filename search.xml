@@ -14,52 +14,6 @@
       </tags>
   </entry>
   <entry>
-    <title>3.方程组</title>
-    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$</p>
-<p>的系数行列式</p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$</p>
-<p>则方程组有唯一解</p>
-<p>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$</p>
-<p>其中</p>
-<p>$<br>\qquad D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</p>
-<p>证明：<br>以后补充……<br>推论:</p>
-<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
-<p>若齐次方程(2)有非零解,则$|A|=0$</p>
-<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
-<p>然后化成行最简型矩阵</p>
-<p>矩阵的<strong><u>行</u></strong>初等变换其实就是对应的方程组的三种变换</p>
-<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><p>(1) 无解$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br><br>(2) 唯一解$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br><br>(3) 无穷多解$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt;n$</p>
-<ul>
-<li><p>齐次方程组$Ax=0$<br><br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
-</li>
-<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
-</li>
-</ul>
-<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
-<blockquote>
-<p>基础解系就是齐次方程组解向量的极大无关组<br></p>
-<hr>
-<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
-</blockquote>
-<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><p><strong>例</strong><br></p>
-<p>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br></p>
-<p>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>    1&amp;2&amp;-1&amp;0&amp;-5\\<br>     0&amp;1&amp;-2&amp;1&amp;1\\<br>     2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>    1&amp;0&amp;3&amp;0&amp;-3\\<br>     0&amp;1&amp;-2&amp;0&amp;1\\<br>     0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</p>
-<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
-<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
-</ul>
-<p><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>    x_1-x_2-x_3+x_4=0\\<br>    x_1-x_2+x_3-3x_4=1\\<br>    x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br>   1&amp;-1&amp;-1&amp;1&amp;0\\<br>   1&amp;-1&amp;1&amp;-3&amp;1\\<br>   1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br>   1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br>   0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br>   0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$</p>
-<p>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}\\<br>令\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}\;\Rightarrow\;\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，矩阵的几何意义来结合起来，后面继续拓展深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1.行列式</title>
     <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
@@ -129,6 +83,66 @@
         <tag>数学</tag>
         <tag>线性代数</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>3.方程组</title>
+    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$</p>
+<p>的系数行列式</p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$</p>
+<p>则方程组有唯一解</p>
+<p>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$</p>
+<p>其中</p>
+<p>$<br>\qquad D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</p>
+<p>证明：<br>以后补充……<br>推论:</p>
+<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
+<p>若齐次方程(2)有非零解,则$|A|=0$</p>
+<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
+<p>然后化成行最简型矩阵</p>
+<p>矩阵的<strong><u>行</u></strong>初等变换其实就是对应的方程组的三种变换</p>
+<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><p>(1) 无解$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br><br>(2) 唯一解$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br><br>(3) 无穷多解$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt;n$</p>
+<ul>
+<li><p>齐次方程组$Ax=0$<br><br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
+</li>
+<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
+</li>
+</ul>
+<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
+<blockquote>
+<p>基础解系就是齐次方程组解向量的极大无关组<br></p>
+<hr>
+<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
+</blockquote>
+<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><p><strong>例</strong><br></p>
+<p>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br></p>
+<p>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>    1&amp;2&amp;-1&amp;0&amp;-5\\<br>     0&amp;1&amp;-2&amp;1&amp;1\\<br>     2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>    1&amp;0&amp;3&amp;0&amp;-3\\<br>     0&amp;1&amp;-2&amp;0&amp;1\\<br>     0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</p>
+<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
+<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
+</ul>
+<p><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>    x_1-x_2-x_3+x_4=0\\<br>    x_1-x_2+x_3-3x_4=1\\<br>    x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br>   1&amp;-1&amp;-1&amp;1&amp;0\\<br>   1&amp;-1&amp;1&amp;-3&amp;1\\<br>   1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br>   1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br>   0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br>   0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$</p>
+<p>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}\\<br>令\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}\;\Rightarrow\;\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，矩阵的几何意义来结合起来，后面继续拓展深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/06/15/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>2.矩阵</title>
@@ -208,20 +222,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/06/15/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>初入</title>
     <url>/2021/06/16/%E5%88%9D%E5%85%A5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
@@ -246,35 +246,34 @@
 <p>$\qquad\qquad \beta=k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
 <p>则称向量$\beta$可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示</p>
 </blockquote>
-<p>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=\beta$<br>$\Longleftrightarrow\;方程组$<br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=\beta\;\;有解$<br>$\Longleftrightarrow\;r(\alpha_1\alpha_2\cdots\alpha_m)= r(\alpha_1\alpha_2\cdots\alpha_m\beta)$</p>
+<p>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=\beta$<br><br>$\Longleftrightarrow方程组$<br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=\beta\;\;有解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)= r(\alpha_1\alpha_2\cdots\alpha_m\beta)$</p>
 <p><strong>例</strong></p>
-<p>$设\alpha_1=[1,-1,1]^T，\alpha_2=[-2,1,1]^T，\alpha_3=[4,-3,1]^T，\beta=[3,-1,3]^T\;\;判断\beta能否由\alpha_1\alpha_2\alpha_3线性表示$</p>
-<p>解：<br>$设k_1\alpha_1+k_2\alpha_2+k_3\alpha_3=\beta$<br>$即k_1[1,-1,1]^T+k_2[-2,1,1]^T+k_3[4,-3,1]^T=[3,-1,3]^T$<br>$\quad[k_1-2k_2+4k_3\;,\;-x_1+x_2-3x_3\;,\;x_1+x_2+x_3]^T=[3,-1,3]^T$<br>即<br><br>$\begin{cases}<br>    k_1-2k_2+4k_3=3\\<br>    -x_1+x_2-3x_3=-1\\<br>    x_1+x_2+x_3=-1\\<br>\end{cases}$<br><br><br>$下面就转化为了高斯消元法进行求解出k_1k_2k_3$<br>$\qquad\qquad\downarrow$<br>$\overline{A}=<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}$<br>$\therefore$可以将上面的向量直接转化成增广矩阵进行求解</p>
+<p>$设\alpha_1=[1,-1,1]^T，\alpha_2=[-2,1,1]^T，\alpha_3=[4,-3,1]^T，\beta=[3,-1,3]^T$<br><br>$判断\beta能否由\alpha_1\alpha_2\alpha_3线性表示$</p>
+<p>解：<br>$设k_1\alpha_1+k_2\alpha_2+k_3\alpha_3=\beta$<br><br>$即k_1[1,-1,1]^T+k_2[-2,1,1]^T+k_3[4,-3,1]^T=[3,-1,3]^T$<br><br>$\quad[k_1-2k_2+4k_3\;,\;-x_1+x_2-3x_3\;,\;x_1+x_2+x_3]^T=[3,-1,3]^T$<br><br><br>即<br>$\begin{cases}<br>    k_1-2k_2+4k_3=3\\<br>    -x_1+x_2-3x_3=-1\\<br>    x_1+x_2+x_3=-1\\<br>\end{cases}$<br><br><br>$下面就转化为了高斯消元法进行求解出k_1k_2k_3$<br><br>$\qquad\qquad\downarrow$<br><br>$\overline{A}=<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}$<br><br>$\therefore$可以将上面的向量直接转化成增广矩阵进行求解</p>
 <p>在这里将方程组用矩阵进行表示就可以抽象为<br><br>$<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}<br>\begin{pmatrix}<br>    x_1\\<br>    x_2\\<br>    x_3\\<br>    x_4<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>    -3\\<br>    1\\<br>    -1<br>\end{pmatrix}<br>$<br><br>也就是说一组坐标经过有限次线性变换后可以将其转化成$\beta$</p>
 <h3 id="向量组的线性表示"><a href="#向量组的线性表示" class="headerlink" title="向量组的线性表示"></a>向量组的线性表示</h3><blockquote>
-<p>设向量组<br><br>$(a)\alpha_1,\alpha_2,\cdots,\alpha_s；\;<br> \;(b)\beta_1,\beta_2,\cdots,\beta_t$<br><br>若(a)中的每个向量$\alpha_i(i=1,2,\cdots,s)$<strong>均</strong>可由(b)线性表示，则称向量组(a)可由向量组(b)线性表示,如果两个向量组可以互相表示，则称两个向量组等价</p>
+<p>设向量组<br>$(a)\alpha_1,\alpha_2,\cdots,\alpha_s；\;<br> \;(b)\beta_1,\beta_2,\cdots,\beta_t$<br><br>若(a)中的每个向量$\alpha_i(i=1,2,\cdots,s)$<strong>均</strong>可由(b)线性表示，则称向量组(a)可由向量组(b)线性表示,如果两个向量组可以互相表示，则称两个向量组等价</p>
 </blockquote>
-<p><strong>例</strong><br><br>设A，B均为3阶矩阵，且AB=C<br><br>证明：C的列向量可由A的列向量线性表出若矩阵B可逆，<br>则C和A的列向量组等价。<br><br>设$A=[\alpha_1\;\alpha_2\;\alpha_3],C=[\gamma_1\;\gamma_2\;\gamma_3],B=[b_{ij}]_{3\times3} \longleftarrow A和C都是按照按列进行划分$<br>$由\;AB=C\;有$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>\left[\begin{array}{ccc}b_{11}&amp;b_{12}&amp;b_{13}\\<br>    b_{21}&amp;b_{22}&amp;b_{23}\\<br>    b_{31}&amp;b_{32}&amp;b_{33}<br>\end{array}\right]=[\gamma_1\;\gamma_2\;\gamma_3]<br>$</p>
-<p>即<br><br>$<br>\begin{cases}<br>b_{11}\alpha_1+b_{21}\alpha_2+b_{31}\alpha_3=\gamma_1\\<br>b_{12}\alpha_1+b_{22}\alpha_2+b_{32}\alpha_3=\gamma_2\\<br>b_{13}\alpha_1+b_{23}\alpha_2+b_{33}\alpha_3=\gamma_3\\<br>\end{cases}<br>$<br><br><br>$<br>\therefore\;C的列向量可由A的列向量线性表示<br>$<br>$\because B可逆$<br>$\therefore A=CB^{-1}\;,记B^{-1}=[k_{ij}]_{3\times3}$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>=[\gamma_1\;\gamma_2\;\gamma_3]<br>\left[\begin{array}{ccc}<br>    k_{11}&amp;k_{12}&amp;k_{13}\\<br>    k_{21}&amp;k_{22}&amp;k_{23}\\<br>    k_{31}&amp;k_{32}&amp;k_{33}<br>\end{array}\right]<br>$</p>
-<p>即<br><br>$<br>\begin{cases}<br>k_{11}\gamma_1+k_{21}\gamma_2+k_{31}\gamma_3=\alpha_1\\<br>k_{12}\gamma_1+k_{22}\gamma_2+k_{32}\gamma_3=\alpha_2\\<br>k_{13}\gamma_1+k_{23}\gamma_2+k_{33}\gamma_3=\alpha_3\\<br>\end{cases}<br>$<br><br><br>$ \therefore A的列向量可由C的列向量线性表示$<br>$\therefore C的列向量可由A的列向量线性表出若矩阵B可逆，则C和A的列向量组等价。$</p>
-<h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价:A经初等变换可以变成B<br><br>向量组(a)和(b)等价:(a)和(b)可以<strong>互相</strong>线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
+<p><strong>例</strong><br><br>设A，B均为3阶矩阵，且AB=C<br><br>证明：C的列向量可由A的列向量线性表出若矩阵B可逆，<br>则C和A的列向量组等价。<br><br>设$A=[\alpha_1\;\alpha_2\;\alpha_3],C=[\gamma_1\;\gamma_2\;\gamma_3],B=[b_{ij}]_{3\times3} \longleftarrow A和C都是按照按列进行划分$<br><br>$由\;AB=C\;有$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>\left[\begin{array}{ccc}b_{11}&amp;b_{12}&amp;b_{13}\\<br>    b_{21}&amp;b_{22}&amp;b_{23}\\<br>    b_{31}&amp;b_{32}&amp;b_{33}<br>\end{array}\right]=[\gamma_1\;\gamma_2\;\gamma_3]<br>$</p>
+<p>即<br><br>$<br>\begin{cases}<br>b_{11}\alpha_1+b_{21}\alpha_2+b_{31}\alpha_3=\gamma_1\\<br>b_{12}\alpha_1+b_{22}\alpha_2+b_{32}\alpha_3=\gamma_2\\<br>b_{13}\alpha_1+b_{23}\alpha_2+b_{33}\alpha_3=\gamma_3\\<br>\end{cases}<br>$<br><br><br>$<br>\therefore\;C的列向量可由A的列向量线性表示<br>$<br>$\because B可逆$<br><br>$\therefore A=CB^{-1}\;,记B^{-1}=[k_{ij}]_{3\times3}$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>=[\gamma_1\;\gamma_2\;\gamma_3]<br>\left[\begin{array}{ccc}<br>    k_{11}&amp;k_{12}&amp;k_{13}\\<br>    k_{21}&amp;k_{22}&amp;k_{23}\\<br>    k_{31}&amp;k_{32}&amp;k_{33}<br>\end{array}\right]<br>$</p>
+<p>即<br>$<br>\begin{cases}<br>k_{11}\gamma_1+k_{21}\gamma_2+k_{31}\gamma_3=\alpha_1\\<br>k_{12}\gamma_1+k_{22}\gamma_2+k_{32}\gamma_3=\alpha_2\\<br>k_{13}\gamma_1+k_{23}\gamma_2+k_{33}\gamma_3=\alpha_3\\<br>\end{cases}<br>$<br><br><br>$ \therefore A的列向量可由C的列向量线性表示$<br><br>$\therefore C的列向量可由A的列向量线性表出若矩阵B可逆，则C和A的列向量组等价。$<br></p>
+<h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价：A经初等变换可以变成B<br><br>向量组(a)和(b)等价：(a)和(b)可以<strong>互相</strong>线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
 <h4 id="用方程组理解向量组的线性表示"><a href="#用方程组理解向量组的线性表示" class="headerlink" title="用方程组理解向量组的线性表示"></a>用方程组理解向量组的线性表示</h4><blockquote>
 <p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可由向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br>则$r(B)\leqslant r(A)$<br><br>其中B=($\beta_1\;\beta_2\;\cdots\;\beta_t$)，A=($\alpha_1\;\alpha_2\;\cdots\;\alpha_s$)<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
 </blockquote>
 <p>个人直观理解：<br>B的秩肯定小于A的秩，如果大于的话矩阵最后有几行就不能被表示了，<br>小于的话，最后几行就算多出来，$k_{ij}$令为0就行了<br>而两者的秩如果相等，那么两者就正好能被互相表示出来，也就是说两个向量组等价</p>
-<p>证明：<br><br>$<br>\beta_1\;\beta_2\;\cdots\;\beta_t可由\alpha_1\;\alpha_2\;\cdots\;\alpha_s线性表示\\<br>\Leftrightarrow\;方程组\\<br>\quad\; Ax=\beta_1，Ax=\beta_2，\cdots，Ax=\beta_t都有解\\<br>\Leftrightarrow\;r(A)=r(A,B)\;\longleftarrow n元线性方程组有解的条件\\<br>\because r(B)\leqslant r(A,B)\;\longleftarrow矩阵的秩的性质\\<br>\therefore r(B)\leqslant r(A)<br>$</p>
+<p>证明：<br><br>$<br>\begin{aligned}<br>&amp;\beta_1\;\beta_2\;\cdots\;\beta_t可由\alpha_1\;\alpha_2\;\cdots\;\alpha_s线性表示\\<br>&amp;\Leftrightarrow\;方程组\\<br>&amp;\quad\; Ax=\beta_1，Ax=\beta_2，\cdots，Ax=\beta_t都有解\\<br>&amp;\Leftrightarrow\;r(A)=r(A,B)\;\longleftarrow n元线性方程组有解的条件\\<br>&amp;\because r(B)\leqslant r(A,B)\;\longleftarrow矩阵的秩的性质\\<br>&amp;\therefore r(B)\leqslant r(A)<br>\end{aligned}<br>$</p>
 <h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><blockquote>
-<p>$给定m个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_m，如果存在不全为零的数k_1，k_2，\cdots，k_m使得\\<br>\qquad k_1\alpha_1+k_2\alpha_2+\cdots k_m\alpha_m=0\\<br>则称向量组\alpha_1\;\alpha_2\;\cdots\;\alpha_m线性相关，否则为线性无关$</p>
+<p>$给定m个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_m，如果存在不全为零的数k_1，k_2，\cdots，k_m使得$<br><br>$\qquad k_1\alpha_1+k_2\alpha_2+\cdots k_m\alpha_m=0$<br><br>$则称向量组\alpha_1\;\alpha_2\;\cdots\;\alpha_m线性相关，否则为线性无关$</p>
 </blockquote>
-<p>个人直观理解：<br><br>线性相关其实就是向量经过长度变换能够首尾相连，就是线性表示的一种特殊情况</p>
-<p><span class="mark">注意</span>：<br><br>有零向量的向量组肯定线性相关</p>
+<p>个人直观理解：<br>线性相关其实就是向量经过长度变换能够首尾相连，就是线性表示的一种特殊情况</p>
+<p><strong>注意</strong>：<br>有零向量的向量组肯定线性相关</p>
 <hr>
-<p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$<br>[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0\\<br>\Longleftrightarrow\;方程组\\<br>\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解\\<br>\Longleftrightarrow\;r(\alpha_1\alpha_2\cdots\alpha_m)&lt;m\;\longrightarrow m就是方程组解的个数<br>$</p>
-<p>推论</p>
+<p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0$<br><br>$\Longleftrightarrow方程组$<br><br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)&lt;m\;\longrightarrow m就是方程组解的个数 $</p>
+<p><strong>推论</strong></p>
 <ol>
 <li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;相关\\ \Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
-<li>$n+1个n维向量必线性相关\rightarrow r\leqslant n<n+1$
-<br></li>
+<li>$n+1个n维向量必线性相关 \rightarrow r \leqslant n &lt; n+1$<br><br></li>
 <li>$如果\alpha_1\;\alpha_2\;\cdots\;\alpha_s线性相关，则\alpha_1\;\alpha_2\;\cdots\;\alpha_s\;\cdots\;\alpha_t线性相关\rightarrow后面多的都令为零$<br><br></li>
 <li>如果向量组线性无关，增加维度仍然线性无关</li>
 </ol>
@@ -287,15 +286,15 @@
 <p>线性表示和线性相关无关的定理都是从定义出发进行推理的，所以记着定义就行了。</p>
 </blockquote>
 <h2 id="向量组的秩"><a href="#向量组的秩" class="headerlink" title="向量组的秩"></a>向量组的秩</h2><blockquote>
-<p>向量组的$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组中<span class="mark">所含向量的个数r</span>称为向量组的秩.记为r($\alpha_1\;\alpha_2\;\cdots\;\alpha_s$)=r<br><br><br>规定只有零向量的向量组的秩为0<br><br><br>三秩相等：矩阵A的秩等于A 的列向量的秩，也等于A的行向量的秩</p>
+<p>向量组的$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组中所含<strong>向量的个数r</strong>称为向量组的秩.<br>记为r($\alpha_1\;\alpha_2\;\cdots\;\alpha_s$)=r<br><br>规定只有零向量的向量组的秩为0<br>三秩相等：矩阵A的秩等于A 的列向量的秩，也等于A的行向量的秩</p>
 </blockquote>
 <h3 id="极大线性无关组："><a href="#极大线性无关组：" class="headerlink" title="极大线性无关组："></a>极大线性无关组：</h3><blockquote>
-<p>$\qquad$在向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$中，如果存在r个向量$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}$线性<strong>无关</strong>，<strong>再</strong> 添加任一个向量$\alpha_j(j=1,2,\cdots,s)$,向量组$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}\alpha_j$就线性<span class="mark">相关</span>，则称$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}$十向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的一个极大线性无关组。<br><br>个人理解：极大线性无关组就是把向量组中挑出来一组最多线性无关的向量能够表示这个向量组的任何向量。</p>
+<p>$\qquad$在向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$中，如果存在r个向量$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}$线性<strong>无关</strong>，<strong>再</strong> 添加任一个向量$\alpha_j(j=1,2,\cdots,s)$,向量组$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}\alpha_j$就线性<strong>相关</strong>，则称$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}$是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的一个极大线性无关组。<br><br><br>个人理解：极大线性无关组就是把向量组中挑出来一组最多线性无关的向量能够表示这个向量组的任何向量。</p>
 </blockquote>
-<p>定理：<br><br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则r=t</p>
-<p>证：<br><br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示$\longrightarrow$线性相关的相关定理2<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关$\longrightarrow$线性相关定理3推论<br><br>则有$\;$t$\leqslant$r.<br><br>又因为两者地位相等，同理可得$\;$r$\leqslant$t.<br><br>所以r=t</p>
-<p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br><br>(1) 相同的线性相关性<br><br>(2) 相同的线性表示.</p>
-<p>例.$求向量组\alpha_1=(2,1,4,3)^T，\alpha_2=(-1,1,-6,6)^T，\alpha_3=(-1,-2,2,-9)^T，\alpha_4=(1,1,-2,7)^T，\alpha_5=(2,4,4,9)^T的秩，\\<br>一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。$<br><br><br>$<br>解：构造矩阵\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)作初等变换化为行最简型，有\\<br>A=\begin{pmatrix}<br>    2&amp;-1&amp;-1&amp;1&amp;2\\<br>    1&amp;1&amp;-2&amp;1&amp;4\\<br>    4&amp;-6&amp;2&amp;-2&amp;4\\<br>    3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>    1&amp;0&amp;-1&amp;0&amp;4\\<br>    0&amp;1&amp;-1&amp;0&amp;3\\<br>    0&amp;0&amp;0&amp;1&amp;-3\\<br>    0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$<br>\begin{aligned}<br>&amp;r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3\\<br>&amp;极大线性无关组：\alpha_1\;\alpha_2\;\alpha_4\\<br>&amp;\therefore\alpha_3=-\alpha_1-\alpha_2\\<br>&amp;\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4\\<br>\end{aligned}<br>$</p>
+<p>定理：<br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则r=t</p>
+<p>证：<br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示$\longrightarrow$线性相关的相关定理2<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关$\;\longrightarrow$线性相关定理3推论<br><br>则有$\;$t$\leqslant$r.<br><br>又因为两者地位相等，同理可得$\;$r$\leqslant$t.<br><br>所以r=t</p>
+<p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br>a.相同的线性相关性<br>b.相同的线性表示.</p>
+<p>例.$求向量组\alpha_1=(2,1,4,3)^T，\alpha_2=(-1,1,-6,6)^T，\alpha_3=(-1,-2,2,-9)^T，\alpha_4=(1,1,-2,7)^T$<br>$\alpha_5=(2,4,4,9)^T的秩,一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。$<br><br><br>$解：构造矩阵\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)作初等变换化为行最简型，有$<br><br>$<br>A=\begin{pmatrix}<br>    2&amp;-1&amp;-1&amp;1&amp;2\\<br>    1&amp;1&amp;-2&amp;1&amp;4\\<br>    4&amp;-6&amp;2&amp;-2&amp;4\\<br>    3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>    1&amp;0&amp;-1&amp;0&amp;4\\<br>    0&amp;1&amp;-1&amp;0&amp;3\\<br>    0&amp;0&amp;0&amp;1&amp;-3\\<br>    0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$<br>\begin{aligned}<br>&amp;r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3\\<br>&amp;极大线性无关组：\alpha_1\;\alpha_2\;\alpha_4\\<br>&amp;\therefore\alpha_3=-\alpha_1-\alpha_2\\<br>&amp;\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4\\<br>\end{aligned}<br>$</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
