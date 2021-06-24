@@ -85,73 +85,42 @@
       </tags>
   </entry>
   <entry>
-    <title>2.矩阵</title>
-    <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是<span class="mark">同型矩阵</span></p>
-<p>对角矩阵<br>$<br>\begin{pmatrix}<br>    {\large a}_{11}    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}^{\large n}<br>$<br>$=<br>\begin{pmatrix}<br>    {\large a}_{11}^n    \\<br>     &amp; {\large a}_{22}^n\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}^n<br>\end{pmatrix}<br>$</p>
-<p>$<br>\begin{pmatrix}<br>    {\large k}    \\<br>     &amp; {\large k}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large k}<br>\end{pmatrix}<br>=\large k<br>\begin{pmatrix}<br>    1    \\<br>     &amp; 1 \\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; 1<br>\end{pmatrix}<br>$</p>
-<h2 id="初等矩阵"><a href="#初等矩阵" class="headerlink" title="初等矩阵"></a>初等矩阵</h2><blockquote>
-<p>单位矩阵经<span class="mark">一次初等变换</span>所得到的矩阵</p>
-</blockquote>
-<p>可以是行变换,也可以是列变换</p>
-<p>左乘是行变换，右乘是列变换</p>
-<p><strong>等价矩阵：</strong></p>
-<p>$\qquad\qquad$矩阵A经过有限次初等变换变成矩阵B，记作A$\cong$B</p>
-<h2 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h2><p>$<br>令A=[{\large a}_{ij}]_{m\times s},B=[{\large b}_{ij}]_{s\times n}\\<br>AB=C=[{\large c}_{ij}]_{m\times n}\\<br>\\<br>{\large c}_{ij}={\large\sum\limits_{k=1}^s}{\large a}_{ik}{\large b}_{kj}<br>$</p>
-<h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$ \quad A=[{\large a}_{1j}]_{1\times s}\\ \quad A^T=[{\large a}_{j1}]_{s\times1}\\ \quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
-<p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
-<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><p>$<br>A=<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>B=<br>\begin{pmatrix}<br>     \displaystyle\frac{1}{ {\large a}_{11} }\\<br>     &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$</p>
-<p>$<br>\because<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>    {\large b}_{11}\\<br>    \\<br>     &amp; {\large b}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>\quad=\quad<br>\begin{pmatrix}<br>    {\large a}_{11}{\large b}_{11} \\<br>    \\<br>     &amp; {\large a}_{22}{\large b}_{22}\\<br>     \\<br>     &amp;     &amp; \ddots\\<br>     \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</p>
-<p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$</p>
-<hr>
-<p>$AA^{*}=A^{*}A=|A|I$</p>
-<p>推论：</p>
-<p>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</p>
-<p>$\therefore$求逆矩阵先<span class="mark">看行列式是否为零</span></p>
-<p>$|A^*|=|A|^{n-1}$</p>
-<p><strong>A如果可逆，那么A一定可以表示为有限个初等矩阵的乘积</strong></p>
-<p>$P_t\cdots P_2P_1A=I$</p>
-<p><br></p>
-<p>$\because P_t\cdots P_2P_1A=I\\ $</p>
-<p>$\therefore A^{-1}=P_t\cdots P_2\;P_1\\ $</p>
-<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}\\ $<br><br><br><br>$P_t\cdots P_2\;P_1\;A=I$<br><br>$P_t\cdots P_2\;P_1\;I=A^{-1}$</p>
-<p>由这两个式子可得：</p>
-<p>A经过多少次行初等变换变成初等矩阵</p>
-<p>单位矩阵就经过同样的行初等变换变成$A^{-1}$</p>
-<p>$<br>\therefore[A\;|\;I(E)\,]\rightarrow\cdots\rightarrow[\,I(E)\;|\;A^{-1}]<br>$</p>
-<p><strong>推广</strong></p>
-<p>$AX=B$<br>如果A可逆，$X=A^{-1}B$</p>
-<p>令$P=A^{-1}$</p>
-<p>由</p>
-<p>$\;PA=I$<br><br>$PB=X$</p>
-<p>有$\;[A|B]=[I|X]$</p>
-<p>即$\;$遇到$A^{-1}B$时，可以将$A，B$拼在一起将$A$化成单位矩阵就是所求的$X$</p>
-<h2 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h2><h3 id="分成四块"><a href="#分成四块" class="headerlink" title="分成四块"></a>分成四块</h3><p>$<br>\left(\begin{array}{cc|ccc}<br>     1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\<br>     3 &amp; 4 &amp; 0 &amp; 0 &amp; 0\\<br>     \hline<br>     0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br>\end{array}\right)<br>=<br>\left(\begin{array}{cc}<br>     A &amp; O\\<br>     O &amp; B<br>\end{array}\right)<br>$</p>
-<p>分块后的矩阵满足四个区域整体满足</p>
-<p>矩阵的加法</p>
-<p>对角矩阵的乘法</p>
-<p>逆矩阵</p>
-<h3 id="按行分块"><a href="#按行分块" class="headerlink" title="按行分块"></a>按行分块</h3><h3 id="按列分块"><a href="#按列分块" class="headerlink" title="按列分块"></a>按列分块</h3><p>一般证明的时候会选择按列分块</p>
-<h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><blockquote>
-<p>秩与线性方程组的解有着密切的联系，所以要将线性方程组和秩结合起来，<br>而这样就容易理解后面的n元向量的一些秩的表示形式</p>
-</blockquote>
+    <title>3.方程组</title>
+    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$</p>
+<p>的系数行列式</p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$</p>
+<p>则方程组有唯一解</p>
+<p>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$</p>
+<p>其中</p>
+<p>$<br>\qquad D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</p>
+<p>证明：<br>以后补充……<br>推论:</p>
+<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
+<p>若齐次方程(2)有非零解,则$|A|=0$</p>
+<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
+<p>然后化成行最简型矩阵</p>
+<p>矩阵的<strong><u>行</u></strong>初等变换其实就是对应的方程组的三种变换</p>
+<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><p>(1) 无解$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br><br>(2) 唯一解$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br><br>(3) 无穷多解$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt;n$</p>
 <ul>
-<li>矩阵A的一个k阶子式:<br><br>$\qquad\qquad$矩阵A中随便找k行随便找k列，按原来次序排列构成的行列式</li>
+<li><p>齐次方程组$Ax=0$<br><br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
+</li>
+<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
+</li>
 </ul>
-<h3 id="秩的性质"><a href="#秩的性质" class="headerlink" title="秩的性质"></a>秩的性质</h3><ol>
-<li>$0\leqslant r(A_{m\times n})\leqslant min(m,n)$<br><br><br></li>
-<li>$r(A^T)=r(A)$<br><br><br></li>
-<li>$r(A+B)\leqslant r(A)+r(B)$<br><br><br></li>
-<li>$r(kA)=r(A)(k\neq0)\;\leftarrow\; r(A)=r(-A)，r(A-E)=r(E-A)$<br><br><br></li>
-<li><p>$r(AB)\leqslant min(r(A),r(B))$<br><br><br></p>
-</li>
-<li><p>如P.Q可逆，则<br>$r(PAQ)=r(A)$<br><br><br></p>
-</li>
-<li>$\;r\left[\begin{array}{cc} A&amp;O\\O&amp;B\end{array}\right]=r(A)+r(B)$<br><br><br></li>
-<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$<br><br><br><br>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br><br>$<br>\begin{aligned}<br>&amp;设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>&amp;\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>&amp;A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\end{aligned}<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示$<br><br>$则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\rightarrow在向量组线性表示里$<br><br><br>$<br>\begin{aligned}<br>\therefore r(A+B)&amp;=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\\<br>&amp;\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>\end{aligned}<br>$</li>
-</ol>
-<p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
-<p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
+<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
+<blockquote>
+<p>基础解系就是齐次方程组解向量的极大无关组<br></p>
+<hr>
+<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
+</blockquote>
+<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><p><strong>例</strong><br></p>
+<p>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br></p>
+<p>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>    1&amp;2&amp;-1&amp;0&amp;-5\\<br>     0&amp;1&amp;-2&amp;1&amp;1\\<br>     2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>    1&amp;0&amp;3&amp;0&amp;-3\\<br>     0&amp;1&amp;-2&amp;0&amp;1\\<br>     0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</p>
+<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
+<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
+</ul>
+<p><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>    x_1-x_2-x_3+x_4=0\\<br>    x_1-x_2+x_3-3x_4=1\\<br>    x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br>   1&amp;-1&amp;-1&amp;1&amp;0\\<br>   1&amp;-1&amp;1&amp;-3&amp;1\\<br>   1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br>   1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br>   0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br>   0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$</4\;\rightarrow\;方程组有无穷解$<br></p>
+<p>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}\\<br>令\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}\;\Rightarrow\;\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，矩阵的几何意义来结合起来，后面继续拓展深入研究……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -264,223 +233,104 @@
       </tags>
   </entry>
   <entry>
-    <title>3.方程组</title>
-    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$</p>
-<p>的系数行列式</p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$</p>
-<p>则方程组有唯一解</p>
-<p>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$</p>
-<p>其中</p>
-<p>$<br>\qquad D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</p>
-<p>证明：<br>以后补充……<br>推论:</p>
-<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
-<p>若齐次方程(2)有非零解,则$|A|=0$</p>
-<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
-<p>然后化成行最简型矩阵</p>
-<p>矩阵的<strong><u>行</u></strong>初等变换其实就是对应的方程组的三种变换</p>
-<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><p>(1) 无解$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br><br>(2) 唯一解$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br><br>(3) 无穷多解$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt;n$</p>
-<ul>
-<li><p>齐次方程组$Ax=0$<br><br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
-</li>
-<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
-</li>
-</ul>
-<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
-<blockquote>
-<p>基础解系就是齐次方程组解向量的极大无关组<br></p>
+    <title>2.矩阵</title>
+    <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是<span class="mark">同型矩阵</span></p>
+<h2 id="几类特殊的矩阵"><a href="#几类特殊的矩阵" class="headerlink" title="几类特殊的矩阵"></a>几类特殊的矩阵</h2><h3 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h3><p>$<br>\begin{pmatrix}<br>    {\large a}_{11}    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}^{\large n}<br>$<br>$=<br>\begin{pmatrix}<br>    {\large a}_{11}^n    \\<br>     &amp; {\large a}_{22}^n\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}^n<br>\end{pmatrix}<br>$</p>
+<p>$<br>\begin{pmatrix}<br>    {\large k}    \\<br>     &amp; {\large k}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large k}<br>\end{pmatrix}<br>=\large k<br>\begin{pmatrix}<br>    1    \\<br>     &amp; 1 \\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; 1<br>\end{pmatrix}<br>$</p>
+<h3 id="初等矩阵"><a href="#初等矩阵" class="headerlink" title="初等矩阵"></a>初等矩阵</h3><blockquote>
+<p>单位矩阵经 <strong>一次初等变换</strong> 所得到的矩阵</p>
+</blockquote>
+<p>可以是行变换,也可以是列变换</p>
+<p>左乘是行变换，右乘是列变换</p>
+<ol>
+<li>互换两行两列的位置：<br>$E(i,j)$表示交换第$i$行(列)和第$j$行(列)<br><br></li>
+<li>以数$k\neq0$乘某行或某列：<br>$E(i(k))$表示第$i$行(列)乘$k$<br><br></li>
+<li>以数$k$乘某行(列)加到另一行(列)上去：<br>$E(i,j(k))$表示$j$行(列)乘$k$加到$i$行(列)</li>
+</ol>
+<p><strong>等价矩阵：</strong></p>
+<p>$\qquad\qquad$矩阵A经过有限次初等变换变成矩阵B，记作A$\cong$B</p>
+<h3 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h3><blockquote>
+<p>满足$A^T=A$</p>
+</blockquote>
+<h3 id="反对称矩阵"><a href="#反对称矩阵" class="headerlink" title="反对称矩阵"></a>反对称矩阵</h3><blockquote>
+<p>满足$A^T=-A$</p>
+</blockquote>
+<h3 id="幂零矩阵"><a href="#幂零矩阵" class="headerlink" title="幂零矩阵"></a>幂零矩阵</h3><blockquote>
+<p>对方阵$A$,如果存在正整数m，使得$A^m=0$,则称$A$为幂零矩阵</p>
+</blockquote>
+<h3 id="幂等矩阵"><a href="#幂等矩阵" class="headerlink" title="幂等矩阵"></a>幂等矩阵</h3><blockquote>
+<p>满足$A^2=A$</p>
+</blockquote>
+<h3 id="对合矩阵"><a href="#对合矩阵" class="headerlink" title="对合矩阵"></a>对合矩阵</h3><blockquote>
+<p>满足$A^2=E$</p>
+</blockquote>
+<h2 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h2><p>$<br>令A=[{\large a}_{ij}]_{m\times s},B=[{\large b}_{ij}]_{s\times n}\\<br>AB=C=[{\large c}_{ij}]_{m\times n}\\<br>\\<br>{\large c}_{ij}={\large\sum\limits_{k=1}^s}{\large a}_{ik}{\large b}_{kj}<br>$</p>
+<h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$ \quad A=[{\large a}_{1j}]_{1\times s}\\ \quad A^T=[{\large a}_{j1}]_{s\times1}\\ \quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
+<p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
+<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><p>$<br>A=<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>B=<br>\begin{pmatrix}<br>     \displaystyle\frac{1}{ {\large a}_{11} }\\<br>     &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$</p>
+<p>$<br>\because<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>    {\large b}_{11}\\<br>    \\<br>     &amp; {\large b}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>\quad=\quad<br>\begin{pmatrix}<br>    {\large a}_{11}{\large b}_{11} \\<br>    \\<br>     &amp; {\large a}_{22}{\large b}_{22}\\<br>     \\<br>     &amp;     &amp; \ddots\\<br>     \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</p>
+<p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$</p>
 <hr>
-<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
-</blockquote>
-<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><p><strong>例</strong><br></p>
-<p>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br></p>
-<p>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>    1&amp;2&amp;-1&amp;0&amp;-5\\<br>     0&amp;1&amp;-2&amp;1&amp;1\\<br>     2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>    1&amp;0&amp;3&amp;0&amp;-3\\<br>     0&amp;1&amp;-2&amp;0&amp;1\\<br>     0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</p>
-<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
-<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
-</ul>
-<p><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>    x_1-x_2-x_3+x_4=0\\<br>    x_1-x_2+x_3-3x_4=1\\<br>    x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br>   1&amp;-1&amp;-1&amp;1&amp;0\\<br>   1&amp;-1&amp;1&amp;-3&amp;1\\<br>   1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br>   1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br>   0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br>   0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$</4\;\rightarrow\;方程组有无穷解$<br></p>
-<p>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}\\<br>令\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}\;\Rightarrow\;\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，矩阵的几何意义来结合起来，后面继续拓展深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>6.特征值与特征向量</title>
-    <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
-<p>设$\alpha=(a_1,a_2,\cdots,a_n)^T$ ,$\beta=(b_1,b_2,\cdots,b_n)$<br><br>令$[\alpha,\beta]=\large\sum\limits_{k=1}^{n}a_kb_k$<br><br>称为向量$\;\alpha\;$和$\;\beta\;$的内积</p>
-</blockquote>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
-<li>$[\alpha,\beta]=[\beta,\alpha]$</li>
-<li>$[\alpha+\beta,\gamma]=[\alpha,\gamma]+[\beta,\gamma]$</li>
-<li>$[k\alpha,\beta]=k[\alpha,\beta]$</li>
-<li>$[\alpha,\alpha]\geqslant0\;且\;[\alpha,\alpha]=0\;\Leftrightarrow\;\alpha=0$</li>
-<li>柯西不等式$\;[\alpha,\beta]^2\leqslant[\alpha,\alpha][\beta,\beta]$<br><br>当且仅当$\;\alpha,\beta\;$线性相关时取等</li>
-</ol>
-<p>如果$\;[\alpha,\beta]=0\;$称$\;\alpha\;$与$\;\beta\;$正交</p>
-<p><strong>柯西不等式的证明：</strong></p>
-<p>$<br>\begin{aligned}<br>&amp;a. 若\;\alpha,\beta\;线性无关,\;\forall x\in R都有x\alpha+\beta\neq0\\<br>&amp;[x\alpha+\beta,x\alpha+\beta]=[\alpha,\alpha]x^2+2[\alpha,\beta]x+[\beta,\beta]&gt;0\\<br>&amp;作为x的二次函数，对\forall x，f(x)&gt;0\\<br>&amp;故\;\;[2[\alpha,\beta]]^2-4[\alpha,\alpha][\beta,\beta]&lt;0\\<br>&amp;\therefore\;[\alpha,\beta]^2&lt;||\alpha||\cdot||\beta||\\<br>\end{aligned}<br>$</p>
-<p>$<br>\begin{aligned}<br>&amp;b. 若\;\alpha,\beta\;线性相关\\<br>&amp;当\;\alpha=0（或\;\beta=0）\\<br>&amp;\qquad[\alpha,\beta]^2=||\alpha||\cdot||\beta||\\<br>&amp;当\beta=k\alpha\neq0\\<br>&amp;\qquad[\alpha,\beta]^2=[\alpha,k\alpha]^2=k^2[\alpha,\alpha]^2=[\alpha,\alpha]\cdot[k\alpha,k\alpha]=||\alpha||\cdot||\beta||<br>\end{aligned}<br>$</p>
-<h2 id="向量的长度"><a href="#向量的长度" class="headerlink" title="向量的长度"></a>向量的长度</h2><blockquote>
-<p>$||\alpha||=\sqrt{[\alpha,\alpha]}=\sqrt{\sum\limits_{k=1}^n{\large a}_k^2}$</p>
-</blockquote>
-<p>如果$||\alpha||=1\;$称$\;\alpha\;$为单位向量<br><br>$\displaystyle\frac{1}{||\alpha||}\alpha\;\longrightarrow$单位化</p>
-<p>定理：若n维向量$\alpha_1,\alpha_2,\cdots,\alpha_r$是一组两两正交的非零向量，<br>则$\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关。</p>
-<p>证：设$k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r=0$</p>
-<p>用$\alpha_1$对等式两边作内积</p>
-<p>$\quad[\alpha_1,k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r]=[\alpha_1,0]$</p>
-<p>$\quad k_1[\alpha_1,\alpha_1]+k_2[\alpha_1,\alpha_2]+\cdots+k_r[\alpha_1,\alpha_r]=0$</p>
-<p>$\quad$因$\;\alpha_1\neq0,[\alpha_1,\alpha_1]&gt;0,而[\alpha_1,\alpha_i]=0,i\geqslant2$</p>
-<p>$\quad\therefore\;k_1[\alpha_1,\alpha_1]=0\;$必有$k_1=0$</p>
-<p>$\quad$同理$\;k_2=0,\cdots,k_r=0$</p>
-<h2 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h2><p>设$\alpha_1,\alpha_2,\alpha_3\;$线性无关</p>
-<p>令$\quad\beta_1=\alpha_1$</p>
-<p>$\quad\beta_2=\alpha_2-\displaystyle\frac{[\alpha_2\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1$</p>
-<p>$\quad\beta_3=\alpha_3-\displaystyle\frac{[\alpha_3\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1-\displaystyle\frac{[\alpha_3\;\beta_2]}{[\beta_2\;\beta_2]}\beta_2$</p>
-<p>则$\;\beta_1\;\beta_2\;\beta_3\;$两两正交<br><br><br>再单位化<br>$\qquad\gamma_1=\displaystyle\frac{\beta_1}{||\beta_1||}$,<br>$\gamma_2=\displaystyle\frac{\beta_2}{||\beta_2||}$,<br>$\gamma_3=\displaystyle\frac{\beta_3}{||\beta_3||}$</p>
-<p>这样其实就相当于构建直角坐标系</p>
-<h2 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h2><blockquote>
-<p>设$A$是n阶矩阵，满足<br>$AA^T=A^TA=E$,<br>则称$A$为正交矩阵</p>
-</blockquote>
-<h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
-<li><p>$A$是正交矩阵$\;\Leftrightarrow\;A^T=A^{-1}$</p>
-</li>
-<li><p>$A=(\alpha_1\;\alpha_2\;\alpha_3)$是正交矩阵<br>$\quad\Leftrightarrow\;\alpha_1,\alpha_2,\alpha_3\;$都是单位向量，且两两正交<br><br>证：<br>$<br>\begin{aligned}<br>A^TA<br>&amp;=\begin{bmatrix}<br> \alpha_1^T\\<br> \alpha_2^T\\<br> \alpha_3^T<br>\end{bmatrix}<br>[\alpha_1\;\alpha_2\;\alpha_3]\\<br>&amp;=\begin{bmatrix}    \alpha_1^T\alpha_1&amp;\alpha_1^T\alpha_2&amp;\alpha_1^T\alpha_3\\    \alpha_2^T\alpha_1&amp;\alpha_2^T\alpha_2&amp;\alpha_2^T\alpha_3\\<br>\alpha_3^T\alpha_1&amp;\alpha_3^T\alpha_2&amp;\alpha_3^T\alpha_3<br>\end{bmatrix}<br>=\begin{bmatrix}<br> 1&amp;0&amp;0\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;1<br>\end{bmatrix}\\<br>&amp;=E<br>\end{aligned}<br>$<br><br></p>
-</li>
-<li>如果$A$是正交矩阵，则$|A|$=1或-1<br><br></li>
-<li>若$A,B$都是正交矩阵，则$AB$也是正交矩阵<br><br>证：<br>$(AB)(AB)^T=A(BB^T)A^T=AA^T=E$</li>
-</ol>
-<h3 id="规范正交基"><a href="#规范正交基" class="headerlink" title="规范正交基"></a>规范正交基</h3><p>设$e_1,e_2,\cdots,e_n$是向量空间的一个基，<br><br>如果<br>$\qquad[e_i,e_j]=<br>\begin{cases}<br>    1\qquad i=j\\<br>     0\qquad i\neq j<br>\end{cases}<br>$</p>
-<p>$\qquad$则称$e_1,e_2,\cdots,e_n$为规范正交基。</p>
-<p><strong>例</strong></p>
-<p>$<br>A=\begin{bmatrix}<br>    1&amp;0&amp;0&amp;-2\\<br>    0&amp;1&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
-<p>$Ax=0\;$基础解系</p>
-<p>$\eta_1=(0,0,1,0)^T,\eta_2=(2,-1,0,1)^T$</p>
-<p>解空间的基：$\eta_1,\eta_2$</p>
-<p>解空间维数：2</p>
-<p>规范正交基：$(0,0,1,0)^T,{\large\frac{1}{\sqrt{6}}}(2,-1,0,1)^T$</p>
-<h1 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h1><blockquote>
-<p>设A是n阶矩阵，<span class="mark">$\alpha$是n维非0列向量</span>，满足<br>$\qquad A\alpha=\lambda\alpha$<br><br>则称:<br>$\lambda$是矩阵$A$的特征值<br><br>$\alpha$是矩阵$A$对应于特征值$\lambda$的特征向量.</p>
-</blockquote>
-<p>$A\alpha=\lambda\alpha\;$这个等式个人直观理解：特征向量$\alpha$经过A矩阵变换后等于特征向量$\alpha$的$\lambda$倍</p>
+<p>$AA^{ <em> } =A^{ </em> }A=|A|I$</p>
+<p>推论：</p>
 <ol>
-<li><p>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br>$\quad$<br><br>那么$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$</p>
-</li>
-<li><p>若$\alpha_1,\alpha_2$都是矩阵$A$关于特征值$\lambda$的特征向量，<br><br>则$\;\forall k_1,k_2$，当$k_1\alpha_1+k_2\alpha_2\neq0$时，<br>$k_1\alpha_1+k_2\alpha_2$仍是$A$对应于$\lambda$的特征向量<br><br>由$A\alpha_1=\lambda\alpha_1,A\alpha_2=\lambda\alpha_2$</p>
-</li>
+<li>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</li>
 </ol>
-<p>$<br>\begin{aligned}<br>\quad\;得到： A(k_1\alpha_1+k_2\alpha_2)<br>&amp;=k_1A\alpha_1+k_2A\alpha_2\\<br>&amp;=k_1(\lambda\alpha_1)+k_2(\lambda\alpha_2)\\<br>&amp;=\lambda(k_1\alpha_1+k_2\alpha_2)\\<br>\end{aligned}<br>$</p>
-<h2 id="求解步骤和原理"><a href="#求解步骤和原理" class="headerlink" title="求解步骤和原理"></a>求解步骤和原理</h2><p>$\quad A\alpha=\lambda\alpha$</p>
-<p>$\Rightarrow(\lambda E-A)\alpha=0$</p>
-<p>$\quad\alpha\;是\;(\lambda E-A)x=0的非零解\;\rightarrow\;|\lambda E-A|=0$</p>
-<p>(1) 由$\;|\lambda E-A|=0\;$求特征值$\;\lambda_i$<br><br>$\quad$共n个(含重根)<br><br>(2) 由$\;(\lambda_iE-A)x=0\;$求基础解系<br><br>$\quad$即$\lambda_i$线性无关的特征向量</p>
-<p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
-<p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$</p>
-<p>$\therefore\;A的特征值为\;1,\pm6$</p>
-<p>$1. 当\;\lambda=1\;时,由\;(E-A)x=0$</p>
-<p>$E-A=\begin{bmatrix}<br>    1&amp;-2&amp;2\\<br>    -2&amp;-3&amp;-4\\<br>    2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;0&amp;2\\<br>    0&amp;1&amp;0\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br><br>$2. 当\;\lambda=6\;时，由(6E-A)x=0$</p>
-<p>$6E-A=\begin{bmatrix}<br>    6&amp;-2&amp;2\\<br>    -2&amp;2&amp;-4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br>    0&amp;0&amp;0\\<br>    -2&amp;2&amp;4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;-1&amp;2\\<br>    0&amp;-2&amp;5\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br><br>$3. 当\lambda=-6时，由(-6E-A)x=0$</p>
-<p>$-6E-A=\begin{bmatrix}<br>    -6&amp;-2&amp;2\\<br>    -2&amp;-10&amp;-4\\<br>    2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;1&amp;0\\<br>    0&amp;2&amp;1\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</p>
-<h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>设$A$是n阶矩阵<br><br>(1)$\;\sum\lambda_i=\sum {\large a}_{ii}=trA\;\rightarrow\;tr为矩阵的迹$<br><br>(2)$\;\prod\lambda_i=|A|$<br><br></li>
-<li>$A$可逆$\;\Leftrightarrow\;$$A$的n个特征值全不为0<br><br></li>
-<li>矩阵$A$对应于不同特征值的特征向量的特征向量是线性无关的<br><br><strong>证</strong>:$\quad$设$\lambda_1,\lambda_2,\cdots,\lambda_s$是矩阵$A$的S个不同的特征值，对应的特征向量分别是$\alpha_1,\alpha_2,\cdots,\alpha_s$<br><br>$\;$用数学归纳法<br><br>$\;那么,当S=1时，因\alpha_1\neq0,命题正确$<br><br>$\;假设S=k-1(k\geqslant2)时,结论成立$<br><br>$\;当S=k时，x_1\alpha_1+x_2\alpha_2+\cdots+x_{k-1}\alpha_{k-1}+x_k\alpha_k=0\qquad(1)$<br><br>$\;用A左乘上式，有$<br><br>$\;x_1\lambda_1\alpha_1+x_2\lambda_2\alpha_2+\cdots+x_{k-1}\lambda_{k-1}\alpha_{k-1}+x_k\lambda_k\alpha_k=0\qquad(2)$<br><br>$\;用\lambda_k乘(1)又有$<br><br>$\;x_1\lambda_k\alpha_1+x_2\lambda_k\alpha_2+\cdots+x_{k-1}\lambda_k\alpha_{k-1}+x_k\lambda_k\alpha_k=0\;\,\,\qquad(3)$<br><br>$\;$(2)-(3):<br><br>$\;x_1(\lambda_1-\lambda_k)\alpha_1+x_2(\lambda_2-\lambda_k)\alpha_2+\cdots+x_{k-1}(\lambda_{k-1}-\lambda_k)\alpha_{k-1}=0$<br><br>$\;又因为\alpha_1,\alpha_2,\cdots,\alpha_{k-1}线性无关$<br><br>$\;所以x_1(\lambda_1-\lambda_k)=0,x_2(\lambda_2-\lambda_k)=0,\cdots,x_{k-1}(\lambda_{k-1}-\lambda_k)=0$<br><br>$\;因特征值\lambda_i\neq\lambda_j,从而\\<br>\quad x_1=0,x_2=0,\cdots,x_{k-1}=0$<br><br>$\;代入(1)式，得\\<br>\qquad x_k\alpha_k=0$<br><br>$\;因\;\alpha\neq0,\quad得\;x_k=0$<br><br>$\;故\alpha_1,\alpha_2,\cdots,\alpha_k线性无关$<br><br>所以当$S=k$时，命题成立<br><br>由数学归纳法可知对一切自然数，命题均成立。<br><br></li>
-<li><p>若$\;A\alpha=\lambda\alpha,\alpha\neq0$<br><br>$(A+kE)\alpha=(\lambda+k)\alpha$</p>
-</li>
-<li><p>由$\;A\alpha=\lambda\alpha$<br><br>有$\;A^2\alpha=A(\lambda\alpha)=\lambda A\alpha=\lambda^2\alpha$<br><br>$\;\Rightarrow\;A^n\alpha^n=\lambda^n\alpha$<br><br></p>
-</li>
-<li>由$A\alpha=\lambda\alpha,A$可逆<br><br>可得到$A^{-1}\alpha=\displaystyle\frac{1}{\lambda}\alpha$<br><br>$\qquad\quad A^*\alpha=\displaystyle\frac{|A|}{\lambda}\alpha$</li>
-</ol>
-<h1 id="相似矩阵"><a href="#相似矩阵" class="headerlink" title="相似矩阵"></a>相似矩阵</h1><blockquote>
-<p>设$A,B$都是n阶矩阵，如果存在可逆矩阵P,使得<br><br>$\qquad P^{-1}AP=B$<br><br>就称矩阵$A$相似于矩阵$B$，$B$是$A$的相似矩阵<br><br>记成$A\sim B$</p>
-</blockquote>
-<h2 id="性质-3"><a href="#性质-3" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>$A\sim B$<br><br></li>
-<li>如果$A\sim B$,则$B\sim A$.<br><br></li>
-<li>如果$A\sim B,B\sim C$则$\;A\sim C$.<br><br></li>
-<li>如果$A\sim B$,那么<br><br>(1) $A^2\sim B^2$<br><br>(2) $A+kE\sim B+kE$<br><br>(3) 如果$A$可逆，则$\;A^{-1}\sim B^{-1}$<br><br>(4)如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</li>
-</ol>
-<h2 id="两个矩阵相似的必要条件"><a href="#两个矩阵相似的必要条件" class="headerlink" title="两个矩阵相似的必要条件"></a>两个矩阵相似的必要条件</h2><p>如果$A\sim B$,</p>
+<p>$\therefore$求逆矩阵先 <strong>看行列式是否为零</strong></p>
 <ol>
-<li>$|\lambda E-A|=|\lambda E-B|\;\Rightarrow\lambda_A=\lambda_B$<br><br></li>
-<li>$r(A)=r(B)$<br><br></li>
-<li>$|A|=|B|$<br><br></li>
-<li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
+<li>伴随矩阵$A^{ * }$的一些常用结论 <ul>
+<li>$|A^*|=|A|^{n-1}$</li>
+<li>$(A^{ <em> })^{ </em> }=|A|^{n-2}A$</li>
+<li>若$A$可逆，且$A^{ <em> }$可逆,$(A^{ </em> })^{-1}=(A^{-1})^{ * }=\displaystyle\frac{1}{|A|}A$</li>
+<li>$(AB)^{ <em> }=B^{ </em> }A^{ * }$</li>
+<li>$(A^{ <em> })^T=(A^T)^{ </em> }$</li>
+</ul>
+</li>
+<li><strong>A如果可逆，那么A一定可以表示为有限个初等矩阵的乘积</strong></li>
 </ol>
-<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
-<p><strong>证</strong>:下面以三阶矩阵为例</p>
-<p>首先将$P$按列分块<br><br>得到$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$<br><br>$<br>\begin{aligned}<br>则有<br>(A\alpha_1,A\alpha_2,A\alpha_3)<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
-<p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
-<h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
-<p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
-<h1 id="实对称矩阵"><a href="#实对称矩阵" class="headerlink" title="实对称矩阵"></a>实对称矩阵</h1><blockquote>
-<p>若$A$矩阵的元素都是实数，且A的转置等于它本身，则称$A$为是对称矩阵</p>
+<p>$P_t\cdots P_2P_1A=I$</p>
+<p><br></p>
+<p>$\because P_t\cdots P_2P_1A=I$</p>
+<p>$\therefore A^{-1}=P_t\cdots P_2\;P_1$</p>
+<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}$<br><br><br>$P_t\cdots P_2\;P_1\;A=I$<br><br>$P_t\cdots P_2\;P_1\;I=A^{-1}$</p>
+<p>由这两个式子可得：</p>
+<p>A经过多少次行初等变换变成初等矩阵</p>
+<p>单位矩阵就经过同样的行初等变换变成$A^{-1}$</p>
+<p>$<br>\therefore[A\;|\;I(E)\,]\rightarrow\cdots\rightarrow[\,I(E)\;|\;A^{-1}]<br>$</p>
+<p><strong>推广</strong></p>
+<p>$AX=B$<br>如果A可逆，$X=A^{-1}B$</p>
+<p>令$P=A^{-1}$</p>
+<p>由</p>
+<p>$\;PA=I$<br><br>$PB=X$</p>
+<p>有$\;[A|B]=[I|X]$</p>
+<p>即$\;$遇到$A^{-1}B$时，可以将$A，B$拼在一起将$A$化成单位矩阵就是所求的$X$</p>
+<h2 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h2><h3 id="分成四块"><a href="#分成四块" class="headerlink" title="分成四块"></a>分成四块</h3><p>$<br>\left(\begin{array}{cc|ccc}<br>     1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\<br>     3 &amp; 4 &amp; 0 &amp; 0 &amp; 0\\<br>     \hline<br>     0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br>\end{array}\right)=<br>\left(\begin{array}{cc}<br>     A &amp; O\\<br>     O &amp; B<br>\end{array}\right)<br>$</p>
+<p>分块后的矩阵满足四个区域整体满足</p>
+<p>矩阵的加法</p>
+<p>对角矩阵的乘法</p>
+<p>逆矩阵</p>
+<h3 id="按行分块"><a href="#按行分块" class="headerlink" title="按行分块"></a>按行分块</h3><h3 id="按列分块"><a href="#按列分块" class="headerlink" title="按列分块"></a>按列分块</h3><p>一般证明的时候会选择按列分块</p>
+<h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><blockquote>
+<p>秩与线性方程组的解有着密切的联系，所以要将线性方程组和秩结合起来，<br>而这样就容易理解后面的n元向量的一些秩的表示形式</p>
 </blockquote>
-<h2 id="性质-4"><a href="#性质-4" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>若$A$是n阶实对称矩阵,则$A$的特征值都是<strong>实数</strong><br><br></li>
-<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong>2：$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
-<li>对任意一个n阶实对称矩阵$A$,总存在n阶<strong>正交矩阵</strong>$\;Q$，使得</li>
+<ul>
+<li>矩阵A的一个k阶子式:<br><br>$\qquad\qquad$矩阵A中随便找k行随便找k列，按原来次序排列构成的行列式</li>
+</ul>
+<h3 id="秩的性质"><a href="#秩的性质" class="headerlink" title="秩的性质"></a>秩的性质</h3><ol>
+<li>$0\leqslant r(A_{m\times n})\leqslant min(m,n)$<br><br><br></li>
+<li>$r(A^T)=r(A)$<br><br><br></li>
+<li>$r(A+B)\leqslant r(A)+r(B)$<br><br><br></li>
+<li>$r(kA)=r(A)(k\neq0)\;\leftarrow\; r(A)=r(-A)，r(A-E)=r(E-A)$<br><br><br></li>
+<li><p>$r(AB)\leqslant min(r(A),r(B))$<br><br><br></p>
+</li>
+<li><p>如P.Q可逆，则<br>$r(PAQ)=r(A)$<br><br><br></p>
+</li>
+<li>$\;r\left[\begin{array}{cc} A&amp;O\\O&amp;B\end{array}\right]=r(A)+r(B)$<br><br><br></li>
+<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$<br><br><br><br>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br><br>$<br>\begin{aligned}<br>&amp;设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>&amp;\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>&amp;A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\end{aligned}<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示$<br><br>$则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\rightarrow在向量组线性表示里$<br><br><br>$<br>\begin{aligned}<br>\therefore r(A+B)&amp;=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\\<br>&amp;\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>\end{aligned}<br>$</li>
 </ol>
-<p>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。</p>
-<p>1.n=1成立</p>
-<p>2.假设n-1成立</p>
-<p>那么n时</p>
-<p>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$</p>
-<p>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$</p>
-<p>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$</p>
-<p>$\qquad\qquad\qquad\cdots$</p>
-<p>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$</p>
-<p>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>$<br>即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)</p>
-<p>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$</p>
-<p>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$</p>
-<p>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>$<br>然后令Q_2=<br>\begin{bmatrix}<br>    1&amp;0\\<br>    0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$</p>
-<p>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>   $\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</p>
-<p>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$</p>
-<p>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$</p>
-<p>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>即n时结论成立<br><br>那么可得到结论成立<br>   </p>
-<h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
-<li>求特征值  </li>
-<li>求特征向量  </li>
-<li>改造特征向量  <ul>
-<li>$\lambda_i\neq\lambda_j$只需单位化  </li>
-<li>$\lambda_i=\lambda_j$<ul>
-<li>$[\alpha_i,\alpha_j]=0$只需单位化  </li>
-<li>$[\alpha_i,\alpha_j] \neq0$施密特正交化</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
-<p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>end</title>
-    <url>/2021/06/24/end/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
+<p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
+<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -666,6 +516,187 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>end</title>
+    <url>/2021/06/24/end/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.特征值与特征向量</title>
+    <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
+<p>设$\alpha=(a_1,a_2,\cdots,a_n)^T$ ,$\beta=(b_1,b_2,\cdots,b_n)$<br><br>令$[\alpha,\beta]=\large\sum\limits_{k=1}^{n}a_kb_k$<br><br>称为向量$\;\alpha\;$和$\;\beta\;$的内积</p>
+</blockquote>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li>$[\alpha,\beta]=[\beta,\alpha]$</li>
+<li>$[\alpha+\beta,\gamma]=[\alpha,\gamma]+[\beta,\gamma]$</li>
+<li>$[k\alpha,\beta]=k[\alpha,\beta]$</li>
+<li>$[\alpha,\alpha]\geqslant0\;且\;[\alpha,\alpha]=0\;\Leftrightarrow\;\alpha=0$</li>
+<li>柯西不等式$\;[\alpha,\beta]^2\leqslant[\alpha,\alpha][\beta,\beta]$<br><br>当且仅当$\;\alpha,\beta\;$线性相关时取等</li>
+</ol>
+<p>如果$\;[\alpha,\beta]=0\;$称$\;\alpha\;$与$\;\beta\;$正交</p>
+<p><strong>柯西不等式的证明：</strong></p>
+<p>$<br>\begin{aligned}<br>&amp;a. 若\;\alpha,\beta\;线性无关,\;\forall x\in R都有x\alpha+\beta\neq0\\<br>&amp;[x\alpha+\beta,x\alpha+\beta]=[\alpha,\alpha]x^2+2[\alpha,\beta]x+[\beta,\beta]&gt;0\\<br>&amp;作为x的二次函数，对\forall x，f(x)&gt;0\\<br>&amp;故\;\;[2[\alpha,\beta]]^2-4[\alpha,\alpha][\beta,\beta]&lt;0\\<br>&amp;\therefore\;[\alpha,\beta]^2&lt;||\alpha||\cdot||\beta||\\<br>\end{aligned}<br>$</p>
+<p>$<br>\begin{aligned}<br>&amp;b. 若\;\alpha,\beta\;线性相关\\<br>&amp;当\;\alpha=0（或\;\beta=0）\\<br>&amp;\qquad[\alpha,\beta]^2=||\alpha||\cdot||\beta||\\<br>&amp;当\beta=k\alpha\neq0\\<br>&amp;\qquad[\alpha,\beta]^2=[\alpha,k\alpha]^2=k^2[\alpha,\alpha]^2=[\alpha,\alpha]\cdot[k\alpha,k\alpha]=||\alpha||\cdot||\beta||<br>\end{aligned}<br>$</p>
+<h2 id="向量的长度"><a href="#向量的长度" class="headerlink" title="向量的长度"></a>向量的长度</h2><blockquote>
+<p>$||\alpha||=\sqrt{[\alpha,\alpha]}=\sqrt{\sum\limits_{k=1}^n{\large a}_k^2}$</p>
+</blockquote>
+<p>如果$||\alpha||=1\;$称$\;\alpha\;$为单位向量<br><br>$\displaystyle\frac{1}{||\alpha||}\alpha\;\longrightarrow$单位化</p>
+<p>定理：若n维向量$\alpha_1,\alpha_2,\cdots,\alpha_r$是一组两两正交的非零向量，<br>则$\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关。</p>
+<p>证：设$k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r=0$</p>
+<p>用$\alpha_1$对等式两边作内积</p>
+<p>$\quad[\alpha_1,k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r]=[\alpha_1,0]$</p>
+<p>$\quad k_1[\alpha_1,\alpha_1]+k_2[\alpha_1,\alpha_2]+\cdots+k_r[\alpha_1,\alpha_r]=0$</p>
+<p>$\quad$因$\;\alpha_1\neq0,[\alpha_1,\alpha_1]&gt;0,而[\alpha_1,\alpha_i]=0,i\geqslant2$</p>
+<p>$\quad\therefore\;k_1[\alpha_1,\alpha_1]=0\;$必有$k_1=0$</p>
+<p>$\quad$同理$\;k_2=0,\cdots,k_r=0$</p>
+<h2 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h2><p>设$\alpha_1,\alpha_2,\alpha_3\;$线性无关</p>
+<p>令$\quad\beta_1=\alpha_1$</p>
+<p>$\quad\beta_2=\alpha_2-\displaystyle\frac{[\alpha_2\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1$</p>
+<p>$\quad\beta_3=\alpha_3-\displaystyle\frac{[\alpha_3\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1-\displaystyle\frac{[\alpha_3\;\beta_2]}{[\beta_2\;\beta_2]}\beta_2$</p>
+<p>则$\;\beta_1\;\beta_2\;\beta_3\;$两两正交<br><br><br>再单位化<br>$\qquad\gamma_1=\displaystyle\frac{\beta_1}{||\beta_1||}$,<br>$\gamma_2=\displaystyle\frac{\beta_2}{||\beta_2||}$,<br>$\gamma_3=\displaystyle\frac{\beta_3}{||\beta_3||}$</p>
+<p>这样其实就相当于构建直角坐标系</p>
+<h2 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h2><blockquote>
+<p>设$A$是n阶矩阵，满足<br>$AA^T=A^TA=E$,<br>则称$A$为正交矩阵</p>
+</blockquote>
+<h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
+<li><p>$A$是正交矩阵$\;\Leftrightarrow\;A^T=A^{-1}$</p>
+</li>
+<li><p>$A=(\alpha_1\;\alpha_2\;\alpha_3)$是正交矩阵<br>$\quad\Leftrightarrow\;\alpha_1,\alpha_2,\alpha_3\;$都是单位向量，且两两正交<br><br>证：<br>$<br>\begin{aligned}<br>A^TA<br>&amp;=\begin{bmatrix}<br> \alpha_1^T\\<br> \alpha_2^T\\<br> \alpha_3^T<br>\end{bmatrix}<br>[\alpha_1\;\alpha_2\;\alpha_3]\\<br>&amp;=\begin{bmatrix}    \alpha_1^T\alpha_1&amp;\alpha_1^T\alpha_2&amp;\alpha_1^T\alpha_3\\    \alpha_2^T\alpha_1&amp;\alpha_2^T\alpha_2&amp;\alpha_2^T\alpha_3\\<br>\alpha_3^T\alpha_1&amp;\alpha_3^T\alpha_2&amp;\alpha_3^T\alpha_3<br>\end{bmatrix}<br>=\begin{bmatrix}<br> 1&amp;0&amp;0\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;1<br>\end{bmatrix}\\<br>&amp;=E<br>\end{aligned}<br>$<br><br></p>
+</li>
+<li>如果$A$是正交矩阵，则$|A|$=1或-1<br><br></li>
+<li>若$A,B$都是正交矩阵，则$AB$也是正交矩阵<br><br>证：<br>$(AB)(AB)^T=A(BB^T)A^T=AA^T=E$</li>
+</ol>
+<h3 id="规范正交基"><a href="#规范正交基" class="headerlink" title="规范正交基"></a>规范正交基</h3><p>设$e_1,e_2,\cdots,e_n$是向量空间的一个基，<br><br>如果<br>$\qquad[e_i,e_j]=<br>\begin{cases}<br>    1\qquad i=j\\<br>     0\qquad i\neq j<br>\end{cases}<br>$</p>
+<p>$\qquad$则称$e_1,e_2,\cdots,e_n$为规范正交基。</p>
+<p><strong>例</strong></p>
+<p>$<br>A=\begin{bmatrix}<br>    1&amp;0&amp;0&amp;-2\\<br>    0&amp;1&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
+<p>$Ax=0\;$基础解系</p>
+<p>$\eta_1=(0,0,1,0)^T,\eta_2=(2,-1,0,1)^T$</p>
+<p>解空间的基：$\eta_1,\eta_2$</p>
+<p>解空间维数：2</p>
+<p>规范正交基：$(0,0,1,0)^T,{\large\frac{1}{\sqrt{6}}}(2,-1,0,1)^T$</p>
+<h1 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h1><blockquote>
+<p>设A是n阶矩阵，<span class="mark">$\alpha$是n维非0列向量</span>，满足<br>$\qquad A\alpha=\lambda\alpha$<br><br>则称:<br>$\lambda$是矩阵$A$的特征值<br><br>$\alpha$是矩阵$A$对应于特征值$\lambda$的特征向量.</p>
+</blockquote>
+<p>$A\alpha=\lambda\alpha\;$这个等式个人直观理解：特征向量$\alpha$经过A矩阵变换后等于特征向量$\alpha$的$\lambda$倍</p>
+<ol>
+<li><p>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br>$\quad$<br><br>那么$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$</p>
+</li>
+<li><p>若$\alpha_1,\alpha_2$都是矩阵$A$关于特征值$\lambda$的特征向量，<br><br>则$\;\forall k_1,k_2$，当$k_1\alpha_1+k_2\alpha_2\neq0$时，<br>$k_1\alpha_1+k_2\alpha_2$仍是$A$对应于$\lambda$的特征向量<br><br>由$A\alpha_1=\lambda\alpha_1,A\alpha_2=\lambda\alpha_2$</p>
+</li>
+</ol>
+<p>$<br>\begin{aligned}<br>\quad\;得到： A(k_1\alpha_1+k_2\alpha_2)<br>&amp;=k_1A\alpha_1+k_2A\alpha_2\\<br>&amp;=k_1(\lambda\alpha_1)+k_2(\lambda\alpha_2)\\<br>&amp;=\lambda(k_1\alpha_1+k_2\alpha_2)\\<br>\end{aligned}<br>$</p>
+<h2 id="求解步骤和原理"><a href="#求解步骤和原理" class="headerlink" title="求解步骤和原理"></a>求解步骤和原理</h2><p>$\quad A\alpha=\lambda\alpha$</p>
+<p>$\Rightarrow(\lambda E-A)\alpha=0$</p>
+<p>$\quad\alpha\;是\;(\lambda E-A)x=0的非零解\;\rightarrow\;|\lambda E-A|=0$</p>
+<p>(1) 由$\;|\lambda E-A|=0\;$求特征值$\;\lambda_i$<br><br>$\quad$共n个(含重根)<br><br>(2) 由$\;(\lambda_iE-A)x=0\;$求基础解系<br><br>$\quad$即$\lambda_i$线性无关的特征向量</p>
+<p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
+<p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$</p>
+<p>$\therefore\;A的特征值为\;1,\pm6$</p>
+<p>$1. 当\;\lambda=1\;时,由\;(E-A)x=0$</p>
+<p>$E-A=\begin{bmatrix}<br>    1&amp;-2&amp;2\\<br>    -2&amp;-3&amp;-4\\<br>    2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;0&amp;2\\<br>    0&amp;1&amp;0\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
+<p>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br><br>$2. 当\;\lambda=6\;时，由(6E-A)x=0$</p>
+<p>$6E-A=\begin{bmatrix}<br>    6&amp;-2&amp;2\\<br>    -2&amp;2&amp;-4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br>    0&amp;0&amp;0\\<br>    -2&amp;2&amp;4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;-1&amp;2\\<br>    0&amp;-2&amp;5\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
+<p>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br><br>$3. 当\lambda=-6时，由(-6E-A)x=0$</p>
+<p>$-6E-A=\begin{bmatrix}<br>    -6&amp;-2&amp;2\\<br>    -2&amp;-10&amp;-4\\<br>    2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;1&amp;0\\<br>    0&amp;2&amp;1\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
+<p>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</p>
+<h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>设$A$是n阶矩阵<br><br>(1)$\;\sum\lambda_i=\sum {\large a}_{ii}=trA\;\rightarrow\;tr为矩阵的迹$<br><br>(2)$\;\prod\lambda_i=|A|$<br><br></li>
+<li>$A$可逆$\;\Leftrightarrow\;$$A$的n个特征值全不为0<br><br></li>
+<li>矩阵$A$对应于不同特征值的特征向量的特征向量是线性无关的<br><br><strong>证</strong>:$\quad$设$\lambda_1,\lambda_2,\cdots,\lambda_s$是矩阵$A$的S个不同的特征值，对应的特征向量分别是$\alpha_1,\alpha_2,\cdots,\alpha_s$<br><br>$\;$用数学归纳法<br><br>$\;那么,当S=1时，因\alpha_1\neq0,命题正确$<br><br>$\;假设S=k-1(k\geqslant2)时,结论成立$<br><br>$\;当S=k时，x_1\alpha_1+x_2\alpha_2+\cdots+x_{k-1}\alpha_{k-1}+x_k\alpha_k=0\qquad(1)$<br><br>$\;用A左乘上式，有$<br><br>$\;x_1\lambda_1\alpha_1+x_2\lambda_2\alpha_2+\cdots+x_{k-1}\lambda_{k-1}\alpha_{k-1}+x_k\lambda_k\alpha_k=0\qquad(2)$<br><br>$\;用\lambda_k乘(1)又有$<br><br>$\;x_1\lambda_k\alpha_1+x_2\lambda_k\alpha_2+\cdots+x_{k-1}\lambda_k\alpha_{k-1}+x_k\lambda_k\alpha_k=0\;\,\,\qquad(3)$<br><br>$\;$(2)-(3):<br><br>$\;x_1(\lambda_1-\lambda_k)\alpha_1+x_2(\lambda_2-\lambda_k)\alpha_2+\cdots+x_{k-1}(\lambda_{k-1}-\lambda_k)\alpha_{k-1}=0$<br><br>$\;又因为\alpha_1,\alpha_2,\cdots,\alpha_{k-1}线性无关$<br><br>$\;所以x_1(\lambda_1-\lambda_k)=0,x_2(\lambda_2-\lambda_k)=0,\cdots,x_{k-1}(\lambda_{k-1}-\lambda_k)=0$<br><br>$\;因特征值\lambda_i\neq\lambda_j,从而\\<br>\quad x_1=0,x_2=0,\cdots,x_{k-1}=0$<br><br>$\;代入(1)式，得\\<br>\qquad x_k\alpha_k=0$<br><br>$\;因\;\alpha\neq0,\quad得\;x_k=0$<br><br>$\;故\alpha_1,\alpha_2,\cdots,\alpha_k线性无关$<br><br>所以当$S=k$时，命题成立<br><br>由数学归纳法可知对一切自然数，命题均成立。<br><br></li>
+<li><p>若$\;A\alpha=\lambda\alpha,\alpha\neq0$<br><br>$(A+kE)\alpha=(\lambda+k)\alpha$</p>
+</li>
+<li><p>由$\;A\alpha=\lambda\alpha$<br><br>有$\;A^2\alpha=A(\lambda\alpha)=\lambda A\alpha=\lambda^2\alpha$<br><br>$\;\Rightarrow\;A^n\alpha^n=\lambda^n\alpha$<br><br></p>
+</li>
+<li>由$A\alpha=\lambda\alpha,A$可逆<br><br>可得到$A^{-1}\alpha=\displaystyle\frac{1}{\lambda}\alpha$<br><br>$\qquad\quad A^*\alpha=\displaystyle\frac{|A|}{\lambda}\alpha$</li>
+</ol>
+<h1 id="相似矩阵"><a href="#相似矩阵" class="headerlink" title="相似矩阵"></a>相似矩阵</h1><blockquote>
+<p>设$A,B$都是n阶矩阵，如果存在可逆矩阵P,使得<br><br>$\qquad P^{-1}AP=B$<br><br>就称矩阵$A$相似于矩阵$B$，$B$是$A$的相似矩阵<br><br>记成$A\sim B$</p>
+</blockquote>
+<h2 id="性质-3"><a href="#性质-3" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>$A\sim B$<br><br></li>
+<li>如果$A\sim B$,则$B\sim A$.<br><br></li>
+<li>如果$A\sim B,B\sim C$则$\;A\sim C$.<br><br></li>
+<li>如果$A\sim B$,那么<br><br>(1) $A^2\sim B^2$<br><br>(2) $A+kE\sim B+kE$<br><br>(3) 如果$A$可逆，则$\;A^{-1}\sim B^{-1}$<br><br>(4)如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</li>
+</ol>
+<h2 id="两个矩阵相似的必要条件"><a href="#两个矩阵相似的必要条件" class="headerlink" title="两个矩阵相似的必要条件"></a>两个矩阵相似的必要条件</h2><p>如果$A\sim B$,</p>
+<ol>
+<li>$|\lambda E-A|=|\lambda E-B|\;\Rightarrow\lambda_A=\lambda_B$<br><br></li>
+<li>$r(A)=r(B)$<br><br></li>
+<li>$|A|=|B|$<br><br></li>
+<li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
+</ol>
+<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
+<p><strong>证</strong>:下面以三阶矩阵为例</p>
+<p>首先将$P$按列分块<br><br>得到$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$<br><br>$<br>\begin{aligned}<br>则有<br>(A\alpha_1,A\alpha_2,A\alpha_3)<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
+<p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
+<h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
+<p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
+<h1 id="实对称矩阵"><a href="#实对称矩阵" class="headerlink" title="实对称矩阵"></a>实对称矩阵</h1><blockquote>
+<p>若$A$矩阵的元素都是实数，且A的转置等于它本身，则称$A$为是对称矩阵</p>
+</blockquote>
+<h2 id="性质-4"><a href="#性质-4" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>若$A$是n阶实对称矩阵,则$A$的特征值都是<strong>实数</strong><br><br></li>
+<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong>2：$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
+<li>对任意一个n阶实对称矩阵$A$,总存在n阶<strong>正交矩阵</strong>$\;Q$，使得</li>
+</ol>
+<p>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。</p>
+<p>1.n=1成立</p>
+<p>2.假设n-1成立</p>
+<p>那么n时</p>
+<p>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$</p>
+<p>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$</p>
+<p>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$</p>
+<p>$\qquad\qquad\qquad\cdots$</p>
+<p>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$</p>
+<p>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
+<p>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
+<p>$<br>即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
+<p>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)</p>
+<p>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$</p>
+<p>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$</p>
+<p>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
+<p>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
+<p>$<br>然后令Q_2=<br>\begin{bmatrix}<br>    1&amp;0\\<br>    0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$</p>
+<p>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>   $\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</p>
+<p>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
+<p>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$</p>
+<p>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$</p>
+<p>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
+<p>即n时结论成立<br><br>那么可得到结论成立<br>   </p>
+<h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
+<li>求特征值  </li>
+<li>求特征向量  </li>
+<li>改造特征向量  <ul>
+<li>$\lambda_i\neq\lambda_j$只需单位化  </li>
+<li>$\lambda_i=\lambda_j$<ul>
+<li>$[\alpha_i,\alpha_j]=0$只需单位化  </li>
+<li>$[\alpha_i,\alpha_j] \neq0$施密特正交化</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
+<p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
   </entry>
   <entry>
     <title>matplotlib</title>
