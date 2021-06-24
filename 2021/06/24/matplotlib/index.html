@@ -20,28 +20,51 @@
     var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="追梦">
-<meta property="og:url" content="https://mdreamers.github.io/index.html">
+  <meta name="description" content="matplotlib常见API介绍1improt matplotlib.pyplot as plt     方法 用法     plt.title()(图的标题) plt.title(“Matplotlib demo”)   plt.xlabel()(X轴描述) plt.xlabel(“x axis caption”)   plt.ylabel()(Y轴描述) plt.ylabel(“y axis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="matplotlib">
+<meta property="og:url" content="https://mdreamers.github.io/2021/06/24/matplotlib/index.html">
 <meta property="og:site_name" content="追梦">
+<meta property="og:description" content="matplotlib常见API介绍1improt matplotlib.pyplot as plt     方法 用法     plt.title()(图的标题) plt.title(“Matplotlib demo”)   plt.xlabel()(X轴描述) plt.xlabel(“x axis caption”)   plt.ylabel()(Y轴描述) plt.ylabel(“y axis">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_17_1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_17_2.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_17_3.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_17_4.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_19_0.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_23_0.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_27_0.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_29_1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_31_0.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_33_1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_35_1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_37_1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_39_0.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_42_1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_44_1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_46_0.png">
+<meta property="article:published_time" content="2021-06-24T02:39:45.000Z">
+<meta property="article:modified_time" content="2021-06-24T03:10:37.304Z">
 <meta property="article:author" content="lbl">
+<meta property="article:tag" content="python库">
+<meta property="article:tag" content="绘图">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mdreamers.github.io/2021/06/24/matplotlib/output_17_1.png">
 
-<link rel="canonical" href="https://mdreamers.github.io/">
+<link rel="canonical" href="https://mdreamers.github.io/2021/06/24/matplotlib/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>追梦</title>
+  <title>matplotlib | 追梦</title>
   
 
 
@@ -179,9 +202,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -197,10 +221,9 @@
       <meta itemprop="name" content="追梦">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/24/matplotlib/" class="post-title-link" itemprop="url">matplotlib</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          matplotlib
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -247,7 +270,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h1><h2 id="常见API介绍"><a href="#常见API介绍" class="headerlink" title="常见API介绍"></a>常见API介绍</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">improt matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+        <h1 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h1><h2 id="常见API介绍"><a href="#常见API介绍" class="headerlink" title="常见API介绍"></a>常见API介绍</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">improt matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
 <div class="table-container">
 <table>
 <thead>
@@ -680,673 +703,35 @@
 <p><img src="/2021/06/24/matplotlib/output_46_0.png" alt="png"></p>
 <p>当然内容并不完整，只是初步的对matplotlib库中的工具进行介绍，后续会根据matplotlib所给的官方文件进行扩充……</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/python%E5%BA%93/" rel="tag"># python库</a>
+              <a href="/tags/%E7%BB%98%E5%9B%BE/" rel="tag"># 绘图</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/24/end/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/24/end/" class="post-title-link" itemprop="url">end</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-24 10:04:26 / 修改时间：10:20:50" itemprop="dateCreated datePublished" datetime="2021-06-24T10:04:26+08:00">2021-06-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>83</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/24/end/" rel="prev" title="end">
+      <i class="fa fa-chevron-left"></i> end
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/" class="post-title-link" itemprop="url">7.二次型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-23 07:18:03 / 修改时间：09:11:50" itemprop="dateCreated datePublished" datetime="2021-06-23T07:18:03+08:00">2021-06-23</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>6.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
-<li><p>二次型的矩阵表示<br>$\begin{aligned}<br>f(x_1,x_2,x_3)<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>易知$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵</p>
-</li>
-<li><p>标准形</p>
-<blockquote>
-<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$  </p>
-</blockquote>
-</li>
-<li><p>规范形</p>
-<blockquote>
-<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$</p>
-</blockquote>
-</li>
-<li><p>正惯性指数，负惯性指数</p>
-<blockquote>
-<p>就是标准形系数正负个数<br><br>例如，$x_1^2+x_2^2-4x_3^2\quad$正惯性指数=2，负惯性指数=1</p>
-</blockquote>
-</li>
-<li><p>二次型的秩</p>
-<blockquote>
-<p>$r(f)=r(A)$</p>
-</blockquote>
-</li>
-<li><p>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$</p>
-</li>
-<li><p>合同</p>
-<blockquote>
-<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
-<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><p><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。</p>
-<p>$<br>\begin{aligned}<br>解：<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]-(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3^2)<br>\end{aligned}<br>$</p>
-<p>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$</p>
-<p>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$</p>
-<p>坐标变换公式<br>$x=Cy，\;C=<br>\begin{bmatrix}<br>    1&amp;-1&amp;1\\<br>    0&amp;1&amp;-2\\<br>    0&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
-<p>得$f=y_1^2+y_2^2$</p>
-<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
-<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)使二次型化为标准形<br><br>$\qquad x^TAx=y^T\land y=\lambda_1y_1^2+\lambda_2y_2^2+\lambda_3y_3^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
-</blockquote>
-<p><strong>证</strong>：</p>
-<p>首先要知道二次型中$A$是实对称矩阵</p>
-<p>因为实对称矩阵$Q^{-1}AQ=\land,Q是正交矩阵($则$Q^T=Q^{-1}$)</p>
-<p>所以$Q^TAQ=\land$</p>
-<p>若令$x=Qy$,则，</p>
-<p>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\lambda_3y_3^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</p>
-<p><strong>例</strong>：将二次型$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
-<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
-<p>由特征多项式<br>$<br>|\lambda E-A|=<br>\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|<br>=<br>(\lambda-5)(\lambda+1)^2<br>$</p>
-<p>$\therefore A$的特征值为5，-1，-1</p>
-<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>$得到\alpha_1=(1,1,1)^T$</p>
-<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
-<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T\rightarrow这两个向量不垂直$</p>
-<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
-<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
-<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\begin{bmatrix}-1\\0\\1\end{bmatrix}-\frac12 \begin{bmatrix}-1\\1\\0\end{bmatrix}<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
-<p>单位化</p>
-<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix}，<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix}，<br>\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
-<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
-<p>那么，二次型$x^TAx$经正交变换</p>
-<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}<br>=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
-<p>化为标准形</p>
-<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
-<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
-<p><strong>推论：</strong></p>
-<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
-<p><strong>例</strong>:</p>
-<p>$f=y_1^2+3y_2^2-2y_3^2$</p>
-<p>令</p>
-<p>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$</p>
-<p>那么$f=z_1^2+z_2^2-z_3^2$</p>
-<p>变成规范形步骤：</p>
-<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
-<p>惯性定理</p>
-<blockquote>
-<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
-</blockquote>
-<p>即二次型的规范形是唯一的</p>
-<p><strong>证</strong>：</p>
-<p>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，</p>
-<p>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾</p>
-<p><br></p>
-<p>设$r(C^TAC)=r(A)=r(f)=r$</p>
-<p>如果经坐标变换$x=Py\;$和$\;x=Qz$</p>
-<p>二次型$x^TAx$化成规范形，分别为</p>
-<p>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2\qquad(I)$</p>
-<p>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2\qquad(II)$</p>
-<p><strong>反证法</strong></p>
-<p>如果$s&lt;t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等</p>
-<p>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$</p>
-<p>不妨设</p>
-<p>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad i=1,2,\cdots,n$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad i=1,2,\cdots,n$<br></p>
-<p>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项，</p>
-<p>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾</p>
-<p>即</p>
-<p>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$</p>
-<p>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$</p>
-<p>方程个数 $s+(n-t)=n+s-t&lt;n$</p>
-<p>方程组(1)必有非零解</p>
-<p>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解</p>
-<p>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$</p>
-<p>因为$P,Q$均为可逆矩阵，$\eta\neq0$</p>
-<p>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$</p>
-<p>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$</p>
-<p>把$\eta$代入$(I)$和$(II)$,有</p>
-<p>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt;0$</p>
-<p>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$</p>
-<p>矛盾</p>
-<p>$s,t$地位相等</p>
-<p>$\therefore\;s=t$</p>
-<p>由惯性定理就可以推出</p>
-<p>实对称矩阵$A$和$B$合同$\Leftrightarrow p_A=p_B,q_A=q_B\;(p为正惯性指数，q为负惯性指数)$</p>
-<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
-<p>设二次型$f(x)=x^TAx$,如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
-</blockquote>
-<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
-<p>二次型经坐标变换，其正定性不变</p>
-<p>$x^TAx$正定</p>
-<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
-<p>$\Leftrightarrow\;A\simeq E$,存在可逆矩阵$C,C^TAC=E(或写成A=C^TEC，E可省略)$</p>
-<p>$\Leftrightarrow\;A$特征值全大于0</p>
-<p>$\Leftrightarrow\;A$的顺序主子式<strong>全</strong>大于0</p>
-<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
-<p><strong>例</strong>：判断二次型</p>
-<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
-<p>是否是正定二次型。</p>
-<p><strong>解</strong>：</p>
-<p>1.顺序主子式</p>
-<p>二次型矩阵</p>
-<p>$A$=<br>$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$</p>
-<p>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$</p>
-<p>$\Delta_3=|A|=10&gt;0$</p>
-<p>$\therefore\;f\;$是正定二次型</p>
-<hr>
-<p>2.特征值</p>
-<p>由特征多项式</p>
-<p>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$</p>
-<p>$A$的特征值：1，1，10$\quad$全大于零</p>
-<p>$\therefore\;f\;$是正定二次型</p>
-<hr>
-<p>3.配方法$^*$</p>
-<p>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]-2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$</p>
-<p>p=3,q=0</p>
-<p>$\therefore\;f\;$是正定二次型</p>
-<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
-<p>半正定$f\geqslant0$</p>
-<p>负定$f&lt;0$</p>
-<p>半负定$f\leqslant0$</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/" class="post-title-link" itemprop="url">6.特征值与特征向量</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-22 08:13:35 / 修改时间：14:41:36" itemprop="dateCreated datePublished" datetime="2021-06-22T08:13:35+08:00">2021-06-22</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>12k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>11 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
-<p>设$\alpha=(a_1,a_2,\cdots,a_n)^T$ ,$\beta=(b_1,b_2,\cdots,b_n)$<br><br>令$[\alpha,\beta]=\large\sum\limits_{k=1}^{n}a_kb_k$<br><br>称为向量$\;\alpha\;$和$\;\beta\;$的内积</p>
-</blockquote>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
-<li>$[\alpha,\beta]=[\beta,\alpha]$</li>
-<li>$[\alpha+\beta,\gamma]=[\alpha,\gamma]+[\beta,\gamma]$</li>
-<li>$[k\alpha,\beta]=k[\alpha,\beta]$</li>
-<li>$[\alpha,\alpha]\geqslant0\;且\;[\alpha,\alpha]=0\;\Leftrightarrow\;\alpha=0$</li>
-<li>柯西不等式$\;[\alpha,\beta]^2\leqslant[\alpha,\alpha][\beta,\beta]$<br><br>当且仅当$\;\alpha,\beta\;$线性相关时取等</li>
-</ol>
-<p>如果$\;[\alpha,\beta]=0\;$称$\;\alpha\;$与$\;\beta\;$正交</p>
-<p><strong>柯西不等式的证明：</strong></p>
-<p>$<br>\begin{aligned}<br>&amp;a. 若\;\alpha,\beta\;线性无关,\;\forall x\in R都有x\alpha+\beta\neq0\\<br>&amp;[x\alpha+\beta,x\alpha+\beta]=[\alpha,\alpha]x^2+2[\alpha,\beta]x+[\beta,\beta]&gt;0\\<br>&amp;作为x的二次函数，对\forall x，f(x)&gt;0\\<br>&amp;故\;\;[2[\alpha,\beta]]^2-4[\alpha,\alpha][\beta,\beta]&lt;0\\<br>&amp;\therefore\;[\alpha,\beta]^2&lt;||\alpha||\cdot||\beta||\\<br>\end{aligned}<br>$</p>
-<p>$<br>\begin{aligned}<br>&amp;b. 若\;\alpha,\beta\;线性相关\\<br>&amp;当\;\alpha=0（或\;\beta=0）\\<br>&amp;\qquad[\alpha,\beta]^2=||\alpha||\cdot||\beta||\\<br>&amp;当\beta=k\alpha\neq0\\<br>&amp;\qquad[\alpha,\beta]^2=[\alpha,k\alpha]^2=k^2[\alpha,\alpha]^2=[\alpha,\alpha]\cdot[k\alpha,k\alpha]=||\alpha||\cdot||\beta||<br>\end{aligned}<br>$</p>
-<h2 id="向量的长度"><a href="#向量的长度" class="headerlink" title="向量的长度"></a>向量的长度</h2><blockquote>
-<p>$||\alpha||=\sqrt{[\alpha,\alpha]}=\sqrt{\sum\limits_{k=1}^n{\large a}_k^2}$</p>
-</blockquote>
-<p>如果$||\alpha||=1\;$称$\;\alpha\;$为单位向量<br><br>$\displaystyle\frac{1}{||\alpha||}\alpha\;\longrightarrow$单位化</p>
-<p>定理：若n维向量$\alpha_1,\alpha_2,\cdots,\alpha_r$是一组两两正交的非零向量，<br>则$\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关。</p>
-<p>证：设$k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r=0$</p>
-<p>用$\alpha_1$对等式两边作内积</p>
-<p>$\quad[\alpha_1,k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r]=[\alpha_1,0]$</p>
-<p>$\quad k_1[\alpha_1,\alpha_1]+k_2[\alpha_1,\alpha_2]+\cdots+k_r[\alpha_1,\alpha_r]=0$</p>
-<p>$\quad$因$\;\alpha_1\neq0,[\alpha_1,\alpha_1]&gt;0,而[\alpha_1,\alpha_i]=0,i\geqslant2$</p>
-<p>$\quad\therefore\;k_1[\alpha_1,\alpha_1]=0\;$必有$k_1=0$</p>
-<p>$\quad$同理$\;k_2=0,\cdots,k_r=0$</p>
-<h2 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h2><p>设$\alpha_1,\alpha_2,\alpha_3\;$线性无关</p>
-<p>令$\quad\beta_1=\alpha_1$</p>
-<p>$\quad\beta_2=\alpha_2-\displaystyle\frac{[\alpha_2\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1$</p>
-<p>$\quad\beta_3=\alpha_3-\displaystyle\frac{[\alpha_3\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1-\displaystyle\frac{[\alpha_3\;\beta_2]}{[\beta_2\;\beta_2]}\beta_2$</p>
-<p>则$\;\beta_1\;\beta_2\;\beta_3\;$两两正交<br><br><br>再单位化<br>$\qquad\gamma_1=\displaystyle\frac{\beta_1}{||\beta_1||}$,<br>$\gamma_2=\displaystyle\frac{\beta_2}{||\beta_2||}$,<br>$\gamma_3=\displaystyle\frac{\beta_3}{||\beta_3||}$</p>
-<p>这样其实就相当于构建直角坐标系</p>
-<h2 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h2><blockquote>
-<p>设$A$是n阶矩阵，满足<br>$AA^T=A^TA=E$,<br>则称$A$为正交矩阵</p>
-</blockquote>
-<h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
-<li><p>$A$是正交矩阵$\;\Leftrightarrow\;A^T=A^{-1}$</p>
-</li>
-<li><p>$A=(\alpha_1\;\alpha_2\;\alpha_3)$是正交矩阵<br>$\quad\Leftrightarrow\;\alpha_1,\alpha_2,\alpha_3\;$都是单位向量，且两两正交<br><br>证：<br>$<br>\begin{aligned}<br>A^TA<br>&amp;=\begin{bmatrix}<br> \alpha_1^T\\<br> \alpha_2^T\\<br> \alpha_3^T<br>\end{bmatrix}<br>[\alpha_1\;\alpha_2\;\alpha_3]\\<br>&amp;=\begin{bmatrix}    \alpha_1^T\alpha_1&amp;\alpha_1^T\alpha_2&amp;\alpha_1^T\alpha_3\\    \alpha_2^T\alpha_1&amp;\alpha_2^T\alpha_2&amp;\alpha_2^T\alpha_3\\<br>\alpha_3^T\alpha_1&amp;\alpha_3^T\alpha_2&amp;\alpha_3^T\alpha_3<br>\end{bmatrix}<br>=\begin{bmatrix}<br> 1&amp;0&amp;0\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;1<br>\end{bmatrix}\\<br>&amp;=E<br>\end{aligned}<br>$<br><br></p>
-</li>
-<li>如果$A$是正交矩阵，则$|A|$=1或-1<br><br></li>
-<li>若$A,B$都是正交矩阵，则$AB$也是正交矩阵<br><br>证：<br>$(AB)(AB)^T=A(BB^T)A^T=AA^T=E$</li>
-</ol>
-<h3 id="规范正交基"><a href="#规范正交基" class="headerlink" title="规范正交基"></a>规范正交基</h3><p>设$e_1,e_2,\cdots,e_n$是向量空间的一个基，<br><br>如果<br>$\qquad[e_i,e_j]=<br>\begin{cases}<br>    1\qquad i=j\\<br>     0\qquad i\neq j<br>\end{cases}<br>$</p>
-<p>$\qquad$则称$e_1,e_2,\cdots,e_n$为规范正交基。</p>
-<p><strong>例</strong></p>
-<p>$<br>A=\begin{bmatrix}<br>    1&amp;0&amp;0&amp;-2\\<br>    0&amp;1&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
-<p>$Ax=0\;$基础解系</p>
-<p>$\eta_1=(0,0,1,0)^T,\eta_2=(2,-1,0,1)^T$</p>
-<p>解空间的基：$\eta_1,\eta_2$</p>
-<p>解空间维数：2</p>
-<p>规范正交基：$(0,0,1,0)^T,{\large\frac{1}{\sqrt{6}}}(2,-1,0,1)^T$</p>
-<h1 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h1><blockquote>
-<p>设A是n阶矩阵，<span class="mark">$\alpha$是n维非0列向量</span>，满足<br>$\qquad A\alpha=\lambda\alpha$<br><br>则称:<br>$\lambda$是矩阵$A$的特征值<br><br>$\alpha$是矩阵$A$对应于特征值$\lambda$的特征向量.</p>
-</blockquote>
-<p>$A\alpha=\lambda\alpha\;$这个等式个人直观理解：特征向量$\alpha$经过A矩阵变换后等于特征向量$\alpha$的$\lambda$倍</p>
-<ol>
-<li><p>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br>$\quad$<br><br>那么$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$</p>
-</li>
-<li><p>若$\alpha_1,\alpha_2$都是矩阵$A$关于特征值$\lambda$的特征向量，<br><br>则$\;\forall k_1,k_2$，当$k_1\alpha_1+k_2\alpha_2\neq0$时，<br>$k_1\alpha_1+k_2\alpha_2$仍是$A$对应于$\lambda$的特征向量<br><br>由$A\alpha_1=\lambda\alpha_1,A\alpha_2=\lambda\alpha_2$</p>
-</li>
-</ol>
-<p>$<br>\begin{aligned}<br>\quad\;得到： A(k_1\alpha_1+k_2\alpha_2)<br>&amp;=k_1A\alpha_1+k_2A\alpha_2\\<br>&amp;=k_1(\lambda\alpha_1)+k_2(\lambda\alpha_2)\\<br>&amp;=\lambda(k_1\alpha_1+k_2\alpha_2)\\<br>\end{aligned}<br>$</p>
-<h2 id="求解步骤和原理"><a href="#求解步骤和原理" class="headerlink" title="求解步骤和原理"></a>求解步骤和原理</h2><p>$\quad A\alpha=\lambda\alpha$</p>
-<p>$\Rightarrow(\lambda E-A)\alpha=0$</p>
-<p>$\quad\alpha\;是\;(\lambda E-A)x=0的非零解\;\rightarrow\;|\lambda E-A|=0$</p>
-<p>(1) 由$\;|\lambda E-A|=0\;$求特征值$\;\lambda_i$<br><br>$\quad$共n个(含重根)<br><br>(2) 由$\;(\lambda_iE-A)x=0\;$求基础解系<br><br>$\quad$即$\lambda_i$线性无关的特征向量</p>
-<p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
-<p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$</p>
-<p>$\therefore\;A的特征值为\;1,\pm6$</p>
-<p>$1. 当\;\lambda=1\;时,由\;(E-A)x=0$</p>
-<p>$E-A=\begin{bmatrix}<br>    1&amp;-2&amp;2\\<br>    -2&amp;-3&amp;-4\\<br>    2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;0&amp;2\\<br>    0&amp;1&amp;0\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br><br>$2. 当\;\lambda=6\;时，由(6E-A)x=0$</p>
-<p>$6E-A=\begin{bmatrix}<br>    6&amp;-2&amp;2\\<br>    -2&amp;2&amp;-4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br>    0&amp;0&amp;0\\<br>    -2&amp;2&amp;4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;-1&amp;2\\<br>    0&amp;-2&amp;5\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br><br>$3. 当\lambda=-6时，由(-6E-A)x=0$</p>
-<p>$-6E-A=\begin{bmatrix}<br>    -6&amp;-2&amp;2\\<br>    -2&amp;-10&amp;-4\\<br>    2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;1&amp;0\\<br>    0&amp;2&amp;1\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</p>
-<h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>设$A$是n阶矩阵<br><br>(1)$\;\sum\lambda_i=\sum {\large a}_{ii}=trA\;\rightarrow\;tr为矩阵的迹$<br><br>(2)$\;\prod\lambda_i=|A|$<br><br></li>
-<li>$A$可逆$\;\Leftrightarrow\;$$A$的n个特征值全不为0<br><br></li>
-<li>矩阵$A$对应于不同特征值的特征向量的特征向量是线性无关的<br><br><strong>证</strong>:$\quad$设$\lambda_1,\lambda_2,\cdots,\lambda_s$是矩阵$A$的S个不同的特征值，对应的特征向量分别是$\alpha_1,\alpha_2,\cdots,\alpha_s$<br><br>$\;$用数学归纳法<br><br>$\;那么,当S=1时，因\alpha_1\neq0,命题正确$<br><br>$\;假设S=k-1(k\geqslant2)时,结论成立$<br><br>$\;当S=k时，x_1\alpha_1+x_2\alpha_2+\cdots+x_{k-1}\alpha_{k-1}+x_k\alpha_k=0\qquad(1)$<br><br>$\;用A左乘上式，有$<br><br>$\;x_1\lambda_1\alpha_1+x_2\lambda_2\alpha_2+\cdots+x_{k-1}\lambda_{k-1}\alpha_{k-1}+x_k\lambda_k\alpha_k=0\qquad(2)$<br><br>$\;用\lambda_k乘(1)又有$<br><br>$\;x_1\lambda_k\alpha_1+x_2\lambda_k\alpha_2+\cdots+x_{k-1}\lambda_k\alpha_{k-1}+x_k\lambda_k\alpha_k=0\;\,\,\qquad(3)$<br><br>$\;$(2)-(3):<br><br>$\;x_1(\lambda_1-\lambda_k)\alpha_1+x_2(\lambda_2-\lambda_k)\alpha_2+\cdots+x_{k-1}(\lambda_{k-1}-\lambda_k)\alpha_{k-1}=0$<br><br>$\;又因为\alpha_1,\alpha_2,\cdots,\alpha_{k-1}线性无关$<br><br>$\;所以x_1(\lambda_1-\lambda_k)=0,x_2(\lambda_2-\lambda_k)=0,\cdots,x_{k-1}(\lambda_{k-1}-\lambda_k)=0$<br><br>$\;因特征值\lambda_i\neq\lambda_j,从而\\<br>\quad x_1=0,x_2=0,\cdots,x_{k-1}=0$<br><br>$\;代入(1)式，得\\<br>\qquad x_k\alpha_k=0$<br><br>$\;因\;\alpha\neq0,\quad得\;x_k=0$<br><br>$\;故\alpha_1,\alpha_2,\cdots,\alpha_k线性无关$<br><br>所以当$S=k$时，命题成立<br><br>由数学归纳法可知对一切自然数，命题均成立。<br><br></li>
-<li><p>若$\;A\alpha=\lambda\alpha,\alpha\neq0$<br><br>$(A+kE)\alpha=(\lambda+k)\alpha$</p>
-</li>
-<li><p>由$\;A\alpha=\lambda\alpha$<br><br>有$\;A^2\alpha=A(\lambda\alpha)=\lambda A\alpha=\lambda^2\alpha$<br><br>$\;\Rightarrow\;A^n\alpha^n=\lambda^n\alpha$<br><br></p>
-</li>
-<li>由$A\alpha=\lambda\alpha,A$可逆<br><br>可得到$A^{-1}\alpha=\displaystyle\frac{1}{\lambda}\alpha$<br><br>$\qquad\quad A^*\alpha=\displaystyle\frac{|A|}{\lambda}\alpha$</li>
-</ol>
-<h1 id="相似矩阵"><a href="#相似矩阵" class="headerlink" title="相似矩阵"></a>相似矩阵</h1><blockquote>
-<p>设$A,B$都是n阶矩阵，如果存在可逆矩阵P,使得<br><br>$\qquad P^{-1}AP=B$<br><br>就称矩阵$A$相似于矩阵$B$，$B$是$A$的相似矩阵<br><br>记成$A\sim B$</p>
-</blockquote>
-<h2 id="性质-3"><a href="#性质-3" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>$A\sim B$<br><br></li>
-<li>如果$A\sim B$,则$B\sim A$.<br><br></li>
-<li>如果$A\sim B,B\sim C$则$\;A\sim C$.<br><br></li>
-<li>如果$A\sim B$,那么<br><br>(1) $A^2\sim B^2$<br><br>(2) $A+kE\sim B+kE$<br><br>(3) 如果$A$可逆，则$\;A^{-1}\sim B^{-1}$<br><br>(4)如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</li>
-</ol>
-<h2 id="两个矩阵相似的必要条件"><a href="#两个矩阵相似的必要条件" class="headerlink" title="两个矩阵相似的必要条件"></a>两个矩阵相似的必要条件</h2><p>如果$A\sim B$,</p>
-<ol>
-<li>$|\lambda E-A|=|\lambda E-B|\;\Rightarrow\lambda_A=\lambda_B$<br><br></li>
-<li>$r(A)=r(B)$<br><br></li>
-<li>$|A|=|B|$<br><br></li>
-<li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
-</ol>
-<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
-<p><strong>证</strong>:下面以三阶矩阵为例</p>
-<p>首先将$P$按列分块<br><br>得到$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$<br><br>$<br>\begin{aligned}<br>则有<br>(A\alpha_1,A\alpha_2,A\alpha_3)<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
-<p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
-<h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
-<p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
-<h1 id="实对称矩阵"><a href="#实对称矩阵" class="headerlink" title="实对称矩阵"></a>实对称矩阵</h1><blockquote>
-<p>若$A$矩阵的元素都是实数，且A的转置等于它本身，则称$A$为是对称矩阵</p>
-</blockquote>
-<h2 id="性质-4"><a href="#性质-4" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>若$A$是n阶实对称矩阵,则$A$的特征值都是<strong>实数</strong><br><br></li>
-<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong>2：$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
-<li>对任意一个n阶实对称矩阵$A$,总存在n阶<strong>正交矩阵</strong>$\;Q$，使得</li>
-</ol>
-<p>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。</p>
-<p>1.n=1成立</p>
-<p>2.假设n-1成立</p>
-<p>那么n时</p>
-<p>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$</p>
-<p>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$</p>
-<p>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$</p>
-<p>$\qquad\qquad\qquad\cdots$</p>
-<p>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$</p>
-<p>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>$<br>即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)</p>
-<p>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$</p>
-<p>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$</p>
-<p>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>$<br>然后令Q_2=<br>\begin{bmatrix}<br>    1&amp;0\\<br>    0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$</p>
-<p>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>   $\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</p>
-<p>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$</p>
-<p>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$</p>
-<p>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>即n时结论成立<br><br>那么可得到结论成立<br>   </p>
-<h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
-<li>求特征值  </li>
-<li>求特征向量  </li>
-<li>改造特征向量  <ul>
-<li>$\lambda_i\neq\lambda_j$只需单位化  </li>
-<li>$\lambda_i=\lambda_j$<ul>
-<li>$[\alpha_i,\alpha_j]=0$只需单位化  </li>
-<li>$[\alpha_i,\alpha_j] \neq0$施密特正交化</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
-<p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/" class="post-title-link" itemprop="url">5.向量空间</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-21 11:15:57 / 修改时间：11:32:14" itemprop="dateCreated datePublished" datetime="2021-06-21T11:15:57+08:00">2021-06-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
-<p>{n维向量；+，数乘}</p>
-</blockquote>
-<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
-<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
-<p>则称W是n维向量空间的子空间</p>
-<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
-<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
-<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
-<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br><br>$<br>\begin{aligned}<br>设\;\;<br>&amp;\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3\\<br>&amp;\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3\\<br>&amp;\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3<br>\end{aligned}<br>$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
-<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
-<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
-<p>即<br>$<br>\begin{aligned}<br>\;\;&amp;\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}\\<br>&amp;\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br><br>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
-<hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\quad\longrightarrow 坐标变换公式\\<br>\quad x=Cy<br>$</p>
-<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但空间理解还是不够深入，感觉比较抽象，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
@@ -1398,6 +783,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#matplotlib"><span class="nav-number">1.</span> <span class="nav-text">matplotlib</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81API%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.</span> <span class="nav-text">常见API介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rcRarams%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">rcRarams的属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#start"><span class="nav-number">2.</span> <span class="nav-text">start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Figure"><span class="nav-number">2.1.</span> <span class="nav-text">Figure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E4%BE%8B"><span class="nav-number">2.2.</span> <span class="nav-text">添加图例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%B3%A8%E8%A7%A3"><span class="nav-number">2.3.</span> <span class="nav-text">添加注解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tick"><span class="nav-number">3.</span> <span class="nav-text">tick</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tick-params"><span class="nav-number">3.1.</span> <span class="nav-text">tick_params()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#scatter%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">scatter散点图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="nav-number">5.</span> <span class="nav-text">柱状图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E7%AD%89%E9%AB%98%E7%BA%BF"><span class="nav-number">6.</span> <span class="nav-text">生成等高线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3D"><span class="nav-number">7.</span> <span class="nav-text">3D</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Subplot-%E5%A4%9A%E5%90%88%E4%B8%80%E6%98%BE%E7%A4%BA"><span class="nav-number">8.</span> <span class="nav-text">Subplot 多合一显示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Subplot-%E5%88%86%E9%9A%94%E6%98%BE%E7%A4%BA"><span class="nav-number">9.</span> <span class="nav-text">Subplot 分隔显示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E4%B8%AD%E5%9B%BE"><span class="nav-number">10.</span> <span class="nav-text">图中图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4"><span class="nav-number">11.</span> <span class="nav-text">次坐标轴</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Animation-%E5%8A%A8%E7%94%BB"><span class="nav-number">12.</span> <span class="nav-text">Animation 动画</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
