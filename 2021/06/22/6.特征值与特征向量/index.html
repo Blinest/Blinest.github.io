@@ -28,7 +28,7 @@
 <meta property="og:description" content="向量的内积与正交矩阵向量的内积 设$\alpha&#x3D;(a_1,a_2,\cdots,a_n)^T$ ,$\beta&#x3D;(b_1,b_2,\cdots,b_n)$令$[\alpha,\beta]&#x3D;\large\sum\limits_{k&#x3D;1}^{n}a_kb_k$称为向量$\;\alpha\;$和$\;\beta\;$的内积  性质 $[\alpha,\beta]&#x3D;[\beta,\alpha]$ $[\">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-22T00:13:35.000Z">
-<meta property="article:modified_time" content="2021-06-22T06:41:36.070Z">
+<meta property="article:modified_time" content="2021-06-25T04:40:45.651Z">
 <meta property="article:author" content="lbl">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="线性代数">
@@ -214,10 +214,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-22 08:13:35 / 修改时间：14:41:36" itemprop="dateCreated datePublished" datetime="2021-06-22T08:13:35+08:00">2021-06-22</time>
+              <time title="创建时间：2021-06-22 08:13:35" itemprop="dateCreated datePublished" datetime="2021-06-22T08:13:35+08:00">2021-06-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-25 12:40:45" itemprop="dateModified" datetime="2021-06-25T12:40:45+08:00">2021-06-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -323,11 +329,19 @@
 <p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
 <p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$</p>
 <p>$\therefore\;A的特征值为\;1,\pm6$</p>
-<p>$1. 当\;\lambda=1\;时,由\;(E-A)x=0$</p>
+<ol>
+<li>当$\;\lambda=1\;时,由\;(E-A)x=0$</li>
+</ol>
 <p>$E-A=\begin{bmatrix}<br>    1&amp;-2&amp;2\\<br>    -2&amp;-3&amp;-4\\<br>    2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;0&amp;2\\<br>    0&amp;1&amp;0\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br><br>$2. 当\;\lambda=6\;时，由(6E-A)x=0$</p>
+<p>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br></p>
+<ol>
+<li>当$\;\lambda=6\;时，由(6E-A)x=0$</li>
+</ol>
 <p>$6E-A=\begin{bmatrix}<br>    6&amp;-2&amp;2\\<br>    -2&amp;2&amp;-4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br>    0&amp;0&amp;0\\<br>    -2&amp;2&amp;4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;-1&amp;2\\<br>    0&amp;-2&amp;5\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br><br>$3. 当\lambda=-6时，由(-6E-A)x=0$</p>
+<p>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br></p>
+<ol>
+<li>当$\lambda=-6时，由(-6E-A)x=0$</li>
+</ol>
 <p>$-6E-A=\begin{bmatrix}<br>    -6&amp;-2&amp;2\\<br>    -2&amp;-10&amp;-4\\<br>    2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;1&amp;0\\<br>    0&amp;2&amp;1\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
 <p>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</p>
 <h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
@@ -356,9 +370,12 @@
 <li>$|A|=|B|$<br><br></li>
 <li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
 </ol>
-<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
+<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land$$\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
 <p><strong>证</strong>:下面以三阶矩阵为例</p>
-<p>首先将$P$按列分块<br><br>得到$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$<br><br>$<br>\begin{aligned}<br>则有<br>(A\alpha_1,A\alpha_2,A\alpha_3)<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
+<p>首先将$P$按列分块<br><br>得到<br>$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即<br>$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$</p>
+<p>则有</p>
+<p>$(A\alpha_1,A\alpha_2,A\alpha_3)$</p>
+<p>$\begin{aligned}<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
 <p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
 <h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
 <p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
@@ -371,29 +388,12 @@
 <li>对任意一个n阶实对称矩阵$A$,总存在n阶<strong>正交矩阵</strong>$\;Q$，使得</li>
 </ol>
 <p>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。</p>
-<p>1.n=1成立</p>
-<p>2.假设n-1成立</p>
-<p>那么n时</p>
-<p>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$</p>
-<p>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$</p>
-<p>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$</p>
-<p>$\qquad\qquad\qquad\cdots$</p>
-<p>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$</p>
-<p>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>$<br>即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)</p>
-<p>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$</p>
-<p>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$</p>
-<p>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>$<br>然后令Q_2=<br>\begin{bmatrix}<br>    1&amp;0\\<br>    0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$</p>
-<p>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>   $\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</p>
-<p>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$</p>
-<p>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$</p>
-<p>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>即n时结论成立<br><br>那么可得到结论成立<br>   </p>
+<ol>
+<li><p>n=1成立</p>
+</li>
+<li><p>假设n-1成立<br><br>那么n时<br><br>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$<br><br>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$<br><br>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$<br><br>$\qquad\qquad\qquad\cdots$<br><br>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$<br><br>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br><br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)<br><br>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$<br><br>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$<br><br>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$<br>然后令Q_2=<br>\begin{bmatrix}<br> 1&amp;0\\<br> 0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$<br><br>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$<br><br><br>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$<br><br>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$<br><br>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>即n时结论成立<br><br>那么可得到结论成立<br>   </p>
+</li>
+</ol>
 <h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
 <li>求特征值  </li>
 <li>求特征向量  </li>

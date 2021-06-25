@@ -803,10 +803,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-23 07:18:03 / 修改时间：09:11:50" itemprop="dateCreated datePublished" datetime="2021-06-23T07:18:03+08:00">2021-06-23</time>
+              <time title="创建时间：2021-06-23 07:18:03" itemprop="dateCreated datePublished" datetime="2021-06-23T07:18:03+08:00">2021-06-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-25 12:29:31" itemprop="dateModified" datetime="2021-06-25T12:29:31+08:00">2021-06-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -823,7 +829,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6.7k</span>
+              <span>6.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -843,8 +849,10 @@
 
       
           <h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
-<li><p>二次型的矩阵表示<br>$\begin{aligned}<br>f(x_1,x_2,x_3)<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>易知$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵</p>
-</li>
+<li>二次型的矩阵表示<br>$f(x_1,x_2,x_3)$</li>
+</ol>
+<p>$\begin{aligned}<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br>    1&amp;-1&amp;0\\<br>    -1&amp;5&amp;3\\<br>    0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br>    x_1\\<br>    x_2\\<br>    x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>易知$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵</p>
+<ol>
 <li><p>标准形</p>
 <blockquote>
 <p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$  </p>
@@ -875,13 +883,13 @@
 </ol>
 <h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
 <h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><p><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。</p>
-<p>$<br>\begin{aligned}<br>解：<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]-(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3^2)<br>\end{aligned}<br>$</p>
+<p>$<br>\begin{aligned}<br>解：<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]\\<br>&amp;\quad -(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3^2)<br>\end{aligned}<br>$</p>
 <p>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$</p>
 <p>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$</p>
 <p>坐标变换公式<br>$x=Cy，\;C=<br>\begin{bmatrix}<br>    1&amp;-1&amp;1\\<br>    0&amp;1&amp;-2\\<br>    0&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
 <p>得$f=y_1^2+y_2^2$</p>
 <h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
-<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)使二次型化为标准形<br><br>$\qquad x^TAx=y^T\land y=\lambda_1y_1^2+\lambda_2y_2^2+\lambda_3y_3^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
+<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)使二次型化为标准形<br><br>$\quad x^TAx=y^T\land y=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
 </blockquote>
 <p><strong>证</strong>：</p>
 <p>首先要知道二次型中$A$是实对称矩阵</p>
@@ -889,23 +897,23 @@
 <p>所以$Q^TAQ=\land$</p>
 <p>若令$x=Qy$,则，</p>
 <p>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\lambda_3y_3^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</p>
-<p><strong>例</strong>：将二次型$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
+<p><strong>例</strong>：将二次型<br>$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
 <p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
-<p>由特征多项式<br>$<br>|\lambda E-A|=<br>\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|<br>=<br>(\lambda-5)(\lambda+1)^2<br>$</p>
+<p>由特征多项式<br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-5)(\lambda+1)^2<br>\end{aligned}<br>$</p>
 <p>$\therefore A$的特征值为5，-1，-1</p>
 <p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
 <p>$得到\alpha_1=(1,1,1)^T$</p>
 <p>$\lambda=-1$时，由$(-E-A)x=0$</p>
 <p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T\rightarrow这两个向量不垂直$</p>
+<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$<br>$\rightarrow$这两个向量不垂直</p>
 <p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
 <p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
-<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\begin{bmatrix}-1\\0\\1\end{bmatrix}-\frac12 \begin{bmatrix}-1\\1\\0\end{bmatrix}<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
+<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
 <p>单位化</p>
-<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix}，<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix}，<br>\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
+<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix},<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix},$<br>$\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}$</p>
 <p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
 <p>那么，二次型$x^TAx$经正交变换</p>
-<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}<br>=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
+<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
 <p>化为标准形</p>
 <p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
 <p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
@@ -930,13 +938,15 @@
 <p>设$r(C^TAC)=r(A)=r(f)=r$</p>
 <p>如果经坐标变换$x=Py\;$和$\;x=Qz$</p>
 <p>二次型$x^TAx$化成规范形，分别为</p>
-<p>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2\qquad(I)$</p>
-<p>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2\qquad(II)$</p>
+<p>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$</p>
+<p>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$</p>
 <p><strong>反证法</strong></p>
 <p>如果$s&lt;t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等</p>
 <p>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$</p>
 <p>不妨设</p>
-<p>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad i=1,2,\cdots,n$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad i=1,2,\cdots,n$<br></p>
+<p>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$</p>
+<p>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$</p>
+<p>其中($i=1,2,\cdots,n$)<br></p>
 <p>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项，</p>
 <p>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾</p>
 <p>即</p>
@@ -956,7 +966,7 @@
 <p>$s,t$地位相等</p>
 <p>$\therefore\;s=t$</p>
 <p>由惯性定理就可以推出</p>
-<p>实对称矩阵$A$和$B$合同$\Leftrightarrow p_A=p_B,q_A=q_B\;(p为正惯性指数，q为负惯性指数)$</p>
+<p>实对称矩阵$A$和$B$合同$\Leftrightarrow p_A=p_B,q_A=q_B\;$<br>(p为正惯性指数，q为负惯性指数)</p>
 <h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
 <p>设二次型$f(x)=x^TAx$,如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
 </blockquote>
@@ -986,7 +996,7 @@
 <p>$\therefore\;f\;$是正定二次型</p>
 <hr>
 <p>3.配方法$^*$</p>
-<p>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]-2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$</p>
+<p>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]\\<br>&amp;\quad -2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$</p>
 <p>p=3,q=0</p>
 <p>$\therefore\;f\;$是正定二次型</p>
 <h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
@@ -1035,10 +1045,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-22 08:13:35 / 修改时间：14:41:36" itemprop="dateCreated datePublished" datetime="2021-06-22T08:13:35+08:00">2021-06-22</time>
+              <time title="创建时间：2021-06-22 08:13:35" itemprop="dateCreated datePublished" datetime="2021-06-22T08:13:35+08:00">2021-06-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-25 12:40:45" itemprop="dateModified" datetime="2021-06-25T12:40:45+08:00">2021-06-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1144,11 +1160,19 @@
 <p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
 <p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$</p>
 <p>$\therefore\;A的特征值为\;1,\pm6$</p>
-<p>$1. 当\;\lambda=1\;时,由\;(E-A)x=0$</p>
+<ol>
+<li>当$\;\lambda=1\;时,由\;(E-A)x=0$</li>
+</ol>
 <p>$E-A=\begin{bmatrix}<br>    1&amp;-2&amp;2\\<br>    -2&amp;-3&amp;-4\\<br>    2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;0&amp;2\\<br>    0&amp;1&amp;0\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br><br>$2. 当\;\lambda=6\;时，由(6E-A)x=0$</p>
+<p>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br></p>
+<ol>
+<li>当$\;\lambda=6\;时，由(6E-A)x=0$</li>
+</ol>
 <p>$6E-A=\begin{bmatrix}<br>    6&amp;-2&amp;2\\<br>    -2&amp;2&amp;-4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br>    0&amp;0&amp;0\\<br>    -2&amp;2&amp;4\\<br>    2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;-1&amp;2\\<br>    0&amp;-2&amp;5\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
-<p>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br><br>$3. 当\lambda=-6时，由(-6E-A)x=0$</p>
+<p>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br></p>
+<ol>
+<li>当$\lambda=-6时，由(-6E-A)x=0$</li>
+</ol>
 <p>$-6E-A=\begin{bmatrix}<br>    -6&amp;-2&amp;2\\<br>    -2&amp;-10&amp;-4\\<br>    2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>    1&amp;1&amp;0\\<br>    0&amp;2&amp;1\\<br>    0&amp;0&amp;0<br>\end{bmatrix}$</p>
 <p>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</p>
 <h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
@@ -1177,9 +1201,12 @@
 <li>$|A|=|B|$<br><br></li>
 <li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
 </ol>
-<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
+<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land$$\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
 <p><strong>证</strong>:下面以三阶矩阵为例</p>
-<p>首先将$P$按列分块<br><br>得到$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$<br><br>$<br>\begin{aligned}<br>则有<br>(A\alpha_1,A\alpha_2,A\alpha_3)<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
+<p>首先将$P$按列分块<br><br>得到<br>$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即<br>$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$</p>
+<p>则有</p>
+<p>$(A\alpha_1,A\alpha_2,A\alpha_3)$</p>
+<p>$\begin{aligned}<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
 <p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
 <h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
 <p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
@@ -1192,29 +1219,12 @@
 <li>对任意一个n阶实对称矩阵$A$,总存在n阶<strong>正交矩阵</strong>$\;Q$，使得</li>
 </ol>
 <p>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。</p>
-<p>1.n=1成立</p>
-<p>2.假设n-1成立</p>
-<p>那么n时</p>
-<p>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$</p>
-<p>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$</p>
-<p>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$</p>
-<p>$\qquad\qquad\qquad\cdots$</p>
-<p>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$</p>
-<p>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>$<br>即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;b\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)</p>
-<p>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$</p>
-<p>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$</p>
-<p>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br>    \lambda_1&amp;0\\<br>     0&amp;B\\<br>\end{bmatrix}<br>$</p>
-<p>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>$<br>然后令Q_2=<br>\begin{bmatrix}<br>    1&amp;0\\<br>    0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$</p>
-<p>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>   $\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</p>
-<p>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$</p>
-<p>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$</p>
-<p>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$</p>
-<p>即n时结论成立<br><br>那么可得到结论成立<br>   </p>
+<ol>
+<li><p>n=1成立</p>
+</li>
+<li><p>假设n-1成立<br><br>那么n时<br><br>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$<br><br>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$<br><br>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$<br><br>$\qquad\qquad\qquad\cdots$<br><br>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$<br><br>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br><br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)<br><br>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$<br><br>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$<br><br>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$<br>然后令Q_2=<br>\begin{bmatrix}<br> 1&amp;0\\<br> 0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$<br><br>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$<br><br><br>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$<br><br>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$<br><br>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>即n时结论成立<br><br>那么可得到结论成立<br>   </p>
+</li>
+</ol>
 <h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
 <li>求特征值  </li>
 <li>求特征向量  </li>
@@ -1272,10 +1282,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-21 11:15:57 / 修改时间：11:32:14" itemprop="dateCreated datePublished" datetime="2021-06-21T11:15:57+08:00">2021-06-21</time>
+              <time title="创建时间：2021-06-21 11:15:57" itemprop="dateCreated datePublished" datetime="2021-06-21T11:15:57+08:00">2021-06-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-25 12:40:48" itemprop="dateModified" datetime="2021-06-25T12:40:48+08:00">2021-06-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1325,7 +1341,7 @@
 <p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
 <p>即<br>$<br>\begin{aligned}<br>\;\;&amp;\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}\\<br>&amp;\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br><br>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
 <hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\quad\longrightarrow 坐标变换公式\\<br>\quad x=Cy<br>$</p>
+<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br>$\; x=Cy$</p>
 <p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但空间理解还是不够深入，感觉比较抽象，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
 
       
