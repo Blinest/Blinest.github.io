@@ -14,6 +14,77 @@
       </tags>
   </entry>
   <entry>
+    <title>1.行列式</title>
+    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
+<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$<br>，<br>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p><strong>例</strong><br></p>
+<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
+<p>解：由于系数行列式<br></p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
+<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93，<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
+<p>故方程组的解为：</p>
+<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
+<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
+<ul>
+<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式<span class="mark">3$\;$2$\;$1列</span>逆序数值<br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
+</ul>
+<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变<br><strong>即</strong>  </p>
+<p>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|\\<br>$</p>
+<p>一般项：<br>$<br>\;{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$</p>
+<p>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和</p>
+<p>$\quad<br>\left|\begin{array}{ccc}<br>    \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>    {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>    \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br>$\,=<br>\left|\begin{array}{ccc}<br>    \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>     {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>    \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br>$+<br>\left|\begin{array}{ccc}<br>    \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>     {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>    \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</p>
+<p><strong>其他的性质:</strong></p>
+<ul>
+<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
+</li>
+<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow 矩阵可逆 \Leftrightarrow A\;的行(列)向量线性组无关 \Leftrightarrow A\;的特征值\lambda\not=0$</p>
+</li>
+<li><p>（方阵）$det(AB)=det(A)det(B)$</p>
+</li>
+<li><p>$det(A^{-1})=\displaystyle\frac{1}{det(A)}$</p>
+</li>
+<li><p>$det(2A)=2^ndet(A)$</p>
+</li>
+</ul>
+<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><span class="mark">代数余子式${\large a}_{ij}$需要带正负号</span><br>$<br>\begin{aligned}<br>&amp;D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}\\<br>&amp;D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}\\<br>&amp;D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行\\<br>&amp;D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列\\<br>\end{aligned}<br>$</p>
+<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
+<p>下三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
+<p><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
+<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|<br>\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
+<p><strong>应用</strong>  </p>
+<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
+<p>首先构造</p>
+<p>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\longrightarrow按照第四列展开\\<br>\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})\longrightarrow D\;的值就是{\large x}_2系数的负数\\<br>\end{aligned}<br>$ </p>
+<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
+<li>有一块全是零的行列式</li>
+</ul>
+<hr>
+<ul>
+<li>主对角线</li>
+</ul>
+<p>$\quad<br>\left|\begin{array}{cccc:cccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>     \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>    \hdashline<br>    {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>    {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>    \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>    \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>    {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$<br>$\cdot<br>\left|\begin{array}{ccc}<br>    {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>    {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>    \vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$</p>
+<ul>
+<li>副对角线</li>
+</ul>
+<p>例</p>
+<p>$\quad<br>\left|\begin{array}{cc:ccc}<br>    0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>    0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>    0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>    \hdashline<br>    {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>    {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$</p>
+<p>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>    {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>    {\large b}_{11}&amp;{\large b}_{12}\\<br>    {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$</p>
+<p>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:当然也可以交换列，转化成主对角线的拉普拉斯展开 $<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure></p>
+<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.矩阵</title>
     <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是<span class="mark">同型矩阵</span></p>
@@ -112,77 +183,6 @@
 </ol>
 <p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
 <h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>1.行列式</title>
-    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
-<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$<br>，<br>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p><strong>例</strong><br></p>
-<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
-<p>解：由于系数行列式<br></p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
-<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93，<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
-<p>故方程组的解为：</p>
-<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
-<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
-<ul>
-<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式<span class="mark">3$\;$2$\;$1列</span>逆序数值<br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
-</ul>
-<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变<br><strong>即</strong>  </p>
-<p>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|\\<br>$</p>
-<p>一般项：<br>$<br>\;{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$</p>
-<p>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和</p>
-<p>$\quad<br>\left|\begin{array}{ccc}<br>    \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>    {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>    \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br>$\,=<br>\left|\begin{array}{ccc}<br>    \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>     {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>    \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br>$+<br>\left|\begin{array}{ccc}<br>    \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>     {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>    \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</p>
-<p><strong>其他的性质:</strong></p>
-<ul>
-<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
-</li>
-<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow 矩阵可逆 \Leftrightarrow A\;的行(列)向量线性组无关 \Leftrightarrow A\;的特征值\lambda\not=0$</p>
-</li>
-<li><p>（方阵）$det(AB)=det(A)det(B)$</p>
-</li>
-<li><p>$det(A^{-1})=\displaystyle\frac{1}{det(A)}$</p>
-</li>
-<li><p>$det(2A)=2^ndet(A)$</p>
-</li>
-</ul>
-<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><span class="mark">代数余子式${\large a}_{ij}$需要带正负号</span><br>$<br>\begin{aligned}<br>&amp;D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}\\<br>&amp;D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}\\<br>&amp;D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行\\<br>&amp;D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列\\<br>\end{aligned}<br>$</p>
-<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
-<p>下三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
-<p><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
-<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|<br>\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
-<p><strong>应用</strong>  </p>
-<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
-<p>首先构造</p>
-<p>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\longrightarrow按照第四列展开\\<br>\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})\longrightarrow D\;的值就是{\large x}_2系数的负数\\<br>\end{aligned}<br>$ </p>
-<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
-<li>有一块全是零的行列式</li>
-</ul>
-<hr>
-<ul>
-<li>主对角线</li>
-</ul>
-<p>$\quad<br>\left|\begin{array}{cccc:cccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>     \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>    \hdashline<br>    {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>    {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>    \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>    \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>    {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$<br>$\cdot<br>\left|\begin{array}{ccc}<br>    {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>    {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>    \vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$</p>
-<ul>
-<li>副对角线</li>
-</ul>
-<p>例</p>
-<p>$\quad<br>\left|\begin{array}{cc:ccc}<br>    0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>    0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>    0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>    \hdashline<br>    {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>    {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$</p>
-<p>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>    {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>    {\large b}_{11}&amp;{\large b}_{12}\\<br>    {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$</p>
-<p>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:当然也可以交换列，转化成主对角线的拉普拉斯展开 $<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure></p>
-<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -504,6 +504,19 @@
       </tags>
   </entry>
   <entry>
+    <title>end</title>
+    <url>/2021/06/24/end/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6.特征值与特征向量</title>
     <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
@@ -662,19 +675,6 @@
 </ul>
 <p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
 <p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>end</title>
-    <url>/2021/06/24/end/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
