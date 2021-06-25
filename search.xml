@@ -1140,7 +1140,7 @@
     <title>测试文档</title>
     <url>/2021/06/20/%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>即</p>
-<p>$<br>\begin{cases}<br>k_1-2k_2+4k_3=11111111111111111111111111111111111111\\<br>-x_1+x_2-3x_3=-1\\<br>x_1+x_2+x_3=-1<br>\end{cases}<br>$<br><br></p>
+<p>$<br>\begin{cases}<br>k_1-2k_2+4k_3=111111111111111\\<br>-x_1+x_2-3x_3=-1\\<br>x_1+x_2+x_3=-1<br>\end{cases}<br>$<br><br></p>
 ]]></content>
       <categories>
         <category>线性代数</category>
