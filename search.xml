@@ -1140,7 +1140,7 @@
     <title>测试文档</title>
     <url>/2021/06/20/%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>即</p>
-<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br></p>
+<p>$\begin{cases}<br>k_1-2k_2+4k_3=3\\<br>\\<br>-x_1+x_2-3x_3=-1\\<br>\\<br>x_1+x_2+x_3=-1\\<br>\end{cases}$<br><br></p>
 ]]></content>
       <categories>
         <category>线性代数</category>
