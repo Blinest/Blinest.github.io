@@ -622,7 +622,9 @@
 <p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
 <p><strong>例</strong>:</p>
 <p>$f=y_1^2+3y_2^2-2y_3^2$</p>
-<p>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$</p>
+<ul>
+<li>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$</li>
+</ul>
 <p>那么$f=z_1^2+z_2^2-z_3^2$</p>
 <p>变成规范形步骤：</p>
 <p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
@@ -1142,20 +1144,5 @@
       <categories>
         <category>杂记</category>
       </categories>
-  </entry>
-  <entry>
-    <title>测试文档</title>
-    <url>/2021/06/20/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul>
-<li>即<br>$\begin{cases}<br>k_1-2k_2+4k_3=3\\<br>-x_1+x_2-3x_3=-1\\<br>x_1+x_2+x_3=-1<br>\end{cases}$<br><br></li>
-</ul>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
   </entry>
 </search>
