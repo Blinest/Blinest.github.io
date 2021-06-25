@@ -1136,4 +1136,20 @@
         <category>杂记</category>
       </categories>
   </entry>
+  <entry>
+    <title>测试文档</title>
+    <url>/2021/06/20/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
+<p>n个数$a_1,a_2,\cdots a_n$构成的有序数组</p>
+</blockquote>
+<p>$\left[\begin{array}{c}a_1\\a_2\\ \vdots \\a_n\end{array}\right]$<br>或$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]^T\longrightarrow$列向量<br><br><br>$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]\longrightarrow$行向量</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
 </search>
