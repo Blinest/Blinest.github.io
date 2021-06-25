@@ -291,7 +291,7 @@
 <p>则$C$和$A$的列向量组等价。<br></p>
 <h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价：A经初等变换可以变成B<br><br>向量组(a)和(b)等价：(a)和(b)可以 <strong>互相</strong> 线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
 <h4 id="用方程组理解向量组的线性表示"><a href="#用方程组理解向量组的线性表示" class="headerlink" title="用方程组理解向量组的线性表示"></a>用方程组理解向量组的线性表示</h4><blockquote>
-<p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可由向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br><br>则$r(B)\leqslant r(A)$<br><br>其中$B=(\beta_1\;\beta_2\;\cdots\;\beta_t),$<br><br>$A=(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)$<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
+<p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可以用向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br><br>则$r(B)\leqslant r(A)$<br><br>其中$B=(\beta_1\;\beta_2\;\cdots\;\beta_t),$<br><br>$A=(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)$<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
 </blockquote>
 <p>个人直观理解：<br>B的秩肯定小于A的秩，如果大于的话矩阵最后有几行就不能被表示了，<br>小于的话，最后几行就算多出来，$k_{ij}$令为0就行了<br>而两者的秩如果相等，那么两者就正好能被互相表示出来，也就是说两个向量组等价</p>
 <p>证明：<br>$\beta_1\;\beta_2\;\cdots\;\beta_t$可由$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示</p>
@@ -309,7 +309,7 @@
 <p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0$<br><br>$\Longleftrightarrow方程组$<br><br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)&lt; m$<br>$\quad m$就是方程组解的个数</p>
 <p><strong>推论</strong></p>
 <ol>
-<li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;$相关<br>$\Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
+<li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;$相关<br><br>$\Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
 <li>$n+1个n维向量必线性相关 \rightarrow r \leqslant n &lt; n+1$<br><br></li>
 <li>如果$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性相关，则$\alpha_1\;\alpha_2\;\cdots\;\alpha_s\;\cdots\;\alpha_t$线性相关<br><br></li>
 <li>如果向量组线性无关，增加维度仍然线性无关</li>
@@ -333,7 +333,7 @@
 </blockquote>
 <p>定理：<br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则$r=t$</p>
 <p>证：<br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，</p>
-<p>那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关<br><br>则有$\;t\leqslant r$.<br><br>又因为两者地位相等，同理可得$\;r\leqslant t$.<br><br>所以$r=t$</p>
+<p>那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$<br><br>必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$<br><br>能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关<br><br>则有$\;t\leqslant r$.<br><br>又因为两者地位相等，同理可得$\;r\leqslant t$.<br><br>所以$r=t$</p>
 <p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br>a.相同的线性相关性<br>b.相同的线性表示.</p>
 <ul>
 <li>例.求向量组$\alpha_1=(2,1,4,3)^T,$ $\alpha_2=(-1,1,-6,6)^T,$ $\alpha_3=(-1,-2,2,-9)^T,$ $\alpha_4=(1,1,-2,7)^T,$ $\alpha_5=(2,4,4,9)^T$的秩,一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。<br><br><br>解：构造矩阵$\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)$作初等变换化为行最简型，有<br><br>$<br>A=\begin{pmatrix}<br>  2&amp;-1&amp;-1&amp;1&amp;2\\<br>  1&amp;1&amp;-2&amp;1&amp;4\\<br>  4&amp;-6&amp;2&amp;-2&amp;4\\<br>  3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>$<br><br><br>$<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;-1&amp;0&amp;4\\<br>  0&amp;1&amp;-1&amp;0&amp;3\\<br>  0&amp;0&amp;0&amp;1&amp;-3\\<br>  0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3$</li>
@@ -618,7 +618,7 @@
 <p>实对称矩阵$A$和$B$合同</p>
 <p>$\Leftrightarrow p_A=p_B,q_A=q_B\;$<br>(p为正惯性指数，q为负惯性指数)</p>
 <h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
-<p>设二次型$f(x)=x^TAx$,如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
+<p>设二次型$f(x)=x^TAx$,如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,<br><br>恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
 </blockquote>
 <p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
 <p>二次型经坐标变换，其正定性不变</p>
