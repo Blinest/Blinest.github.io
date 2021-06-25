@@ -811,7 +811,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-25 17:37:03" itemprop="dateModified" datetime="2021-06-25T17:37:03+08:00">2021-06-25</time>
+                <time title="修改时间：2021-06-25 19:03:24" itemprop="dateModified" datetime="2021-06-25T19:03:24+08:00">2021-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -829,7 +829,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6.7k</span>
+              <span>6.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -903,7 +903,8 @@
 <p>$得到\alpha_1=(1,1,1)^T$</p>
 <p>$\lambda=-1$时，由$(-E-A)x=0$</p>
 <p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$<br>$\rightarrow$这两个向量不垂直</p>
+<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$</p>
+<p>因为这两个向量不垂直</p>
 <p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
 <p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
 <p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
@@ -928,7 +929,7 @@
 </blockquote>
 <p>即二次型的规范形是唯一的</p>
 <ul>
-<li><strong>证</strong>：<br>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾<br><br>设$r(C^TAC)=r(A)=r(f)=r$<br><br>如果经坐标变换$x=Py\;$和$\;x=Qz$<br><br>二次型$x^TAx$化成规范形，分别为<br><br>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$<br><br>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$<br><br><strong>反证法</strong><br>如果$s &lt; t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等<br><br>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$<br><br>不妨设<br><br>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$<br><br>其中($i=1,2,\cdots,n$)<br><br><br>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项<br><br>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾<br><br>即<br>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$<br><br>也就是<br>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$<br><br>方程个数 $s+(n-t)=n+s-t&lt; n$<br><br>方程组(1)必有非零解<br><br>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解<br><br>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$<br><br>因为$P,Q$均为可逆矩阵，$\eta\neq0$<br><br>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$<br><br>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$<br><br>把$\eta$代入$(I)$和$(II)$,有<br><br>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt; 0$<br><br>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$<br><br>矛盾<br><br>$\because s,t$地位相等<br><br>$\therefore\;s=t$</li>
+<li><strong>证</strong>：<br>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾<br><br>设$r(C^TAC)=r(A)=r(f)=r$<br><br>如果经坐标变换$x=Py\;$和$\;x=Qz$<br><br>二次型$x^TAx$化成规范形，分别为<br><br>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$<br><br>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$<br><br><strong>反证法</strong><br>如果$s &lt; t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等<br><br>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$<br><br>不妨设<br><br>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$<br><br>其中($i=1,2,\cdots,n$)<br><br><br>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项<br><br>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾<br><br>即<br>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$<br><br>也就是<br>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$<br><br>方程个数<br><br>$s+(n-t)=n+s-t&lt; n$<br><br>方程组(1)必有非零解<br><br>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解<br><br>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$<br><br>因为$P,Q$均为可逆矩阵，$\eta\neq0$<br><br>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$<br><br>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$<br><br>把$\eta$代入$(I)$和$(II)$,有<br><br>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt; 0$<br><br>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$<br><br>矛盾<br><br>$\because s,t$地位相等<br><br>$\therefore\;s=t$</li>
 </ul>
 <p>由惯性定理推出:</p>
 <p>实对称矩阵$A$和$B$合同</p>
@@ -1014,7 +1015,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-25 17:52:51" itemprop="dateModified" datetime="2021-06-25T17:52:51+08:00">2021-06-25</time>
+                <time title="修改时间：2021-06-25 19:03:27" itemprop="dateModified" datetime="2021-06-25T19:03:27+08:00">2021-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1110,13 +1111,13 @@
 </blockquote>
 <p>$A\alpha=\lambda\alpha\;$这个等式个人直观理解：特征向量$\alpha$经过A矩阵变换后等于特征向量$\alpha$的$\lambda$倍</p>
 <ol>
-<li>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br>$\quad$<br>那么<br><br>$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$<br><br></li>
+<li>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br><br>$\quad$那么$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$<br><br></li>
 <li>若$\alpha_1,\alpha_2$都是矩阵$A$关于特征值$\lambda$的特征向量，<br><br>则$\;\forall k_1,k_2$，当$k_1\alpha_1+k_2\alpha_2\neq0$时，<br>$k_1\alpha_1+k_2\alpha_2$仍是$A$对应于$\lambda$的特征向量<br><br>由$A\alpha_1=\lambda\alpha_1,A\alpha_2=\lambda\alpha_2$<br><br><br>$<br>\begin{aligned}<br>得到： A(k_1\alpha_1+k_2\alpha_2)<br>&amp;=k_1A\alpha_1+k_2A\alpha_2\\<br>&amp;=k_1(\lambda\alpha_1)+k_2(\lambda\alpha_2)\\<br>&amp;=\lambda(k_1\alpha_1+k_2\alpha_2)\\<br>\end{aligned}<br>$</li>
 </ol>
 <h2 id="求解步骤和原理"><a href="#求解步骤和原理" class="headerlink" title="求解步骤和原理"></a>求解步骤和原理</h2><p>$\quad A\alpha=\lambda\alpha$</p>
 <p>$\Rightarrow(\lambda E-A)\alpha=0$</p>
-<p>$\quad\alpha\;是\;(\lambda E-A)x=0的非零解</p>
-<p>\rightarrow\;|\lambda E-A|=0$</p>
+<p>$\quad\alpha\;$是$\;(\lambda E-A)x=0$的非零解</p>
+<p>$\rightarrow\;|\lambda E-A|=0$</p>
 <p>(1) 由$\;|\lambda E-A|=0\;$求特征值$\;\lambda_i$<br><br>$\quad$共n个(含重根)<br><br>(2) 由$\;(\lambda_iE-A)x=0\;$求基础解系<br><br>$\quad$即$\lambda_i$线性无关的特征向量</p>
 <p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
 <p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$<br><br><br>$\therefore\;A的特征值为\;1,\pm6$<br><br></p>
@@ -1163,11 +1164,8 @@
 </blockquote>
 <h2 id="性质-4"><a href="#性质-4" class="headerlink" title="性质"></a>性质</h2><ol>
 <li>若$A$是n阶实对称矩阵,则$A$的特征值都是<strong>实数</strong><br><br></li>
-<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong>2：<br>$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
-<li>对任意一个n阶实对称矩阵$A$,总存在n阶 <strong>正交矩阵</strong> $\;Q$，使得</li>
-</ol>
-<p>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。<br><br></p>
-<ol>
+<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong> 2：<br>$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
+<li>对任意一个n阶实对称矩阵$A$,总存在n阶 <strong>正交矩阵</strong> $\;Q$，使得<br><br>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。<br><br></li>
 <li>n=1成立<br><br></li>
 <li>假设n-1成立<br><br>那么n时<br><br>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$<br><br>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$<br><br>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$<br><br>$\qquad\qquad\qquad\cdots$<br><br>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$<br><br>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br><br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)<br><br>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$<br><br>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$<br><br>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$<br>然后令Q_2=<br>\begin{bmatrix}<br> 1&amp;0\\<br> 0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$<br><br>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$<br><br><br>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$<br><br>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$<br><br>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>即n时结论成立<br><br>那么可得到结论成立<br>   </li>
 </ol>
