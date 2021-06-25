@@ -85,6 +85,52 @@
       </tags>
   </entry>
   <entry>
+    <title>3.方程组</title>
+    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$</p>
+<p>的系数行列式</p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$</p>
+<p>则方程组有唯一解</p>
+<p>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$</p>
+<p>其中</p>
+<p>$<br>\qquad D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</p>
+<p>证明：<br>以后补充……<br>推论:</p>
+<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
+<p>若齐次方程(2)有非零解,则$|A|=0$</p>
+<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
+<p>然后化成行最简型矩阵</p>
+<p>矩阵的<strong><u>行</u></strong>初等变换其实就是对应的方程组的三种变换</p>
+<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><p>(1) 无解$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br><br>(2) 唯一解$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br><br>(3) 无穷多解$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt;n$</p>
+<ul>
+<li><p>齐次方程组$Ax=0$<br><br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
+</li>
+<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
+</li>
+</ul>
+<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
+<blockquote>
+<p>基础解系就是齐次方程组解向量的极大无关组<br></p>
+<hr>
+<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
+</blockquote>
+<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><p><strong>例</strong><br></p>
+<p>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br></p>
+<p>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>    1&amp;2&amp;-1&amp;0&amp;-5\\<br>     0&amp;1&amp;-2&amp;1&amp;1\\<br>     2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>    1&amp;0&amp;3&amp;0&amp;-3\\<br>     0&amp;1&amp;-2&amp;0&amp;1\\<br>     0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</p>
+<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
+<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
+</ul>
+<p><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>    x_1-x_2-x_3+x_4=0\\<br>    x_1-x_2+x_3-3x_4=1\\<br>    x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br>   1&amp;-1&amp;-1&amp;1&amp;0\\<br>   1&amp;-1&amp;1&amp;-3&amp;1\\<br>   1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br>   1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br>   0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br>   0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$</4\;\rightarrow\;方程组有无穷解$<br></p>
+<p>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}\\<br>令\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}\;\Rightarrow\;\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，矩阵的几何意义来结合起来，后面继续拓展深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.矩阵</title>
     <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是<span class="mark">同型矩阵</span></p>
@@ -121,10 +167,11 @@
 <h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$ \quad A=[{\large a}_{1j}]_{1\times s}\\ \quad A^T=[{\large a}_{j1}]_{s\times1}\\ \quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
 <p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
 <h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><p>$<br>A=<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>B=<br>\begin{pmatrix}<br>     \displaystyle\frac{1}{ {\large a}_{11} }\\<br>     &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$</p>
-<p>$<br>\because<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>    {\large b}_{11}\\<br>    \\<br>     &amp; {\large b}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>\quad=\quad<br>\begin{pmatrix}<br>    {\large a}_{11}{\large b}_{11} \\<br>    \\<br>     &amp; {\large a}_{22}{\large b}_{22}\\<br>     \\<br>     &amp;     &amp; \ddots\\<br>     \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</p>
+<p>$<br>\because<br>\begin{pmatrix}<br>    {\large a}_{11}\\<br>    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>    {\large b}_{11}\\<br>    \\<br>     &amp; {\large b}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>$</p>
+<p>$<br>=\begin{pmatrix}<br>    {\large a}_{11}{\large b}_{11} \\<br>    \\<br>     &amp; {\large a}_{22}{\large b}_{22}\\<br>     \\<br>     &amp;     &amp; \ddots\\<br>     \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</p>
 <p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$</p>
 <hr>
-<p>$AA^{ <em> } =A^{ </em> }A=|A|I$</p>
+<p>$AA^{ * } =A^{ * }A=|A|I$</p>
 <p>推论：</p>
 <ol>
 <li>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</li>
@@ -133,10 +180,10 @@
 <ol>
 <li>伴随矩阵$A^{ * }$的一些常用结论 <ul>
 <li>$|A^*|=|A|^{n-1}$</li>
-<li>$(A^{ <em> })^{ </em> }=|A|^{n-2}A$</li>
-<li>若$A$可逆，且$A^{ <em> }$可逆,$(A^{ </em> })^{-1}=(A^{-1})^{ * }=\displaystyle\frac{1}{|A|}A$</li>
-<li>$(AB)^{ <em> }=B^{ </em> }A^{ * }$</li>
-<li>$(A^{ <em> })^T=(A^T)^{ </em> }$</li>
+<li>$(A^{ * })^{ * }=|A|^{n-2}A$</li>
+<li>若$A$可逆，且$A^{ * }$可逆,$(A^{ * })^{-1}=(A^{-1})^{ * }=\displaystyle\frac{1}{|A|}A$</li>
+<li>$(AB)^{ * }=B^{ * }A^{ * }$</li>
+<li>$(A^{ * })^T=(A^T)^{ * }$</li>
 </ul>
 </li>
 <li><strong>A如果可逆，那么A一定可以表示为有限个初等矩阵的乘积</strong></li>
@@ -183,52 +230,6 @@
 </ol>
 <p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
 <h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3.方程组</title>
-    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$</p>
-<p>的系数行列式</p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>    {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>    {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$</p>
-<p>则方程组有唯一解</p>
-<p>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$</p>
-<p>其中</p>
-<p>$<br>\qquad D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</p>
-<p>证明：<br>以后补充……<br>推论:</p>
-<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
-<p>若齐次方程(2)有非零解,则$|A|=0$</p>
-<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
-<p>然后化成行最简型矩阵</p>
-<p>矩阵的<strong><u>行</u></strong>初等变换其实就是对应的方程组的三种变换</p>
-<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><p>(1) 无解$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br><br>(2) 唯一解$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br><br>(3) 无穷多解$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt;n$</p>
-<ul>
-<li><p>齐次方程组$Ax=0$<br><br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
-</li>
-<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
-</li>
-</ul>
-<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
-<blockquote>
-<p>基础解系就是齐次方程组解向量的极大无关组<br></p>
-<hr>
-<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
-</blockquote>
-<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><p><strong>例</strong><br></p>
-<p>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br></p>
-<p>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>    1&amp;2&amp;-1&amp;0&amp;-5\\<br>     0&amp;1&amp;-2&amp;1&amp;1\\<br>     2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>    1&amp;0&amp;3&amp;0&amp;-3\\<br>     0&amp;1&amp;-2&amp;0&amp;1\\<br>     0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</p>
-<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
-<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
-</ul>
-<p><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>    x_1-x_2-x_3+x_4=0\\<br>    x_1-x_2+x_3-3x_4=1\\<br>    x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br>   1&amp;-1&amp;-1&amp;1&amp;0\\<br>   1&amp;-1&amp;1&amp;-3&amp;1\\<br>   1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br>   1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br>   0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br>   0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$</4\;\rightarrow\;方程组有无穷解$<br></p>
-<p>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}\\<br>令\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}\;\Rightarrow\;\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，矩阵的几何意义来结合起来，后面继续拓展深入研究……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -331,182 +332,6 @@
 <hr>
 <p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\quad\longrightarrow 坐标变换公式\\<br>\quad x=Cy<br>$</p>
 <p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但空间理解还是不够深入，感觉比较抽象，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>7.二次型</title>
-    <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
-<li><p>二次型的矩阵表示<br>$\begin{aligned}<br>f(x_1,x_2,x_3)<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>易知$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵</p>
-</li>
-<li><p>标准形</p>
-<blockquote>
-<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$  </p>
-</blockquote>
-</li>
-<li><p>规范形</p>
-<blockquote>
-<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$</p>
-</blockquote>
-</li>
-<li><p>正惯性指数，负惯性指数</p>
-<blockquote>
-<p>就是标准形系数正负个数<br><br>例如，$x_1^2+x_2^2-4x_3^2\quad$正惯性指数=2，负惯性指数=1</p>
-</blockquote>
-</li>
-<li><p>二次型的秩</p>
-<blockquote>
-<p>$r(f)=r(A)$</p>
-</blockquote>
-</li>
-<li><p>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$</p>
-</li>
-<li><p>合同</p>
-<blockquote>
-<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
-<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><p><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。</p>
-<p>$<br>\begin{aligned}<br>解：<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]-(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3^2)<br>\end{aligned}<br>$</p>
-<p>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$</p>
-<p>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$</p>
-<p>坐标变换公式<br>$x=Cy，\;C=<br>\begin{bmatrix}<br>    1&amp;-1&amp;1\\<br>    0&amp;1&amp;-2\\<br>    0&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
-<p>得$f=y_1^2+y_2^2$</p>
-<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
-<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)使二次型化为标准形<br><br>$\qquad x^TAx=y^T\land y=\lambda_1y_1^2+\lambda_2y_2^2+\lambda_3y_3^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
-</blockquote>
-<p><strong>证</strong>：</p>
-<p>首先要知道二次型中$A$是实对称矩阵</p>
-<p>因为实对称矩阵$Q^{-1}AQ=\land,Q是正交矩阵($则$Q^T=Q^{-1}$)</p>
-<p>所以$Q^TAQ=\land$</p>
-<p>若令$x=Qy$,则，</p>
-<p>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\lambda_3y_3^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</p>
-<p><strong>例</strong>：将二次型$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
-<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
-<p>由特征多项式<br>$<br>|\lambda E-A|=<br>\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|<br>=<br>(\lambda-5)(\lambda+1)^2<br>$</p>
-<p>$\therefore A$的特征值为5，-1，-1</p>
-<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>$得到\alpha_1=(1,1,1)^T$</p>
-<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
-<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T\rightarrow这两个向量不垂直$</p>
-<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
-<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
-<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\begin{bmatrix}-1\\0\\1\end{bmatrix}-\frac12 \begin{bmatrix}-1\\1\\0\end{bmatrix}<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
-<p>单位化</p>
-<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix}，<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix}，<br>\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
-<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
-<p>那么，二次型$x^TAx$经正交变换</p>
-<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}<br>=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
-<p>化为标准形</p>
-<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
-<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
-<p><strong>推论：</strong></p>
-<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
-<p><strong>例</strong>:</p>
-<p>$f=y_1^2+3y_2^2-2y_3^2$</p>
-<p>令</p>
-<p>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$</p>
-<p>那么$f=z_1^2+z_2^2-z_3^2$</p>
-<p>变成规范形步骤：</p>
-<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
-<p>惯性定理</p>
-<blockquote>
-<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
-</blockquote>
-<p>即二次型的规范形是唯一的</p>
-<p><strong>证</strong>：</p>
-<p>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，</p>
-<p>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾</p>
-<p><br></p>
-<p>设$r(C^TAC)=r(A)=r(f)=r$</p>
-<p>如果经坐标变换$x=Py\;$和$\;x=Qz$</p>
-<p>二次型$x^TAx$化成规范形，分别为</p>
-<p>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2\qquad(I)$</p>
-<p>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2\qquad(II)$</p>
-<p><strong>反证法</strong></p>
-<p>如果$s&lt;t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等</p>
-<p>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$</p>
-<p>不妨设</p>
-<p>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad i=1,2,\cdots,n$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad i=1,2,\cdots,n$<br></p>
-<p>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项，</p>
-<p>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾</p>
-<p>即</p>
-<p>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$</p>
-<p>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$</p>
-<p>方程个数 $s+(n-t)=n+s-t&lt;n$</p>
-<p>方程组(1)必有非零解</p>
-<p>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解</p>
-<p>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$</p>
-<p>因为$P,Q$均为可逆矩阵，$\eta\neq0$</p>
-<p>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$</p>
-<p>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$</p>
-<p>把$\eta$代入$(I)$和$(II)$,有</p>
-<p>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt;0$</p>
-<p>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$</p>
-<p>矛盾</p>
-<p>$s,t$地位相等</p>
-<p>$\therefore\;s=t$</p>
-<p>由惯性定理就可以推出</p>
-<p>实对称矩阵$A$和$B$合同$\Leftrightarrow p_A=p_B,q_A=q_B\;(p为正惯性指数，q为负惯性指数)$</p>
-<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
-<p>设二次型$f(x)=x^TAx$,如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
-</blockquote>
-<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
-<p>二次型经坐标变换，其正定性不变</p>
-<p>$x^TAx$正定</p>
-<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
-<p>$\Leftrightarrow\;A\simeq E$,存在可逆矩阵$C,C^TAC=E(或写成A=C^TEC，E可省略)$</p>
-<p>$\Leftrightarrow\;A$特征值全大于0</p>
-<p>$\Leftrightarrow\;A$的顺序主子式<strong>全</strong>大于0</p>
-<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
-<p><strong>例</strong>：判断二次型</p>
-<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
-<p>是否是正定二次型。</p>
-<p><strong>解</strong>：</p>
-<p>1.顺序主子式</p>
-<p>二次型矩阵</p>
-<p>$A$=<br>$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$</p>
-<p>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$</p>
-<p>$\Delta_3=|A|=10&gt;0$</p>
-<p>$\therefore\;f\;$是正定二次型</p>
-<hr>
-<p>2.特征值</p>
-<p>由特征多项式</p>
-<p>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$</p>
-<p>$A$的特征值：1，1，10$\quad$全大于零</p>
-<p>$\therefore\;f\;$是正定二次型</p>
-<hr>
-<p>3.配方法$^*$</p>
-<p>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]-2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$</p>
-<p>p=3,q=0</p>
-<p>$\therefore\;f\;$是正定二次型</p>
-<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
-<p>半正定$f\geqslant0$</p>
-<p>负定$f&lt;0$</p>
-<p>半负定$f\leqslant0$</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>end</title>
-    <url>/2021/06/24/end/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -685,6 +510,169 @@
       </tags>
   </entry>
   <entry>
+    <title>7.二次型</title>
+    <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
+<li><p>二次型的矩阵表示<br>$\begin{aligned}<br>f(x_1,x_2,x_3)<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>易知$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵</p>
+</li>
+<li><p>标准形</p>
+<blockquote>
+<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$  </p>
+</blockquote>
+</li>
+<li><p>规范形</p>
+<blockquote>
+<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$</p>
+</blockquote>
+</li>
+<li><p>正惯性指数，负惯性指数</p>
+<blockquote>
+<p>就是标准形系数正负个数<br><br>例如，$x_1^2+x_2^2-4x_3^2\quad$正惯性指数=2，负惯性指数=1</p>
+</blockquote>
+</li>
+<li><p>二次型的秩</p>
+<blockquote>
+<p>$r(f)=r(A)$</p>
+</blockquote>
+</li>
+<li><p>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$</p>
+</li>
+<li><p>合同</p>
+<blockquote>
+<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
+<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><p><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。</p>
+<p>$<br>\begin{aligned}<br>解：<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]-(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3^2)<br>\end{aligned}<br>$</p>
+<p>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$</p>
+<p>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$</p>
+<p>坐标变换公式<br>$x=Cy，\;C=<br>\begin{bmatrix}<br>    1&amp;-1&amp;1\\<br>    0&amp;1&amp;-2\\<br>    0&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
+<p>得$f=y_1^2+y_2^2$</p>
+<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
+<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)使二次型化为标准形<br><br>$\qquad x^TAx=y^T\land y=\lambda_1y_1^2+\lambda_2y_2^2+\lambda_3y_3^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
+</blockquote>
+<p><strong>证</strong>：</p>
+<p>首先要知道二次型中$A$是实对称矩阵</p>
+<p>因为实对称矩阵$Q^{-1}AQ=\land,Q是正交矩阵($则$Q^T=Q^{-1}$)</p>
+<p>所以$Q^TAQ=\land$</p>
+<p>若令$x=Qy$,则，</p>
+<p>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\lambda_3y_3^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</p>
+<p><strong>例</strong>：将二次型$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
+<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
+<p>由特征多项式<br>$<br>|\lambda E-A|=<br>\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|<br>=<br>(\lambda-5)(\lambda+1)^2<br>$</p>
+<p>$\therefore A$的特征值为5，-1，-1</p>
+<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
+<p>$得到\alpha_1=(1,1,1)^T$</p>
+<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
+<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
+<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T\rightarrow这两个向量不垂直$</p>
+<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
+<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
+<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\begin{bmatrix}-1\\0\\1\end{bmatrix}-\frac12 \begin{bmatrix}-1\\1\\0\end{bmatrix}<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
+<p>单位化</p>
+<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix}，<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix}，<br>\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
+<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
+<p>那么，二次型$x^TAx$经正交变换</p>
+<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}<br>=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
+<p>化为标准形</p>
+<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
+<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
+<p><strong>推论：</strong></p>
+<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
+<p><strong>例</strong>:</p>
+<p>$f=y_1^2+3y_2^2-2y_3^2$</p>
+<p>令</p>
+<p>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$</p>
+<p>那么$f=z_1^2+z_2^2-z_3^2$</p>
+<p>变成规范形步骤：</p>
+<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
+<p>惯性定理</p>
+<blockquote>
+<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
+</blockquote>
+<p>即二次型的规范形是唯一的</p>
+<p><strong>证</strong>：</p>
+<p>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，</p>
+<p>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾</p>
+<p><br></p>
+<p>设$r(C^TAC)=r(A)=r(f)=r$</p>
+<p>如果经坐标变换$x=Py\;$和$\;x=Qz$</p>
+<p>二次型$x^TAx$化成规范形，分别为</p>
+<p>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2\qquad(I)$</p>
+<p>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2\qquad(II)$</p>
+<p><strong>反证法</strong></p>
+<p>如果$s&lt;t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等</p>
+<p>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$</p>
+<p>不妨设</p>
+<p>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad i=1,2,\cdots,n$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad i=1,2,\cdots,n$<br></p>
+<p>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项，</p>
+<p>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾</p>
+<p>即</p>
+<p>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$</p>
+<p>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$</p>
+<p>方程个数 $s+(n-t)=n+s-t&lt;n$</p>
+<p>方程组(1)必有非零解</p>
+<p>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解</p>
+<p>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$</p>
+<p>因为$P,Q$均为可逆矩阵，$\eta\neq0$</p>
+<p>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$</p>
+<p>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$</p>
+<p>把$\eta$代入$(I)$和$(II)$,有</p>
+<p>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt;0$</p>
+<p>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$</p>
+<p>矛盾</p>
+<p>$s,t$地位相等</p>
+<p>$\therefore\;s=t$</p>
+<p>由惯性定理就可以推出</p>
+<p>实对称矩阵$A$和$B$合同$\Leftrightarrow p_A=p_B,q_A=q_B\;(p为正惯性指数，q为负惯性指数)$</p>
+<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
+<p>设二次型$f(x)=x^TAx$,如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
+</blockquote>
+<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
+<p>二次型经坐标变换，其正定性不变</p>
+<p>$x^TAx$正定</p>
+<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
+<p>$\Leftrightarrow\;A\simeq E$,存在可逆矩阵$C,C^TAC=E(或写成A=C^TEC，E可省略)$</p>
+<p>$\Leftrightarrow\;A$特征值全大于0</p>
+<p>$\Leftrightarrow\;A$的顺序主子式<strong>全</strong>大于0</p>
+<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
+<p><strong>例</strong>：判断二次型</p>
+<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
+<p>是否是正定二次型。</p>
+<p><strong>解</strong>：</p>
+<p>1.顺序主子式</p>
+<p>二次型矩阵</p>
+<p>$A$=<br>$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$</p>
+<p>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$</p>
+<p>$\Delta_3=|A|=10&gt;0$</p>
+<p>$\therefore\;f\;$是正定二次型</p>
+<hr>
+<p>2.特征值</p>
+<p>由特征多项式</p>
+<p>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$</p>
+<p>$A$的特征值：1，1，10$\quad$全大于零</p>
+<p>$\therefore\;f\;$是正定二次型</p>
+<hr>
+<p>3.配方法$^*$</p>
+<p>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]-2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$</p>
+<p>p=3,q=0</p>
+<p>$\therefore\;f\;$是正定二次型</p>
+<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
+<p>半正定$f\geqslant0$</p>
+<p>负定$f&lt;0$</p>
+<p>半负定$f\leqslant0$</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/06/15/hello-world/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -697,6 +685,19 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>end</title>
+    <url>/2021/06/24/end/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
   </entry>
   <entry>
     <title>matplotlib</title>
