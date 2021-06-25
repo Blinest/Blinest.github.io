@@ -8,11 +8,10 @@
 <p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
 <p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
 <p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
-<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$</p>
-<p><br><br><br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$</p>
-<p>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$</p>
-<p>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$</p>
-<p>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</p>
+<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
+<ul>
+<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
+</ul>
 ]]></content>
       <categories>
         <category>线性代数</category>
