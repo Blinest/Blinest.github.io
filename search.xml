@@ -582,12 +582,9 @@
 <h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
 <p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)，使二次型化为标准形<br><br>$\quad x^TAx=y^T\land y=\lambda_1y_1^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
 </blockquote>
-<p><strong>证</strong>：</p>
-<p>首先要知道二次型中$A$是实对称矩阵</p>
-<p>因为实对称矩阵$Q^{-1}AQ=\land$<br>$Q$是正交矩阵(则$Q^T=Q^{-1}$)</p>
-<p>所以$Q^TAQ=\land$</p>
-<p>若令$x=Qy$,则</p>
-<p>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</p>
+<ul>
+<li><strong>证</strong>：<br>首先要知道二次型中$A$是实对称矩阵<br><br>因为实对称矩阵，$Q^{-1}AQ=\land$<br><br>$Q$是正交矩阵(则$Q^T=Q^{-1}$)<br><br>所以$Q^TAQ=\land$<br><br>若令$x=Qy$,则<br><br>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</li>
+</ul>
 <p><strong>例</strong>：将二次型<br>$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
 <p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
 <p>由特征多项式<br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-5)(\lambda+1)^2<br>\end{aligned}<br>$</p>
@@ -611,10 +608,9 @@
 <p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
 <p><strong>推论：</strong></p>
 <p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
-<p><strong>例</strong>:</p>
-<p>$f=y_1^2+3y_2^2-2y_3^2$</p>
-<p>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$</p>
-<p>那么$f=z_1^2+z_2^2-z_3^2$</p>
+<ul>
+<li><strong>例</strong>:<br>$f=y_1^2+3y_2^2-2y_3^2$<br><br>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$<br><br>那么$f=z_1^2+z_2^2-z_3^2$</li>
+</ul>
 <p>变成规范形步骤：</p>
 <p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
 <h2 id="惯性定理"><a href="#惯性定理" class="headerlink" title="惯性定理"></a>惯性定理</h2><blockquote>
