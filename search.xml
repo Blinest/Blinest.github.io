@@ -1139,13 +1139,109 @@
     <title>一些关于hexo的next主题的适配问题</title>
     <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
-<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑<script type="math/tex">中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用</script>包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找</p>
+<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑$$中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用$$包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
 ]]></content>
       <categories>
         <category>杂记</category>
       </categories>
       <tags>
         <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.C语言的一些概念</title>
+    <url>/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
+<li>整型常量：也就是整数</li>
+<li>实型常量：<ol>
+<li>十进制小数形式：由数字和小数点组成</li>
+<li>指数形式：如$12.34e3$(代表$0.145\times10^3$<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
+</ol>
+</li>
+<li>字符常量：<ol>
+<li>普通字符：用单撇号括起来的一个字符</li>
+<li>转义字符：以字符”\\”开头的字符</li>
+</ol>
+</li>
+<li>字符串常量：用双撇号把若干字符括起来</li>
+<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">转义字符</th>
+<th style="text-align:left">字符值</th>
+<th style="text-align:left">输出结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\a</td>
+<td style="text-align:left">警告(alert)</td>
+<td style="text-align:left">产生声音或视觉信号</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:left">退格(backspace)</td>
+<td style="text-align:left">将光标位置后退一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">换页(form feed)</td>
+<td style="text-align:left">将光标当前位置移到下一页的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">换行</td>
+<td style="text-align:left">将光标当前位置移到下一行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">回车(carriage return)</td>
+<td style="text-align:left">将该光标当前位置移到本行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">水平制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:left">垂直制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
+</tr>
+<tr>
+<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
+<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
+<td style="text-align:left">与该八进制码对应的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\xh[h$cdots$]<br>其中h代表一个十六进制数字</td>
+<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
+<td style="text-align:left">与该十六进制码对应的字符</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><blockquote>
+<p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
+</blockquote>
+<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
+<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
+<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
+<ul>
+<li>数据类型<br>$<br>\begin{cases}<br>基本类型<br>\begin{cases}<br>整型类型<br>\begin{cases}<br>基本整形(int)<br>短整型(short int)\\<br>长整型(long int)\\<br>双长整型(long long int)\\<br>字符型(char)\\<br>布尔型(bool)<br>\end{cases}\\<br>浮点类型<br>\begin{cases}<br>单精度浮点型(float)\\<br>双精度浮点型(double)\\<br>复数浮点型(float_complex,double_complex,longlong_complex)<br>\end{cases}<br>\end{cases}\\<br>枚举类型(enum)\\<br>空类型(void)\\<br>派生类型<br>\begin{cases}<br>指针类型(*)\\<br>数组类型([])\\<br>结构体类型(struct)\\<br>共用体类型(union)\\<br>函数类型<br>\end{cases}<br>\end{cases}<br>$</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
       </tags>
   </entry>
 </search>

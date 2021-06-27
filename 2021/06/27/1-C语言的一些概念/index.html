@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="常量和变量常量 整型常量：也就是整数 实型常量： 十进制小数形式：由数字和小数点组成 指数形式：如$12.34e3$(代表$0.145\times10^3$ 规定：字母E或e代表以10为底的指数 注意：E或e前必须有数字，且e或E后必须为整数   字符常量： 普通字符：用单撇号括起来的一个字符 转义字符：以字符”\\”开头的字符   字符串常量：用双撇号把若干字符括起来 符号常量：如#define">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://mdreamers.github.io/2021/06/15/hello-world/index.html">
+<meta property="og:title" content="1.C语言的一些概念">
+<meta property="og:url" content="https://mdreamers.github.io/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="追梦">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="常量和变量常量 整型常量：也就是整数 实型常量： 十进制小数形式：由数字和小数点组成 指数形式：如$12.34e3$(代表$0.145\times10^3$ 规定：字母E或e代表以10为底的指数 注意：E或e前必须有数字，且e或E后必须为整数   字符常量： 普通字符：用单撇号括起来的一个字符 转义字符：以字符”\\”开头的字符   字符串常量：用双撇号把若干字符括起来 符号常量：如#define">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-15T09:59:43.979Z">
-<meta property="article:modified_time" content="2021-06-15T09:59:43.979Z">
+<meta property="article:published_time" content="2021-06-27T03:20:54.000Z">
+<meta property="article:modified_time" content="2021-06-27T05:10:58.813Z">
 <meta property="article:author" content="lbl">
+<meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://mdreamers.github.io/2021/06/15/hello-world/">
+<link rel="canonical" href="https://mdreamers.github.io/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/">
 
 
 <script id="page-configurations">
@@ -45,7 +46,7 @@
   };
 </script>
 
-  <title>Hello World | 追梦</title>
+  <title>1.C语言的一些概念 | 追梦</title>
   
 
 
@@ -190,7 +191,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
@@ -203,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          1.C语言的一些概念
         </h1>
 
         <div class="post-meta">
@@ -212,8 +213,18 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-06-15 17:59:43" itemprop="dateCreated datePublished" datetime="2021-06-15T17:59:43+08:00">2021-06-15</time>
+              <time title="创建时间：2021-06-27 11:20:54 / 修改时间：13:10:58" itemprop="dateCreated datePublished" datetime="2021-06-27T11:20:54+08:00">2021-06-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
+                </span>
             </span>
 
           <br>
@@ -222,7 +233,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>367</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -241,15 +252,91 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
+<li>整型常量：也就是整数</li>
+<li>实型常量：<ol>
+<li>十进制小数形式：由数字和小数点组成</li>
+<li>指数形式：如$12.34e3$(代表$0.145\times10^3$<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
+</ol>
+</li>
+<li>字符常量：<ol>
+<li>普通字符：用单撇号括起来的一个字符</li>
+<li>转义字符：以字符”\\”开头的字符</li>
+</ol>
+</li>
+<li>字符串常量：用双撇号把若干字符括起来</li>
+<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">转义字符</th>
+<th style="text-align:left">字符值</th>
+<th style="text-align:left">输出结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\a</td>
+<td style="text-align:left">警告(alert)</td>
+<td style="text-align:left">产生声音或视觉信号</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:left">退格(backspace)</td>
+<td style="text-align:left">将光标位置后退一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">换页(form feed)</td>
+<td style="text-align:left">将光标当前位置移到下一页的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">换行</td>
+<td style="text-align:left">将光标当前位置移到下一行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">回车(carriage return)</td>
+<td style="text-align:left">将该光标当前位置移到本行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">水平制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:left">垂直制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
+</tr>
+<tr>
+<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
+<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
+<td style="text-align:left">与该八进制码对应的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\xh[h$cdots$]<br>其中h代表一个十六进制数字</td>
+<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
+<td style="text-align:left">与该十六进制码对应的字符</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><blockquote>
+<p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
+</blockquote>
+<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
+<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
+<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
+<ul>
+<li>数据类型<br>$<br>\begin{cases}<br>基本类型<br>\begin{cases}<br>整型类型<br>\begin{cases}<br>基本整形(int)<br>短整型(short int)\\<br>长整型(long int)\\<br>双长整型(long long int)\\<br>字符型(char)\\<br>布尔型(bool)<br>\end{cases}\\<br>浮点类型<br>\begin{cases}<br>单精度浮点型(float)\\<br>双精度浮点型(double)\\<br>复数浮点型(float_complex,double_complex,longlong_complex)<br>\end{cases}<br>\end{cases}\\<br>枚举类型(enum)\\<br>空类型(void)\\<br>派生类型<br>\begin{cases}<br>指针类型(*)\\<br>数组类型([])\\<br>结构体类型(struct)\\<br>共用体类型(union)\\<br>函数类型<br>\end{cases}<br>\end{cases}<br>$</li>
+</ul>
+</blockquote>
 
     </div>
 
@@ -258,17 +345,20 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag"># C语言</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/06/15/%E5%88%9D%E5%85%A5/" rel="next" title="初入">
-      初入 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/" rel="prev" title="一些关于hexo的next主题的适配问题">
+      <i class="fa fa-chevron-left"></i> 一些关于hexo的next主题的适配问题
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -327,7 +417,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F%E5%92%8C%E5%8F%98%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">常量和变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F"><span class="nav-number">1.1.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E5%8F%98%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">常变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">1.4.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.5.</span> <span class="nav-text">数据类型</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -537,6 +627,59 @@ window.addEventListener('pjax:success', () => {
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
