@@ -210,7 +210,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-06-27 11:20:54 / 修改时间：13:10:58" itemprop="dateCreated datePublished" datetime="2021-06-27T11:20:54+08:00">2021-06-27</time>
+              <time title="创建时间：2021-06-27 11:20:54 / 修改时间：21:33:08" itemprop="dateCreated datePublished" datetime="2021-06-27T11:20:54+08:00">2021-06-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -228,14 +228,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>4.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -251,7 +251,7 @@
 <li>整型常量：也就是整数</li>
 <li>实型常量：<ol>
 <li>十进制小数形式：由数字和小数点组成</li>
-<li>指数形式：如$12.34e3$(代表$0.145\times10^3$<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
+<li>指数形式：如$12.34e3$(代表$12.34\times10^3$)<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
 </ol>
 </li>
 <li>字符常量：<ol>
@@ -313,25 +313,188 @@
 <td style="text-align:left">与该八进制码对应的字符</td>
 </tr>
 <tr>
-<td style="text-align:left">\xh[h$cdots$]<br>其中h代表一个十六进制数字</td>
+<td style="text-align:left">\xh[h$\cdots$]<br>其中h代表一个十六进制数字</td>
 <td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
 <td style="text-align:left">与该十六进制码对应的字符</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
-<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><blockquote>
-<p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
+<p>变量代表一个有名字，具有特定属性的一个存储单元。它用来存放数据，也就是存放变量的值。程序运行期间变量的值可以改变。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;<span class="comment">//a是变量名，3是变量值</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
 </blockquote>
 <p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
 <p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
 <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
 <p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
 <ul>
-<li>数据类型<br>$<br>\begin{cases}<br>基本类型<br>\begin{cases}<br>整型类型<br>\begin{cases}<br>基本整形(int)<br>短整型(short int)\\<br>长整型(long int)\\<br>双长整型(long long int)\\<br>字符型(char)\\<br>布尔型(bool)<br>\end{cases}\\<br>浮点类型<br>\begin{cases}<br>单精度浮点型(float)\\<br>双精度浮点型(double)\\<br>复数浮点型(float_complex,double_complex,longlong_complex)<br>\end{cases}<br>\end{cases}\\<br>枚举类型(enum)\\<br>空类型(void)\\<br>派生类型<br>\begin{cases}<br>指针类型(*)\\<br>数组类型([])\\<br>结构体类型(struct)\\<br>共用体类型(union)\\<br>函数类型<br>\end{cases}<br>\end{cases}<br>$</li>
+<li>$<br>\text{数据类型}<br>\begin{cases}<br>\text{基本类型}<br>\begin{cases}<br>\text{整型类型}<br>\begin{cases}<br>\text{基本整形(int)}\\<br>\text{短整型(short int)}\\<br>\text{长整型(long int)}\\<br>\text{双长整型(long long int)}\\<br>\text{字符型(char)}\\<br>\text{布尔型(bool)}<br>\end{cases}\\<br>\\<br>\text{浮点类型}<br>\begin{cases}<br>\text{单精度浮点型(float)}\\<br>\text{双精度浮点型(double)}\\<br>\text{复数浮点型(float_complex,double_complex,longlong_complex)}<br>\end{cases}<br>\end{cases}\\<br>\\<br>\text{枚举类型(enum)}\\<br>\\<br>\text{空类型(void)}\\<br>\\<br>\text{派生类型}<br>\begin{cases}<br>\text{指针类型(*)}\\<br>\text{数组类型([ ])}\\<br>\text{结构体类型(struct)}\\<br>\text{共用体类型(union)}\\<br>\text{函数类型}<br>\end{cases}<br>\end{cases}<br>$</li>
 </ul>
 </blockquote>
+<p>其中基本类型和枚举类型的值都是数值，统称为算术类型。</p>
+<p>算术类型和指针类型统称为纯量类型，因为其值是整数类型。</p>
+<p>枚举类型是程序中用户定义的整数类型。</p>
+<p>数组类型和结构体类型统称为组合类型，共用体类型不属于组合类型，<br>因为在同一时间只有一个成员具有值。</p>
+<p>函数类型用来定义函数，描述一个函数的接口，包括函数返回值的数据类型和参数的类型</p>
+<h2 id="整型数据"><a href="#整型数据" class="headerlink" title="整型数据"></a>整型数据</h2><p>存储单元的存储方式是：用整数补码形式存放。</p>
+<p>一个整数的补码是此数的二进制形式</p>
+<p>求负数补码的方法：先将此数的绝对值写成二进制的形式，然后对所有二进制位按位 <strong>取反，再加1</strong></p>
+<h3 id="整型数据的分类"><a href="#整型数据的分类" class="headerlink" title="整型数据的分类"></a>整型数据的分类</h3><ol>
+<li>基本类型(int 型)<br>编译系统分配给int型数据2个字节或4个字节(由具体的C语言编译系统自行决定)<br></li>
+<li>短整型(short int)<br>类型名为short int或short。<br><br>一般分配2个字节，取值范围$-2^{15}\sim (2^{15}-1)$</li>
+<li>长整型(long int)<br>类型名为long int或long。<br><br>一般分配4个字节，取值范围$-2^{31}\sim (2^{31}-1)$</li>
+<li>双长整型(long long int)<br>类型名为long long int或long long。<br><br>一般分配8个字节，取值范围$-2^{63}\sim (2^{63}-1)$</li>
+</ol>
+<p>在类型符号前面加上无符号修饰符unsigned，就是只有正值的意思，<br>因为其所占字节数不变，也就是说正值的取值范围比以前大。</p>
+<h2 id="字符型数据"><a href="#字符型数据" class="headerlink" title="字符型数据"></a>字符型数据</h2><p>定义字符变量<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;?&#x27;</span>; <span class="comment">//char c=63;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d  %c&quot;</span>,c,c);</span><br><span class="line"><span class="comment">//输出结果63 ?</span></span><br></pre></td></tr></table></figure><br>c是字符变量，实质上是一个字节的整型变量，但是它用来存放字符，所以称为字符变量</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">字节数</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">signed char(有符号字符型)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">$-2^7\sim (2^7-1)$</td>
+</tr>
+<tr>
+<td style="text-align:center">unsigned char(无符号字符型)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">$0\sim 2^{8}-1$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="浮点型数据"><a href="#浮点型数据" class="headerlink" title="浮点型数据"></a>浮点型数据</h2><blockquote>
+<p>用来表示具有小数点的实数。</p>
+</blockquote>
+<p>因为小数点位置可以浮动，所以实数的指数形式称为 <strong>浮点数</strong></p>
+<p>浮点数类型有三种</p>
+<ol>
+<li>float型（单精度浮点型）<br>分配4个字节</li>
+<li>double型（双精度浮点型）<br>分配8个字节</li>
+<li>long double型（长双精度型）<br>8或16个字节<h2 id="确定常量的类型"><a href="#确定常量的类型" class="headerlink" title="确定常量的类型"></a>确定常量的类型</h2></li>
+<li>整型常量<br>在一个整数末尾加大写L或小写l表示长整型<br></li>
+<li>浮点型常量<blockquote>
+<p>以小数或指数形式出现的实数</p>
+</blockquote>
+</li>
+</ol>
+<p>在末尾加上F或f表示float类型，<br>加上L或l表示long double类型<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a =<span class="number">3</span> <span class="number">.14159</span>f</span><br><span class="line"><span class="keyword">float</span> dounble a = <span class="number">1.23L</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>类型和变量的区别：</strong><br>每个变量都属于一个确定的类型，类型是变量的一个重要属性。</p>
+<h1 id="C语句"><a href="#C语句" class="headerlink" title="C语句"></a>C语句</h1><h2 id="C语句的作用和分类"><a href="#C语句的作用和分类" class="headerlink" title="C语句的作用和分类"></a>C语句的作用和分类</h2><p>语句后面有分号</p>
+<p>分类：</p>
+<ol>
+<li>控制语句</li>
+<li>函数调用语句</li>
+<li>表达式语句</li>
+<li>空语句</li>
+<li>复合语句</li>
+</ol>
+<h1 id="数据的输入输出"><a href="#数据的输入输出" class="headerlink" title="数据的输入输出"></a>数据的输入输出</h1><p>C语言本身不提供输入输出语句</p>
+<p>需要使用库函数stdio.h</p>
+<h2 id="printf-格式控制，输出表列"><a href="#printf-格式控制，输出表列" class="headerlink" title="printf(格式控制，输出表列)"></a>printf(格式控制，输出表列)</h2><p>%附加字符 格式字符</p>
+<p>例%-m.nf</p>
+<p>printf函数中用到的格式字符</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">格式字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">d,i</td>
+<td style="text-align:left">输出带符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:left">输出八进制无符号整数(不输出前导符0)</td>
+</tr>
+<tr>
+<td style="text-align:center">x,X</td>
+<td style="text-align:left">输出无符号十六进制整数(不输出前导符0x)，用x小写，X大写</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:left">输出无符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:left">输出一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:left">输出字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">f</td>
+<td style="text-align:left">以小数形式输出单、双精度数，隐含输出6位小数</td>
+</tr>
+<tr>
+<td style="text-align:center">e,E</td>
+<td style="text-align:left">以指数形式输出实数</td>
+</tr>
+<tr>
+<td style="text-align:center">g,G</td>
+<td style="text-align:left">选用%f或%e格式中输出宽度较短的一种形式，不输出无意义的0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在格式声明中，在%和上述格式字符间可以插入几种附加字符(又称修饰符)</p>
+<p>printf函数中用到的修饰符</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:left">长整型整数，可加在格式符d、o、x、u前面</td>
+</tr>
+<tr>
+<td style="text-align:center">m(代表一个整数)</td>
+<td style="text-align:left">数据的最小宽度</td>
+</tr>
+<tr>
+<td style="text-align:center">n(代表一个实数)</td>
+<td style="text-align:left">对实数，表示输出n位小数；对字符串，表示截取的字符个数</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">输出的数字或字符在域内想左靠</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="scanf-格式控制-地址表列"><a href="#scanf-格式控制-地址表列" class="headerlink" title="scanf(格式控制,地址表列)"></a>scanf(格式控制,地址表列)</h2><p><strong>注意</strong>：scanf函数中是地址表列，传进去的是变量地址</p>
+<h1 id="关系运算符和关系表达式"><a href="#关系运算符和关系表达式" class="headerlink" title="关系运算符和关系表达式"></a>关系运算符和关系表达式</h1><blockquote>
+<p>C语言中，比较符称为关系运算符<br><br>用关系运算符将两个数值或数值表达式连接起来的式子，称为关系表达式。</p>
+</blockquote>
+<p>关系运算符：</p>
+<p>&lt; ， &lt;= ， &gt; ， &gt;= ， == ， !=</p>
+<p>关系表达式：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>&gt;=<span class="number">0</span> <span class="comment">//为真 1</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="逻辑运算符和逻辑表达式"><a href="#逻辑运算符和逻辑表达式" class="headerlink" title="逻辑运算符和逻辑表达式"></a>逻辑运算符和逻辑表达式</h1><p>逻辑表达式：</p>
+<p>&amp;&amp; 或 ，|| 与 ，! 非</p>
+<p>逻辑运算符：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> &gt; <span class="number">3</span> &amp;&amp; <span class="number">8</span> &lt; <span class="number">4</span> - !<span class="number">0</span> <span class="comment">//为假 0</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="条件运算符和条件表达式"><a href="#条件运算符和条件表达式" class="headerlink" title="条件运算符和条件表达式"></a>条件运算符和条件表达式</h1><p>条件表达式的一般形式：</p>
+<p>表达式1 ? 表达式2 : 表达式3<br>例<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">max=(a&gt;b)?a:b;</span><br></pre></td></tr></table></figure></p>
+<h1 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> grade;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your score:&quot;</span>);</span><br><span class="line">    <span class="keyword">switch</span>(grade) <span class="comment">//此括号里的值类型应为整数类型（包括字符型）</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>A<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;85~100\n&quot;</span>);<span class="keyword">break</span>;<span class="comment">//break;不能省</span></span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;B</span><span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;70~84\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>C<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;60~69\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>D<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;&lt;60\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;enter data error!\n&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果:</span></span><br><span class="line"><span class="comment">A</span></span><br><span class="line"><span class="comment">Your score:85~100</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h1 id="静态，动态存储方式"><a href="#静态，动态存储方式" class="headerlink" title="静态，动态存储方式"></a>静态，动态存储方式</h1><p><strong>例</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">auto</span> <span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> c=<span class="number">0</span>;<span class="comment">//定义了一个静态局部变量，调用后不释放，保留前值</span></span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">6</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><br><strong>对比下面的程序</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -382,7 +545,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-27 13:59:40" itemprop="dateModified" datetime="2021-06-27T13:59:40+08:00">2021-06-27</time>
+                <time title="修改时间：2021-06-27 21:47:24" itemprop="dateModified" datetime="2021-06-27T21:47:24+08:00">2021-06-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -400,7 +563,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>516</span>
+              <span>522</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -420,7 +583,7 @@
 
       
           <p>这里记录一些hexo方面的问题</p>
-<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑$$中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用$$包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
+<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <code>$$``` 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 ```$$</code> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
 
       
     </div>
@@ -1362,12 +1525,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">59k</span>
+    <span title="站点总字数">62k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">53 分钟</span>
+    <span title="站点阅读时长">56 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>

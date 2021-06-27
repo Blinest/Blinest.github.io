@@ -22,6 +22,265 @@
       </tags>
   </entry>
   <entry>
+    <title>1.C语言的一些概念</title>
+    <url>/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
+<li>整型常量：也就是整数</li>
+<li>实型常量：<ol>
+<li>十进制小数形式：由数字和小数点组成</li>
+<li>指数形式：如$12.34e3$(代表$12.34\times10^3$)<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
+</ol>
+</li>
+<li>字符常量：<ol>
+<li>普通字符：用单撇号括起来的一个字符</li>
+<li>转义字符：以字符”\\”开头的字符</li>
+</ol>
+</li>
+<li>字符串常量：用双撇号把若干字符括起来</li>
+<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">转义字符</th>
+<th style="text-align:left">字符值</th>
+<th style="text-align:left">输出结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\a</td>
+<td style="text-align:left">警告(alert)</td>
+<td style="text-align:left">产生声音或视觉信号</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:left">退格(backspace)</td>
+<td style="text-align:left">将光标位置后退一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">换页(form feed)</td>
+<td style="text-align:left">将光标当前位置移到下一页的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">换行</td>
+<td style="text-align:left">将光标当前位置移到下一行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">回车(carriage return)</td>
+<td style="text-align:left">将该光标当前位置移到本行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">水平制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:left">垂直制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
+</tr>
+<tr>
+<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
+<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
+<td style="text-align:left">与该八进制码对应的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\xh[h$\cdots$]<br>其中h代表一个十六进制数字</td>
+<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
+<td style="text-align:left">与该十六进制码对应的字符</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
+<p>变量代表一个有名字，具有特定属性的一个存储单元。它用来存放数据，也就是存放变量的值。程序运行期间变量的值可以改变。<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;<span class="comment">//a是变量名，3是变量值</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
+</blockquote>
+<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
+<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
+<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
+<ul>
+<li>$<br>\text{数据类型}<br>\begin{cases}<br>\text{基本类型}<br>\begin{cases}<br>\text{整型类型}<br>\begin{cases}<br>\text{基本整形(int)}\\<br>\text{短整型(short int)}\\<br>\text{长整型(long int)}\\<br>\text{双长整型(long long int)}\\<br>\text{字符型(char)}\\<br>\text{布尔型(bool)}<br>\end{cases}\\<br>\\<br>\text{浮点类型}<br>\begin{cases}<br>\text{单精度浮点型(float)}\\<br>\text{双精度浮点型(double)}\\<br>\text{复数浮点型(float_complex,double_complex,longlong_complex)}<br>\end{cases}<br>\end{cases}\\<br>\\<br>\text{枚举类型(enum)}\\<br>\\<br>\text{空类型(void)}\\<br>\\<br>\text{派生类型}<br>\begin{cases}<br>\text{指针类型(*)}\\<br>\text{数组类型([ ])}\\<br>\text{结构体类型(struct)}\\<br>\text{共用体类型(union)}\\<br>\text{函数类型}<br>\end{cases}<br>\end{cases}<br>$</li>
+</ul>
+</blockquote>
+<p>其中基本类型和枚举类型的值都是数值，统称为算术类型。</p>
+<p>算术类型和指针类型统称为纯量类型，因为其值是整数类型。</p>
+<p>枚举类型是程序中用户定义的整数类型。</p>
+<p>数组类型和结构体类型统称为组合类型，共用体类型不属于组合类型，<br>因为在同一时间只有一个成员具有值。</p>
+<p>函数类型用来定义函数，描述一个函数的接口，包括函数返回值的数据类型和参数的类型</p>
+<h2 id="整型数据"><a href="#整型数据" class="headerlink" title="整型数据"></a>整型数据</h2><p>存储单元的存储方式是：用整数补码形式存放。</p>
+<p>一个整数的补码是此数的二进制形式</p>
+<p>求负数补码的方法：先将此数的绝对值写成二进制的形式，然后对所有二进制位按位 <strong>取反，再加1</strong></p>
+<h3 id="整型数据的分类"><a href="#整型数据的分类" class="headerlink" title="整型数据的分类"></a>整型数据的分类</h3><ol>
+<li>基本类型(int 型)<br>编译系统分配给int型数据2个字节或4个字节(由具体的C语言编译系统自行决定)<br></li>
+<li>短整型(short int)<br>类型名为short int或short。<br><br>一般分配2个字节，取值范围$-2^{15}\sim (2^{15}-1)$</li>
+<li>长整型(long int)<br>类型名为long int或long。<br><br>一般分配4个字节，取值范围$-2^{31}\sim (2^{31}-1)$</li>
+<li>双长整型(long long int)<br>类型名为long long int或long long。<br><br>一般分配8个字节，取值范围$-2^{63}\sim (2^{63}-1)$</li>
+</ol>
+<p>在类型符号前面加上无符号修饰符unsigned，就是只有正值的意思，<br>因为其所占字节数不变，也就是说正值的取值范围比以前大。</p>
+<h2 id="字符型数据"><a href="#字符型数据" class="headerlink" title="字符型数据"></a>字符型数据</h2><p>定义字符变量<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;?&#x27;</span>; <span class="comment">//char c=63;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d  %c&quot;</span>,c,c);</span><br><span class="line"><span class="comment">//输出结果63 ?</span></span><br></pre></td></tr></table></figure><br>c是字符变量，实质上是一个字节的整型变量，但是它用来存放字符，所以称为字符变量</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">字节数</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">signed char(有符号字符型)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">$-2^7\sim (2^7-1)$</td>
+</tr>
+<tr>
+<td style="text-align:center">unsigned char(无符号字符型)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">$0\sim 2^{8}-1$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="浮点型数据"><a href="#浮点型数据" class="headerlink" title="浮点型数据"></a>浮点型数据</h2><blockquote>
+<p>用来表示具有小数点的实数。</p>
+</blockquote>
+<p>因为小数点位置可以浮动，所以实数的指数形式称为 <strong>浮点数</strong></p>
+<p>浮点数类型有三种</p>
+<ol>
+<li>float型（单精度浮点型）<br>分配4个字节</li>
+<li>double型（双精度浮点型）<br>分配8个字节</li>
+<li>long double型（长双精度型）<br>8或16个字节<h2 id="确定常量的类型"><a href="#确定常量的类型" class="headerlink" title="确定常量的类型"></a>确定常量的类型</h2></li>
+<li>整型常量<br>在一个整数末尾加大写L或小写l表示长整型<br></li>
+<li>浮点型常量<blockquote>
+<p>以小数或指数形式出现的实数</p>
+</blockquote>
+</li>
+</ol>
+<p>在末尾加上F或f表示float类型，<br>加上L或l表示long double类型<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">float</span> a =<span class="number">3</span> <span class="number">.14159</span>f</span><br><span class="line"><span class="keyword">float</span> dounble a = <span class="number">1.23L</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>类型和变量的区别：</strong><br>每个变量都属于一个确定的类型，类型是变量的一个重要属性。</p>
+<h1 id="C语句"><a href="#C语句" class="headerlink" title="C语句"></a>C语句</h1><h2 id="C语句的作用和分类"><a href="#C语句的作用和分类" class="headerlink" title="C语句的作用和分类"></a>C语句的作用和分类</h2><p>语句后面有分号</p>
+<p>分类：</p>
+<ol>
+<li>控制语句</li>
+<li>函数调用语句</li>
+<li>表达式语句</li>
+<li>空语句</li>
+<li>复合语句</li>
+</ol>
+<h1 id="数据的输入输出"><a href="#数据的输入输出" class="headerlink" title="数据的输入输出"></a>数据的输入输出</h1><p>C语言本身不提供输入输出语句</p>
+<p>需要使用库函数stdio.h</p>
+<h2 id="printf-格式控制，输出表列"><a href="#printf-格式控制，输出表列" class="headerlink" title="printf(格式控制，输出表列)"></a>printf(格式控制，输出表列)</h2><p>%附加字符 格式字符</p>
+<p>例%-m.nf</p>
+<p>printf函数中用到的格式字符</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">格式字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">d,i</td>
+<td style="text-align:left">输出带符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:left">输出八进制无符号整数(不输出前导符0)</td>
+</tr>
+<tr>
+<td style="text-align:center">x,X</td>
+<td style="text-align:left">输出无符号十六进制整数(不输出前导符0x)，用x小写，X大写</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:left">输出无符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:left">输出一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:left">输出字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">f</td>
+<td style="text-align:left">以小数形式输出单、双精度数，隐含输出6位小数</td>
+</tr>
+<tr>
+<td style="text-align:center">e,E</td>
+<td style="text-align:left">以指数形式输出实数</td>
+</tr>
+<tr>
+<td style="text-align:center">g,G</td>
+<td style="text-align:left">选用%f或%e格式中输出宽度较短的一种形式，不输出无意义的0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在格式声明中，在%和上述格式字符间可以插入几种附加字符(又称修饰符)</p>
+<p>printf函数中用到的修饰符</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:left">长整型整数，可加在格式符d、o、x、u前面</td>
+</tr>
+<tr>
+<td style="text-align:center">m(代表一个整数)</td>
+<td style="text-align:left">数据的最小宽度</td>
+</tr>
+<tr>
+<td style="text-align:center">n(代表一个实数)</td>
+<td style="text-align:left">对实数，表示输出n位小数；对字符串，表示截取的字符个数</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">输出的数字或字符在域内想左靠</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="scanf-格式控制-地址表列"><a href="#scanf-格式控制-地址表列" class="headerlink" title="scanf(格式控制,地址表列)"></a>scanf(格式控制,地址表列)</h2><p><strong>注意</strong>：scanf函数中是地址表列，传进去的是变量地址</p>
+<h1 id="关系运算符和关系表达式"><a href="#关系运算符和关系表达式" class="headerlink" title="关系运算符和关系表达式"></a>关系运算符和关系表达式</h1><blockquote>
+<p>C语言中，比较符称为关系运算符<br><br>用关系运算符将两个数值或数值表达式连接起来的式子，称为关系表达式。</p>
+</blockquote>
+<p>关系运算符：</p>
+<p>&lt; ， &lt;= ， &gt; ， &gt;= ， == ， !=</p>
+<p>关系表达式：<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span>&gt;=<span class="number">0</span> <span class="comment">//为真 1</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="逻辑运算符和逻辑表达式"><a href="#逻辑运算符和逻辑表达式" class="headerlink" title="逻辑运算符和逻辑表达式"></a>逻辑运算符和逻辑表达式</h1><p>逻辑表达式：</p>
+<p>&amp;&amp; 或 ，|| 与 ，! 非</p>
+<p>逻辑运算符：<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span> &gt; <span class="number">3</span> &amp;&amp; <span class="number">8</span> &lt; <span class="number">4</span> - !<span class="number">0</span> <span class="comment">//为假 0</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="条件运算符和条件表达式"><a href="#条件运算符和条件表达式" class="headerlink" title="条件运算符和条件表达式"></a>条件运算符和条件表达式</h1><p>条件表达式的一般形式：</p>
+<p>表达式1 ? 表达式2 : 表达式3<br>例<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">max=(a&gt;b)?a:b;</span><br></pre></td></tr></table></figure></p>
+<h1 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> grade;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your score:&quot;</span>);</span><br><span class="line">    <span class="keyword">switch</span>(grade) <span class="comment">//此括号里的值类型应为整数类型（包括字符型）</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>A<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;85~100\n&quot;</span>);<span class="keyword">break</span>;<span class="comment">//break;不能省</span></span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;B</span><span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;70~84\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>C<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;60~69\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>D<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;&lt;60\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;enter data error!\n&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果:</span></span><br><span class="line"><span class="comment">A</span></span><br><span class="line"><span class="comment">Your score:85~100</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h1 id="静态，动态存储方式"><a href="#静态，动态存储方式" class="headerlink" title="静态，动态存储方式"></a>静态，动态存储方式</h1><p><strong>例</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">auto</span> <span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> c=<span class="number">0</span>;<span class="comment">//定义了一个静态局部变量，调用后不释放，保留前值</span></span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">6</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><br><strong>对比下面的程序</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.行列式</title>
     <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
@@ -82,126 +341,6 @@
 </li>
 </ul>
 <p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.矩阵</title>
-    <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是 <strong>同型矩阵</strong></p>
-<h2 id="几类特殊的矩阵"><a href="#几类特殊的矩阵" class="headerlink" title="几类特殊的矩阵"></a>几类特殊的矩阵</h2><h3 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h3><p>$<br>\quad\begin{pmatrix}<br>    {\large a}_{11}    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}^{\large n}<br>$</p>
-<p>$=<br>\begin{pmatrix}<br>    {\large a}_{11}^n    \\<br>     &amp; {\large a}_{22}^n\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}^n<br>\end{pmatrix}<br>$<br><br><br><br>$<br>\qquad\begin{pmatrix}<br>    {\large k}    \\<br>     &amp; {\large k}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large k}<br>\end{pmatrix}$</p>
-<p>$=\large k<br>\begin{pmatrix}<br>    1    \\<br>     &amp; 1 \\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; 1<br>\end{pmatrix}<br>$</p>
-<h3 id="初等矩阵"><a href="#初等矩阵" class="headerlink" title="初等矩阵"></a>初等矩阵</h3><blockquote>
-<p>单位矩阵经 <strong>一次初等变换</strong> 所得到的矩阵</p>
-</blockquote>
-<p>可以是行变换,也可以是列变换</p>
-<p>左乘是行变换，右乘是列变换</p>
-<ol>
-<li>互换两行两列的位置：<br>$E(i,j)$表示交换第$i$行(列)和第$j$行(列)<br><br></li>
-<li>以数$k\neq0$乘某行或某列：<br>$E(i(k))$表示第$i$行(列)乘$k$<br><br></li>
-<li>以数$k$乘某行(列)加到另一行(列)上去：<br>$E(i,j(k))$表示$j$行(列)乘$k$加到$i$行(列)</li>
-</ol>
-<p><strong>等价矩阵：</strong></p>
-<blockquote>
-<p>矩阵A经过有限次初等变换变成矩阵B，记作A$\cong$B</p>
-</blockquote>
-<h3 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h3><blockquote>
-<p>满足$A^T=A$</p>
-</blockquote>
-<h3 id="反对称矩阵"><a href="#反对称矩阵" class="headerlink" title="反对称矩阵"></a>反对称矩阵</h3><blockquote>
-<p>满足$A^T=-A$</p>
-</blockquote>
-<h3 id="幂零矩阵"><a href="#幂零矩阵" class="headerlink" title="幂零矩阵"></a>幂零矩阵</h3><blockquote>
-<p>对方阵$A$,如果存在正整数m，使得$A^m=0$,则称$A$为幂零矩阵</p>
-</blockquote>
-<h3 id="幂等矩阵"><a href="#幂等矩阵" class="headerlink" title="幂等矩阵"></a>幂等矩阵</h3><blockquote>
-<p>满足$A^2=A$</p>
-</blockquote>
-<h3 id="对合矩阵"><a href="#对合矩阵" class="headerlink" title="对合矩阵"></a>对合矩阵</h3><blockquote>
-<p>满足$A^2=E$</p>
-</blockquote>
-<h2 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h2><p>令$A=[{\large a}_{ij}]_{m\times s},B=[{\large b}_{ij}]_{s\times n}$<br><br>$AB=C=[{\large c}_{ij}]_{m\times n}$<br><br>${\large c}_{ij}={\large\sum\limits_{k=1}^s}{\large a}_{ik}{\large b}_{kj}$</p>
-<h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$\quad A=[{\large a}_{1j}]_{1\times s}$</p>
-<p>$\quad A^T=[{\large a}_{j1}]_{s\times1}$</p>
-<p>$\quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
-<p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
-<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><blockquote>
-<p>$AB=BA=I$</p>
-<ul>
-<li>$<br>A=<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>$<br>$<br>B=<br>\begin{pmatrix}<br>   \displaystyle\frac{1}{ {\large a}_{11} }\\<br>   &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$<br><br><br>$<br>\because<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>  {\large b}_{11}\\<br>  \\<br>   &amp; {\large b}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>$<br><br><br>$<br>=\begin{pmatrix}<br>  {\large a}_{11}{\large b}_{11} \\<br>  \\<br>   &amp; {\large a}_{22}{\large b}_{22}\\<br>   \\<br>   &amp;     &amp; \ddots\\<br>   \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</li>
-</ul>
-</blockquote>
-<p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$<br><br>一些可逆矩阵的证明要想到从定义的角度出发</p>
-<hr>
-<p>$AA^{ * } =A^{ * }A=|A|I$</p>
-<p>推论：</p>
-<ol>
-<li>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</li>
-</ol>
-<p>$\therefore$求逆矩阵先 <strong>看行列式是否为零</strong></p>
-<ol>
-<li>伴随矩阵$A^{ * }$的一些常用结论 <ul>
-<li>$|A^*|=|A|^{n-1}$</li>
-<li>$(A^{ * })^{ * }=|A|^{n-2}A$</li>
-<li>若$A$可逆，且$A^{ * }$可逆,$(A^{ * })^{-1}=(A^{-1})^{ * }=\displaystyle\frac{1}{|A|}A$</li>
-<li>$(AB)^{ * }=B^{ * }A^{ * }$</li>
-<li>$(A^{ * })^T=(A^T)^{ * }$</li>
-</ul>
-</li>
-<li><strong>A如果可逆，那么A一定可以表示为有限个初等矩阵的乘积</strong></li>
-</ol>
-<p>$P_t\cdots P_2P_1A=I$</p>
-<p><br></p>
-<p>$\because P_t\cdots P_2P_1A=I$</p>
-<p>$\therefore A^{-1}=P_t\cdots P_2\;P_1$</p>
-<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}$<br><br><br>$P_t\cdots P_2\;P_1\;A=I$<br><br>$P_t\cdots P_2\;P_1\;I=A^{-1}$</p>
-<p>由这两个式子可得：</p>
-<p>A经过行初等变换变成$I$</p>
-<p>$I$就经过同样的行初等变换变成$A^{-1}$</p>
-<p>$<br>\therefore[A\;|\;I\,]\rightarrow\cdots\rightarrow[\,I\;|\;A^{-1}]<br>$<br><br>或者可以这么理解<br>$A^{-1}[A|I]=[I|A^{-1}]$<br><br>用分块矩阵的思想，这样理解更加直观,其实这样求解的原因<br>就是$A$和$I$可以经过相同的变换变成$I$和$A^{-1}$</p>
-<p><strong>推广</strong></p>
-<p>$AX=B$<br>如果A可逆，$X=A^{-1}B$</p>
-<p>令$P=A^{-1}$</p>
-<p>由</p>
-<p>$\;PA=I$<br><br>$PB=X$</p>
-<p>有$\;[A|B]=[I|X]$</p>
-<p>即$\;$遇到$A^{-1}B$时，可以将$A，B$拼在一起将$A$化成单位矩阵就是所求的$X$</p>
-<h2 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h2><h3 id="分成四块"><a href="#分成四块" class="headerlink" title="分成四块"></a>分成四块</h3><p>$<br>\left(\begin{array}{cc|ccc}<br>     1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\<br>     3 &amp; 4 &amp; 0 &amp; 0 &amp; 0\\<br>     \hline<br>     0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br>\end{array}\right)=<br>\left(\begin{array}{cc}<br>     A &amp; O\\<br>     O &amp; B<br>\end{array}\right)<br>$</p>
-<p>分块后的矩阵满足四个区域整体满足</p>
-<p>矩阵的加法</p>
-<p>对角矩阵的乘法</p>
-<p>逆矩阵</p>
-<h3 id="按行分块"><a href="#按行分块" class="headerlink" title="按行分块"></a>按行分块</h3><ul>
-<li>$<br>\left(\begin{array}{ccc}<br>a_{11}&amp;a_{12}&amp;a_{13}\\<br>\hdashline<br>a_{21}&amp;a_{22}&amp;a_{23}\\<br>\hdashline<br>a_{31}&amp;a_{32}&amp;a_{33}<br>\end{array}\right)<br>=\begin{bmatrix}<br>\alpha_1^T\\<br>\alpha_2^T\\<br>\alpha_3^T<br>\end{bmatrix}<br>$<br><br>按行分块一般会加转置符号，主要原因时默认$\alpha$是列向量<h3 id="按列分块"><a href="#按列分块" class="headerlink" title="按列分块"></a>按列分块</h3>类比按行分块<br><br>一般证明的时候会选择按列分块</li>
-</ul>
-<h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><blockquote>
-<p>秩与线性方程组的解有着密切的联系，所以要将线性方程组和秩结合起来，<br>而这样就容易理解后面的n元向量的一些秩的表示形式</p>
-</blockquote>
-<ul>
-<li>矩阵A的一个k阶子式:<br><br>$\qquad$矩阵A中随便找k行随便找k列，按原来次序排列构成的行列式</li>
-</ul>
-<h3 id="秩的性质"><a href="#秩的性质" class="headerlink" title="秩的性质"></a>秩的性质</h3><ol>
-<li>$0\leqslant r(A_{m\times n})\leqslant min(m,n)$<br><br><br></li>
-<li>$r(A^T)=r(A)$<br><br><br></li>
-<li>$r(A+B)\leqslant r(A)+r(B)$<br><br><br></li>
-<li>$r(kA)=r(A)(k\neq0)\;\leftarrow\; r(A)=r(-A)，r(A-E)=r(E-A)$<br><br><br></li>
-<li><p>$r(AB)\leqslant min(r(A),r(B))$<br><br><br></p>
-</li>
-<li><p>如P.Q可逆，则<br>$r(PAQ)=r(A)$<br><br><br></p>
-</li>
-<li>$\;r\left[\begin{array}{cc} A&amp;O\\O&amp;B\end{array}\right]=r(A)+r(B)$<br><br><br></li>
-<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$<br><br>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br>$<br>\begin{aligned}<br>&amp;设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>&amp;\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>&amp;A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\end{aligned}<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示$<br><br>$则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\rightarrow在向量组线性表示里$<br><br><br>$<br>\begin{aligned}<br>\therefore r(A+B)&amp;=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\\<br>&amp;\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>\end{aligned}<br>$</li>
-</ol>
-<p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
-<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>前提$AB=BA$,<br>那么$(A+B)^n=\sum\limits_{i=0}^nC_n^iA^iB^{n-i}$</p>
-<p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -353,6 +492,126 @@
 <p>极大线性无关组：$\alpha_1\;\alpha_2\;\alpha_4$</p>
 <p>$\therefore\alpha_3=-\alpha_1-\alpha_2$</p>
 <p>$\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4$</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2.矩阵</title>
+    <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是 <strong>同型矩阵</strong></p>
+<h2 id="几类特殊的矩阵"><a href="#几类特殊的矩阵" class="headerlink" title="几类特殊的矩阵"></a>几类特殊的矩阵</h2><h3 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h3><p>$<br>\quad\begin{pmatrix}<br>    {\large a}_{11}    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}^{\large n}<br>$</p>
+<p>$=<br>\begin{pmatrix}<br>    {\large a}_{11}^n    \\<br>     &amp; {\large a}_{22}^n\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}^n<br>\end{pmatrix}<br>$<br><br><br><br>$<br>\qquad\begin{pmatrix}<br>    {\large k}    \\<br>     &amp; {\large k}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large k}<br>\end{pmatrix}$</p>
+<p>$=\large k<br>\begin{pmatrix}<br>    1    \\<br>     &amp; 1 \\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; 1<br>\end{pmatrix}<br>$</p>
+<h3 id="初等矩阵"><a href="#初等矩阵" class="headerlink" title="初等矩阵"></a>初等矩阵</h3><blockquote>
+<p>单位矩阵经 <strong>一次初等变换</strong> 所得到的矩阵</p>
+</blockquote>
+<p>可以是行变换,也可以是列变换</p>
+<p>左乘是行变换，右乘是列变换</p>
+<ol>
+<li>互换两行两列的位置：<br>$E(i,j)$表示交换第$i$行(列)和第$j$行(列)<br><br></li>
+<li>以数$k\neq0$乘某行或某列：<br>$E(i(k))$表示第$i$行(列)乘$k$<br><br></li>
+<li>以数$k$乘某行(列)加到另一行(列)上去：<br>$E(i,j(k))$表示$j$行(列)乘$k$加到$i$行(列)</li>
+</ol>
+<p><strong>等价矩阵：</strong></p>
+<blockquote>
+<p>矩阵A经过有限次初等变换变成矩阵B，记作A$\cong$B</p>
+</blockquote>
+<h3 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h3><blockquote>
+<p>满足$A^T=A$</p>
+</blockquote>
+<h3 id="反对称矩阵"><a href="#反对称矩阵" class="headerlink" title="反对称矩阵"></a>反对称矩阵</h3><blockquote>
+<p>满足$A^T=-A$</p>
+</blockquote>
+<h3 id="幂零矩阵"><a href="#幂零矩阵" class="headerlink" title="幂零矩阵"></a>幂零矩阵</h3><blockquote>
+<p>对方阵$A$,如果存在正整数m，使得$A^m=0$,则称$A$为幂零矩阵</p>
+</blockquote>
+<h3 id="幂等矩阵"><a href="#幂等矩阵" class="headerlink" title="幂等矩阵"></a>幂等矩阵</h3><blockquote>
+<p>满足$A^2=A$</p>
+</blockquote>
+<h3 id="对合矩阵"><a href="#对合矩阵" class="headerlink" title="对合矩阵"></a>对合矩阵</h3><blockquote>
+<p>满足$A^2=E$</p>
+</blockquote>
+<h2 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h2><p>令$A=[{\large a}_{ij}]_{m\times s},B=[{\large b}_{ij}]_{s\times n}$<br><br>$AB=C=[{\large c}_{ij}]_{m\times n}$<br><br>${\large c}_{ij}={\large\sum\limits_{k=1}^s}{\large a}_{ik}{\large b}_{kj}$</p>
+<h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$\quad A=[{\large a}_{1j}]_{1\times s}$</p>
+<p>$\quad A^T=[{\large a}_{j1}]_{s\times1}$</p>
+<p>$\quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
+<p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
+<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><blockquote>
+<p>$AB=BA=I$</p>
+<ul>
+<li>$<br>A=<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>$<br>$<br>B=<br>\begin{pmatrix}<br>   \displaystyle\frac{1}{ {\large a}_{11} }\\<br>   &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$<br><br><br>$<br>\because<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>  {\large b}_{11}\\<br>  \\<br>   &amp; {\large b}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>$<br><br><br>$<br>=\begin{pmatrix}<br>  {\large a}_{11}{\large b}_{11} \\<br>  \\<br>   &amp; {\large a}_{22}{\large b}_{22}\\<br>   \\<br>   &amp;     &amp; \ddots\\<br>   \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</li>
+</ul>
+</blockquote>
+<p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$<br><br>一些可逆矩阵的证明要想到从定义的角度出发</p>
+<hr>
+<p>$AA^{ * } =A^{ * }A=|A|I$</p>
+<p>推论：</p>
+<ol>
+<li>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</li>
+</ol>
+<p>$\therefore$求逆矩阵先 <strong>看行列式是否为零</strong></p>
+<ol>
+<li>伴随矩阵$A^{ * }$的一些常用结论 <ul>
+<li>$|A^*|=|A|^{n-1}$</li>
+<li>$(A^{ * })^{ * }=|A|^{n-2}A$</li>
+<li>若$A$可逆，且$A^{ * }$可逆,$(A^{ * })^{-1}=(A^{-1})^{ * }=\displaystyle\frac{1}{|A|}A$</li>
+<li>$(AB)^{ * }=B^{ * }A^{ * }$</li>
+<li>$(A^{ * })^T=(A^T)^{ * }$</li>
+</ul>
+</li>
+<li><strong>A如果可逆，那么A一定可以表示为有限个初等矩阵的乘积</strong></li>
+</ol>
+<p>$P_t\cdots P_2P_1A=I$</p>
+<p><br></p>
+<p>$\because P_t\cdots P_2P_1A=I$</p>
+<p>$\therefore A^{-1}=P_t\cdots P_2\;P_1$</p>
+<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}$<br><br><br>$P_t\cdots P_2\;P_1\;A=I$<br><br>$P_t\cdots P_2\;P_1\;I=A^{-1}$</p>
+<p>由这两个式子可得：</p>
+<p>A经过行初等变换变成$I$</p>
+<p>$I$就经过同样的行初等变换变成$A^{-1}$</p>
+<p>$<br>\therefore[A\;|\;I\,]\rightarrow\cdots\rightarrow[\,I\;|\;A^{-1}]<br>$<br><br>或者可以这么理解<br>$A^{-1}[A|I]=[I|A^{-1}]$<br><br>用分块矩阵的思想，这样理解更加直观,其实这样求解的原因<br>就是$A$和$I$可以经过相同的变换变成$I$和$A^{-1}$</p>
+<p><strong>推广</strong></p>
+<p>$AX=B$<br>如果A可逆，$X=A^{-1}B$</p>
+<p>令$P=A^{-1}$</p>
+<p>由</p>
+<p>$\;PA=I$<br><br>$PB=X$</p>
+<p>有$\;[A|B]=[I|X]$</p>
+<p>即$\;$遇到$A^{-1}B$时，可以将$A，B$拼在一起将$A$化成单位矩阵就是所求的$X$</p>
+<h2 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h2><h3 id="分成四块"><a href="#分成四块" class="headerlink" title="分成四块"></a>分成四块</h3><p>$<br>\left(\begin{array}{cc|ccc}<br>     1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\<br>     3 &amp; 4 &amp; 0 &amp; 0 &amp; 0\\<br>     \hline<br>     0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br>\end{array}\right)=<br>\left(\begin{array}{cc}<br>     A &amp; O\\<br>     O &amp; B<br>\end{array}\right)<br>$</p>
+<p>分块后的矩阵满足四个区域整体满足</p>
+<p>矩阵的加法</p>
+<p>对角矩阵的乘法</p>
+<p>逆矩阵</p>
+<h3 id="按行分块"><a href="#按行分块" class="headerlink" title="按行分块"></a>按行分块</h3><ul>
+<li>$<br>\left(\begin{array}{ccc}<br>a_{11}&amp;a_{12}&amp;a_{13}\\<br>\hdashline<br>a_{21}&amp;a_{22}&amp;a_{23}\\<br>\hdashline<br>a_{31}&amp;a_{32}&amp;a_{33}<br>\end{array}\right)<br>=\begin{bmatrix}<br>\alpha_1^T\\<br>\alpha_2^T\\<br>\alpha_3^T<br>\end{bmatrix}<br>$<br><br>按行分块一般会加转置符号，主要原因时默认$\alpha$是列向量<h3 id="按列分块"><a href="#按列分块" class="headerlink" title="按列分块"></a>按列分块</h3>类比按行分块<br><br>一般证明的时候会选择按列分块</li>
+</ul>
+<h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><blockquote>
+<p>秩与线性方程组的解有着密切的联系，所以要将线性方程组和秩结合起来，<br>而这样就容易理解后面的n元向量的一些秩的表示形式</p>
+</blockquote>
+<ul>
+<li>矩阵A的一个k阶子式:<br><br>$\qquad$矩阵A中随便找k行随便找k列，按原来次序排列构成的行列式</li>
+</ul>
+<h3 id="秩的性质"><a href="#秩的性质" class="headerlink" title="秩的性质"></a>秩的性质</h3><ol>
+<li>$0\leqslant r(A_{m\times n})\leqslant min(m,n)$<br><br><br></li>
+<li>$r(A^T)=r(A)$<br><br><br></li>
+<li>$r(A+B)\leqslant r(A)+r(B)$<br><br><br></li>
+<li>$r(kA)=r(A)(k\neq0)\;\leftarrow\; r(A)=r(-A)，r(A-E)=r(E-A)$<br><br><br></li>
+<li><p>$r(AB)\leqslant min(r(A),r(B))$<br><br><br></p>
+</li>
+<li><p>如P.Q可逆，则<br>$r(PAQ)=r(A)$<br><br><br></p>
+</li>
+<li>$\;r\left[\begin{array}{cc} A&amp;O\\O&amp;B\end{array}\right]=r(A)+r(B)$<br><br><br></li>
+<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$<br><br>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br>$<br>\begin{aligned}<br>&amp;设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>&amp;\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>&amp;A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\end{aligned}<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示$<br><br>$则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\rightarrow在向量组线性表示里$<br><br><br>$<br>\begin{aligned}<br>\therefore r(A+B)&amp;=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\\<br>&amp;\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>\end{aligned}<br>$</li>
+</ol>
+<p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
+<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>前提$AB=BA$,<br>那么$(A+B)^n=\sum\limits_{i=0}^nC_n^iA^iB^{n-i}$</p>
+<p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -540,19 +799,6 @@
       </tags>
   </entry>
   <entry>
-    <title>end</title>
-    <url>/2021/06/24/end/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>7.二次型</title>
     <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
@@ -659,6 +905,19 @@
 <p>半正定$f\geqslant0$</p>
 <p>负定$f&lt;0$</p>
 <p>半负定$f\leqslant0$</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>end</title>
+    <url>/2021/06/24/end/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -1139,109 +1398,13 @@
     <title>一些关于hexo的next主题的适配问题</title>
     <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
-<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑$$中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用$$包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
+<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <code>$$``` 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 ```$$</code> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
 ]]></content>
       <categories>
         <category>杂记</category>
       </categories>
       <tags>
         <tag>杂记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>1.C语言的一些概念</title>
-    <url>/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
-<li>整型常量：也就是整数</li>
-<li>实型常量：<ol>
-<li>十进制小数形式：由数字和小数点组成</li>
-<li>指数形式：如$12.34e3$(代表$0.145\times10^3$<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
-</ol>
-</li>
-<li>字符常量：<ol>
-<li>普通字符：用单撇号括起来的一个字符</li>
-<li>转义字符：以字符”\\”开头的字符</li>
-</ol>
-</li>
-<li>字符串常量：用双撇号把若干字符括起来</li>
-<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
-</ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">转义字符</th>
-<th style="text-align:left">字符值</th>
-<th style="text-align:left">输出结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">\a</td>
-<td style="text-align:left">警告(alert)</td>
-<td style="text-align:left">产生声音或视觉信号</td>
-</tr>
-<tr>
-<td style="text-align:left">\b</td>
-<td style="text-align:left">退格(backspace)</td>
-<td style="text-align:left">将光标位置后退一个字符</td>
-</tr>
-<tr>
-<td style="text-align:left">\f</td>
-<td style="text-align:left">换页(form feed)</td>
-<td style="text-align:left">将光标当前位置移到下一页的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\n</td>
-<td style="text-align:left">换行</td>
-<td style="text-align:left">将光标当前位置移到下一行的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\r</td>
-<td style="text-align:left">回车(carriage return)</td>
-<td style="text-align:left">将该光标当前位置移到本行的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\t</td>
-<td style="text-align:left">水平制表符</td>
-<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
-</tr>
-<tr>
-<td style="text-align:left">\v</td>
-<td style="text-align:left">垂直制表符</td>
-<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
-</tr>
-<tr>
-<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
-<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
-<td style="text-align:left">与该八进制码对应的字符</td>
-</tr>
-<tr>
-<td style="text-align:left">\xh[h$cdots$]<br>其中h代表一个十六进制数字</td>
-<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
-<td style="text-align:left">与该十六进制码对应的字符</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
-<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><blockquote>
-<p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
-</blockquote>
-<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
-<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
-<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
-<ul>
-<li>数据类型<br>$<br>\begin{cases}<br>基本类型<br>\begin{cases}<br>整型类型<br>\begin{cases}<br>基本整形(int)<br>短整型(short int)\\<br>长整型(long int)\\<br>双长整型(long long int)\\<br>字符型(char)\\<br>布尔型(bool)<br>\end{cases}\\<br>浮点类型<br>\begin{cases}<br>单精度浮点型(float)\\<br>双精度浮点型(double)\\<br>复数浮点型(float_complex,double_complex,longlong_complex)<br>\end{cases}<br>\end{cases}\\<br>枚举类型(enum)\\<br>空类型(void)\\<br>派生类型<br>\begin{cases}<br>指针类型(*)\\<br>数组类型([])\\<br>结构体类型(struct)\\<br>共用体类型(union)\\<br>函数类型<br>\end{cases}<br>\end{cases}<br>$</li>
-</ul>
-</blockquote>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
       </tags>
   </entry>
 </search>
