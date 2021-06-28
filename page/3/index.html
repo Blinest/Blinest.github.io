@@ -185,6 +185,201 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/18/2.%E7%9F%A9%E9%98%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/18/2.%E7%9F%A9%E9%98%B5/" class="post-title-link" itemprop="url">2.矩阵</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-18 18:23:27" itemprop="dateCreated datePublished" datetime="2021-06-18T18:23:27+08:00">2021-06-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-26 16:32:34" itemprop="dateModified" datetime="2021-06-26T16:32:34+08:00">2021-06-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是 <strong>同型矩阵</strong></p>
+<h2 id="几类特殊的矩阵"><a href="#几类特殊的矩阵" class="headerlink" title="几类特殊的矩阵"></a>几类特殊的矩阵</h2><h3 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h3><p>$<br>\quad\begin{pmatrix}<br>    {\large a}_{11}    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}^{\large n}<br>$</p>
+<p>$=<br>\begin{pmatrix}<br>    {\large a}_{11}^n    \\<br>     &amp; {\large a}_{22}^n\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}^n<br>\end{pmatrix}<br>$<br><br><br><br>$<br>\qquad\begin{pmatrix}<br>    {\large k}    \\<br>     &amp; {\large k}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large k}<br>\end{pmatrix}$</p>
+<p>$=\large k<br>\begin{pmatrix}<br>    1    \\<br>     &amp; 1 \\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; 1<br>\end{pmatrix}<br>$</p>
+<h3 id="初等矩阵"><a href="#初等矩阵" class="headerlink" title="初等矩阵"></a>初等矩阵</h3><blockquote>
+<p>单位矩阵经 <strong>一次初等变换</strong> 所得到的矩阵</p>
+</blockquote>
+<p>可以是行变换,也可以是列变换</p>
+<p>左乘是行变换，右乘是列变换</p>
+<ol>
+<li>互换两行两列的位置：<br>$E(i,j)$表示交换第$i$行(列)和第$j$行(列)<br><br></li>
+<li>以数$k\neq0$乘某行或某列：<br>$E(i(k))$表示第$i$行(列)乘$k$<br><br></li>
+<li>以数$k$乘某行(列)加到另一行(列)上去：<br>$E(i,j(k))$表示$j$行(列)乘$k$加到$i$行(列)</li>
+</ol>
+<p><strong>等价矩阵：</strong></p>
+<blockquote>
+<p>矩阵A经过有限次初等变换变成矩阵B，记作A$\cong$B</p>
+</blockquote>
+<h3 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h3><blockquote>
+<p>满足$A^T=A$</p>
+</blockquote>
+<h3 id="反对称矩阵"><a href="#反对称矩阵" class="headerlink" title="反对称矩阵"></a>反对称矩阵</h3><blockquote>
+<p>满足$A^T=-A$</p>
+</blockquote>
+<h3 id="幂零矩阵"><a href="#幂零矩阵" class="headerlink" title="幂零矩阵"></a>幂零矩阵</h3><blockquote>
+<p>对方阵$A$,如果存在正整数m，使得$A^m=0$,则称$A$为幂零矩阵</p>
+</blockquote>
+<h3 id="幂等矩阵"><a href="#幂等矩阵" class="headerlink" title="幂等矩阵"></a>幂等矩阵</h3><blockquote>
+<p>满足$A^2=A$</p>
+</blockquote>
+<h3 id="对合矩阵"><a href="#对合矩阵" class="headerlink" title="对合矩阵"></a>对合矩阵</h3><blockquote>
+<p>满足$A^2=E$</p>
+</blockquote>
+<h2 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h2><p>令$A=[{\large a}_{ij}]_{m\times s},B=[{\large b}_{ij}]_{s\times n}$<br><br>$AB=C=[{\large c}_{ij}]_{m\times n}$<br><br>${\large c}_{ij}={\large\sum\limits_{k=1}^s}{\large a}_{ik}{\large b}_{kj}$</p>
+<h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$\quad A=[{\large a}_{1j}]_{1\times s}$</p>
+<p>$\quad A^T=[{\large a}_{j1}]_{s\times1}$</p>
+<p>$\quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
+<p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
+<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><blockquote>
+<p>$AB=BA=I$</p>
+<ul>
+<li>$<br>A=<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>$<br>$<br>B=<br>\begin{pmatrix}<br>   \displaystyle\frac{1}{ {\large a}_{11} }\\<br>   &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$<br><br><br>$<br>\because<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>  {\large b}_{11}\\<br>  \\<br>   &amp; {\large b}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>$<br><br><br>$<br>=\begin{pmatrix}<br>  {\large a}_{11}{\large b}_{11} \\<br>  \\<br>   &amp; {\large a}_{22}{\large b}_{22}\\<br>   \\<br>   &amp;     &amp; \ddots\\<br>   \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</li>
+</ul>
+</blockquote>
+<p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$<br><br>一些可逆矩阵的证明要想到从定义的角度出发</p>
+<hr>
+<p>$AA^{ * } =A^{ * }A=|A|I$</p>
+<p>推论：</p>
+<ol>
+<li>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</li>
+</ol>
+<p>$\therefore$求逆矩阵先 <strong>看行列式是否为零</strong></p>
+<ol>
+<li>伴随矩阵$A^{ * }$的一些常用结论 <ul>
+<li>$|A^*|=|A|^{n-1}$</li>
+<li>$(A^{ * })^{ * }=|A|^{n-2}A$</li>
+<li>若$A$可逆，且$A^{ * }$可逆,$(A^{ * })^{-1}=(A^{-1})^{ * }=\displaystyle\frac{1}{|A|}A$</li>
+<li>$(AB)^{ * }=B^{ * }A^{ * }$</li>
+<li>$(A^{ * })^T=(A^T)^{ * }$</li>
+</ul>
+</li>
+<li><strong>A如果可逆，那么A一定可以表示为有限个初等矩阵的乘积</strong></li>
+</ol>
+<p>$P_t\cdots P_2P_1A=I$</p>
+<p><br></p>
+<p>$\because P_t\cdots P_2P_1A=I$</p>
+<p>$\therefore A^{-1}=P_t\cdots P_2\;P_1$</p>
+<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}$<br><br><br>$P_t\cdots P_2\;P_1\;A=I$<br><br>$P_t\cdots P_2\;P_1\;I=A^{-1}$</p>
+<p>由这两个式子可得：</p>
+<p>A经过行初等变换变成$I$</p>
+<p>$I$就经过同样的行初等变换变成$A^{-1}$</p>
+<p>$<br>\therefore[A\;|\;I\,]\rightarrow\cdots\rightarrow[\,I\;|\;A^{-1}]<br>$<br><br>或者可以这么理解<br>$A^{-1}[A|I]=[I|A^{-1}]$<br><br>用分块矩阵的思想，这样理解更加直观,其实这样求解的原因<br>就是$A$和$I$可以经过相同的变换变成$I$和$A^{-1}$</p>
+<p><strong>推广</strong></p>
+<p>$AX=B$<br>如果A可逆，$X=A^{-1}B$</p>
+<p>令$P=A^{-1}$</p>
+<p>由</p>
+<p>$\;PA=I$<br><br>$PB=X$</p>
+<p>有$\;[A|B]=[I|X]$</p>
+<p>即$\;$遇到$A^{-1}B$时，可以将$A，B$拼在一起将$A$化成单位矩阵就是所求的$X$</p>
+<h2 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h2><h3 id="分成四块"><a href="#分成四块" class="headerlink" title="分成四块"></a>分成四块</h3><p>$<br>\left(\begin{array}{cc|ccc}<br>     1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\<br>     3 &amp; 4 &amp; 0 &amp; 0 &amp; 0\\<br>     \hline<br>     0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br>\end{array}\right)=<br>\left(\begin{array}{cc}<br>     A &amp; O\\<br>     O &amp; B<br>\end{array}\right)<br>$</p>
+<p>分块后的矩阵满足四个区域整体满足</p>
+<p>矩阵的加法</p>
+<p>对角矩阵的乘法</p>
+<p>逆矩阵</p>
+<h3 id="按行分块"><a href="#按行分块" class="headerlink" title="按行分块"></a>按行分块</h3><ul>
+<li>$<br>\left(\begin{array}{ccc}<br>a_{11}&amp;a_{12}&amp;a_{13}\\<br>\hdashline<br>a_{21}&amp;a_{22}&amp;a_{23}\\<br>\hdashline<br>a_{31}&amp;a_{32}&amp;a_{33}<br>\end{array}\right)<br>=\begin{bmatrix}<br>\alpha_1^T\\<br>\alpha_2^T\\<br>\alpha_3^T<br>\end{bmatrix}<br>$<br><br>按行分块一般会加转置符号，主要原因时默认$\alpha$是列向量<h3 id="按列分块"><a href="#按列分块" class="headerlink" title="按列分块"></a>按列分块</h3>类比按行分块<br><br>一般证明的时候会选择按列分块</li>
+</ul>
+<h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><blockquote>
+<p>秩与线性方程组的解有着密切的联系，所以要将线性方程组和秩结合起来，<br>而这样就容易理解后面的n元向量的一些秩的表示形式</p>
+</blockquote>
+<ul>
+<li>矩阵A的一个k阶子式:<br><br>$\qquad$矩阵A中随便找k行随便找k列，按原来次序排列构成的行列式</li>
+</ul>
+<h3 id="秩的性质"><a href="#秩的性质" class="headerlink" title="秩的性质"></a>秩的性质</h3><ol>
+<li>$0\leqslant r(A_{m\times n})\leqslant min(m,n)$<br><br><br></li>
+<li>$r(A^T)=r(A)$<br><br><br></li>
+<li>$r(A+B)\leqslant r(A)+r(B)$<br><br><br></li>
+<li>$r(kA)=r(A)(k\neq0)\;\leftarrow\; r(A)=r(-A)，r(A-E)=r(E-A)$<br><br><br></li>
+<li><p>$r(AB)\leqslant min(r(A),r(B))$<br><br><br></p>
+</li>
+<li><p>如P.Q可逆，则<br>$r(PAQ)=r(A)$<br><br><br></p>
+</li>
+<li>$\;r\left[\begin{array}{cc} A&amp;O\\O&amp;B\end{array}\right]=r(A)+r(B)$<br><br><br></li>
+<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$<br><br>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br>$<br>\begin{aligned}<br>&amp;设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>&amp;\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>&amp;A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\end{aligned}<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示$<br><br>$则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\rightarrow在向量组线性表示里$<br><br><br>$<br>\begin{aligned}<br>\therefore r(A+B)&amp;=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\\<br>&amp;\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>\end{aligned}<br>$</li>
+</ol>
+<p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
+<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>前提$AB=BA$,<br>那么$(A+B)^n=\sum\limits_{i=0}^nC_n^iA^iB^{n-i}$</p>
+<p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -661,7 +856,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -695,7 +890,7 @@
       data-server="netease"
       data-type="playlist"
       data-fixed="false"
-      data-autoplay="false"
+      data-autoplay="true"
       data-list-folded="true"
       data-mutex="true"
       data-order="random"
