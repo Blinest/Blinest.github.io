@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>1.行列式</title>
+    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
+<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p><strong>例</strong><br></p>
+<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
+<p>解：由于系数行列式<br></p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
+<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
+<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
+<p>故方程组的解为：</p>
+<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
+<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
+<ul>
+<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
+</ul>
+<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
+<ul>
+<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
+</ul>
+<p><strong>其他的性质:</strong></p>
+<ul>
+<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
+</li>
+<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
+</li>
+<li><p>（方阵）$|AB|=|A||B|$</p>
+</li>
+<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
+</li>
+<li><p>$|2A|=2^n|A|$</p>
+</li>
+</ul>
+<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
+<ul>
+<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
+</ul>
+<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
+<p>下三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
+<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
+<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
+<p><strong>应用</strong>  </p>
+<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
+<ul>
+<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
+</ul>
+<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
+<li>有一块全是零的行列式</li>
+</ul>
+<hr>
+<ul>
+<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
+<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>0. 知识储备</title>
     <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
@@ -281,84 +351,14 @@
       </tags>
   </entry>
   <entry>
-    <title>1.行列式</title>
-    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
-<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p><strong>例</strong><br></p>
-<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
-<p>解：由于系数行列式<br></p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
-<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
-<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
-<p>故方程组的解为：</p>
-<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
-<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
-<ul>
-<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
-</ul>
-<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
-<ul>
-<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
-</ul>
-<p><strong>其他的性质:</strong></p>
-<ul>
-<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
-</li>
-<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
-</li>
-<li><p>（方阵）$|AB|=|A||B|$</p>
-</li>
-<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
-</li>
-<li><p>$|2A|=2^n|A|$</p>
-</li>
-</ul>
-<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
-<ul>
-<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
-</ul>
-<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
-<p>下三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
-<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
-<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
-<p><strong>应用</strong>  </p>
-<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
-<ul>
-<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
-</ul>
-<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
-<li>有一块全是零的行列式</li>
-</ul>
-<hr>
-<ul>
-<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
-<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.C语言的一些程序</title>
+    <title>2.C语言的一些算法</title>
     <url>/2021/06/28/2-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A8%8B%E5%BA%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
 <ol>
 <li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
 <li>若$r_1=0$,则$(a,b)=b$</li>
-<li>若$r_1\neq 0$,则再用$b除以r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
-<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以r_2,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
+<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
+<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
 </ol>
 <p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
 <p>C语言代码实现</p>
@@ -685,155 +685,6 @@
       </tags>
   </entry>
   <entry>
-    <title>5.向量空间</title>
-    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
-<p>{n维向量；+，数乘}</p>
-</blockquote>
-<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
-<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
-<p>则称W是n维向量空间的子空间</p>
-<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
-<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
-<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
-<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
-<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
-<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
-<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
-<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
-<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
-<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
-<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
-<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
-<hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
-<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>7.二次型</title>
-    <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
-<li>二次型的矩阵表示<br>$f(x_1,x_2,x_3)$<br><br>$\begin{aligned}<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>其中$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵<br><br></li>
-<li>标准形<blockquote>
-<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$<br><br></p>
-</blockquote>
-</li>
-<li>规范形<blockquote>
-<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$<br><br></p>
-</blockquote>
-</li>
-<li>正惯性指数p，负惯性指数q，符号差<blockquote>
-<p>p,q就是标准形系数正负个数<br><br>符号差就是p-q<br><br>例$x_1^2+x_2^2-4x_3^2\quad$</p>
-<p>正惯性指数=2，负惯性指数=1,符号差=1<br><br></p>
-</blockquote>
-</li>
-<li>二次型的秩<blockquote>
-<p>$r(f)=r(A)$<br><br></p>
-</blockquote>
-</li>
-<li>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$<br><br></li>
-<li>合同<blockquote>
-<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
-<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><ul>
-<li><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。<br><br>解：<br>$\begin{aligned}<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]\\<br>&amp;\quad -(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3^2)<br>\end{aligned}<br>$<br><br>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$<br><br>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$<br><br>坐标变换公式<br>$x=Cy$<br><br>$C=<br>\begin{bmatrix}<br>  1&amp;-1&amp;1\\<br>  0&amp;1&amp;-2\\<br>  0&amp;0&amp;1<br>\end{bmatrix}<br>$<br><br>得$f=y_1^2+y_2^2$</li>
-</ul>
-<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
-<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)，使二次型化为标准形<br><br>$\quad x^TAx=y^T\land y=\lambda_1y_1^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
-</blockquote>
-<ul>
-<li><strong>证</strong>：<br>首先要知道二次型中$A$是实对称矩阵<br><br>因为实对称矩阵，$Q^{-1}AQ=\land$<br><br>$Q$是正交矩阵(则$Q^T=Q^{-1}$)<br><br>所以$Q^TAQ=\land$<br><br>若令$x=Qy$,则<br><br>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</li>
-</ul>
-<p><strong>例</strong>：将二次型<br>$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
-<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
-<p>由特征多项式<br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-5)(\lambda+1)^2<br>\end{aligned}<br>$</p>
-<p>$\therefore A$的特征值为5，-1，-1</p>
-<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>$得到\alpha_1=(1,1,1)^T$</p>
-<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
-<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$</p>
-<p>因为这两个向量不垂直</p>
-<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
-<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
-<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
-<p>单位化</p>
-<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix},<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix},$<br>$\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}$</p>
-<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
-<p>那么，二次型$x^TAx$经正交变换</p>
-<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
-<p>化为标准形</p>
-<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
-<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
-<p><strong>推论：</strong></p>
-<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
-<ul>
-<li><strong>例</strong>:<br>$f=y_1^2+3y_2^2-2y_3^2$<br><br>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$<br><br>那么$f=z_1^2+z_2^2-z_3^2$</li>
-</ul>
-<p>变成规范形步骤：</p>
-<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
-<h2 id="惯性定理"><a href="#惯性定理" class="headerlink" title="惯性定理"></a>惯性定理</h2><blockquote>
-<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
-</blockquote>
-<p>即二次型的规范形是唯一的</p>
-<ul>
-<li><strong>证</strong>：<br>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，<br>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾<br><br>设$r(C^TAC)=r(A)=r(f)=r$<br><br>如果经坐标变换$x=Py\;$和$\;x=Qz$<br><br>二次型$x^TAx$化成规范形，分别为<br><br>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$<br><br>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$<br><br><strong>反证法</strong><br>如果$s &lt; t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等<br><br>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$<br><br>不妨设<br><br>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$<br><br>其中($i=1,2,\cdots,n$)<br><br><br>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项<br><br>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾<br><br>即<br>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$<br><br>也就是<br>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$<br><br>方程个数<br>$s+(n-t)=n+s-t&lt; n$<br><br>方程组(1)必有非零解<br><br>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解<br><br>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$<br><br>因为$P,Q$均为可逆矩阵，$\eta\neq0$<br><br>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$<br><br>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$<br><br>把$\eta$代入$(I)$和$(II)$,有<br><br>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt; 0$<br><br>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$<br><br>矛盾<br><br>$\because s,t$地位相等<br><br>$\therefore\;s=t$</li>
-</ul>
-<p>由惯性定理推出:</p>
-<p>实对称矩阵$A$和$B$合同</p>
-<p>$\Leftrightarrow p_A=p_B,q_A=q_B\;$<br>(p为正惯性指数，q为负惯性指数)</p>
-<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
-<p>设二次型$f(x)=x^TAx$<br><br>如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,<br><br>恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
-</blockquote>
-<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
-<p>二次型经坐标变换，其正定性不变</p>
-<p>$x^TAx$正定</p>
-<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
-<p>$\Leftrightarrow\;A\simeq E$,即存在可逆矩阵$C,$</p>
-<p>$C^TAC=E(或写成A=C^TEC，E可省略)$</p>
-<p>$\Leftrightarrow\;A$特征值全大于0</p>
-<p>$\Leftrightarrow\;A$的顺序主子式 <strong>全</strong> 大于0</p>
-<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
-<p><strong>例</strong>：判断二次型</p>
-<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
-<p>是否是正定二次型。</p>
-<p><strong>解</strong>：</p>
-<ul>
-<li>顺序主子式<br>二次型矩阵<br><br>$A$=$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$<br><br>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$<br><br>$\Delta_3=|A|=10&gt;0$<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<hr>
-<ul>
-<li>特征值<br>由特征多项式<br><br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$<br><br>$A$的特征值：1,1,10$\quad$全大于零<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<hr>
-<ul>
-<li>配方法$^*$<br><br>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]\\<br>&amp;\quad -2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$<br><br>$p=3,q=0$<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
-<p>半正定$f\geqslant0$</p>
-<p>负定$f&lt;0$</p>
-<p>半负定$f\leqslant0$</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>6.特征值与特征向量</title>
     <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
@@ -978,6 +829,39 @@
       </tags>
   </entry>
   <entry>
+    <title>5.向量空间</title>
+    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
+<p>{n维向量；+，数乘}</p>
+</blockquote>
+<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
+<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
+<p>则称W是n维向量空间的子空间</p>
+<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
+<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
+<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
+<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
+<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
+<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
+<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
+<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
+<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
+<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
+<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
+<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
+<hr>
+<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
+<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>end</title>
     <url>/2021/06/24/end/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
@@ -988,6 +872,135 @@
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7.二次型</title>
+    <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
+<li>二次型的矩阵表示<br>$f(x_1,x_2,x_3)$<br><br>$\begin{aligned}<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>其中$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵<br><br></li>
+<li>标准形<blockquote>
+<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$<br><br></p>
+</blockquote>
+</li>
+<li>规范形<blockquote>
+<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$<br><br></p>
+</blockquote>
+</li>
+<li>正惯性指数p，负惯性指数q，符号差<blockquote>
+<p>p,q就是标准形系数正负个数<br><br>符号差就是p-q<br><br>例$x_1^2+x_2^2-4x_3^2\quad$</p>
+<p>正惯性指数=2，负惯性指数=1,符号差=1<br><br></p>
+</blockquote>
+</li>
+<li>二次型的秩<blockquote>
+<p>$r(f)=r(A)$<br><br></p>
+</blockquote>
+</li>
+<li>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$<br><br></li>
+<li>合同<blockquote>
+<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
+<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><ul>
+<li><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。<br><br>解：<br>$\begin{aligned}<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]\\<br>&amp;\quad -(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3^2)<br>\end{aligned}<br>$<br><br>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$<br><br>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$<br><br>坐标变换公式<br>$x=Cy$<br><br>$C=<br>\begin{bmatrix}<br>  1&amp;-1&amp;1\\<br>  0&amp;1&amp;-2\\<br>  0&amp;0&amp;1<br>\end{bmatrix}<br>$<br><br>得$f=y_1^2+y_2^2$</li>
+</ul>
+<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
+<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)，使二次型化为标准形<br><br>$\quad x^TAx=y^T\land y=\lambda_1y_1^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
+</blockquote>
+<ul>
+<li><strong>证</strong>：<br>首先要知道二次型中$A$是实对称矩阵<br><br>因为实对称矩阵，$Q^{-1}AQ=\land$<br><br>$Q$是正交矩阵(则$Q^T=Q^{-1}$)<br><br>所以$Q^TAQ=\land$<br><br>若令$x=Qy$,则<br><br>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</li>
+</ul>
+<p><strong>例</strong>：将二次型<br>$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
+<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
+<p>由特征多项式<br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-5)(\lambda+1)^2<br>\end{aligned}<br>$</p>
+<p>$\therefore A$的特征值为5，-1，-1</p>
+<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
+<p>$得到\alpha_1=(1,1,1)^T$</p>
+<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
+<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
+<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$</p>
+<p>因为这两个向量不垂直</p>
+<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
+<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
+<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
+<p>单位化</p>
+<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix},<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix},$<br>$\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}$</p>
+<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
+<p>那么，二次型$x^TAx$经正交变换</p>
+<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
+<p>化为标准形</p>
+<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
+<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
+<p><strong>推论：</strong></p>
+<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
+<ul>
+<li><strong>例</strong>:<br>$f=y_1^2+3y_2^2-2y_3^2$<br><br>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$<br><br>那么$f=z_1^2+z_2^2-z_3^2$</li>
+</ul>
+<p>变成规范形步骤：</p>
+<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
+<h2 id="惯性定理"><a href="#惯性定理" class="headerlink" title="惯性定理"></a>惯性定理</h2><blockquote>
+<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
+</blockquote>
+<p>即二次型的规范形是唯一的</p>
+<ul>
+<li><strong>证</strong>：<br>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，<br>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾<br><br>设$r(C^TAC)=r(A)=r(f)=r$<br><br>如果经坐标变换$x=Py\;$和$\;x=Qz$<br><br>二次型$x^TAx$化成规范形，分别为<br><br>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$<br><br>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$<br><br><strong>反证法</strong><br>如果$s &lt; t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等<br><br>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$<br><br>不妨设<br><br>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$<br><br>其中($i=1,2,\cdots,n$)<br><br><br>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项<br><br>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾<br><br>即<br>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$<br><br>也就是<br>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$<br><br>方程个数<br>$s+(n-t)=n+s-t&lt; n$<br><br>方程组(1)必有非零解<br><br>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解<br><br>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$<br><br>因为$P,Q$均为可逆矩阵，$\eta\neq0$<br><br>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$<br><br>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$<br><br>把$\eta$代入$(I)$和$(II)$,有<br><br>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt; 0$<br><br>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$<br><br>矛盾<br><br>$\because s,t$地位相等<br><br>$\therefore\;s=t$</li>
+</ul>
+<p>由惯性定理推出:</p>
+<p>实对称矩阵$A$和$B$合同</p>
+<p>$\Leftrightarrow p_A=p_B,q_A=q_B\;$<br>(p为正惯性指数，q为负惯性指数)</p>
+<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
+<p>设二次型$f(x)=x^TAx$<br><br>如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,<br><br>恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
+</blockquote>
+<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
+<p>二次型经坐标变换，其正定性不变</p>
+<p>$x^TAx$正定</p>
+<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
+<p>$\Leftrightarrow\;A\simeq E$,即存在可逆矩阵$C,$</p>
+<p>$C^TAC=E(或写成A=C^TEC，E可省略)$</p>
+<p>$\Leftrightarrow\;A$特征值全大于0</p>
+<p>$\Leftrightarrow\;A$的顺序主子式 <strong>全</strong> 大于0</p>
+<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
+<p><strong>例</strong>：判断二次型</p>
+<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
+<p>是否是正定二次型。</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>顺序主子式<br>二次型矩阵<br><br>$A$=$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$<br><br>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$<br><br>$\Delta_3=|A|=10&gt;0$<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<hr>
+<ul>
+<li>特征值<br>由特征多项式<br><br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$<br><br>$A$的特征值：1,1,10$\quad$全大于零<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<hr>
+<ul>
+<li>配方法$^*$<br><br>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]\\<br>&amp;\quad -2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$<br><br>$p=3,q=0$<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
+<p>半正定$f\geqslant0$</p>
+<p>负定$f&lt;0$</p>
+<p>半负定$f\leqslant0$</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些关于hexo的next主题的适配问题</title>
+    <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
+<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+      <tags>
+        <tag>杂记</tag>
       </tags>
   </entry>
   <entry>
@@ -1003,6 +1016,15 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>初入</title>
+    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
   </entry>
   <entry>
     <title>matplotlib</title>
@@ -1447,27 +1469,5 @@
         <tag>python库</tag>
         <tag>绘图</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>一些关于hexo的next主题的适配问题</title>
-    <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
-<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <code>$$``` 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 ```$$</code> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
-      <tags>
-        <tag>杂记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>初入</title>
-    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
   </entry>
 </search>
