@@ -1170,7 +1170,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #46e506;
+  background: #f60511;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2547,4 +2547,12 @@ mjx-container + br {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+svg[id^="mermaid-"] {
+  min-width: 2000px;
+  min-height: 600px;
+}
+.mermaid > svg {
+  max-height: 1500px;
+  max-width: 3000px;
 }
