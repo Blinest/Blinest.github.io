@@ -1,76 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>1.行列式</title>
-    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
-<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p><strong>例</strong><br></p>
-<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
-<p>解：由于系数行列式<br></p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
-<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
-<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
-<p>故方程组的解为：</p>
-<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
-<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
-<ul>
-<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
-</ul>
-<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
-<ul>
-<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
-</ul>
-<p><strong>其他的性质:</strong></p>
-<ul>
-<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
-</li>
-<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
-</li>
-<li><p>（方阵）$|AB|=|A||B|$</p>
-</li>
-<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
-</li>
-<li><p>$|2A|=2^n|A|$</p>
-</li>
-</ul>
-<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
-<ul>
-<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
-</ul>
-<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
-<p>下三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
-<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
-<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
-<p><strong>应用</strong>  </p>
-<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
-<ul>
-<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
-</ul>
-<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
-<li>有一块全是零的行列式</li>
-</ul>
-<hr>
-<ul>
-<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
-<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>0. 知识储备</title>
     <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
@@ -348,6 +278,76 @@
       </categories>
       <tags>
         <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.行列式</title>
+    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
+<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p><strong>例</strong><br></p>
+<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
+<p>解：由于系数行列式<br></p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
+<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
+<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
+<p>故方程组的解为：</p>
+<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
+<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
+<ul>
+<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
+</ul>
+<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
+<ul>
+<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
+</ul>
+<p><strong>其他的性质:</strong></p>
+<ul>
+<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
+</li>
+<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
+</li>
+<li><p>（方阵）$|AB|=|A||B|$</p>
+</li>
+<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
+</li>
+<li><p>$|2A|=2^n|A|$</p>
+</li>
+</ul>
+<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
+<ul>
+<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
+</ul>
+<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
+<p>下三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
+<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
+<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
+<p><strong>应用</strong>  </p>
+<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
+<ul>
+<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
+</ul>
+<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
+<li>有一块全是零的行列式</li>
+</ul>
+<hr>
+<ul>
+<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
+<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -685,6 +685,39 @@
       </tags>
   </entry>
   <entry>
+    <title>5.向量空间</title>
+    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
+<p>{n维向量；+，数乘}</p>
+</blockquote>
+<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
+<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
+<p>则称W是n维向量空间的子空间</p>
+<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
+<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
+<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
+<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
+<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
+<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
+<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
+<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
+<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
+<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
+<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
+<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
+<hr>
+<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
+<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6.特征值与特征向量</title>
     <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
@@ -829,39 +862,6 @@
       </tags>
   </entry>
   <entry>
-    <title>5.向量空间</title>
-    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
-<p>{n维向量；+，数乘}</p>
-</blockquote>
-<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
-<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
-<p>则称W是n维向量空间的子空间</p>
-<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
-<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
-<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
-<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
-<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
-<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
-<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
-<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
-<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
-<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
-<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
-<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
-<hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
-<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>end</title>
     <url>/2021/06/24/end/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
@@ -991,19 +991,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一些关于hexo的next主题的适配问题</title>
-    <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
-<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
-      <tags>
-        <tag>杂记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2021/06/15/hello-world/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -1016,15 +1003,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>初入</title>
-    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
   </entry>
   <entry>
     <title>matplotlib</title>
@@ -1468,6 +1446,116 @@
       <tags>
         <tag>python库</tag>
         <tag>绘图</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些关于hexo的next主题的适配问题</title>
+    <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
+<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+      <tags>
+        <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初入</title>
+    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>pandas图(索引)</title>
+    <url>/2021/06/29/pandas%E5%9B%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><pre class="mermaid">graph LR
+classDef A fill: #C0D9D9
+classDef important fill: #FF0000 
+A(pandas):::A --- B(Series)
+B --- B1(可看作一列数据组成的数据集)
+B --- B2("三种创建方式,<br>创建语法为s = pd.Series(data,index=index),<br>可以不指定索引，将是默认从0开始")
+B2 --- B21(1.从列表创建Seies)
+B2 --- B22("2.从Ndarray(数组)创建Seris")
+B2 --- B23(3.从字典创建Series) 
+B --- B3(基本操作:增,删,改,查)
+B3 --- B31("修改索引 s1.index = ['index'] 索引数必须一致")
+B3 --- B32("纵向拼接 s2.append(s1)")
+B3 --- B33("按指定索引删除元素 s3.drop('e')")
+B3 --- B34("修改,查找,切片指定索引元素 s3['A']=6")
+B --- B4("Series运算(加,减,乘,除)<br>广播性质")
+B4:::important --- B41(加法)
+B41 --- B411("s4.add(s3)") & B412("s4+s3")
+B4 --- B42(减法)
+B42 --- B421("s4.sub(s3)") & B422("s4-s3")
+B4 --- B43(乘法)
+B43 --- B431("s4.mul(s3)") & B432("s4*s3")
+B4 --- B44(除法)
+B44 --- B441("s4.div(s3)") & B442("s4/s3")
+B4 --- B45(详解与区别)
+B45 --- B451(加减乘除法运算是按照索引对应计算,<br>若果索引不同,则填充为NaN)  
+B45 --- B452(两个ndarray执行的是element-wise的运算<br>而不是矩阵乘法的运算,矩阵乘法运算时需要维度之间严格匹配)
+B --- B5(Series数理分析)
+B5 --- B51(求和,最大值,最小值)
+B51 --- B511("s4.sum()")
+B51 --- B512("s4.max()")
+B51 --- B513("s4.min()")
+B5 --- B52("平均值  s3.mean()")
+B5 --- B53("将字符串转化为小写字母    string.str.lower()")
+B5 --- B54("将字符串转化为大写字母    string.str.upper()")
+C(DataFrame) --- A
+C1(可存放多列数据) --- C
+C2(创建的两种方式) --- C
+C21(通过numpy数组创建) --- C2
+C22(通过字典数组创建) --- C2
+C3(DataFrame 基本操作) --- C
+C31(浏览DataFrame部分数据) --- C3
+C311("df1.head() 预览DataFrame的前几行数据") 
+C312("df1.tial() 查看DataFrame的后几行数据")
+C32(查询DtaFrame字段) --- C3
+C321(df1.index 查看DataFrame的索引) --- C32
+C322(df1.columns 查看DataFrame的列名) --- C32
+C323("对DataFrame通过标签查询(单列)") --- C32
+C3231("df1['age']") --- C323
+C3232(df2.age) --- C323
+C324("df1[['age','name']] 对DataFrame通过标签查询(多列)")--- C32
+C325("df1.iloc[1:3] 对DataFrame通过位置查询") --- C32
+C326("浅拷贝 df1.copy() DataFrame副本拷贝") --- C323
+C33(DataFrame文件操作):::important --- C3
+C331("df1.to_csv('test.csv') CSV文件写入") --- C33
+C332("pd.read_csv('test.csv')" CSV文件读取) ---C33
+C333("df1.to_excel('test.xlsx',sheet_name-'Shhet1') EXCEL写入操作")
+C334("pd.read_excel('test.xlsx','Sheet1',index_col=None,na_values'['NA']) EXCEL读取操作")
+C4(DataFrame统计分析):::important --- C
+C41(df1.values 查看DataFrame的数值) --- C4
+C42("df1.describe 对DataFrame的描述性统计") --- C4
+C43(df1.T 转置操作) --- C4
+C44("df1.sort_values(by='age') 对DataFrame进行按列排序") ---C4
+C45(对DataFrame的值进行修改) --- C4
+C451("df1.iat[1,0]=2 根据DataFrame的下标值进行修改") ---C45
+C452("df1.loc['f','age']=1.5 根据DataFrame的标签对数据进行修改")---C45
+C46("df1['age'].sum() 对任意列做求和操作")---C4
+C47("df1.mean() 求平均值") --- C4
+C48(对缺失值补充) --- C4
+C481("df2.fillna(value=3)") --- C48
+C482("df2.dropna() 删除缺失值") --- C48
+C483("df2['xx']=df4['xx'].fillna(df['xx'].median()) 取平均") --- C48
+C484("df2.fillna(method='ffill') 用前面的值插值") --- C48
+C485("df2.fillna(method='ffil',limit=1,axis=1)") --- C48
+C486("data.fillna({'xx':2321}) 用字典来替换") --- C48
+C487(还有很多方法,比如三次样条,拟合等) --- C48
+click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，大体的了解其整体需要学习的方面，后面会针对思维导图里面的各方面进行细化学习，并让思维导图以的索引形式连接各部分的学习内容</p>
+]]></content>
+      <categories>
+        <category>python库</category>
+      </categories>
+      <tags>
+        <tag>python库</tag>
+        <tag>pandas</tag>
       </tags>
   </entry>
 </search>

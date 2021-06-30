@@ -1,0 +1,76 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><pre class="mermaid">graph LR
+classDef A fill: #C0D9D9
+classDef important fill: #FF0000 
+A(pandas):::A --- B(Series)
+B --- B1(可看作一列数据组成的数据集)
+B --- B2("三种创建方式,<br>创建语法为s = pd.Series(data,index=index),<br>可以不指定索引，将是默认从0开始")
+B2 --- B21(1.从列表创建Seies)
+B2 --- B22("2.从Ndarray(数组)创建Seris")
+B2 --- B23(3.从字典创建Series) 
+B --- B3(基本操作:增,删,改,查)
+B3 --- B31("修改索引 s1.index = ['index'] 索引数必须一致")
+B3 --- B32("纵向拼接 s2.append(s1)")
+B3 --- B33("按指定索引删除元素 s3.drop('e')")
+B3 --- B34("修改,查找,切片指定索引元素 s3['A']=6")
+B --- B4("Series运算(加,减,乘,除)<br>广播性质")
+B4:::important --- B41(加法)
+B41 --- B411("s4.add(s3)") & B412("s4+s3")
+B4 --- B42(减法)
+B42 --- B421("s4.sub(s3)") & B422("s4-s3")
+B4 --- B43(乘法)
+B43 --- B431("s4.mul(s3)") & B432("s4*s3")
+B4 --- B44(除法)
+B44 --- B441("s4.div(s3)") & B442("s4/s3")
+B4 --- B45(详解与区别)
+B45 --- B451(加减乘除法运算是按照索引对应计算,<br>若果索引不同,则填充为NaN)  
+B45 --- B452(两个ndarray执行的是element-wise的运算<br>而不是矩阵乘法的运算,矩阵乘法运算时需要维度之间严格匹配)
+B --- B5(Series数理分析)
+B5 --- B51(求和,最大值,最小值)
+B51 --- B511("s4.sum()")
+B51 --- B512("s4.max()")
+B51 --- B513("s4.min()")
+B5 --- B52("平均值  s3.mean()")
+B5 --- B53("将字符串转化为小写字母    string.str.lower()")
+B5 --- B54("将字符串转化为大写字母    string.str.upper()")
+C(DataFrame) --- A
+C1(可存放多列数据) --- C
+C2(创建的两种方式) --- C
+C21(通过numpy数组创建) --- C2
+C22(通过字典数组创建) --- C2
+C3(DataFrame 基本操作) --- C
+C31(浏览DataFrame部分数据) --- C3
+C311("df1.head() 预览DataFrame的前几行数据") 
+C312("df1.tial() 查看DataFrame的后几行数据")
+C32(查询DtaFrame字段) --- C3
+C321(df1.index 查看DataFrame的索引) --- C32
+C322(df1.columns 查看DataFrame的列名) --- C32
+C323("对DataFrame通过标签查询(单列)") --- C32
+C3231("df1['age']") --- C323
+C3232(df2.age) --- C323
+C324("df1[['age','name']] 对DataFrame通过标签查询(多列)")--- C32
+C325("df1.iloc[1:3] 对DataFrame通过位置查询") --- C32
+C326("浅拷贝 df1.copy() DataFrame副本拷贝") --- C323
+C33(DataFrame文件操作):::important --- C3
+C331("df1.to_csv('test.csv') CSV文件写入") --- C33
+C332("pd.read_csv('test.csv')" CSV文件读取) ---C33
+C333("df1.to_excel('test.xlsx',sheet_name-'Shhet1') EXCEL写入操作")
+C334("pd.read_excel('test.xlsx','Sheet1',index_col=None,na_values'['NA']) EXCEL读取操作")
+C4(DataFrame统计分析):::important --- C
+C41(df1.values 查看DataFrame的数值) --- C4
+C42("df1.describe 对DataFrame的描述性统计") --- C4
+C43(df1.T 转置操作) --- C4
+C44("df1.sort_values(by='age') 对DataFrame进行按列排序") ---C4
+C45(对DataFrame的值进行修改) --- C4
+C451("df1.iat[1,0]=2 根据DataFrame的下标值进行修改") ---C45
+C452("df1.loc['f','age']=1.5 根据DataFrame的标签对数据进行修改")---C45
+C46("df1['age'].sum() 对任意列做求和操作")---C4
+C47("df1.mean() 求平均值") --- C4
+C48(对缺失值补充) --- C4
+C481("df2.fillna(value=3)") --- C48
+C482("df2.dropna() 删除缺失值") --- C48
+C483("df2['xx']=df4['xx'].fillna(df['xx'].median()) 取平均") --- C48
+C484("df2.fillna(method='ffill') 用前面的值插值") --- C48
+C485("df2.fillna(method='ffil',limit=1,axis=1)") --- C48
+C486("data.fillna({'xx':2321}) 用字典来替换") --- C48
+C487(还有很多方法,比如三次样条,拟合等) --- C48
+click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，大体的了解其整体需要学习的方面，后面会针对思维导图里面的各方面进行细化学习，并让思维导图以的索引形式连接各部分的学习内容</p>
