@@ -185,6 +185,279 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/03/3-numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/03/3-numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">3.numpy的数据类型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-03 09:17:03 / 修改时间：09:18:39" itemprop="dateCreated datePublished" datetime="2021-07-03T09:17:03+08:00">2021-07-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/numpy/" itemprop="url" rel="index"><span itemprop="name">numpy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p><strong>因为在numpy中有许多的数据类型，所以今天就来着重梳理一下numpy中的数据类型及其应用</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="numpy的数据类型和C的对比"><a href="#numpy的数据类型和C的对比" class="headerlink" title="numpy的数据类型和C的对比"></a>numpy的数据类型和C的对比</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">numpy的类型</th>
+<th style="text-align:left">C的类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">np.bool</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">布尔值(True or False)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.byte</td>
+<td style="text-align:left">signed char</td>
+<td style="text-align:left">精度平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ubyte</td>
+<td style="text-align:left">unsigned char</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.short</td>
+<td style="text-align:left">short</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ushort</td>
+<td style="text-align:left">unsigned short</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.intc</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uintc</td>
+<td style="text-align:left">unsigned int</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int_</td>
+<td style="text-align:left">long</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.unint</td>
+<td style="text-align:left">unsigned long</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.longlong</td>
+<td style="text-align:left">longlong</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ulonglong</td>
+<td style="text-align:left">unsigned longlong</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.half / np.float16</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">半精度浮点数：符号位，5位指数，10位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.single</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">平台定义的单精度浮点数：通常为1位符号位，8位指数，23位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.double</td>
+<td style="text-align:left">double</td>
+<td style="text-align:left">平台定义的双精度浮点数：通常为符1位号位，11位指数，52位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.longdouble</td>
+<td style="text-align:left">long double</td>
+<td style="text-align:left">平台定义的扩展精度浮点数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.csingle</td>
+<td style="text-align:left">float complex</td>
+<td style="text-align:left">复数，由两个单精度浮点数（实部和虚部）表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.cdouble</td>
+<td style="text-align:left">double complex</td>
+<td style="text-align:left">复数，由两个双精度浮点数（实部和虚部）表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.clongdouble</td>
+<td style="text-align:left">long double complex</td>
+<td style="text-align:left">复数，由两个扩展精度浮点数（实部和虚部）表示</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="numpy中的一组固定大小的别名"><a href="#numpy中的一组固定大小的别名" class="headerlink" title="numpy中的一组固定大小的别名"></a>numpy中的一组固定大小的别名</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">numpy类型</th>
+<th style="text-align:left">C的类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">np.int8</td>
+<td style="text-align:left">int8_t</td>
+<td style="text-align:left">字节(-128—127)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int16</td>
+<td style="text-align:left">int16_t</td>
+<td style="text-align:left">整数(-32768—32767)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int64</td>
+<td style="text-align:left">int64_t</td>
+<td style="text-align:left">整数($-2^{63}—2^{63}-1$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint8</td>
+<td style="text-align:left">uint8_t</td>
+<td style="text-align:left">无符号整数(0—255)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint16</td>
+<td style="text-align:left">uint16_t</td>
+<td style="text-align:left">无符号整数(0—65535)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint32</td>
+<td style="text-align:left">uint32</td>
+<td style="text-align:left">无符号整数(0—$2^{32}$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint64</td>
+<td style="text-align:left">uint64</td>
+<td style="text-align:left">无符号整数(0—$2^{64}$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.intp</td>
+<td style="text-align:left">intptr_t</td>
+<td style="text-align:left">用于索引的整数，通常与索引相同ssize_t</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uintp</td>
+<td style="text-align:left">uintptr_t</td>
+<td style="text-align:left">整数大到足以容纳指针</td>
+</tr>
+<tr>
+<td style="text-align:left">np.float32</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">np.float64/np.float_</td>
+<td style="text-align:left">double</td>
+<td style="text-align:left">这与内置python float的精度相匹配</td>
+</tr>
+<tr>
+<td style="text-align:left">np.complex64</td>
+<td style="text-align:left">float complex</td>
+<td style="text-align:left">复数,由两个32位浮点数(实数和虚数)表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.complex128/np.complex_</td>
+<td style="text-align:left">double complex</td>
+<td style="text-align:left">注意，这与内置python复合体的精度相匹配</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>numpy数据类型是dtype(数据类型)对象的实例</p>
+<h2 id="溢出错误"><a href="#溢出错误" class="headerlink" title="溢出错误"></a>溢出错误</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.power(<span class="number">100</span>,<span class="number">8</span>,dtype=np.int64)</span><br></pre></td></tr></table></figure>
+<pre><code>10000000000000000
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.power(<span class="number">100</span>,<span class="number">8</span>,dtype=np.int32)<span class="comment">#应该输出的是10000000000000000</span></span><br></pre></td></tr></table></figure>
+<pre><code>1874919424
+</code></pre><h2 id="np-iinfo和np-finfo"><a href="#np-iinfo和np-finfo" class="headerlink" title="np.iinfo和np.finfo"></a>np.iinfo和np.finfo</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.iinfo(np.int32)</span><br></pre></td></tr></table></figure>
+<pre><code>iinfo(min=-2147483648, max=2147483647, dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.finfo(np.float_)</span><br></pre></td></tr></table></figure>
+<pre><code>finfo(resolution=1e-15, min=-1.7976931348623157e+308, max=1.7976931348623157e+308, dtype=float64)
+</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/02/2-n%E7%BB%B4%E6%95%B0%E7%BB%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1180,335 +1453,6 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">1.C语言的一些概念</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-27 11:20:54 / 修改时间：21:33:08" itemprop="dateCreated datePublished" datetime="2021-06-27T11:20:54+08:00">2021-06-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>4.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
-<li>整型常量：也就是整数</li>
-<li>实型常量：<ol>
-<li>十进制小数形式：由数字和小数点组成</li>
-<li>指数形式：如$12.34e3$(代表$12.34\times10^3$)<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
-</ol>
-</li>
-<li>字符常量：<ol>
-<li>普通字符：用单撇号括起来的一个字符</li>
-<li>转义字符：以字符”\\”开头的字符</li>
-</ol>
-</li>
-<li>字符串常量：用双撇号把若干字符括起来</li>
-<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
-</ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">转义字符</th>
-<th style="text-align:left">字符值</th>
-<th style="text-align:left">输出结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">\a</td>
-<td style="text-align:left">警告(alert)</td>
-<td style="text-align:left">产生声音或视觉信号</td>
-</tr>
-<tr>
-<td style="text-align:left">\b</td>
-<td style="text-align:left">退格(backspace)</td>
-<td style="text-align:left">将光标位置后退一个字符</td>
-</tr>
-<tr>
-<td style="text-align:left">\f</td>
-<td style="text-align:left">换页(form feed)</td>
-<td style="text-align:left">将光标当前位置移到下一页的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\n</td>
-<td style="text-align:left">换行</td>
-<td style="text-align:left">将光标当前位置移到下一行的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\r</td>
-<td style="text-align:left">回车(carriage return)</td>
-<td style="text-align:left">将该光标当前位置移到本行的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\t</td>
-<td style="text-align:left">水平制表符</td>
-<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
-</tr>
-<tr>
-<td style="text-align:left">\v</td>
-<td style="text-align:left">垂直制表符</td>
-<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
-</tr>
-<tr>
-<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
-<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
-<td style="text-align:left">与该八进制码对应的字符</td>
-</tr>
-<tr>
-<td style="text-align:left">\xh[h$\cdots$]<br>其中h代表一个十六进制数字</td>
-<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
-<td style="text-align:left">与该十六进制码对应的字符</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
-<p>变量代表一个有名字，具有特定属性的一个存储单元。它用来存放数据，也就是存放变量的值。程序运行期间变量的值可以改变。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;<span class="comment">//a是变量名，3是变量值</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
-<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
-</blockquote>
-<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
-<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
-<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
-<ul>
-<li>$<br>\text{数据类型}<br>\begin{cases}<br>\text{基本类型}<br>\begin{cases}<br>\text{整型类型}<br>\begin{cases}<br>\text{基本整形(int)}\\<br>\text{短整型(short int)}\\<br>\text{长整型(long int)}\\<br>\text{双长整型(long long int)}\\<br>\text{字符型(char)}\\<br>\text{布尔型(bool)}<br>\end{cases}\\<br>\\<br>\text{浮点类型}<br>\begin{cases}<br>\text{单精度浮点型(float)}\\<br>\text{双精度浮点型(double)}\\<br>\text{复数浮点型(float_complex,double_complex,longlong_complex)}<br>\end{cases}<br>\end{cases}\\<br>\\<br>\text{枚举类型(enum)}\\<br>\\<br>\text{空类型(void)}\\<br>\\<br>\text{派生类型}<br>\begin{cases}<br>\text{指针类型(*)}\\<br>\text{数组类型([ ])}\\<br>\text{结构体类型(struct)}\\<br>\text{共用体类型(union)}\\<br>\text{函数类型}<br>\end{cases}<br>\end{cases}<br>$</li>
-</ul>
-</blockquote>
-<p>其中基本类型和枚举类型的值都是数值，统称为算术类型。</p>
-<p>算术类型和指针类型统称为纯量类型，因为其值是整数类型。</p>
-<p>枚举类型是程序中用户定义的整数类型。</p>
-<p>数组类型和结构体类型统称为组合类型，共用体类型不属于组合类型，<br>因为在同一时间只有一个成员具有值。</p>
-<p>函数类型用来定义函数，描述一个函数的接口，包括函数返回值的数据类型和参数的类型</p>
-<h2 id="整型数据"><a href="#整型数据" class="headerlink" title="整型数据"></a>整型数据</h2><p>存储单元的存储方式是：用整数补码形式存放。</p>
-<p>一个整数的补码是此数的二进制形式</p>
-<p>求负数补码的方法：先将此数的绝对值写成二进制的形式，然后对所有二进制位按位 <strong>取反，再加1</strong></p>
-<h3 id="整型数据的分类"><a href="#整型数据的分类" class="headerlink" title="整型数据的分类"></a>整型数据的分类</h3><ol>
-<li>基本类型(int 型)<br>编译系统分配给int型数据2个字节或4个字节(由具体的C语言编译系统自行决定)<br></li>
-<li>短整型(short int)<br>类型名为short int或short。<br><br>一般分配2个字节，取值范围$-2^{15}\sim (2^{15}-1)$</li>
-<li>长整型(long int)<br>类型名为long int或long。<br><br>一般分配4个字节，取值范围$-2^{31}\sim (2^{31}-1)$</li>
-<li>双长整型(long long int)<br>类型名为long long int或long long。<br><br>一般分配8个字节，取值范围$-2^{63}\sim (2^{63}-1)$</li>
-</ol>
-<p>在类型符号前面加上无符号修饰符unsigned，就是只有正值的意思，<br>因为其所占字节数不变，也就是说正值的取值范围比以前大。</p>
-<h2 id="字符型数据"><a href="#字符型数据" class="headerlink" title="字符型数据"></a>字符型数据</h2><p>定义字符变量<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;?&#x27;</span>; <span class="comment">//char c=63;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d  %c&quot;</span>,c,c);</span><br><span class="line"><span class="comment">//输出结果63 ?</span></span><br></pre></td></tr></table></figure><br>c是字符变量，实质上是一个字节的整型变量，但是它用来存放字符，所以称为字符变量</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">字节数</th>
-<th style="text-align:center">取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">signed char(有符号字符型)</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">$-2^7\sim (2^7-1)$</td>
-</tr>
-<tr>
-<td style="text-align:center">unsigned char(无符号字符型)</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">$0\sim 2^{8}-1$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="浮点型数据"><a href="#浮点型数据" class="headerlink" title="浮点型数据"></a>浮点型数据</h2><blockquote>
-<p>用来表示具有小数点的实数。</p>
-</blockquote>
-<p>因为小数点位置可以浮动，所以实数的指数形式称为 <strong>浮点数</strong></p>
-<p>浮点数类型有三种</p>
-<ol>
-<li>float型（单精度浮点型）<br>分配4个字节</li>
-<li>double型（双精度浮点型）<br>分配8个字节</li>
-<li>long double型（长双精度型）<br>8或16个字节<h2 id="确定常量的类型"><a href="#确定常量的类型" class="headerlink" title="确定常量的类型"></a>确定常量的类型</h2></li>
-<li>整型常量<br>在一个整数末尾加大写L或小写l表示长整型<br></li>
-<li>浮点型常量<blockquote>
-<p>以小数或指数形式出现的实数</p>
-</blockquote>
-</li>
-</ol>
-<p>在末尾加上F或f表示float类型，<br>加上L或l表示long double类型<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a =<span class="number">3</span> <span class="number">.14159</span>f</span><br><span class="line"><span class="keyword">float</span> dounble a = <span class="number">1.23L</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>类型和变量的区别：</strong><br>每个变量都属于一个确定的类型，类型是变量的一个重要属性。</p>
-<h1 id="C语句"><a href="#C语句" class="headerlink" title="C语句"></a>C语句</h1><h2 id="C语句的作用和分类"><a href="#C语句的作用和分类" class="headerlink" title="C语句的作用和分类"></a>C语句的作用和分类</h2><p>语句后面有分号</p>
-<p>分类：</p>
-<ol>
-<li>控制语句</li>
-<li>函数调用语句</li>
-<li>表达式语句</li>
-<li>空语句</li>
-<li>复合语句</li>
-</ol>
-<h1 id="数据的输入输出"><a href="#数据的输入输出" class="headerlink" title="数据的输入输出"></a>数据的输入输出</h1><p>C语言本身不提供输入输出语句</p>
-<p>需要使用库函数stdio.h</p>
-<h2 id="printf-格式控制，输出表列"><a href="#printf-格式控制，输出表列" class="headerlink" title="printf(格式控制，输出表列)"></a>printf(格式控制，输出表列)</h2><p>%附加字符 格式字符</p>
-<p>例%-m.nf</p>
-<p>printf函数中用到的格式字符</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">格式字符</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">d,i</td>
-<td style="text-align:left">输出带符号十进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">o</td>
-<td style="text-align:left">输出八进制无符号整数(不输出前导符0)</td>
-</tr>
-<tr>
-<td style="text-align:center">x,X</td>
-<td style="text-align:left">输出无符号十六进制整数(不输出前导符0x)，用x小写，X大写</td>
-</tr>
-<tr>
-<td style="text-align:center">u</td>
-<td style="text-align:left">输出无符号十进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">c</td>
-<td style="text-align:left">输出一个字符</td>
-</tr>
-<tr>
-<td style="text-align:center">s</td>
-<td style="text-align:left">输出字符串</td>
-</tr>
-<tr>
-<td style="text-align:center">f</td>
-<td style="text-align:left">以小数形式输出单、双精度数，隐含输出6位小数</td>
-</tr>
-<tr>
-<td style="text-align:center">e,E</td>
-<td style="text-align:left">以指数形式输出实数</td>
-</tr>
-<tr>
-<td style="text-align:center">g,G</td>
-<td style="text-align:left">选用%f或%e格式中输出宽度较短的一种形式，不输出无意义的0</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>在格式声明中，在%和上述格式字符间可以插入几种附加字符(又称修饰符)</p>
-<p>printf函数中用到的修饰符</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字符</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">l</td>
-<td style="text-align:left">长整型整数，可加在格式符d、o、x、u前面</td>
-</tr>
-<tr>
-<td style="text-align:center">m(代表一个整数)</td>
-<td style="text-align:left">数据的最小宽度</td>
-</tr>
-<tr>
-<td style="text-align:center">n(代表一个实数)</td>
-<td style="text-align:left">对实数，表示输出n位小数；对字符串，表示截取的字符个数</td>
-</tr>
-<tr>
-<td style="text-align:center">-</td>
-<td style="text-align:left">输出的数字或字符在域内想左靠</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="scanf-格式控制-地址表列"><a href="#scanf-格式控制-地址表列" class="headerlink" title="scanf(格式控制,地址表列)"></a>scanf(格式控制,地址表列)</h2><p><strong>注意</strong>：scanf函数中是地址表列，传进去的是变量地址</p>
-<h1 id="关系运算符和关系表达式"><a href="#关系运算符和关系表达式" class="headerlink" title="关系运算符和关系表达式"></a>关系运算符和关系表达式</h1><blockquote>
-<p>C语言中，比较符称为关系运算符<br><br>用关系运算符将两个数值或数值表达式连接起来的式子，称为关系表达式。</p>
-</blockquote>
-<p>关系运算符：</p>
-<p>&lt; ， &lt;= ， &gt; ， &gt;= ， == ， !=</p>
-<p>关系表达式：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>&gt;=<span class="number">0</span> <span class="comment">//为真 1</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="逻辑运算符和逻辑表达式"><a href="#逻辑运算符和逻辑表达式" class="headerlink" title="逻辑运算符和逻辑表达式"></a>逻辑运算符和逻辑表达式</h1><p>逻辑表达式：</p>
-<p>&amp;&amp; 或 ，|| 与 ，! 非</p>
-<p>逻辑运算符：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> &gt; <span class="number">3</span> &amp;&amp; <span class="number">8</span> &lt; <span class="number">4</span> - !<span class="number">0</span> <span class="comment">//为假 0</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="条件运算符和条件表达式"><a href="#条件运算符和条件表达式" class="headerlink" title="条件运算符和条件表达式"></a>条件运算符和条件表达式</h1><p>条件表达式的一般形式：</p>
-<p>表达式1 ? 表达式2 : 表达式3<br>例<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">max=(a&gt;b)?a:b;</span><br></pre></td></tr></table></figure></p>
-<h1 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> grade;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your score:&quot;</span>);</span><br><span class="line">    <span class="keyword">switch</span>(grade) <span class="comment">//此括号里的值类型应为整数类型（包括字符型）</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>A<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;85~100\n&quot;</span>);<span class="keyword">break</span>;<span class="comment">//break;不能省</span></span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;B</span><span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;70~84\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>C<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;60~69\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>D<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;&lt;60\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;enter data error!\n&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果:</span></span><br><span class="line"><span class="comment">A</span></span><br><span class="line"><span class="comment">Your score:85~100</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-<h1 id="静态，动态存储方式"><a href="#静态，动态存储方式" class="headerlink" title="静态，动态存储方式"></a>静态，动态存储方式</h1><p><strong>例</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">auto</span> <span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> c=<span class="number">0</span>;<span class="comment">//定义了一个静态局部变量，调用后不释放，保留前值</span></span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">6</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><br><strong>对比下面的程序</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1580,7 +1524,7 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1649,12 +1593,12 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">80k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:13</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>

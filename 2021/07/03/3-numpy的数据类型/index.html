@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="向量空间 {n维向量；+，数乘}  向量空间的子空间W是n维向量的非空集合，且 (1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$ 则称W是n维向量空间的子空间 向量空间的基和维数$\quad$如果向量空">
+  <meta name="description" content="数据类型因为在numpy中有许多的数据类型，所以今天就来着重梳理一下numpy中的数据类型及其应用 1import numpy as np numpy的数据类型和C的对比    numpy的类型 C的类型 描述     np.bool bool 布尔值(True or False)   np.byte signed char 精度平台定义   np.ubyte unsigned char 平台定义">
 <meta property="og:type" content="article">
-<meta property="og:title" content="5.向量空间">
-<meta property="og:url" content="https://mdreamers.github.io/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/index.html">
+<meta property="og:title" content="3.numpy的数据类型">
+<meta property="og:url" content="https://mdreamers.github.io/2021/07/03/3-numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="追梦">
-<meta property="og:description" content="向量空间 {n维向量；+，数乘}  向量空间的子空间W是n维向量的非空集合，且 (1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$ 则称W是n维向量空间的子空间 向量空间的基和维数$\quad$如果向量空">
+<meta property="og:description" content="数据类型因为在numpy中有许多的数据类型，所以今天就来着重梳理一下numpy中的数据类型及其应用 1import numpy as np numpy的数据类型和C的对比    numpy的类型 C的类型 描述     np.bool bool 布尔值(True or False)   np.byte signed char 精度平台定义   np.ubyte unsigned char 平台定义">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-21T03:15:57.000Z">
-<meta property="article:modified_time" content="2021-06-26T08:35:30.748Z">
+<meta property="article:published_time" content="2021-07-03T01:17:03.000Z">
+<meta property="article:modified_time" content="2021-07-03T01:18:39.634Z">
 <meta property="article:author" content="lbl">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="线性代数">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="numpy">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://mdreamers.github.io/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/">
+<link rel="canonical" href="https://mdreamers.github.io/2021/07/03/3-numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>5.向量空间 | 追梦</title>
+  <title>3.numpy的数据类型 | 追梦</title>
   
 
 
@@ -192,7 +192,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/03/3-numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
@@ -205,7 +205,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          5.向量空间
+          3.numpy的数据类型
         </h1>
 
         <div class="post-meta">
@@ -214,23 +214,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-06-21 11:15:57" itemprop="dateCreated datePublished" datetime="2021-06-21T11:15:57+08:00">2021-06-21</time>
+              <time title="创建时间：2021-07-03 09:17:03 / 修改时间：09:18:39" itemprop="dateCreated datePublished" datetime="2021-07-03T09:17:03+08:00">2021-07-03</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-26 16:35:30" itemprop="dateModified" datetime="2021-06-26T16:35:30+08:00">2021-06-26</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                  <a href="/categories/numpy/" itemprop="url" rel="index"><span itemprop="name">numpy</span></a>
                 </span>
             </span>
 
@@ -240,14 +234,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -259,28 +253,199 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
-<p>{n维向量；+，数乘}</p>
-</blockquote>
-<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
-<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
-<p>则称W是n维向量空间的子空间</p>
-<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
-<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
-<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
-<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
-<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
-<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
-<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
-<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
-<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
-<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
-<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
-<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
-<hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
-<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
-
+        <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p><strong>因为在numpy中有许多的数据类型，所以今天就来着重梳理一下numpy中的数据类型及其应用</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="numpy的数据类型和C的对比"><a href="#numpy的数据类型和C的对比" class="headerlink" title="numpy的数据类型和C的对比"></a>numpy的数据类型和C的对比</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">numpy的类型</th>
+<th style="text-align:left">C的类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">np.bool</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">布尔值(True or False)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.byte</td>
+<td style="text-align:left">signed char</td>
+<td style="text-align:left">精度平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ubyte</td>
+<td style="text-align:left">unsigned char</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.short</td>
+<td style="text-align:left">short</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ushort</td>
+<td style="text-align:left">unsigned short</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.intc</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uintc</td>
+<td style="text-align:left">unsigned int</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int_</td>
+<td style="text-align:left">long</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.unint</td>
+<td style="text-align:left">unsigned long</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.longlong</td>
+<td style="text-align:left">longlong</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ulonglong</td>
+<td style="text-align:left">unsigned longlong</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.half / np.float16</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">半精度浮点数：符号位，5位指数，10位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.single</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">平台定义的单精度浮点数：通常为1位符号位，8位指数，23位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.double</td>
+<td style="text-align:left">double</td>
+<td style="text-align:left">平台定义的双精度浮点数：通常为符1位号位，11位指数，52位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.longdouble</td>
+<td style="text-align:left">long double</td>
+<td style="text-align:left">平台定义的扩展精度浮点数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.csingle</td>
+<td style="text-align:left">float complex</td>
+<td style="text-align:left">复数，由两个单精度浮点数（实部和虚部）表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.cdouble</td>
+<td style="text-align:left">double complex</td>
+<td style="text-align:left">复数，由两个双精度浮点数（实部和虚部）表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.clongdouble</td>
+<td style="text-align:left">long double complex</td>
+<td style="text-align:left">复数，由两个扩展精度浮点数（实部和虚部）表示</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="numpy中的一组固定大小的别名"><a href="#numpy中的一组固定大小的别名" class="headerlink" title="numpy中的一组固定大小的别名"></a>numpy中的一组固定大小的别名</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">numpy类型</th>
+<th style="text-align:left">C的类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">np.int8</td>
+<td style="text-align:left">int8_t</td>
+<td style="text-align:left">字节(-128—127)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int16</td>
+<td style="text-align:left">int16_t</td>
+<td style="text-align:left">整数(-32768—32767)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int64</td>
+<td style="text-align:left">int64_t</td>
+<td style="text-align:left">整数($-2^{63}—2^{63}-1$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint8</td>
+<td style="text-align:left">uint8_t</td>
+<td style="text-align:left">无符号整数(0—255)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint16</td>
+<td style="text-align:left">uint16_t</td>
+<td style="text-align:left">无符号整数(0—65535)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint32</td>
+<td style="text-align:left">uint32</td>
+<td style="text-align:left">无符号整数(0—$2^{32}$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint64</td>
+<td style="text-align:left">uint64</td>
+<td style="text-align:left">无符号整数(0—$2^{64}$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.intp</td>
+<td style="text-align:left">intptr_t</td>
+<td style="text-align:left">用于索引的整数，通常与索引相同ssize_t</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uintp</td>
+<td style="text-align:left">uintptr_t</td>
+<td style="text-align:left">整数大到足以容纳指针</td>
+</tr>
+<tr>
+<td style="text-align:left">np.float32</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">np.float64/np.float_</td>
+<td style="text-align:left">double</td>
+<td style="text-align:left">这与内置python float的精度相匹配</td>
+</tr>
+<tr>
+<td style="text-align:left">np.complex64</td>
+<td style="text-align:left">float complex</td>
+<td style="text-align:left">复数,由两个32位浮点数(实数和虚数)表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.complex128/np.complex_</td>
+<td style="text-align:left">double complex</td>
+<td style="text-align:left">注意，这与内置python复合体的精度相匹配</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>numpy数据类型是dtype(数据类型)对象的实例</p>
+<h2 id="溢出错误"><a href="#溢出错误" class="headerlink" title="溢出错误"></a>溢出错误</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.power(<span class="number">100</span>,<span class="number">8</span>,dtype=np.int64)</span><br></pre></td></tr></table></figure>
+<pre><code>10000000000000000
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.power(<span class="number">100</span>,<span class="number">8</span>,dtype=np.int32)<span class="comment">#应该输出的是10000000000000000</span></span><br></pre></td></tr></table></figure>
+<pre><code>1874919424
+</code></pre><h2 id="np-iinfo和np-finfo"><a href="#np-iinfo和np-finfo" class="headerlink" title="np.iinfo和np.finfo"></a>np.iinfo和np.finfo</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.iinfo(np.int32)</span><br></pre></td></tr></table></figure>
+<pre><code>iinfo(min=-2147483648, max=2147483647, dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.finfo(np.float_)</span><br></pre></td></tr></table></figure>
+<pre><code>finfo(resolution=1e-15, min=-1.7976931348623157e+308, max=1.7976931348623157e+308, dtype=float64)
+</code></pre>
     </div>
 
     
@@ -289,8 +454,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
-              <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="tag"># 线性代数</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"># 数据分析</a>
+              <a href="/tags/numpy/" rel="tag"># numpy</a>
           </div>
 
         
@@ -299,13 +464,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/" rel="prev" title="4.n维向量">
-      <i class="fa fa-chevron-left"></i> 4.n维向量
+    <a href="/2021/07/02/2-n%E7%BB%B4%E6%95%B0%E7%BB%84/" rel="prev" title="2.n维数组">
+      <i class="fa fa-chevron-left"></i> 2.n维数组
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/" rel="next" title="6.特征值与特征向量">
-      6.特征值与特征向量 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -364,7 +526,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">1.</span> <span class="nav-text">向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E7%9A%84%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-number">1.1.</span> <span class="nav-text">向量空间的子空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9F%BA%E5%92%8C%E7%BB%B4%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">向量空间的基和维数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E6%B8%A1%E7%9F%A9%E9%98%B5"><span class="nav-number">1.3.</span> <span class="nav-text">过渡矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E5%85%AC%E5%BC%8F"><span class="nav-number">1.3.1.</span> <span class="nav-text">坐标变换公式</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8CC%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">1.1.</span> <span class="nav-text">numpy的数据类型和C的对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#numpy%E4%B8%AD%E7%9A%84%E4%B8%80%E7%BB%84%E5%9B%BA%E5%AE%9A%E5%A4%A7%E5%B0%8F%E7%9A%84%E5%88%AB%E5%90%8D"><span class="nav-number">1.2.</span> <span class="nav-text">numpy中的一组固定大小的别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%A2%E5%87%BA%E9%94%99%E8%AF%AF"><span class="nav-number">1.3.</span> <span class="nav-text">溢出错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#np-iinfo%E5%92%8Cnp-finfo"><span class="nav-number">1.4.</span> <span class="nav-text">np.iinfo和np.finfo</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -598,59 +760,6 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
