@@ -185,6 +185,615 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/03/3-numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/03/3-numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">3.numpy的数据类型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-03 09:17:03 / 修改时间：09:26:15" itemprop="dateCreated datePublished" datetime="2021-07-03T09:17:03+08:00">2021-07-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/numpy/" itemprop="url" rel="index"><span itemprop="name">numpy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p><strong>因为在numpy中有许多的数据类型，所以今天就来着重梳理一下numpy中的数据类型及其应用</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="numpy的数据类型和C的对比"><a href="#numpy的数据类型和C的对比" class="headerlink" title="numpy的数据类型和C的对比"></a>numpy的数据类型和C的对比</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">numpy的类型</th>
+<th style="text-align:left">C的类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">np.bool</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">布尔值(True or False)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.byte</td>
+<td style="text-align:left">signed char</td>
+<td style="text-align:left">精度平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ubyte</td>
+<td style="text-align:left">unsigned char</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.short</td>
+<td style="text-align:left">short</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ushort</td>
+<td style="text-align:left">unsigned short</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.intc</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uintc</td>
+<td style="text-align:left">unsigned int</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int_</td>
+<td style="text-align:left">long</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.unint</td>
+<td style="text-align:left">unsigned long</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.longlong</td>
+<td style="text-align:left">longlong</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.ulonglong</td>
+<td style="text-align:left">unsigned longlong</td>
+<td style="text-align:left">平台定义</td>
+</tr>
+<tr>
+<td style="text-align:left">np.half / np.float16</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">半精度浮点数：符号位，5位指数，10位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.single</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">平台定义的单精度浮点数：通常为1位符号位，8位指数，23位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.double</td>
+<td style="text-align:left">double</td>
+<td style="text-align:left">平台定义的双精度浮点数：通常为符1位号位，11位指数，52位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.longdouble</td>
+<td style="text-align:left">long double</td>
+<td style="text-align:left">平台定义的扩展精度浮点数</td>
+</tr>
+<tr>
+<td style="text-align:left">np.csingle</td>
+<td style="text-align:left">float complex</td>
+<td style="text-align:left">复数，由两个单精度浮点数（实部和虚部）表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.cdouble</td>
+<td style="text-align:left">double complex</td>
+<td style="text-align:left">复数，由两个双精度浮点数（实部和虚部）表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.clongdouble</td>
+<td style="text-align:left">long double complex</td>
+<td style="text-align:left">复数，由两个扩展精度浮点数（实部和虚部）表示</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="numpy中的一组固定大小的别名"><a href="#numpy中的一组固定大小的别名" class="headerlink" title="numpy中的一组固定大小的别名"></a>numpy中的一组固定大小的别名</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">numpy类型</th>
+<th style="text-align:left">C的类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">np.int8</td>
+<td style="text-align:left">int8_t</td>
+<td style="text-align:left">字节(-128—127)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int16</td>
+<td style="text-align:left">int16_t</td>
+<td style="text-align:left">整数(-32768—32767)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.int64</td>
+<td style="text-align:left">int64_t</td>
+<td style="text-align:left">整数($-2^{63}—2^{63}-1$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint8</td>
+<td style="text-align:left">uint8_t</td>
+<td style="text-align:left">无符号整数(0—255)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint16</td>
+<td style="text-align:left">uint16_t</td>
+<td style="text-align:left">无符号整数(0—65535)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint32</td>
+<td style="text-align:left">uint32</td>
+<td style="text-align:left">无符号整数(0—$2^{32}$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uint64</td>
+<td style="text-align:left">uint64</td>
+<td style="text-align:left">无符号整数(0—$2^{64}$)</td>
+</tr>
+<tr>
+<td style="text-align:left">np.intp</td>
+<td style="text-align:left">intptr_t</td>
+<td style="text-align:left">用于索引的整数，通常与索引相同ssize_t</td>
+</tr>
+<tr>
+<td style="text-align:left">np.uintp</td>
+<td style="text-align:left">uintptr_t</td>
+<td style="text-align:left">整数大到足以容纳指针</td>
+</tr>
+<tr>
+<td style="text-align:left">np.float32</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">np.float64/np.float_</td>
+<td style="text-align:left">double</td>
+<td style="text-align:left">这与内置python float的精度相匹配</td>
+</tr>
+<tr>
+<td style="text-align:left">np.complex64</td>
+<td style="text-align:left">float complex</td>
+<td style="text-align:left">复数,由两个32位浮点数(实数和虚数)表示</td>
+</tr>
+<tr>
+<td style="text-align:left">np.complex128/np.complex_</td>
+<td style="text-align:left">double complex</td>
+<td style="text-align:left">注意，这与内置python复合体的精度相匹配</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>numpy数据类型是dtype(数据类型)对象的实例</p>
+<h2 id="溢出错误"><a href="#溢出错误" class="headerlink" title="溢出错误"></a>溢出错误</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.power(<span class="number">100</span>,<span class="number">8</span>,dtype=np.int64)</span><br></pre></td></tr></table></figure>
+<pre><code>10000000000000000
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.power(<span class="number">100</span>,<span class="number">8</span>,dtype=np.int32)<span class="comment">#应该输出的是10000000000000000</span></span><br></pre></td></tr></table></figure>
+<pre><code>1874919424
+</code></pre><h2 id="np-iinfo和np-finfo"><a href="#np-iinfo和np-finfo" class="headerlink" title="np.iinfo和np.finfo"></a>np.iinfo和np.finfo</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.iinfo(np.int32)</span><br></pre></td></tr></table></figure>
+<pre><code>iinfo(min=-2147483648, max=2147483647, dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.finfo(np.float_)</span><br></pre></td></tr></table></figure>
+<pre><code>finfo(resolution=1e-15, min=-1.7976931348623157e+308, max=1.7976931348623157e+308, dtype=float64)
+</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/02/2-n%E7%BB%B4%E6%95%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/02/2-n%E7%BB%B4%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">2.n维数组</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-02 21:23:57" itemprop="dateCreated datePublished" datetime="2021-07-02T21:23:57+08:00">2021-07-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-03 14:57:51" itemprop="dateModified" datetime="2021-07-03T14:57:51+08:00">2021-07-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/numpy/" itemprop="url" rel="index"><span itemprop="name">numpy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="N维数组（ndarray）"><a href="#N维数组（ndarray）" class="headerlink" title="N维数组（ndarray）"></a>N维数组（ndarray）</h1><blockquote>
+<p>ndarray是numpy的数组类，别名array</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="np-ndarray"><a href="#np-ndarray" class="headerlink" title="np.ndarray()"></a>np.ndarray()</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">用处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">shape(tuple)</td>
+<td style="text-align:left">所创建数组的形状</td>
+</tr>
+<tr>
+<td style="text-align:left">dtype(data-type)</td>
+<td style="text-align:left">numpy数据的类型</td>
+</tr>
+<tr>
+<td style="text-align:left">buffer</td>
+<td style="text-align:left">初始化数据</td>
+</tr>
+<tr>
+<td style="text-align:left">offset(int)</td>
+<td style="text-align:left">初始化数据的首个数据的偏移量</td>
+</tr>
+<tr>
+<td style="text-align:left">strides(int型tuple)</td>
+<td style="text-align:left">每个轴的下标增加一时,数据指针在内存中增加的字节数</td>
+</tr>
+<tr>
+<td style="text-align:left">order{‘C’,’F’}</td>
+<td style="text-align:left">行优先(C-style)或列优先(Fortran-style)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#例</span></span><br><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">12</span>),offset=<span class="number">0</span>,order=<span class="string">&quot;C&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">12</span>),offset=<span class="number">0</span>,order=<span class="string">&quot;F&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  3,  6,  9],
+       [ 1,  4,  7, 10],
+       [ 2,  5,  8, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">20</span>),offset=<span class="number">20</span>,order=<span class="string">&quot;C&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 5,  6,  7,  8],
+       [ 9, 10, 11, 12],
+       [13, 14, 15, 16]])
+</code></pre><h2 id="ndarray对象的常用属性"><a href="#ndarray对象的常用属性" class="headerlink" title="ndarray对象的常用属性"></a>ndarray对象的常用属性</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:left">转置</td>
+</tr>
+<tr>
+<td style="text-align:center">size</td>
+<td style="text-align:left">数列中元素个数</td>
+</tr>
+<tr>
+<td style="text-align:center">itemsize</td>
+<td style="text-align:left">数组中单个元素的字节长度</td>
+</tr>
+<tr>
+<td style="text-align:center">dtype</td>
+<td style="text-align:left">数组元素的数据类型对象</td>
+</tr>
+<tr>
+<td style="text-align:center">ndim</td>
+<td style="text-align:left">数组的维度</td>
+</tr>
+<tr>
+<td style="text-align:center">shape</td>
+<td style="text-align:left">数组的形状</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:left">指向存放数组数据的python buffer对象</td>
+</tr>
+<tr>
+<td style="text-align:center">flat</td>
+<td style="text-align:left">返回数组的一维迭代器</td>
+</tr>
+<tr>
+<td style="text-align:center">imag</td>
+<td style="text-align:left">返回数组的虚部</td>
+</tr>
+<tr>
+<td style="text-align:center">real</td>
+<td style="text-align:left">返回数组的实部</td>
+</tr>
+<tr>
+<td style="text-align:center">nbytes</td>
+<td style="text-align:left">数组中所有元素的字节长度</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 例</span></span><br><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.T</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  4,  8],
+       [ 1,  5,  9],
+       [ 2,  6, 10],
+       [ 3,  7, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.size:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.size)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.itemsize&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.itemsize)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.dtype&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.dtype)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.ndim&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.ndim)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.flat&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.flat)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.nbytes&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.nbytes)</span><br></pre></td></tr></table></figure>
+<pre><code>a.size:
+12
+-------------------------
+a.itemsize
+4
+-------------------------
+a.dtype
+int32
+-------------------------
+a.ndim
+2
+-------------------------
+a.flat
+&lt;numpy.flatiter object at 0x0000023A25BBA040&gt;
+-------------------------
+a.nbytes
+48
+</code></pre><h2 id="创建ndarray"><a href="#创建ndarray" class="headerlink" title="创建ndarray"></a>创建ndarray</h2><ol>
+<li>array</li>
+<li>noes</li>
+<li>zeros</li>
+<li>eye：二维单位矩阵</li>
+<li>identity：单位矩阵</li>
+<li>full：生成由固定值填充的数组</li>
+<li>full_like</li>
+<li>arange：指定初始值、终值、步长</li>
+<li>linspace：指定初始值、终值、元素个数</li>
+<li>logspace：与linspaceleisi,但是创建的是等比数列</li>
+<li>fromstring:从字符串中读取数据并创建数组</li>
+<li>fromfunction：由第一个参数作为计算每个数组元素的函数（函数对象或者lambda表达式均可），第二个参数为数组的形状</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.eye(<span class="number">3</span>,k = <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0., 1., 0.],
+       [0., 0., 1.],
+       [0., 0., 0.]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.full(shape=(<span class="number">2</span>,<span class="number">3</span>),fill_value= <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[2, 2, 2],
+       [2, 2, 2]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.logspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1.e+01, 1.e+02, 1.e+03, 1.e+04, 1.e+05, 1.e+06, 1.e+07, 1.e+08,
+       1.e+09, 1.e+10])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10.])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1 = (<span class="string">&quot;1,2,3,4,5&quot;</span>)</span><br><span class="line">np.fromstring(s1,dtype=<span class="built_in">int</span>,sep=<span class="string">&quot;,&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 2, 3, 4, 5])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s2 = (<span class="string">&quot;1 2 3 4 5&quot;</span>)</span><br><span class="line">np.fromstring(s2,dtype=<span class="built_in">int</span>,sep=<span class="string">&quot; &quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 2, 3, 4, 5])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.fromfunction(<span class="keyword">lambda</span> i,j:i+j,(<span class="number">3</span>,<span class="number">3</span>),dtype =<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [1, 2, 3],
+       [2, 3, 4]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">i,j</span>):</span></span><br><span class="line">    <span class="keyword">return</span> i+j</span><br><span class="line"></span><br><span class="line">np.fromfunction(func,(<span class="number">3</span>,<span class="number">3</span>),dtype=<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [1, 2, 3],
+       [2, 3, 4]])
+</code></pre><h2 id="创建特殊的二维数组"><a href="#创建特殊的二维数组" class="headerlink" title="创建特殊的二维数组"></a>创建特殊的二维数组</h2><ol>
+<li>diag，返回数组的对角元素，或创建对角阵，对角线由参数k控制</li>
+<li>diagflat，以输入作为对角元素，创建一个矩阵，对角线由k控制</li>
+<li>tri，生成一个矩阵，在某对角线下元素全为1，其余为0，对角线由k控制</li>
+<li>tril，输入一个矩阵，返回一个下三角阵，对角线由k控制</li>
+<li>triu，类似tril,但返回矩阵的上三角矩阵</li>
+<li>vander，输入一个一维数组，返回一个范德蒙行列式</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.diag(a,k=-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([4, 9])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.diag(np.diag(a))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  0,  0],
+       [ 0,  5,  0],
+       [ 0,  0, 10]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.diagflat([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 0, 0, 0],
+       [0, 2, 0, 0],
+       [0, 0, 3, 0],
+       [0, 0, 0, 4]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.diagflat([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],k=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 0, 0, 0],
+       [0, 0, 2, 0, 0],
+       [0, 0, 0, 3, 0],
+       [0, 0, 0, 0, 4],
+       [0, 0, 0, 0, 0]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.tri(<span class="number">3</span>,<span class="number">4</span>,k=<span class="number">1</span>,dtype=<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 1, 0, 0],
+       [1, 1, 1, 0],
+       [1, 1, 1, 1]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.tri(<span class="number">3</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1., 0., 0., 0.],
+       [1., 1., 0., 0.],
+       [1., 1., 1., 0.]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;----------------------&quot;</span>)</span><br><span class="line">np.tril(a)</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+----------------------
+
+
+
+
+
+array([[ 0,  0,  0,  0],
+       [ 4,  5,  0,  0],
+       [ 8,  9, 10,  0]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.triu(a)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 0,  5,  6,  7],
+       [ 0,  0, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.vander([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>array([[  8,   4,   2,   1],
+       [ 27,   9,   3,   1],
+       [ 64,  16,   4,   1],
+       [125,  25,   5,   1]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.vander([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>],N=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 4,  2,  1],
+       [ 9,  3,  1],
+       [16,  4,  1],
+       [25,  5,  1]])
+</code></pre><h2 id="轴"><a href="#轴" class="headerlink" title="轴"></a>轴</h2><p>多维ndarray中，每一维都叫一个轴axis。有很多对于ndarray对象的运算都是基于axis进行，在入门的时候也接触了一些轴方面的应用，比如下面：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[:,<span class="number">2</span>] <span class="comment"># 第3列所有元素</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([ 2,  6, 10])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>] <span class="comment"># 这个也等价于a[1,2]</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([6])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">1</span>:<span class="number">3</span>,:] <span class="comment"># 2到3行所有列 </span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/30/1-numpy%E5%85%A5%E9%97%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -738,7 +1347,7 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/06/28/2-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">2.C语言的一些算法</a>
+            <a href="/2021/06/28/2-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">2.算法(用C语言实现)</a>
         </h2>
 
         <div class="post-meta">
@@ -747,10 +1356,16 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-28 13:17:58 / 修改时间：22:50:16" itemprop="dateCreated datePublished" datetime="2021-06-28T13:17:58+08:00">2021-06-28</time>
+              <time title="创建时间：2021-06-28 13:17:58" itemprop="dateCreated datePublished" datetime="2021-06-28T13:17:58+08:00">2021-06-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-06 14:57:43" itemprop="dateModified" datetime="2021-07-06T14:57:43+08:00">2021-07-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -767,14 +1382,14 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
+              <span>3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -838,424 +1453,15 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
 </li>
 </ol>
 </blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">1.C语言的一些概念</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-27 11:20:54 / 修改时间：21:33:08" itemprop="dateCreated datePublished" datetime="2021-06-27T11:20:54+08:00">2021-06-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>4.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
-<li>整型常量：也就是整数</li>
-<li>实型常量：<ol>
-<li>十进制小数形式：由数字和小数点组成</li>
-<li>指数形式：如$12.34e3$(代表$12.34\times10^3$)<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
-</ol>
-</li>
-<li>字符常量：<ol>
-<li>普通字符：用单撇号括起来的一个字符</li>
-<li>转义字符：以字符”\\”开头的字符</li>
-</ol>
-</li>
-<li>字符串常量：用双撇号把若干字符括起来</li>
-<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
-</ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">转义字符</th>
-<th style="text-align:left">字符值</th>
-<th style="text-align:left">输出结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">\a</td>
-<td style="text-align:left">警告(alert)</td>
-<td style="text-align:left">产生声音或视觉信号</td>
-</tr>
-<tr>
-<td style="text-align:left">\b</td>
-<td style="text-align:left">退格(backspace)</td>
-<td style="text-align:left">将光标位置后退一个字符</td>
-</tr>
-<tr>
-<td style="text-align:left">\f</td>
-<td style="text-align:left">换页(form feed)</td>
-<td style="text-align:left">将光标当前位置移到下一页的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\n</td>
-<td style="text-align:left">换行</td>
-<td style="text-align:left">将光标当前位置移到下一行的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\r</td>
-<td style="text-align:left">回车(carriage return)</td>
-<td style="text-align:left">将该光标当前位置移到本行的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\t</td>
-<td style="text-align:left">水平制表符</td>
-<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
-</tr>
-<tr>
-<td style="text-align:left">\v</td>
-<td style="text-align:left">垂直制表符</td>
-<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
-</tr>
-<tr>
-<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
-<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
-<td style="text-align:left">与该八进制码对应的字符</td>
-</tr>
-<tr>
-<td style="text-align:left">\xh[h$\cdots$]<br>其中h代表一个十六进制数字</td>
-<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
-<td style="text-align:left">与该十六进制码对应的字符</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
-<p>变量代表一个有名字，具有特定属性的一个存储单元。它用来存放数据，也就是存放变量的值。程序运行期间变量的值可以改变。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;<span class="comment">//a是变量名，3是变量值</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
-<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
-</blockquote>
-<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
-<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
-<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
-<ul>
-<li>$<br>\text{数据类型}<br>\begin{cases}<br>\text{基本类型}<br>\begin{cases}<br>\text{整型类型}<br>\begin{cases}<br>\text{基本整形(int)}\\<br>\text{短整型(short int)}\\<br>\text{长整型(long int)}\\<br>\text{双长整型(long long int)}\\<br>\text{字符型(char)}\\<br>\text{布尔型(bool)}<br>\end{cases}\\<br>\\<br>\text{浮点类型}<br>\begin{cases}<br>\text{单精度浮点型(float)}\\<br>\text{双精度浮点型(double)}\\<br>\text{复数浮点型(float_complex,double_complex,longlong_complex)}<br>\end{cases}<br>\end{cases}\\<br>\\<br>\text{枚举类型(enum)}\\<br>\\<br>\text{空类型(void)}\\<br>\\<br>\text{派生类型}<br>\begin{cases}<br>\text{指针类型(*)}\\<br>\text{数组类型([ ])}\\<br>\text{结构体类型(struct)}\\<br>\text{共用体类型(union)}\\<br>\text{函数类型}<br>\end{cases}<br>\end{cases}<br>$</li>
-</ul>
-</blockquote>
-<p>其中基本类型和枚举类型的值都是数值，统称为算术类型。</p>
-<p>算术类型和指针类型统称为纯量类型，因为其值是整数类型。</p>
-<p>枚举类型是程序中用户定义的整数类型。</p>
-<p>数组类型和结构体类型统称为组合类型，共用体类型不属于组合类型，<br>因为在同一时间只有一个成员具有值。</p>
-<p>函数类型用来定义函数，描述一个函数的接口，包括函数返回值的数据类型和参数的类型</p>
-<h2 id="整型数据"><a href="#整型数据" class="headerlink" title="整型数据"></a>整型数据</h2><p>存储单元的存储方式是：用整数补码形式存放。</p>
-<p>一个整数的补码是此数的二进制形式</p>
-<p>求负数补码的方法：先将此数的绝对值写成二进制的形式，然后对所有二进制位按位 <strong>取反，再加1</strong></p>
-<h3 id="整型数据的分类"><a href="#整型数据的分类" class="headerlink" title="整型数据的分类"></a>整型数据的分类</h3><ol>
-<li>基本类型(int 型)<br>编译系统分配给int型数据2个字节或4个字节(由具体的C语言编译系统自行决定)<br></li>
-<li>短整型(short int)<br>类型名为short int或short。<br><br>一般分配2个字节，取值范围$-2^{15}\sim (2^{15}-1)$</li>
-<li>长整型(long int)<br>类型名为long int或long。<br><br>一般分配4个字节，取值范围$-2^{31}\sim (2^{31}-1)$</li>
-<li>双长整型(long long int)<br>类型名为long long int或long long。<br><br>一般分配8个字节，取值范围$-2^{63}\sim (2^{63}-1)$</li>
-</ol>
-<p>在类型符号前面加上无符号修饰符unsigned，就是只有正值的意思，<br>因为其所占字节数不变，也就是说正值的取值范围比以前大。</p>
-<h2 id="字符型数据"><a href="#字符型数据" class="headerlink" title="字符型数据"></a>字符型数据</h2><p>定义字符变量<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;?&#x27;</span>; <span class="comment">//char c=63;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d  %c&quot;</span>,c,c);</span><br><span class="line"><span class="comment">//输出结果63 ?</span></span><br></pre></td></tr></table></figure><br>c是字符变量，实质上是一个字节的整型变量，但是它用来存放字符，所以称为字符变量</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">字节数</th>
-<th style="text-align:center">取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">signed char(有符号字符型)</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">$-2^7\sim (2^7-1)$</td>
-</tr>
-<tr>
-<td style="text-align:center">unsigned char(无符号字符型)</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">$0\sim 2^{8}-1$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="浮点型数据"><a href="#浮点型数据" class="headerlink" title="浮点型数据"></a>浮点型数据</h2><blockquote>
-<p>用来表示具有小数点的实数。</p>
-</blockquote>
-<p>因为小数点位置可以浮动，所以实数的指数形式称为 <strong>浮点数</strong></p>
-<p>浮点数类型有三种</p>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
 <ol>
-<li>float型（单精度浮点型）<br>分配4个字节</li>
-<li>double型（双精度浮点型）<br>分配8个字节</li>
-<li>long double型（长双精度型）<br>8或16个字节<h2 id="确定常量的类型"><a href="#确定常量的类型" class="headerlink" title="确定常量的类型"></a>确定常量的类型</h2></li>
-<li>整型常量<br>在一个整数末尾加大写L或小写l表示长整型<br></li>
-<li>浮点型常量<blockquote>
-<p>以小数或指数形式出现的实数</p>
-</blockquote>
-</li>
+<li>如果n=1,结束</li>
+<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
+<li>将两个子序列分别采用归并排序</li>
+<li>将两个排好序的子序列合并成一个最终的排序序列</li>
 </ol>
-<p>在末尾加上F或f表示float类型，<br>加上L或l表示long double类型<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a =<span class="number">3</span> <span class="number">.14159</span>f</span><br><span class="line"><span class="keyword">float</span> dounble a = <span class="number">1.23L</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>类型和变量的区别：</strong><br>每个变量都属于一个确定的类型，类型是变量的一个重要属性。</p>
-<h1 id="C语句"><a href="#C语句" class="headerlink" title="C语句"></a>C语句</h1><h2 id="C语句的作用和分类"><a href="#C语句的作用和分类" class="headerlink" title="C语句的作用和分类"></a>C语句的作用和分类</h2><p>语句后面有分号</p>
-<p>分类：</p>
-<ol>
-<li>控制语句</li>
-<li>函数调用语句</li>
-<li>表达式语句</li>
-<li>空语句</li>
-<li>复合语句</li>
-</ol>
-<h1 id="数据的输入输出"><a href="#数据的输入输出" class="headerlink" title="数据的输入输出"></a>数据的输入输出</h1><p>C语言本身不提供输入输出语句</p>
-<p>需要使用库函数stdio.h</p>
-<h2 id="printf-格式控制，输出表列"><a href="#printf-格式控制，输出表列" class="headerlink" title="printf(格式控制，输出表列)"></a>printf(格式控制，输出表列)</h2><p>%附加字符 格式字符</p>
-<p>例%-m.nf</p>
-<p>printf函数中用到的格式字符</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">格式字符</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">d,i</td>
-<td style="text-align:left">输出带符号十进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">o</td>
-<td style="text-align:left">输出八进制无符号整数(不输出前导符0)</td>
-</tr>
-<tr>
-<td style="text-align:center">x,X</td>
-<td style="text-align:left">输出无符号十六进制整数(不输出前导符0x)，用x小写，X大写</td>
-</tr>
-<tr>
-<td style="text-align:center">u</td>
-<td style="text-align:left">输出无符号十进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">c</td>
-<td style="text-align:left">输出一个字符</td>
-</tr>
-<tr>
-<td style="text-align:center">s</td>
-<td style="text-align:left">输出字符串</td>
-</tr>
-<tr>
-<td style="text-align:center">f</td>
-<td style="text-align:left">以小数形式输出单、双精度数，隐含输出6位小数</td>
-</tr>
-<tr>
-<td style="text-align:center">e,E</td>
-<td style="text-align:left">以指数形式输出实数</td>
-</tr>
-<tr>
-<td style="text-align:center">g,G</td>
-<td style="text-align:left">选用%f或%e格式中输出宽度较短的一种形式，不输出无意义的0</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>在格式声明中，在%和上述格式字符间可以插入几种附加字符(又称修饰符)</p>
-<p>printf函数中用到的修饰符</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字符</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">l</td>
-<td style="text-align:left">长整型整数，可加在格式符d、o、x、u前面</td>
-</tr>
-<tr>
-<td style="text-align:center">m(代表一个整数)</td>
-<td style="text-align:left">数据的最小宽度</td>
-</tr>
-<tr>
-<td style="text-align:center">n(代表一个实数)</td>
-<td style="text-align:left">对实数，表示输出n位小数；对字符串，表示截取的字符个数</td>
-</tr>
-<tr>
-<td style="text-align:center">-</td>
-<td style="text-align:left">输出的数字或字符在域内想左靠</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="scanf-格式控制-地址表列"><a href="#scanf-格式控制-地址表列" class="headerlink" title="scanf(格式控制,地址表列)"></a>scanf(格式控制,地址表列)</h2><p><strong>注意</strong>：scanf函数中是地址表列，传进去的是变量地址</p>
-<h1 id="关系运算符和关系表达式"><a href="#关系运算符和关系表达式" class="headerlink" title="关系运算符和关系表达式"></a>关系运算符和关系表达式</h1><blockquote>
-<p>C语言中，比较符称为关系运算符<br><br>用关系运算符将两个数值或数值表达式连接起来的式子，称为关系表达式。</p>
-</blockquote>
-<p>关系运算符：</p>
-<p>&lt; ， &lt;= ， &gt; ， &gt;= ， == ， !=</p>
-<p>关系表达式：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>&gt;=<span class="number">0</span> <span class="comment">//为真 1</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="逻辑运算符和逻辑表达式"><a href="#逻辑运算符和逻辑表达式" class="headerlink" title="逻辑运算符和逻辑表达式"></a>逻辑运算符和逻辑表达式</h1><p>逻辑表达式：</p>
-<p>&amp;&amp; 或 ，|| 与 ，! 非</p>
-<p>逻辑运算符：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> &gt; <span class="number">3</span> &amp;&amp; <span class="number">8</span> &lt; <span class="number">4</span> - !<span class="number">0</span> <span class="comment">//为假 0</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="条件运算符和条件表达式"><a href="#条件运算符和条件表达式" class="headerlink" title="条件运算符和条件表达式"></a>条件运算符和条件表达式</h1><p>条件表达式的一般形式：</p>
-<p>表达式1 ? 表达式2 : 表达式3<br>例<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">max=(a&gt;b)?a:b;</span><br></pre></td></tr></table></figure></p>
-<h1 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> grade;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your score:&quot;</span>);</span><br><span class="line">    <span class="keyword">switch</span>(grade) <span class="comment">//此括号里的值类型应为整数类型（包括字符型）</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>A<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;85~100\n&quot;</span>);<span class="keyword">break</span>;<span class="comment">//break;不能省</span></span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;B</span><span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;70~84\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>C<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;60~69\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>D<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;&lt;60\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;enter data error!\n&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果:</span></span><br><span class="line"><span class="comment">A</span></span><br><span class="line"><span class="comment">Your score:85~100</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-<h1 id="静态，动态存储方式"><a href="#静态，动态存储方式" class="headerlink" title="静态，动态存储方式"></a>静态，动态存储方式</h1><p><strong>例</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">auto</span> <span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> c=<span class="number">0</span>;<span class="comment">//定义了一个静态局部变量，调用后不释放，保留前值</span></span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">6</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><br><strong>对比下面的程序</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">一些关于hexo的next主题的适配问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-06-25 20:21:32" itemprop="dateCreated datePublished" datetime="2021-06-25T20:21:32+08:00">2021-06-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-28 17:27:35" itemprop="dateModified" datetime="2021-06-28T17:27:35+08:00">2021-06-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">杂记</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>516</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这里记录一些hexo方面的问题</p>
-<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
+<p>C语言实现</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1342,20 +1548,20 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1411,12 +1617,12 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">84k</span>
+    <span title="站点总字数">93k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:16</span>
+    <span title="站点阅读时长">1:24</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
