@@ -185,6 +185,314 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/15/1-CSS%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E5%B1%9E%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/15/1-CSS%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E5%B1%9E%E6%80%A7/" class="post-title-link" itemprop="url">1.CSS的选择器和属性</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-15 12:44:45 / 修改时间：12:49:28" itemprop="dateCreated datePublished" datetime="2021-07-15T12:44:45+08:00">2021-07-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="CSS代码风格"><a href="#CSS代码风格" class="headerlink" title="CSS代码风格"></a>CSS代码风格</h1><p>1.样式格式书写</p>
+<p>(1) 紧凑格式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123; <span class="attribute">color</span>: red;<span class="attribute">font-size</span>: <span class="number">20px</span>; &#125;</span><br></pre></td></tr></table></figure></p>
+<p>(2) 展开格式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.样式大小写</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">COLOR</span>: PINK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>样式选择器，属性名，属性值关键字虽然大小写都行，但最好使用 <strong>小写字母</strong> ,特殊情况除外。</p>
+<p>3.空格规范<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>(1) 属性值前面，冒号后面，保留一个空格</p>
+<p>(2) 选择器（标签）和大括号中间保留空格</p>
+<h1 id="CSS-基础选择器"><a href="#CSS-基础选择器" class="headerlink" title="CSS 基础选择器"></a>CSS 基础选择器</h1><h2 id="CSS-选择器的作用"><a href="#CSS-选择器的作用" class="headerlink" title="CSS 选择器的作用"></a>CSS 选择器的作用</h2><p>就是选择标签用的</p>
+<h2 id="选择器分类"><a href="#选择器分类" class="headerlink" title="选择器分类"></a>选择器分类</h2><p>选择器分为 <strong>基础选择器</strong> 和 <strong>复合选择器</strong> 两个大类</p>
+<ul>
+<li>基础选择器是由 <strong>单个</strong> 选择器组成的</li>
+<li>基础选择器又包括：标签选择器、类选择器、id选择器和通配符选择器</li>
+</ul>
+<h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><p>标签选择器是用 <strong>HTML标签名</strong>作为选择器，按标签名称分类，为页面中的某一类标签指定统一的CSS样式。</p>
+<h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><p>如果想要差异化选择不同的标签，单独选一个或者某几个标签，可以使用类标签</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.类名 &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例如，将所有拥有red类的HTML元素均为红色。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.red</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>结构需要 <strong>class</strong> 属性来调用class类<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&#x27;red&#x27;&gt;红色&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br><strong>注意</strong><br>(1) 类选择器使用”.”进行标识，后面紧跟类名(自定义)</p>
+<p>(2) 长名称或词组可以使用中横线来为选择器命名</p>
+<p>(3) 不要使用纯数字、中文等命名，尽量使用英文字母</p>
+<p>(4) 命名要有意义</p>
+<p>(5) 类命名规则：查web文档</p>
+<h2 id="类选择器-多类名"><a href="#类选择器-多类名" class="headerlink" title="类选择器-多类名"></a>类选择器-多类名</h2><p>一个标签可以指定多个类名，从而达到更多的选择目的<br>1.使用多类名的方法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;red font20&quot;&gt;hh&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br>(1) 在标签class属性中写多个类名<br>(2) 多个类名中间必须用空格分开<br>(3) 每个标签就可以分别具有这些类名的样式</p>
+<h2 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h2><p>用”#”定义<br>基本语法<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#id</span>选择器名称 &#123;</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>注意:</p>
+<p>1.id是唯一性元素，一个id在文档中被使用一次，在一个页面上不允许两个元素具有相同的id。一个HTML元素，也只允许使用一个id，不允许以空格分隔的id列表</p>
+<p>2.当不确定时，有多个html元素来使用该样式时，使用类选择器</p>
+<p>3.id选择器的优先级高于class选择器的优先级。</p>
+<h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><p>用”*”定义，表示选取页面中的所有元素（标签）<br>语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong></p>
+<ul>
+<li>通配符选择器不需要调用，自动就给所有元素使用样式<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>基础选择器|作用|用法<br>:-|:-|:-<br>标签选择器|可以选出所有相同元素|p{color: red;}<br>类选择器|可以选出1个或者多个标签|.nav{color: red;}<br>id选择器|一次只能选择一个标签|#nav{color: red;}<br>通配符选择器|选择所有标签|*{color: red;}</li>
+</ul>
+<h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS使用font-famliy属性定义文本的字体<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>CSS使用font-size属性定义字体大小<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>px（像素）大小是页面最常用的单位</li>
+<li>不同浏览器可能默认显示的字号不一致，我们尽量给一个明确值大小，不要默认大小</li>
+</ul>
+<h2 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h2><p>用font-weight定义字体粗细<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>:bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">默认值（不加粗）</td>
+</tr>
+<tr>
+<td style="text-align:left">bold</td>
+<td style="text-align:left">定义粗体</td>
+</tr>
+<tr>
+<td style="text-align:left">100-900</td>
+<td style="text-align:left">400等同normal,700的等同bold <strong>注意</strong> 后面不跟单位</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p>font-style属性定义文字风格<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><br>属性值|作用<br>:-|:-<br>normal|默认值<br>italic|斜体</p>
+<h2 id="字体符复合属性"><a href="#字体符复合属性" class="headerlink" title="字体符复合属性"></a>字体符复合属性</h2><p>节约代码</p>
+<p>语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-famliy;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: italic <span class="number">700</span> <span class="number">16px</span>/<span class="number">20px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: <span class="number">16px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意</strong></p>
+<ul>
+<li>必须要按照顺序书写，不能更换顺序</li>
+<li>不需要设置的属性可以省略（取默认值），但必须保留font-size和font-family属性，否则font属性不起作用</li>
+</ul>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">字号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">font-size</td>
+<td style="text-align:left">字号</td>
+</tr>
+<tr>
+<td style="text-align:left">font-family</td>
+<td style="text-align:left">字体</td>
+</tr>
+<tr>
+<td style="text-align:left">font-weight</td>
+<td style="text-align:left">字体粗细</td>
+</tr>
+<tr>
+<td style="text-align:left">font-style</td>
+<td style="text-align:left">字体样式</td>
+</tr>
+<tr>
+<td style="text-align:left">font</td>
+<td style="text-align:left">字体连写</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-文本属性"><a href="#CSS-文本属性" class="headerlink" title="CSS 文本属性"></a>CSS 文本属性</h1><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>color属性定义文本的颜色<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">表示</th>
+<th style="text-align:left">属性值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">预定义的颜色值</td>
+<td style="text-align:left">red,green,blue,pink</td>
+</tr>
+<tr>
+<td style="text-align:left">十六进制</td>
+<td style="text-align:left">#ff000,#ff6600···</td>
+</tr>
+<tr>
+<td style="text-align:left">RGB代码</td>
+<td style="text-align:left">rgb(255,0,0)或rgb(100%,0%,0%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="对齐文本"><a href="#对齐文本" class="headerlink" title="对齐文本"></a>对齐文本</h2><p>text-aligh属性用于设置元素内文本内容的水平对齐方式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">左对齐（默认）</td>
+</tr>
+<tr>
+<td style="text-align:left">right</td>
+<td style="text-align:left">右对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">center</td>
+<td style="text-align:left">居中对齐</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="装饰文本"><a href="#装饰文本" class="headerlink" title="装饰文本"></a>装饰文本</h2><p>text-decoration属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>属性值|描述<br>:-|:-<br>none|默认，可以用来取消链接的下划线<br>underline|下划线<br>overline|上划线<br>line-through|删除线</p>
+<h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p>text-indent属性用来指定文本的第一行的缩进，通常是将段落 <strong>首行缩进</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>em</strong> 单位表示相对单位，就是当前元素（font-size）1个文字的大小</p>
+<h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><p>line-height属性用于设置行间的距离（行高），可以控制文字行与行之间的距离<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">文本颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">text-align</td>
+<td style="text-align:left">文本对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">text-indent</td>
+<td style="text-align:left">文本缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">text-decoration</td>
+<td style="text-align:left">文本修饰</td>
+</tr>
+<tr>
+<td style="text-align:left">line-height</td>
+<td style="text-align:left">行高</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-引入方式"><a href="#CSS-引入方式" class="headerlink" title="CSS 引入方式"></a>CSS 引入方式</h1><h2 id="CSS-的三种样式表"><a href="#CSS-的三种样式表" class="headerlink" title="CSS 的三种样式表"></a>CSS 的三种样式表</h2><p>1.行内样式表（行内式）</p>
+<p>2.内部样式表（嵌入式）</p>
+<p>3.外部样式表（链接式）</p>
+<h2 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h2><p>内部样式表就是在html页面内部写样式，但是单独写到style标签内部<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0</span>00;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>&lt;style&gt; 标签里理论上可以放在HTML文档的任何地方，但一般会放在文档的&lt;head&gt; 标签中</li>
+<li>通过此种方式可以方便控制当前整个页面元素样式设置</li>
+<li>代码结构清晰，但是没有实现结构与样式完全分离<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2>在元素标签内部的sytle属性中设定CSS样式，修改一些简单样式<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: red;font-size: 12px;&quot;</span>&gt;</span>hallow<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+不推荐大量使用</li>
+</ul>
+<h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><p>适用于样式比较多的情况下，核心:样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用。</p>
+<p>引入外部样式表的步骤：<br>1.新建一个后缀名为.css的样式文件,把所有CSS代码都放到此文件中。 </p>
+<p>2.在HTML页面中，使用&lt;link&gt;标签引入这个文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css文件路径&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure><br>属性|作用<br>:-|:-<br>rel|定义当前文档与被链接文档之间的关系，在这里需要指定为”stylesheet”,表示被链接文档是一个样式表文件<br>href|定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径</p>
+<h2 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">样式表</th>
+<th style="text-align:left">优点</th>
+<th style="text-align:left">控制范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">行内样式表</td>
+<td style="text-align:left">书写方便，权重高</td>
+<td style="text-align:left">控制一个标签</td>
+</tr>
+<tr>
+<td style="text-align:left">内部样式表</td>
+<td style="text-align:left">部分结构和样式相分离</td>
+<td style="text-align:left">控制一个页面</td>
+</tr>
+<tr>
+<td style="text-align:left">外部样式表</td>
+<td style="text-align:left">完全实现结构和样式相分离</td>
+<td style="text-align:left">控制多个页面</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/09/1-html%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -208,17 +516,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-07-09 11:00:06 / 修改时间：14:11:39" itemprop="dateCreated datePublished" datetime="2021-07-09T11:00:06+08:00">2021-07-09</time>
+              <time title="创建时间：2021-07-09 11:00:06" itemprop="dateCreated datePublished" datetime="2021-07-09T11:00:06+08:00">2021-07-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-15 12:51:16" itemprop="dateModified" datetime="2021-07-15T12:51:16+08:00">2021-07-15</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/html/" itemprop="url" rel="index"><span itemprop="name">html</span></a>
                 </span>
             </span>
 
@@ -1355,176 +1669,6 @@ src是&lt;img&gt;的必须属性，而且必须写在img后面</li>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/04/4-%E7%B4%A2%E5%BC%95%E8%A1%A5%E5%85%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/04/4-%E7%B4%A2%E5%BC%95%E8%A1%A5%E5%85%85/" class="post-title-link" itemprop="url">4.索引补充</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-07-04 10:18:32 / 修改时间：10:23:12" itemprop="dateCreated datePublished" datetime="2021-07-04T10:18:32+08:00">2021-07-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/numpy/" itemprop="url" rel="index"><span itemprop="name">numpy</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="基本方式"><a href="#基本方式" class="headerlink" title="基本方式"></a>基本方式</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>5
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">2</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([2, 3, 4])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.arange(<span class="number">24</span>).reshape(<span class="number">2</span>,<span class="number">2</span>,<span class="number">6</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
-<pre><code>array([[[ 0,  1,  2,  3,  4,  5],
-        [ 6,  7,  8,  9, 10, 11]],
-
-       [[12, 13, 14, 15, 16, 17],
-        [18, 19, 20, 21, 22, 23]]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3,  4,  5],
-       [ 6,  7,  8,  9, 10, 11]])
-</code></pre><h1 id="切片索引"><a href="#切片索引" class="headerlink" title="切片索引"></a>切片索引</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr2d = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">arr2d</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>] <span class="comment"># 表示选取前两行</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 2, 3],
-       [4, 5, 6, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr2d[<span class="number">1</span>:] <span class="comment"># 表示选取第1行之后的所有行</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>,<span class="number">1</span>:] <span class="comment"># 两个结合起来使用，第一个选取行，第二个选取列</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [5, 6, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr2d[:,<span class="number">2</span>] <span class="comment"># 只有冒号表示整个轴</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([ 2,  6, 10])
-</code></pre><h1 id="布尔型索引"><a href="#布尔型索引" class="headerlink" title="布尔型索引"></a>布尔型索引</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name = np.array([<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;wang&quot;</span>])</span><br><span class="line">data =  np.arange(<span class="number">21</span>).reshape(<span class="number">7</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name</span><br></pre></td></tr></table></figure>
-<pre><code>array([&#39;liu&#39;, &#39;wang&#39;, &#39;zhang&#39;, &#39;liu&#39;, &#39;zhang&#39;, &#39;wang&#39;, &#39;wang&#39;],
-      dtype=&#39;&lt;U5&#39;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  4,  5],
-       [ 6,  7,  8],
-       [ 9, 10, 11],
-       [12, 13, 14],
-       [15, 16, 17],
-       [18, 19, 20]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>,:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1],
-       [ 9, 10]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[(name==<span class="string">&#x27;liu&#x27;</span>)|(name==<span class="string">&#x27;wang&#x27;</span>)]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  4,  5],
-       [ 9, 10, 11],
-       [15, 16, 17],
-       [18, 19, 20]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[data &lt; <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-</code></pre><p>也就是说布尔索引会把括号里面为真的按顺序返回</p>
-<h1 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h1><blockquote>
-<p>利用整数数组进行索引</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">arr = np.empty((<span class="number">8</span>,<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8</span>):</span><br><span class="line">    arr[i] = i</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0., 0., 0., 0.],
-       [1., 1., 1., 1.],
-       [2., 2., 2., 2.],
-       [3., 3., 3., 3.],
-       [4., 4., 4., 4.],
-       [5., 5., 5., 5.],
-       [6., 6., 6., 6.],
-       [7., 7., 7., 7.]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr[[<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[2., 2., 2., 2.],
-       [4., 4., 4., 4.],
-       [5., 5., 5., 5.],
-       [1., 1., 1., 1.]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[[<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 2, 11,  5, 10])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]][:,[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 5,  6],
-       [ 9, 10]])
-</code></pre><p>花式索引和切片不一样，它总是复制到新数组中</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1596,20 +1740,20 @@ src是&lt;img&gt;的必须属性，而且必须写在img后面</li>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1630,7 +1774,7 @@ src是&lt;img&gt;的必须属性，而且必须写在img后面</li>
       data-server="netease"
       data-type="playlist"
       data-fixed="false"
-      data-autoplay="true"
+      data-autoplay="false"
       data-list-folded="true"
       data-mutex="true"
       data-order="random"
@@ -1665,12 +1809,12 @@ src是&lt;img&gt;的必须属性，而且必须写在img后面</li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">93k</span>
+    <span title="站点总字数">96k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:24</span>
+    <span title="站点阅读时长">1:27</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
