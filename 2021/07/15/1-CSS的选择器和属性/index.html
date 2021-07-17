@@ -22,13 +22,13 @@
 
   <meta name="description" content="CSS代码风格1.样式格式书写 (1) 紧凑格式1h3 &amp;#123; color: red;font-size: 20px; &amp;#125; (2) 展开格式1234h3&amp;#123;    color: red;    font-size: 20px;&amp;#125; 2.样式大小写 1234567h3 &amp;#123;    color: pink;&amp;#125;h3 &amp;#123;    COLOR: PI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1.CSS的选择器和属性">
+<meta property="og:title" content="CSS">
 <meta property="og:url" content="https://mdreamers.github.io/2021/07/15/1-CSS%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E5%B1%9E%E6%80%A7/index.html">
 <meta property="og:site_name" content="追梦">
 <meta property="og:description" content="CSS代码风格1.样式格式书写 (1) 紧凑格式1h3 &amp;#123; color: red;font-size: 20px; &amp;#125; (2) 展开格式1234h3&amp;#123;    color: red;    font-size: 20px;&amp;#125; 2.样式大小写 1234567h3 &amp;#123;    color: pink;&amp;#125;h3 &amp;#123;    COLOR: PI">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-15T04:44:45.000Z">
-<meta property="article:modified_time" content="2021-07-15T04:49:28.822Z">
+<meta property="article:modified_time" content="2021-07-17T03:27:51.386Z">
 <meta property="article:author" content="lbl">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="CSS">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>1.CSS的选择器和属性 | 追梦</title>
+  <title>CSS | 追梦</title>
   
 
 
@@ -205,7 +205,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          1.CSS的选择器和属性
+          CSS
         </h1>
 
         <div class="post-meta">
@@ -214,17 +214,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-07-15 12:44:45 / 修改时间：12:49:28" itemprop="dateCreated datePublished" datetime="2021-07-15T12:44:45+08:00">2021-07-15</time>
+              <time title="创建时间：2021-07-15 12:44:45" itemprop="dateCreated datePublished" datetime="2021-07-15T12:44:45+08:00">2021-07-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-17 11:27:51" itemprop="dateModified" datetime="2021-07-17T11:27:51+08:00">2021-07-17</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
                 </span>
             </span>
 
@@ -234,14 +240,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.6k</span>
+              <span>7.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -282,8 +288,41 @@
 <p>3.id选择器的优先级高于class选择器的优先级。</p>
 <h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><p>用”*”定义，表示选取页面中的所有元素（标签）<br>语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong></p>
 <ul>
-<li>通配符选择器不需要调用，自动就给所有元素使用样式<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>基础选择器|作用|用法<br>:-|:-|:-<br>标签选择器|可以选出所有相同元素|p{color: red;}<br>类选择器|可以选出1个或者多个标签|.nav{color: red;}<br>id选择器|一次只能选择一个标签|#nav{color: red;}<br>通配符选择器|选择所有标签|*{color: red;}</li>
+<li>通配符选择器不需要调用，自动就给所有元素使用样式<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2></li>
 </ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">基础选择器</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">标签选择器</td>
+<td style="text-align:left">可以选出所有相同元素</td>
+<td style="text-align:left">p{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">类选择器</td>
+<td style="text-align:left">可以选出1个或者多个标签</td>
+<td style="text-align:left">.nav{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">id选择器</td>
+<td style="text-align:left">一次只能选择一个标签</td>
+<td style="text-align:left">#nav{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">通配符选择器</td>
+<td style="text-align:left">选择所有标签</td>
+<td style="text-align:left">*{color: red;}</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS使用font-famliy属性定义文本的字体<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>CSS使用font-size属性定义字体大小<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
@@ -315,7 +354,27 @@
 </tbody>
 </table>
 </div>
-<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p>font-style属性定义文字风格<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><br>属性值|作用<br>:-|:-<br>normal|默认值<br>italic|斜体</p>
+<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p>font-style属性定义文字风格<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">默认值</td>
+</tr>
+<tr>
+<td style="text-align:left">italic</td>
+<td style="text-align:left">斜体</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="字体符复合属性"><a href="#字体符复合属性" class="headerlink" title="字体符复合属性"></a>字体符复合属性</h2><p>节约代码</p>
 <p>语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-famliy;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: italic <span class="number">700</span> <span class="number">16px</span>/<span class="number">20px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: <span class="number">16px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意</strong></p>
 <ul>
@@ -404,7 +463,35 @@
 </tbody>
 </table>
 </div>
-<h2 id="装饰文本"><a href="#装饰文本" class="headerlink" title="装饰文本"></a>装饰文本</h2><p>text-decoration属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>属性值|描述<br>:-|:-<br>none|默认，可以用来取消链接的下划线<br>underline|下划线<br>overline|上划线<br>line-through|删除线</p>
+<h2 id="装饰文本"><a href="#装饰文本" class="headerlink" title="装饰文本"></a>装饰文本</h2><p>text-decoration属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">默认，可以用来取消链接的下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">underline</td>
+<td style="text-align:left">下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">overline</td>
+<td style="text-align:left">上划线</td>
+</tr>
+<tr>
+<td style="text-align:left">line-through</td>
+<td style="text-align:left">删除线</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p>text-indent属性用来指定文本的第一行的缩进，通常是将段落 <strong>首行缩进</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>em</strong> 单位表示相对单位，就是当前元素（font-size）1个文字的大小</p>
 <h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><p>line-height属性用于设置行间的距离（行高），可以控制文字行与行之间的距离<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
@@ -446,12 +533,32 @@
 <ul>
 <li>&lt;style&gt; 标签里理论上可以放在HTML文档的任何地方，但一般会放在文档的&lt;head&gt; 标签中</li>
 <li>通过此种方式可以方便控制当前整个页面元素样式设置</li>
-<li>代码结构清晰，但是没有实现结构与样式完全分离<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2>在元素标签内部的sytle属性中设定CSS样式，修改一些简单样式<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: red;font-size: 12px;&quot;</span>&gt;</span>hallow<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li>代码结构清晰，但是没有实现结构与样式完全分离<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2>在元素标签内部的sytle属性中设定CSS样式，修改一些简单样式<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: red;font-size: 12px;&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 不推荐大量使用</li>
 </ul>
 <h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><p>适用于样式比较多的情况下，核心:样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用。</p>
 <p>引入外部样式表的步骤：<br>1.新建一个后缀名为.css的样式文件,把所有CSS代码都放到此文件中。 </p>
-<p>2.在HTML页面中，使用&lt;link&gt;标签引入这个文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css文件路径&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure><br>属性|作用<br>:-|:-<br>rel|定义当前文档与被链接文档之间的关系，在这里需要指定为”stylesheet”,表示被链接文档是一个样式表文件<br>href|定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径</p>
+<p>2.在HTML页面中，使用&lt;link&gt;标签引入这个文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css文件路径&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">rel</td>
+<td style="text-align:left">定义当前文档与被链接文档之间的关系，在这里需要指定为”stylesheet”,表示被链接文档是一个样式表文件</td>
+</tr>
+<tr>
+<td style="text-align:left">href</td>
+<td style="text-align:left">定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
 <table>
 <thead>
@@ -476,6 +583,350 @@
 <td style="text-align:left">外部样式表</td>
 <td style="text-align:left">完全实现结构和样式相分离</td>
 <td style="text-align:left">控制多个页面</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-复合选择器"><a href="#CSS-复合选择器" class="headerlink" title="CSS 复合选择器"></a>CSS 复合选择器</h1><blockquote>
+<p>复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的</p>
+</blockquote>
+<p>常用复合选择器包括：后代选择器，子选择器，并集选择器，伪类选择器等</p>
+<h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><p>可以选择父类元素里面的子元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">元素<span class="number">1</span> 元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h2><p>只能选择作为某元素最近一级子元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">元素<span class="number">1</span>&gt;元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h2><p>可以选择多组标签，同时为他们定义相同样式</p>
+<p>通过逗号，（和的意思）连接而成</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">元素<span class="number">1</span>,</span><br><span class="line">元素<span class="number">2</span> &#123; </span><br><span class="line">	样式声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>用于某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素</p>
+<p>伪类选择器书写用冒号:表示</p>
+<h3 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器元素</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">a:link</td>
+<td style="text-align:left">选择所有未被访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:visited</td>
+<td style="text-align:left">选择所有已被访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:hover</td>
+<td style="text-align:left">选择鼠标指针位于其上的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:active</td>
+<td style="text-align:left">选择活动链接（鼠标按下未弹起的链接）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意:</strong></p>
+<ul>
+<li>必须按照顺序LVHA，要不然会不起作用</li>
+<li>因为a链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。</li>
+</ul>
+<h3 id="focus伪类选择器"><a href="#focus伪类选择器" class="headerlink" title=":focus伪类选择器"></a>:focus伪类选择器</h3><p>:focus 伪类选择器用于选取获得焦点的表单元素。<br>焦点是光标，一般情况&lt;input&gt;类表单元素才能获取，因此这个选择器也主要针对于表单元素来说</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结-4"><a href="#总结-4" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">后代选择器</td>
+<td style="text-align:left">用来选择后代元素</td>
+<td style="text-align:left">空格</td>
+</tr>
+<tr>
+<td style="text-align:left">子代选择器</td>
+<td style="text-align:left">选择最近一级元素</td>
+<td style="text-align:left">大于&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">并集选择器</td>
+<td style="text-align:left">选择某些样式相同的元素</td>
+<td style="text-align:left">逗号,</td>
+</tr>
+<tr>
+<td style="text-align:left">链接伪类选择器</td>
+<td style="text-align:left">选择不同状态的链接</td>
+<td style="text-align:left">冒号，重点记住a{}和a:hover</td>
+</tr>
+<tr>
+<td style="text-align:left">:focus伪类选择器</td>
+<td style="text-align:left">选择获得光标的表单</td>
+<td style="text-align:left">input:focus</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-的元素显示模式"><a href="#CSS-的元素显示模式" class="headerlink" title="CSS 的元素显示模式"></a>CSS 的元素显示模式</h1><blockquote>
+<p>元素显示模式就是元素（标签）以什么方式进行显示，比如&lt;div&gt;自己占一行，比如一行可以放多个&lt;span&gt;</p>
+</blockquote>
+<p>HTML元素一般分为 <strong>块元素</strong> 和 <strong>行内元素</strong></p>
+<h2 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h2><p>常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;li&gt;等，其中&lt;div&gt;标签式最典型的块元素</p>
+<p>块级元素特点：</p>
+<p>1.独占一行</p>
+<p>2.高度，宽度，外边距以及内边距都可以控制。</p>
+<p>3.宽度默认是容器（父级宽度）的100%。</p>
+<p>4.是一个容器及盒子，里面可以放行内或者块级元素。</p>
+<p><strong>注意:</strong></p>
+<ul>
+<li>文字类元素内不能使用块级元素</li>
+<li>&lt;p&gt;标签主要用于存放文字，因此&lt;p&gt;里面不能放块级元素，特别是不能放&lt;div&gt;</li>
+<li>同理，&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签，里面也不能放其他块级元素</li>
+</ul>
+<h2 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h2><p>常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等，其中&lt;span&gt;标签是最典型的行内元素。</p>
+<p>行内元素的特点：</p>
+<p>1.相邻行内元素在一行上，一行可以显示多个。</p>
+<p>2.高、宽直接设置是无效的</p>
+<p>3.默认宽度就是它本身内容的宽度。</p>
+<p>4.行内元素只能容纳文本或其它行内元素。</p>
+<p><strong>注意:</strong></p>
+<ul>
+<li>链接里面不能再放链接</li>
+<li>特殊情况&lt;a&gt;里面可以放块级元素，但是给&lt;a&gt;转换一下块级模式最安全</li>
+</ul>
+<h2 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h2><p>在行内元素中有几个特殊的标签 —— &lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;，他们同时具有块元素和行内元素的特点，有些资料称它们为行内块元素。</p>
+<p>行内块元素的特点：</p>
+<p>1.和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙，一行可以显示多个（行内元素特点）</p>
+<p>2.默认宽度就是它本身内容的宽度（行内元素的特点）</p>
+<p>3.高度、行高、外边距以及内边距都可以控制（块级元素特点）</p>
+<h2 id="总结-5"><a href="#总结-5" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">元素模式</th>
+<th style="text-align:left">元素排列</th>
+<th style="text-align:left">设置样式</th>
+<th style="text-align:left">默认宽度</th>
+<th style="text-align:left">包含</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">块级元素</td>
+<td style="text-align:left">一行只能放一个块级元素</td>
+<td style="text-align:left">可以设置宽度高度</td>
+<td style="text-align:left">容器的100%</td>
+<td style="text-align:left">容器可以包含任何标签</td>
+</tr>
+<tr>
+<td style="text-align:left">行内元素</td>
+<td style="text-align:left">一行可以放多个行内元素</td>
+<td style="text-align:left">不可以设置宽度高度</td>
+<td style="text-align:left">它自身内容的宽度</td>
+<td style="text-align:left">容纳文本或者其他行内元素</td>
+</tr>
+<tr>
+<td style="text-align:left">行内块元素</td>
+<td style="text-align:left">一行放多个行内块元素</td>
+<td style="text-align:left">可以设置宽度高度</td>
+<td style="text-align:left">它本身内容的宽度</td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="元素显示模式转换"><a href="#元素显示模式转换" class="headerlink" title="元素显示模式转换"></a>元素显示模式转换</h2><p>特殊情况下，我们需要元素模式的转换，简单理解：一个模式的元素需要另外一种模式的特性，比如想要增加链接&lt;a&gt;的触发范围</p>
+<ul>
+<li>转换为块元素：display:block;</li>
+<li>转换为行内元素： display:inline;</li>
+<li>转换为行内块元素： display:inline-block;</li>
+</ul>
+<h1 id="CSS-的背景"><a href="#CSS-的背景" class="headerlink" title="CSS 的背景"></a>CSS 的背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p>background-color 属性定义了元素的背景颜色<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></table></figure><br>一般情况下元素背景颜色默认值是transparent(透明)，我们也可以手动指定背景颜色为透明色。</p>
+<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p>background-image 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">绝对或相对位置</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h2><p>如果需要在HTML页面上对背景图像进行平铺，可以使用background-repeat 属性<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat | no-repeat | repeat-x | repeat-y </span><br></pre></td></tr></table></figure></p>
+<h2 id="背景图片位置"><a href="#背景图片位置" class="headerlink" title="背景图片位置"></a>背景图片位置</h2><p>利用bcakground-positon属性可以改变图片在背景中的位置。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br></pre></td></tr></table></figure><br>参数代表的意思是：x坐标和y坐标，可以使用方位名词或者精确单位</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">length</td>
+<td style="text-align:left">百分数/由浮点数字和单位标识符组成的长度值</td>
+</tr>
+<tr>
+<td style="text-align:left">position</td>
+<td style="text-align:left">top/center/bottom / left/center/right 方位名词</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>1.参数是方位名词</p>
+<ul>
+<li>如果指定的两个值都是方位名词，则两个值前后顺序无关，比如left top和top left 效果一样</li>
+<li>如果指定了一个方位名词，另一个省略，则第二个值默认居中对齐</li>
+</ul>
+<p>2.参数是精确单位</p>
+<ul>
+<li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个肯定是y坐标</li>
+<li>如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中</li>
+</ul>
+<p>3.参数是混合单位</p>
+<ul>
+<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2>background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动。</li>
+</ul>
+<p>background-attachment后期可以制作时差滚动效果<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: <span class="built_in">fixed</span>(固定) | <span class="built_in">scroll</span>(滚动) </span><br></pre></td></tr></table></figure></p>
+<h2 id="背景复合写法"><a href="#背景复合写法" class="headerlink" title="背景复合写法"></a>背景复合写法</h2><p>为了简化背景属性的代码，我们可以将这些属性合并写在同一个属性background中，从而节约代码量，没有特定顺序，一般习惯约定顺序为：</p>
+<p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
+<h2 id="背景色半透明"><a href="#背景色半透明" class="headerlink" title="背景色半透明"></a>背景色半透明</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>最后一个参数是alpha透明度，取值范围0~1之间</li>
+<li>习惯上把0.3的0省略掉，写为background:rgba(0,0,0,.3);<h2 id="总结-6"><a href="#总结-6" class="headerlink" title="总结"></a>总结</h2></li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">background-color</td>
+<td style="text-align:left">背景颜色</td>
+<td style="text-align:left">预定义颜色值、十六进制、RGB代码</td>
+</tr>
+<tr>
+<td style="text-align:left">background-image</td>
+<td style="text-align:left">背景图片</td>
+<td style="text-align:left">url(图片路径)</td>
+</tr>
+<tr>
+<td style="text-align:left">background-repeat</td>
+<td style="text-align:left">是否平铺</td>
+<td style="text-align:left">repeat/no-repeat/repeat-x/repeat-y</td>
+</tr>
+<tr>
+<td style="text-align:left">background-position</td>
+<td style="text-align:left">背景位置</td>
+<td style="text-align:left">length/positon 分别是x和y坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">background-attachment</td>
+<td style="text-align:left">背景附着</td>
+<td style="text-align:left">scroll(滚动)/fixed(固定)</td>
+</tr>
+<tr>
+<td style="text-align:left">背景简写</td>
+<td style="text-align:left">减少代码量</td>
+<td style="text-align:left">background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置;</td>
+</tr>
+<tr>
+<td style="text-align:left">背景色半透明</td>
+<td style="text-align:left">背景颜色半透明</td>
+<td style="text-align:left">background:(0,0,0,.3); 后面必须是4个值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-的三大特性"><a href="#CSS-的三大特性" class="headerlink" title="CSS 的三大特性"></a>CSS 的三大特性</h1><blockquote>
+<p>CSS有三个非常重要的特性：层叠性、继承性、优先级。</p>
+<h2 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h2><p>相同选择器给设置的样式，此时一个样式就会覆盖（层叠）另一个冲突的样式。层叠性主要解决样式冲突的问题。</p>
+</blockquote>
+<p>层叠性原则：</p>
+<ul>
+<li>样式冲突：就近原则那个样式离结构近，就执行哪个样式</li>
+<li><p>样式不冲突，不会层叠。</p>
+<h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><p>CSS中的继承：<strong>子标签</strong> 会继承 <strong>父标签</strong> 的某些样式，如文本颜色和字号</p>
+</li>
+<li><p>恰当使用继承可以简化代码，降低CSS样式的复杂性</p>
+</li>
+<li>子标签可以继承父标签的样式（text-,font-,line- 以及color属性）</li>
+</ul>
+<p><strong>行高的继承</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: <span class="number">12px</span>/<span class="number">1.5</span> Microsoft YaHei</span><br><span class="line">    这个<span class="number">1.5</span>就是当前元素文字大小font-size的<span class="number">1.5</span>倍</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>行高可以跟单位也可以不跟单位<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2>当同一个元素指定多个选择器，就会有优先级产生。</li>
+<li>选择器相同，则执行层叠性</li>
+<li>选择器不同，则根据 <strong>选择器权重</strong> 执行</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器</th>
+<th style="text-align:left">选择器权重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">继承或*</td>
+<td style="text-align:left">0,0,0,0</td>
+</tr>
+<tr>
+<td style="text-align:left">元素选择器</td>
+<td style="text-align:left">0,0,0,1</td>
+</tr>
+<tr>
+<td style="text-align:left">类选择器，伪类选择器</td>
+<td style="text-align:left">0,0,1,0</td>
+</tr>
+<tr>
+<td style="text-align:left">ID选择器</td>
+<td style="text-align:left">0,1,0,0</td>
+</tr>
+<tr>
+<td style="text-align:left">行内样式style=””</td>
+<td style="text-align:left">1,0,0,0</td>
+</tr>
+<tr>
+<td style="text-align:left">!important 重要的</td>
+<td style="text-align:left">无穷大</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意点</strong></p>
+<ul>
+<li>权重是有4组数字组成，但是不会有进位</li>
+<li>等级判断从左向右，如果某一位数值相同，则判断下一位数值。</li>
+<li><strong>继承的权重是0</strong>,如果该元素没有直接选中，不管父元素权重多高，子元素得到的权重都是0。</li>
+</ul>
+<p><strong>权重叠加</strong>：如果是复合选择器，则会有权重叠加，需要计算权重</p>
+<h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><p>网页布局的核心本质就是利用CSS摆盒子。</p>
+<h2 id="盒子模型组成"><a href="#盒子模型组成" class="headerlink" title="盒子模型组成"></a>盒子模型组成</h2><p>所谓 <strong>盒子模型：</strong> 就是把HTML页面中的布局元素看作是一个矩形的盒子，也就是一个盛装内容的容器。</p>
+<p>CSS盒子模型本质上是一个盒子，封装周围的HTML元素，它包括：边框，外边距，内边距，内容。</p>
+<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><p><div style="width: 300px; height: 200px; border-width:5px; border-style:solid;border-color: black;"> </div><br>border可以设置元素的边框，边框由三部分组成：边框宽度、边框样式、边框颜色</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-width</td>
+<td style="text-align:left">定义边框粗细，单位是px</td>
+</tr>
+<tr>
+<td style="text-align:left">border-style</td>
+<td style="text-align:left">边框样式</td>
+</tr>
+<tr>
+<td style="text-align:left">border-color</td>
+<td style="text-align:left">边框颜色</td>
 </tr>
 </tbody>
 </table>
@@ -561,7 +1012,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="nav-number">1.</span> <span class="nav-text">CSS代码风格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">CSS 基础选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">CSS 选择器的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%86%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">选择器分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.3.</span> <span class="nav-text">标签选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.4.</span> <span class="nav-text">类选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8-%E5%A4%9A%E7%B1%BB%E5%90%8D"><span class="nav-number">2.5.</span> <span class="nav-text">类选择器-多类名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.6.</span> <span class="nav-text">id选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.7.</span> <span class="nav-text">通配符选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">2.8.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">CSS 字体属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E7%B3%BB%E5%88%97"><span class="nav-number">3.1.</span> <span class="nav-text">字体系列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F"><span class="nav-number">3.2.</span> <span class="nav-text">字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86"><span class="nav-number">3.3.</span> <span class="nav-text">字体粗细</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">文字样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E7%AC%A6%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="nav-number">3.5.</span> <span class="nav-text">字体符复合属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">3.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">CSS 文本属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2"><span class="nav-number">4.1.</span> <span class="nav-text">文本颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E9%BD%90%E6%96%87%E6%9C%AC"><span class="nav-number">4.2.</span> <span class="nav-text">对齐文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A3%85%E9%A5%B0%E6%96%87%E6%9C%AC"><span class="nav-number">4.3.</span> <span class="nav-text">装饰文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E7%BC%A9%E8%BF%9B"><span class="nav-number">4.4.</span> <span class="nav-text">文本缩进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E9%97%B4%E8%B7%9D"><span class="nav-number">4.5.</span> <span class="nav-text">行间距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">4.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">CSS 引入方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">5.1.</span> <span class="nav-text">CSS 的三种样式表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">5.2.</span> <span class="nav-text">内部样式表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">5.3.</span> <span class="nav-text">行内样式表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">5.4.</span> <span class="nav-text">外部样式表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-number">5.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="nav-number">1.</span> <span class="nav-text">CSS代码风格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">CSS 基础选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">CSS 选择器的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%86%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">选择器分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.3.</span> <span class="nav-text">标签选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.4.</span> <span class="nav-text">类选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8-%E5%A4%9A%E7%B1%BB%E5%90%8D"><span class="nav-number">2.5.</span> <span class="nav-text">类选择器-多类名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.6.</span> <span class="nav-text">id选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.7.</span> <span class="nav-text">通配符选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">2.8.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">CSS 字体属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E7%B3%BB%E5%88%97"><span class="nav-number">3.1.</span> <span class="nav-text">字体系列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F"><span class="nav-number">3.2.</span> <span class="nav-text">字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86"><span class="nav-number">3.3.</span> <span class="nav-text">字体粗细</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">文字样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E7%AC%A6%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="nav-number">3.5.</span> <span class="nav-text">字体符复合属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">3.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">CSS 文本属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2"><span class="nav-number">4.1.</span> <span class="nav-text">文本颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E9%BD%90%E6%96%87%E6%9C%AC"><span class="nav-number">4.2.</span> <span class="nav-text">对齐文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A3%85%E9%A5%B0%E6%96%87%E6%9C%AC"><span class="nav-number">4.3.</span> <span class="nav-text">装饰文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E7%BC%A9%E8%BF%9B"><span class="nav-number">4.4.</span> <span class="nav-text">文本缩进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E9%97%B4%E8%B7%9D"><span class="nav-number">4.5.</span> <span class="nav-text">行间距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">4.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">CSS 引入方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">5.1.</span> <span class="nav-text">CSS 的三种样式表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">5.2.</span> <span class="nav-text">内部样式表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">5.3.</span> <span class="nav-text">行内样式表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">5.4.</span> <span class="nav-text">外部样式表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-number">5.5.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">6.</span> <span class="nav-text">CSS 复合选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">6.1.</span> <span class="nav-text">后代选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%90%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">6.2.</span> <span class="nav-text">子选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">6.3.</span> <span class="nav-text">并集选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">6.4.</span> <span class="nav-text">伪类选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">6.4.1.</span> <span class="nav-text">链接伪类选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#focus%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">6.4.2.</span> <span class="nav-text">:focus伪类选择器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-4"><span class="nav-number">6.5.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="nav-number">7.</span> <span class="nav-text">CSS 的元素显示模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%97%E5%85%83%E7%B4%A0"><span class="nav-number">7.1.</span> <span class="nav-text">块元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0"><span class="nav-number">7.2.</span> <span class="nav-text">行内元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E5%9D%97%E5%85%83%E7%B4%A0"><span class="nav-number">7.3.</span> <span class="nav-text">行内块元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-5"><span class="nav-number">7.4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">7.5.</span> <span class="nav-text">元素显示模式转换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E7%9A%84%E8%83%8C%E6%99%AF"><span class="nav-number">8.</span> <span class="nav-text">CSS 的背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2"><span class="nav-number">8.1.</span> <span class="nav-text">背景颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="nav-number">8.2.</span> <span class="nav-text">背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%B9%B3%E9%93%BA"><span class="nav-number">8.3.</span> <span class="nav-text">背景平铺</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E4%BD%8D%E7%BD%AE"><span class="nav-number">8.4.</span> <span class="nav-text">背景图片位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E5%83%8F%E5%9B%BA%E5%AE%9A%EF%BC%88%E8%83%8C%E6%99%AF%E9%99%84%E7%9D%80%EF%BC%89"><span class="nav-number">8.5.</span> <span class="nav-text">背景图像固定（背景附着）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%A4%8D%E5%90%88%E5%86%99%E6%B3%95"><span class="nav-number">8.6.</span> <span class="nav-text">背景复合写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%89%B2%E5%8D%8A%E9%80%8F%E6%98%8E"><span class="nav-number">8.7.</span> <span class="nav-text">背景色半透明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-6"><span class="nav-number">8.8.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">9.</span> <span class="nav-text">CSS 的三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E5%8F%A0%E6%80%A7"><span class="nav-number">9.1.</span> <span class="nav-text">层叠性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF%E6%80%A7"><span class="nav-number">9.2.</span> <span class="nav-text">继承性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">9.3.</span> <span class="nav-text">优先级</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">10.</span> <span class="nav-text">CSS盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%BB%84%E6%88%90"><span class="nav-number">10.1.</span> <span class="nav-text">盒子模型组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%EF%BC%88border%EF%BC%89"><span class="nav-number">10.2.</span> <span class="nav-text">边框（border）</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -584,7 +1035,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -646,12 +1097,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">96k</span>
+    <span title="站点总字数">100k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:27</span>
+    <span title="站点阅读时长">1:31</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
