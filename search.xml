@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>0. 知识储备</title>
-    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
-<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
-<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
-<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
-<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
-<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
-<ul>
-<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
-</ul>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>0.CSS的一些规范和特性</title>
-    <url>/2021/07/20/0-CSS%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/</url>
+    <url>/2021/07/20/0-CSS%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E8%8C%83%E5%92%8C%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS代码规范"><a href="#CSS代码规范" class="headerlink" title="CSS代码规范"></a>CSS代码规范</h1><h2 id="样式格式书写"><a href="#样式格式书写" class="headerlink" title="样式格式书写"></a>样式格式书写</h2><p>(1) 紧凑格式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123; <span class="attribute">color</span>: red;<span class="attribute">font-size</span>: <span class="number">20px</span>; &#125;</span><br></pre></td></tr></table></figure></p>
 <p>(2) 展开格式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="样式大小写"><a href="#样式大小写" class="headerlink" title="样式大小写"></a>样式大小写</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">COLOR</span>: PINK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -44,9 +23,9 @@
 <ul>
 <li>&lt;style&gt; 标签里理论上可以放在HTML文档的任何地方，但一般会放在文档的&lt;head&gt; 标签中</li>
 <li>通过此种方式可以方便控制当前整个页面元素样式设置</li>
-<li>代码结构清晰，但是没有实现结构与样式完全分离<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2>在元素标签内部的sytle属性中设定CSS样式，修改一些简单样式<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: red;font-size: 12px;&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-不推荐大量使用</li>
+<li>代码结构清晰，但是没有实现结构与样式完全分离</li>
 </ul>
+<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2><p>在元素标签内部的sytle属性中设定CSS样式，修改一些简单样式<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: red;font-size: 12px;&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><br>不推荐大量使用</p>
 <h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><p>适用于样式比较多的情况下，核心:样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用。</p>
 <p>引入外部样式表的步骤：<br>1.新建一个后缀名为.css的样式文件,把所有CSS代码都放到此文件中。 </p>
 <p>2.在HTML页面中，使用&lt;link&gt;标签引入这个文件。<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css文件路径&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
@@ -100,21 +79,24 @@
 </div>
 <h1 id="CSS-的三大特性"><a href="#CSS-的三大特性" class="headerlink" title="CSS 的三大特性"></a>CSS 的三大特性</h1><blockquote>
 <p>CSS有三个非常重要的特性：层叠性、继承性、优先级。</p>
-<h2 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h2><p>相同选择器给设置的样式，此时一个样式就会覆盖（层叠）另一个冲突的样式。层叠性主要解决样式冲突的问题。</p>
 </blockquote>
+<h2 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h2><p>相同选择器给设置的样式，此时一个样式就会覆盖（层叠）另一个冲突的样式。层叠性主要解决样式冲突的问题。</p>
 <p>层叠性原则：</p>
 <ul>
 <li>样式冲突：就近原则那个样式离结构近，就执行哪个样式</li>
-<li><p>样式不冲突，不会层叠。</p>
+<li>样式不冲突，不会层叠。</li>
+</ul>
 <h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><p>CSS中的继承：<strong>子标签</strong> 会继承 <strong>父标签</strong> 的某些样式，如文本颜色和字号</p>
-</li>
-<li><p>恰当使用继承可以简化代码，降低CSS样式的复杂性</p>
-</li>
+<ul>
+<li>恰当使用继承可以简化代码，降低CSS样式的复杂性</li>
 <li>子标签可以继承父标签的样式（text-,font-,line- 以及color属性）</li>
 </ul>
 <p><strong>行高的继承</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: <span class="number">12px</span>/<span class="number">1.5</span> Microsoft YaHei</span><br><span class="line">    这个<span class="number">1.5</span>就是当前元素文字大小font-size的<span class="number">1.5</span>倍</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>行高可以跟单位也可以不跟单位<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2>当同一个元素指定多个选择器，就会有优先级产生。</li>
+<li>行高可以跟单位也可以不跟单位</li>
+</ul>
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>当同一个元素指定多个选择器，就会有优先级产生。</p>
+<ul>
 <li>选择器相同，则执行层叠性</li>
 <li>选择器不同，则根据 <strong>选择器权重</strong> 执行</li>
 </ul>
@@ -171,6 +153,27 @@
       </tags>
   </entry>
   <entry>
+    <title>0. 知识储备</title>
+    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
+<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
+<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
+<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
+<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
+<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
+<ul>
+<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
+</ul>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.CSS选择器</title>
     <url>/2021/07/20/1-CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>分类</strong>： <strong>基础选择器</strong> 和 <strong>复合选择器</strong> </p>
@@ -194,9 +197,9 @@
 <p>3.id选择器的优先级高于class选择器的优先级。</p>
 <h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><p>用”*”定义，表示选取页面中的所有元素（标签）<br>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong></p>
 <ul>
-<li>通配符选择器不需要调用，自动就给所有元素使用样式<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2></li>
+<li>通配符选择器不需要调用，自动就给所有元素使用样式</li>
 </ul>
-<div class="table-container">
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -240,7 +243,7 @@
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>,</span><br><span class="line">元素<span class="number">2</span> &#123; </span><br><span class="line">	样式声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>用于某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素</p>
 <p>伪类选择器书写用冒号:表示</p>
-<h3 id="链接-伪类选择器"><a href="#链接-伪类选择器" class="headerlink" title="链接 伪类选择器"></a>链接 伪类选择器</h3><div class="table-container">
+<h3 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1388,76 +1391,6 @@ False
       </tags>
   </entry>
   <entry>
-    <title>1.行列式</title>
-    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
-<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p><strong>例</strong><br></p>
-<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
-<p>解：由于系数行列式<br></p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
-<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
-<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
-<p>故方程组的解为：</p>
-<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
-<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
-<ul>
-<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
-</ul>
-<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
-<ul>
-<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
-</ul>
-<p><strong>其他的性质:</strong></p>
-<ul>
-<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
-</li>
-<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
-</li>
-<li><p>（方阵）$|AB|=|A||B|$</p>
-</li>
-<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
-</li>
-<li><p>$|2A|=2^n|A|$</p>
-</li>
-</ul>
-<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
-<ul>
-<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
-</ul>
-<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
-<p>下三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
-<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
-<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
-<p><strong>应用</strong>  </p>
-<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
-<ul>
-<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
-</ul>
-<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
-<li>有一块全是零的行列式</li>
-</ul>
-<hr>
-<ul>
-<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
-<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1.matplotlib入门</title>
     <url>/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h1><h2 id="常见API介绍"><a href="#常见API介绍" class="headerlink" title="常见API介绍"></a>常见API介绍</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
@@ -1902,264 +1835,73 @@ False
       </tags>
   </entry>
   <entry>
-    <title>2.n维数组</title>
-    <url>/2021/07/02/2-n%E7%BB%B4%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="N维数组（ndarray）"><a href="#N维数组（ndarray）" class="headerlink" title="N维数组（ndarray）"></a>N维数组（ndarray）</h1><blockquote>
-<p>ndarray是numpy的数组类，别名array</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<h2 id="np-ndarray"><a href="#np-ndarray" class="headerlink" title="np.ndarray()"></a>np.ndarray()</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">用处</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">shape(tuple)</td>
-<td style="text-align:left">所创建数组的形状</td>
-</tr>
-<tr>
-<td style="text-align:left">dtype(data-type)</td>
-<td style="text-align:left">numpy数据的类型</td>
-</tr>
-<tr>
-<td style="text-align:left">buffer</td>
-<td style="text-align:left">初始化数据</td>
-</tr>
-<tr>
-<td style="text-align:left">offset(int)</td>
-<td style="text-align:left">初始化数据的首个数据的偏移量</td>
-</tr>
-<tr>
-<td style="text-align:left">strides(int型tuple)</td>
-<td style="text-align:left">每个轴的下标增加一时,数据指针在内存中增加的字节数</td>
-</tr>
-<tr>
-<td style="text-align:left">order{‘C’,’F’}</td>
-<td style="text-align:left">行优先(C-style)或列优先(Fortran-style)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#例</span></span><br><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">12</span>),offset=<span class="number">0</span>,order=<span class="string">&quot;C&quot;</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">12</span>),offset=<span class="number">0</span>,order=<span class="string">&quot;F&quot;</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  3,  6,  9],
-       [ 1,  4,  7, 10],
-       [ 2,  5,  8, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">20</span>),offset=<span class="number">20</span>,order=<span class="string">&quot;C&quot;</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 5,  6,  7,  8],
-       [ 9, 10, 11, 12],
-       [13, 14, 15, 16]])
-</code></pre><h2 id="ndarray对象的常用属性"><a href="#ndarray对象的常用属性" class="headerlink" title="ndarray对象的常用属性"></a>ndarray对象的常用属性</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">属性</th>
-<th style="text-align:left">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">T</td>
-<td style="text-align:left">转置</td>
-</tr>
-<tr>
-<td style="text-align:center">size</td>
-<td style="text-align:left">数列中元素个数</td>
-</tr>
-<tr>
-<td style="text-align:center">itemsize</td>
-<td style="text-align:left">数组中单个元素的字节长度</td>
-</tr>
-<tr>
-<td style="text-align:center">dtype</td>
-<td style="text-align:left">数组元素的数据类型对象</td>
-</tr>
-<tr>
-<td style="text-align:center">ndim</td>
-<td style="text-align:left">数组的维度</td>
-</tr>
-<tr>
-<td style="text-align:center">shape</td>
-<td style="text-align:left">数组的形状</td>
-</tr>
-<tr>
-<td style="text-align:center">data</td>
-<td style="text-align:left">指向存放数组数据的python buffer对象</td>
-</tr>
-<tr>
-<td style="text-align:center">flat</td>
-<td style="text-align:left">返回数组的一维迭代器</td>
-</tr>
-<tr>
-<td style="text-align:center">imag</td>
-<td style="text-align:left">返回数组的虚部</td>
-</tr>
-<tr>
-<td style="text-align:center">real</td>
-<td style="text-align:left">返回数组的实部</td>
-</tr>
-<tr>
-<td style="text-align:center">nbytes</td>
-<td style="text-align:left">数组中所有元素的字节长度</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 例</span></span><br><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a.T</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  4,  8],
-       [ 1,  5,  9],
-       [ 2,  6, 10],
-       [ 3,  7, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.size:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.size)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.itemsize&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.itemsize)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.dtype&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.dtype)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.ndim&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.ndim)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.flat&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.flat)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.nbytes&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.nbytes)</span><br></pre></td></tr></table></figure>
-<pre><code>a.size:
-12
--------------------------
-a.itemsize
-4
--------------------------
-a.dtype
-int32
--------------------------
-a.ndim
-2
--------------------------
-a.flat
-&lt;numpy.flatiter object at 0x0000023A25BBA040&gt;
--------------------------
-a.nbytes
-48
-</code></pre><h2 id="创建ndarray"><a href="#创建ndarray" class="headerlink" title="创建ndarray"></a>创建ndarray</h2><ol>
-<li>array</li>
-<li>noes</li>
-<li>zeros</li>
-<li>eye：二维单位矩阵</li>
-<li>identity：单位矩阵</li>
-<li>full：生成由固定值填充的数组</li>
-<li>full_like</li>
-<li>arange：指定初始值、终值、步长</li>
-<li>linspace：指定初始值、终值、元素个数</li>
-<li>logspace：与linspaceleisi,但是创建的是等比数列</li>
-<li>fromstring:从字符串中读取数据并创建数组</li>
-<li>fromfunction：由第一个参数作为计算每个数组元素的函数（函数对象或者lambda表达式均可），第二个参数为数组的形状</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.eye(<span class="number">3</span>,k = <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0., 1., 0.],
-       [0., 0., 1.],
-       [0., 0., 0.]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.full(shape=(<span class="number">2</span>,<span class="number">3</span>),fill_value= <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[2, 2, 2],
-       [2, 2, 2]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.logspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([1.e+01, 1.e+02, 1.e+03, 1.e+04, 1.e+05, 1.e+06, 1.e+07, 1.e+08,
-       1.e+09, 1.e+10])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10.])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s1 = (<span class="string">&quot;1,2,3,4,5&quot;</span>)</span><br><span class="line">np.fromstring(s1,dtype=<span class="built_in">int</span>,sep=<span class="string">&quot;,&quot;</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([1, 2, 3, 4, 5])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s2 = (<span class="string">&quot;1 2 3 4 5&quot;</span>)</span><br><span class="line">np.fromstring(s2,dtype=<span class="built_in">int</span>,sep=<span class="string">&quot; &quot;</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([1, 2, 3, 4, 5])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.fromfunction(<span class="keyword">lambda</span> i,j:i+j,(<span class="number">3</span>,<span class="number">3</span>),dtype =<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 2],
-       [1, 2, 3],
-       [2, 3, 4]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">i,j</span>):</span></span><br><span class="line">    <span class="keyword">return</span> i+j</span><br><span class="line"></span><br><span class="line">np.fromfunction(func,(<span class="number">3</span>,<span class="number">3</span>),dtype=<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 2],
-       [1, 2, 3],
-       [2, 3, 4]])
-</code></pre><h2 id="创建特殊的二维数组"><a href="#创建特殊的二维数组" class="headerlink" title="创建特殊的二维数组"></a>创建特殊的二维数组</h2><ol>
-<li>diag，返回数组的对角元素，或创建对角阵，对角线由参数k控制</li>
-<li>diagflat，以输入作为对角元素，创建一个矩阵，对角线由k控制</li>
-<li>tri，生成一个矩阵，在某对角线下元素全为1，其余为0，对角线由k控制</li>
-<li>tril，输入一个矩阵，返回一个下三角阵，对角线由k控制</li>
-<li>triu，类似tril,但返回矩阵的上三角矩阵</li>
-<li>vander，输入一个一维数组，返回一个范德蒙行列式</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(a,k=-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([4, 9])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(np.diag(a))</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  0,  0],
-       [ 0,  5,  0],
-       [ 0,  0, 10]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diagflat([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 0, 0, 0],
-       [0, 2, 0, 0],
-       [0, 0, 3, 0],
-       [0, 0, 0, 4]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diagflat([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],k=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 0, 0, 0],
-       [0, 0, 2, 0, 0],
-       [0, 0, 0, 3, 0],
-       [0, 0, 0, 0, 4],
-       [0, 0, 0, 0, 0]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.tri(<span class="number">3</span>,<span class="number">4</span>,k=<span class="number">1</span>,dtype=<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 1, 0, 0],
-       [1, 1, 1, 0],
-       [1, 1, 1, 1]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.tri(<span class="number">3</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1., 0., 0., 0.],
-       [1., 1., 0., 0.],
-       [1., 1., 1., 0.]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;----------------------&quot;</span>)</span><br><span class="line">np.tril(a)</span><br></pre></td></tr></table></figure>
-<pre><code>[[ 0  1  2  3]
- [ 4  5  6  7]
- [ 8  9 10 11]]
-----------------------
-
-
-
-
-
-array([[ 0,  0,  0,  0],
-       [ 4,  5,  0,  0],
-       [ 8,  9, 10,  0]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.triu(a)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 0,  5,  6,  7],
-       [ 0,  0, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.vander([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
-<pre><code>array([[  8,   4,   2,   1],
-       [ 27,   9,   3,   1],
-       [ 64,  16,   4,   1],
-       [125,  25,   5,   1]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.vander([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>],N=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 4,  2,  1],
-       [ 9,  3,  1],
-       [16,  4,  1],
-       [25,  5,  1]])
-</code></pre><h2 id="轴"><a href="#轴" class="headerlink" title="轴"></a>轴</h2><p>多维ndarray中，每一维都叫一个轴axis。有很多对于ndarray对象的运算都是基于axis进行，在入门的时候也接触了一些轴方面的应用，比如下面：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[:,<span class="number">2</span>] <span class="comment"># 第3列所有元素</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([ 2,  6, 10])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>] <span class="comment"># 这个也等价于a[1,2]</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([6])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">1</span>:<span class="number">3</span>,:] <span class="comment"># 2到3行所有列 </span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre>]]></content>
+    <title>1.行列式</title>
+    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
+<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p><strong>例</strong><br></p>
+<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
+<p>解：由于系数行列式<br></p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
+<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
+<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
+<p>故方程组的解为：</p>
+<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
+<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
+<ul>
+<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
+</ul>
+<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
+<ul>
+<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
+</ul>
+<p><strong>其他的性质:</strong></p>
+<ul>
+<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
+</li>
+<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
+</li>
+<li><p>（方阵）$|AB|=|A||B|$</p>
+</li>
+<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
+</li>
+<li><p>$|2A|=2^n|A|$</p>
+</li>
+</ul>
+<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
+<ul>
+<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
+</ul>
+<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
+<p>下三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
+<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
+<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
+<p><strong>应用</strong>  </p>
+<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
+<ul>
+<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
+</ul>
+<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
+<li>有一块全是零的行列式</li>
+</ul>
+<hr>
+<ul>
+<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
+<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
+]]></content>
       <categories>
-        <category>numpy</category>
+        <category>线性代数</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -2456,6 +2198,267 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>2.n维数组</title>
+    <url>/2021/07/02/2-n%E7%BB%B4%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="N维数组（ndarray）"><a href="#N维数组（ndarray）" class="headerlink" title="N维数组（ndarray）"></a>N维数组（ndarray）</h1><blockquote>
+<p>ndarray是numpy的数组类，别名array</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="np-ndarray"><a href="#np-ndarray" class="headerlink" title="np.ndarray()"></a>np.ndarray()</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">用处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">shape(tuple)</td>
+<td style="text-align:left">所创建数组的形状</td>
+</tr>
+<tr>
+<td style="text-align:left">dtype(data-type)</td>
+<td style="text-align:left">numpy数据的类型</td>
+</tr>
+<tr>
+<td style="text-align:left">buffer</td>
+<td style="text-align:left">初始化数据</td>
+</tr>
+<tr>
+<td style="text-align:left">offset(int)</td>
+<td style="text-align:left">初始化数据的首个数据的偏移量</td>
+</tr>
+<tr>
+<td style="text-align:left">strides(int型tuple)</td>
+<td style="text-align:left">每个轴的下标增加一时,数据指针在内存中增加的字节数</td>
+</tr>
+<tr>
+<td style="text-align:left">order{‘C’,’F’}</td>
+<td style="text-align:left">行优先(C-style)或列优先(Fortran-style)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#例</span></span><br><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">12</span>),offset=<span class="number">0</span>,order=<span class="string">&quot;C&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">12</span>),offset=<span class="number">0</span>,order=<span class="string">&quot;F&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  3,  6,  9],
+       [ 1,  4,  7, 10],
+       [ 2,  5,  8, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.ndarray(shape=(<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>,buffer=np.arange(<span class="number">20</span>),offset=<span class="number">20</span>,order=<span class="string">&quot;C&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 5,  6,  7,  8],
+       [ 9, 10, 11, 12],
+       [13, 14, 15, 16]])
+</code></pre><h2 id="ndarray对象的常用属性"><a href="#ndarray对象的常用属性" class="headerlink" title="ndarray对象的常用属性"></a>ndarray对象的常用属性</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:left">转置</td>
+</tr>
+<tr>
+<td style="text-align:center">size</td>
+<td style="text-align:left">数列中元素个数</td>
+</tr>
+<tr>
+<td style="text-align:center">itemsize</td>
+<td style="text-align:left">数组中单个元素的字节长度</td>
+</tr>
+<tr>
+<td style="text-align:center">dtype</td>
+<td style="text-align:left">数组元素的数据类型对象</td>
+</tr>
+<tr>
+<td style="text-align:center">ndim</td>
+<td style="text-align:left">数组的维度</td>
+</tr>
+<tr>
+<td style="text-align:center">shape</td>
+<td style="text-align:left">数组的形状</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:left">指向存放数组数据的python buffer对象</td>
+</tr>
+<tr>
+<td style="text-align:center">flat</td>
+<td style="text-align:left">返回数组的一维迭代器</td>
+</tr>
+<tr>
+<td style="text-align:center">imag</td>
+<td style="text-align:left">返回数组的虚部</td>
+</tr>
+<tr>
+<td style="text-align:center">real</td>
+<td style="text-align:left">返回数组的实部</td>
+</tr>
+<tr>
+<td style="text-align:center">nbytes</td>
+<td style="text-align:left">数组中所有元素的字节长度</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 例</span></span><br><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a.T</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  4,  8],
+       [ 1,  5,  9],
+       [ 2,  6, 10],
+       [ 3,  7, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.size:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.size)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.itemsize&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.itemsize)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.dtype&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.dtype)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.ndim&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.ndim)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.flat&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.flat)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a.nbytes&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.nbytes)</span><br></pre></td></tr></table></figure>
+<pre><code>a.size:
+12
+-------------------------
+a.itemsize
+4
+-------------------------
+a.dtype
+int32
+-------------------------
+a.ndim
+2
+-------------------------
+a.flat
+&lt;numpy.flatiter object at 0x0000023A25BBA040&gt;
+-------------------------
+a.nbytes
+48
+</code></pre><h2 id="创建ndarray"><a href="#创建ndarray" class="headerlink" title="创建ndarray"></a>创建ndarray</h2><ol>
+<li>array</li>
+<li>noes</li>
+<li>zeros</li>
+<li>eye：二维单位矩阵</li>
+<li>identity：单位矩阵</li>
+<li>full：生成由固定值填充的数组</li>
+<li>full_like</li>
+<li>arange：指定初始值、终值、步长</li>
+<li>linspace：指定初始值、终值、元素个数</li>
+<li>logspace：与linspaceleisi,但是创建的是等比数列</li>
+<li>fromstring:从字符串中读取数据并创建数组</li>
+<li>fromfunction：由第一个参数作为计算每个数组元素的函数（函数对象或者lambda表达式均可），第二个参数为数组的形状</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.eye(<span class="number">3</span>,k = <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0., 1., 0.],
+       [0., 0., 1.],
+       [0., 0., 0.]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.full(shape=(<span class="number">2</span>,<span class="number">3</span>),fill_value= <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[2, 2, 2],
+       [2, 2, 2]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.logspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1.e+01, 1.e+02, 1.e+03, 1.e+04, 1.e+05, 1.e+06, 1.e+07, 1.e+08,
+       1.e+09, 1.e+10])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10.])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s1 = (<span class="string">&quot;1,2,3,4,5&quot;</span>)</span><br><span class="line">np.fromstring(s1,dtype=<span class="built_in">int</span>,sep=<span class="string">&quot;,&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 2, 3, 4, 5])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s2 = (<span class="string">&quot;1 2 3 4 5&quot;</span>)</span><br><span class="line">np.fromstring(s2,dtype=<span class="built_in">int</span>,sep=<span class="string">&quot; &quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 2, 3, 4, 5])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.fromfunction(<span class="keyword">lambda</span> i,j:i+j,(<span class="number">3</span>,<span class="number">3</span>),dtype =<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [1, 2, 3],
+       [2, 3, 4]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">i,j</span>):</span></span><br><span class="line">    <span class="keyword">return</span> i+j</span><br><span class="line"></span><br><span class="line">np.fromfunction(func,(<span class="number">3</span>,<span class="number">3</span>),dtype=<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [1, 2, 3],
+       [2, 3, 4]])
+</code></pre><h2 id="创建特殊的二维数组"><a href="#创建特殊的二维数组" class="headerlink" title="创建特殊的二维数组"></a>创建特殊的二维数组</h2><ol>
+<li>diag，返回数组的对角元素，或创建对角阵，对角线由参数k控制</li>
+<li>diagflat，以输入作为对角元素，创建一个矩阵，对角线由k控制</li>
+<li>tri，生成一个矩阵，在某对角线下元素全为1，其余为0，对角线由k控制</li>
+<li>tril，输入一个矩阵，返回一个下三角阵，对角线由k控制</li>
+<li>triu，类似tril,但返回矩阵的上三角矩阵</li>
+<li>vander，输入一个一维数组，返回一个范德蒙行列式</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(a,k=-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([4, 9])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(np.diag(a))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  0,  0],
+       [ 0,  5,  0],
+       [ 0,  0, 10]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diagflat([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 0, 0, 0],
+       [0, 2, 0, 0],
+       [0, 0, 3, 0],
+       [0, 0, 0, 4]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diagflat([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],k=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 0, 0, 0],
+       [0, 0, 2, 0, 0],
+       [0, 0, 0, 3, 0],
+       [0, 0, 0, 0, 4],
+       [0, 0, 0, 0, 0]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.tri(<span class="number">3</span>,<span class="number">4</span>,k=<span class="number">1</span>,dtype=<span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 1, 0, 0],
+       [1, 1, 1, 0],
+       [1, 1, 1, 1]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.tri(<span class="number">3</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1., 0., 0., 0.],
+       [1., 1., 0., 0.],
+       [1., 1., 1., 0.]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;----------------------&quot;</span>)</span><br><span class="line">np.tril(a)</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+----------------------
+
+
+
+
+
+array([[ 0,  0,  0,  0],
+       [ 4,  5,  0,  0],
+       [ 8,  9, 10,  0]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.triu(a)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 0,  5,  6,  7],
+       [ 0,  0, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.vander([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>array([[  8,   4,   2,   1],
+       [ 27,   9,   3,   1],
+       [ 64,  16,   4,   1],
+       [125,  25,   5,   1]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.vander([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>],N=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 4,  2,  1],
+       [ 9,  3,  1],
+       [16,  4,  1],
+       [25,  5,  1]])
+</code></pre><h2 id="轴"><a href="#轴" class="headerlink" title="轴"></a>轴</h2><p>多维ndarray中，每一维都叫一个轴axis。有很多对于ndarray对象的运算都是基于axis进行，在入门的时候也接触了一些轴方面的应用，比如下面：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[:,<span class="number">2</span>] <span class="comment"># 第3列所有元素</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([ 2,  6, 10])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>] <span class="comment"># 这个也等价于a[1,2]</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([6])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">1</span>:<span class="number">3</span>,:] <span class="comment"># 2到3行所有列 </span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre>]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.矩阵</title>
     <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是 <strong>同型矩阵</strong></p>
@@ -2614,8 +2617,9 @@ array([[ 0,  0,  0,  0],
 </ul>
 <p><strong>3.参数是混合单位</strong></p>
 <ul>
-<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2><strong>background-attachment</strong> 属性设置背景图像是否固定或者随着页面的其余部分滚动。</li>
+<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标</li>
 </ul>
+<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2><p><strong>background-attachment</strong> 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
 <p>background-attachment后期可以制作时差滚动效果<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: <span class="built_in">fixed</span>(固定) | <span class="built_in">scroll</span>(滚动) </span><br></pre></td></tr></table></figure></p>
 <h2 id="背景复合写法"><a href="#背景复合写法" class="headerlink" title="背景复合写法"></a>背景复合写法</h2><p>我们可以将这些属性合并写在同一个属性background中，约定的顺序为：</p>
 <p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
@@ -2623,9 +2627,9 @@ array([[ 0,  0,  0,  0],
 <p><strong>rgba也就是red、green、blue、alpha</strong></p>
 <ul>
 <li>最后一个参数是 <strong>alpha</strong> 透明度，取值范围0~1之间</li>
-<li><strong>习惯上把0.3的0省略</strong>，写为background: rgba(0,0,0,.3);<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2></li>
+<li><strong>习惯上把0.3的0省略</strong>，写为background: rgba(0,0,0,.3);</li>
 </ul>
-<div class="table-container">
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -3123,6 +3127,109 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>4.n维向量</title>
+    <url>/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
+<p>n个数$a_1,a_2,\cdots a_n$构成的有序数组</p>
+</blockquote>
+<p>$\left[\begin{array}{c}a_1\\a_2\\ \vdots \\a_n\end{array}\right]$<br>或$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]^T\longrightarrow$列向量<br><br><br>$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]\longrightarrow$行向量</p>
+<h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><p>运算方法其实就是矩阵的运算方法</p>
+<h2 id="线性表示"><a href="#线性表示" class="headerlink" title="线性表示"></a>线性表示</h2><h3 id="向量的线性表示"><a href="#向量的线性表示" class="headerlink" title="向量的线性表示"></a>向量的线性表示</h3><blockquote>
+<p>m个n维向量$\alpha_1\alpha_2\cdots\alpha_m$及m个实数$k_1,k_2,\cdots,k_m$,称</p>
+<p>$\quad k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
+<p>是向量$\alpha_1\alpha_2\cdots\alpha_m$的一个线性组合，$k_1,k_2,\cdots,k_m$为这个线性组合的系数<br><br><br>如果向量$\beta$能表示为$\alpha_1\alpha_2\cdots\alpha_m$的线性组合，即</p>
+<p>$\qquad\qquad \beta=k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
+<p>则称向量$\beta$可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示</p>
+</blockquote>
+<p>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=\beta$<br><br>$\Longleftrightarrow方程组$<br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=\beta\;\;有解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)= r(\alpha_1\alpha_2\cdots\alpha_m\beta)$</p>
+<p><strong>例</strong></p>
+<p>$设\alpha_1=[1,-1,1]^T，\alpha_2=[-2,1,1]^T$<br>$\alpha_3=[4,-3,1]^T，\beta=[3,-1,3]^T$<br><br>$判断\beta能否由\alpha_1\alpha_2\alpha_3线性表示$</p>
+<p>解：<br>$设k_1\alpha_1+k_2\alpha_2+k_3\alpha_3=\beta$<br><br>即<br>$k_1[1,-1,1]^T+k_2[-2,1,1]^T+k_3[4,-3,1]^T$<br>$=[3,-1,3]^T$<br></p>
+<ul>
+<li>即<br>$\begin{cases}<br>  k_1-2k_2+4k_3=3\\<br>  -x_1+x_2-3x_3=-1\\<br>  x_1+x_2+x_3=-1\\<br>\end{cases}$</li>
+</ul>
+<p>$下面就转化为了高斯消元法进行求解出k_1k_2k_3$<br><br>$\qquad\qquad\downarrow$<br><br>$\overline{A}=<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}$<br><br>$\therefore$可以将上面的向量直接转化成增广矩阵进行求解</p>
+<p>在这里将方程组用矩阵进行表示就可以抽象为<br><br>$<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}<br>\begin{pmatrix}<br>    x_1\\<br>    x_2\\<br>    x_3\\<br>    x_4<br>\end{pmatrix}<br>=\begin{pmatrix}<br>    -3\\<br>    1\\<br>    -1<br>\end{pmatrix}<br>$<br><br>也就是说一组坐标经过有限次线性变换后可以将其转化成$\beta$</p>
+<h3 id="向量组的线性表示"><a href="#向量组的线性表示" class="headerlink" title="向量组的线性表示"></a>向量组的线性表示</h3><blockquote>
+<p>设向量组<br>$(a)\alpha_1,\alpha_2,\cdots,\alpha_s,\;<br> \;(b)\beta_1,\beta_2,\cdots,\beta_t$<br><br>若(a)中的每个向量$\alpha_i(i=1,2,\cdots,s)$ <strong>均</strong> 可由(b)线性表示，则称向量组(a)可由向量组(b)线性表示,如果两个向量组可以互相表示，则称两个向量组等价</p>
+</blockquote>
+<p><strong>例</strong></p>
+<p>设$A，B$均为3阶矩阵，且$AB=C$</p>
+<p>证明：$C$的列向量可由$A$的列向量线性表示,若矩阵$B$可逆,则$C$和$A$的列向量组等价。</p>
+<p>设$A=[\alpha_1\;\alpha_2\;\alpha_3],C=[\gamma_1\;\gamma_2\;\gamma_3],B=[b_{ij}]_{3\times3}$</p>
+<p>$A$和$C$都是按照按列进行划分</p>
+<p>$由\;AB=C\;有$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>\left[\begin{array}{ccc}b_{11}&amp;b_{12}&amp;b_{13}\\<br>    b_{21}&amp;b_{22}&amp;b_{23}\\<br>    b_{31}&amp;b_{32}&amp;b_{33}<br>\end{array}\right]=[\gamma_1\;\gamma_2\;\gamma_3]<br>$</p>
+<ul>
+<li>即<br>$<br>\begin{cases}<br>b_{11}\alpha_1+b_{21}\alpha_2+b_{31}\alpha_3=\gamma_1\\<br>b_{12}\alpha_1+b_{22}\alpha_2+b_{32}\alpha_3=\gamma_2\\<br>b_{13}\alpha_1+b_{23}\alpha_2+b_{33}\alpha_3=\gamma_3\\<br>\end{cases}<br>$<br><br>$<br>\therefore\;C的列向量可由A的列向量线性表示<br>$</li>
+</ul>
+<p>$\because B可逆$<br><br>$\therefore A=CB^{-1}\;,记B^{-1}=[k_{ij}]_{3\times3}$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>=[\gamma_1\;\gamma_2\;\gamma_3]<br>\left[\begin{array}{ccc}<br>    k_{11}&amp;k_{12}&amp;k_{13}\\<br>    k_{21}&amp;k_{22}&amp;k_{23}\\<br>    k_{31}&amp;k_{32}&amp;k_{33}<br>\end{array}\right]<br>$</p>
+<ul>
+<li>即<br>$<br>\begin{cases}<br>k_{11}\gamma_1+k_{21}\gamma_2+k_{31}\gamma_3=\alpha_1\\<br>k_{12}\gamma_1+k_{22}\gamma_2+k_{32}\gamma_3=\alpha_2\\<br>k_{13}\gamma_1+k_{23}\gamma_2+k_{33}\gamma_3=\alpha_3\\<br>\end{cases}<br>$<br><br>$ \therefore A的列向量可由C的列向量线性表示$<br><br>$\therefore C$的列向量可由A的列向量线性表示</li>
+</ul>
+<p>因为矩阵$B$可逆</p>
+<p>则$C$和$A$的列向量组等价。<br></p>
+<h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价：A经初等变换可以变成B<br><br>向量组(a)和(b)等价：(a)和(b)可以 <strong>互相</strong> 线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
+<h4 id="用方程组理解向量组的线性表示"><a href="#用方程组理解向量组的线性表示" class="headerlink" title="用方程组理解向量组的线性表示"></a>用方程组理解向量组的线性表示</h4><blockquote>
+<p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可以用向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br><br>则$r(B)\leqslant r(A)$<br><br>其中$B=(\beta_1\;\beta_2\;\cdots\;\beta_t),$<br><br>$A=(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)$<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
+</blockquote>
+<p>个人直观理解：<br>B的秩肯定小于A的秩，如果大于的话矩阵最后有几行就不能被表示了，<br>小于的话，最后几行就算多出来，$k_{ij}$令为0就行了<br>而两者的秩如果相等，那么两者就正好能被互相表示出来，也就是说两个向量组等价</p>
+<p>证明：<br>$\beta_1\;\beta_2\;\cdots\;\beta_t$可由$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示</p>
+<p>$\Leftrightarrow\;$方程组</p>
+<p>$\quad\; Ax=\beta_1，Ax=\beta_2，\cdots，Ax=\beta_t$有解</p>
+<p>$\Leftrightarrow\;r(A)=r(A,B)$</p>
+<p>$\because r(B)\leqslant r(A,B)\;\longleftarrow\;$矩阵的秩的性质</p>
+<p>$\therefore r(B)\leqslant r(A)$</p>
+<h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><blockquote>
+<p>$给定m个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_m，$如果存在不全为零的数$k_1，k_2，\cdots，k_m$使得<br><br>$\qquad k_1\alpha_1+k_2\alpha_2+\cdots k_m\alpha_m=0$<br><br>则称向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_m$线性相关，否则为线性无关</p>
+</blockquote>
+<p>个人直观理解：<br>线性相关其实就是向量经过长度变换能够首尾相连，就是线性表示的一种特殊情况</p>
+<p><strong>注意</strong>：<br>有零向量的向量组肯定线性相关</p>
+<hr>
+<p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0$<br><br>$\Longleftrightarrow方程组$<br><br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)&lt; m$<br>$\quad m$就是方程组解的个数</p>
+<p><strong>推论</strong></p>
+<ol>
+<li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;$相关<br><br>$\Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
+<li>$n+1个n维向量必线性相关 \rightarrow r \leqslant n &lt; n+1$<br><br></li>
+<li>如果$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性相关，则$\alpha_1\;\alpha_2\;\cdots\;\alpha_s\;\cdots\;\alpha_t$线性相关<br><br></li>
+<li>如果向量组线性无关，增加维度仍然线性无关</li>
+</ol>
+<h3 id="相关定理及结论"><a href="#相关定理及结论" class="headerlink" title="相关定理及结论"></a>相关定理及结论</h3><ol>
+<li>向量组$<br>\alpha_1,\alpha_2,\cdots,\alpha_s(s\leqslant2)$线性相关<br>$\Leftrightarrow\;$至少有一个向量$\alpha_i$可由其余向量$\alpha_1,\alpha_2,\cdots,\alpha_{i-1},\alpha_{i+1},\cdots,\alpha_s$线性表示<br><br></li>
+<li>如果n维向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，而$\alpha_1,\alpha_2,\cdots,\alpha_s,\beta\;$线性相关，则向量$\beta\;$必能由$\alpha_1,\alpha_2,\cdots,\alpha_s$线性表示，且表示法唯一<br><br></li>
+<li>如果$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示，且$s&gt;t$,则$\alpha_1,\alpha_2,\cdots,\alpha_s$必线性相关<br><br>推论：如果$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，且$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示,则$\;s\leqslant t$（极大线性无关组）<br><br></li>
+<li>$n+1$个$n$维向量必线性相关<br><br></li>
+<li>初等 <strong>行变换</strong> 不改变矩阵的 <strong>列向量组</strong> 之间的线性关系；初等 <strong>列变换</strong> 不改变 <strong>行向量组</strong> 之间的线性关系<br><br></li>
+<li>一个零向量线性相关，一个非零向量线性无关</li>
+</ol>
+<blockquote>
+<p>线性表示和线性相关无关的定理和结论都是从定义出发进行推理的，推理主要是通过方程组的思想。</p>
+</blockquote>
+<h2 id="向量组的秩"><a href="#向量组的秩" class="headerlink" title="向量组的秩"></a>向量组的秩</h2><blockquote>
+<p>向量组的$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组中所含 <strong>向量的个数r</strong> 称为向量组的秩.<br>记为$R(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)=r$<br><br>规定只有零向量的向量组的秩为0<br>三秩相等：矩阵A的秩等于A 的列向量的秩，也等于A的行向量的秩</p>
+</blockquote>
+<h3 id="极大线性无关组："><a href="#极大线性无关组：" class="headerlink" title="极大线性无关组："></a>极大线性无关组：</h3><blockquote>
+<p>$\qquad$在向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$中，如果存在r个向量$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}$线性 <strong>无关</strong> ，<strong>再</strong> 添加任一个向量$\alpha_j,(j=1,2,\cdots,s)$,向量组$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}\alpha_j$就线性 <strong>相关</strong> ，则称$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}$是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的一个极大线性无关组。<br><br><br>其实很好理解，极大线性无关组就是把向量组中挑出来一组最多线性无关的向量能够表示这个向量组的任何向量。</p>
+</blockquote>
+<p>定理：<br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则$r=t$</p>
+<p>证：<br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，</p>
+<p>那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$<br><br>必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$<br><br>能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关<br><br>则有$\;t\leqslant r$.<br><br>又因为两者地位相等，同理可得$\;r\leqslant t$.<br><br>所以$r=t$</p>
+<p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br>a.相同的线性相关性<br>b.相同的线性表示.</p>
+<ul>
+<li>例.求向量组$\alpha_1=(2,1,4,3)^T,$ $\alpha_2=(-1,1,-6,6)^T,$ $\alpha_3=(-1,-2,2,-9)^T,$ $\alpha_4=(1,1,-2,7)^T,$ $\alpha_5=(2,4,4,9)^T$的秩,一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。<br><br><br>解：构造矩阵$\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)$作初等变换化为行最简型，有<br><br>$<br>A=\begin{pmatrix}<br>  2&amp;-1&amp;-1&amp;1&amp;2\\<br>  1&amp;1&amp;-2&amp;1&amp;4\\<br>  4&amp;-6&amp;2&amp;-2&amp;4\\<br>  3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>$<br><br><br>$<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;-1&amp;0&amp;4\\<br>  0&amp;1&amp;-1&amp;0&amp;3\\<br>  0&amp;0&amp;0&amp;1&amp;-3\\<br>  0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3$</li>
+</ul>
+<p>极大线性无关组：$\alpha_1\;\alpha_2\;\alpha_4$</p>
+<p>$\therefore\alpha_3=-\alpha_1-\alpha_2$</p>
+<p>$\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4$</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5.CSS盒子模型</title>
     <url>/2021/07/20/5-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="盒子模型组成"><a href="#盒子模型组成" class="headerlink" title="盒子模型组成"></a>盒子模型组成</h2><p><strong>盒子模型：</strong> 就是把HTML页面中的 <strong>布局元素看作是一个矩形的盒子</strong>，或者说是一个盛装内容的容器。</p>
@@ -3329,109 +3436,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4.n维向量</title>
-    <url>/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
-<p>n个数$a_1,a_2,\cdots a_n$构成的有序数组</p>
-</blockquote>
-<p>$\left[\begin{array}{c}a_1\\a_2\\ \vdots \\a_n\end{array}\right]$<br>或$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]^T\longrightarrow$列向量<br><br><br>$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]\longrightarrow$行向量</p>
-<h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><p>运算方法其实就是矩阵的运算方法</p>
-<h2 id="线性表示"><a href="#线性表示" class="headerlink" title="线性表示"></a>线性表示</h2><h3 id="向量的线性表示"><a href="#向量的线性表示" class="headerlink" title="向量的线性表示"></a>向量的线性表示</h3><blockquote>
-<p>m个n维向量$\alpha_1\alpha_2\cdots\alpha_m$及m个实数$k_1,k_2,\cdots,k_m$,称</p>
-<p>$\quad k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
-<p>是向量$\alpha_1\alpha_2\cdots\alpha_m$的一个线性组合，$k_1,k_2,\cdots,k_m$为这个线性组合的系数<br><br><br>如果向量$\beta$能表示为$\alpha_1\alpha_2\cdots\alpha_m$的线性组合，即</p>
-<p>$\qquad\qquad \beta=k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
-<p>则称向量$\beta$可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示</p>
-</blockquote>
-<p>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=\beta$<br><br>$\Longleftrightarrow方程组$<br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=\beta\;\;有解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)= r(\alpha_1\alpha_2\cdots\alpha_m\beta)$</p>
-<p><strong>例</strong></p>
-<p>$设\alpha_1=[1,-1,1]^T，\alpha_2=[-2,1,1]^T$<br>$\alpha_3=[4,-3,1]^T，\beta=[3,-1,3]^T$<br><br>$判断\beta能否由\alpha_1\alpha_2\alpha_3线性表示$</p>
-<p>解：<br>$设k_1\alpha_1+k_2\alpha_2+k_3\alpha_3=\beta$<br><br>即<br>$k_1[1,-1,1]^T+k_2[-2,1,1]^T+k_3[4,-3,1]^T$<br>$=[3,-1,3]^T$<br></p>
-<ul>
-<li>即<br>$\begin{cases}<br>  k_1-2k_2+4k_3=3\\<br>  -x_1+x_2-3x_3=-1\\<br>  x_1+x_2+x_3=-1\\<br>\end{cases}$</li>
-</ul>
-<p>$下面就转化为了高斯消元法进行求解出k_1k_2k_3$<br><br>$\qquad\qquad\downarrow$<br><br>$\overline{A}=<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}$<br><br>$\therefore$可以将上面的向量直接转化成增广矩阵进行求解</p>
-<p>在这里将方程组用矩阵进行表示就可以抽象为<br><br>$<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}<br>\begin{pmatrix}<br>    x_1\\<br>    x_2\\<br>    x_3\\<br>    x_4<br>\end{pmatrix}<br>=\begin{pmatrix}<br>    -3\\<br>    1\\<br>    -1<br>\end{pmatrix}<br>$<br><br>也就是说一组坐标经过有限次线性变换后可以将其转化成$\beta$</p>
-<h3 id="向量组的线性表示"><a href="#向量组的线性表示" class="headerlink" title="向量组的线性表示"></a>向量组的线性表示</h3><blockquote>
-<p>设向量组<br>$(a)\alpha_1,\alpha_2,\cdots,\alpha_s,\;<br> \;(b)\beta_1,\beta_2,\cdots,\beta_t$<br><br>若(a)中的每个向量$\alpha_i(i=1,2,\cdots,s)$ <strong>均</strong> 可由(b)线性表示，则称向量组(a)可由向量组(b)线性表示,如果两个向量组可以互相表示，则称两个向量组等价</p>
-</blockquote>
-<p><strong>例</strong></p>
-<p>设$A，B$均为3阶矩阵，且$AB=C$</p>
-<p>证明：$C$的列向量可由$A$的列向量线性表示,若矩阵$B$可逆,则$C$和$A$的列向量组等价。</p>
-<p>设$A=[\alpha_1\;\alpha_2\;\alpha_3],C=[\gamma_1\;\gamma_2\;\gamma_3],B=[b_{ij}]_{3\times3}$</p>
-<p>$A$和$C$都是按照按列进行划分</p>
-<p>$由\;AB=C\;有$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>\left[\begin{array}{ccc}b_{11}&amp;b_{12}&amp;b_{13}\\<br>    b_{21}&amp;b_{22}&amp;b_{23}\\<br>    b_{31}&amp;b_{32}&amp;b_{33}<br>\end{array}\right]=[\gamma_1\;\gamma_2\;\gamma_3]<br>$</p>
-<ul>
-<li>即<br>$<br>\begin{cases}<br>b_{11}\alpha_1+b_{21}\alpha_2+b_{31}\alpha_3=\gamma_1\\<br>b_{12}\alpha_1+b_{22}\alpha_2+b_{32}\alpha_3=\gamma_2\\<br>b_{13}\alpha_1+b_{23}\alpha_2+b_{33}\alpha_3=\gamma_3\\<br>\end{cases}<br>$<br><br>$<br>\therefore\;C的列向量可由A的列向量线性表示<br>$</li>
-</ul>
-<p>$\because B可逆$<br><br>$\therefore A=CB^{-1}\;,记B^{-1}=[k_{ij}]_{3\times3}$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>=[\gamma_1\;\gamma_2\;\gamma_3]<br>\left[\begin{array}{ccc}<br>    k_{11}&amp;k_{12}&amp;k_{13}\\<br>    k_{21}&amp;k_{22}&amp;k_{23}\\<br>    k_{31}&amp;k_{32}&amp;k_{33}<br>\end{array}\right]<br>$</p>
-<ul>
-<li>即<br>$<br>\begin{cases}<br>k_{11}\gamma_1+k_{21}\gamma_2+k_{31}\gamma_3=\alpha_1\\<br>k_{12}\gamma_1+k_{22}\gamma_2+k_{32}\gamma_3=\alpha_2\\<br>k_{13}\gamma_1+k_{23}\gamma_2+k_{33}\gamma_3=\alpha_3\\<br>\end{cases}<br>$<br><br>$ \therefore A的列向量可由C的列向量线性表示$<br><br>$\therefore C$的列向量可由A的列向量线性表示</li>
-</ul>
-<p>因为矩阵$B$可逆</p>
-<p>则$C$和$A$的列向量组等价。<br></p>
-<h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价：A经初等变换可以变成B<br><br>向量组(a)和(b)等价：(a)和(b)可以 <strong>互相</strong> 线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
-<h4 id="用方程组理解向量组的线性表示"><a href="#用方程组理解向量组的线性表示" class="headerlink" title="用方程组理解向量组的线性表示"></a>用方程组理解向量组的线性表示</h4><blockquote>
-<p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可以用向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br><br>则$r(B)\leqslant r(A)$<br><br>其中$B=(\beta_1\;\beta_2\;\cdots\;\beta_t),$<br><br>$A=(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)$<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
-</blockquote>
-<p>个人直观理解：<br>B的秩肯定小于A的秩，如果大于的话矩阵最后有几行就不能被表示了，<br>小于的话，最后几行就算多出来，$k_{ij}$令为0就行了<br>而两者的秩如果相等，那么两者就正好能被互相表示出来，也就是说两个向量组等价</p>
-<p>证明：<br>$\beta_1\;\beta_2\;\cdots\;\beta_t$可由$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示</p>
-<p>$\Leftrightarrow\;$方程组</p>
-<p>$\quad\; Ax=\beta_1，Ax=\beta_2，\cdots，Ax=\beta_t$有解</p>
-<p>$\Leftrightarrow\;r(A)=r(A,B)$</p>
-<p>$\because r(B)\leqslant r(A,B)\;\longleftarrow\;$矩阵的秩的性质</p>
-<p>$\therefore r(B)\leqslant r(A)$</p>
-<h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><blockquote>
-<p>$给定m个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_m，$如果存在不全为零的数$k_1，k_2，\cdots，k_m$使得<br><br>$\qquad k_1\alpha_1+k_2\alpha_2+\cdots k_m\alpha_m=0$<br><br>则称向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_m$线性相关，否则为线性无关</p>
-</blockquote>
-<p>个人直观理解：<br>线性相关其实就是向量经过长度变换能够首尾相连，就是线性表示的一种特殊情况</p>
-<p><strong>注意</strong>：<br>有零向量的向量组肯定线性相关</p>
-<hr>
-<p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0$<br><br>$\Longleftrightarrow方程组$<br><br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)&lt; m$<br>$\quad m$就是方程组解的个数</p>
-<p><strong>推论</strong></p>
-<ol>
-<li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;$相关<br><br>$\Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
-<li>$n+1个n维向量必线性相关 \rightarrow r \leqslant n &lt; n+1$<br><br></li>
-<li>如果$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性相关，则$\alpha_1\;\alpha_2\;\cdots\;\alpha_s\;\cdots\;\alpha_t$线性相关<br><br></li>
-<li>如果向量组线性无关，增加维度仍然线性无关</li>
-</ol>
-<h3 id="相关定理及结论"><a href="#相关定理及结论" class="headerlink" title="相关定理及结论"></a>相关定理及结论</h3><ol>
-<li>向量组$<br>\alpha_1,\alpha_2,\cdots,\alpha_s(s\leqslant2)$线性相关<br>$\Leftrightarrow\;$至少有一个向量$\alpha_i$可由其余向量$\alpha_1,\alpha_2,\cdots,\alpha_{i-1},\alpha_{i+1},\cdots,\alpha_s$线性表示<br><br></li>
-<li>如果n维向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，而$\alpha_1,\alpha_2,\cdots,\alpha_s,\beta\;$线性相关，则向量$\beta\;$必能由$\alpha_1,\alpha_2,\cdots,\alpha_s$线性表示，且表示法唯一<br><br></li>
-<li>如果$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示，且$s&gt;t$,则$\alpha_1,\alpha_2,\cdots,\alpha_s$必线性相关<br><br>推论：如果$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，且$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示,则$\;s\leqslant t$（极大线性无关组）<br><br></li>
-<li>$n+1$个$n$维向量必线性相关<br><br></li>
-<li>初等 <strong>行变换</strong> 不改变矩阵的 <strong>列向量组</strong> 之间的线性关系；初等 <strong>列变换</strong> 不改变 <strong>行向量组</strong> 之间的线性关系<br><br></li>
-<li>一个零向量线性相关，一个非零向量线性无关</li>
-</ol>
-<blockquote>
-<p>线性表示和线性相关无关的定理和结论都是从定义出发进行推理的，推理主要是通过方程组的思想。</p>
-</blockquote>
-<h2 id="向量组的秩"><a href="#向量组的秩" class="headerlink" title="向量组的秩"></a>向量组的秩</h2><blockquote>
-<p>向量组的$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组中所含 <strong>向量的个数r</strong> 称为向量组的秩.<br>记为$R(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)=r$<br><br>规定只有零向量的向量组的秩为0<br>三秩相等：矩阵A的秩等于A 的列向量的秩，也等于A的行向量的秩</p>
-</blockquote>
-<h3 id="极大线性无关组："><a href="#极大线性无关组：" class="headerlink" title="极大线性无关组："></a>极大线性无关组：</h3><blockquote>
-<p>$\qquad$在向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$中，如果存在r个向量$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}$线性 <strong>无关</strong> ，<strong>再</strong> 添加任一个向量$\alpha_j,(j=1,2,\cdots,s)$,向量组$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}\alpha_j$就线性 <strong>相关</strong> ，则称$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}$是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的一个极大线性无关组。<br><br><br>其实很好理解，极大线性无关组就是把向量组中挑出来一组最多线性无关的向量能够表示这个向量组的任何向量。</p>
-</blockquote>
-<p>定理：<br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则$r=t$</p>
-<p>证：<br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，</p>
-<p>那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$<br><br>必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$<br><br>能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关<br><br>则有$\;t\leqslant r$.<br><br>又因为两者地位相等，同理可得$\;r\leqslant t$.<br><br>所以$r=t$</p>
-<p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br>a.相同的线性相关性<br>b.相同的线性表示.</p>
-<ul>
-<li>例.求向量组$\alpha_1=(2,1,4,3)^T,$ $\alpha_2=(-1,1,-6,6)^T,$ $\alpha_3=(-1,-2,2,-9)^T,$ $\alpha_4=(1,1,-2,7)^T,$ $\alpha_5=(2,4,4,9)^T$的秩,一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。<br><br><br>解：构造矩阵$\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)$作初等变换化为行最简型，有<br><br>$<br>A=\begin{pmatrix}<br>  2&amp;-1&amp;-1&amp;1&amp;2\\<br>  1&amp;1&amp;-2&amp;1&amp;4\\<br>  4&amp;-6&amp;2&amp;-2&amp;4\\<br>  3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>$<br><br><br>$<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;-1&amp;0&amp;4\\<br>  0&amp;1&amp;-1&amp;0&amp;3\\<br>  0&amp;0&amp;0&amp;1&amp;-3\\<br>  0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3$</li>
-</ul>
-<p>极大线性无关组：$\alpha_1\;\alpha_2\;\alpha_4$</p>
-<p>$\therefore\alpha_3=-\alpha_1-\alpha_2$</p>
-<p>$\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4$</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -3686,12 +3690,21 @@ array([[ 0,  0,  0,  0],
 <h3 id="额外标签法"><a href="#额外标签法" class="headerlink" title="额外标签法"></a>额外标签法</h3><p>额外标签法就是在浮动元素末尾添加一个空的标签。例如&lt;div style=”clear: both”&gt;&lt;/div&gt;,或者其他标签（如&lt;br/&gt;等）。</p>
 <ul>
 <li>优点：通俗易懂，书写方便</li>
-<li>缺点：添加许多无意义的标签，结构化较差<br><strong>注意:这个新的空标签必须是块级元素</strong><h3 id="父级添加overflow"><a href="#父级添加overflow" class="headerlink" title="父级添加overflow"></a>父级添加overflow</h3>可以给 <strong>父级</strong> 添加overflow属性，将其属性值设置为hidden、auto或scroll</li>
+<li>缺点：添加许多无意义的标签，结构化较差<br><strong>注意:这个新的空标签必须是块级元素</strong></li>
+</ul>
+<h3 id="父级添加overflow"><a href="#父级添加overflow" class="headerlink" title="父级添加overflow"></a>父级添加overflow</h3><p>可以给 <strong>父级</strong> 添加overflow属性，将其属性值设置为hidden、auto或scroll</p>
+<ul>
 <li>优点：代码简洁</li>
-<li>缺点：无法显示溢出部分<h3 id="after伪元素法"><a href="#after伪元素法" class="headerlink" title=":after伪元素法"></a>:after伪元素法</h3>:after方式是额外标签的升级版，也是给父元素添加<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>:after &#123;</span><br><span class="line">    content: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom: <span class="number">1</span>;<span class="comment">/*IE6、7专有*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>缺点：无法显示溢出部分</li>
+</ul>
+<h3 id="after伪元素法"><a href="#after伪元素法" class="headerlink" title=":after伪元素法"></a>:after伪元素法</h3><p>:after方式是额外标签的升级版，也是给父元素添加<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>:after &#123;</span><br><span class="line">    content: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom: <span class="number">1</span>;<span class="comment">/*IE6、7专有*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
 <li>优点：没有增加标签，结构更简单</li>
 <li>缺点：照顾低版本浏览器</li>
-<li>代表网站：百度、淘宝网、网易等<h3 id="双伪元素清除浮动"><a href="#双伪元素清除浮动" class="headerlink" title="双伪元素清除浮动"></a>双伪元素清除浮动</h3>也是给父元素添加<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>:before,.clearfix:after &#123;</span><br><span class="line">    content:<span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span>:after &#123;</span><br><span class="line">    clear:both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom:<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>代表网站：百度、淘宝网、网易等</li>
+</ul>
+<h3 id="双伪元素清除浮动"><a href="#双伪元素清除浮动" class="headerlink" title="双伪元素清除浮动"></a>双伪元素清除浮动</h3><p>也是给父元素添加<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>:before,.clearfix:after &#123;</span><br><span class="line">    content:<span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span>:after &#123;</span><br><span class="line">    clear:both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom:<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
 <li>优点：代码更简洁</li>
 <li>缺点：照顾低版本浏览器</li>
 <li>代表网站：小米、腾讯等</li>
@@ -4055,14 +4068,21 @@ array([[ 0,  0,  0,  0],
 <h1 id="静态定位（了解）"><a href="#静态定位（了解）" class="headerlink" title="静态定位（了解）"></a>静态定位（了解）</h1><p>静态定位就是元素的默认定位方式，无定位的意思<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; positon: static; &#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>静态定位按照标准流特性摆放位置，它没有边偏移</li>
-<li>静态定位在布局时很少用到<h1 id="相对定位-relative"><a href="#相对定位-relative" class="headerlink" title="相对定位 relative"></a>相对定位 relative</h1>相对定位是元素在移动位置的时候，是相对于他原来位置来说的<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; <span class="attribute">position</span>: relative; &#125;</span><br></pre></td></tr></table></figure>
-<strong>特点:</strong></li>
+<li>静态定位在布局时很少用到</li>
+</ul>
+<h1 id="相对定位-relative"><a href="#相对定位-relative" class="headerlink" title="相对定位 relative"></a>相对定位 relative</h1><p>相对定位是元素在移动位置的时候，是相对于他原来位置来说的<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; <span class="attribute">position</span>: relative; &#125;</span><br></pre></td></tr></table></figure><br><strong>特点:</strong></p>
+<ul>
 <li>它是相对于原来的位置移动的</li>
-<li>原来在标准流的位置继续占有，后面的盒子仍然以标准流的方式对待它<h1 id="绝对定位-absolute"><a href="#绝对定位-absolute" class="headerlink" title="绝对定位 absolute"></a>绝对定位 absolute</h1>相对定位是元素在移动位置的时候，是相对于它祖先元素来说的<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; <span class="attribute">position</span>: absolute; &#125;</span><br></pre></td></tr></table></figure>
-<strong>特点:</strong></li>
+<li>原来在标准流的位置继续占有，后面的盒子仍然以标准流的方式对待它</li>
+</ul>
+<h1 id="绝对定位-absolute"><a href="#绝对定位-absolute" class="headerlink" title="绝对定位 absolute"></a>绝对定位 absolute</h1><p>相对定位是元素在移动位置的时候，是相对于它祖先元素来说的<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; <span class="attribute">position</span>: absolute; &#125;</span><br></pre></td></tr></table></figure><br><strong>特点:</strong></p>
+<ul>
 <li>如果 <strong>没有祖先元素</strong> 或者 <strong>祖先元素没有定位</strong>，则以浏览器为准定位（Document文档）</li>
 <li>如果祖先元素有定位（相对、绝对、固定定位），则以最近一级的有定位祖先元素为参考点移动位置。</li>
-<li>绝对定位不在占有原来的位置（脱标）<h1 id="子绝父相"><a href="#子绝父相" class="headerlink" title="子绝父相"></a>子绝父相</h1><strong>意思：</strong> 子集是绝对定位的话，父级要用相对定位</li>
+<li>绝对定位不在占有原来的位置（脱标）</li>
+</ul>
+<h1 id="子绝父相"><a href="#子绝父相" class="headerlink" title="子绝父相"></a>子绝父相</h1><p><strong>意思：</strong> 子集是绝对定位的话，父级要用相对定位</p>
+<ul>
 <li>自己相对定位，不会占有位置，可以放到父盒子里面的任何地方，不会影响其他兄弟盒子</li>
 <li>父盒子需要加定位限制子盒子在父盒子内显示</li>
 <li>父盒子布局时，需要占有位置，因此父盒子只能是相对定位</li>
@@ -4134,9 +4154,9 @@ array([[ 0,  0,  0,  0],
 <li>数值可以是正整数、负数或0，默认是auto，数值越大，盒子越靠上</li>
 <li>如果属性值是相同，按照书写顺序，后来居上</li>
 <li>数字后面不能加单位</li>
-<li>只有定位的盒子才有z-index属性<h1 id="定位的拓展"><a href="#定位的拓展" class="headerlink" title="定位的拓展"></a>定位的拓展</h1><h2 id="绝对定位的盒子居中"><a href="#绝对定位的盒子居中" class="headerlink" title="绝对定位的盒子居中"></a>绝对定位的盒子居中</h2></li>
+<li>只有定位的盒子才有z-index属性</li>
 </ul>
-<p>加了绝对定位的盒子不能通过margin:0 auto水平居中，但是可以通过以下计算方法实现水平和垂直居中。</p>
+<h1 id="定位的拓展"><a href="#定位的拓展" class="headerlink" title="定位的拓展"></a>定位的拓展</h1><h2 id="绝对定位的盒子居中"><a href="#绝对定位的盒子居中" class="headerlink" title="绝对定位的盒子居中"></a>绝对定位的盒子居中</h2><p>加了绝对定位的盒子不能通过margin:0 auto水平居中，但是可以通过以下计算方法实现水平和垂直居中。</p>
 <ul>
 <li>left: 50%; 让盒子的左侧移动到父级元素的水平中心位置。</li>
 <li>margin-left: 盒子自身宽度的一半。</li>
@@ -4275,136 +4295,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>9.元素的显示与隐藏</title>
-    <url>/2021/07/20/9-%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="元素显示与隐藏"><a href="#元素显示与隐藏" class="headerlink" title="元素显示与隐藏"></a>元素显示与隐藏</h1><p>本质：让一个元素在页面中隐藏或者显示出来</p>
-<ol>
-<li>display 显示隐藏</li>
-<li>visibility 显示隐藏</li>
-<li>overflow 溢出显示隐藏</li>
-</ol>
-<h2 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h2><p><strong>display</strong> 属性用于设置一个元素应如何显示</p>
-<ul>
-<li>display: none; 隐藏对象</li>
-<li>display: block; 除了转换为块级元素之外，同时还有显示元素的意思</li>
-</ul>
-<p><strong>display 隐藏元素后，不在占有原来的位置</strong></p>
-<h2 id="visibility-可见性"><a href="#visibility-可见性" class="headerlink" title="visibility 可见性"></a>visibility 可见性</h2><p><strong>visibility</strong> 属性用于指定一个元素应可见还是隐藏</p>
-<ul>
-<li>visibility: visible; 元素可见</li>
-<li>visibility: hidden; 元素隐藏</li>
-</ul>
-<p><strong>visibility隐藏元素后，继续占有原来的位置</strong></p>
-<h2 id="overflow-溢出"><a href="#overflow-溢出" class="headerlink" title="overflow 溢出"></a>overflow 溢出</h2><p><strong>overflow</strong> 属性指定了如果内容溢出一个元素的框（超过其指定高度及宽度）时</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">visible</td>
-<td style="text-align:left">不见且内容也不添加滚动条</td>
-</tr>
-<tr>
-<td style="text-align:left">hidden</td>
-<td style="text-align:left">不显示超过对象尺寸的内容，超出的部分隐藏掉</td>
-</tr>
-<tr>
-<td style="text-align:left">scroll</td>
-<td style="text-align:left">不管有无超出内容，总是显示滚动条</td>
-</tr>
-<tr>
-<td style="text-align:left">auto</td>
-<td style="text-align:left">超出自动显示滚动条，不超出不显示滚动条</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意:</strong> 如果有定位的盒子，请慎用overflow:hidden 因为它会隐藏多余的部分</p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>8.CSS网页布局</title>
-    <url>/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>网页布局的核心本质就是利用CSS摆盒子</strong></p>
-<p><strong>网页布局的第一准则:</strong><br>多个块级元素纵向排列用标准流，多个块级元素横向排列用浮动。</p>
-<p><strong>网页布局的第二准则:</strong><br>先设置盒子大小，后设置盒子位置。</p>
-<h1 id="传统网页布局的三种方式"><a href="#传统网页布局的三种方式" class="headerlink" title="传统网页布局的三种方式"></a>传统网页布局的三种方式</h1><p>网页布局的本质————用CSS来摆放盒子</p>
-<p>CSS提供了三种传统布局方式：</p>
-<ul>
-<li>标准流（最基本）</li>
-<li>浮动</li>
-<li>定位</li>
-</ul>
-<h1 id="常见的网页布局"><a href="#常见的网页布局" class="headerlink" title="常见的网页布局"></a>常见的网页布局</h1><table style="width: 370px;background-color: #ecedf8;text-align: center;">
-  <tr>
-    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 145px;border:1px dashed;border-collapse: collapse;">main</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
-  </tr>
-</table>
-
-<table style="width: 370px;background-color: #ecedf8;text-align: center;">
-  <tr>
-    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
-  </tr>
-   <tr>
-    <td style="float:left;width: 115px;height: 145px;border:1px dashed;line-height: 145px;border-top:0;border-bottom:0;">left</td>
-    <td style="float:right;width: 195px;height: 145px;border:0;border-right:1px dashed;line-height: 145px;">right</td>
-  </tr>
-   <tr>
-    <td style="height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
-  </tr>
-</table>
-
-<div style="width: 500px;height: 420px;border:1px solid;text-align:center;">
-    <div style="float:left;width: 480px;height: 25px;line-height:25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;">top</div>
-    <div style="float:left;width: 360px;height: 80px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px;line-height: 80px">banner</div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px 5px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 480px;height: 90px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;line-height:90px;">footer</div>
-</div>
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>通过CSS浮动、定位可以让每个盒子排列成为网页。</p>
-<p>一个完整的网页，是标准流、浮动、定位一起完成的布局的，每个都有自己专门的用法。</p>
-<p><strong>1.标准流</strong><br>可以让盒子上下排列或者左右排列，垂直的块级盒子显示就用标准流布局。<br><strong>2.浮动</strong><br>可以让多个块级元素一行显示或者左右对齐盒子，多个块级盒子水平显示就用浮动布局。<br><strong>3.定位</strong><br>定位最大的特点是有层叠的概念，就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。</p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>7.二次型</title>
     <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
@@ -4518,6 +4408,136 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>8.CSS网页布局</title>
+    <url>/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>网页布局的核心本质就是利用CSS摆盒子</strong></p>
+<p><strong>网页布局的第一准则:</strong><br>多个块级元素纵向排列用标准流，多个块级元素横向排列用浮动。</p>
+<p><strong>网页布局的第二准则:</strong><br>先设置盒子大小，后设置盒子位置。</p>
+<h1 id="传统网页布局的三种方式"><a href="#传统网页布局的三种方式" class="headerlink" title="传统网页布局的三种方式"></a>传统网页布局的三种方式</h1><p>网页布局的本质————用CSS来摆放盒子</p>
+<p>CSS提供了三种传统布局方式：</p>
+<ul>
+<li>标准流（最基本）</li>
+<li>浮动</li>
+<li>定位</li>
+</ul>
+<h1 id="常见的网页布局"><a href="#常见的网页布局" class="headerlink" title="常见的网页布局"></a>常见的网页布局</h1><table style="width: 370px;background-color: #ecedf8;text-align: center;">
+  <tr>
+    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 145px;border:1px dashed;border-collapse: collapse;">main</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
+  </tr>
+</table>
+
+<table style="width: 370px;background-color: #ecedf8;text-align: center;">
+  <tr>
+    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
+  </tr>
+   <tr>
+    <td style="float:left;width: 115px;height: 145px;border:1px dashed;line-height: 145px;border-top:0;border-bottom:0;">left</td>
+    <td style="float:right;width: 195px;height: 145px;border:0;border-right:1px dashed;line-height: 145px;">right</td>
+  </tr>
+   <tr>
+    <td style="height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
+  </tr>
+</table>
+
+<div style="width: 500px;height: 420px;border:1px solid;text-align:center;">
+    <div style="float:left;width: 480px;height: 25px;line-height:25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;">top</div>
+    <div style="float:left;width: 360px;height: 80px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px;line-height: 80px">banner</div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px 5px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 480px;height: 90px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;line-height:90px;">footer</div>
+</div>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>通过CSS浮动、定位可以让每个盒子排列成为网页。</p>
+<p>一个完整的网页，是标准流、浮动、定位一起完成的布局的，每个都有自己专门的用法。</p>
+<p><strong>1.标准流</strong><br>可以让盒子上下排列或者左右排列，垂直的块级盒子显示就用标准流布局。<br><strong>2.浮动</strong><br>可以让多个块级元素一行显示或者左右对齐盒子，多个块级盒子水平显示就用浮动布局。<br><strong>3.定位</strong><br>定位最大的特点是有层叠的概念，就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>9.元素的显示与隐藏</title>
+    <url>/2021/07/20/9-%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="元素显示与隐藏"><a href="#元素显示与隐藏" class="headerlink" title="元素显示与隐藏"></a>元素显示与隐藏</h1><p>本质：让一个元素在页面中隐藏或者显示出来</p>
+<ol>
+<li>display 显示隐藏</li>
+<li>visibility 显示隐藏</li>
+<li>overflow 溢出显示隐藏</li>
+</ol>
+<h2 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h2><p><strong>display</strong> 属性用于设置一个元素应如何显示</p>
+<ul>
+<li>display: none; 隐藏对象</li>
+<li>display: block; 除了转换为块级元素之外，同时还有显示元素的意思</li>
+</ul>
+<p><strong>display 隐藏元素后，不在占有原来的位置</strong></p>
+<h2 id="visibility-可见性"><a href="#visibility-可见性" class="headerlink" title="visibility 可见性"></a>visibility 可见性</h2><p><strong>visibility</strong> 属性用于指定一个元素应可见还是隐藏</p>
+<ul>
+<li>visibility: visible; 元素可见</li>
+<li>visibility: hidden; 元素隐藏</li>
+</ul>
+<p><strong>visibility隐藏元素后，继续占有原来的位置</strong></p>
+<h2 id="overflow-溢出"><a href="#overflow-溢出" class="headerlink" title="overflow 溢出"></a>overflow 溢出</h2><p><strong>overflow</strong> 属性指定了如果内容溢出一个元素的框（超过其指定高度及宽度）时</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">visible</td>
+<td style="text-align:left">不见且内容也不添加滚动条</td>
+</tr>
+<tr>
+<td style="text-align:left">hidden</td>
+<td style="text-align:left">不显示超过对象尺寸的内容，超出的部分隐藏掉</td>
+</tr>
+<tr>
+<td style="text-align:left">scroll</td>
+<td style="text-align:left">不管有无超出内容，总是显示滚动条</td>
+</tr>
+<tr>
+<td style="text-align:left">auto</td>
+<td style="text-align:left">超出自动显示滚动条，不超出不显示滚动条</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意:</strong> 如果有定位的盒子，请慎用overflow:hidden 因为它会隐藏多余的部分</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
