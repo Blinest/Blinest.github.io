@@ -185,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/18/2.%E7%9F%A9%E9%98%B5/">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
@@ -199,7 +199,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/06/18/2.%E7%9F%A9%E9%98%B5/" class="post-title-link" itemprop="url">2.矩阵</a>
+            <a href="/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">1.C语言的一些概念</a>
         </h2>
 
         <div class="post-meta">
@@ -208,23 +208,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-06-18 18:23:27" itemprop="dateCreated datePublished" datetime="2021-06-18T18:23:27+08:00">2021-06-18</time>
+              <time title="创建时间：2021-06-27 11:20:54 / 修改时间：21:33:08" itemprop="dateCreated datePublished" datetime="2021-06-27T11:20:54+08:00">2021-06-27</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-26 16:32:34" itemprop="dateModified" datetime="2021-06-26T16:32:34+08:00">2021-06-26</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
                 </span>
             </span>
 
@@ -234,7 +228,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.6k</span>
+              <span>4.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -253,114 +247,254 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是 <strong>同型矩阵</strong></p>
-<h2 id="几类特殊的矩阵"><a href="#几类特殊的矩阵" class="headerlink" title="几类特殊的矩阵"></a>几类特殊的矩阵</h2><h3 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h3><p>$<br>\quad\begin{pmatrix}<br>    {\large a}_{11}    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}^{\large n}<br>$</p>
-<p>$=<br>\begin{pmatrix}<br>    {\large a}_{11}^n    \\<br>     &amp; {\large a}_{22}^n\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}^n<br>\end{pmatrix}<br>$<br><br><br><br>$<br>\qquad\begin{pmatrix}<br>    {\large k}    \\<br>     &amp; {\large k}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large k}<br>\end{pmatrix}$</p>
-<p>$=\large k<br>\begin{pmatrix}<br>    1    \\<br>     &amp; 1 \\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; 1<br>\end{pmatrix}<br>$</p>
-<h3 id="初等矩阵"><a href="#初等矩阵" class="headerlink" title="初等矩阵"></a>初等矩阵</h3><blockquote>
-<p>单位矩阵经 <strong>一次初等变换</strong> 所得到的矩阵</p>
-</blockquote>
-<p>可以是行变换,也可以是列变换</p>
-<p>左乘是行变换，右乘是列变换</p>
-<ol>
-<li>互换两行两列的位置：<br>$E(i,j)$表示交换第$i$行(列)和第$j$行(列)<br><br></li>
-<li>以数$k\neq0$乘某行或某列：<br>$E(i(k))$表示第$i$行(列)乘$k$<br><br></li>
-<li>以数$k$乘某行(列)加到另一行(列)上去：<br>$E(i,j(k))$表示$j$行(列)乘$k$加到$i$行(列)</li>
+          <h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
+<li>整型常量：也就是整数</li>
+<li>实型常量：<ol>
+<li>十进制小数形式：由数字和小数点组成</li>
+<li>指数形式：如$12.34e3$(代表$12.34\times10^3$)<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
 </ol>
-<p><strong>等价矩阵：</strong></p>
-<blockquote>
-<p>矩阵A经过有限次初等变换变成矩阵B，记作A$\cong$B</p>
+</li>
+<li>字符常量：<ol>
+<li>普通字符：用单撇号括起来的一个字符</li>
+<li>转义字符：以字符”\\”开头的字符</li>
+</ol>
+</li>
+<li>字符串常量：用双撇号把若干字符括起来</li>
+<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">转义字符</th>
+<th style="text-align:left">字符值</th>
+<th style="text-align:left">输出结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\a</td>
+<td style="text-align:left">警告(alert)</td>
+<td style="text-align:left">产生声音或视觉信号</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:left">退格(backspace)</td>
+<td style="text-align:left">将光标位置后退一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">换页(form feed)</td>
+<td style="text-align:left">将光标当前位置移到下一页的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">换行</td>
+<td style="text-align:left">将光标当前位置移到下一行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">回车(carriage return)</td>
+<td style="text-align:left">将该光标当前位置移到本行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">水平制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:left">垂直制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
+</tr>
+<tr>
+<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
+<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
+<td style="text-align:left">与该八进制码对应的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\xh[h$\cdots$]<br>其中h代表一个十六进制数字</td>
+<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
+<td style="text-align:left">与该十六进制码对应的字符</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
+<p>变量代表一个有名字，具有特定属性的一个存储单元。它用来存放数据，也就是存放变量的值。程序运行期间变量的值可以改变。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;<span class="comment">//a是变量名，3是变量值</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
 </blockquote>
-<h3 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h3><blockquote>
-<p>满足$A^T=A$</p>
-</blockquote>
-<h3 id="反对称矩阵"><a href="#反对称矩阵" class="headerlink" title="反对称矩阵"></a>反对称矩阵</h3><blockquote>
-<p>满足$A^T=-A$</p>
-</blockquote>
-<h3 id="幂零矩阵"><a href="#幂零矩阵" class="headerlink" title="幂零矩阵"></a>幂零矩阵</h3><blockquote>
-<p>对方阵$A$,如果存在正整数m，使得$A^m=0$,则称$A$为幂零矩阵</p>
-</blockquote>
-<h3 id="幂等矩阵"><a href="#幂等矩阵" class="headerlink" title="幂等矩阵"></a>幂等矩阵</h3><blockquote>
-<p>满足$A^2=A$</p>
-</blockquote>
-<h3 id="对合矩阵"><a href="#对合矩阵" class="headerlink" title="对合矩阵"></a>对合矩阵</h3><blockquote>
-<p>满足$A^2=E$</p>
-</blockquote>
-<h2 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h2><p>令$A=[{\large a}_{ij}]_{m\times s},B=[{\large b}_{ij}]_{s\times n}$<br><br>$AB=C=[{\large c}_{ij}]_{m\times n}$<br><br>${\large c}_{ij}={\large\sum\limits_{k=1}^s}{\large a}_{ik}{\large b}_{kj}$</p>
-<h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$\quad A=[{\large a}_{1j}]_{1\times s}$</p>
-<p>$\quad A^T=[{\large a}_{j1}]_{s\times1}$</p>
-<p>$\quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
-<p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
-<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><blockquote>
-<p>$AB=BA=I$</p>
+<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
+<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
+<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
 <ul>
-<li>$<br>A=<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>$<br>$<br>B=<br>\begin{pmatrix}<br>   \displaystyle\frac{1}{ {\large a}_{11} }\\<br>   &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$<br><br><br>$<br>\because<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>  {\large b}_{11}\\<br>  \\<br>   &amp; {\large b}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>$<br><br><br>$<br>=\begin{pmatrix}<br>  {\large a}_{11}{\large b}_{11} \\<br>  \\<br>   &amp; {\large a}_{22}{\large b}_{22}\\<br>   \\<br>   &amp;     &amp; \ddots\\<br>   \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</li>
+<li>$<br>\text{数据类型}<br>\begin{cases}<br>\text{基本类型}<br>\begin{cases}<br>\text{整型类型}<br>\begin{cases}<br>\text{基本整形(int)}\\<br>\text{短整型(short int)}\\<br>\text{长整型(long int)}\\<br>\text{双长整型(long long int)}\\<br>\text{字符型(char)}\\<br>\text{布尔型(bool)}<br>\end{cases}\\<br>\\<br>\text{浮点类型}<br>\begin{cases}<br>\text{单精度浮点型(float)}\\<br>\text{双精度浮点型(double)}\\<br>\text{复数浮点型(float_complex,double_complex,longlong_complex)}<br>\end{cases}<br>\end{cases}\\<br>\\<br>\text{枚举类型(enum)}\\<br>\\<br>\text{空类型(void)}\\<br>\\<br>\text{派生类型}<br>\begin{cases}<br>\text{指针类型(*)}\\<br>\text{数组类型([ ])}\\<br>\text{结构体类型(struct)}\\<br>\text{共用体类型(union)}\\<br>\text{函数类型}<br>\end{cases}<br>\end{cases}<br>$</li>
 </ul>
 </blockquote>
-<p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$<br><br>一些可逆矩阵的证明要想到从定义的角度出发</p>
-<hr>
-<p>$AA^{ * } =A^{ * }A=|A|I$</p>
-<p>推论：</p>
-<ol>
-<li>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</li>
+<p>其中基本类型和枚举类型的值都是数值，统称为算术类型。</p>
+<p>算术类型和指针类型统称为纯量类型，因为其值是整数类型。</p>
+<p>枚举类型是程序中用户定义的整数类型。</p>
+<p>数组类型和结构体类型统称为组合类型，共用体类型不属于组合类型，<br>因为在同一时间只有一个成员具有值。</p>
+<p>函数类型用来定义函数，描述一个函数的接口，包括函数返回值的数据类型和参数的类型</p>
+<h2 id="整型数据"><a href="#整型数据" class="headerlink" title="整型数据"></a>整型数据</h2><p>存储单元的存储方式是：用整数补码形式存放。</p>
+<p>一个整数的补码是此数的二进制形式</p>
+<p>求负数补码的方法：先将此数的绝对值写成二进制的形式，然后对所有二进制位按位 <strong>取反，再加1</strong></p>
+<h3 id="整型数据的分类"><a href="#整型数据的分类" class="headerlink" title="整型数据的分类"></a>整型数据的分类</h3><ol>
+<li>基本类型(int 型)<br>编译系统分配给int型数据2个字节或4个字节(由具体的C语言编译系统自行决定)<br></li>
+<li>短整型(short int)<br>类型名为short int或short。<br><br>一般分配2个字节，取值范围$-2^{15}\sim (2^{15}-1)$</li>
+<li>长整型(long int)<br>类型名为long int或long。<br><br>一般分配4个字节，取值范围$-2^{31}\sim (2^{31}-1)$</li>
+<li>双长整型(long long int)<br>类型名为long long int或long long。<br><br>一般分配8个字节，取值范围$-2^{63}\sim (2^{63}-1)$</li>
 </ol>
-<p>$\therefore$求逆矩阵先 <strong>看行列式是否为零</strong></p>
-<ol>
-<li>伴随矩阵$A^{ * }$的一些常用结论 <ul>
-<li>$|A^*|=|A|^{n-1}$</li>
-<li>$(A^{ * })^{ * }=|A|^{n-2}A$</li>
-<li>若$A$可逆，且$A^{ * }$可逆,$(A^{ * })^{-1}=(A^{-1})^{ * }=\displaystyle\frac{1}{|A|}A$</li>
-<li>$(AB)^{ * }=B^{ * }A^{ * }$</li>
-<li>$(A^{ * })^T=(A^T)^{ * }$</li>
-</ul>
-</li>
-<li><strong>A如果可逆，那么A一定可以表示为有限个初等矩阵的乘积</strong></li>
-</ol>
-<p>$P_t\cdots P_2P_1A=I$</p>
-<p><br></p>
-<p>$\because P_t\cdots P_2P_1A=I$</p>
-<p>$\therefore A^{-1}=P_t\cdots P_2\;P_1$</p>
-<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}$<br><br><br>$P_t\cdots P_2\;P_1\;A=I$<br><br>$P_t\cdots P_2\;P_1\;I=A^{-1}$</p>
-<p>由这两个式子可得：</p>
-<p>A经过行初等变换变成$I$</p>
-<p>$I$就经过同样的行初等变换变成$A^{-1}$</p>
-<p>$<br>\therefore[A\;|\;I\,]\rightarrow\cdots\rightarrow[\,I\;|\;A^{-1}]<br>$<br><br>或者可以这么理解<br>$A^{-1}[A|I]=[I|A^{-1}]$<br><br>用分块矩阵的思想，这样理解更加直观,其实这样求解的原因<br>就是$A$和$I$可以经过相同的变换变成$I$和$A^{-1}$</p>
-<p><strong>推广</strong></p>
-<p>$AX=B$<br>如果A可逆，$X=A^{-1}B$</p>
-<p>令$P=A^{-1}$</p>
-<p>由</p>
-<p>$\;PA=I$<br><br>$PB=X$</p>
-<p>有$\;[A|B]=[I|X]$</p>
-<p>即$\;$遇到$A^{-1}B$时，可以将$A，B$拼在一起将$A$化成单位矩阵就是所求的$X$</p>
-<h2 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h2><h3 id="分成四块"><a href="#分成四块" class="headerlink" title="分成四块"></a>分成四块</h3><p>$<br>\left(\begin{array}{cc|ccc}<br>     1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\<br>     3 &amp; 4 &amp; 0 &amp; 0 &amp; 0\\<br>     \hline<br>     0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br>\end{array}\right)=<br>\left(\begin{array}{cc}<br>     A &amp; O\\<br>     O &amp; B<br>\end{array}\right)<br>$</p>
-<p>分块后的矩阵满足四个区域整体满足</p>
-<p>矩阵的加法</p>
-<p>对角矩阵的乘法</p>
-<p>逆矩阵</p>
-<h3 id="按行分块"><a href="#按行分块" class="headerlink" title="按行分块"></a>按行分块</h3><ul>
-<li>$<br>\left(\begin{array}{ccc}<br>a_{11}&amp;a_{12}&amp;a_{13}\\<br>\hdashline<br>a_{21}&amp;a_{22}&amp;a_{23}\\<br>\hdashline<br>a_{31}&amp;a_{32}&amp;a_{33}<br>\end{array}\right)<br>=\begin{bmatrix}<br>\alpha_1^T\\<br>\alpha_2^T\\<br>\alpha_3^T<br>\end{bmatrix}<br>$<br><br>按行分块一般会加转置符号，主要原因时默认$\alpha$是列向量<h3 id="按列分块"><a href="#按列分块" class="headerlink" title="按列分块"></a>按列分块</h3>类比按行分块<br><br>一般证明的时候会选择按列分块</li>
-</ul>
-<h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><blockquote>
-<p>秩与线性方程组的解有着密切的联系，所以要将线性方程组和秩结合起来，<br>而这样就容易理解后面的n元向量的一些秩的表示形式</p>
+<p>在类型符号前面加上无符号修饰符unsigned，就是只有正值的意思，<br>因为其所占字节数不变，也就是说正值的取值范围比以前大。</p>
+<h2 id="字符型数据"><a href="#字符型数据" class="headerlink" title="字符型数据"></a>字符型数据</h2><p>定义字符变量<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;?&#x27;</span>; <span class="comment">//char c=63;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d  %c&quot;</span>,c,c);</span><br><span class="line"><span class="comment">//输出结果63 ?</span></span><br></pre></td></tr></table></figure><br>c是字符变量，实质上是一个字节的整型变量，但是它用来存放字符，所以称为字符变量</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">字节数</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">signed char(有符号字符型)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">$-2^7\sim (2^7-1)$</td>
+</tr>
+<tr>
+<td style="text-align:center">unsigned char(无符号字符型)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">$0\sim 2^{8}-1$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="浮点型数据"><a href="#浮点型数据" class="headerlink" title="浮点型数据"></a>浮点型数据</h2><blockquote>
+<p>用来表示具有小数点的实数。</p>
 </blockquote>
-<ul>
-<li>矩阵A的一个k阶子式:<br><br>$\qquad$矩阵A中随便找k行随便找k列，按原来次序排列构成的行列式</li>
-</ul>
-<h3 id="秩的性质"><a href="#秩的性质" class="headerlink" title="秩的性质"></a>秩的性质</h3><ol>
-<li>$0\leqslant r(A_{m\times n})\leqslant min(m,n)$<br><br><br></li>
-<li>$r(A^T)=r(A)$<br><br><br></li>
-<li>$r(A+B)\leqslant r(A)+r(B)$<br><br><br></li>
-<li>$r(kA)=r(A)(k\neq0)\;\leftarrow\; r(A)=r(-A)，r(A-E)=r(E-A)$<br><br><br></li>
-<li><p>$r(AB)\leqslant min(r(A),r(B))$<br><br><br></p>
+<p>因为小数点位置可以浮动，所以实数的指数形式称为 <strong>浮点数</strong></p>
+<p>浮点数类型有三种</p>
+<ol>
+<li>float型（单精度浮点型）<br>分配4个字节</li>
+<li>double型（双精度浮点型）<br>分配8个字节</li>
+<li>long double型（长双精度型）<br>8或16个字节<h2 id="确定常量的类型"><a href="#确定常量的类型" class="headerlink" title="确定常量的类型"></a>确定常量的类型</h2></li>
+<li>整型常量<br>在一个整数末尾加大写L或小写l表示长整型<br></li>
+<li>浮点型常量<blockquote>
+<p>以小数或指数形式出现的实数</p>
+</blockquote>
 </li>
-<li><p>如P.Q可逆，则<br>$r(PAQ)=r(A)$<br><br><br></p>
-</li>
-<li>$\;r\left[\begin{array}{cc} A&amp;O\\O&amp;B\end{array}\right]=r(A)+r(B)$<br><br><br></li>
-<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$<br><br>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br>$<br>\begin{aligned}<br>&amp;设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>&amp;\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>&amp;A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\end{aligned}<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示$<br><br>$则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\rightarrow在向量组线性表示里$<br><br><br>$<br>\begin{aligned}<br>\therefore r(A+B)&amp;=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\\<br>&amp;\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>\end{aligned}<br>$</li>
 </ol>
-<p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
-<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>前提$AB=BA$,<br>那么$(A+B)^n=\sum\limits_{i=0}^nC_n^iA^iB^{n-i}$</p>
-<p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
+<p>在末尾加上F或f表示float类型，<br>加上L或l表示long double类型<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a =<span class="number">3</span> <span class="number">.14159</span>f</span><br><span class="line"><span class="keyword">float</span> dounble a = <span class="number">1.23L</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>类型和变量的区别：</strong><br>每个变量都属于一个确定的类型，类型是变量的一个重要属性。</p>
+<h1 id="C语句"><a href="#C语句" class="headerlink" title="C语句"></a>C语句</h1><h2 id="C语句的作用和分类"><a href="#C语句的作用和分类" class="headerlink" title="C语句的作用和分类"></a>C语句的作用和分类</h2><p>语句后面有分号</p>
+<p>分类：</p>
+<ol>
+<li>控制语句</li>
+<li>函数调用语句</li>
+<li>表达式语句</li>
+<li>空语句</li>
+<li>复合语句</li>
+</ol>
+<h1 id="数据的输入输出"><a href="#数据的输入输出" class="headerlink" title="数据的输入输出"></a>数据的输入输出</h1><p>C语言本身不提供输入输出语句</p>
+<p>需要使用库函数stdio.h</p>
+<h2 id="printf-格式控制，输出表列"><a href="#printf-格式控制，输出表列" class="headerlink" title="printf(格式控制，输出表列)"></a>printf(格式控制，输出表列)</h2><p>%附加字符 格式字符</p>
+<p>例%-m.nf</p>
+<p>printf函数中用到的格式字符</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">格式字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">d,i</td>
+<td style="text-align:left">输出带符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:left">输出八进制无符号整数(不输出前导符0)</td>
+</tr>
+<tr>
+<td style="text-align:center">x,X</td>
+<td style="text-align:left">输出无符号十六进制整数(不输出前导符0x)，用x小写，X大写</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:left">输出无符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:left">输出一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:left">输出字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">f</td>
+<td style="text-align:left">以小数形式输出单、双精度数，隐含输出6位小数</td>
+</tr>
+<tr>
+<td style="text-align:center">e,E</td>
+<td style="text-align:left">以指数形式输出实数</td>
+</tr>
+<tr>
+<td style="text-align:center">g,G</td>
+<td style="text-align:left">选用%f或%e格式中输出宽度较短的一种形式，不输出无意义的0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在格式声明中，在%和上述格式字符间可以插入几种附加字符(又称修饰符)</p>
+<p>printf函数中用到的修饰符</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:left">长整型整数，可加在格式符d、o、x、u前面</td>
+</tr>
+<tr>
+<td style="text-align:center">m(代表一个整数)</td>
+<td style="text-align:left">数据的最小宽度</td>
+</tr>
+<tr>
+<td style="text-align:center">n(代表一个实数)</td>
+<td style="text-align:left">对实数，表示输出n位小数；对字符串，表示截取的字符个数</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">输出的数字或字符在域内想左靠</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="scanf-格式控制-地址表列"><a href="#scanf-格式控制-地址表列" class="headerlink" title="scanf(格式控制,地址表列)"></a>scanf(格式控制,地址表列)</h2><p><strong>注意</strong>：scanf函数中是地址表列，传进去的是变量地址</p>
+<h1 id="关系运算符和关系表达式"><a href="#关系运算符和关系表达式" class="headerlink" title="关系运算符和关系表达式"></a>关系运算符和关系表达式</h1><blockquote>
+<p>C语言中，比较符称为关系运算符<br><br>用关系运算符将两个数值或数值表达式连接起来的式子，称为关系表达式。</p>
+</blockquote>
+<p>关系运算符：</p>
+<p>&lt; ， &lt;= ， &gt; ， &gt;= ， == ， !=</p>
+<p>关系表达式：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>&gt;=<span class="number">0</span> <span class="comment">//为真 1</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="逻辑运算符和逻辑表达式"><a href="#逻辑运算符和逻辑表达式" class="headerlink" title="逻辑运算符和逻辑表达式"></a>逻辑运算符和逻辑表达式</h1><p>逻辑表达式：</p>
+<p>&amp;&amp; 或 ，|| 与 ，! 非</p>
+<p>逻辑运算符：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> &gt; <span class="number">3</span> &amp;&amp; <span class="number">8</span> &lt; <span class="number">4</span> - !<span class="number">0</span> <span class="comment">//为假 0</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="条件运算符和条件表达式"><a href="#条件运算符和条件表达式" class="headerlink" title="条件运算符和条件表达式"></a>条件运算符和条件表达式</h1><p>条件表达式的一般形式：</p>
+<p>表达式1 ? 表达式2 : 表达式3<br>例<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">max=(a&gt;b)?a:b;</span><br></pre></td></tr></table></figure></p>
+<h1 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> grade;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your score:&quot;</span>);</span><br><span class="line">    <span class="keyword">switch</span>(grade) <span class="comment">//此括号里的值类型应为整数类型（包括字符型）</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>A<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;85~100\n&quot;</span>);<span class="keyword">break</span>;<span class="comment">//break;不能省</span></span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;B</span><span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;70~84\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>C<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;60~69\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>D<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;&lt;60\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;enter data error!\n&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果:</span></span><br><span class="line"><span class="comment">A</span></span><br><span class="line"><span class="comment">Your score:85~100</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h1 id="静态，动态存储方式"><a href="#静态，动态存储方式" class="headerlink" title="静态，动态存储方式"></a>静态，动态存储方式</h1><p><strong>例</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">auto</span> <span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> c=<span class="number">0</span>;<span class="comment">//定义了一个静态局部变量，调用后不释放，保留前值</span></span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">6</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><br><strong>对比下面的程序</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -380,7 +514,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
@@ -394,7 +528,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/" class="post-title-link" itemprop="url">1.行列式</a>
+            <a href="/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">一些关于hexo的next主题的适配问题</a>
         </h2>
 
         <div class="post-meta">
@@ -404,255 +538,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-06-18 11:41:31" itemprop="dateCreated datePublished" datetime="2021-06-18T11:41:31+08:00">2021-06-18</time>
+              <time title="创建时间：2021-06-25 20:21:32" itemprop="dateCreated datePublished" datetime="2021-06-25T20:21:32+08:00">2021-06-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-26 15:55:53" itemprop="dateModified" datetime="2021-06-26T15:55:53+08:00">2021-06-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>7.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
-<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p><strong>例</strong><br></p>
-<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
-<p>解：由于系数行列式<br></p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
-<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
-<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
-<p>故方程组的解为：</p>
-<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
-<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
-<ul>
-<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
-</ul>
-<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
-<ul>
-<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
-</ul>
-<p><strong>其他的性质:</strong></p>
-<ul>
-<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
-</li>
-<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
-</li>
-<li><p>（方阵）$|AB|=|A||B|$</p>
-</li>
-<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
-</li>
-<li><p>$|2A|=2^n|A|$</p>
-</li>
-</ul>
-<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
-<ul>
-<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
-</ul>
-<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
-<p>下三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
-<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
-<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
-<p><strong>应用</strong>  </p>
-<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
-<ul>
-<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
-</ul>
-<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
-<li>有一块全是零的行列式</li>
-</ul>
-<hr>
-<ul>
-<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
-<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/" class="post-title-link" itemprop="url">0. 知识储备</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-06-16 23:09:57" itemprop="dateCreated datePublished" datetime="2021-06-16T23:09:57+08:00">2021-06-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-25 23:30:58" itemprop="dateModified" datetime="2021-06-25T23:30:58+08:00">2021-06-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
-<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
-<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
-<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
-<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
-<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
-<ul>
-<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/15/%E5%88%9D%E5%85%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/15/%E5%88%9D%E5%85%A5/" class="post-title-link" itemprop="url">初入</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-06-15 21:04:08" itemprop="dateCreated datePublished" datetime="2021-06-15T21:04:08+08:00">2021-06-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-21 19:59:53" itemprop="dateModified" datetime="2021-06-21T19:59:53+08:00">2021-06-21</time>
+                <time title="修改时间：2021-06-28 17:27:35" itemprop="dateModified" datetime="2021-06-28T17:27:35+08:00">2021-06-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -670,7 +563,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>137</span>
+              <span>516</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -689,7 +582,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
+          <p>这里记录一些hexo方面的问题</p>
+<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
 
       
     </div>
@@ -709,7 +603,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
@@ -723,7 +617,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/06/15/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">1.matplotlib入门</a>
         </h2>
 
         <div class="post-meta">
@@ -733,7 +627,23 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-06-15 17:59:43" itemprop="dateCreated datePublished" datetime="2021-06-15T17:59:43+08:00">2021-06-15</time>
+              <time title="创建时间：2021-06-24 10:39:45" itemprop="dateCreated datePublished" datetime="2021-06-24T10:39:45+08:00">2021-06-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-02 21:29:02" itemprop="dateModified" datetime="2021-07-02T21:29:02+08:00">2021-07-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/matplotlib/" itemprop="url" rel="index"><span itemprop="name">matplotlib</span></a>
+                </span>
             </span>
 
           <br>
@@ -742,7 +652,520 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>367</span>
+              <span>11k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>10 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h1><h2 id="常见API介绍"><a href="#常见API介绍" class="headerlink" title="常见API介绍"></a>常见API介绍</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>plt.title()</strong><br>(图的标题)</td>
+<td style="text-align:center">plt.title(“Matplotlib demo”)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>plt.xlabel()</strong><br>(X轴描述)</td>
+<td style="text-align:center">plt.xlabel(“x axis caption”)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>plt.ylabel()</strong><br>(Y轴描述)</td>
+<td style="text-align:center">plt.ylabel(“y axis caption”)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>plt.plot()</strong><br> (画图)</td>
+<td style="text-align:center">plt.plot(x,y)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>plt.show()</strong><br> (显示)</td>
+<td style="text-align:center">plt.show()</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>plt.subplot()</strong><br>(子图绘制)</td>
+<td style="text-align:center">plt.subplot(2, 1, 1) 21<br>(第一个图)<br>plt.subplot(2, 1, 2) 21<br>(第二个图)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>plt.bar(x, y, align = ‘center’)</strong><br>(条状图)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>plt.figure()</strong><br>存放实例代码生成的图片</td>
+<td style="text-align:center">figure(figsize=(8,6),dpi=80)<br>创建一个 8 * 6 点（point）的图，并设置分辨率为 80</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>xlim()</strong><br>(x轴的上下限)</td>
+<td style="text-align:center">xlim(-4.0,4.0)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>ylim()</strong><br>(y轴的上下限)</td>
+<td style="text-align:center">ylim(-1.0,1.0)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>legend()</strong><br>(图例位置)</td>
+<td style="text-align:center">legend(loc=‘upper left’)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>scatter()</strong><br>(散点图)</td>
+<td style="text-align:center">scatter(X,Y)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>contourf()</strong><br>(等高线)</td>
+<td style="text-align:center">contourf(X, Y, f(X,Y), 8, alpha=.75, cmap=‘jet’)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="rcRarams的属性"><a href="#rcRarams的属性" class="headerlink" title="rcRarams的属性"></a>rcRarams的属性</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>]=[<span class="string">&#x27;SimHei&#x27;</span>] <span class="comment">#显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>]=<span class="literal">False</span>   <span class="comment">#这两行需要手动设置</span></span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">‘font.family’</td>
+<td style="text-align:left">用于显示字体的名字</td>
+</tr>
+<tr>
+<td style="text-align:left">‘font.style’</td>
+<td style="text-align:left">字体风格，正常’normal或斜体’italic’</td>
+</tr>
+<tr>
+<td style="text-align:left">‘font.size’</td>
+<td style="text-align:left">字体大小，整数字号或者’large’,’x-small’  </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>中文字体的样式</strong><br>(这些必须在matplotlib的font里进行添加，matplotlib里并没有这些,而且matplotlib很多font都不支持中文，虽然有一些支持中文显示，但是个人认为效果不是很好，中文配置也比较麻烦，后续会进行这方面的整理……)</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">中文字体</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">‘SimHei’</td>
+<td style="text-align:left"><font face="黑体">中文黑体</font></td>
+</tr>
+<tr>
+<td style="text-align:left">‘Kaiti’</td>
+<td style="text-align:left"><font face="楷体">中文楷体</font></td>
+</tr>
+<tr>
+<td style="text-align:left">‘LiSu’</td>
+<td style="text-align:left"><font face="隶书">中文隶书</font></td>
+</tr>
+<tr>
+<td style="text-align:left">‘FangSong’</td>
+<td style="text-align:left"><font face="仿宋">中文仿宋</font></td>
+</tr>
+<tr>
+<td style="text-align:left">‘YouYuan’</td>
+<td style="text-align:left"><font face="幼圆">中文幼圆</font></td>
+</tr>
+<tr>
+<td style="text-align:left">‘STSong’</td>
+<td style="text-align:left"><font face="华文宋体">华文宋体</font></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">颜色字符</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">颜色字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">‘b’</td>
+<td style="text-align:center">蓝色</td>
+<td style="text-align:center">‘m’</td>
+<td style="text-align:center">洋红色(magenta)</td>
+</tr>
+<tr>
+<td style="text-align:center">‘g’</td>
+<td style="text-align:center">绿色</td>
+<td style="text-align:center">‘y’</td>
+<td style="text-align:center">黄色</td>
+</tr>
+<tr>
+<td style="text-align:center">‘r’</td>
+<td style="text-align:center">红色</td>
+<td style="text-align:center">‘k’</td>
+<td style="text-align:center">黑色</td>
+</tr>
+<tr>
+<td style="text-align:center">‘c’</td>
+<td style="text-align:center">青绿色(cyan)</td>
+<td style="text-align:center">‘w’</td>
+<td style="text-align:center">白色</td>
+</tr>
+<tr>
+<td style="text-align:center">‘#008000’</td>
+<td style="text-align:center">RNG某颜色</td>
+<td style="text-align:center">‘0.8’</td>
+<td style="text-align:center">灰度值字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">风格字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">‘-‘</td>
+<td style="text-align:center">实线</td>
+</tr>
+<tr>
+<td style="text-align:center">‘—‘</td>
+<td style="text-align:center">破折线</td>
+</tr>
+<tr>
+<td style="text-align:center">‘-.’</td>
+<td style="text-align:center">点划线</td>
+</tr>
+<tr>
+<td style="text-align:center">‘:’</td>
+<td style="text-align:center">虚线</td>
+</tr>
+<tr>
+<td style="text-align:center">‘’’’</td>
+<td style="text-align:center">无线条</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标记字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">‘.’</td>
+<td style="text-align:center">点标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘,’</td>
+<td style="text-align:center">像素标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘o’</td>
+<td style="text-align:center">实心圈标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘v’</td>
+<td style="text-align:center">倒三角标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘^’</td>
+<td style="text-align:center">上三角标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘&gt;’</td>
+<td style="text-align:center">右三角标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘&lt;’</td>
+<td style="text-align:center">左三角标记</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标记字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">‘1’</td>
+<td style="text-align:center">下花三角标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘2’</td>
+<td style="text-align:center">上花三角标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘3’</td>
+<td style="text-align:center">左花三角标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘4’</td>
+<td style="text-align:center">右花三角标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘s’</td>
+<td style="text-align:center">实心方形标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘p’</td>
+<td style="text-align:center">实心五角标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘*’</td>
+<td style="text-align:center">星形标记</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标记字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">‘h’</td>
+<td style="text-align:center">竖六边形标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘H’</td>
+<td style="text-align:center">横六边形标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘+’</td>
+<td style="text-align:center">十字标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘x’</td>
+<td style="text-align:center">x标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘D’</td>
+<td style="text-align:center">菱形标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘d’</td>
+<td style="text-align:center">瘦菱形标记</td>
+</tr>
+<tr>
+<td style="text-align:center">‘\\’</td>
+<td style="text-align:center">垂直线标记</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="start"><a href="#start" class="headerlink" title="start"></a>start</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="Figure"><a href="#Figure" class="headerlink" title="Figure"></a>Figure</h2><p><strong>plot(x,y,formatstring)</strong></p>
+<hr>
+<ul>
+<li><strong>x</strong>: x轴数据，列表或数组，可选参数，当我们在这个函数里，只展示一组数据时，x可省略。</li>
+<li><strong>y</strong>： y轴数据，必须有。</li>
+<li><strong>format_string</strong>：主要来控制我们画的曲线的格式：颜色，风格,标记，<br>可取三者的组合如：“g-o”,”r-.D”,如果不用组合，则用color,marker,linestyle,三个参数分别指定。</li>
+<li><strong>label</strong>： 添加图例的类标。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>]=[<span class="string">&#x27;SimHei&#x27;</span>] <span class="comment">#显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>]=<span class="literal">False</span>   <span class="comment">#这两行需要手动设置</span></span><br><span class="line">x= np.linspace(-<span class="number">3</span>,<span class="number">3</span>,<span class="number">50</span>)</span><br><span class="line">y1 = <span class="number">2</span>*x+<span class="number">1</span></span><br><span class="line">y2 = x**<span class="number">2</span></span><br><span class="line">plt.figure() <span class="comment"># 创建显示的窗口</span></span><br><span class="line">plt.plot(x,y1)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">8</span>,<span class="number">6</span>))</span><br><span class="line">plt.plot(x,y1,<span class="string">&#x27;r-.d&#x27;</span>,linewidth=<span class="number">1.0</span>,) <span class="comment"># r-.d三个参数分别代表color,linestyle,marker</span></span><br><span class="line">plt.xlim((-<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line">plt.ylim((-<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">plt.xlabel(<span class="string">&#x27;x轴&#x27;</span>,fontdict=&#123;<span class="string">&quot;size&quot;</span>:<span class="number">20</span>,<span class="string">&quot;color&quot;</span>:<span class="string">&#x27;b&#x27;</span>,<span class="string">&quot;weight&quot;</span>:<span class="string">&quot;black&quot;</span>&#125;) <span class="comment"># 设置样式第一种fontdict</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;y轴&#x27;</span>,fontsize=<span class="number">20</span>,color=<span class="string">&quot;r&quot;</span>,fontweight=<span class="string">&quot;light&quot;</span>) <span class="comment"># 第二种直接传入</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plt.figure(num=<span class="number">3</span>,figsize=(<span class="number">8</span>,<span class="number">5</span>))</span><br><span class="line">plt.plot(x,y2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(x,y2)</span><br><span class="line">new_ticks = np.linspace(-<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(new_ticks)</span><br><span class="line">plt.xticks(new_ticks)</span><br><span class="line">plt.yticks([-<span class="number">2</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>],[<span class="string">r&#x27;$\alpha$&#x27;</span>,<span class="string">r&#x27;$\beta$&#x27;</span>,<span class="string">r&#x27;$\gamma$&#x27;</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;c&#x27;</span>])</span><br><span class="line"><span class="comment"># gca = &#x27;get current axis&#x27;</span></span><br><span class="line">plt.tick_params(direction=<span class="string">&#x27;in&#x27;</span>,color=<span class="string">&quot;r&quot;</span>,width=<span class="number">2</span>)</span><br><span class="line">ax = plt.gca()</span><br><span class="line">ax.spines[<span class="string">&#x27;right&#x27;</span>].set_color(<span class="string">&#x27;none&#x27;</span>) <span class="comment"># spines指的是边框</span></span><br><span class="line">ax.spines[<span class="string">&#x27;top&#x27;</span>].set_color(<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment">#ax.xaxis.set_ticks_position(&#x27;bottom&#x27;) # 设置坐标上的数字显示的位置，default，可以不用</span></span><br><span class="line"><span class="comment">#ax.yaxis.set_ticks_position(&#x27;left&#x27;) # default</span></span><br><span class="line">ax.spines[<span class="string">&#x27;bottom&#x27;</span>].set_position((<span class="string">&#x27;data&#x27;</span>,<span class="number">0</span>)) <span class="comment"># 将下面的坐标轴移动到0</span></span><br><span class="line">                                             <span class="comment"># &#x27;data&#x27;,&#x27;axes&#x27;,&#x27;outward&#x27;</span></span><br><span class="line">                                             <span class="comment"># &#x27;axes&#x27;:</span></span><br><span class="line">ax.spines[<span class="string">&#x27;left&#x27;</span>].set_position((<span class="string">&#x27;data&#x27;</span>,<span class="number">0</span>)) <span class="comment"># 将左面的坐标轴移动到0</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<pre><code>[-1.   -0.25  0.5   1.25  2.  ]
+</code></pre><p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_17_1.png" alt="png"></p>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_17_2.png" alt="png"></p>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_17_3.png" alt="png"></p>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_17_4.png" alt="png"></p>
+<h2 id="添加图例"><a href="#添加图例" class="headerlink" title="添加图例"></a>添加图例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">l1, = plt.plot(x,y1,color=<span class="string">&#x27;red&#x27;</span>,linewidth=<span class="number">1.0</span>,linestyle=<span class="string">&#x27;--&#x27;</span>,label=<span class="string">&#x27;Down&#x27;</span>)</span><br><span class="line"><span class="comment"># 注意如果想传入handles，名称后面必须加一个逗号</span></span><br><span class="line">plt.xlim((-<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line">plt.ylim((-<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">plt.xlabel(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">l2, = plt.plot(x,y2,label=<span class="string">&#x27;up&#x27;</span>) <span class="comment"># label，这个图像名称</span></span><br><span class="line">plt.legend(handles=[l1,l2,],labels=[<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>],loc=<span class="string">&#x27;best&#x27;</span>) <span class="comment"># legend图例,handle传递两个对象[ , , ,]</span></span><br><span class="line">                                        <span class="comment"># loc指的是位置</span></span><br><span class="line">                                        <span class="comment"># rebel中表示图例中各个线的名称</span></span><br><span class="line">plt.show()</span><br><span class="line"> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_19_0.png" alt="png"></p>
+<h2 id="添加注解"><a href="#添加注解" class="headerlink" title="添加注解"></a>添加注解</h2><p><strong><font size="5">annotate()</font></strong></p>
+<hr>
+<ul>
+<li><p><strong>s</strong>: 添加标注的内容，字符串形式。</p>
+</li>
+<li><p><strong>xy</strong>: 箭头指向的位置，就是我们想添加标注的对象，元组类型输入方式。</p>
+</li>
+<li><p><strong>xytext</strong>：添加标注的实际位置，标注实际所在位置，可看做箭头输出端。</p>
+</li>
+<li><p><strong>arrowprops</strong>: 此参数中提供箭头属性字典来绘制从文本到注释点的箭头。</p>
+</li>
+<li><p><strong>width</strong> : 箭把宽度，整数或浮点数。</p>
+</li>
+<li><p><strong>frac</strong>：箭头头部所占的比例，小于1。</p>
+</li>
+<li><p><strong>headwidth</strong>：箭头头部宽度，整数或浮点数。</p>
+</li>
+<li><p><strong>headlength</strong>: 箭头长度，整数或浮点数。</p>
+</li>
+<li><p><strong>facecolor</strong>: 填充色。</p>
+</li>
+<li><p><strong>shrink</strong>：移动提示，并使其离注释点和文本一些距离。 <kbd>就是别让箭头两端里标注点和文本太近。</kbd></p>
+</li>
+<li><strong>fontsize</strong>：设置字体大小</li>
+</ul>
+<p><font size="5"><strong>ax.text()</strong></font></p>
+<hr>
+<ul>
+<li><strong>x,y</strong>： 放置text的位置，横纵坐标<br>   </li>
+<li><strong>s</strong>： str，text内容。<br>  </li>
+<li><strong>fontsize</strong>： 设置字体大小，默认12，可选参数 [‘xx-small’, ‘x-small’, ‘small’, ‘medium’, ‘large’,‘x-large’, ‘xx-large’]<br>  </li>
+<li><strong>fontweight</strong>：设置字体粗细，可选参数 [‘light’, ‘normal’, ‘medium’, ‘semibold’, ‘bold’, ‘heavy’, ‘black’] <br> </li>
+<li><strong>alpha</strong>： 透明度，参数值0至1之间。<br>  </li>
+<li><strong>rotation</strong>： (旋转角度)可选参数为:vertical,horizontal 也可以为数字。<br>  </li>
+<li><strong>backgroundcolor</strong>：背景颜色。<br>  </li>
+<li><strong>color</strong>： 字体颜色</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">ax=plt.gca()</span><br><span class="line">ax.spines[<span class="string">&#x27;right&#x27;</span>].set_color(<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;top&#x27;</span>].set_color(<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;bottom&#x27;</span>].set_position((<span class="string">&#x27;data&#x27;</span>,<span class="number">0</span>))</span><br><span class="line">ax.spines[<span class="string">&#x27;left&#x27;</span>].set_position((<span class="string">&#x27;data&#x27;</span>,<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">x0 = <span class="number">1</span></span><br><span class="line">y0 = <span class="number">2</span>*x0+<span class="number">1</span></span><br><span class="line">plt.scatter(x0,y0,s=<span class="number">50</span>,color=<span class="string">&#x27;red&#x27;</span>) <span class="comment"># s表示点的大小,color表示点的颜色</span></span><br><span class="line">plt.plot(x,y1)</span><br><span class="line">plt.plot([x0,x0],[y0,<span class="number">0</span>],<span class="string">&#x27;k--&#x27;</span>,lw=<span class="number">2.5</span>)<span class="comment"># k表示虚线的颜色为黑色，lw表示线的宽度</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># method 1</span></span><br><span class="line"></span><br><span class="line">plt.annotate(<span class="string">r&#x27;$2x+1=%s$&#x27;</span>% y0,xy=(x0,y0),xycoords=<span class="string">&#x27;data&#x27;</span>,xytext=(+<span class="number">30</span>,-<span class="number">30</span>),textcoords=<span class="string">&#x27;offset points&#x27;</span>,</span><br><span class="line">             fontsize=<span class="number">16</span>,arrowprops=<span class="built_in">dict</span>(arrowstyle=<span class="string">&#x27;-&gt;&#x27;</span>,connectionstyle=<span class="string">&#x27;arc3,rad=.2&#x27;</span>))</span><br><span class="line">                             <span class="comment">#xy表示箭头所在的点，xycoords表示标注点的坐标系</span></span><br><span class="line">                             <span class="comment">#xytext()标记的左下角点的位置</span></span><br><span class="line">                             <span class="comment">#(+30,-30)表示xytext的位置基于箭头指向点横坐标加30，纵坐标减30</span></span><br><span class="line">                             <span class="comment">#offset points坐标系(这里是相对坐标系)</span></span><br><span class="line">                             <span class="comment">#arrowstyle描述标注只想标注点的方式</span></span><br><span class="line">                             <span class="comment">#fontsize字体大小</span></span><br><span class="line">                             <span class="comment">#connectionstyle</span></span><br><span class="line">                            </span><br><span class="line"><span class="comment"># method 2</span></span><br><span class="line">plt.text(-<span class="number">3.7</span>,<span class="number">3</span>,<span class="string">r&#x27;$This\ is\ the\ some\ text.\ \mu\ \sigma_i\ \alpha_t$&#x27;</span>,fontdict=&#123;<span class="string">&#x27;size&#x27;</span>:<span class="number">12</span>,<span class="string">&#x27;color&#x27;</span>:<span class="string">&#x27;r&#x27;</span>&#125;)</span><br><span class="line">                                                                        <span class="comment">#fontdict&#123;&#125;表示字体,传入字典size,color……</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_23_0.png" alt="png"></p>
+<h1 id="tick"><a href="#tick" class="headerlink" title="tick"></a>tick</h1><h2 id="tick-params"><a href="#tick-params" class="headerlink" title="tick_params()"></a>tick_params()</h2><ul>
+<li><strong>axis</strong>: 可选”x”,”y”,”both”,defalut:”both”，分别代表，对x轴操作，对y轴操作，对两个轴都操作。</li>
+<li><strong>direction</strong>: 可选 “in”,”out”,”inout”代表，刻度线显示在坐标轴里面，坐标轴外边，双边</li>
+<li><strong>length</strong>: 刻度线长度</li>
+<li><strong>color</strong>: 刻度线颜色</li>
+<li><strong>width</strong>: 刻度线宽度</li>
+<li><strong>pad</strong>：:刻度线与刻度标签之间的间隔</li>
+<li><strong>bottom, top, left, right</strong>四个参数对应四个边框，取值为布尔类型，True 表示显示对应边框上的刻度线，False不显示，default:True</li>
+<li><strong>labelbottom, labeltop, labelleft, labelright</strong>  与上面四个对应，代表的是四个边框上的类标的设置，取值为布尔类型，True代表显示对应边框上的类标，False不显示。</li>
+<li><strong>labelsize</strong>：类标大小的设置参数，可取浮点型数值，也可去”medium”,”large”,”small”</li>
+<li><strong>labelrotation</strong>：旋转类标一定的角度，与在set_xticklabels()中的参数rotation作用相同。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">y = <span class="number">0.1</span>*x</span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(x,y,label=<span class="string">&#x27;up&#x27;</span>,color=<span class="string">&#x27;grey&#x27;</span>,lw=<span class="number">10</span>,alpha=<span class="number">0.6</span>) <span class="comment"># lw=linewidth</span></span><br><span class="line">plt.ylim(-<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">ax = plt.gca()</span><br><span class="line">ax.spines[<span class="string">&#x27;right&#x27;</span>].set_color(<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;top&#x27;</span>].set_color(<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;left&#x27;</span>].set_position((<span class="string">&#x27;data&#x27;</span>,<span class="number">0</span>))</span><br><span class="line">ax.spines[<span class="string">&#x27;bottom&#x27;</span>].set_position((<span class="string">&#x27;data&#x27;</span>,<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> label <span class="keyword">in</span> ax.get_xticklabels()+ax.get_yticklabels():</span><br><span class="line">    label.set_fontsize(<span class="number">12</span>)</span><br><span class="line">    label.set_bbox(<span class="built_in">dict</span>(facecolor=<span class="string">&#x27;white&#x27;</span>,edgecolor=<span class="string">&#x27;None&#x27;</span>,alpha=<span class="number">0.7</span>))</span><br><span class="line">                                                        <span class="comment"># alpha表示透明度</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_27_0.png" alt="png"></p>
+<h1 id="scatter散点图"><a href="#scatter散点图" class="headerlink" title="scatter散点图"></a>scatter散点图</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">n=<span class="number">1024</span></span><br><span class="line">X = np.random.normal(<span class="number">0</span>,<span class="number">1</span>,n)</span><br><span class="line">Y = np.random.normal(<span class="number">0</span>,<span class="number">1</span>,n)</span><br><span class="line">T = np.arctan2(Y,X) <span class="comment"># for color value</span></span><br><span class="line"><span class="comment"># plt.scatter(X,Y,s=75,c=T,alpha=0.5) #s=size,c=color,</span></span><br><span class="line">plt.scatter(np.arange(<span class="number">5</span>),np.arange(<span class="number">5</span>))</span><br><span class="line"><span class="comment"># plt.xlim((-1.5,1.5))</span></span><br><span class="line"><span class="comment"># plt.ylim((-1.5,1.5))</span></span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.collections.PathCollection at 0x1e5aa843580&gt;
+</code></pre><p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_29_1.png" alt="png"></p>
+<h1 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a>柱状图</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">n =  <span class="number">12</span></span><br><span class="line">X = np.arange(n)</span><br><span class="line">Y1 = (<span class="number">1</span>-X/<span class="built_in">float</span>(n))*np.random.uniform(<span class="number">0.5</span>,<span class="number">1.0</span>,n)</span><br><span class="line">Y2 = (<span class="number">1</span>-X/<span class="built_in">float</span>(n))*np.random.uniform(<span class="number">0.5</span>,<span class="number">1.0</span>,n)</span><br><span class="line">plt.bar(X,+Y1,facecolor=<span class="string">&#x27;#9999ff&#x27;</span>,edgecolor=<span class="string">&#x27;white&#x27;</span>,align=<span class="string">&#x27;edge&#x27;</span>,width=-<span class="number">1</span>)</span><br><span class="line">plt.bar(X,-Y2,facecolor=<span class="string">&#x27;#ff9999&#x27;</span>,edgecolor=<span class="string">&#x27;white&#x27;</span>,align=<span class="string">&#x27;edge&#x27;</span>,width=-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(X,Y1):</span><br><span class="line">    plt.text(x,y+<span class="number">0.05</span>,<span class="string">&#x27;%.2f&#x27;</span> % y,ha=<span class="string">&#x27;right&#x27;</span>,va=<span class="string">&#x27;bottom&#x27;</span>,fontsize=<span class="number">8</span>) <span class="comment"># ha对齐方式</span></span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(X,-Y2):</span><br><span class="line">    plt.text(x,y-<span class="number">0.05</span>,<span class="string">&#x27;-%.2f&#x27;</span> % y,ha=<span class="string">&#x27;right&#x27;</span>,va=<span class="string">&#x27;top&#x27;</span>,fontsize=<span class="number">8</span>)</span><br><span class="line">plt.xlim(-<span class="number">5</span>,n)</span><br><span class="line">plt.xticks(())</span><br><span class="line">plt.ylim(-<span class="number">1.25</span>,<span class="number">1.25</span>)</span><br><span class="line">plt.yticks(())</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_31_0.png" alt="png"></p>
+<h1 id="生成等高线"><a href="#生成等高线" class="headerlink" title="生成等高线"></a>生成等高线</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">x,y</span>):</span></span><br><span class="line">    <span class="keyword">return</span>(<span class="number">1</span>-x/<span class="number">2</span>+x**<span class="number">5</span>+y**<span class="number">3</span>)*np.exp(-x**<span class="number">2</span>-y**<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">n = <span class="number">256</span></span><br><span class="line">x = np.linspace(-<span class="number">3</span>,<span class="number">3</span>,n)</span><br><span class="line">y = np.linspace(-<span class="number">3</span>,<span class="number">3</span>,n)</span><br><span class="line">X,Y = np.meshgrid(x,y)</span><br><span class="line">plt.contourf(X,Y,f(X,Y),<span class="number">8</span>,alpha=<span class="number">0.75</span>,cmap=plt.cm.hot) <span class="comment"># cm=colormap</span></span><br><span class="line">C = plt.contour(X,Y,f(X,Y),<span class="number">8</span>,colors=<span class="string">&#x27;black&#x27;</span>,linewidths=<span class="number">.5</span>)</span><br><span class="line">                                        <span class="comment"># 8是指八条等高线</span></span><br><span class="line">                                        <span class="comment"># 注意：</span></span><br><span class="line">                                        <span class="comment"># colors,linewidths后面都有s</span></span><br><span class="line">plt.clabel(C,inline=<span class="literal">True</span>,fontsize=<span class="number">10</span>)</span><br><span class="line">plt.xticks(())</span><br><span class="line">plt.yticks(())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code>([], [])
+</code></pre><p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_33_1.png" alt="png"></p>
+<h1 id="3D"><a href="#3D" class="headerlink" title="3D"></a>3D</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d <span class="keyword">import</span> Axes3D</span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax = Axes3D(fig)</span><br><span class="line"><span class="comment"># X,Y value</span></span><br><span class="line">X = np.arange(-<span class="number">4</span>,<span class="number">4</span>,<span class="number">0.25</span>)</span><br><span class="line">Y = np.arange(-<span class="number">4</span>,<span class="number">4</span>,<span class="number">0.25</span>)</span><br><span class="line">X,Y = np.meshgrid(X,Y)</span><br><span class="line">R = np.sqrt(X**<span class="number">2</span>+Y**<span class="number">2</span>)</span><br><span class="line"><span class="comment"># height value</span></span><br><span class="line">Z = np.sin(R)</span><br><span class="line">ax.plot_surface(X,Y,Z,rstride=<span class="number">1</span>,cstride=<span class="number">1</span>,cmap=plt.get_cmap(<span class="string">&#x27;rainbow&#x27;</span>),edgecolor=<span class="string">&#x27;black&#x27;</span>,linewidths=<span class="number">0.5</span>)</span><br><span class="line">ax.contourf(X,Y,Z,zdir=<span class="string">&#x27;x&#x27;</span>,offset=-<span class="number">4</span>,cmap=<span class="string">&#x27;rainbow&#x27;</span>) <span class="comment"># zdir=&#x27;z&#x27;对应从z轴压下去</span></span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.contour.QuadContourSet at 0x1e5ab98dd30&gt;
+</code></pre><p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_35_1.png" alt="png"></p>
+<h1 id="Subplot-多合一显示"><a href="#Subplot-多合一显示" class="headerlink" title="Subplot 多合一显示"></a>Subplot 多合一显示</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>) <span class="comment"># 表示将figure分成两行一列</span></span><br><span class="line">plt.plot([<span class="number">0</span>,<span class="number">1</span>],[<span class="number">0</span>,<span class="number">1</span>])<span class="comment"># x,y分别从0-1</span></span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>) <span class="comment"># 表示分成两行三列</span></span><br><span class="line">plt.plot([<span class="number">0</span>,<span class="number">1</span>],[<span class="number">0</span>,<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">235</span>)</span><br><span class="line">plt.plot([<span class="number">0</span>,<span class="number">1</span>],[<span class="number">0</span>,<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">236</span>)</span><br><span class="line">plt.plot([<span class="number">0</span>,<span class="number">1</span>],[<span class="number">0</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x1e5aa547850&gt;]
+</code></pre><p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_37_1.png" alt="png"></p>
+<h1 id="Subplot-分隔显示"><a href="#Subplot-分隔显示" class="headerlink" title="Subplot 分隔显示"></a>Subplot 分隔显示</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gridspec</span><br><span class="line"></span><br><span class="line"><span class="comment"># method 1:subplot2grid</span></span><br><span class="line">plt.figure(figsize=(<span class="number">8</span>,<span class="number">5</span>))</span><br><span class="line">ax1 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>),(<span class="number">0</span>,<span class="number">0</span>),colspan=<span class="number">3</span>,rowspan=<span class="number">1</span>) </span><br><span class="line">                            <span class="comment"># (3,3)表示整个grid有三行三列</span></span><br><span class="line">                            <span class="comment"># (0,0)表示从第1行第1列开始开始plot</span></span><br><span class="line">                            <span class="comment"># colspan列跨度 rowspan行跨度</span></span><br><span class="line">ax1.plot([<span class="number">0</span>,<span class="number">2</span>])</span><br><span class="line">ax1.set_title(<span class="string">&#x27;ax1&#x27;</span>)</span><br><span class="line">ax2 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">0</span>),colspan=<span class="number">2</span>,rowspan=<span class="number">1</span>)</span><br><span class="line">ax3 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">2</span>),colspan=<span class="number">1</span>,rowspan=<span class="number">1</span>)</span><br><span class="line">ax4 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">0</span>),colspan=<span class="number">1</span>,rowspan=<span class="number">1</span>)</span><br><span class="line">ax5 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>),(<span class="number">2</span>,<span class="number">1</span>),colspan=<span class="number">1</span>,rowspan=<span class="number">1</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_39_0.png" alt="png"></p>
+<h1 id="图中图"><a href="#图中图" class="headerlink" title="图中图"></a>图中图</h1><p><strong><font size="5">set_title()</font></strong></p>
+<hr>
+<ul>
+<li><p><strong>loc</strong>:可取”best”,1或”upper right”,2”upper left”,3”lower<br>left”,4”lower right”,代表放不同位置</p>
+</li>
+<li><p><strong>fontsize</strong>:int或float或{‘xx-small’,’x-small’,’small’, ‘medium’,’large’,’x-large’, ‘xx-large’}，字体大小</p>
+</li>
+<li><p><strong>shadow</strong>: 是否为图例边框添加阴影T，传入布尔类型</p>
+</li>
+<li><p><strong>labelspacing</strong>: 图例中条目之间的距离</p>
+</li>
+<li><p><strong>handlelength</strong>: 图例句柄的长度</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure()</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line">left,bottom,width,height = <span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.8</span>,<span class="number">0.8</span> <span class="comment"># 这些值都是百分比</span></span><br><span class="line">ax1 = fig.add_axes([left,bottom,width,height]) </span><br><span class="line">ax1.plot(x,y,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">ax1.set_xlabel(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">ax1.set_ylabel(<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">ax1.set_title(<span class="string">&#x27;title&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">left,bottom,width,height = <span class="number">0.2</span>,<span class="number">0.6</span>,<span class="number">0.25</span>,<span class="number">0.25</span></span><br><span class="line">ax2 = fig.add_axes([left,bottom,width,height]) </span><br><span class="line">ax2.plot(y,x,<span class="string">&#x27;blue&#x27;</span>)</span><br><span class="line">ax2.set_xlabel(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">ax2.set_ylabel(<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">ax2.set_title(<span class="string">&#x27;title inside 1&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plt.axes([<span class="number">.6</span>,<span class="number">.2</span>,<span class="number">.25</span>,<span class="number">.25</span>])</span><br><span class="line">plt.plot(y[::-<span class="number">1</span>],x,<span class="string">&#x27;green&#x27;</span>) <span class="comment"># ::-1表示从后往前，间隔为-1</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;标题2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Text(0.5, 1.0, &#39;标题2&#39;)
+</code></pre><p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_42_1.png" alt="png"></p>
+<h1 id="次坐标轴"><a href="#次坐标轴" class="headerlink" title="次坐标轴"></a>次坐标轴</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = np.arange(<span class="number">0</span>,<span class="number">10</span>,<span class="number">0.1</span>)</span><br><span class="line">y1 = <span class="number">0.05</span>*x**<span class="number">2</span></span><br><span class="line">y2 = -<span class="number">10</span>*y1</span><br><span class="line">fig,ax1 = plt.subplots() <span class="comment"># ?</span></span><br><span class="line">ax2 = ax1.twinx()</span><br><span class="line">ax1.plot(x,y1,<span class="string">&#x27;g:&#x27;</span>)</span><br><span class="line">ax2.plot(x,y2,<span class="string">&#x27;m--&#x27;</span>)</span><br><span class="line">ax1.set_xlabel(<span class="string">&#x27;X data&#x27;</span>)</span><br><span class="line">ax1.set_xlabel(<span class="string">&#x27;Y1&#x27;</span>,color=<span class="string">&#x27;g&#x27;</span>)</span><br><span class="line">ax2.set_ylabel(<span class="string">&#x27;Y2&#x27;</span>,color=<span class="string">&#x27;b&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Text(0, 0.5, &#39;Y2&#39;)
+</code></pre><p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_44_1.png" alt="png"></p>
+<h1 id="Animation-动画"><a href="#Animation-动画" class="headerlink" title="Animation 动画"></a>Animation 动画</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> animation</span><br><span class="line">fig,ax = plt.subplots()</span><br><span class="line"></span><br><span class="line">x = np.arange(<span class="number">0</span>,<span class="number">2</span>*np.pi,<span class="number">0.01</span>)</span><br><span class="line">line, = ax.plot(x,np.sin(x))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">animate</span>(<span class="params">i</span>):</span></span><br><span class="line">    line.set_ydata(np.sin(x+i/<span class="number">100</span>))</span><br><span class="line">    <span class="keyword">return</span> line,</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init</span>():</span></span><br><span class="line">    line.set_ydata(np.sin(x))</span><br><span class="line">    <span class="keyword">return</span> line,</span><br><span class="line">ani = animation.FuncAnimation(fig=fig,func=animate,frames=<span class="number">100</span>,init_func=init,interval=<span class="number">20</span>,blit=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/output_46_0.png" alt="png"></p>
+<p>当然内容并不完整，只是初步的对matplotlib库中的工具进行介绍，后续会根据matplotlib所给的官方文件进行扩充……</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/24/end/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/24/end/" class="post-title-link" itemprop="url">end</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-06-24 10:04:26 / 修改时间：10:20:50" itemprop="dateCreated datePublished" datetime="2021-06-24T10:04:26+08:00">2021-06-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>83</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -761,15 +1184,198 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+          <p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/" class="post-title-link" itemprop="url">7.二次型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-23 07:18:03" itemprop="dateCreated datePublished" datetime="2021-06-23T07:18:03+08:00">2021-06-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-04 14:47:30" itemprop="dateModified" datetime="2021-07-04T14:47:30+08:00">2021-07-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
+<li>二次型的矩阵表示<br>$f(x_1,x_2,x_3)$<br><br>$\begin{aligned}<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>其中$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵<br><br></li>
+<li>标准形<blockquote>
+<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$<br><br></p>
+</blockquote>
+</li>
+<li>规范形<blockquote>
+<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$<br><br></p>
+</blockquote>
+</li>
+<li>正惯性指数p，负惯性指数q，符号差<blockquote>
+<p>p,q就是标准形系数正负个数<br><br>符号差就是p-q<br><br>例$x_1^2+x_2^2-4x_3^2\quad$</p>
+<p>正惯性指数=2，负惯性指数=1,符号差=1<br><br></p>
+</blockquote>
+</li>
+<li>二次型的秩<blockquote>
+<p>$r(f)=r(A)$<br><br></p>
+</blockquote>
+</li>
+<li>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$<br><br></li>
+<li>合同<blockquote>
+<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
+<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><ul>
+<li><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。<br><br>解：<br>$\begin{aligned}<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]\\<br>&amp;\quad -(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3)^2<br>\end{aligned}<br>$<br><br>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$<br><br>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$<br><br>坐标变换公式<br>$x=Cy$<br><br>$C=<br>\begin{bmatrix}<br>  1&amp;-1&amp;1\\<br>  0&amp;1&amp;-2\\<br>  0&amp;0&amp;1<br>\end{bmatrix}<br>$<br><br>得$f=y_1^2+y_2^2$</li>
+</ul>
+<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
+<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)，使二次型化为标准形<br><br>$\quad x^TAx=y^T\land y=\lambda_1y_1^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
+</blockquote>
+<ul>
+<li><strong>证</strong>：<br>首先要知道二次型中$A$是实对称矩阵<br><br>因为实对称矩阵，$Q^{-1}AQ=\land$<br><br>$Q$是正交矩阵(则$Q^T=Q^{-1}$)<br><br>所以$Q^TAQ=\land$<br><br>若令$x=Qy$,则<br><br>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</li>
+</ul>
+<p><strong>例</strong>：将二次型<br>$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
+<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
+<p>由特征多项式<br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-5)(\lambda+1)^2<br>\end{aligned}<br>$</p>
+<p>$\therefore A$的特征值为5，-1，-1</p>
+<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
+<p>$得到\alpha_1=(1,1,1)^T$</p>
+<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
+<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
+<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$</p>
+<p>因为这两个向量不垂直</p>
+<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
+<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
+<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
+<p>单位化</p>
+<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix},<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix},$<br>$\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}$</p>
+<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
+<p>那么，二次型$x^TAx$经正交变换</p>
+<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
+<p>化为标准形</p>
+<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
+<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
+<p><strong>推论：</strong></p>
+<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
+<ul>
+<li><strong>例</strong>:<br>$f=y_1^2+3y_2^2-2y_3^2$<br><br>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$<br><br>那么$f=z_1^2+z_2^2-z_3^2$</li>
+</ul>
+<p>变成规范形步骤：</p>
+<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
+<h2 id="惯性定理"><a href="#惯性定理" class="headerlink" title="惯性定理"></a>惯性定理</h2><blockquote>
+<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
+</blockquote>
+<p>即二次型的规范形是唯一的</p>
+<ul>
+<li><strong>证</strong>：<br>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，<br>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾<br><br>设$r(C^TAC)=r(A)=r(f)=r$<br><br>如果经坐标变换$x=Py\;$和$\;x=Qz$<br><br>二次型$x^TAx$化成规范形，分别为<br><br>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$<br><br>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$<br><br><strong>反证法</strong><br>如果$s &lt; t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等<br><br>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$<br><br>不妨设<br><br>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$<br><br>其中($i=1,2,\cdots,n$)<br><br><br>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项<br><br>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾<br><br>即<br>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$<br><br>也就是<br>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$<br><br>方程个数<br>$s+(n-t)=n+s-t&lt; n$<br><br>方程组(1)必有非零解<br><br>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解<br><br>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$<br><br>因为$P,Q$均为可逆矩阵，$\eta\neq0$<br><br>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$<br><br>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$<br><br>把$\eta$代入$(I)$和$(II)$,有<br><br>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt; 0$<br><br>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$<br><br>矛盾<br><br>$\because s,t$地位相等<br><br>$\therefore\;s=t$</li>
+</ul>
+<p>由惯性定理推出:</p>
+<p>实对称矩阵$A$和$B$合同</p>
+<p>$\Leftrightarrow p_A=p_B,q_A=q_B\;$<br>(p为正惯性指数，q为负惯性指数)</p>
+<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
+<p>设二次型$f(x)=x^TAx$<br><br>如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,<br><br>恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
+</blockquote>
+<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
+<p>二次型经坐标变换，其正定性不变</p>
+<p>$x^TAx$正定</p>
+<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
+<p>$\Leftrightarrow\;A\simeq E$,即存在可逆矩阵$C,$</p>
+<p>$C^TAC=E(或写成A=C^TEC，E可省略)$</p>
+<p>$\Leftrightarrow\;A$特征值全大于0</p>
+<p>$\Leftrightarrow\;A$的顺序主子式 <strong>全</strong> 大于0</p>
+<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
+<p><strong>例</strong>：判断二次型</p>
+<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
+<p>是否是正定二次型。</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>顺序主子式<br>二次型矩阵<br><br>$A$=$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$<br><br>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$<br><br>$\Delta_3=|A|=10&gt;0$<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<hr>
+<ul>
+<li>特征值<br>由特征多项式<br><br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$<br><br>$A$的特征值：1,1,10$\quad$全大于零<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<hr>
+<ul>
+<li>配方法$^*$<br><br>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]\\<br>&amp;\quad -2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$<br><br>$p=3,q=0$<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
+<p>半正定$f\geqslant0$</p>
+<p>负定$f&lt;0$</p>
+<p>半负定$f\leqslant0$</p>
 
       
     </div>
@@ -788,7 +1394,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -856,14 +1462,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -925,12 +1531,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">102k</span>
+    <span title="站点总字数">106k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:32</span>
+    <span title="站点阅读时长">1:37</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
