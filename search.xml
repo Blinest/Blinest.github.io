@@ -326,265 +326,6 @@
       </tags>
   </entry>
   <entry>
-    <title>1.C语言的一些概念</title>
-    <url>/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
-<li>整型常量：也就是整数</li>
-<li>实型常量：<ol>
-<li>十进制小数形式：由数字和小数点组成</li>
-<li>指数形式：如$12.34e3$(代表$12.34\times10^3$)<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
-</ol>
-</li>
-<li>字符常量：<ol>
-<li>普通字符：用单撇号括起来的一个字符</li>
-<li>转义字符：以字符”\\”开头的字符</li>
-</ol>
-</li>
-<li>字符串常量：用双撇号把若干字符括起来</li>
-<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
-</ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">转义字符</th>
-<th style="text-align:left">字符值</th>
-<th style="text-align:left">输出结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">\a</td>
-<td style="text-align:left">警告(alert)</td>
-<td style="text-align:left">产生声音或视觉信号</td>
-</tr>
-<tr>
-<td style="text-align:left">\b</td>
-<td style="text-align:left">退格(backspace)</td>
-<td style="text-align:left">将光标位置后退一个字符</td>
-</tr>
-<tr>
-<td style="text-align:left">\f</td>
-<td style="text-align:left">换页(form feed)</td>
-<td style="text-align:left">将光标当前位置移到下一页的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\n</td>
-<td style="text-align:left">换行</td>
-<td style="text-align:left">将光标当前位置移到下一行的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\r</td>
-<td style="text-align:left">回车(carriage return)</td>
-<td style="text-align:left">将该光标当前位置移到本行的开头</td>
-</tr>
-<tr>
-<td style="text-align:left">\t</td>
-<td style="text-align:left">水平制表符</td>
-<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
-</tr>
-<tr>
-<td style="text-align:left">\v</td>
-<td style="text-align:left">垂直制表符</td>
-<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
-</tr>
-<tr>
-<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
-<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
-<td style="text-align:left">与该八进制码对应的字符</td>
-</tr>
-<tr>
-<td style="text-align:left">\xh[h$\cdots$]<br>其中h代表一个十六进制数字</td>
-<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
-<td style="text-align:left">与该十六进制码对应的字符</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
-<p>变量代表一个有名字，具有特定属性的一个存储单元。它用来存放数据，也就是存放变量的值。程序运行期间变量的值可以改变。<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;<span class="comment">//a是变量名，3是变量值</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
-<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
-</blockquote>
-<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
-<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
-<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
-<ul>
-<li>$<br>\text{数据类型}<br>\begin{cases}<br>\text{基本类型}<br>\begin{cases}<br>\text{整型类型}<br>\begin{cases}<br>\text{基本整形(int)}\\<br>\text{短整型(short int)}\\<br>\text{长整型(long int)}\\<br>\text{双长整型(long long int)}\\<br>\text{字符型(char)}\\<br>\text{布尔型(bool)}<br>\end{cases}\\<br>\\<br>\text{浮点类型}<br>\begin{cases}<br>\text{单精度浮点型(float)}\\<br>\text{双精度浮点型(double)}\\<br>\text{复数浮点型(float_complex,double_complex,longlong_complex)}<br>\end{cases}<br>\end{cases}\\<br>\\<br>\text{枚举类型(enum)}\\<br>\\<br>\text{空类型(void)}\\<br>\\<br>\text{派生类型}<br>\begin{cases}<br>\text{指针类型(*)}\\<br>\text{数组类型([ ])}\\<br>\text{结构体类型(struct)}\\<br>\text{共用体类型(union)}\\<br>\text{函数类型}<br>\end{cases}<br>\end{cases}<br>$</li>
-</ul>
-</blockquote>
-<p>其中基本类型和枚举类型的值都是数值，统称为算术类型。</p>
-<p>算术类型和指针类型统称为纯量类型，因为其值是整数类型。</p>
-<p>枚举类型是程序中用户定义的整数类型。</p>
-<p>数组类型和结构体类型统称为组合类型，共用体类型不属于组合类型，<br>因为在同一时间只有一个成员具有值。</p>
-<p>函数类型用来定义函数，描述一个函数的接口，包括函数返回值的数据类型和参数的类型</p>
-<h2 id="整型数据"><a href="#整型数据" class="headerlink" title="整型数据"></a>整型数据</h2><p>存储单元的存储方式是：用整数补码形式存放。</p>
-<p>一个整数的补码是此数的二进制形式</p>
-<p>求负数补码的方法：先将此数的绝对值写成二进制的形式，然后对所有二进制位按位 <strong>取反，再加1</strong></p>
-<h3 id="整型数据的分类"><a href="#整型数据的分类" class="headerlink" title="整型数据的分类"></a>整型数据的分类</h3><ol>
-<li>基本类型(int 型)<br>编译系统分配给int型数据2个字节或4个字节(由具体的C语言编译系统自行决定)<br></li>
-<li>短整型(short int)<br>类型名为short int或short。<br><br>一般分配2个字节，取值范围$-2^{15}\sim (2^{15}-1)$</li>
-<li>长整型(long int)<br>类型名为long int或long。<br><br>一般分配4个字节，取值范围$-2^{31}\sim (2^{31}-1)$</li>
-<li>双长整型(long long int)<br>类型名为long long int或long long。<br><br>一般分配8个字节，取值范围$-2^{63}\sim (2^{63}-1)$</li>
-</ol>
-<p>在类型符号前面加上无符号修饰符unsigned，就是只有正值的意思，<br>因为其所占字节数不变，也就是说正值的取值范围比以前大。</p>
-<h2 id="字符型数据"><a href="#字符型数据" class="headerlink" title="字符型数据"></a>字符型数据</h2><p>定义字符变量<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;?&#x27;</span>; <span class="comment">//char c=63;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d  %c&quot;</span>,c,c);</span><br><span class="line"><span class="comment">//输出结果63 ?</span></span><br></pre></td></tr></table></figure><br>c是字符变量，实质上是一个字节的整型变量，但是它用来存放字符，所以称为字符变量</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">字节数</th>
-<th style="text-align:center">取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">signed char(有符号字符型)</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">$-2^7\sim (2^7-1)$</td>
-</tr>
-<tr>
-<td style="text-align:center">unsigned char(无符号字符型)</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">$0\sim 2^{8}-1$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="浮点型数据"><a href="#浮点型数据" class="headerlink" title="浮点型数据"></a>浮点型数据</h2><blockquote>
-<p>用来表示具有小数点的实数。</p>
-</blockquote>
-<p>因为小数点位置可以浮动，所以实数的指数形式称为 <strong>浮点数</strong></p>
-<p>浮点数类型有三种</p>
-<ol>
-<li>float型（单精度浮点型）<br>分配4个字节</li>
-<li>double型（双精度浮点型）<br>分配8个字节</li>
-<li>long double型（长双精度型）<br>8或16个字节<h2 id="确定常量的类型"><a href="#确定常量的类型" class="headerlink" title="确定常量的类型"></a>确定常量的类型</h2></li>
-<li>整型常量<br>在一个整数末尾加大写L或小写l表示长整型<br></li>
-<li>浮点型常量<blockquote>
-<p>以小数或指数形式出现的实数</p>
-</blockquote>
-</li>
-</ol>
-<p>在末尾加上F或f表示float类型，<br>加上L或l表示long double类型<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">float</span> a =<span class="number">3</span> <span class="number">.14159</span>f</span><br><span class="line"><span class="keyword">float</span> dounble a = <span class="number">1.23L</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>类型和变量的区别：</strong><br>每个变量都属于一个确定的类型，类型是变量的一个重要属性。</p>
-<h1 id="C语句"><a href="#C语句" class="headerlink" title="C语句"></a>C语句</h1><h2 id="C语句的作用和分类"><a href="#C语句的作用和分类" class="headerlink" title="C语句的作用和分类"></a>C语句的作用和分类</h2><p>语句后面有分号</p>
-<p>分类：</p>
-<ol>
-<li>控制语句</li>
-<li>函数调用语句</li>
-<li>表达式语句</li>
-<li>空语句</li>
-<li>复合语句</li>
-</ol>
-<h1 id="数据的输入输出"><a href="#数据的输入输出" class="headerlink" title="数据的输入输出"></a>数据的输入输出</h1><p>C语言本身不提供输入输出语句</p>
-<p>需要使用库函数stdio.h</p>
-<h2 id="printf-格式控制，输出表列"><a href="#printf-格式控制，输出表列" class="headerlink" title="printf(格式控制，输出表列)"></a>printf(格式控制，输出表列)</h2><p>%附加字符 格式字符</p>
-<p>例%-m.nf</p>
-<p>printf函数中用到的格式字符</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">格式字符</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">d,i</td>
-<td style="text-align:left">输出带符号十进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">o</td>
-<td style="text-align:left">输出八进制无符号整数(不输出前导符0)</td>
-</tr>
-<tr>
-<td style="text-align:center">x,X</td>
-<td style="text-align:left">输出无符号十六进制整数(不输出前导符0x)，用x小写，X大写</td>
-</tr>
-<tr>
-<td style="text-align:center">u</td>
-<td style="text-align:left">输出无符号十进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">c</td>
-<td style="text-align:left">输出一个字符</td>
-</tr>
-<tr>
-<td style="text-align:center">s</td>
-<td style="text-align:left">输出字符串</td>
-</tr>
-<tr>
-<td style="text-align:center">f</td>
-<td style="text-align:left">以小数形式输出单、双精度数，隐含输出6位小数</td>
-</tr>
-<tr>
-<td style="text-align:center">e,E</td>
-<td style="text-align:left">以指数形式输出实数</td>
-</tr>
-<tr>
-<td style="text-align:center">g,G</td>
-<td style="text-align:left">选用%f或%e格式中输出宽度较短的一种形式，不输出无意义的0</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>在格式声明中，在%和上述格式字符间可以插入几种附加字符(又称修饰符)</p>
-<p>printf函数中用到的修饰符</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字符</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">l</td>
-<td style="text-align:left">长整型整数，可加在格式符d、o、x、u前面</td>
-</tr>
-<tr>
-<td style="text-align:center">m(代表一个整数)</td>
-<td style="text-align:left">数据的最小宽度</td>
-</tr>
-<tr>
-<td style="text-align:center">n(代表一个实数)</td>
-<td style="text-align:left">对实数，表示输出n位小数；对字符串，表示截取的字符个数</td>
-</tr>
-<tr>
-<td style="text-align:center">-</td>
-<td style="text-align:left">输出的数字或字符在域内想左靠</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="scanf-格式控制-地址表列"><a href="#scanf-格式控制-地址表列" class="headerlink" title="scanf(格式控制,地址表列)"></a>scanf(格式控制,地址表列)</h2><p><strong>注意</strong>：scanf函数中是地址表列，传进去的是变量地址</p>
-<h1 id="关系运算符和关系表达式"><a href="#关系运算符和关系表达式" class="headerlink" title="关系运算符和关系表达式"></a>关系运算符和关系表达式</h1><blockquote>
-<p>C语言中，比较符称为关系运算符<br><br>用关系运算符将两个数值或数值表达式连接起来的式子，称为关系表达式。</p>
-</blockquote>
-<p>关系运算符：</p>
-<p>&lt; ， &lt;= ， &gt; ， &gt;= ， == ， !=</p>
-<p>关系表达式：<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span>&gt;=<span class="number">0</span> <span class="comment">//为真 1</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="逻辑运算符和逻辑表达式"><a href="#逻辑运算符和逻辑表达式" class="headerlink" title="逻辑运算符和逻辑表达式"></a>逻辑运算符和逻辑表达式</h1><p>逻辑表达式：</p>
-<p>&amp;&amp; 或 ，|| 与 ，! 非</p>
-<p>逻辑运算符：<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span> &gt; <span class="number">3</span> &amp;&amp; <span class="number">8</span> &lt; <span class="number">4</span> - !<span class="number">0</span> <span class="comment">//为假 0</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="条件运算符和条件表达式"><a href="#条件运算符和条件表达式" class="headerlink" title="条件运算符和条件表达式"></a>条件运算符和条件表达式</h1><p>条件表达式的一般形式：</p>
-<p>表达式1 ? 表达式2 : 表达式3<br>例<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">max=(a&gt;b)?a:b;</span><br></pre></td></tr></table></figure></p>
-<h1 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> grade;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your score:&quot;</span>);</span><br><span class="line">    <span class="keyword">switch</span>(grade) <span class="comment">//此括号里的值类型应为整数类型（包括字符型）</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>A<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;85~100\n&quot;</span>);<span class="keyword">break</span>;<span class="comment">//break;不能省</span></span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;B</span><span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;70~84\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>C<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;60~69\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>D<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;&lt;60\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;enter data error!\n&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果:</span></span><br><span class="line"><span class="comment">A</span></span><br><span class="line"><span class="comment">Your score:85~100</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-<h1 id="静态，动态存储方式"><a href="#静态，动态存储方式" class="headerlink" title="静态，动态存储方式"></a>静态，动态存储方式</h1><p><strong>例</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">auto</span> <span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> c=<span class="number">0</span>;<span class="comment">//定义了一个静态局部变量，调用后不释放，保留前值</span></span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">6</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><br><strong>对比下面的程序</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1.html语法规则</title>
     <url>/2021/07/09/1-html%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="HTML语法规范"><a href="#HTML语法规范" class="headerlink" title="HTML语法规范"></a>HTML语法规范</h1><p>这两天学习了一下html的基本语法规则，复习一段时间后就会开始CSS的学习，并将其先运用在博客的页面显示上，当然这也是为了以后网站搭建进行一些知识储备。</p>
@@ -1087,6 +828,265 @@ src是&lt;img&gt;的必须属性，而且必须写在img后面</li>
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.C语言的一些概念</title>
+    <url>/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
+<li>整型常量：也就是整数</li>
+<li>实型常量：<ol>
+<li>十进制小数形式：由数字和小数点组成</li>
+<li>指数形式：如$12.34e3$(代表$12.34\times10^3$)<br><br> 规定：字母E或e代表以10为底的指数<br><br> 注意：E或e前必须有数字，且e或E后必须为整数</li>
+</ol>
+</li>
+<li>字符常量：<ol>
+<li>普通字符：用单撇号括起来的一个字符</li>
+<li>转义字符：以字符”\\”开头的字符</li>
+</ol>
+</li>
+<li>字符串常量：用双撇号把若干字符括起来</li>
+<li>符号常量：如#define PI 3.14 (注意末尾没有分号)</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">转义字符</th>
+<th style="text-align:left">字符值</th>
+<th style="text-align:left">输出结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\a</td>
+<td style="text-align:left">警告(alert)</td>
+<td style="text-align:left">产生声音或视觉信号</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:left">退格(backspace)</td>
+<td style="text-align:left">将光标位置后退一个字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">换页(form feed)</td>
+<td style="text-align:left">将光标当前位置移到下一页的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">换行</td>
+<td style="text-align:left">将光标当前位置移到下一行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">回车(carriage return)</td>
+<td style="text-align:left">将该光标当前位置移到本行的开头</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">水平制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个Tab位置</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:left">垂直制表符</td>
+<td style="text-align:left">将光标当前位置移到下一个垂直制表对齐点</td>
+</tr>
+<tr>
+<td style="text-align:left">\o,\oo或\ooo<br>其中o代表一个八进制数字</td>
+<td style="text-align:left">与该八进制码对应的$ASCLL$字符</td>
+<td style="text-align:left">与该八进制码对应的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\xh[h$\cdots$]<br>其中h代表一个十六进制数字</td>
+<td style="text-align:left">与该十六进制对应的$ASCLL$字符</td>
+<td style="text-align:left">与该十六进制码对应的字符</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
+<p>变量代表一个有名字，具有特定属性的一个存储单元。它用来存放数据，也就是存放变量的值。程序运行期间变量的值可以改变。<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;<span class="comment">//a是变量名，3是变量值</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="常变量"><a href="#常变量" class="headerlink" title="常变量"></a>常变量</h2><p>$C99$允许使用 <strong>常变量</strong> ,方法是在定义变量时，前面加一个关键字const,<br>如 const int a=3;<br><br>常变量和常量的异同：<br><br>常变量具有变量的基本属性：有类型，占存储单元，只是不允许只改变<br><br>常变量是有名字的不变量，常量是没有名字的不变量<br></p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>用来对变量、符号常量名、函数、数组、类型等命名的有效字符序列统称为标识符。</p>
+</blockquote>
+<p>就是一个对象的名字。变量名c,f……，符号常量名PI……，函数名printf……都是标识符</p>
+<p><strong>C语言规定</strong> 标识符只能由字母，数字和下划线3种字符组成，且首字符必须是字母或下划线。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
+<p>所谓类型，就是对数据分配存储单元的安排，包括存储单元的长度（占多少字节）<br>以及数据的存储形式。不同的类型分配不同的长度和存储形式。</p>
+<ul>
+<li>$<br>\text{数据类型}<br>\begin{cases}<br>\text{基本类型}<br>\begin{cases}<br>\text{整型类型}<br>\begin{cases}<br>\text{基本整形(int)}\\<br>\text{短整型(short int)}\\<br>\text{长整型(long int)}\\<br>\text{双长整型(long long int)}\\<br>\text{字符型(char)}\\<br>\text{布尔型(bool)}<br>\end{cases}\\<br>\\<br>\text{浮点类型}<br>\begin{cases}<br>\text{单精度浮点型(float)}\\<br>\text{双精度浮点型(double)}\\<br>\text{复数浮点型(float_complex,double_complex,longlong_complex)}<br>\end{cases}<br>\end{cases}\\<br>\\<br>\text{枚举类型(enum)}\\<br>\\<br>\text{空类型(void)}\\<br>\\<br>\text{派生类型}<br>\begin{cases}<br>\text{指针类型(*)}\\<br>\text{数组类型([ ])}\\<br>\text{结构体类型(struct)}\\<br>\text{共用体类型(union)}\\<br>\text{函数类型}<br>\end{cases}<br>\end{cases}<br>$</li>
+</ul>
+</blockquote>
+<p>其中基本类型和枚举类型的值都是数值，统称为算术类型。</p>
+<p>算术类型和指针类型统称为纯量类型，因为其值是整数类型。</p>
+<p>枚举类型是程序中用户定义的整数类型。</p>
+<p>数组类型和结构体类型统称为组合类型，共用体类型不属于组合类型，<br>因为在同一时间只有一个成员具有值。</p>
+<p>函数类型用来定义函数，描述一个函数的接口，包括函数返回值的数据类型和参数的类型</p>
+<h2 id="整型数据"><a href="#整型数据" class="headerlink" title="整型数据"></a>整型数据</h2><p>存储单元的存储方式是：用整数补码形式存放。</p>
+<p>一个整数的补码是此数的二进制形式</p>
+<p>求负数补码的方法：先将此数的绝对值写成二进制的形式，然后对所有二进制位按位 <strong>取反，再加1</strong></p>
+<h3 id="整型数据的分类"><a href="#整型数据的分类" class="headerlink" title="整型数据的分类"></a>整型数据的分类</h3><ol>
+<li>基本类型(int 型)<br>编译系统分配给int型数据2个字节或4个字节(由具体的C语言编译系统自行决定)<br></li>
+<li>短整型(short int)<br>类型名为short int或short。<br><br>一般分配2个字节，取值范围$-2^{15}\sim (2^{15}-1)$</li>
+<li>长整型(long int)<br>类型名为long int或long。<br><br>一般分配4个字节，取值范围$-2^{31}\sim (2^{31}-1)$</li>
+<li>双长整型(long long int)<br>类型名为long long int或long long。<br><br>一般分配8个字节，取值范围$-2^{63}\sim (2^{63}-1)$</li>
+</ol>
+<p>在类型符号前面加上无符号修饰符unsigned，就是只有正值的意思，<br>因为其所占字节数不变，也就是说正值的取值范围比以前大。</p>
+<h2 id="字符型数据"><a href="#字符型数据" class="headerlink" title="字符型数据"></a>字符型数据</h2><p>定义字符变量<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> c=<span class="string">&#x27;?&#x27;</span>; <span class="comment">//char c=63;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d  %c&quot;</span>,c,c);</span><br><span class="line"><span class="comment">//输出结果63 ?</span></span><br></pre></td></tr></table></figure><br>c是字符变量，实质上是一个字节的整型变量，但是它用来存放字符，所以称为字符变量</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">字节数</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">signed char(有符号字符型)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">$-2^7\sim (2^7-1)$</td>
+</tr>
+<tr>
+<td style="text-align:center">unsigned char(无符号字符型)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">$0\sim 2^{8}-1$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="浮点型数据"><a href="#浮点型数据" class="headerlink" title="浮点型数据"></a>浮点型数据</h2><blockquote>
+<p>用来表示具有小数点的实数。</p>
+</blockquote>
+<p>因为小数点位置可以浮动，所以实数的指数形式称为 <strong>浮点数</strong></p>
+<p>浮点数类型有三种</p>
+<ol>
+<li>float型（单精度浮点型）<br>分配4个字节</li>
+<li>double型（双精度浮点型）<br>分配8个字节</li>
+<li>long double型（长双精度型）<br>8或16个字节<h2 id="确定常量的类型"><a href="#确定常量的类型" class="headerlink" title="确定常量的类型"></a>确定常量的类型</h2></li>
+<li>整型常量<br>在一个整数末尾加大写L或小写l表示长整型<br></li>
+<li>浮点型常量<blockquote>
+<p>以小数或指数形式出现的实数</p>
+</blockquote>
+</li>
+</ol>
+<p>在末尾加上F或f表示float类型，<br>加上L或l表示long double类型<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">float</span> a =<span class="number">3</span> <span class="number">.14159</span>f</span><br><span class="line"><span class="keyword">float</span> dounble a = <span class="number">1.23L</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>类型和变量的区别：</strong><br>每个变量都属于一个确定的类型，类型是变量的一个重要属性。</p>
+<h1 id="C语句"><a href="#C语句" class="headerlink" title="C语句"></a>C语句</h1><h2 id="C语句的作用和分类"><a href="#C语句的作用和分类" class="headerlink" title="C语句的作用和分类"></a>C语句的作用和分类</h2><p>语句后面有分号</p>
+<p>分类：</p>
+<ol>
+<li>控制语句</li>
+<li>函数调用语句</li>
+<li>表达式语句</li>
+<li>空语句</li>
+<li>复合语句</li>
+</ol>
+<h1 id="数据的输入输出"><a href="#数据的输入输出" class="headerlink" title="数据的输入输出"></a>数据的输入输出</h1><p>C语言本身不提供输入输出语句</p>
+<p>需要使用库函数stdio.h</p>
+<h2 id="printf-格式控制，输出表列"><a href="#printf-格式控制，输出表列" class="headerlink" title="printf(格式控制，输出表列)"></a>printf(格式控制，输出表列)</h2><p>%附加字符 格式字符</p>
+<p>例%-m.nf</p>
+<p>printf函数中用到的格式字符</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">格式字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">d,i</td>
+<td style="text-align:left">输出带符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:left">输出八进制无符号整数(不输出前导符0)</td>
+</tr>
+<tr>
+<td style="text-align:center">x,X</td>
+<td style="text-align:left">输出无符号十六进制整数(不输出前导符0x)，用x小写，X大写</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:left">输出无符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:left">输出一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:left">输出字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">f</td>
+<td style="text-align:left">以小数形式输出单、双精度数，隐含输出6位小数</td>
+</tr>
+<tr>
+<td style="text-align:center">e,E</td>
+<td style="text-align:left">以指数形式输出实数</td>
+</tr>
+<tr>
+<td style="text-align:center">g,G</td>
+<td style="text-align:left">选用%f或%e格式中输出宽度较短的一种形式，不输出无意义的0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在格式声明中，在%和上述格式字符间可以插入几种附加字符(又称修饰符)</p>
+<p>printf函数中用到的修饰符</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:left">长整型整数，可加在格式符d、o、x、u前面</td>
+</tr>
+<tr>
+<td style="text-align:center">m(代表一个整数)</td>
+<td style="text-align:left">数据的最小宽度</td>
+</tr>
+<tr>
+<td style="text-align:center">n(代表一个实数)</td>
+<td style="text-align:left">对实数，表示输出n位小数；对字符串，表示截取的字符个数</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">输出的数字或字符在域内想左靠</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="scanf-格式控制-地址表列"><a href="#scanf-格式控制-地址表列" class="headerlink" title="scanf(格式控制,地址表列)"></a>scanf(格式控制,地址表列)</h2><p><strong>注意</strong>：scanf函数中是地址表列，传进去的是变量地址</p>
+<h1 id="关系运算符和关系表达式"><a href="#关系运算符和关系表达式" class="headerlink" title="关系运算符和关系表达式"></a>关系运算符和关系表达式</h1><blockquote>
+<p>C语言中，比较符称为关系运算符<br><br>用关系运算符将两个数值或数值表达式连接起来的式子，称为关系表达式。</p>
+</blockquote>
+<p>关系运算符：</p>
+<p>&lt; ， &lt;= ， &gt; ， &gt;= ， == ， !=</p>
+<p>关系表达式：<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span>&gt;=<span class="number">0</span> <span class="comment">//为真 1</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="逻辑运算符和逻辑表达式"><a href="#逻辑运算符和逻辑表达式" class="headerlink" title="逻辑运算符和逻辑表达式"></a>逻辑运算符和逻辑表达式</h1><p>逻辑表达式：</p>
+<p>&amp;&amp; 或 ，|| 与 ，! 非</p>
+<p>逻辑运算符：<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span> &gt; <span class="number">3</span> &amp;&amp; <span class="number">8</span> &lt; <span class="number">4</span> - !<span class="number">0</span> <span class="comment">//为假 0</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="条件运算符和条件表达式"><a href="#条件运算符和条件表达式" class="headerlink" title="条件运算符和条件表达式"></a>条件运算符和条件表达式</h1><p>条件表达式的一般形式：</p>
+<p>表达式1 ? 表达式2 : 表达式3<br>例<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">max=(a&gt;b)?a:b;</span><br></pre></td></tr></table></figure></p>
+<h1 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> grade;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;grade);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your score:&quot;</span>);</span><br><span class="line">    <span class="keyword">switch</span>(grade) <span class="comment">//此括号里的值类型应为整数类型（包括字符型）</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>A<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;85~100\n&quot;</span>);<span class="keyword">break</span>;<span class="comment">//break;不能省</span></span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;B</span><span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;70~84\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>C<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;60~69\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span><span class="number">&#x27;</span>D<span class="number">&#x27;</span>:<span class="built_in">printf</span>(<span class="string">&quot;&lt;60\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="built_in">printf</span>(<span class="string">&quot;enter data error!\n&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果:</span></span><br><span class="line"><span class="comment">A</span></span><br><span class="line"><span class="comment">Your score:85~100</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h1 id="静态，动态存储方式"><a href="#静态，动态存储方式" class="headerlink" title="静态，动态存储方式"></a>静态，动态存储方式</h1><p><strong>例</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">auto</span> <span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> c=<span class="number">0</span>;<span class="comment">//定义了一个静态局部变量，调用后不释放，保留前值</span></span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">6</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><br><strong>对比下面的程序</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">	b=b+<span class="number">1</span>;</span><br><span class="line">	c=c+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>(a+b+c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">2</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,f(a));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -1905,6 +1905,137 @@ False
       </tags>
   </entry>
   <entry>
+    <title>10.CSS3新增特性</title>
+    <url>/2021/07/21/10-CSS3%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="新增选择器"><a href="#新增选择器" class="headerlink" title="新增选择器"></a>新增选择器</h1><h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>属性选择器可以根据元素特定属性来选择元素，这样就可以不用借助于类或者id选择器。</p>
+<p>选择符|简介<br>E[att]|选择具有att属性的 E 元素<br>E[att=”val”]|选择具有att 属性且属性值等于val 的E 元素<br>E[att^=”val”]|匹配具有att 属性且值以val 开头的E 元素<br>E[att$=”val”]|匹配具有att 属性且值以val 结尾的E 元素<br>E[att*=”val”]|匹配具有att属性且值中含有val 的E 元素</p>
+<h2 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h2><p>结构伪类选择器主要根据文档结构来选择，常用于父级选择器里面的子元素</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择符</th>
+<th style="text-align:left">简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E:first-child</td>
+<td style="text-align:left">匹配父元素中的第一个子元素E</td>
+</tr>
+<tr>
+<td style="text-align:left">E:last-child</td>
+<td style="text-align:left">匹配父元素中最后一个E 元素</td>
+</tr>
+<tr>
+<td style="text-align:left">E:nth-child(n)</td>
+<td style="text-align:left">匹配父元素中的第n个子元素E</td>
+</tr>
+<tr>
+<td style="text-align:left">E:first-of-type</td>
+<td style="text-align:left">指定类型E 的第一个</td>
+</tr>
+<tr>
+<td style="text-align:left">E:last-of-type</td>
+<td style="text-align:left">指定类型E 的最后一个</td>
+</tr>
+<tr>
+<td style="text-align:left">E:nth-of-type(n)</td>
+<td style="text-align:left">指定类型E的第n个</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>nth-child(n)</strong> 选择某个父元素的一个或多个特定的子元素</p>
+<ul>
+<li><strong>n可以是数字，关键字和公式</strong></li>
+<li>n如果是数字，就是选择第n个子元素，里面数字从1开始</li>
+<li>n可以是关键字:even偶数，odd奇数</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">公式</th>
+<th style="text-align:left">取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">2n</td>
+<td style="text-align:left">偶数</td>
+</tr>
+<tr>
+<td style="text-align:left">2n+1</td>
+<td style="text-align:left">奇数</td>
+</tr>
+<tr>
+<td style="text-align:left">5n</td>
+<td style="text-align:left">5 10 15…</td>
+</tr>
+<tr>
+<td style="text-align:left">n+5</td>
+<td style="text-align:left">从第5个开始（包含第五个）到最后</td>
+</tr>
+<tr>
+<td style="text-align:left">-n+5</td>
+<td style="text-align:left">前五个（包含第5个）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>nth-child(n)</strong> 和 <strong>nth-of-type(n)</strong> 的区别<br>nth-child 会把所有的子元素排列序号</p>
+<p>nth-child 只会把指定的子元素排序号</p>
+<h2 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h2><p>伪元素选择器可以帮助我们利用CSS 创建新标签元素，而不需要HTML标签，从而简化HTML结构</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择符</th>
+<th style="text-align:left">简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">::before</td>
+<td style="text-align:left">在元素内部的前面插入内容</td>
+</tr>
+<tr>
+<td style="text-align:left">::after</td>
+<td style="text-align:left">在元素内部的后面插入内容</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意：</strong></p>
+<ul>
+<li><strong>before</strong> 和 <strong>after</strong> 创建一个元素，但是属于行内元素</li>
+<li>新创建的这个元素在文档树中是找不到的，所以我们称之为伪元素</li>
+<li><strong>语法：element::before{}</strong></li>
+<li>before 在父元素内容的前面创建元素，after 在父元素内容的后面插入元素</li>
+<li>伪元素选择器和标签选择器一样，权重为1</li>
+</ul>
+<h2 id="CSS3-盒子模型"><a href="#CSS3-盒子模型" class="headerlink" title="CSS3 盒子模型"></a>CSS3 盒子模型</h2><p>CSS3中可以通过 <strong>box-sizing</strong> 来指定盒子模型，有两个值：即可指定为 <strong>content-box</strong>、<strong>border-box</strong>，这样我们计算盒子大小的方式就发生了改变</p>
+<p>1.box-sizing: content-box 盒子大小为width + padding + border （默认）</p>
+<p>2.box-sizing: border-box 就不会撑大盒子（前提padding和border不会超过width宽度）</p>
+<h1 id="CSS3-过渡"><a href="#CSS3-过渡" class="headerlink" title="CSS3 过渡"></a>CSS3 过渡</h1><p>过渡（transition）是CSS3中最具有颠覆性的特征之一，我们可以在不适用flash动画或javascript的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。</p>
+<p>过渡动画：是从一个状态渐渐的过渡到另外一个状态</p>
+<p><strong>经常和:hover一起搭配使用</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">tansition: 要过渡的属性 花费时间 曲线运动 何时开始;</span><br></pre></td></tr></table></figure>
+<p><strong>1.属性</strong>：想要变化的CSS属性，宽度高度 背景颜色 内外边距都可以。如果想要所有的属性都变化过渡，写一个 <strong>all</strong> 就可以</p>
+<p><strong>2.花费时间</strong>：单位 s（必须）</p>
+<p><strong>3.曲线运动</strong>：默认是ease（可省略）</p>
+<p><strong>4.何时开始</strong>：单位 s（必须）可以设置延迟出发时间 默认是0s（可省略）</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.CSS字体与文本属性</title>
     <url>/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS 使用 <strong>font-famliy</strong> 属性定义 <strong>字体</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
@@ -2123,78 +2254,6 @@ False
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.算法(用C语言实现)</title>
-    <url>/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
-<ol>
-<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
-<li>若$r_1=0$,则$(a,b)=b$</li>
-<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
-<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
-</ol>
-<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
-<p>C语言代码实现</p>
-<p>1.while循环实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.函数嵌套实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
-<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
-<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
-</blockquote>
-<p>步骤：（正序为例）</p>
-<ol>
-<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
-<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
-<li>(小循环)针对前面未排序元素重复以上步骤。</li>
-<li>(大循环)重复上述步骤，直到排序完成</li>
-</ol>
-<p>C语言代码实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
-<p>时间复杂度为$O(n)$</p>
-<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
-<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
-<p>时间复杂度为$O(n^2)$</p>
-<p>平均时间复杂度$O(n^2)$</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
-<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
-</blockquote>
-<p>简单来说就是从后面的数选出较小的数排到前面</p>
-<p>C语言代码实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
-<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
-<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
-<ol>
-<li>从第一个元素开始，该元素可被认为已经排好序</li>
-<li>取出下一个元素，在已经排好的数组中向前扫描</li>
-<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
-<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
-<li>将取出元素插入到该空出的位置</li>
-<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</blockquote>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
-<ol>
-<li>如果n=1,结束</li>
-<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
-<li>将两个子序列分别采用归并排序</li>
-<li>将两个排好序的子序列合并成一个最终的排序序列</li>
-</ol>
-<p>C语言实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -2459,6 +2518,186 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>2.算法(用C语言实现)</title>
+    <url>/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
+<ol>
+<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
+<li>若$r_1=0$,则$(a,b)=b$</li>
+<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
+<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
+</ol>
+<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
+<p>C语言代码实现</p>
+<p>1.while循环实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.函数嵌套实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
+<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
+<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
+</blockquote>
+<p>步骤：（正序为例）</p>
+<ol>
+<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
+<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
+<li>(小循环)针对前面未排序元素重复以上步骤。</li>
+<li>(大循环)重复上述步骤，直到排序完成</li>
+</ol>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
+<p>时间复杂度为$O(n)$</p>
+<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
+<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
+<p>时间复杂度为$O(n^2)$</p>
+<p>平均时间复杂度$O(n^2)$</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
+<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
+</blockquote>
+<p>简单来说就是从后面的数选出较小的数排到前面</p>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
+<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
+<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
+<ol>
+<li>从第一个元素开始，该元素可被认为已经排好序</li>
+<li>取出下一个元素，在已经排好的数组中向前扫描</li>
+<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
+<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
+<li>将取出元素插入到该空出的位置</li>
+<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
+<ol>
+<li>如果n=1,结束</li>
+<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
+<li>将两个子序列分别采用归并排序</li>
+<li>将两个排好序的子序列合并成一个最终的排序序列</li>
+</ol>
+<p>C语言实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3.CSS的背景</title>
+    <url>/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的背景"><a href="#CSS-的背景" class="headerlink" title="CSS 的背景"></a>CSS 的背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><strong>background-color</strong> 属性定义了元素的背景颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></table></figure><br>一般情况下元素背景颜色默认值是 <strong>transparent(透明)</strong>，我们也可以手动指定背景颜色为透明色。</p>
+<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p><strong>background-image</strong> 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">绝对或相对位置</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h2><p>如果需要在HTML页面上对背景图像进行平铺，可以使用 <strong>background-repeat</strong> 属性<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat | no-repeat | repeat-x | repeat-y </span><br></pre></td></tr></table></figure></p>
+<h2 id="背景图片位置"><a href="#背景图片位置" class="headerlink" title="背景图片位置"></a>背景图片位置</h2><p>利用 <strong>bcakground-positon</strong> 属性可以改变图片在背景中的位置。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br></pre></td></tr></table></figure><br>参数代表的意思是：x坐标和y坐标，可以使用方位名词或者精确单位</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">length</td>
+<td style="text-align:left">百分数 / 由浮点数字和单位标识符组成的长度值</td>
+</tr>
+<tr>
+<td style="text-align:left">position</td>
+<td style="text-align:left">方位名词：<br>top / center / bottom <br>left / center / right </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>1.参数是方位名词</strong></p>
+<ul>
+<li>如果指定的两个值都是方位名词，则两个值前后顺序无关，比如left top和top left 效果一样</li>
+<li>如果指定了一个方位名词，另一个省略，则第二个值默认居中对齐</li>
+</ul>
+<p><strong>2.参数是精确单位</strong></p>
+<ul>
+<li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个肯定是y坐标</li>
+<li>如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中</li>
+</ul>
+<p><strong>3.参数是混合单位</strong></p>
+<ul>
+<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标</li>
+</ul>
+<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2><p><strong>background-attachment</strong> 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
+<p>background-attachment后期可以制作时差滚动效果<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: <span class="built_in">fixed</span>(固定) | <span class="built_in">scroll</span>(滚动) </span><br></pre></td></tr></table></figure></p>
+<h2 id="背景复合写法"><a href="#背景复合写法" class="headerlink" title="背景复合写法"></a>背景复合写法</h2><p>我们可以将这些属性合并写在同一个属性background中，约定的顺序为：</p>
+<p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
+<h2 id="背景色半透明"><a href="#背景色半透明" class="headerlink" title="背景色半透明"></a>背景色半透明</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>rgba也就是red、green、blue、alpha</strong></p>
+<ul>
+<li>最后一个参数是 <strong>alpha</strong> 透明度，取值范围0~1之间</li>
+<li><strong>习惯上把0.3的0省略</strong>，写为background: rgba(0,0,0,.3);</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">background-color</td>
+<td style="text-align:left">背景颜色</td>
+<td style="text-align:left">预定义颜色值、十六进制、RGB代码</td>
+</tr>
+<tr>
+<td style="text-align:left">background-image</td>
+<td style="text-align:left">背景图片</td>
+<td style="text-align:left">url(图片路径)</td>
+</tr>
+<tr>
+<td style="text-align:left">background-repeat</td>
+<td style="text-align:left">是否平铺</td>
+<td style="text-align:left">repeat / no-repeat / repeat-x / repeat-y</td>
+</tr>
+<tr>
+<td style="text-align:left">background-position</td>
+<td style="text-align:left">背景位置</td>
+<td style="text-align:left">length / positon 分别是x和y坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">background-attachment</td>
+<td style="text-align:left">背景附着</td>
+<td style="text-align:left">scroll(滚动) / fixed(固定)</td>
+</tr>
+<tr>
+<td style="text-align:left">背景简写</td>
+<td style="text-align:left">减少代码量</td>
+<td style="text-align:left">background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置;</td>
+</tr>
+<tr>
+<td style="text-align:left">背景色半透明</td>
+<td style="text-align:left">背景颜色半透明</td>
+<td style="text-align:left">background:(0,0,0,.3); 后面必须是4个值</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.矩阵</title>
     <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是 <strong>同型矩阵</strong></p>
@@ -2576,114 +2815,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3.CSS的背景</title>
-    <url>/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的背景"><a href="#CSS-的背景" class="headerlink" title="CSS 的背景"></a>CSS 的背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><strong>background-color</strong> 属性定义了元素的背景颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></table></figure><br>一般情况下元素背景颜色默认值是 <strong>transparent(透明)</strong>，我们也可以手动指定背景颜色为透明色。</p>
-<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p><strong>background-image</strong> 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">绝对或相对位置</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h2><p>如果需要在HTML页面上对背景图像进行平铺，可以使用 <strong>background-repeat</strong> 属性<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat | no-repeat | repeat-x | repeat-y </span><br></pre></td></tr></table></figure></p>
-<h2 id="背景图片位置"><a href="#背景图片位置" class="headerlink" title="背景图片位置"></a>背景图片位置</h2><p>利用 <strong>bcakground-positon</strong> 属性可以改变图片在背景中的位置。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br></pre></td></tr></table></figure><br>参数代表的意思是：x坐标和y坐标，可以使用方位名词或者精确单位</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数值</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">length</td>
-<td style="text-align:left">百分数 / 由浮点数字和单位标识符组成的长度值</td>
-</tr>
-<tr>
-<td style="text-align:left">position</td>
-<td style="text-align:left">方位名词：<br>top / center / bottom <br>left / center / right </td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>1.参数是方位名词</strong></p>
-<ul>
-<li>如果指定的两个值都是方位名词，则两个值前后顺序无关，比如left top和top left 效果一样</li>
-<li>如果指定了一个方位名词，另一个省略，则第二个值默认居中对齐</li>
-</ul>
-<p><strong>2.参数是精确单位</strong></p>
-<ul>
-<li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个肯定是y坐标</li>
-<li>如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中</li>
-</ul>
-<p><strong>3.参数是混合单位</strong></p>
-<ul>
-<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标</li>
-</ul>
-<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2><p><strong>background-attachment</strong> 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
-<p>background-attachment后期可以制作时差滚动效果<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: <span class="built_in">fixed</span>(固定) | <span class="built_in">scroll</span>(滚动) </span><br></pre></td></tr></table></figure></p>
-<h2 id="背景复合写法"><a href="#背景复合写法" class="headerlink" title="背景复合写法"></a>背景复合写法</h2><p>我们可以将这些属性合并写在同一个属性background中，约定的顺序为：</p>
-<p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
-<h2 id="背景色半透明"><a href="#背景色半透明" class="headerlink" title="背景色半透明"></a>背景色半透明</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>rgba也就是red、green、blue、alpha</strong></p>
-<ul>
-<li>最后一个参数是 <strong>alpha</strong> 透明度，取值范围0~1之间</li>
-<li><strong>习惯上把0.3的0省略</strong>，写为background: rgba(0,0,0,.3);</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-<th style="text-align:left">值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">background-color</td>
-<td style="text-align:left">背景颜色</td>
-<td style="text-align:left">预定义颜色值、十六进制、RGB代码</td>
-</tr>
-<tr>
-<td style="text-align:left">background-image</td>
-<td style="text-align:left">背景图片</td>
-<td style="text-align:left">url(图片路径)</td>
-</tr>
-<tr>
-<td style="text-align:left">background-repeat</td>
-<td style="text-align:left">是否平铺</td>
-<td style="text-align:left">repeat / no-repeat / repeat-x / repeat-y</td>
-</tr>
-<tr>
-<td style="text-align:left">background-position</td>
-<td style="text-align:left">背景位置</td>
-<td style="text-align:left">length / positon 分别是x和y坐标</td>
-</tr>
-<tr>
-<td style="text-align:left">background-attachment</td>
-<td style="text-align:left">背景附着</td>
-<td style="text-align:left">scroll(滚动) / fixed(固定)</td>
-</tr>
-<tr>
-<td style="text-align:left">背景简写</td>
-<td style="text-align:left">减少代码量</td>
-<td style="text-align:left">background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置;</td>
-</tr>
-<tr>
-<td style="text-align:left">背景色半透明</td>
-<td style="text-align:left">背景颜色半透明</td>
-<td style="text-align:left">background:(0,0,0,.3); 后面必须是4个值</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3127,109 +3258,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>4.n维向量</title>
-    <url>/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
-<p>n个数$a_1,a_2,\cdots a_n$构成的有序数组</p>
-</blockquote>
-<p>$\left[\begin{array}{c}a_1\\a_2\\ \vdots \\a_n\end{array}\right]$<br>或$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]^T\longrightarrow$列向量<br><br><br>$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]\longrightarrow$行向量</p>
-<h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><p>运算方法其实就是矩阵的运算方法</p>
-<h2 id="线性表示"><a href="#线性表示" class="headerlink" title="线性表示"></a>线性表示</h2><h3 id="向量的线性表示"><a href="#向量的线性表示" class="headerlink" title="向量的线性表示"></a>向量的线性表示</h3><blockquote>
-<p>m个n维向量$\alpha_1\alpha_2\cdots\alpha_m$及m个实数$k_1,k_2,\cdots,k_m$,称</p>
-<p>$\quad k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
-<p>是向量$\alpha_1\alpha_2\cdots\alpha_m$的一个线性组合，$k_1,k_2,\cdots,k_m$为这个线性组合的系数<br><br><br>如果向量$\beta$能表示为$\alpha_1\alpha_2\cdots\alpha_m$的线性组合，即</p>
-<p>$\qquad\qquad \beta=k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
-<p>则称向量$\beta$可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示</p>
-</blockquote>
-<p>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=\beta$<br><br>$\Longleftrightarrow方程组$<br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=\beta\;\;有解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)= r(\alpha_1\alpha_2\cdots\alpha_m\beta)$</p>
-<p><strong>例</strong></p>
-<p>$设\alpha_1=[1,-1,1]^T，\alpha_2=[-2,1,1]^T$<br>$\alpha_3=[4,-3,1]^T，\beta=[3,-1,3]^T$<br><br>$判断\beta能否由\alpha_1\alpha_2\alpha_3线性表示$</p>
-<p>解：<br>$设k_1\alpha_1+k_2\alpha_2+k_3\alpha_3=\beta$<br><br>即<br>$k_1[1,-1,1]^T+k_2[-2,1,1]^T+k_3[4,-3,1]^T$<br>$=[3,-1,3]^T$<br></p>
-<ul>
-<li>即<br>$\begin{cases}<br>  k_1-2k_2+4k_3=3\\<br>  -x_1+x_2-3x_3=-1\\<br>  x_1+x_2+x_3=-1\\<br>\end{cases}$</li>
-</ul>
-<p>$下面就转化为了高斯消元法进行求解出k_1k_2k_3$<br><br>$\qquad\qquad\downarrow$<br><br>$\overline{A}=<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}$<br><br>$\therefore$可以将上面的向量直接转化成增广矩阵进行求解</p>
-<p>在这里将方程组用矩阵进行表示就可以抽象为<br><br>$<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}<br>\begin{pmatrix}<br>    x_1\\<br>    x_2\\<br>    x_3\\<br>    x_4<br>\end{pmatrix}<br>=\begin{pmatrix}<br>    -3\\<br>    1\\<br>    -1<br>\end{pmatrix}<br>$<br><br>也就是说一组坐标经过有限次线性变换后可以将其转化成$\beta$</p>
-<h3 id="向量组的线性表示"><a href="#向量组的线性表示" class="headerlink" title="向量组的线性表示"></a>向量组的线性表示</h3><blockquote>
-<p>设向量组<br>$(a)\alpha_1,\alpha_2,\cdots,\alpha_s,\;<br> \;(b)\beta_1,\beta_2,\cdots,\beta_t$<br><br>若(a)中的每个向量$\alpha_i(i=1,2,\cdots,s)$ <strong>均</strong> 可由(b)线性表示，则称向量组(a)可由向量组(b)线性表示,如果两个向量组可以互相表示，则称两个向量组等价</p>
-</blockquote>
-<p><strong>例</strong></p>
-<p>设$A，B$均为3阶矩阵，且$AB=C$</p>
-<p>证明：$C$的列向量可由$A$的列向量线性表示,若矩阵$B$可逆,则$C$和$A$的列向量组等价。</p>
-<p>设$A=[\alpha_1\;\alpha_2\;\alpha_3],C=[\gamma_1\;\gamma_2\;\gamma_3],B=[b_{ij}]_{3\times3}$</p>
-<p>$A$和$C$都是按照按列进行划分</p>
-<p>$由\;AB=C\;有$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>\left[\begin{array}{ccc}b_{11}&amp;b_{12}&amp;b_{13}\\<br>    b_{21}&amp;b_{22}&amp;b_{23}\\<br>    b_{31}&amp;b_{32}&amp;b_{33}<br>\end{array}\right]=[\gamma_1\;\gamma_2\;\gamma_3]<br>$</p>
-<ul>
-<li>即<br>$<br>\begin{cases}<br>b_{11}\alpha_1+b_{21}\alpha_2+b_{31}\alpha_3=\gamma_1\\<br>b_{12}\alpha_1+b_{22}\alpha_2+b_{32}\alpha_3=\gamma_2\\<br>b_{13}\alpha_1+b_{23}\alpha_2+b_{33}\alpha_3=\gamma_3\\<br>\end{cases}<br>$<br><br>$<br>\therefore\;C的列向量可由A的列向量线性表示<br>$</li>
-</ul>
-<p>$\because B可逆$<br><br>$\therefore A=CB^{-1}\;,记B^{-1}=[k_{ij}]_{3\times3}$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>=[\gamma_1\;\gamma_2\;\gamma_3]<br>\left[\begin{array}{ccc}<br>    k_{11}&amp;k_{12}&amp;k_{13}\\<br>    k_{21}&amp;k_{22}&amp;k_{23}\\<br>    k_{31}&amp;k_{32}&amp;k_{33}<br>\end{array}\right]<br>$</p>
-<ul>
-<li>即<br>$<br>\begin{cases}<br>k_{11}\gamma_1+k_{21}\gamma_2+k_{31}\gamma_3=\alpha_1\\<br>k_{12}\gamma_1+k_{22}\gamma_2+k_{32}\gamma_3=\alpha_2\\<br>k_{13}\gamma_1+k_{23}\gamma_2+k_{33}\gamma_3=\alpha_3\\<br>\end{cases}<br>$<br><br>$ \therefore A的列向量可由C的列向量线性表示$<br><br>$\therefore C$的列向量可由A的列向量线性表示</li>
-</ul>
-<p>因为矩阵$B$可逆</p>
-<p>则$C$和$A$的列向量组等价。<br></p>
-<h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价：A经初等变换可以变成B<br><br>向量组(a)和(b)等价：(a)和(b)可以 <strong>互相</strong> 线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
-<h4 id="用方程组理解向量组的线性表示"><a href="#用方程组理解向量组的线性表示" class="headerlink" title="用方程组理解向量组的线性表示"></a>用方程组理解向量组的线性表示</h4><blockquote>
-<p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可以用向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br><br>则$r(B)\leqslant r(A)$<br><br>其中$B=(\beta_1\;\beta_2\;\cdots\;\beta_t),$<br><br>$A=(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)$<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
-</blockquote>
-<p>个人直观理解：<br>B的秩肯定小于A的秩，如果大于的话矩阵最后有几行就不能被表示了，<br>小于的话，最后几行就算多出来，$k_{ij}$令为0就行了<br>而两者的秩如果相等，那么两者就正好能被互相表示出来，也就是说两个向量组等价</p>
-<p>证明：<br>$\beta_1\;\beta_2\;\cdots\;\beta_t$可由$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示</p>
-<p>$\Leftrightarrow\;$方程组</p>
-<p>$\quad\; Ax=\beta_1，Ax=\beta_2，\cdots，Ax=\beta_t$有解</p>
-<p>$\Leftrightarrow\;r(A)=r(A,B)$</p>
-<p>$\because r(B)\leqslant r(A,B)\;\longleftarrow\;$矩阵的秩的性质</p>
-<p>$\therefore r(B)\leqslant r(A)$</p>
-<h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><blockquote>
-<p>$给定m个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_m，$如果存在不全为零的数$k_1，k_2，\cdots，k_m$使得<br><br>$\qquad k_1\alpha_1+k_2\alpha_2+\cdots k_m\alpha_m=0$<br><br>则称向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_m$线性相关，否则为线性无关</p>
-</blockquote>
-<p>个人直观理解：<br>线性相关其实就是向量经过长度变换能够首尾相连，就是线性表示的一种特殊情况</p>
-<p><strong>注意</strong>：<br>有零向量的向量组肯定线性相关</p>
-<hr>
-<p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0$<br><br>$\Longleftrightarrow方程组$<br><br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)&lt; m$<br>$\quad m$就是方程组解的个数</p>
-<p><strong>推论</strong></p>
-<ol>
-<li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;$相关<br><br>$\Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
-<li>$n+1个n维向量必线性相关 \rightarrow r \leqslant n &lt; n+1$<br><br></li>
-<li>如果$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性相关，则$\alpha_1\;\alpha_2\;\cdots\;\alpha_s\;\cdots\;\alpha_t$线性相关<br><br></li>
-<li>如果向量组线性无关，增加维度仍然线性无关</li>
-</ol>
-<h3 id="相关定理及结论"><a href="#相关定理及结论" class="headerlink" title="相关定理及结论"></a>相关定理及结论</h3><ol>
-<li>向量组$<br>\alpha_1,\alpha_2,\cdots,\alpha_s(s\leqslant2)$线性相关<br>$\Leftrightarrow\;$至少有一个向量$\alpha_i$可由其余向量$\alpha_1,\alpha_2,\cdots,\alpha_{i-1},\alpha_{i+1},\cdots,\alpha_s$线性表示<br><br></li>
-<li>如果n维向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，而$\alpha_1,\alpha_2,\cdots,\alpha_s,\beta\;$线性相关，则向量$\beta\;$必能由$\alpha_1,\alpha_2,\cdots,\alpha_s$线性表示，且表示法唯一<br><br></li>
-<li>如果$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示，且$s&gt;t$,则$\alpha_1,\alpha_2,\cdots,\alpha_s$必线性相关<br><br>推论：如果$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，且$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示,则$\;s\leqslant t$（极大线性无关组）<br><br></li>
-<li>$n+1$个$n$维向量必线性相关<br><br></li>
-<li>初等 <strong>行变换</strong> 不改变矩阵的 <strong>列向量组</strong> 之间的线性关系；初等 <strong>列变换</strong> 不改变 <strong>行向量组</strong> 之间的线性关系<br><br></li>
-<li>一个零向量线性相关，一个非零向量线性无关</li>
-</ol>
-<blockquote>
-<p>线性表示和线性相关无关的定理和结论都是从定义出发进行推理的，推理主要是通过方程组的思想。</p>
-</blockquote>
-<h2 id="向量组的秩"><a href="#向量组的秩" class="headerlink" title="向量组的秩"></a>向量组的秩</h2><blockquote>
-<p>向量组的$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组中所含 <strong>向量的个数r</strong> 称为向量组的秩.<br>记为$R(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)=r$<br><br>规定只有零向量的向量组的秩为0<br>三秩相等：矩阵A的秩等于A 的列向量的秩，也等于A的行向量的秩</p>
-</blockquote>
-<h3 id="极大线性无关组："><a href="#极大线性无关组：" class="headerlink" title="极大线性无关组："></a>极大线性无关组：</h3><blockquote>
-<p>$\qquad$在向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$中，如果存在r个向量$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}$线性 <strong>无关</strong> ，<strong>再</strong> 添加任一个向量$\alpha_j,(j=1,2,\cdots,s)$,向量组$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}\alpha_j$就线性 <strong>相关</strong> ，则称$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}$是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的一个极大线性无关组。<br><br><br>其实很好理解，极大线性无关组就是把向量组中挑出来一组最多线性无关的向量能够表示这个向量组的任何向量。</p>
-</blockquote>
-<p>定理：<br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则$r=t$</p>
-<p>证：<br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，</p>
-<p>那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$<br><br>必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$<br><br>能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关<br><br>则有$\;t\leqslant r$.<br><br>又因为两者地位相等，同理可得$\;r\leqslant t$.<br><br>所以$r=t$</p>
-<p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br>a.相同的线性相关性<br>b.相同的线性表示.</p>
-<ul>
-<li>例.求向量组$\alpha_1=(2,1,4,3)^T,$ $\alpha_2=(-1,1,-6,6)^T,$ $\alpha_3=(-1,-2,2,-9)^T,$ $\alpha_4=(1,1,-2,7)^T,$ $\alpha_5=(2,4,4,9)^T$的秩,一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。<br><br><br>解：构造矩阵$\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)$作初等变换化为行最简型，有<br><br>$<br>A=\begin{pmatrix}<br>  2&amp;-1&amp;-1&amp;1&amp;2\\<br>  1&amp;1&amp;-2&amp;1&amp;4\\<br>  4&amp;-6&amp;2&amp;-2&amp;4\\<br>  3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>$<br><br><br>$<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;-1&amp;0&amp;4\\<br>  0&amp;1&amp;-1&amp;0&amp;3\\<br>  0&amp;0&amp;0&amp;1&amp;-3\\<br>  0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3$</li>
-</ul>
-<p>极大线性无关组：$\alpha_1\;\alpha_2\;\alpha_4$</p>
-<p>$\therefore\alpha_3=-\alpha_1-\alpha_2$</p>
-<p>$\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4$</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5.CSS盒子模型</title>
     <url>/2021/07/20/5-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="盒子模型组成"><a href="#盒子模型组成" class="headerlink" title="盒子模型组成"></a>盒子模型组成</h2><p><strong>盒子模型：</strong> 就是把HTML页面中的 <strong>布局元素看作是一个矩形的盒子</strong>，或者说是一个盛装内容的容器。</p>
@@ -3582,29 +3610,99 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>5.向量空间</title>
-    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
-<p>{n维向量；+，数乘}</p>
+    <title>4.n维向量</title>
+    <url>/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
+<p>n个数$a_1,a_2,\cdots a_n$构成的有序数组</p>
 </blockquote>
-<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
-<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
-<p>则称W是n维向量空间的子空间</p>
-<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
-<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
-<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
-<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
-<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
-<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
-<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
-<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
-<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
-<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
-<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
-<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
+<p>$\left[\begin{array}{c}a_1\\a_2\\ \vdots \\a_n\end{array}\right]$<br>或$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]^T\longrightarrow$列向量<br><br><br>$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]\longrightarrow$行向量</p>
+<h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><p>运算方法其实就是矩阵的运算方法</p>
+<h2 id="线性表示"><a href="#线性表示" class="headerlink" title="线性表示"></a>线性表示</h2><h3 id="向量的线性表示"><a href="#向量的线性表示" class="headerlink" title="向量的线性表示"></a>向量的线性表示</h3><blockquote>
+<p>m个n维向量$\alpha_1\alpha_2\cdots\alpha_m$及m个实数$k_1,k_2,\cdots,k_m$,称</p>
+<p>$\quad k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
+<p>是向量$\alpha_1\alpha_2\cdots\alpha_m$的一个线性组合，$k_1,k_2,\cdots,k_m$为这个线性组合的系数<br><br><br>如果向量$\beta$能表示为$\alpha_1\alpha_2\cdots\alpha_m$的线性组合，即</p>
+<p>$\qquad\qquad \beta=k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
+<p>则称向量$\beta$可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示</p>
+</blockquote>
+<p>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=\beta$<br><br>$\Longleftrightarrow方程组$<br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=\beta\;\;有解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)= r(\alpha_1\alpha_2\cdots\alpha_m\beta)$</p>
+<p><strong>例</strong></p>
+<p>$设\alpha_1=[1,-1,1]^T，\alpha_2=[-2,1,1]^T$<br>$\alpha_3=[4,-3,1]^T，\beta=[3,-1,3]^T$<br><br>$判断\beta能否由\alpha_1\alpha_2\alpha_3线性表示$</p>
+<p>解：<br>$设k_1\alpha_1+k_2\alpha_2+k_3\alpha_3=\beta$<br><br>即<br>$k_1[1,-1,1]^T+k_2[-2,1,1]^T+k_3[4,-3,1]^T$<br>$=[3,-1,3]^T$<br></p>
+<ul>
+<li>即<br>$\begin{cases}<br>  k_1-2k_2+4k_3=3\\<br>  -x_1+x_2-3x_3=-1\\<br>  x_1+x_2+x_3=-1\\<br>\end{cases}$</li>
+</ul>
+<p>$下面就转化为了高斯消元法进行求解出k_1k_2k_3$<br><br>$\qquad\qquad\downarrow$<br><br>$\overline{A}=<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}$<br><br>$\therefore$可以将上面的向量直接转化成增广矩阵进行求解</p>
+<p>在这里将方程组用矩阵进行表示就可以抽象为<br><br>$<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}<br>\begin{pmatrix}<br>    x_1\\<br>    x_2\\<br>    x_3\\<br>    x_4<br>\end{pmatrix}<br>=\begin{pmatrix}<br>    -3\\<br>    1\\<br>    -1<br>\end{pmatrix}<br>$<br><br>也就是说一组坐标经过有限次线性变换后可以将其转化成$\beta$</p>
+<h3 id="向量组的线性表示"><a href="#向量组的线性表示" class="headerlink" title="向量组的线性表示"></a>向量组的线性表示</h3><blockquote>
+<p>设向量组<br>$(a)\alpha_1,\alpha_2,\cdots,\alpha_s,\;<br> \;(b)\beta_1,\beta_2,\cdots,\beta_t$<br><br>若(a)中的每个向量$\alpha_i(i=1,2,\cdots,s)$ <strong>均</strong> 可由(b)线性表示，则称向量组(a)可由向量组(b)线性表示,如果两个向量组可以互相表示，则称两个向量组等价</p>
+</blockquote>
+<p><strong>例</strong></p>
+<p>设$A，B$均为3阶矩阵，且$AB=C$</p>
+<p>证明：$C$的列向量可由$A$的列向量线性表示,若矩阵$B$可逆,则$C$和$A$的列向量组等价。</p>
+<p>设$A=[\alpha_1\;\alpha_2\;\alpha_3],C=[\gamma_1\;\gamma_2\;\gamma_3],B=[b_{ij}]_{3\times3}$</p>
+<p>$A$和$C$都是按照按列进行划分</p>
+<p>$由\;AB=C\;有$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>\left[\begin{array}{ccc}b_{11}&amp;b_{12}&amp;b_{13}\\<br>    b_{21}&amp;b_{22}&amp;b_{23}\\<br>    b_{31}&amp;b_{32}&amp;b_{33}<br>\end{array}\right]=[\gamma_1\;\gamma_2\;\gamma_3]<br>$</p>
+<ul>
+<li>即<br>$<br>\begin{cases}<br>b_{11}\alpha_1+b_{21}\alpha_2+b_{31}\alpha_3=\gamma_1\\<br>b_{12}\alpha_1+b_{22}\alpha_2+b_{32}\alpha_3=\gamma_2\\<br>b_{13}\alpha_1+b_{23}\alpha_2+b_{33}\alpha_3=\gamma_3\\<br>\end{cases}<br>$<br><br>$<br>\therefore\;C的列向量可由A的列向量线性表示<br>$</li>
+</ul>
+<p>$\because B可逆$<br><br>$\therefore A=CB^{-1}\;,记B^{-1}=[k_{ij}]_{3\times3}$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>=[\gamma_1\;\gamma_2\;\gamma_3]<br>\left[\begin{array}{ccc}<br>    k_{11}&amp;k_{12}&amp;k_{13}\\<br>    k_{21}&amp;k_{22}&amp;k_{23}\\<br>    k_{31}&amp;k_{32}&amp;k_{33}<br>\end{array}\right]<br>$</p>
+<ul>
+<li>即<br>$<br>\begin{cases}<br>k_{11}\gamma_1+k_{21}\gamma_2+k_{31}\gamma_3=\alpha_1\\<br>k_{12}\gamma_1+k_{22}\gamma_2+k_{32}\gamma_3=\alpha_2\\<br>k_{13}\gamma_1+k_{23}\gamma_2+k_{33}\gamma_3=\alpha_3\\<br>\end{cases}<br>$<br><br>$ \therefore A的列向量可由C的列向量线性表示$<br><br>$\therefore C$的列向量可由A的列向量线性表示</li>
+</ul>
+<p>因为矩阵$B$可逆</p>
+<p>则$C$和$A$的列向量组等价。<br></p>
+<h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价：A经初等变换可以变成B<br><br>向量组(a)和(b)等价：(a)和(b)可以 <strong>互相</strong> 线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
+<h4 id="用方程组理解向量组的线性表示"><a href="#用方程组理解向量组的线性表示" class="headerlink" title="用方程组理解向量组的线性表示"></a>用方程组理解向量组的线性表示</h4><blockquote>
+<p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可以用向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br><br>则$r(B)\leqslant r(A)$<br><br>其中$B=(\beta_1\;\beta_2\;\cdots\;\beta_t),$<br><br>$A=(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)$<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
+</blockquote>
+<p>个人直观理解：<br>B的秩肯定小于A的秩，如果大于的话矩阵最后有几行就不能被表示了，<br>小于的话，最后几行就算多出来，$k_{ij}$令为0就行了<br>而两者的秩如果相等，那么两者就正好能被互相表示出来，也就是说两个向量组等价</p>
+<p>证明：<br>$\beta_1\;\beta_2\;\cdots\;\beta_t$可由$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示</p>
+<p>$\Leftrightarrow\;$方程组</p>
+<p>$\quad\; Ax=\beta_1，Ax=\beta_2，\cdots，Ax=\beta_t$有解</p>
+<p>$\Leftrightarrow\;r(A)=r(A,B)$</p>
+<p>$\because r(B)\leqslant r(A,B)\;\longleftarrow\;$矩阵的秩的性质</p>
+<p>$\therefore r(B)\leqslant r(A)$</p>
+<h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><blockquote>
+<p>$给定m个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_m，$如果存在不全为零的数$k_1，k_2，\cdots，k_m$使得<br><br>$\qquad k_1\alpha_1+k_2\alpha_2+\cdots k_m\alpha_m=0$<br><br>则称向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_m$线性相关，否则为线性无关</p>
+</blockquote>
+<p>个人直观理解：<br>线性相关其实就是向量经过长度变换能够首尾相连，就是线性表示的一种特殊情况</p>
+<p><strong>注意</strong>：<br>有零向量的向量组肯定线性相关</p>
 <hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
-<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
+<p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0$<br><br>$\Longleftrightarrow方程组$<br><br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)&lt; m$<br>$\quad m$就是方程组解的个数</p>
+<p><strong>推论</strong></p>
+<ol>
+<li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;$相关<br><br>$\Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
+<li>$n+1个n维向量必线性相关 \rightarrow r \leqslant n &lt; n+1$<br><br></li>
+<li>如果$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性相关，则$\alpha_1\;\alpha_2\;\cdots\;\alpha_s\;\cdots\;\alpha_t$线性相关<br><br></li>
+<li>如果向量组线性无关，增加维度仍然线性无关</li>
+</ol>
+<h3 id="相关定理及结论"><a href="#相关定理及结论" class="headerlink" title="相关定理及结论"></a>相关定理及结论</h3><ol>
+<li>向量组$<br>\alpha_1,\alpha_2,\cdots,\alpha_s(s\leqslant2)$线性相关<br>$\Leftrightarrow\;$至少有一个向量$\alpha_i$可由其余向量$\alpha_1,\alpha_2,\cdots,\alpha_{i-1},\alpha_{i+1},\cdots,\alpha_s$线性表示<br><br></li>
+<li>如果n维向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，而$\alpha_1,\alpha_2,\cdots,\alpha_s,\beta\;$线性相关，则向量$\beta\;$必能由$\alpha_1,\alpha_2,\cdots,\alpha_s$线性表示，且表示法唯一<br><br></li>
+<li>如果$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示，且$s&gt;t$,则$\alpha_1,\alpha_2,\cdots,\alpha_s$必线性相关<br><br>推论：如果$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，且$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示,则$\;s\leqslant t$（极大线性无关组）<br><br></li>
+<li>$n+1$个$n$维向量必线性相关<br><br></li>
+<li>初等 <strong>行变换</strong> 不改变矩阵的 <strong>列向量组</strong> 之间的线性关系；初等 <strong>列变换</strong> 不改变 <strong>行向量组</strong> 之间的线性关系<br><br></li>
+<li>一个零向量线性相关，一个非零向量线性无关</li>
+</ol>
+<blockquote>
+<p>线性表示和线性相关无关的定理和结论都是从定义出发进行推理的，推理主要是通过方程组的思想。</p>
+</blockquote>
+<h2 id="向量组的秩"><a href="#向量组的秩" class="headerlink" title="向量组的秩"></a>向量组的秩</h2><blockquote>
+<p>向量组的$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组中所含 <strong>向量的个数r</strong> 称为向量组的秩.<br>记为$R(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)=r$<br><br>规定只有零向量的向量组的秩为0<br>三秩相等：矩阵A的秩等于A 的列向量的秩，也等于A的行向量的秩</p>
+</blockquote>
+<h3 id="极大线性无关组："><a href="#极大线性无关组：" class="headerlink" title="极大线性无关组："></a>极大线性无关组：</h3><blockquote>
+<p>$\qquad$在向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$中，如果存在r个向量$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}$线性 <strong>无关</strong> ，<strong>再</strong> 添加任一个向量$\alpha_j,(j=1,2,\cdots,s)$,向量组$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}\alpha_j$就线性 <strong>相关</strong> ，则称$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}$是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的一个极大线性无关组。<br><br><br>其实很好理解，极大线性无关组就是把向量组中挑出来一组最多线性无关的向量能够表示这个向量组的任何向量。</p>
+</blockquote>
+<p>定理：<br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则$r=t$</p>
+<p>证：<br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，</p>
+<p>那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$<br><br>必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$<br><br>能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关<br><br>则有$\;t\leqslant r$.<br><br>又因为两者地位相等，同理可得$\;r\leqslant t$.<br><br>所以$r=t$</p>
+<p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br>a.相同的线性相关性<br>b.相同的线性表示.</p>
+<ul>
+<li>例.求向量组$\alpha_1=(2,1,4,3)^T,$ $\alpha_2=(-1,1,-6,6)^T,$ $\alpha_3=(-1,-2,2,-9)^T,$ $\alpha_4=(1,1,-2,7)^T,$ $\alpha_5=(2,4,4,9)^T$的秩,一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。<br><br><br>解：构造矩阵$\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)$作初等变换化为行最简型，有<br><br>$<br>A=\begin{pmatrix}<br>  2&amp;-1&amp;-1&amp;1&amp;2\\<br>  1&amp;1&amp;-2&amp;1&amp;4\\<br>  4&amp;-6&amp;2&amp;-2&amp;4\\<br>  3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>$<br><br><br>$<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;-1&amp;0&amp;4\\<br>  0&amp;1&amp;-1&amp;0&amp;3\\<br>  0&amp;0&amp;0&amp;1&amp;-3\\<br>  0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3$</li>
+</ul>
+<p>极大线性无关组：$\alpha_1\;\alpha_2\;\alpha_4$</p>
+<p>$\therefore\alpha_3=-\alpha_1-\alpha_2$</p>
+<p>$\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4$</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -3716,6 +3814,39 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5.向量空间</title>
+    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
+<p>{n维向量；+，数乘}</p>
+</blockquote>
+<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
+<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
+<p>则称W是n维向量空间的子空间</p>
+<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
+<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
+<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
+<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
+<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
+<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
+<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
+<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
+<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
+<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
+<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
+<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
+<hr>
+<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
+<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -4411,76 +4542,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>8.CSS网页布局</title>
-    <url>/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>网页布局的核心本质就是利用CSS摆盒子</strong></p>
-<p><strong>网页布局的第一准则:</strong><br>多个块级元素纵向排列用标准流，多个块级元素横向排列用浮动。</p>
-<p><strong>网页布局的第二准则:</strong><br>先设置盒子大小，后设置盒子位置。</p>
-<h1 id="传统网页布局的三种方式"><a href="#传统网页布局的三种方式" class="headerlink" title="传统网页布局的三种方式"></a>传统网页布局的三种方式</h1><p>网页布局的本质————用CSS来摆放盒子</p>
-<p>CSS提供了三种传统布局方式：</p>
-<ul>
-<li>标准流（最基本）</li>
-<li>浮动</li>
-<li>定位</li>
-</ul>
-<h1 id="常见的网页布局"><a href="#常见的网页布局" class="headerlink" title="常见的网页布局"></a>常见的网页布局</h1><table style="width: 370px;background-color: #ecedf8;text-align: center;">
-  <tr>
-    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 145px;border:1px dashed;border-collapse: collapse;">main</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
-  </tr>
-</table>
-
-<table style="width: 370px;background-color: #ecedf8;text-align: center;">
-  <tr>
-    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
-  </tr>
-   <tr>
-    <td style="float:left;width: 115px;height: 145px;border:1px dashed;line-height: 145px;border-top:0;border-bottom:0;">left</td>
-    <td style="float:right;width: 195px;height: 145px;border:0;border-right:1px dashed;line-height: 145px;">right</td>
-  </tr>
-   <tr>
-    <td style="height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
-  </tr>
-</table>
-
-<div style="width: 500px;height: 420px;border:1px solid;text-align:center;">
-    <div style="float:left;width: 480px;height: 25px;line-height:25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;">top</div>
-    <div style="float:left;width: 360px;height: 80px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px;line-height: 80px">banner</div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px 5px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 480px;height: 90px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;line-height:90px;">footer</div>
-</div>
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>通过CSS浮动、定位可以让每个盒子排列成为网页。</p>
-<p>一个完整的网页，是标准流、浮动、定位一起完成的布局的，每个都有自己专门的用法。</p>
-<p><strong>1.标准流</strong><br>可以让盒子上下排列或者左右排列，垂直的块级盒子显示就用标准流布局。<br><strong>2.浮动</strong><br>可以让多个块级元素一行显示或者左右对齐盒子，多个块级盒子水平显示就用浮动布局。<br><strong>3.定位</strong><br>定位最大的特点是有层叠的概念，就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。</p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>9.元素的显示与隐藏</title>
     <url>/2021/07/20/9-%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="元素显示与隐藏"><a href="#元素显示与隐藏" class="headerlink" title="元素显示与隐藏"></a>元素显示与隐藏</h1><p>本质：让一个元素在页面中隐藏或者显示出来</p>
@@ -4541,6 +4602,146 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>8.CSS网页布局及用户界面样式</title>
+    <url>/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E5%8F%8A%E7%95%8C%E9%9D%A2%E6%A0%B7%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="网页布局"><a href="#网页布局" class="headerlink" title="网页布局"></a>网页布局</h1><p><strong>网页布局的核心本质就是利用CSS摆盒子</strong></p>
+<p><strong>网页布局的第一准则:</strong><br>多个块级元素纵向排列用标准流，多个块级元素横向排列用浮动。</p>
+<p><strong>网页布局的第二准则:</strong><br>先设置盒子大小，后设置盒子位置。</p>
+<h2 id="传统网页布局的三种方式"><a href="#传统网页布局的三种方式" class="headerlink" title="传统网页布局的三种方式"></a>传统网页布局的三种方式</h2><p>网页布局的本质————用CSS来摆放盒子</p>
+<p>CSS提供了三种传统布局方式：</p>
+<ul>
+<li>标准流（最基本）</li>
+<li>浮动</li>
+<li>定位</li>
+</ul>
+<h2 id="常见的网页布局"><a href="#常见的网页布局" class="headerlink" title="常见的网页布局"></a>常见的网页布局</h2><table style="width: 370px;background-color: #ecedf8;text-align: center;">
+  <tr>
+    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 145px;border:1px dashed;border-collapse: collapse;">main</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
+  </tr>
+</table>
+
+<table style="width: 370px;background-color: #ecedf8;text-align: center;">
+  <tr>
+    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
+  </tr>
+   <tr>
+    <td style="float:left;width: 115px;height: 145px;border:1px dashed;line-height: 145px;border-top:0;border-bottom:0;">left</td>
+    <td style="float:right;width: 195px;height: 145px;border:0;border-right:1px dashed;line-height: 145px;">right</td>
+  </tr>
+   <tr>
+    <td style="height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
+  </tr>
+</table>
+
+<div style="width: 500px;height: 420px;border:1px solid;text-align:center;">
+    <div style="float:left;width: 480px;height: 25px;line-height:25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;">top</div>
+    <div style="float:left;width: 360px;height: 80px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px;line-height: 80px">banner</div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px 5px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 480px;height: 90px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;line-height:90px;">footer</div>
+</div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过CSS浮动、定位可以让每个盒子排列成为网页。</p>
+<p>一个完整的网页，是标准流、浮动、定位一起完成的布局的，每个都有自己专门的用法。</p>
+<p><strong>1.标准流</strong><br>可以让盒子上下排列或者左右排列，垂直的块级盒子显示就用标准流布局。<br><strong>2.浮动</strong><br>可以让多个块级元素一行显示或者左右对齐盒子，多个块级盒子水平显示就用浮动布局。<br><strong>3.定位</strong><br>定位最大的特点是有层叠的概念，就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。</p>
+<h1 id="CSS-用户界面样式"><a href="#CSS-用户界面样式" class="headerlink" title="CSS 用户界面样式"></a>CSS 用户界面样式</h1><h2 id="鼠标样式-cursor"><a href="#鼠标样式-cursor" class="headerlink" title="鼠标样式 cursor"></a>鼠标样式 cursor</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">li</span> &#123; <span class="attribute">cursor</span>: pointer; &#125;</span><br></pre></td></tr></table></figure>
+<p>设置或检索在对象上移动的鼠标指针来采用何种系统预定义的光标形状</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">default</td>
+<td style="text-align:left">默认</td>
+</tr>
+<tr>
+<td style="text-align:left">pointer</td>
+<td style="text-align:left">小手</td>
+</tr>
+<tr>
+<td style="text-align:left">move</td>
+<td style="text-align:left">移动</td>
+</tr>
+<tr>
+<td style="text-align:left">text</td>
+<td style="text-align:left">文本</td>
+</tr>
+<tr>
+<td style="text-align:left">not-allowed</td>
+<td style="text-align:left">禁止</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="轮廓线"><a href="#轮廓线" class="headerlink" title="轮廓线"></a>轮廓线</h2><p>给表单添加 outline: 0;或者outline: none;样式之后，就可以去掉默认的蓝色边框。</p>
+<h2 id="防止拖拽文本域-resize"><a href="#防止拖拽文本域-resize" class="headerlink" title="防止拖拽文本域 resize"></a>防止拖拽文本域 resize</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span> &#123; <span class="attribute">resize</span>: none &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="vertical-align-属性应用"><a href="#vertical-align-属性应用" class="headerlink" title="vertical-align 属性应用"></a>vertical-align 属性应用</h1><p>CSS的vertical-align属性使用场景：经常用于设置图片或者表单（行内块元素）和文字垂直对齐<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">vertical-align</span>: baseline | top | middle | bottom</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">baseline</td>
+<td style="text-align:left">默认，元素放置在父元素的基线上</td>
+</tr>
+<tr>
+<td style="text-align:left">top</td>
+<td style="text-align:left">把顶端元素与行中最高元素的顶端对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">middle</td>
+<td style="text-align:left">把此元素放置在父元素的中间</td>
+</tr>
+<tr>
+<td style="text-align:left">bottom</td>
+<td style="text-align:left">把元素的顶端与行中最低的元素顶端对齐</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="溢出文字用省略号"><a href="#溢出文字用省略号" class="headerlink" title="溢出文字用省略号"></a>溢出文字用省略号</h1><h2 id="单行文字溢出用省略号"><a href="#单行文字溢出用省略号" class="headerlink" title="单行文字溢出用省略号"></a>单行文字溢出用省略号</h2><p>1.单行文本溢出显示省略号—必须满足三个条件<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 1.先强制一行内显示文本 */</span></span><br><span class="line"><span class="attribute">white-space</span>: nowrap; （默认 <span class="attribute">normal</span> 自动换行）</span><br><span class="line"><span class="comment">/* 2.超出的部分隐藏 */</span></span><br><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="comment">/* 3.文字用省略号替代超出的部分 */</span></span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br></pre></td></tr></table></figure></p>
+<h2 id="多行文本溢出显示省略号"><a href="#多行文本溢出显示省略号" class="headerlink" title="多行文本溢出显示省略号"></a>多行文本溢出显示省略号</h2><p>多行文本溢出显示省略号，有较大兼容性问题，适合于webkit浏览器或移动端（移动端大部分是webkit内核）<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="comment">/* 弹性伸缩盒子模型显示 */</span></span><br><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line"><span class="comment">/* 限制在一个块元素显示的文本的行数 */</span></span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>;</span><br><span class="line"><span class="comment">/* 设置或检索伸缩盒对象的子元素的排列方式 */</span></span><br><span class="line">-webkit-box-crient: vertical;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CSS-初始化"><a href="#CSS-初始化" class="headerlink" title="CSS 初始化"></a>CSS 初始化</h1><p>不同浏览器对有些标签的默认值是不同的，为了消除不同浏览器对HTML文本呈现的差异，照顾浏览器的兼容，我们需要对CSS初始化</p>
+<p><strong>简单理解:</strong> CSS初始化是指重设浏览器的样式（也称为CSS reset）</p>
+<p>每个网页都必须首先进行CSS 初始化</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>end</title>
     <url>/2021/06/24/end/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
@@ -4552,6 +4753,20 @@ array([[ 0,  0,  0,  0],
         <tag>数学</tag>
         <tag>线性代数</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/06/15/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>pandas图(索引)</title>
@@ -4642,20 +4857,6 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/06/15/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>一些关于hexo的next主题的适配问题</title>
     <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
@@ -4676,5 +4877,216 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       <categories>
         <category>杂记</category>
       </categories>
+  </entry>
+  <entry>
+    <title>2.html5新增特性</title>
+    <url>/2021/07/21/%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="HTML5的新增特性"><a href="#HTML5的新增特性" class="headerlink" title="HTML5的新增特性"></a>HTML5的新增特性</h1><h2 id="HTML5-新增的带有语义化的标签"><a href="#HTML5-新增的带有语义化的标签" class="headerlink" title="HTML5 新增的带有语义化的标签"></a>HTML5 新增的带有语义化的标签</h2><ul>
+<li>&lt;header&gt;：头部标签</li>
+<li>&lt;nav&gt;：导航标签</li>
+<li>&lt;article&gt;：内容标签</li>
+<li>&lt;section&gt;：定义文档的某个区域</li>
+<li>&lt;aside&gt;：侧边栏标签</li>
+<li>&lt;footer&gt;：尾部标签</li>
+</ul>
+<h2 id="HTML5-新增的多媒体标签"><a href="#HTML5-新增的多媒体标签" class="headerlink" title="HTML5 新增的多媒体标签"></a>HTML5 新增的多媒体标签</h2><p>新增的多媒体标签主要包含两个：</p>
+<p>1.音频：&lt;audio&gt;</p>
+<p>2.视频：&lt;video&gt;</p>
+<p>使用它们可以很方便的在页面中嵌入音频和视频，而不再去使用flash和其他浏览器插件</p>
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>&lt;video&gt;元素支持三种视频格式：MP4、WebM、Ogg</p>
+<p><strong>1.视频：&lt;video&gt;————常见属性</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:left">视频就绪自动播放（谷歌浏览器需要添加muted来解决自动播放问题）</td>
+</tr>
+<tr>
+<td style="text-align:left">control</td>
+<td style="text-align:left">controls</td>
+<td style="text-align:left">向用户显示播放控件</td>
+</tr>
+<tr>
+<td style="text-align:left">width</td>
+<td style="text-align:left">pixels（像素）</td>
+<td style="text-align:left">设置播放器宽度</td>
+</tr>
+<tr>
+<td style="text-align:left">height</td>
+<td style="text-align:left">pixels（像素）</td>
+<td style="text-align:left">设置值播放器高度</td>
+</tr>
+<tr>
+<td style="text-align:left">loop</td>
+<td style="text-align:left">loop</td>
+<td style="text-align:left">播放完是否继续播放该视频，循环播放</td>
+</tr>
+<tr>
+<td style="text-align:left">preioad</td>
+<td style="text-align:left">auto（预加载视频）<br>none（不应加载视频）</td>
+<td style="text-align:left">规定是否预加载视频（如果有了autoplay，就忽略该属性）</td>
+</tr>
+<tr>
+<td style="text-align:left">src</td>
+<td style="text-align:left">url</td>
+<td style="text-align:left">视频url地址</td>
+</tr>
+<tr>
+<td style="text-align:left">poster</td>
+<td style="text-align:left">imgurl</td>
+<td style="text-align:left">视频等待的画面图片</td>
+</tr>
+<tr>
+<td style="text-align:left">muted</td>
+<td style="text-align:left">muted</td>
+<td style="text-align:left">静音播放</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>常见属性</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:left">音频在就绪后马上播放</td>
+</tr>
+<tr>
+<td style="text-align:left">controls</td>
+<td style="text-align:left">controls</td>
+<td style="text-align:left">向用户显示控件</td>
+</tr>
+<tr>
+<td style="text-align:left">loop</td>
+<td style="text-align:left">loop</td>
+<td style="text-align:left">循环播放</td>
+</tr>
+<tr>
+<td style="text-align:left">src</td>
+<td style="text-align:left">url</td>
+<td style="text-align:left">要播放的音频URL</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>谷歌浏览器把音频和视频自动播放都禁止了</li>
+</ul>
+<h2 id="HTML5-新增的-input-表单"><a href="#HTML5-新增的-input-表单" class="headerlink" title="HTML5 新增的 input 表单"></a>HTML5 新增的 input 表单</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">type=”email”</td>
+<td style="text-align:left">限制用户输入必须为Email类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”url”</td>
+<td style="text-align:left">限制用户输入必须为URL类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”date”</td>
+<td style="text-align:left">限制用户输入必须为日期类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”time”</td>
+<td style="text-align:left">限制用户输入必须为时间类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”month”</td>
+<td style="text-align:left">限制用户输入必须为月类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”week”</td>
+<td style="text-align:left">限制用户输入必须为周类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”number”</td>
+<td style="text-align:left">限制用户输入必须为数字类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”tel”</td>
+<td style="text-align:left">手机号码</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”search”</td>
+<td style="text-align:left">搜索框</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”color”</td>
+<td style="text-align:left">生成一个颜色选择表单</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="HTML5-新增的表单属性"><a href="#HTML5-新增的表单属性" class="headerlink" title="HTML5 新增的表单属性"></a>HTML5 新增的表单属性</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
+<td style="text-align:left">表单拥有该属性表示其内容不能为空，必填</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>placeholder</strong></td>
+<td style="text-align:left">提示文本</td>
+<td style="text-align:left">表单的提示信息，存在默认值将不显示</td>
+</tr>
+<tr>
+<td style="text-align:left">autofocus</td>
+<td style="text-align:left">autofocus</td>
+<td style="text-align:left">自动聚焦属性，页面加载完成自动聚焦到指定表单</td>
+</tr>
+<tr>
+<td style="text-align:left">autocomplete</td>
+<td style="text-align:left">off / on</td>
+<td style="text-align:left">当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项<br>默认已经打开，如autocomplete=”on”，关闭autocomplete=”off”<br>需要放在表单内同时加上 name 属性,同时成功提交</td>
+</tr>
+<tr>
+<td style="text-align:left">multiple</td>
+<td style="text-align:left">multiple</td>
+<td style="text-align:left">可以多选文件提交</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>html</tag>
+      </tags>
   </entry>
 </search>
