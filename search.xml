@@ -174,6 +174,158 @@
       </tags>
   </entry>
   <entry>
+    <title>1.CSS选择器</title>
+    <url>/2021/07/20/1-CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>分类</strong>： <strong>基础选择器</strong> 和 <strong>复合选择器</strong> </p>
+<p><strong>作用</strong>：选择标签</p>
+<h1 id="CSS-基础选择器"><a href="#CSS-基础选择器" class="headerlink" title="CSS 基础选择器"></a>CSS 基础选择器</h1><blockquote>
+<p> 基础选择器是由 <strong>单个</strong> 选择器组成的</p>
+</blockquote>
+<p>基础选择器包括：标签选择器、类选择器、id选择器和通配符选择器</p>
+<h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><p>标签选择器是用 <strong>HTML标签名</strong> 作为选择器，按标签名称分类，为页面中的某一类标签指定统一的CSS样式。</p>
+<h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><p>如果想要差异化选择不同的标签，单独选一个或者某几个标签，可以使用类标签</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">.类名 &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例如，将所有拥有red类的HTML元素均为红色。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.red</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>结构需要 <strong>class</strong> 属性来调用class类<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&#x27;red&#x27;&gt;红色&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong><br>(1) 类选择器使用”.”进行标识，后面紧跟类名(自定义)</p>
+<p>(2) 长名称或词组可以使用 <strong>中横线</strong> 来为选择器命名</p>
+<p>(3) 不要使用纯数字、中文等命名，尽量使用英文字母</p>
+<p>(4) 命名要有意义</p>
+<p>(5) <strong>类命名规则:</strong> 查web文档</p>
+<h2 id="类选择器-多类名"><a href="#类选择器-多类名" class="headerlink" title="类选择器-多类名"></a>类选择器-多类名</h2><p>一个标签可以指定多个类名，从而达到更多的选择目的<br>1.使用多类名的方法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;red font20&quot;&gt;hh&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br>(1) 在标签class属性中写多个类名<br>(2) 多个类名中间必须用空格分开<br>(3) 每个标签就可以分别具有这些类名的样式</p>
+<h2 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h2><p>用”#”定义<br>基本语法<br> <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#id</span>选择器名称 &#123;</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>注意:</p>
+<p>1.id是唯一性元素，一个页面上 <strong>不允许两个元素具有相同的id</strong>。一个HTML元素，也只允许使用一个id，<strong>不允许以空格分隔的id列表</strong></p>
+<p>2.当不确定时，有多个html元素来使用该样式时，使用类选择器</p>
+<p>3.id选择器的优先级高于class选择器的优先级。</p>
+<h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><p>用”*”定义，表示选取页面中的所有元素（标签）<br>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong></p>
+<ul>
+<li>通配符选择器不需要调用，自动就给所有元素使用样式</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">基础选择器</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">标签选择器</td>
+<td style="text-align:left">可以选出所有相同元素</td>
+<td style="text-align:left">p{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">类选择器</td>
+<td style="text-align:left">可以选出1个或者多个标签</td>
+<td style="text-align:left">.nav{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">id选择器</td>
+<td style="text-align:left">一次只能选择一个标签</td>
+<td style="text-align:left">#nav{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">通配符选择器</td>
+<td style="text-align:left">选择所有标签</td>
+<td style="text-align:left">*{color: red;}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-复合选择器"><a href="#CSS-复合选择器" class="headerlink" title="CSS 复合选择器"></a>CSS 复合选择器</h1><blockquote>
+<p>复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的</p>
+</blockquote>
+<p>常用复合选择器包括：后代选择器，子选择器，并集选择器，伪类选择器等</p>
+<h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><p>可以选择 <strong>父类元素里面的子元素</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span> 元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h2><p>只能选择作为某元素最近一级子元素<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>&gt;元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h2><p>可以选择多组标签，同时为他们定义相同样式</p>
+<p>通过逗号，（和的意思）连接而成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>,</span><br><span class="line">元素<span class="number">2</span> &#123; </span><br><span class="line">	样式声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>用于某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素</p>
+<p>伪类选择器书写用冒号:表示</p>
+<h3 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器元素</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">a:link</td>
+<td style="text-align:left">选择所有未被访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:visited</td>
+<td style="text-align:left">选择所有已被访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:hover</td>
+<td style="text-align:left">选择鼠标指针位于其上的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:active</td>
+<td style="text-align:left">选择活动链接（鼠标按下未弹起的链接）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意:</strong></p>
+<ul>
+<li>必须按照顺序LVHA，要不然会不起作用</li>
+<li>因为a链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。</li>
+</ul>
+<h3 id="focus-伪类选择器"><a href="#focus-伪类选择器" class="headerlink" title=":focus 伪类选择器"></a>:focus 伪类选择器</h3><p>:focus 伪类选择器用于选取获得焦点的表单元素。<br>焦点是光标，一般情况&lt;input&gt;类表单元素才能获取，因此这个选择器也主要针对于表单元素来说</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">后代选择器</td>
+<td style="text-align:left">选择父类里面的子元素</td>
+<td style="text-align:left">空格</td>
+</tr>
+<tr>
+<td style="text-align:left">子代选择器</td>
+<td style="text-align:left">选择父类里面 <strong>最近一级的子元素元素</strong></td>
+<td style="text-align:left">大于&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">并集选择器</td>
+<td style="text-align:left">选择某些样式相同的元素</td>
+<td style="text-align:left">逗号,</td>
+</tr>
+<tr>
+<td style="text-align:left">链接伪类选择器</td>
+<td style="text-align:left">选择不同状态的链接</td>
+<td style="text-align:left">冒号，重点记住a{}和a:hover</td>
+</tr>
+<tr>
+<td style="text-align:left">:focus伪类选择器</td>
+<td style="text-align:left">选择获得光标的表单</td>
+<td style="text-align:left">input:focus</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.C语言的一些概念</title>
     <url>/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
@@ -430,158 +582,6 @@
       </categories>
       <tags>
         <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>1.CSS选择器</title>
-    <url>/2021/07/20/1-CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>分类</strong>： <strong>基础选择器</strong> 和 <strong>复合选择器</strong> </p>
-<p><strong>作用</strong>：选择标签</p>
-<h1 id="CSS-基础选择器"><a href="#CSS-基础选择器" class="headerlink" title="CSS 基础选择器"></a>CSS 基础选择器</h1><blockquote>
-<p> 基础选择器是由 <strong>单个</strong> 选择器组成的</p>
-</blockquote>
-<p>基础选择器包括：标签选择器、类选择器、id选择器和通配符选择器</p>
-<h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><p>标签选择器是用 <strong>HTML标签名</strong> 作为选择器，按标签名称分类，为页面中的某一类标签指定统一的CSS样式。</p>
-<h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><p>如果想要差异化选择不同的标签，单独选一个或者某几个标签，可以使用类标签</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">.类名 &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>例如，将所有拥有red类的HTML元素均为红色。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.red</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>结构需要 <strong>class</strong> 属性来调用class类<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&#x27;red&#x27;&gt;红色&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong><br>(1) 类选择器使用”.”进行标识，后面紧跟类名(自定义)</p>
-<p>(2) 长名称或词组可以使用 <strong>中横线</strong> 来为选择器命名</p>
-<p>(3) 不要使用纯数字、中文等命名，尽量使用英文字母</p>
-<p>(4) 命名要有意义</p>
-<p>(5) <strong>类命名规则:</strong> 查web文档</p>
-<h2 id="类选择器-多类名"><a href="#类选择器-多类名" class="headerlink" title="类选择器-多类名"></a>类选择器-多类名</h2><p>一个标签可以指定多个类名，从而达到更多的选择目的<br>1.使用多类名的方法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;red font20&quot;&gt;hh&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br>(1) 在标签class属性中写多个类名<br>(2) 多个类名中间必须用空格分开<br>(3) 每个标签就可以分别具有这些类名的样式</p>
-<h2 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h2><p>用”#”定义<br>基本语法<br> <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#id</span>选择器名称 &#123;</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>注意:</p>
-<p>1.id是唯一性元素，一个页面上 <strong>不允许两个元素具有相同的id</strong>。一个HTML元素，也只允许使用一个id，<strong>不允许以空格分隔的id列表</strong></p>
-<p>2.当不确定时，有多个html元素来使用该样式时，使用类选择器</p>
-<p>3.id选择器的优先级高于class选择器的优先级。</p>
-<h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><p>用”*”定义，表示选取页面中的所有元素（标签）<br>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong></p>
-<ul>
-<li>通配符选择器不需要调用，自动就给所有元素使用样式</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">基础选择器</th>
-<th style="text-align:left">作用</th>
-<th style="text-align:left">用法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">标签选择器</td>
-<td style="text-align:left">可以选出所有相同元素</td>
-<td style="text-align:left">p{color: red;}</td>
-</tr>
-<tr>
-<td style="text-align:left">类选择器</td>
-<td style="text-align:left">可以选出1个或者多个标签</td>
-<td style="text-align:left">.nav{color: red;}</td>
-</tr>
-<tr>
-<td style="text-align:left">id选择器</td>
-<td style="text-align:left">一次只能选择一个标签</td>
-<td style="text-align:left">#nav{color: red;}</td>
-</tr>
-<tr>
-<td style="text-align:left">通配符选择器</td>
-<td style="text-align:left">选择所有标签</td>
-<td style="text-align:left">*{color: red;}</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="CSS-复合选择器"><a href="#CSS-复合选择器" class="headerlink" title="CSS 复合选择器"></a>CSS 复合选择器</h1><blockquote>
-<p>复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的</p>
-</blockquote>
-<p>常用复合选择器包括：后代选择器，子选择器，并集选择器，伪类选择器等</p>
-<h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><p>可以选择 <strong>父类元素里面的子元素</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span> 元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h2><p>只能选择作为某元素最近一级子元素<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>&gt;元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h2><p>可以选择多组标签，同时为他们定义相同样式</p>
-<p>通过逗号，（和的意思）连接而成</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>,</span><br><span class="line">元素<span class="number">2</span> &#123; </span><br><span class="line">	样式声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>用于某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素</p>
-<p>伪类选择器书写用冒号:表示</p>
-<h3 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选择器元素</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">a:link</td>
-<td style="text-align:left">选择所有未被访问的链接</td>
-</tr>
-<tr>
-<td style="text-align:left">a:visited</td>
-<td style="text-align:left">选择所有已被访问的链接</td>
-</tr>
-<tr>
-<td style="text-align:left">a:hover</td>
-<td style="text-align:left">选择鼠标指针位于其上的链接</td>
-</tr>
-<tr>
-<td style="text-align:left">a:active</td>
-<td style="text-align:left">选择活动链接（鼠标按下未弹起的链接）</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意:</strong></p>
-<ul>
-<li>必须按照顺序LVHA，要不然会不起作用</li>
-<li>因为a链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。</li>
-</ul>
-<h3 id="focus-伪类选择器"><a href="#focus-伪类选择器" class="headerlink" title=":focus 伪类选择器"></a>:focus 伪类选择器</h3><p>:focus 伪类选择器用于选取获得焦点的表单元素。<br>焦点是光标，一般情况&lt;input&gt;类表单元素才能获取，因此这个选择器也主要针对于表单元素来说</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选择器</th>
-<th style="text-align:left">作用</th>
-<th style="text-align:left">符号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">后代选择器</td>
-<td style="text-align:left">选择父类里面的子元素</td>
-<td style="text-align:left">空格</td>
-</tr>
-<tr>
-<td style="text-align:left">子代选择器</td>
-<td style="text-align:left">选择父类里面 <strong>最近一级的子元素元素</strong></td>
-<td style="text-align:left">大于&gt;</td>
-</tr>
-<tr>
-<td style="text-align:left">并集选择器</td>
-<td style="text-align:left">选择某些样式相同的元素</td>
-<td style="text-align:left">逗号,</td>
-</tr>
-<tr>
-<td style="text-align:left">链接伪类选择器</td>
-<td style="text-align:left">选择不同状态的链接</td>
-<td style="text-align:left">冒号，重点记住a{}和a:hover</td>
-</tr>
-<tr>
-<td style="text-align:left">:focus伪类选择器</td>
-<td style="text-align:left">选择获得光标的表单</td>
-<td style="text-align:left">input:focus</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -2018,7 +2018,7 @@ False
 <h2 id="CSS3-盒子模型"><a href="#CSS3-盒子模型" class="headerlink" title="CSS3 盒子模型"></a>CSS3 盒子模型</h2><p>CSS3中可以通过 <strong>box-sizing</strong> 来指定盒子模型，有两个值：即可指定为 <strong>content-box</strong>、<strong>border-box</strong>，这样我们计算盒子大小的方式就发生了改变</p>
 <p>1.box-sizing: content-box 盒子大小为width + padding + border （默认）</p>
 <p>2.box-sizing: border-box 就不会撑大盒子（前提padding和border不会超过width宽度）</p>
-<h1 id="CSS3-过渡"><a href="#CSS3-过渡" class="headerlink" title="CSS3 过渡"></a>CSS3 过渡</h1><p>过渡（transition）是CSS3中最具有颠覆性的特征之一，我们可以在不适用flash动画或javascript的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。</p>
+<h1 id="CSS3-过渡"><a href="#CSS3-过渡" class="headerlink" title="CSS3 过渡"></a>CSS3 过渡</h1><p>过渡（transition）让我们可以在不适用flash动画或javascript的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。</p>
 <p>过渡动画：是从一个状态渐渐的过渡到另外一个状态</p>
 <p><strong>经常和:hover一起搭配使用</strong></p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">tansition: 要过渡的属性 花费时间 曲线运动 何时开始;</span><br></pre></td></tr></table></figure>
@@ -2026,6 +2026,7 @@ False
 <p><strong>2.花费时间</strong>：单位 s（必须）</p>
 <p><strong>3.曲线运动</strong>：默认是ease（可省略）</p>
 <p><strong>4.何时开始</strong>：单位 s（必须）可以设置延迟出发时间 默认是0s（可省略）</p>
+<h1 id="2D转换"><a href="#2D转换" class="headerlink" title="2D转换"></a>2D转换</h1><p><strong>转换（transform）</strong> 可以实现元素的位移、旋转、缩放等效果，转换可以简单理解为变形</p>
 ]]></content>
       <categories>
         <category>CSS</category>
@@ -2590,114 +2591,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>3.CSS的背景</title>
-    <url>/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的背景"><a href="#CSS-的背景" class="headerlink" title="CSS 的背景"></a>CSS 的背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><strong>background-color</strong> 属性定义了元素的背景颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></table></figure><br>一般情况下元素背景颜色默认值是 <strong>transparent(透明)</strong>，我们也可以手动指定背景颜色为透明色。</p>
-<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p><strong>background-image</strong> 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">绝对或相对位置</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h2><p>如果需要在HTML页面上对背景图像进行平铺，可以使用 <strong>background-repeat</strong> 属性<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat | no-repeat | repeat-x | repeat-y </span><br></pre></td></tr></table></figure></p>
-<h2 id="背景图片位置"><a href="#背景图片位置" class="headerlink" title="背景图片位置"></a>背景图片位置</h2><p>利用 <strong>bcakground-positon</strong> 属性可以改变图片在背景中的位置。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br></pre></td></tr></table></figure><br>参数代表的意思是：x坐标和y坐标，可以使用方位名词或者精确单位</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数值</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">length</td>
-<td style="text-align:left">百分数 / 由浮点数字和单位标识符组成的长度值</td>
-</tr>
-<tr>
-<td style="text-align:left">position</td>
-<td style="text-align:left">方位名词：<br>top / center / bottom <br>left / center / right </td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>1.参数是方位名词</strong></p>
-<ul>
-<li>如果指定的两个值都是方位名词，则两个值前后顺序无关，比如left top和top left 效果一样</li>
-<li>如果指定了一个方位名词，另一个省略，则第二个值默认居中对齐</li>
-</ul>
-<p><strong>2.参数是精确单位</strong></p>
-<ul>
-<li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个肯定是y坐标</li>
-<li>如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中</li>
-</ul>
-<p><strong>3.参数是混合单位</strong></p>
-<ul>
-<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标</li>
-</ul>
-<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2><p><strong>background-attachment</strong> 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
-<p>background-attachment后期可以制作时差滚动效果<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: <span class="built_in">fixed</span>(固定) | <span class="built_in">scroll</span>(滚动) </span><br></pre></td></tr></table></figure></p>
-<h2 id="背景复合写法"><a href="#背景复合写法" class="headerlink" title="背景复合写法"></a>背景复合写法</h2><p>我们可以将这些属性合并写在同一个属性background中，约定的顺序为：</p>
-<p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
-<h2 id="背景色半透明"><a href="#背景色半透明" class="headerlink" title="背景色半透明"></a>背景色半透明</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>rgba也就是red、green、blue、alpha</strong></p>
-<ul>
-<li>最后一个参数是 <strong>alpha</strong> 透明度，取值范围0~1之间</li>
-<li><strong>习惯上把0.3的0省略</strong>，写为background: rgba(0,0,0,.3);</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-<th style="text-align:left">值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">background-color</td>
-<td style="text-align:left">背景颜色</td>
-<td style="text-align:left">预定义颜色值、十六进制、RGB代码</td>
-</tr>
-<tr>
-<td style="text-align:left">background-image</td>
-<td style="text-align:left">背景图片</td>
-<td style="text-align:left">url(图片路径)</td>
-</tr>
-<tr>
-<td style="text-align:left">background-repeat</td>
-<td style="text-align:left">是否平铺</td>
-<td style="text-align:left">repeat / no-repeat / repeat-x / repeat-y</td>
-</tr>
-<tr>
-<td style="text-align:left">background-position</td>
-<td style="text-align:left">背景位置</td>
-<td style="text-align:left">length / positon 分别是x和y坐标</td>
-</tr>
-<tr>
-<td style="text-align:left">background-attachment</td>
-<td style="text-align:left">背景附着</td>
-<td style="text-align:left">scroll(滚动) / fixed(固定)</td>
-</tr>
-<tr>
-<td style="text-align:left">背景简写</td>
-<td style="text-align:left">减少代码量</td>
-<td style="text-align:left">background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置;</td>
-</tr>
-<tr>
-<td style="text-align:left">背景色半透明</td>
-<td style="text-align:left">背景颜色半透明</td>
-<td style="text-align:left">background:(0,0,0,.3); 后面必须是4个值</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2.矩阵</title>
     <url>/2021/06/18/2.%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是 <strong>同型矩阵</strong></p>
@@ -2815,6 +2708,114 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3.CSS的背景</title>
+    <url>/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的背景"><a href="#CSS-的背景" class="headerlink" title="CSS 的背景"></a>CSS 的背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><strong>background-color</strong> 属性定义了元素的背景颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></table></figure><br>一般情况下元素背景颜色默认值是 <strong>transparent(透明)</strong>，我们也可以手动指定背景颜色为透明色。</p>
+<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p><strong>background-image</strong> 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">绝对或相对位置</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h2><p>如果需要在HTML页面上对背景图像进行平铺，可以使用 <strong>background-repeat</strong> 属性<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat | no-repeat | repeat-x | repeat-y </span><br></pre></td></tr></table></figure></p>
+<h2 id="背景图片位置"><a href="#背景图片位置" class="headerlink" title="背景图片位置"></a>背景图片位置</h2><p>利用 <strong>bcakground-positon</strong> 属性可以改变图片在背景中的位置。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br></pre></td></tr></table></figure><br>参数代表的意思是：x坐标和y坐标，可以使用方位名词或者精确单位</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">length</td>
+<td style="text-align:left">百分数 / 由浮点数字和单位标识符组成的长度值</td>
+</tr>
+<tr>
+<td style="text-align:left">position</td>
+<td style="text-align:left">方位名词：<br>top / center / bottom <br>left / center / right </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>1.参数是方位名词</strong></p>
+<ul>
+<li>如果指定的两个值都是方位名词，则两个值前后顺序无关，比如left top和top left 效果一样</li>
+<li>如果指定了一个方位名词，另一个省略，则第二个值默认居中对齐</li>
+</ul>
+<p><strong>2.参数是精确单位</strong></p>
+<ul>
+<li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个肯定是y坐标</li>
+<li>如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中</li>
+</ul>
+<p><strong>3.参数是混合单位</strong></p>
+<ul>
+<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标</li>
+</ul>
+<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2><p><strong>background-attachment</strong> 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
+<p>background-attachment后期可以制作时差滚动效果<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: <span class="built_in">fixed</span>(固定) | <span class="built_in">scroll</span>(滚动) </span><br></pre></td></tr></table></figure></p>
+<h2 id="背景复合写法"><a href="#背景复合写法" class="headerlink" title="背景复合写法"></a>背景复合写法</h2><p>我们可以将这些属性合并写在同一个属性background中，约定的顺序为：</p>
+<p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
+<h2 id="背景色半透明"><a href="#背景色半透明" class="headerlink" title="背景色半透明"></a>背景色半透明</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>rgba也就是red、green、blue、alpha</strong></p>
+<ul>
+<li>最后一个参数是 <strong>alpha</strong> 透明度，取值范围0~1之间</li>
+<li><strong>习惯上把0.3的0省略</strong>，写为background: rgba(0,0,0,.3);</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">background-color</td>
+<td style="text-align:left">背景颜色</td>
+<td style="text-align:left">预定义颜色值、十六进制、RGB代码</td>
+</tr>
+<tr>
+<td style="text-align:left">background-image</td>
+<td style="text-align:left">背景图片</td>
+<td style="text-align:left">url(图片路径)</td>
+</tr>
+<tr>
+<td style="text-align:left">background-repeat</td>
+<td style="text-align:left">是否平铺</td>
+<td style="text-align:left">repeat / no-repeat / repeat-x / repeat-y</td>
+</tr>
+<tr>
+<td style="text-align:left">background-position</td>
+<td style="text-align:left">背景位置</td>
+<td style="text-align:left">length / positon 分别是x和y坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">background-attachment</td>
+<td style="text-align:left">背景附着</td>
+<td style="text-align:left">scroll(滚动) / fixed(固定)</td>
+</tr>
+<tr>
+<td style="text-align:left">背景简写</td>
+<td style="text-align:left">减少代码量</td>
+<td style="text-align:left">background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置;</td>
+</tr>
+<tr>
+<td style="text-align:left">背景色半透明</td>
+<td style="text-align:left">背景颜色半透明</td>
+<td style="text-align:left">background:(0,0,0,.3); 后面必须是4个值</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3070,6 +3071,93 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>4.CSS的元素显示模式</title>
+    <url>/2021/07/20/4-CSS%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的元素显示模式"><a href="#CSS-的元素显示模式" class="headerlink" title="CSS 的元素显示模式"></a>CSS 的元素显示模式</h1><blockquote>
+<p>元素显示模式就是元素（标签）以什么方式进行显示，比如&lt;div&gt;自己占一行，比如一行可以放多个&lt;span&gt;</p>
+</blockquote>
+<p>HTML元素一般分为 <strong>块元素</strong> 和 <strong>行内元素</strong></p>
+<h2 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h2><p>常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;li&gt;等，其中&lt;div&gt;标签式最典型的块元素</p>
+<p>块级元素特点：</p>
+<p>1.独占一行</p>
+<p>2.高度，宽度，外边距以及内边距都可以控制。</p>
+<p>3.宽度默认是容器（父级宽度）的100%。</p>
+<p>4.是一个容器及盒子，里面可以放行内或者块级元素。</p>
+<p><strong>注意:</strong></p>
+<ul>
+<li>文字类元素内不能使用块级元素</li>
+<li>&lt;p&gt;标签主要用于存放文字，因此&lt;p&gt;里面不能放块级元素，特别是不能放&lt;div&gt;</li>
+<li>同理，&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签，里面也不能放其他块级元素</li>
+</ul>
+<h2 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h2><p>常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等，其中&lt;span&gt;标签是最典型的行内元素。</p>
+<p>行内元素的特点：</p>
+<p>1.相邻行内元素在一行上，一行可以显示多个。</p>
+<p>2.高、宽直接设置是无效的</p>
+<p>3.默认宽度就是它本身内容的宽度。</p>
+<p>4.行内元素只能容纳文本或其它行内元素。</p>
+<p><strong>注意:</strong></p>
+<ul>
+<li>链接里面不能再放链接</li>
+<li>特殊情况&lt;a&gt;里面可以放块级元素，但是给&lt;a&gt;转换一下块级模式最安全</li>
+</ul>
+<h2 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h2><p>在行内元素中有几个特殊的标签 —— &lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;，他们同时具有块元素和行内元素的特点，有些资料称它们为行内块元素。</p>
+<p>行内块元素的特点：</p>
+<p>1.和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙，一行可以显示多个（行内元素特点）</p>
+<p>2.默认宽度就是它本身内容的宽度（行内元素的特点）</p>
+<p>3.高度、行高、外边距以及内边距都可以控制（块级元素特点）</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">元素模式</th>
+<th style="text-align:left">元素排列</th>
+<th style="text-align:left">设置样式</th>
+<th style="text-align:left">默认宽度</th>
+<th style="text-align:left">包含</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">块级元素</td>
+<td style="text-align:left">一行只能放一个块级元素</td>
+<td style="text-align:left">可以设置宽度高度</td>
+<td style="text-align:left">容器的100%</td>
+<td style="text-align:left">容器可以包含任何标签</td>
+</tr>
+<tr>
+<td style="text-align:left">行内元素</td>
+<td style="text-align:left">一行可以放多个行内元素</td>
+<td style="text-align:left">不可以设置宽度高度</td>
+<td style="text-align:left">它自身内容的宽度</td>
+<td style="text-align:left">容纳文本或者其他行内元素</td>
+</tr>
+<tr>
+<td style="text-align:left">行内块元素</td>
+<td style="text-align:left">一行放多个行内块元素</td>
+<td style="text-align:left">可以设置宽度高度</td>
+<td style="text-align:left">它本身内容的宽度</td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="元素显示模式转换"><a href="#元素显示模式转换" class="headerlink" title="元素显示模式转换"></a>元素显示模式转换</h2><p>特殊情况下，我们需要元素模式的转换，简单理解：一个模式的元素需要另外一种模式的特性，比如想要增加链接&lt;a&gt;的触发范围</p>
+<ul>
+<li>转换为块元素：display:block;</li>
+<li>转换为行内元素： display:inline;</li>
+<li>转换为行内块元素： display:inline-block;</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>4.索引补充</title>
     <url>/2021/07/04/4-%E7%B4%A2%E5%BC%95%E8%A1%A5%E5%85%85/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="基本方式"><a href="#基本方式" class="headerlink" title="基本方式"></a>基本方式</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
@@ -3168,93 +3256,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数据分析</tag>
         <tag>numpy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4.CSS的元素显示模式</title>
-    <url>/2021/07/20/4-CSS%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的元素显示模式"><a href="#CSS-的元素显示模式" class="headerlink" title="CSS 的元素显示模式"></a>CSS 的元素显示模式</h1><blockquote>
-<p>元素显示模式就是元素（标签）以什么方式进行显示，比如&lt;div&gt;自己占一行，比如一行可以放多个&lt;span&gt;</p>
-</blockquote>
-<p>HTML元素一般分为 <strong>块元素</strong> 和 <strong>行内元素</strong></p>
-<h2 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h2><p>常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;li&gt;等，其中&lt;div&gt;标签式最典型的块元素</p>
-<p>块级元素特点：</p>
-<p>1.独占一行</p>
-<p>2.高度，宽度，外边距以及内边距都可以控制。</p>
-<p>3.宽度默认是容器（父级宽度）的100%。</p>
-<p>4.是一个容器及盒子，里面可以放行内或者块级元素。</p>
-<p><strong>注意:</strong></p>
-<ul>
-<li>文字类元素内不能使用块级元素</li>
-<li>&lt;p&gt;标签主要用于存放文字，因此&lt;p&gt;里面不能放块级元素，特别是不能放&lt;div&gt;</li>
-<li>同理，&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签，里面也不能放其他块级元素</li>
-</ul>
-<h2 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h2><p>常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等，其中&lt;span&gt;标签是最典型的行内元素。</p>
-<p>行内元素的特点：</p>
-<p>1.相邻行内元素在一行上，一行可以显示多个。</p>
-<p>2.高、宽直接设置是无效的</p>
-<p>3.默认宽度就是它本身内容的宽度。</p>
-<p>4.行内元素只能容纳文本或其它行内元素。</p>
-<p><strong>注意:</strong></p>
-<ul>
-<li>链接里面不能再放链接</li>
-<li>特殊情况&lt;a&gt;里面可以放块级元素，但是给&lt;a&gt;转换一下块级模式最安全</li>
-</ul>
-<h2 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h2><p>在行内元素中有几个特殊的标签 —— &lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;，他们同时具有块元素和行内元素的特点，有些资料称它们为行内块元素。</p>
-<p>行内块元素的特点：</p>
-<p>1.和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙，一行可以显示多个（行内元素特点）</p>
-<p>2.默认宽度就是它本身内容的宽度（行内元素的特点）</p>
-<p>3.高度、行高、外边距以及内边距都可以控制（块级元素特点）</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">元素模式</th>
-<th style="text-align:left">元素排列</th>
-<th style="text-align:left">设置样式</th>
-<th style="text-align:left">默认宽度</th>
-<th style="text-align:left">包含</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">块级元素</td>
-<td style="text-align:left">一行只能放一个块级元素</td>
-<td style="text-align:left">可以设置宽度高度</td>
-<td style="text-align:left">容器的100%</td>
-<td style="text-align:left">容器可以包含任何标签</td>
-</tr>
-<tr>
-<td style="text-align:left">行内元素</td>
-<td style="text-align:left">一行可以放多个行内元素</td>
-<td style="text-align:left">不可以设置宽度高度</td>
-<td style="text-align:left">它自身内容的宽度</td>
-<td style="text-align:left">容纳文本或者其他行内元素</td>
-</tr>
-<tr>
-<td style="text-align:left">行内块元素</td>
-<td style="text-align:left">一行放多个行内块元素</td>
-<td style="text-align:left">可以设置宽度高度</td>
-<td style="text-align:left">它本身内容的宽度</td>
-<td style="text-align:left"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="元素显示模式转换"><a href="#元素显示模式转换" class="headerlink" title="元素显示模式转换"></a>元素显示模式转换</h2><p>特殊情况下，我们需要元素模式的转换，简单理解：一个模式的元素需要另外一种模式的特性，比如想要增加链接&lt;a&gt;的触发范围</p>
-<ul>
-<li>转换为块元素：display:block;</li>
-<li>转换为行内元素： display:inline;</li>
-<li>转换为行内块元素： display:inline-block;</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3358,6 +3359,149 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5.通用函数</title>
+    <url>/2021/07/04/5-%E9%80%9A%E7%94%A8%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通用函数（即ufunc）是一种对ndarray中的数据执行元素级运算的函数。</p>
+<p><strong>一元ufunc</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">abs、fabs</td>
+<td style="text-align:left">计算整数、浮点数或复数的绝对值，对于非复数值，可以用更快的fabs</td>
+</tr>
+<tr>
+<td style="text-align:left">sqrt</td>
+<td style="text-align:left">计算各元素的平方根，相当于arr ** 0.5</td>
+</tr>
+<tr>
+<td style="text-align:left">square</td>
+<td style="text-align:left">计算元素的平方，相当于arr ** 2</td>
+</tr>
+<tr>
+<td style="text-align:left">exp</td>
+<td style="text-align:left">计算各元素的指数$e^x$</td>
+</tr>
+<tr>
+<td style="text-align:left">log、log10</td>
+<td style="text-align:left">分别为自然对数、以10为底的对数</td>
+</tr>
+<tr>
+<td style="text-align:left">sign</td>
+<td style="text-align:left">计算各元素的正负号：1（正），0（零），-1（负）</td>
+</tr>
+<tr>
+<td style="text-align:left">ceil</td>
+<td style="text-align:left">计算各元素的ceiling值，即大于等于该值的最小整数</td>
+</tr>
+<tr>
+<td style="text-align:left">floor</td>
+<td style="text-align:left">计算各元素的floor值，即小于等于该值的最大整数</td>
+</tr>
+<tr>
+<td style="text-align:left">rint</td>
+<td style="text-align:left">将各元素值四舍五入到最接近的整数，保留dtype</td>
+</tr>
+<tr>
+<td style="text-align:left">modf</td>
+<td style="text-align:left">将数组的小数和整数部分以两个独立数组的形式返回</td>
+</tr>
+<tr>
+<td style="text-align:left">isnan</td>
+<td style="text-align:left">返回一个表示“哪些值是NaN”的布尔型数组</td>
+</tr>
+<tr>
+<td style="text-align:left">isfinite、isinf</td>
+<td style="text-align:left">分别返回一个元素“哪些元素是有穷的”或“哪些元素是无穷的”的布尔型数组</td>
+</tr>
+<tr>
+<td style="text-align:left">cos、cosh、sin、sinh、tan、tanh</td>
+<td style="text-align:left">普通型和双曲型三角函数</td>
+</tr>
+<tr>
+<td style="text-align:left">arccos、arccosh、arcsin、arcsinh…</td>
+<td style="text-align:left">反三角函数</td>
+</tr>
+<tr>
+<td style="text-align:left">logical_not</td>
+<td style="text-align:left">计算各元素not x的真值，相当于~arr</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>二元ufunc</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">add</td>
+<td style="text-align:left">将数组中对应的元素相加</td>
+</tr>
+<tr>
+<td style="text-align:left">subtract</td>
+<td style="text-align:left">从第一个数组中减去第二个数组中的元素</td>
+</tr>
+<tr>
+<td style="text-align:left">multiply</td>
+<td style="text-align:left">数组元素相乘</td>
+</tr>
+<tr>
+<td style="text-align:left">divide、floor_divide</td>
+<td style="text-align:left">除法或向下圆整除法（丢弃余数）</td>
+</tr>
+<tr>
+<td style="text-align:left">power</td>
+<td style="text-align:left">对第一个数组中的元素A，根据第二个数组中的相应元素B，计算$A^B$</td>
+</tr>
+<tr>
+<td style="text-align:left">maximum、fmax</td>
+<td style="text-align:left">元素级的最大值计算，fmax将忽略NaN</td>
+</tr>
+<tr>
+<td style="text-align:left">minmum、fmin</td>
+<td style="text-align:left">元素级的最小值计算，fmin将忽略NaN</td>
+</tr>
+<tr>
+<td style="text-align:left">mod</td>
+<td style="text-align:left">元素级的求模运算（除法的余数）</td>
+</tr>
+<tr>
+<td style="text-align:left">copysign</td>
+<td style="text-align:left">将第二个数组中的符号复制给第一个数组中的值</td>
+</tr>
+<tr>
+<td style="text-align:left">greater、greater_equal、less、less_equal、equal、not_equal</td>
+<td style="text-align:left">执行元素级的比较运算符，相当于中缀运算符&gt;、&gt;=、&lt;、&lt;=、==、!=</td>
+</tr>
+<tr>
+<td style="text-align:left">logical_and、loagical_or、logical_xor</td>
+<td style="text-align:left">执行元素级的真值逻辑运算，相当于中缀运算符&amp;、&#124; 、^</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -3567,149 +3711,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5.通用函数</title>
-    <url>/2021/07/04/5-%E9%80%9A%E7%94%A8%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通用函数（即ufunc）是一种对ndarray中的数据执行元素级运算的函数。</p>
-<p><strong>一元ufunc</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">函数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">abs、fabs</td>
-<td style="text-align:left">计算整数、浮点数或复数的绝对值，对于非复数值，可以用更快的fabs</td>
-</tr>
-<tr>
-<td style="text-align:left">sqrt</td>
-<td style="text-align:left">计算各元素的平方根，相当于arr ** 0.5</td>
-</tr>
-<tr>
-<td style="text-align:left">square</td>
-<td style="text-align:left">计算元素的平方，相当于arr ** 2</td>
-</tr>
-<tr>
-<td style="text-align:left">exp</td>
-<td style="text-align:left">计算各元素的指数$e^x$</td>
-</tr>
-<tr>
-<td style="text-align:left">log、log10</td>
-<td style="text-align:left">分别为自然对数、以10为底的对数</td>
-</tr>
-<tr>
-<td style="text-align:left">sign</td>
-<td style="text-align:left">计算各元素的正负号：1（正），0（零），-1（负）</td>
-</tr>
-<tr>
-<td style="text-align:left">ceil</td>
-<td style="text-align:left">计算各元素的ceiling值，即大于等于该值的最小整数</td>
-</tr>
-<tr>
-<td style="text-align:left">floor</td>
-<td style="text-align:left">计算各元素的floor值，即小于等于该值的最大整数</td>
-</tr>
-<tr>
-<td style="text-align:left">rint</td>
-<td style="text-align:left">将各元素值四舍五入到最接近的整数，保留dtype</td>
-</tr>
-<tr>
-<td style="text-align:left">modf</td>
-<td style="text-align:left">将数组的小数和整数部分以两个独立数组的形式返回</td>
-</tr>
-<tr>
-<td style="text-align:left">isnan</td>
-<td style="text-align:left">返回一个表示“哪些值是NaN”的布尔型数组</td>
-</tr>
-<tr>
-<td style="text-align:left">isfinite、isinf</td>
-<td style="text-align:left">分别返回一个元素“哪些元素是有穷的”或“哪些元素是无穷的”的布尔型数组</td>
-</tr>
-<tr>
-<td style="text-align:left">cos、cosh、sin、sinh、tan、tanh</td>
-<td style="text-align:left">普通型和双曲型三角函数</td>
-</tr>
-<tr>
-<td style="text-align:left">arccos、arccosh、arcsin、arcsinh…</td>
-<td style="text-align:left">反三角函数</td>
-</tr>
-<tr>
-<td style="text-align:left">logical_not</td>
-<td style="text-align:left">计算各元素not x的真值，相当于~arr</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>二元ufunc</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">函数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">add</td>
-<td style="text-align:left">将数组中对应的元素相加</td>
-</tr>
-<tr>
-<td style="text-align:left">subtract</td>
-<td style="text-align:left">从第一个数组中减去第二个数组中的元素</td>
-</tr>
-<tr>
-<td style="text-align:left">multiply</td>
-<td style="text-align:left">数组元素相乘</td>
-</tr>
-<tr>
-<td style="text-align:left">divide、floor_divide</td>
-<td style="text-align:left">除法或向下圆整除法（丢弃余数）</td>
-</tr>
-<tr>
-<td style="text-align:left">power</td>
-<td style="text-align:left">对第一个数组中的元素A，根据第二个数组中的相应元素B，计算$A^B$</td>
-</tr>
-<tr>
-<td style="text-align:left">maximum、fmax</td>
-<td style="text-align:left">元素级的最大值计算，fmax将忽略NaN</td>
-</tr>
-<tr>
-<td style="text-align:left">minmum、fmin</td>
-<td style="text-align:left">元素级的最小值计算，fmin将忽略NaN</td>
-</tr>
-<tr>
-<td style="text-align:left">mod</td>
-<td style="text-align:left">元素级的求模运算（除法的余数）</td>
-</tr>
-<tr>
-<td style="text-align:left">copysign</td>
-<td style="text-align:left">将第二个数组中的符号复制给第一个数组中的值</td>
-</tr>
-<tr>
-<td style="text-align:left">greater、greater_equal、less、less_equal、equal、not_equal</td>
-<td style="text-align:left">执行元素级的比较运算符，相当于中缀运算符&gt;、&gt;=、&lt;、&lt;=、==、!=</td>
-</tr>
-<tr>
-<td style="text-align:left">logical_and、loagical_or、logical_xor</td>
-<td style="text-align:left">执行元素级的真值逻辑运算，相当于中缀运算符&amp;、&#124; 、^</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>numpy</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -3984,150 +3985,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>6.特征值与特征向量</title>
-    <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
-<p>设$\alpha=(a_1,a_2,\cdots,a_n)^T$ ,$\beta=(b_1,b_2,\cdots,b_n)$<br><br>令$[\alpha,\beta]=\large\sum\limits_{k=1}^{n}a_kb_k$<br><br>称为向量$\;\alpha\;$和$\;\beta\;$的内积</p>
-</blockquote>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
-<li>$[\alpha,\beta]=[\beta,\alpha]$</li>
-<li>$[\alpha+\beta,\gamma]=[\alpha,\gamma]+[\beta,\gamma]$</li>
-<li>$[k\alpha,\beta]=k[\alpha,\beta]$</li>
-<li>$[\alpha,\alpha]\geqslant0\;且\;[\alpha,\alpha]=0\;\Leftrightarrow\;\alpha=0$</li>
-<li>柯西不等式$\;[\alpha,\beta]^2\leqslant[\alpha,\alpha][\beta,\beta]$<br><br>当且仅当$\;\alpha,\beta\;$线性相关时取等</li>
-</ol>
-<p>如果$\;[\alpha,\beta]=0\;$称$\;\alpha\;$与$\;\beta\;$正交</p>
-<p><strong>柯西不等式的证明：</strong></p>
-<p>$<br>\begin{aligned}<br>&amp;a. 若\;\alpha,\beta\;线性无关,\;\forall x\in R都有x\alpha+\beta\neq0\\<br>&amp;\quad\; [x\alpha+\beta,x\alpha+\beta]\\<br>&amp;=[\alpha,\alpha]x^2+2[\alpha,\beta]x+[\beta,\beta]&gt;0\\<br>&amp;作为x的二次函数，对\forall x，f(x)&gt;0\\<br>&amp;故\;\;[2[\alpha,\beta]]^2-4[\alpha,\alpha][\beta,\beta]&lt;0\\<br>&amp;\therefore\;[\alpha,\beta]^2&lt;||\alpha||\cdot||\beta||\\<br>\end{aligned}<br>$</p>
-<p>$<br>\begin{aligned}<br>&amp;b. 若\;\alpha,\beta\;线性相关\\<br>&amp;当\;\alpha=0（或\;\beta=0）\\<br>&amp;\qquad[\alpha,\beta]^2=||\alpha||\cdot||\beta||\\<br>&amp;当\beta=k\alpha\neq0\\<br>&amp;\qquad[\alpha,\beta]^2\\<br>&amp;=[\alpha,k\alpha]^2\\<br>&amp;=k^2[\alpha,\alpha]^2\\<br>&amp;=[\alpha,\alpha]\cdot[k\alpha,k\alpha]\\<br>&amp;=||\alpha||\cdot||\beta||<br>\end{aligned}<br>$</p>
-<h2 id="向量的长度"><a href="#向量的长度" class="headerlink" title="向量的长度"></a>向量的长度</h2><blockquote>
-<p>$||\alpha||=\sqrt{[\alpha,\alpha]}=\sqrt{\sum\limits_{k=1}^n{\large a}_k^2}$</p>
-</blockquote>
-<p>如果$||\alpha||=1\;$称$\;\alpha\;$为单位向量<br><br>$\displaystyle\frac{1}{||\alpha||}\alpha\;\longrightarrow$单位化<br><br></p>
-<hr>
-<p>定理：若n维向量$\alpha_1,\alpha_2,\cdots,\alpha_r$是一组两两正交的非零向量，<br>则$\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关。</p>
-<p>证：设$k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r=0$</p>
-<p>用$\alpha_1$对等式两边作内积</p>
-<p>$\quad[\alpha_1,k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r]=[\alpha_1,0]$</p>
-<p>$\quad k_1[\alpha_1,\alpha_1]+\cdots+k_r[\alpha_1,\alpha_r]=0$</p>
-<p>$\quad$因$\;\alpha_1\neq0,[\alpha_1,\alpha_1]&gt;0$<br>$\quad$而$\;[\alpha_1,\alpha_i]=0,i\geqslant2$</p>
-<p>$\quad\therefore\;k_1[\alpha_1,\alpha_1]=0\;$必有$k_1=0$</p>
-<p>$\quad$同理$\;k_2=0,\cdots,k_r=0$</p>
-<h2 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h2><p>设$\alpha_1,\alpha_2,\alpha_3\;$线性无关</p>
-<p>令$\quad\beta_1=\alpha_1$</p>
-<p>$\quad\beta_2=\alpha_2-\displaystyle\frac{[\alpha_2\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1$</p>
-<p>$\quad\beta_3=\alpha_3-\displaystyle\frac{[\alpha_3\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1-\displaystyle\frac{[\alpha_3\;\beta_2]}{[\beta_2\;\beta_2]}\beta_2$</p>
-<p>则$\;\beta_1\;\beta_2\;\beta_3\;$两两正交<br><br><br>再单位化<br>$\qquad\gamma_1=\displaystyle\frac{\beta_1}{||\beta_1||}$,<br>$\gamma_2=\displaystyle\frac{\beta_2}{||\beta_2||}$,<br>$\gamma_3=\displaystyle\frac{\beta_3}{||\beta_3||}$</p>
-<p>这样其实就相当于构建直角坐标系</p>
-<h2 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h2><blockquote>
-<p>设$A$是n阶矩阵，满足<br>$AA^T=A^TA=E$,<br>则称$A$为正交矩阵</p>
-</blockquote>
-<h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
-<li><p>$A$是正交矩阵$\;\Leftrightarrow\;A^T=A^{-1}$</p>
-</li>
-<li><p>$A=(\alpha_1\;\alpha_2\;\alpha_3)$是正交矩阵<br>$\quad\Leftrightarrow\;\alpha_1,\alpha_2,\alpha_3\;$都是单位向量，且两两正交<br><br>证：<br>$<br>\begin{aligned}<br>A^TA<br>&amp;=\begin{bmatrix}<br> \alpha_1^T\\<br> \alpha_2^T\\<br> \alpha_3^T<br>\end{bmatrix}<br>[\alpha_1\;\alpha_2\;\alpha_3]\\<br>&amp;=\begin{bmatrix}    \alpha_1^T\alpha_1&amp;\alpha_1^T\alpha_2&amp;\alpha_1^T\alpha_3\\    \alpha_2^T\alpha_1&amp;\alpha_2^T\alpha_2&amp;\alpha_2^T\alpha_3\\<br>\alpha_3^T\alpha_1&amp;\alpha_3^T\alpha_2&amp;\alpha_3^T\alpha_3<br>\end{bmatrix}<br>=\begin{bmatrix}<br> 1&amp;0&amp;0\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;1<br>\end{bmatrix}\\<br>&amp;=E<br>\end{aligned}<br>$<br><br></p>
-</li>
-<li>如果$A$是正交矩阵，则$|A|$=1或-1<br><br></li>
-<li>若$A,B$都是正交矩阵，则$AB$也是正交矩阵<br><br>证：<br>$(AB)(AB)^T=A(BB^T)A^T=AA^T=E$</li>
-</ol>
-<h3 id="规范正交基"><a href="#规范正交基" class="headerlink" title="规范正交基"></a>规范正交基</h3><p>设$e_1,e_2,\cdots,e_n$是向量空间的一个基，<br><br>如果<br>$\qquad[e_i,e_j]=<br>\begin{cases}<br>    1\qquad i=j\\<br>     0\qquad i\neq j<br>\end{cases}<br>$</p>
-<p>$\qquad$则称$e_1,e_2,\cdots,e_n$为规范正交基。</p>
-<p><strong>例</strong></p>
-<p>$<br>A=\begin{bmatrix}<br>    1&amp;0&amp;0&amp;-2\\<br>    0&amp;1&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
-<p>$Ax=0\;$基础解系</p>
-<p>$\eta_1=(0,0,1,0)^T,\eta_2=(2,-1,0,1)^T$</p>
-<p>解空间的基：$\eta_1,\eta_2$</p>
-<p>解空间维数：2</p>
-<p>规范正交基：</p>
-<p>$(0,0,1,0)^T,{\large\frac{1}{\sqrt{6}}}(2,-1,0,1)^T$</p>
-<h1 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h1><blockquote>
-<p>设A是n阶矩阵，<span class="mark">$\alpha$是n维非0列向量</span>，满足<br>$\qquad A\alpha=\lambda\alpha$<br><br>则称:<br>$\lambda$是矩阵$A$的特征值<br><br>$\alpha$是矩阵$A$对应于特征值$\lambda$的特征向量.</p>
-</blockquote>
-<p>$A\alpha=\lambda\alpha\;$这个等式个人直观理解：特征向量$\alpha$经过A矩阵变换后等于特征向量$\alpha$的$\lambda$倍</p>
-<ol>
-<li>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br><br>$\quad$那么$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$<br><br></li>
-<li>若$\alpha_1,\alpha_2$都是矩阵$A$关于特征值$\lambda$的特征向量，<br><br>则$\;\forall k_1,k_2$，当$k_1\alpha_1+k_2\alpha_2\neq0$时，<br>$k_1\alpha_1+k_2\alpha_2$仍是$A$对应于$\lambda$的特征向量<br><br>由$A\alpha_1=\lambda\alpha_1,A\alpha_2=\lambda\alpha_2$<br><br><br>$<br>\begin{aligned}<br>得到： A(k_1\alpha_1+k_2\alpha_2)<br>&amp;=k_1A\alpha_1+k_2A\alpha_2\\<br>&amp;=k_1(\lambda\alpha_1)+k_2(\lambda\alpha_2)\\<br>&amp;=\lambda(k_1\alpha_1+k_2\alpha_2)\\<br>\end{aligned}<br>$</li>
-</ol>
-<h2 id="求解步骤和原理"><a href="#求解步骤和原理" class="headerlink" title="求解步骤和原理"></a>求解步骤和原理</h2><p>$\quad A\alpha=\lambda\alpha$</p>
-<p>$\Rightarrow(\lambda E-A)\alpha=0$</p>
-<p>$\quad\alpha\;$是$\;(\lambda E-A)x=0$的非零解</p>
-<p>$\rightarrow\;|\lambda E-A|=0$</p>
-<p>(1) 由$\;|\lambda E-A|=0\;$求特征值$\;\lambda_i$<br><br>$\quad$共n个(含重根)<br><br>(2) 由$\;(\lambda_iE-A)x=0\;$求基础解系<br><br>$\quad$即$\lambda_i$线性无关的特征向量</p>
-<p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
-<p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$<br><br><br>$\therefore\;A的特征值为\;1,\pm6$<br><br></p>
-<ol>
-<li>当$\;\lambda=1\;时,由\;(E-A)x=0$<br><br>$E-A=\begin{bmatrix}<br> 1&amp;-2&amp;2\\<br> -2&amp;-3&amp;-4\\<br> 2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;0&amp;2\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br><br>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br></li>
-<li>当$\;\lambda=6\;时，由(6E-A)x=0$<br><br>$6E-A=\begin{bmatrix}<br> 6&amp;-2&amp;2\\<br> -2&amp;2&amp;-4\\<br> 2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br> 0&amp;0&amp;0\\<br> -2&amp;2&amp;4\\<br> 2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;-1&amp;2\\<br> 0&amp;-2&amp;5\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br><br>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br></li>
-<li>当$\lambda=-6时，由(-6E-A)x=0$<br><br>$-6E-A=\begin{bmatrix}<br> -6&amp;-2&amp;2\\<br> -2&amp;-10&amp;-4\\<br> 2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;1&amp;0\\<br> 0&amp;2&amp;1\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</li>
-</ol>
-<h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>设$A$是n阶矩阵<br><br>(1)$\;\sum\lambda_i=\sum {\large a}_{ii}=trA\;\rightarrow\;tr为矩阵的迹$<br><br>(2)$\;\prod\lambda_i=|A|$<br><br></li>
-<li>$A$可逆$\;\Leftrightarrow\;$$A$的n个特征值全不为0<br><br></li>
-<li>矩阵$A$对应于不同特征值的特征向量的特征向量是线性无关的<br><br><strong>证</strong>:$\quad$设$\lambda_1,\lambda_2,\cdots,\lambda_s$是矩阵$A$的S个不同的特征值，对应的特征向量分别是$\alpha_1,\alpha_2,\cdots,\alpha_s$<br><br>$\;$用数学归纳法<br><br>$\;那么,当S=1时，因\alpha_1\neq0,命题正确$<br><br>$\;假设S=k-1(k\geqslant2)时,结论成立$<br><br>$\;$当$S=k$时，<br>$x_1\alpha_1+x_2\alpha_2+\cdots+x_{k-1}\alpha_{k-1}+x_k\alpha_k=0\qquad(1)$<br><br>$\;用A左乘上式，有$<br><br>$\;x_1\lambda_1\alpha_1+x_2\lambda_2\alpha_2+\cdots+x_{k-1}\lambda_{k-1}\alpha_{k-1}+x_k\lambda_k\alpha_k=0\quad(2)$<br><br>$\;用\lambda_k乘(1)又有$<br><br>$\;x_1\lambda_k\alpha_1+x_2\lambda_k\alpha_2+\cdots+x_{k-1}\lambda_k\alpha_{k-1}+x_k\lambda_k\alpha_k=0\;\,\,\quad(3)$<br><br>$\;$(2)-(3):<br><br>$\;x_1(\lambda_1-\lambda_k)\alpha_1+x_2(\lambda_2-\lambda_k)\alpha_2+\cdots+x_{k-1}(\lambda_{k-1}-\lambda_k)\alpha_{k-1}=0$<br><br>$\;又因为\alpha_1,\alpha_2,\cdots,\alpha_{k-1}线性无关$<br><br>$\;所以x_1(\lambda_1-\lambda_k)=0,x_2(\lambda_2-\lambda_k)=0,\cdots,x_{k-1}(\lambda_{k-1}-\lambda_k)=0$<br><br>$\;因特征值\lambda_i\neq\lambda_j,从而\\<br>\quad x_1=0,x_2=0,\cdots,x_{k-1}=0$<br><br>$\;代入(1)式，得\\<br>\qquad x_k\alpha_k=0$<br><br>$\;因\;\alpha\neq0,\quad得\;x_k=0$<br><br>$\;故\alpha_1,\alpha_2,\cdots,\alpha_k线性无关$<br><br>所以当$S=k$时，命题成立<br><br>由数学归纳法可知对一切自然数，命题均成立。<br><br></li>
-<li>若$\;A\alpha=\lambda\alpha,\alpha\neq0$<br><br>$(A+kE)\alpha=(\lambda+k)\alpha$<br><br></li>
-<li>由$\;A\alpha=\lambda\alpha$<br><br>有$\;A^2\alpha=A(\lambda\alpha)=\lambda A\alpha=\lambda^2\alpha$<br><br>$\;\Rightarrow\;A^n\alpha^n=\lambda^n\alpha$<br><br></li>
-<li>由$A\alpha=\lambda\alpha,A$可逆<br><br>可得到$A^{-1}\alpha=\displaystyle\frac{1}{\lambda}\alpha$<br><br>$\qquad\quad A^*\alpha=\displaystyle\frac{|A|}{\lambda}\alpha$</li>
-</ol>
-<h1 id="相似矩阵"><a href="#相似矩阵" class="headerlink" title="相似矩阵"></a>相似矩阵</h1><blockquote>
-<p>设$A,B$都是n阶矩阵，如果存在可逆矩阵P,使得<br><br>$\qquad P^{-1}AP=B$<br><br>就称矩阵$A$相似于矩阵$B$，$B$是$A$的相似矩阵<br><br>记成$A\sim B$</p>
-</blockquote>
-<h2 id="性质-3"><a href="#性质-3" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>$A\sim B$<br><br></li>
-<li>如果$A\sim B$,则$B\sim A$.<br><br></li>
-<li>如果$A\sim B,B\sim C$则$\;A\sim C$.<br><br></li>
-<li>如果$A\sim B$,那么<br><br>(1) $A^2\sim B^2$<br><br>(2) $A+kE\sim B+kE$<br><br>(3) 如果$A$可逆，则$\;A^{-1}\sim B^{-1}$<br><br>(4)如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</li>
-</ol>
-<h2 id="两个矩阵相似的必要条件"><a href="#两个矩阵相似的必要条件" class="headerlink" title="两个矩阵相似的必要条件"></a>两个矩阵相似的必要条件</h2><p>如果$A\sim B$,</p>
-<ol>
-<li>$|\lambda E-A|=|\lambda E-B|\;\Rightarrow\lambda_A=\lambda_B$<br><br></li>
-<li>$r(A)=r(B)$<br><br></li>
-<li>$|A|=|B|$<br><br></li>
-<li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
-</ol>
-<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land$$\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
-<p><strong>证</strong>:下面以三阶矩阵为例</p>
-<p>首先将$P$按列分块<br><br>得到<br>$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即<br>$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$</p>
-<p>则有</p>
-<p>$(A\alpha_1,A\alpha_2,A\alpha_3)$</p>
-<p>$\begin{aligned}<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
-<p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
-<h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
-<p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
-<h1 id="实对称矩阵"><a href="#实对称矩阵" class="headerlink" title="实对称矩阵"></a>实对称矩阵</h1><blockquote>
-<p>若$A$矩阵的元素都是实数，且A的转置等于它本身，则称$A$为是对称矩阵</p>
-</blockquote>
-<h2 id="性质-4"><a href="#性质-4" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>若$A$是n阶实对称矩阵,则$A$的特征值都是<strong>实数</strong><br><br></li>
-<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong> 2：<br>$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
-<li>对任意一个n阶实对称矩阵$A$,总存在n阶 <strong>正交矩阵</strong> $\;Q$，使得<br><br>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。<br><br></li>
-<li>n=1成立<br><br></li>
-<li>假设n-1成立<br><br>那么n时<br><br>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$<br><br>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$<br><br>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$<br><br>$\qquad\qquad\qquad\cdots$<br><br>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$<br><br>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br><br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)<br><br>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$<br><br>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$<br><br>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$<br>然后令Q_2=<br>\begin{bmatrix}<br> 1&amp;0\\<br> 0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$<br><br>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$<br><br><br>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$<br><br>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$<br><br>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>即n时结论成立<br><br>那么可得到结论成立<br>   </li>
-</ol>
-<h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
-<li>求特征值  </li>
-<li>求特征向量  </li>
-<li>改造特征向量  <ul>
-<li>$\lambda_i\neq\lambda_j$只需单位化  </li>
-<li>$\lambda_i=\lambda_j$<ul>
-<li>$[\alpha_i,\alpha_j]=0$只需单位化  </li>
-<li>$[\alpha_i,\alpha_j] \neq0$施密特正交化</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
-<p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>7.CSS 定位</title>
     <url>/2021/07/20/7-CSS%E7%9A%84%E5%AE%9A%E4%BD%8D/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="定位的组成"><a href="#定位的组成" class="headerlink" title="定位的组成"></a>定位的组成</h1><p><strong>定位:</strong> 将盒子定在某一个位置，所以定位也是在摆放盒子，按照定位的方式移动盒子</p>
@@ -4308,6 +4165,150 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.特征值与特征向量</title>
+    <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
+<p>设$\alpha=(a_1,a_2,\cdots,a_n)^T$ ,$\beta=(b_1,b_2,\cdots,b_n)$<br><br>令$[\alpha,\beta]=\large\sum\limits_{k=1}^{n}a_kb_k$<br><br>称为向量$\;\alpha\;$和$\;\beta\;$的内积</p>
+</blockquote>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li>$[\alpha,\beta]=[\beta,\alpha]$</li>
+<li>$[\alpha+\beta,\gamma]=[\alpha,\gamma]+[\beta,\gamma]$</li>
+<li>$[k\alpha,\beta]=k[\alpha,\beta]$</li>
+<li>$[\alpha,\alpha]\geqslant0\;且\;[\alpha,\alpha]=0\;\Leftrightarrow\;\alpha=0$</li>
+<li>柯西不等式$\;[\alpha,\beta]^2\leqslant[\alpha,\alpha][\beta,\beta]$<br><br>当且仅当$\;\alpha,\beta\;$线性相关时取等</li>
+</ol>
+<p>如果$\;[\alpha,\beta]=0\;$称$\;\alpha\;$与$\;\beta\;$正交</p>
+<p><strong>柯西不等式的证明：</strong></p>
+<p>$<br>\begin{aligned}<br>&amp;a. 若\;\alpha,\beta\;线性无关,\;\forall x\in R都有x\alpha+\beta\neq0\\<br>&amp;\quad\; [x\alpha+\beta,x\alpha+\beta]\\<br>&amp;=[\alpha,\alpha]x^2+2[\alpha,\beta]x+[\beta,\beta]&gt;0\\<br>&amp;作为x的二次函数，对\forall x，f(x)&gt;0\\<br>&amp;故\;\;[2[\alpha,\beta]]^2-4[\alpha,\alpha][\beta,\beta]&lt;0\\<br>&amp;\therefore\;[\alpha,\beta]^2&lt;||\alpha||\cdot||\beta||\\<br>\end{aligned}<br>$</p>
+<p>$<br>\begin{aligned}<br>&amp;b. 若\;\alpha,\beta\;线性相关\\<br>&amp;当\;\alpha=0（或\;\beta=0）\\<br>&amp;\qquad[\alpha,\beta]^2=||\alpha||\cdot||\beta||\\<br>&amp;当\beta=k\alpha\neq0\\<br>&amp;\qquad[\alpha,\beta]^2\\<br>&amp;=[\alpha,k\alpha]^2\\<br>&amp;=k^2[\alpha,\alpha]^2\\<br>&amp;=[\alpha,\alpha]\cdot[k\alpha,k\alpha]\\<br>&amp;=||\alpha||\cdot||\beta||<br>\end{aligned}<br>$</p>
+<h2 id="向量的长度"><a href="#向量的长度" class="headerlink" title="向量的长度"></a>向量的长度</h2><blockquote>
+<p>$||\alpha||=\sqrt{[\alpha,\alpha]}=\sqrt{\sum\limits_{k=1}^n{\large a}_k^2}$</p>
+</blockquote>
+<p>如果$||\alpha||=1\;$称$\;\alpha\;$为单位向量<br><br>$\displaystyle\frac{1}{||\alpha||}\alpha\;\longrightarrow$单位化<br><br></p>
+<hr>
+<p>定理：若n维向量$\alpha_1,\alpha_2,\cdots,\alpha_r$是一组两两正交的非零向量，<br>则$\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关。</p>
+<p>证：设$k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r=0$</p>
+<p>用$\alpha_1$对等式两边作内积</p>
+<p>$\quad[\alpha_1,k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r]=[\alpha_1,0]$</p>
+<p>$\quad k_1[\alpha_1,\alpha_1]+\cdots+k_r[\alpha_1,\alpha_r]=0$</p>
+<p>$\quad$因$\;\alpha_1\neq0,[\alpha_1,\alpha_1]&gt;0$<br>$\quad$而$\;[\alpha_1,\alpha_i]=0,i\geqslant2$</p>
+<p>$\quad\therefore\;k_1[\alpha_1,\alpha_1]=0\;$必有$k_1=0$</p>
+<p>$\quad$同理$\;k_2=0,\cdots,k_r=0$</p>
+<h2 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h2><p>设$\alpha_1,\alpha_2,\alpha_3\;$线性无关</p>
+<p>令$\quad\beta_1=\alpha_1$</p>
+<p>$\quad\beta_2=\alpha_2-\displaystyle\frac{[\alpha_2\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1$</p>
+<p>$\quad\beta_3=\alpha_3-\displaystyle\frac{[\alpha_3\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1-\displaystyle\frac{[\alpha_3\;\beta_2]}{[\beta_2\;\beta_2]}\beta_2$</p>
+<p>则$\;\beta_1\;\beta_2\;\beta_3\;$两两正交<br><br><br>再单位化<br>$\qquad\gamma_1=\displaystyle\frac{\beta_1}{||\beta_1||}$,<br>$\gamma_2=\displaystyle\frac{\beta_2}{||\beta_2||}$,<br>$\gamma_3=\displaystyle\frac{\beta_3}{||\beta_3||}$</p>
+<p>这样其实就相当于构建直角坐标系</p>
+<h2 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h2><blockquote>
+<p>设$A$是n阶矩阵，满足<br>$AA^T=A^TA=E$,<br>则称$A$为正交矩阵</p>
+</blockquote>
+<h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
+<li><p>$A$是正交矩阵$\;\Leftrightarrow\;A^T=A^{-1}$</p>
+</li>
+<li><p>$A=(\alpha_1\;\alpha_2\;\alpha_3)$是正交矩阵<br>$\quad\Leftrightarrow\;\alpha_1,\alpha_2,\alpha_3\;$都是单位向量，且两两正交<br><br>证：<br>$<br>\begin{aligned}<br>A^TA<br>&amp;=\begin{bmatrix}<br> \alpha_1^T\\<br> \alpha_2^T\\<br> \alpha_3^T<br>\end{bmatrix}<br>[\alpha_1\;\alpha_2\;\alpha_3]\\<br>&amp;=\begin{bmatrix}    \alpha_1^T\alpha_1&amp;\alpha_1^T\alpha_2&amp;\alpha_1^T\alpha_3\\    \alpha_2^T\alpha_1&amp;\alpha_2^T\alpha_2&amp;\alpha_2^T\alpha_3\\<br>\alpha_3^T\alpha_1&amp;\alpha_3^T\alpha_2&amp;\alpha_3^T\alpha_3<br>\end{bmatrix}<br>=\begin{bmatrix}<br> 1&amp;0&amp;0\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;1<br>\end{bmatrix}\\<br>&amp;=E<br>\end{aligned}<br>$<br><br></p>
+</li>
+<li>如果$A$是正交矩阵，则$|A|$=1或-1<br><br></li>
+<li>若$A,B$都是正交矩阵，则$AB$也是正交矩阵<br><br>证：<br>$(AB)(AB)^T=A(BB^T)A^T=AA^T=E$</li>
+</ol>
+<h3 id="规范正交基"><a href="#规范正交基" class="headerlink" title="规范正交基"></a>规范正交基</h3><p>设$e_1,e_2,\cdots,e_n$是向量空间的一个基，<br><br>如果<br>$\qquad[e_i,e_j]=<br>\begin{cases}<br>    1\qquad i=j\\<br>     0\qquad i\neq j<br>\end{cases}<br>$</p>
+<p>$\qquad$则称$e_1,e_2,\cdots,e_n$为规范正交基。</p>
+<p><strong>例</strong></p>
+<p>$<br>A=\begin{bmatrix}<br>    1&amp;0&amp;0&amp;-2\\<br>    0&amp;1&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
+<p>$Ax=0\;$基础解系</p>
+<p>$\eta_1=(0,0,1,0)^T,\eta_2=(2,-1,0,1)^T$</p>
+<p>解空间的基：$\eta_1,\eta_2$</p>
+<p>解空间维数：2</p>
+<p>规范正交基：</p>
+<p>$(0,0,1,0)^T,{\large\frac{1}{\sqrt{6}}}(2,-1,0,1)^T$</p>
+<h1 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h1><blockquote>
+<p>设A是n阶矩阵，<span class="mark">$\alpha$是n维非0列向量</span>，满足<br>$\qquad A\alpha=\lambda\alpha$<br><br>则称:<br>$\lambda$是矩阵$A$的特征值<br><br>$\alpha$是矩阵$A$对应于特征值$\lambda$的特征向量.</p>
+</blockquote>
+<p>$A\alpha=\lambda\alpha\;$这个等式个人直观理解：特征向量$\alpha$经过A矩阵变换后等于特征向量$\alpha$的$\lambda$倍</p>
+<ol>
+<li>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br><br>$\quad$那么$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$<br><br></li>
+<li>若$\alpha_1,\alpha_2$都是矩阵$A$关于特征值$\lambda$的特征向量，<br><br>则$\;\forall k_1,k_2$，当$k_1\alpha_1+k_2\alpha_2\neq0$时，<br>$k_1\alpha_1+k_2\alpha_2$仍是$A$对应于$\lambda$的特征向量<br><br>由$A\alpha_1=\lambda\alpha_1,A\alpha_2=\lambda\alpha_2$<br><br><br>$<br>\begin{aligned}<br>得到： A(k_1\alpha_1+k_2\alpha_2)<br>&amp;=k_1A\alpha_1+k_2A\alpha_2\\<br>&amp;=k_1(\lambda\alpha_1)+k_2(\lambda\alpha_2)\\<br>&amp;=\lambda(k_1\alpha_1+k_2\alpha_2)\\<br>\end{aligned}<br>$</li>
+</ol>
+<h2 id="求解步骤和原理"><a href="#求解步骤和原理" class="headerlink" title="求解步骤和原理"></a>求解步骤和原理</h2><p>$\quad A\alpha=\lambda\alpha$</p>
+<p>$\Rightarrow(\lambda E-A)\alpha=0$</p>
+<p>$\quad\alpha\;$是$\;(\lambda E-A)x=0$的非零解</p>
+<p>$\rightarrow\;|\lambda E-A|=0$</p>
+<p>(1) 由$\;|\lambda E-A|=0\;$求特征值$\;\lambda_i$<br><br>$\quad$共n个(含重根)<br><br>(2) 由$\;(\lambda_iE-A)x=0\;$求基础解系<br><br>$\quad$即$\lambda_i$线性无关的特征向量</p>
+<p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
+<p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$<br><br><br>$\therefore\;A的特征值为\;1,\pm6$<br><br></p>
+<ol>
+<li>当$\;\lambda=1\;时,由\;(E-A)x=0$<br><br>$E-A=\begin{bmatrix}<br> 1&amp;-2&amp;2\\<br> -2&amp;-3&amp;-4\\<br> 2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;0&amp;2\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br><br>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br></li>
+<li>当$\;\lambda=6\;时，由(6E-A)x=0$<br><br>$6E-A=\begin{bmatrix}<br> 6&amp;-2&amp;2\\<br> -2&amp;2&amp;-4\\<br> 2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br> 0&amp;0&amp;0\\<br> -2&amp;2&amp;4\\<br> 2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;-1&amp;2\\<br> 0&amp;-2&amp;5\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br><br>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br></li>
+<li>当$\lambda=-6时，由(-6E-A)x=0$<br><br>$-6E-A=\begin{bmatrix}<br> -6&amp;-2&amp;2\\<br> -2&amp;-10&amp;-4\\<br> 2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;1&amp;0\\<br> 0&amp;2&amp;1\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</li>
+</ol>
+<h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>设$A$是n阶矩阵<br><br>(1)$\;\sum\lambda_i=\sum {\large a}_{ii}=trA\;\rightarrow\;tr为矩阵的迹$<br><br>(2)$\;\prod\lambda_i=|A|$<br><br></li>
+<li>$A$可逆$\;\Leftrightarrow\;$$A$的n个特征值全不为0<br><br></li>
+<li>矩阵$A$对应于不同特征值的特征向量的特征向量是线性无关的<br><br><strong>证</strong>:$\quad$设$\lambda_1,\lambda_2,\cdots,\lambda_s$是矩阵$A$的S个不同的特征值，对应的特征向量分别是$\alpha_1,\alpha_2,\cdots,\alpha_s$<br><br>$\;$用数学归纳法<br><br>$\;那么,当S=1时，因\alpha_1\neq0,命题正确$<br><br>$\;假设S=k-1(k\geqslant2)时,结论成立$<br><br>$\;$当$S=k$时，<br>$x_1\alpha_1+x_2\alpha_2+\cdots+x_{k-1}\alpha_{k-1}+x_k\alpha_k=0\qquad(1)$<br><br>$\;用A左乘上式，有$<br><br>$\;x_1\lambda_1\alpha_1+x_2\lambda_2\alpha_2+\cdots+x_{k-1}\lambda_{k-1}\alpha_{k-1}+x_k\lambda_k\alpha_k=0\quad(2)$<br><br>$\;用\lambda_k乘(1)又有$<br><br>$\;x_1\lambda_k\alpha_1+x_2\lambda_k\alpha_2+\cdots+x_{k-1}\lambda_k\alpha_{k-1}+x_k\lambda_k\alpha_k=0\;\,\,\quad(3)$<br><br>$\;$(2)-(3):<br><br>$\;x_1(\lambda_1-\lambda_k)\alpha_1+x_2(\lambda_2-\lambda_k)\alpha_2+\cdots+x_{k-1}(\lambda_{k-1}-\lambda_k)\alpha_{k-1}=0$<br><br>$\;又因为\alpha_1,\alpha_2,\cdots,\alpha_{k-1}线性无关$<br><br>$\;所以x_1(\lambda_1-\lambda_k)=0,x_2(\lambda_2-\lambda_k)=0,\cdots,x_{k-1}(\lambda_{k-1}-\lambda_k)=0$<br><br>$\;因特征值\lambda_i\neq\lambda_j,从而\\<br>\quad x_1=0,x_2=0,\cdots,x_{k-1}=0$<br><br>$\;代入(1)式，得\\<br>\qquad x_k\alpha_k=0$<br><br>$\;因\;\alpha\neq0,\quad得\;x_k=0$<br><br>$\;故\alpha_1,\alpha_2,\cdots,\alpha_k线性无关$<br><br>所以当$S=k$时，命题成立<br><br>由数学归纳法可知对一切自然数，命题均成立。<br><br></li>
+<li>若$\;A\alpha=\lambda\alpha,\alpha\neq0$<br><br>$(A+kE)\alpha=(\lambda+k)\alpha$<br><br></li>
+<li>由$\;A\alpha=\lambda\alpha$<br><br>有$\;A^2\alpha=A(\lambda\alpha)=\lambda A\alpha=\lambda^2\alpha$<br><br>$\;\Rightarrow\;A^n\alpha^n=\lambda^n\alpha$<br><br></li>
+<li>由$A\alpha=\lambda\alpha,A$可逆<br><br>可得到$A^{-1}\alpha=\displaystyle\frac{1}{\lambda}\alpha$<br><br>$\qquad\quad A^*\alpha=\displaystyle\frac{|A|}{\lambda}\alpha$</li>
+</ol>
+<h1 id="相似矩阵"><a href="#相似矩阵" class="headerlink" title="相似矩阵"></a>相似矩阵</h1><blockquote>
+<p>设$A,B$都是n阶矩阵，如果存在可逆矩阵P,使得<br><br>$\qquad P^{-1}AP=B$<br><br>就称矩阵$A$相似于矩阵$B$，$B$是$A$的相似矩阵<br><br>记成$A\sim B$</p>
+</blockquote>
+<h2 id="性质-3"><a href="#性质-3" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>$A\sim B$<br><br></li>
+<li>如果$A\sim B$,则$B\sim A$.<br><br></li>
+<li>如果$A\sim B,B\sim C$则$\;A\sim C$.<br><br></li>
+<li>如果$A\sim B$,那么<br><br>(1) $A^2\sim B^2$<br><br>(2) $A+kE\sim B+kE$<br><br>(3) 如果$A$可逆，则$\;A^{-1}\sim B^{-1}$<br><br>(4)如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</li>
+</ol>
+<h2 id="两个矩阵相似的必要条件"><a href="#两个矩阵相似的必要条件" class="headerlink" title="两个矩阵相似的必要条件"></a>两个矩阵相似的必要条件</h2><p>如果$A\sim B$,</p>
+<ol>
+<li>$|\lambda E-A|=|\lambda E-B|\;\Rightarrow\lambda_A=\lambda_B$<br><br></li>
+<li>$r(A)=r(B)$<br><br></li>
+<li>$|A|=|B|$<br><br></li>
+<li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
+</ol>
+<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land$$\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
+<p><strong>证</strong>:下面以三阶矩阵为例</p>
+<p>首先将$P$按列分块<br><br>得到<br>$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即<br>$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$</p>
+<p>则有</p>
+<p>$(A\alpha_1,A\alpha_2,A\alpha_3)$</p>
+<p>$\begin{aligned}<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
+<p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
+<h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
+<p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
+<h1 id="实对称矩阵"><a href="#实对称矩阵" class="headerlink" title="实对称矩阵"></a>实对称矩阵</h1><blockquote>
+<p>若$A$矩阵的元素都是实数，且A的转置等于它本身，则称$A$为是对称矩阵</p>
+</blockquote>
+<h2 id="性质-4"><a href="#性质-4" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>若$A$是n阶实对称矩阵,则$A$的特征值都是<strong>实数</strong><br><br></li>
+<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong> 2：<br>$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
+<li>对任意一个n阶实对称矩阵$A$,总存在n阶 <strong>正交矩阵</strong> $\;Q$，使得<br><br>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。<br><br></li>
+<li>n=1成立<br><br></li>
+<li>假设n-1成立<br><br>那么n时<br><br>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$<br><br>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$<br><br>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$<br><br>$\qquad\qquad\qquad\cdots$<br><br>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$<br><br>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br><br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)<br><br>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$<br><br>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$<br><br>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$<br>然后令Q_2=<br>\begin{bmatrix}<br> 1&amp;0\\<br> 0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$<br><br>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$<br><br><br>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$<br><br>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$<br><br>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>即n时结论成立<br><br>那么可得到结论成立<br>   </li>
+</ol>
+<h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
+<li>求特征值  </li>
+<li>求特征向量  </li>
+<li>改造特征向量  <ul>
+<li>$\lambda_i\neq\lambda_j$只需单位化  </li>
+<li>$\lambda_i=\lambda_j$<ul>
+<li>$[\alpha_i,\alpha_j]=0$只需单位化  </li>
+<li>$[\alpha_i,\alpha_j] \neq0$施密特正交化</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
+<p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -4745,9 +4746,7 @@ array([[ 0,  0,  0,  0],
   <entry>
     <title>CSS基本结束</title>
     <url>/2021/07/23/CSS%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9D%9F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
-<p>努力去走出自己的路<br>花了两天的时间，在这里记录一下。这两天完成了一个购物网站的主页，列表页，注册页的制作，但是这只是初步完成，搭建了基本框架，完成了样式优化，这里只用了html5和CSS对网页进行初步搭建，还不是真正意义上的网页，后面还需要学习JavaScript进行进一步的优化，还有很长的路要走，还得去慢慢积累，继续加油吧……</p>
-</blockquote>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>花了两天的时间，在这里记录一下。这两天完成了一个购物网站的主页，列表页，注册页的制作，但是这只是初步完成，搭建了基本框架，完成了样式优化，这里只用了html5和CSS对网页进行初步搭建，还不是真正意义上的网页，后面还需要学习JavaScript进行进一步的优化，CSS基本结束，但是还有很多细节需要去了解和积累，之后的JavaScript vue……要学有的东西很多很多，很长的路要走，慢慢积累，继续加油吧……</p>
 ]]></content>
       <categories>
         <category>杂记</category>
@@ -4782,94 +4781,6 @@ array([[ 0,  0,  0,  0],
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>pandas图(索引)</title>
-    <url>/2021/06/29/pandas%E5%9B%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><pre class="mermaid">graph LR
-classDef A fill: #C0D9D9
-classDef important fill: #FF0000 
-A(pandas):::A --- B(Series)
-B --- B1(可看作一列数据组成的数据集)
-B --- B2("三种创建方式,<br>创建语法为s = pd.Series(data,index=index),<br>可以不指定索引，将是默认从0开始")
-B2 --- B21(1.从列表创建Seies)
-B2 --- B22("2.从Ndarray(数组)创建Seris")
-B2 --- B23(3.从字典创建Series) 
-B --- B3(基本操作:增,删,改,查)
-B3 --- B31("修改索引 s1.index = ['index'] 索引数必须一致")
-B3 --- B32("纵向拼接 s2.append(s1)")
-B3 --- B33("按指定索引删除元素 s3.drop('e')")
-B3 --- B34("修改,查找,切片指定索引元素 s3['A']=6")
-B --- B4("Series运算(加,减,乘,除)<br>广播性质")
-B4:::important --- B41(加法)
-B41 --- B411("s4.add(s3)") & B412("s4+s3")
-B4 --- B42(减法)
-B42 --- B421("s4.sub(s3)") & B422("s4-s3")
-B4 --- B43(乘法)
-B43 --- B431("s4.mul(s3)") & B432("s4*s3")
-B4 --- B44(除法)
-B44 --- B441("s4.div(s3)") & B442("s4/s3")
-B4 --- B45(详解与区别)
-B45 --- B451(加减乘除法运算是按照索引对应计算,<br>若果索引不同,则填充为NaN)  
-B45 --- B452(两个ndarray执行的是element-wise的运算<br>而不是矩阵乘法的运算,矩阵乘法运算时需要维度之间严格匹配)
-B --- B5(Series数理分析)
-B5 --- B51(求和,最大值,最小值)
-B51 --- B511("s4.sum()")
-B51 --- B512("s4.max()")
-B51 --- B513("s4.min()")
-B5 --- B52("平均值  s3.mean()")
-B5 --- B53("将字符串转化为小写字母    string.str.lower()")
-B5 --- B54("将字符串转化为大写字母    string.str.upper()")
-C(DataFrame) --- A
-C1(可存放多列数据) --- C
-C2(创建的两种方式) --- C
-C21(通过numpy数组创建) --- C2
-C22(通过字典数组创建) --- C2
-C3(DataFrame 基本操作) --- C
-C31(浏览DataFrame部分数据) --- C3
-C311("df1.head() 预览DataFrame的前几行数据") 
-C312("df1.tial() 查看DataFrame的后几行数据")
-C32(查询DtaFrame字段) --- C3
-C321(df1.index 查看DataFrame的索引) --- C32
-C322(df1.columns 查看DataFrame的列名) --- C32
-C323("对DataFrame通过标签查询(单列)") --- C32
-C3231("df1['age']") --- C323
-C3232(df2.age) --- C323
-C324("df1[['age','name']] 对DataFrame通过标签查询(多列)")--- C32
-C325("df1.iloc[1:3] 对DataFrame通过位置查询") --- C32
-C326("浅拷贝 df1.copy() DataFrame副本拷贝") --- C323
-C33(DataFrame文件操作):::important --- C3
-C331("df1.to_csv('test.csv') CSV文件写入") --- C33
-C332("pd.read_csv('test.csv')" CSV文件读取) ---C33
-C333("df1.to_excel('test.xlsx',sheet_name-'Shhet1') EXCEL写入操作")
-C334("pd.read_excel('test.xlsx','Sheet1',index_col=None,na_values'['NA']) EXCEL读取操作")
-C4(DataFrame统计分析):::important --- C
-C41(df1.values 查看DataFrame的数值) --- C4
-C42("df1.describe 对DataFrame的描述性统计") --- C4
-C43(df1.T 转置操作) --- C4
-C44("df1.sort_values(by='age') 对DataFrame进行按列排序") ---C4
-C45(对DataFrame的值进行修改) --- C4
-C451("df1.iat[1,0]=2 根据DataFrame的下标值进行修改") ---C45
-C452("df1.loc['f','age']=1.5 根据DataFrame的标签对数据进行修改")---C45
-C46("df1['age'].sum() 对任意列做求和操作")---C4
-C47("df1.mean() 求平均值") --- C4
-C48(对缺失值补充) --- C4
-C481("df2.fillna(value=3)") --- C48
-C482("df2.dropna() 删除缺失值") --- C48
-C483("df2['xx']=df4['xx'].fillna(df['xx'].median()) 取平均") --- C48
-C484("df2.fillna(method='ffill') 用前面的值插值") --- C48
-C485("df2.fillna(method='ffil',limit=1,axis=1)") --- C48
-C486("data.fillna({'xx':2321}) 用字典来替换") --- C48
-C487(还有很多方法,比如三次样条,拟合等) --- C48
-click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，大体的了解其整体需要学习的方面，后面会针对思维导图里面的各方面进行细化学习，并让思维导图以的索引形式连接各部分的学习内容</p>
-]]></content>
-      <categories>
-        <category>python库</category>
-      </categories>
-      <tags>
-        <tag>python库</tag>
-        <tag>pandas</tag>
-      </tags>
   </entry>
   <entry>
     <title>一些关于hexo的next主题的适配问题</title>
@@ -5102,6 +5013,94 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       <tags>
         <tag>前端</tag>
         <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pandas图(索引)</title>
+    <url>/2021/06/29/pandas%E5%9B%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><pre class="mermaid">graph LR
+classDef A fill: #C0D9D9
+classDef important fill: #FF0000 
+A(pandas):::A --- B(Series)
+B --- B1(可看作一列数据组成的数据集)
+B --- B2("三种创建方式,<br>创建语法为s = pd.Series(data,index=index),<br>可以不指定索引，将是默认从0开始")
+B2 --- B21(1.从列表创建Seies)
+B2 --- B22("2.从Ndarray(数组)创建Seris")
+B2 --- B23(3.从字典创建Series) 
+B --- B3(基本操作:增,删,改,查)
+B3 --- B31("修改索引 s1.index = ['index'] 索引数必须一致")
+B3 --- B32("纵向拼接 s2.append(s1)")
+B3 --- B33("按指定索引删除元素 s3.drop('e')")
+B3 --- B34("修改,查找,切片指定索引元素 s3['A']=6")
+B --- B4("Series运算(加,减,乘,除)<br>广播性质")
+B4:::important --- B41(加法)
+B41 --- B411("s4.add(s3)") & B412("s4+s3")
+B4 --- B42(减法)
+B42 --- B421("s4.sub(s3)") & B422("s4-s3")
+B4 --- B43(乘法)
+B43 --- B431("s4.mul(s3)") & B432("s4*s3")
+B4 --- B44(除法)
+B44 --- B441("s4.div(s3)") & B442("s4/s3")
+B4 --- B45(详解与区别)
+B45 --- B451(加减乘除法运算是按照索引对应计算,<br>若果索引不同,则填充为NaN)  
+B45 --- B452(两个ndarray执行的是element-wise的运算<br>而不是矩阵乘法的运算,矩阵乘法运算时需要维度之间严格匹配)
+B --- B5(Series数理分析)
+B5 --- B51(求和,最大值,最小值)
+B51 --- B511("s4.sum()")
+B51 --- B512("s4.max()")
+B51 --- B513("s4.min()")
+B5 --- B52("平均值  s3.mean()")
+B5 --- B53("将字符串转化为小写字母    string.str.lower()")
+B5 --- B54("将字符串转化为大写字母    string.str.upper()")
+C(DataFrame) --- A
+C1(可存放多列数据) --- C
+C2(创建的两种方式) --- C
+C21(通过numpy数组创建) --- C2
+C22(通过字典数组创建) --- C2
+C3(DataFrame 基本操作) --- C
+C31(浏览DataFrame部分数据) --- C3
+C311("df1.head() 预览DataFrame的前几行数据") 
+C312("df1.tial() 查看DataFrame的后几行数据")
+C32(查询DtaFrame字段) --- C3
+C321(df1.index 查看DataFrame的索引) --- C32
+C322(df1.columns 查看DataFrame的列名) --- C32
+C323("对DataFrame通过标签查询(单列)") --- C32
+C3231("df1['age']") --- C323
+C3232(df2.age) --- C323
+C324("df1[['age','name']] 对DataFrame通过标签查询(多列)")--- C32
+C325("df1.iloc[1:3] 对DataFrame通过位置查询") --- C32
+C326("浅拷贝 df1.copy() DataFrame副本拷贝") --- C323
+C33(DataFrame文件操作):::important --- C3
+C331("df1.to_csv('test.csv') CSV文件写入") --- C33
+C332("pd.read_csv('test.csv')" CSV文件读取) ---C33
+C333("df1.to_excel('test.xlsx',sheet_name-'Shhet1') EXCEL写入操作")
+C334("pd.read_excel('test.xlsx','Sheet1',index_col=None,na_values'['NA']) EXCEL读取操作")
+C4(DataFrame统计分析):::important --- C
+C41(df1.values 查看DataFrame的数值) --- C4
+C42("df1.describe 对DataFrame的描述性统计") --- C4
+C43(df1.T 转置操作) --- C4
+C44("df1.sort_values(by='age') 对DataFrame进行按列排序") ---C4
+C45(对DataFrame的值进行修改) --- C4
+C451("df1.iat[1,0]=2 根据DataFrame的下标值进行修改") ---C45
+C452("df1.loc['f','age']=1.5 根据DataFrame的标签对数据进行修改")---C45
+C46("df1['age'].sum() 对任意列做求和操作")---C4
+C47("df1.mean() 求平均值") --- C4
+C48(对缺失值补充) --- C4
+C481("df2.fillna(value=3)") --- C48
+C482("df2.dropna() 删除缺失值") --- C48
+C483("df2['xx']=df4['xx'].fillna(df['xx'].median()) 取平均") --- C48
+C484("df2.fillna(method='ffill') 用前面的值插值") --- C48
+C485("df2.fillna(method='ffil',limit=1,axis=1)") --- C48
+C486("data.fillna({'xx':2321}) 用字典来替换") --- C48
+C487(还有很多方法,比如三次样条,拟合等) --- C48
+click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，大体的了解其整体需要学习的方面，后面会针对思维导图里面的各方面进行细化学习，并让思维导图以的索引形式连接各部分的学习内容</p>
+]]></content>
+      <categories>
+        <category>python库</category>
+      </categories>
+      <tags>
+        <tag>python库</tag>
+        <tag>pandas</tag>
       </tags>
   </entry>
 </search>
