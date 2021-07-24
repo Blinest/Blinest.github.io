@@ -2026,7 +2026,199 @@ False
 <p><strong>2.花费时间</strong>：单位 s（必须）</p>
 <p><strong>3.曲线运动</strong>：默认是ease（可省略）</p>
 <p><strong>4.何时开始</strong>：单位 s（必须）可以设置延迟出发时间 默认是0s（可省略）</p>
-<h1 id="2D转换"><a href="#2D转换" class="headerlink" title="2D转换"></a>2D转换</h1><p><strong>转换（transform）</strong> 可以实现元素的位移、旋转、缩放等效果，转换可以简单理解为变形</p>
+<h1 id="CSS3-2D转换"><a href="#CSS3-2D转换" class="headerlink" title="CSS3 2D转换"></a>CSS3 2D转换</h1><blockquote>
+<p><strong>转换（transform）</strong> 可以实现元素的位移、旋转、缩放等效果，转换可以简单理解为变形</p>
+<h2 id="二维坐标系"><a href="#二维坐标系" class="headerlink" title="二维坐标系"></a>二维坐标系</h2><p>2D转换是改变标签在二维平面上的位置和形状的一种技术</p>
+<h2 id="2D-转换之移动-translate"><a href="#2D-转换之移动-translate" class="headerlink" title="2D 转换之移动 translate"></a>2D 转换之移动 translate</h2><p>2D移动是2D转换里面的一种功能，可以改变元素在页面中的位置，类似 <strong>定位</strong></p>
+</blockquote>
+<p>1.语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate</span>(x,y)或者分开写</span><br><span class="line">transform: <span class="built_in">translateX</span>(n)</span><br><span class="line">transform: <span class="built_in">translateY</span>(n)</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.重点</strong></p>
+<ul>
+<li>定义2D转换中的移动，沿着X和Y轴移动元素</li>
+<li>translate最大的优点：不会影响到其他元素的位置</li>
+<li>translate中的百分比单位是相对于自身元素的translate:(50%,50%);</li>
+<li>对行内元素没有效果</li>
+</ul>
+<h2 id="2D-转换之旋转-rotate"><a href="#2D-转换之旋转-rotate" class="headerlink" title="2D 转换之旋转 rotate"></a>2D 转换之旋转 rotate</h2><blockquote>
+<p>2D旋转指的是让元素在2维平面内顺时针旋转或者逆时针旋转</p>
+</blockquote>
+<p>1.语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">transform</span>:<span class="built_in">rotate</span>(度数)</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.重点</strong></p>
+<ul>
+<li>rotate里面跟度数，单位是deg 比如 rotate(45deg)</li>
+<li>角度为正时，顺时针，负时，为逆时针</li>
+<li>默认旋转的中心点是元素的中心点</li>
+</ul>
+<h2 id="2D-转换中心点-transform-origin"><a href="#2D-转换中心点-transform-origin" class="headerlink" title="2D 转换中心点 transform-origin"></a>2D 转换中心点 transform-origin</h2><p>1.语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">transform-origin</span>: x y;</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.重点</strong></p>
+<ul>
+<li>注意后面参数x和y用空格隔开</li>
+<li>x y默认转换的中心点是元素元素的中心点(50% 50%)</li>
+<li>还可以给x y 设置 像素 或者 方位名词 (top bottom left right cneter)</li>
+</ul>
+<h2 id="2D转换之缩放-scale"><a href="#2D转换之缩放-scale" class="headerlink" title="2D转换之缩放 scale"></a>2D转换之缩放 scale</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">transform</span>:<span class="built_in">scale</span>(x,y);</span><br></pre></td></tr></table></figure>
+<p><strong>2.注意</strong></p>
+<ul>
+<li>注意其中的x和y用逗号分隔</li>
+<li>transform:scale(1,1)：宽和高都放大一倍，相当于没放大</li>
+<li>transform:scale(2,2)：宽和高都放大2倍</li>
+<li>transform:scale(2)：只写一个参数，第二个参数则和第一个参数一样，相当于scale(2,2)</li>
+<li>transform缩放最大的优势：可以设置转换 <strong>中心点</strong> 缩放，默认为中心点缩放的，而且 <strong>不影响其他盒子</strong></li>
+</ul>
+<h2 id="2D转换的综合写法"><a href="#2D转换的综合写法" class="headerlink" title="2D转换的综合写法"></a>2D转换的综合写法</h2><p><strong>注意:</strong><br>1.同时使用多个转换，其格式为：transform:translate() rotate() scale()…等，</p>
+<p>2.其顺序会影响转换的效果。(先旋转会改变坐标轴方向)</p>
+<p><strong>3.当我们同时有位移和其他属性的时候，记得要将位移放到最前</strong></p>
+<h1 id="CSS3-动画"><a href="#CSS3-动画" class="headerlink" title="CSS3 动画"></a>CSS3 动画</h1><blockquote>
+<p><strong>动画</strong> 可通过设置多个节点来精确控制一个或一组动画，常用来实现复杂的动画效果。</p>
+</blockquote>
+<p>相比较过渡，动画可以实现更多变化，更多控制，连续自动播放等效果</p>
+<h2 id="动画的基本使用"><a href="#动画的基本使用" class="headerlink" title="动画的基本使用"></a>动画的基本使用</h2><p>制作动画分为两步：</p>
+<p>1.先定义动画</p>
+<p>2.再使用（调用）动画</p>
+<p><strong>1.用keyframes定义动画（类似定义类选择器）</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>动画序列</strong></p>
+<ul>
+<li>0%是动画的 <strong>开始</strong>,100%是动画的 <strong>完成</strong></li>
+<li>在 <strong>@keyframes</strong> 中规定某项CSS样式，就能创建由当前样式逐渐改为新样式的动画效果</li>
+<li>动画是使元素从一种样式逐渐变化为另一种样式的效果。可以改变任意多的 <strong>次数</strong></li>
+<li>使用百分比来规定变化发生的时间，或用关键词”<strong>from</strong>“和”<strong>to</strong>“，等同于 <strong>0%</strong> 和 <strong>100%</strong></li>
+</ul>
+<p><strong>2.元素使用动画</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: aqua;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">    <span class="comment">/* 调用动画 */</span></span><br><span class="line">    <span class="attribute">animation-name</span>: 动画名称;</span><br><span class="line">    <span class="comment">/* 持续时间 */</span></span><br><span class="line">    <span class="attribute">animation-duration</span>: 持续时间;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="动画常用属性"><a href="#动画常用属性" class="headerlink" title="动画常用属性"></a>动画常用属性</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">@keyframes</td>
+<td style="text-align:left">规定动画</td>
+</tr>
+<tr>
+<td style="text-align:left">animation</td>
+<td style="text-align:left">所有动画属性的简写属性，除了animathion-play-state属性</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-name</td>
+<td style="text-align:left">规定@keyframes动画的名称（必须）</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-duration</td>
+<td style="text-align:left">规定动画完成一个周期所花费的秒或毫秒，默认是0。（必须）</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-timing-funciton</td>
+<td style="text-align:left">规定动画的速度曲线，默认”ease”</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-delay</td>
+<td style="text-align:left">规定动画何时开始，默认是0</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-iteration-count</td>
+<td style="text-align:left">规定动画被播放的次数，默认是1，还有infinite</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-direction</td>
+<td style="text-align:left">规定动画是否在下一个周期逆向播放，默认是”normal”,alternate逆播放</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-play-state</td>
+<td style="text-align:left">规定动画是否正在运行或暂停，默认是”running”,还有”pause”</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-fill-mode</td>
+<td style="text-align:left">规定动画结束后状态，保持forwards回到起始backwards</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="动画简写属性"><a href="#动画简写属性" class="headerlink" title="动画简写属性"></a>动画简写属性</h2><p>animation: 动画名称 持续时间 曲线运动 何时开始 播放次数 是否反方向 动画起始或者结束的状态<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">animation</span>: myfirst <span class="number">5s</span> linear <span class="number">2s</span> infinite alternate;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>简写属性里面不包含 <strong>animation-play-state</strong></li>
+<li>暂停动画:<strong>animation-play-state:paused;</strong> 经常和鼠标经过等其他搭配使用</li>
+<li>想要动画走回来，而不是直接跳回来：animation-diraction:alternate</li>
+<li>盒子动画结束后，停在结束位置： animation-fill-mode: forwards</li>
+</ul>
+<h2 id="速度曲线细节"><a href="#速度曲线细节" class="headerlink" title="速度曲线细节"></a>速度曲线细节</h2><p>animation-timing-function:规定动画的速度曲线，默认是”ease”</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">linear</td>
+<td style="text-align:left">动画从头到尾的速度是相同的。匀速</td>
+</tr>
+<tr>
+<td style="text-align:left">ease</td>
+<td style="text-align:left">默认。动画以低速开始，然后加快，在结束前变慢</td>
+</tr>
+<tr>
+<td style="text-align:left">ease-in</td>
+<td style="text-align:left">动画以低速开始</td>
+</tr>
+<tr>
+<td style="text-align:left">ease-out</td>
+<td style="text-align:left">动画以低速结束</td>
+</tr>
+<tr>
+<td style="text-align:left">ease-in-out</td>
+<td style="text-align:left">动画以低速开始和结束</td>
+</tr>
+<tr>
+<td style="text-align:left">steps()</td>
+<td style="text-align:left">指定了时间函数中的间隔数量（步长）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS3-3D转换"><a href="#CSS3-3D转换" class="headerlink" title="CSS3 3D转换"></a>CSS3 3D转换</h1><h2 id="三维坐标系"><a href="#三维坐标系" class="headerlink" title="三维坐标系"></a>三维坐标系</h2><ul>
+<li>x轴：向右为正</li>
+<li>y轴：向下为正</li>
+<li>z轴：向外为正</li>
+</ul>
+<h2 id="3D位移-translate3d"><a href="#3D位移-translate3d" class="headerlink" title="3D位移 translate3d"></a>3D位移 translate3d</h2><ul>
+<li>transform:translate3dX(100px):仅在X轴上移动</li>
+<li>transform:translate3dY(100px):仅在y轴上移动</li>
+<li>transform:translate3dZ(100px):仅在z轴上移动<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate3d</span>(x,y,z)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>xyz是不能有省略的，如果没有就写0</strong></p>
+<h2 id="透视-perspective"><a href="#透视-perspective" class="headerlink" title="透视 perspective"></a>透视 perspective</h2><ul>
+<li>如果想要在网页中产生3D效果需要透视</li>
+<li>模拟人的视觉位置，可认为安排一只眼去看</li>
+<li>透视我们也称为视距：视距就是人的眼睛到屏幕的距离</li>
+<li>距离视觉点越近的在电脑平面成像越大，越远成像越小</li>
+<li>透视的单位是像素</li>
+</ul>
+<p><strong>透视写在被观察元素的父盒子上面的</strong></p>
+<p><strong>d</strong>:就是视距，视距就是一个距离人的眼睛到屏幕的距离</p>
+<p><strong>z</strong>:就是z轴，物体距离屏幕的距离，z轴越大（正值）我们看到的物体越大。</p>
+<h2 id="3D旋转-rotate3d"><a href="#3D旋转-rotate3d" class="headerlink" title="3D旋转 rotate3d"></a>3D旋转 rotate3d</h2><ul>
+<li>transform:rotateX(45deg):沿 <strong>x轴正方向</strong> 旋转45°</li>
+<li>transform:rotateY(45deg):沿 <strong>y轴正方向</strong> 旋转45°</li>
+<li>transform:rotateZ(45deg):沿 <strong>z轴正方向</strong> 旋转45°</li>
+<li>transform:rotate3d(x,y,z,deg):（了解）</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">45deg</span>)</span><br><span class="line">这个是按照矢量叠加，也就是沿(<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>)旋转</span><br></pre></td></tr></table></figure>
+<p><strong>左手准则</strong></p>
+<ul>
+<li>左手的手拇指指向x轴的正方向</li>
+<li>其余手指的弯曲方向就是该元素沿x轴旋转的方向</li>
+</ul>
+<h2 id="3D呈现-transform-style"><a href="#3D呈现-transform-style" class="headerlink" title="3D呈现 transform-style"></a>3D呈现 transform-style</h2><ul>
+<li>子元素是否开启三维立体环境</li>
+<li>transform-style:flat 子元素不开启3d立体空间， 默认</li>
+<li>transform-style:preserve-3d; 子元素开启立体空间</li>
+<li>代码写给父级，但是影响的是子盒子</li>
+</ul>
 ]]></content>
       <categories>
         <category>CSS</category>
@@ -2255,6 +2447,78 @@ False
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2.算法(用C语言实现)</title>
+    <url>/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
+<ol>
+<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
+<li>若$r_1=0$,则$(a,b)=b$</li>
+<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
+<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
+</ol>
+<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
+<p>C语言代码实现</p>
+<p>1.while循环实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.函数嵌套实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
+<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
+<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
+</blockquote>
+<p>步骤：（正序为例）</p>
+<ol>
+<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
+<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
+<li>(小循环)针对前面未排序元素重复以上步骤。</li>
+<li>(大循环)重复上述步骤，直到排序完成</li>
+</ol>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
+<p>时间复杂度为$O(n)$</p>
+<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
+<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
+<p>时间复杂度为$O(n^2)$</p>
+<p>平均时间复杂度$O(n^2)$</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
+<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
+</blockquote>
+<p>简单来说就是从后面的数选出较小的数排到前面</p>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
+<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
+<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
+<ol>
+<li>从第一个元素开始，该元素可被认为已经排好序</li>
+<li>取出下一个元素，在已经排好的数组中向前扫描</li>
+<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
+<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
+<li>将取出元素插入到该空出的位置</li>
+<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
+<ol>
+<li>如果n=1,结束</li>
+<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
+<li>将两个子序列分别采用归并排序</li>
+<li>将两个排好序的子序列合并成一个最终的排序序列</li>
+</ol>
+<p>C语言实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -2516,78 +2780,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数据分析</tag>
         <tag>numpy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.算法(用C语言实现)</title>
-    <url>/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
-<ol>
-<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
-<li>若$r_1=0$,则$(a,b)=b$</li>
-<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
-<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
-</ol>
-<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
-<p>C语言代码实现</p>
-<p>1.while循环实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.函数嵌套实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
-<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
-<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
-</blockquote>
-<p>步骤：（正序为例）</p>
-<ol>
-<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
-<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
-<li>(小循环)针对前面未排序元素重复以上步骤。</li>
-<li>(大循环)重复上述步骤，直到排序完成</li>
-</ol>
-<p>C语言代码实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
-<p>时间复杂度为$O(n)$</p>
-<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
-<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
-<p>时间复杂度为$O(n^2)$</p>
-<p>平均时间复杂度$O(n^2)$</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
-<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
-</blockquote>
-<p>简单来说就是从后面的数选出较小的数排到前面</p>
-<p>C语言代码实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
-<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
-<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
-<ol>
-<li>从第一个元素开始，该元素可被认为已经排好序</li>
-<li>取出下一个元素，在已经排好的数组中向前扫描</li>
-<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
-<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
-<li>将取出元素插入到该空出的位置</li>
-<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</blockquote>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
-<ol>
-<li>如果n=1,结束</li>
-<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
-<li>将两个子序列分别采用归并排序</li>
-<li>将两个排好序的子序列合并成一个最终的排序序列</li>
-</ol>
-<p>C语言实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -3259,6 +3451,215 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>5.CSS盒子模型</title>
+    <url>/2021/07/20/5-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="盒子模型组成"><a href="#盒子模型组成" class="headerlink" title="盒子模型组成"></a>盒子模型组成</h2><p><strong>盒子模型：</strong> 就是把HTML页面中的 <strong>布局元素看作是一个矩形的盒子</strong>，或者说是一个盛装内容的容器。</p>
+<p>CSS盒子模型包括：边框，外边距，内边距，内容。</p>
+<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><div style="width: 300px; height: 200px; border:5px solid #CCE8CF;text-align: center;line-height: 300px"><span style="width: 150px; height: 100px; border:5px solid #CCE8CF;  display:inline-block;"></span></div>
+
+<p><strong>border</strong> 属性用于设置边框，三部分：边框宽度、样式、颜色</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-width</td>
+<td style="text-align:left">边框粗细，单位是px</td>
+</tr>
+<tr>
+<td style="text-align:left">border-style</td>
+<td style="text-align:left">边框样式</td>
+</tr>
+<tr>
+<td style="text-align:left">border-color</td>
+<td style="text-align:left">边框颜色</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="边框的复合写法"><a href="#边框的复合写法" class="headerlink" title="边框的复合写法"></a>边框的复合写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border</span>: border-width border-style border-color;</span><br></pre></td></tr></table></figure>
+<p><strong>没有顺序</strong>，但一般按照此顺序书写</p>
+<h3 id="边框的分开写法"><a href="#边框的分开写法" class="headerlink" title="边框的分开写法"></a>边框的分开写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-top</span>: <span class="number">1px</span> solid red;</span><br><span class="line">只设定上边框，其余的同理</span><br></pre></td></tr></table></figure>
+<h3 id="表格的细线边框"><a href="#表格的细线边框" class="headerlink" title="表格的细线边框"></a>表格的细线边框</h3><p><strong>border-collapse</strong> 属性控制浏览器绘制 <strong>表格边框</strong> 的方式，它控制相邻单元格的边框。</p>
+<p>语法：<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-collapse</span>: collapse;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>collapse是合并的意思</li>
+<li>border-collapse: collapse;表示相邻边框合并在一起</li>
+</ul>
+<h3 id="边框影响盒子的实际大小"><a href="#边框影响盒子的实际大小" class="headerlink" title="边框影响盒子的实际大小"></a>边框影响盒子的实际大小</h3><p>边框会额外增加盒子的实际大小</p>
+<p>解决方案:</p>
+<ol>
+<li>测量盒子大小的时候，不量边框</li>
+<li>如果测量的时候包含了边框，则需要盒子长宽减去边框宽度</li>
+</ol>
+<h2 id="内边距（padding）"><a href="#内边距（padding）" class="headerlink" title="内边距（padding）"></a>内边距（padding）</h2><p>padding属性用于设置内边距，即边框与内容之间的距离。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">padding-left</td>
+<td style="text-align:left">左内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-right</td>
+<td style="text-align:left">右内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-top</td>
+<td style="text-align:left">上内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-bottom</td>
+<td style="text-align:left">下内边距</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="padding复合写法"><a href="#padding复合写法" class="headerlink" title="padding复合写法"></a>padding复合写法</h3><p><strong>padding</strong> 属性可以有一到四个值</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值的个数</th>
+<th style="text-align:left">意思</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1个值 padding: 5px;</td>
+<td style="text-align:left">上下左右内边距都是5px</td>
+</tr>
+<tr>
+<td style="text-align:left">2个值 padding: 5px;10px;</td>
+<td style="text-align:left">上下内边距是5px，左右内边距是10px</td>
+</tr>
+<tr>
+<td style="text-align:left">3个值 padding: 5px 10px 20px;</td>
+<td style="text-align:left">上内边距是5px，左右内边距10px，下内边距是20px</td>
+</tr>
+<tr>
+<td style="text-align:left">4个值 padding: 5px 10px 20px 30px;</td>
+<td style="text-align:left">上是5px，右是10px，下是20px，左是30px（顺时针）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="padding影响盒子实际大小"><a href="#padding影响盒子实际大小" class="headerlink" title="padding影响盒子实际大小"></a>padding影响盒子实际大小</h3><p>如果盒子已经有了宽度和高度，也就是内容和边框有了距离，添加了内边距后就会撑大盒子</p>
+<p><strong>解决方法：</strong><br>如果保证盒子跟效果图大小保持一致，则 <strong>减去多出的内边距</strong> </p>
+<p><strong>如果盒子本身没有指定长宽属性，则padding不会撑开盒子</strong></p>
+<h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><p><strong>margin</strong> 属性用于设置外边距，即控制盒子和盒子之间的距离。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">margin-left</td>
+<td style="text-align:left">左外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-right</td>
+<td style="text-align:left">右外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-top</td>
+<td style="text-align:left">上外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-bottom</td>
+<td style="text-align:left">下外边距</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>简写方式和padding一样</strong></p>
+<p><strong>1.块级盒子水平居中</strong><br>外边距可以让块级盒子 <strong>水平居中</strong>，但是必须满足两个条件：</p>
+<ol>
+<li>盒子 <strong>必须制定宽度</strong></li>
+<li>盒子左右的外边距都设置为auto<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.header</span> &#123; <span class="attribute">width</span>: <span class="number">960px</span>; <span class="attribute">margin</span>:<span class="number">0</span> auto;&#125;</span><br></pre></td></tr></table></figure>
+常见的写法，以下三种都可以：</li>
+</ol>
+<ul>
+<li>margin-left: auto; margin-right: auto;</li>
+<li>margin: auto;</li>
+<li>margin: 0 auto;</li>
+</ul>
+<p><strong>注意:</strong><br>以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加 <strong>text-align: center</strong> 即可</p>
+<p><strong>2.嵌套块元素垂直外边距的塌陷</strong><br>对于两个嵌套关系（父子关系）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。</p>
+<p>解决方案：</p>
+<p>1.可以为父元素定义边框</p>
+<p>2.可以为父元素定义内边距</p>
+<p>3.可以为父元素添加 <strong>overflow: hidden</strong></p>
+<p>还有其他方法，比如浮动，固定，绝对定位的盒子不会有塌陷问题</p>
+<h2 id="清除内外边距"><a href="#清除内外边距" class="headerlink" title="清除内外边距"></a>清除内外边距</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>:行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距，但是转换为块级和行内块元素就可以了</p>
+<h1 id="圆角边框"><a href="#圆角边框" class="headerlink" title="圆角边框"></a>圆角边框</h1><p>border-radius 属性用于设置元素的外边框圆角<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: length;</span><br><span class="line">这里length可以用百分比表示，例如<span class="number">50%</span>表示是高度的<span class="number">50%</span></span><br></pre></td></tr></table></figure><br>radius 半径（圆的半径）原理：（椭）圆与边框的交集形成圆角效果</p>
+<p>border-radius可以跟多个数值1~4个</p>
+<h1 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h1><p><strong>box-shadow</strong> 属性为盒子添加阴影<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: h-shadow v-shadow blur spread color inset（outset是默认值不能写）;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">h-shadow</td>
+<td style="text-align:left">必须，水平阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td style="text-align:left">v-shadow</td>
+<td style="text-align:left">必须，垂直阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td style="text-align:left">blur</td>
+<td style="text-align:left">可选，模糊距离</td>
+</tr>
+<tr>
+<td style="text-align:left">spread</td>
+<td style="text-align:left">可选，阴影的尺寸</td>
+</tr>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">可选，阴影的颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">inset</td>
+<td style="text-align:left">可选，将外部阴影（outset）改为内部阴影</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意</strong><br>1.默认的是外阴影（outset）,但不可以写这个单词，否则阴影无效</p>
+<p>2.盒子阴影不占用空间，不会影响其他盒子排列</p>
+<h1 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h1><p>语法：<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-shadow</span>: h-shadow v-shadow blur color</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>4.n维向量</title>
     <url>/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
@@ -3505,215 +3906,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>5.CSS盒子模型</title>
-    <url>/2021/07/20/5-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="盒子模型组成"><a href="#盒子模型组成" class="headerlink" title="盒子模型组成"></a>盒子模型组成</h2><p><strong>盒子模型：</strong> 就是把HTML页面中的 <strong>布局元素看作是一个矩形的盒子</strong>，或者说是一个盛装内容的容器。</p>
-<p>CSS盒子模型包括：边框，外边距，内边距，内容。</p>
-<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><div style="width: 300px; height: 200px; border:5px solid #CCE8CF;text-align: center;line-height: 300px"><span style="width: 150px; height: 100px; border:5px solid #CCE8CF;  display:inline-block;"></span></div>
-
-<p><strong>border</strong> 属性用于设置边框，三部分：边框宽度、样式、颜色</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">border-width</td>
-<td style="text-align:left">边框粗细，单位是px</td>
-</tr>
-<tr>
-<td style="text-align:left">border-style</td>
-<td style="text-align:left">边框样式</td>
-</tr>
-<tr>
-<td style="text-align:left">border-color</td>
-<td style="text-align:left">边框颜色</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="边框的复合写法"><a href="#边框的复合写法" class="headerlink" title="边框的复合写法"></a>边框的复合写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border</span>: border-width border-style border-color;</span><br></pre></td></tr></table></figure>
-<p><strong>没有顺序</strong>，但一般按照此顺序书写</p>
-<h3 id="边框的分开写法"><a href="#边框的分开写法" class="headerlink" title="边框的分开写法"></a>边框的分开写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-top</span>: <span class="number">1px</span> solid red;</span><br><span class="line">只设定上边框，其余的同理</span><br></pre></td></tr></table></figure>
-<h3 id="表格的细线边框"><a href="#表格的细线边框" class="headerlink" title="表格的细线边框"></a>表格的细线边框</h3><p><strong>border-collapse</strong> 属性控制浏览器绘制 <strong>表格边框</strong> 的方式，它控制相邻单元格的边框。</p>
-<p>语法：<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-collapse</span>: collapse;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>collapse是合并的意思</li>
-<li>border-collapse: collapse;表示相邻边框合并在一起</li>
-</ul>
-<h3 id="边框影响盒子的实际大小"><a href="#边框影响盒子的实际大小" class="headerlink" title="边框影响盒子的实际大小"></a>边框影响盒子的实际大小</h3><p>边框会额外增加盒子的实际大小</p>
-<p>解决方案:</p>
-<ol>
-<li>测量盒子大小的时候，不量边框</li>
-<li>如果测量的时候包含了边框，则需要盒子长宽减去边框宽度</li>
-</ol>
-<h2 id="内边距（padding）"><a href="#内边距（padding）" class="headerlink" title="内边距（padding）"></a>内边距（padding）</h2><p>padding属性用于设置内边距，即边框与内容之间的距离。</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">padding-left</td>
-<td style="text-align:left">左内边距</td>
-</tr>
-<tr>
-<td style="text-align:left">padding-right</td>
-<td style="text-align:left">右内边距</td>
-</tr>
-<tr>
-<td style="text-align:left">padding-top</td>
-<td style="text-align:left">上内边距</td>
-</tr>
-<tr>
-<td style="text-align:left">padding-bottom</td>
-<td style="text-align:left">下内边距</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="padding复合写法"><a href="#padding复合写法" class="headerlink" title="padding复合写法"></a>padding复合写法</h3><p><strong>padding</strong> 属性可以有一到四个值</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">值的个数</th>
-<th style="text-align:left">意思</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1个值 padding: 5px;</td>
-<td style="text-align:left">上下左右内边距都是5px</td>
-</tr>
-<tr>
-<td style="text-align:left">2个值 padding: 5px;10px;</td>
-<td style="text-align:left">上下内边距是5px，左右内边距是10px</td>
-</tr>
-<tr>
-<td style="text-align:left">3个值 padding: 5px 10px 20px;</td>
-<td style="text-align:left">上内边距是5px，左右内边距10px，下内边距是20px</td>
-</tr>
-<tr>
-<td style="text-align:left">4个值 padding: 5px 10px 20px 30px;</td>
-<td style="text-align:left">上是5px，右是10px，下是20px，左是30px（顺时针）</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="padding影响盒子实际大小"><a href="#padding影响盒子实际大小" class="headerlink" title="padding影响盒子实际大小"></a>padding影响盒子实际大小</h3><p>如果盒子已经有了宽度和高度，也就是内容和边框有了距离，添加了内边距后就会撑大盒子</p>
-<p><strong>解决方法：</strong><br>如果保证盒子跟效果图大小保持一致，则 <strong>减去多出的内边距</strong> </p>
-<p><strong>如果盒子本身没有指定长宽属性，则padding不会撑开盒子</strong></p>
-<h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><p><strong>margin</strong> 属性用于设置外边距，即控制盒子和盒子之间的距离。</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">margin-left</td>
-<td style="text-align:left">左外边距</td>
-</tr>
-<tr>
-<td style="text-align:left">margin-right</td>
-<td style="text-align:left">右外边距</td>
-</tr>
-<tr>
-<td style="text-align:left">margin-top</td>
-<td style="text-align:left">上外边距</td>
-</tr>
-<tr>
-<td style="text-align:left">margin-bottom</td>
-<td style="text-align:left">下外边距</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>简写方式和padding一样</strong></p>
-<p><strong>1.块级盒子水平居中</strong><br>外边距可以让块级盒子 <strong>水平居中</strong>，但是必须满足两个条件：</p>
-<ol>
-<li>盒子 <strong>必须制定宽度</strong></li>
-<li>盒子左右的外边距都设置为auto<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.header</span> &#123; <span class="attribute">width</span>: <span class="number">960px</span>; <span class="attribute">margin</span>:<span class="number">0</span> auto;&#125;</span><br></pre></td></tr></table></figure>
-常见的写法，以下三种都可以：</li>
-</ol>
-<ul>
-<li>margin-left: auto; margin-right: auto;</li>
-<li>margin: auto;</li>
-<li>margin: 0 auto;</li>
-</ul>
-<p><strong>注意:</strong><br>以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加 <strong>text-align: center</strong> 即可</p>
-<p><strong>2.嵌套块元素垂直外边距的塌陷</strong><br>对于两个嵌套关系（父子关系）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。</p>
-<p>解决方案：</p>
-<p>1.可以为父元素定义边框</p>
-<p>2.可以为父元素定义内边距</p>
-<p>3.可以为父元素添加 <strong>overflow: hidden</strong></p>
-<p>还有其他方法，比如浮动，固定，绝对定位的盒子不会有塌陷问题</p>
-<h2 id="清除内外边距"><a href="#清除内外边距" class="headerlink" title="清除内外边距"></a>清除内外边距</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>:行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距，但是转换为块级和行内块元素就可以了</p>
-<h1 id="圆角边框"><a href="#圆角边框" class="headerlink" title="圆角边框"></a>圆角边框</h1><p>border-radius 属性用于设置元素的外边框圆角<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: length;</span><br><span class="line">这里length可以用百分比表示，例如<span class="number">50%</span>表示是高度的<span class="number">50%</span></span><br></pre></td></tr></table></figure><br>radius 半径（圆的半径）原理：（椭）圆与边框的交集形成圆角效果</p>
-<p>border-radius可以跟多个数值1~4个</p>
-<h1 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h1><p><strong>box-shadow</strong> 属性为盒子添加阴影<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: h-shadow v-shadow blur spread color inset（outset是默认值不能写）;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">h-shadow</td>
-<td style="text-align:left">必须，水平阴影的位置，允许负值</td>
-</tr>
-<tr>
-<td style="text-align:left">v-shadow</td>
-<td style="text-align:left">必须，垂直阴影的位置，允许负值</td>
-</tr>
-<tr>
-<td style="text-align:left">blur</td>
-<td style="text-align:left">可选，模糊距离</td>
-</tr>
-<tr>
-<td style="text-align:left">spread</td>
-<td style="text-align:left">可选，阴影的尺寸</td>
-</tr>
-<tr>
-<td style="text-align:left">color</td>
-<td style="text-align:left">可选，阴影的颜色</td>
-</tr>
-<tr>
-<td style="text-align:left">inset</td>
-<td style="text-align:left">可选，将外部阴影（outset）改为内部阴影</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意</strong><br>1.默认的是外阴影（outset）,但不可以写这个单词，否则阴影无效</p>
-<p>2.盒子阴影不占用空间，不会影响其他盒子排列</p>
-<h1 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h1><p>语法：<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-shadow</span>: h-shadow v-shadow blur color</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5.向量空间</title>
     <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
@@ -3851,137 +4043,147 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>6.线性代数（numpy）</title>
-    <url>/2021/07/05/6-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%EF%BC%88numpy%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<h2 id="矩阵乘法-三种"><a href="#矩阵乘法-三种" class="headerlink" title="矩阵乘法(三种)"></a>矩阵乘法(三种)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line">y = np.array([[<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>],[<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]])</span><br><span class="line">x.dot(y)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 2.</span></span><br><span class="line">np.dot(x,y) </span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 3.</span></span><br><span class="line">x@y</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><h2 id="np-linalg"><a href="#np-linalg" class="headerlink" title="np.linalg"></a>np.linalg</h2><p>这里面有一组标准的矩阵分解运算以及诸如求逆和行列式之类的</p>
-<p><strong>常用的线性代数的函数</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">函数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">diag</td>
-<td style="text-align:left">以一维数组的形式返回方阵的对角线（或非对角线）元素，或将一堆数组转换为方阵（非对角线元素为0）</td>
-</tr>
-<tr>
-<td style="text-align:left">dot</td>
-<td style="text-align:left">矩阵乘法</td>
-</tr>
-<tr>
-<td style="text-align:left">trace</td>
-<td style="text-align:left">计算对角线元素的和</td>
-</tr>
-<tr>
-<td style="text-align:left">det</td>
-<td style="text-align:left">计算矩阵行列式</td>
-</tr>
-<tr>
-<td style="text-align:left">eig</td>
-<td style="text-align:left">计算方阵的特征值和特征向量</td>
-</tr>
-<tr>
-<td style="text-align:left">inv</td>
-<td style="text-align:left">计算方阵的逆</td>
-</tr>
-<tr>
-<td style="text-align:left">pinv</td>
-<td style="text-align:left">计算矩阵的Moore-Penrose伪逆</td>
-</tr>
-<tr>
-<td style="text-align:left">qr</td>
-<td style="text-align:left">计算QR分解</td>
-</tr>
-<tr>
-<td style="text-align:left">svd</td>
-<td style="text-align:left">计算奇异值分解(SVD)</td>
-</tr>
-<tr>
-<td style="text-align:left">solve</td>
-<td style="text-align:left">解线性方程组Ax = b,其中A为一个方阵</td>
-</tr>
-<tr>
-<td style="text-align:left">lstsq</td>
-<td style="text-align:left">计算Ax=b的最小二乘解</td>
-</tr>
-</tbody>
-</table>
-</div>
+    <title>6.特征值与特征向量</title>
+    <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
+<p>设$\alpha=(a_1,a_2,\cdots,a_n)^T$ ,$\beta=(b_1,b_2,\cdots,b_n)$<br><br>令$[\alpha,\beta]=\large\sum\limits_{k=1}^{n}a_kb_k$<br><br>称为向量$\;\alpha\;$和$\;\beta\;$的内积</p>
+</blockquote>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li>$[\alpha,\beta]=[\beta,\alpha]$</li>
+<li>$[\alpha+\beta,\gamma]=[\alpha,\gamma]+[\beta,\gamma]$</li>
+<li>$[k\alpha,\beta]=k[\alpha,\beta]$</li>
+<li>$[\alpha,\alpha]\geqslant0\;且\;[\alpha,\alpha]=0\;\Leftrightarrow\;\alpha=0$</li>
+<li>柯西不等式$\;[\alpha,\beta]^2\leqslant[\alpha,\alpha][\beta,\beta]$<br><br>当且仅当$\;\alpha,\beta\;$线性相关时取等</li>
+</ol>
+<p>如果$\;[\alpha,\beta]=0\;$称$\;\alpha\;$与$\;\beta\;$正交</p>
+<p><strong>柯西不等式的证明：</strong></p>
+<p>$<br>\begin{aligned}<br>&amp;a. 若\;\alpha,\beta\;线性无关,\;\forall x\in R都有x\alpha+\beta\neq0\\<br>&amp;\quad\; [x\alpha+\beta,x\alpha+\beta]\\<br>&amp;=[\alpha,\alpha]x^2+2[\alpha,\beta]x+[\beta,\beta]&gt;0\\<br>&amp;作为x的二次函数，对\forall x，f(x)&gt;0\\<br>&amp;故\;\;[2[\alpha,\beta]]^2-4[\alpha,\alpha][\beta,\beta]&lt;0\\<br>&amp;\therefore\;[\alpha,\beta]^2&lt;||\alpha||\cdot||\beta||\\<br>\end{aligned}<br>$</p>
+<p>$<br>\begin{aligned}<br>&amp;b. 若\;\alpha,\beta\;线性相关\\<br>&amp;当\;\alpha=0（或\;\beta=0）\\<br>&amp;\qquad[\alpha,\beta]^2=||\alpha||\cdot||\beta||\\<br>&amp;当\beta=k\alpha\neq0\\<br>&amp;\qquad[\alpha,\beta]^2\\<br>&amp;=[\alpha,k\alpha]^2\\<br>&amp;=k^2[\alpha,\alpha]^2\\<br>&amp;=[\alpha,\alpha]\cdot[k\alpha,k\alpha]\\<br>&amp;=||\alpha||\cdot||\beta||<br>\end{aligned}<br>$</p>
+<h2 id="向量的长度"><a href="#向量的长度" class="headerlink" title="向量的长度"></a>向量的长度</h2><blockquote>
+<p>$||\alpha||=\sqrt{[\alpha,\alpha]}=\sqrt{\sum\limits_{k=1}^n{\large a}_k^2}$</p>
+</blockquote>
+<p>如果$||\alpha||=1\;$称$\;\alpha\;$为单位向量<br><br>$\displaystyle\frac{1}{||\alpha||}\alpha\;\longrightarrow$单位化<br><br></p>
+<hr>
+<p>定理：若n维向量$\alpha_1,\alpha_2,\cdots,\alpha_r$是一组两两正交的非零向量，<br>则$\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关。</p>
+<p>证：设$k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r=0$</p>
+<p>用$\alpha_1$对等式两边作内积</p>
+<p>$\quad[\alpha_1,k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r]=[\alpha_1,0]$</p>
+<p>$\quad k_1[\alpha_1,\alpha_1]+\cdots+k_r[\alpha_1,\alpha_r]=0$</p>
+<p>$\quad$因$\;\alpha_1\neq0,[\alpha_1,\alpha_1]&gt;0$<br>$\quad$而$\;[\alpha_1,\alpha_i]=0,i\geqslant2$</p>
+<p>$\quad\therefore\;k_1[\alpha_1,\alpha_1]=0\;$必有$k_1=0$</p>
+<p>$\quad$同理$\;k_2=0,\cdots,k_r=0$</p>
+<h2 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h2><p>设$\alpha_1,\alpha_2,\alpha_3\;$线性无关</p>
+<p>令$\quad\beta_1=\alpha_1$</p>
+<p>$\quad\beta_2=\alpha_2-\displaystyle\frac{[\alpha_2\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1$</p>
+<p>$\quad\beta_3=\alpha_3-\displaystyle\frac{[\alpha_3\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1-\displaystyle\frac{[\alpha_3\;\beta_2]}{[\beta_2\;\beta_2]}\beta_2$</p>
+<p>则$\;\beta_1\;\beta_2\;\beta_3\;$两两正交<br><br><br>再单位化<br>$\qquad\gamma_1=\displaystyle\frac{\beta_1}{||\beta_1||}$,<br>$\gamma_2=\displaystyle\frac{\beta_2}{||\beta_2||}$,<br>$\gamma_3=\displaystyle\frac{\beta_3}{||\beta_3||}$</p>
+<p>这样其实就相当于构建直角坐标系</p>
+<h2 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h2><blockquote>
+<p>设$A$是n阶矩阵，满足<br>$AA^T=A^TA=E$,<br>则称$A$为正交矩阵</p>
+</blockquote>
+<h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
+<li><p>$A$是正交矩阵$\;\Leftrightarrow\;A^T=A^{-1}$</p>
+</li>
+<li><p>$A=(\alpha_1\;\alpha_2\;\alpha_3)$是正交矩阵<br>$\quad\Leftrightarrow\;\alpha_1,\alpha_2,\alpha_3\;$都是单位向量，且两两正交<br><br>证：<br>$<br>\begin{aligned}<br>A^TA<br>&amp;=\begin{bmatrix}<br> \alpha_1^T\\<br> \alpha_2^T\\<br> \alpha_3^T<br>\end{bmatrix}<br>[\alpha_1\;\alpha_2\;\alpha_3]\\<br>&amp;=\begin{bmatrix}    \alpha_1^T\alpha_1&amp;\alpha_1^T\alpha_2&amp;\alpha_1^T\alpha_3\\    \alpha_2^T\alpha_1&amp;\alpha_2^T\alpha_2&amp;\alpha_2^T\alpha_3\\<br>\alpha_3^T\alpha_1&amp;\alpha_3^T\alpha_2&amp;\alpha_3^T\alpha_3<br>\end{bmatrix}<br>=\begin{bmatrix}<br> 1&amp;0&amp;0\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;1<br>\end{bmatrix}\\<br>&amp;=E<br>\end{aligned}<br>$<br><br></p>
+</li>
+<li>如果$A$是正交矩阵，则$|A|$=1或-1<br><br></li>
+<li>若$A,B$都是正交矩阵，则$AB$也是正交矩阵<br><br>证：<br>$(AB)(AB)^T=A(BB^T)A^T=AA^T=E$</li>
+</ol>
+<h3 id="规范正交基"><a href="#规范正交基" class="headerlink" title="规范正交基"></a>规范正交基</h3><p>设$e_1,e_2,\cdots,e_n$是向量空间的一个基，<br><br>如果<br>$\qquad[e_i,e_j]=<br>\begin{cases}<br>    1\qquad i=j\\<br>     0\qquad i\neq j<br>\end{cases}<br>$</p>
+<p>$\qquad$则称$e_1,e_2,\cdots,e_n$为规范正交基。</p>
 <p><strong>例</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [4, 5, 6],
-       [9, 4, 5]])
-</code></pre><ul>
-<li>np.diag</li>
+<p>$<br>A=\begin{bmatrix}<br>    1&amp;0&amp;0&amp;-2\\<br>    0&amp;1&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
+<p>$Ax=0\;$基础解系</p>
+<p>$\eta_1=(0,0,1,0)^T,\eta_2=(2,-1,0,1)^T$</p>
+<p>解空间的基：$\eta_1,\eta_2$</p>
+<p>解空间维数：2</p>
+<p>规范正交基：</p>
+<p>$(0,0,1,0)^T,{\large\frac{1}{\sqrt{6}}}(2,-1,0,1)^T$</p>
+<h1 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h1><blockquote>
+<p>设A是n阶矩阵，<span class="mark">$\alpha$是n维非0列向量</span>，满足<br>$\qquad A\alpha=\lambda\alpha$<br><br>则称:<br>$\lambda$是矩阵$A$的特征值<br><br>$\alpha$是矩阵$A$对应于特征值$\lambda$的特征向量.</p>
+</blockquote>
+<p>$A\alpha=\lambda\alpha\;$这个等式个人直观理解：特征向量$\alpha$经过A矩阵变换后等于特征向量$\alpha$的$\lambda$倍</p>
+<ol>
+<li>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br><br>$\quad$那么$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$<br><br></li>
+<li>若$\alpha_1,\alpha_2$都是矩阵$A$关于特征值$\lambda$的特征向量，<br><br>则$\;\forall k_1,k_2$，当$k_1\alpha_1+k_2\alpha_2\neq0$时，<br>$k_1\alpha_1+k_2\alpha_2$仍是$A$对应于$\lambda$的特征向量<br><br>由$A\alpha_1=\lambda\alpha_1,A\alpha_2=\lambda\alpha_2$<br><br><br>$<br>\begin{aligned}<br>得到： A(k_1\alpha_1+k_2\alpha_2)<br>&amp;=k_1A\alpha_1+k_2A\alpha_2\\<br>&amp;=k_1(\lambda\alpha_1)+k_2(\lambda\alpha_2)\\<br>&amp;=\lambda(k_1\alpha_1+k_2\alpha_2)\\<br>\end{aligned}<br>$</li>
+</ol>
+<h2 id="求解步骤和原理"><a href="#求解步骤和原理" class="headerlink" title="求解步骤和原理"></a>求解步骤和原理</h2><p>$\quad A\alpha=\lambda\alpha$</p>
+<p>$\Rightarrow(\lambda E-A)\alpha=0$</p>
+<p>$\quad\alpha\;$是$\;(\lambda E-A)x=0$的非零解</p>
+<p>$\rightarrow\;|\lambda E-A|=0$</p>
+<p>(1) 由$\;|\lambda E-A|=0\;$求特征值$\;\lambda_i$<br><br>$\quad$共n个(含重根)<br><br>(2) 由$\;(\lambda_iE-A)x=0\;$求基础解系<br><br>$\quad$即$\lambda_i$线性无关的特征向量</p>
+<p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
+<p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$<br><br><br>$\therefore\;A的特征值为\;1,\pm6$<br><br></p>
+<ol>
+<li>当$\;\lambda=1\;时,由\;(E-A)x=0$<br><br>$E-A=\begin{bmatrix}<br> 1&amp;-2&amp;2\\<br> -2&amp;-3&amp;-4\\<br> 2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;0&amp;2\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br><br>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br></li>
+<li>当$\;\lambda=6\;时，由(6E-A)x=0$<br><br>$6E-A=\begin{bmatrix}<br> 6&amp;-2&amp;2\\<br> -2&amp;2&amp;-4\\<br> 2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br> 0&amp;0&amp;0\\<br> -2&amp;2&amp;4\\<br> 2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;-1&amp;2\\<br> 0&amp;-2&amp;5\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br><br>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br></li>
+<li>当$\lambda=-6时，由(-6E-A)x=0$<br><br>$-6E-A=\begin{bmatrix}<br> -6&amp;-2&amp;2\\<br> -2&amp;-10&amp;-4\\<br> 2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;1&amp;0\\<br> 0&amp;2&amp;1\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</li>
+</ol>
+<h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>设$A$是n阶矩阵<br><br>(1)$\;\sum\lambda_i=\sum {\large a}_{ii}=trA\;\rightarrow\;tr为矩阵的迹$<br><br>(2)$\;\prod\lambda_i=|A|$<br><br></li>
+<li>$A$可逆$\;\Leftrightarrow\;$$A$的n个特征值全不为0<br><br></li>
+<li>矩阵$A$对应于不同特征值的特征向量的特征向量是线性无关的<br><br><strong>证</strong>:$\quad$设$\lambda_1,\lambda_2,\cdots,\lambda_s$是矩阵$A$的S个不同的特征值，对应的特征向量分别是$\alpha_1,\alpha_2,\cdots,\alpha_s$<br><br>$\;$用数学归纳法<br><br>$\;那么,当S=1时，因\alpha_1\neq0,命题正确$<br><br>$\;假设S=k-1(k\geqslant2)时,结论成立$<br><br>$\;$当$S=k$时，<br>$x_1\alpha_1+x_2\alpha_2+\cdots+x_{k-1}\alpha_{k-1}+x_k\alpha_k=0\qquad(1)$<br><br>$\;用A左乘上式，有$<br><br>$\;x_1\lambda_1\alpha_1+x_2\lambda_2\alpha_2+\cdots+x_{k-1}\lambda_{k-1}\alpha_{k-1}+x_k\lambda_k\alpha_k=0\quad(2)$<br><br>$\;用\lambda_k乘(1)又有$<br><br>$\;x_1\lambda_k\alpha_1+x_2\lambda_k\alpha_2+\cdots+x_{k-1}\lambda_k\alpha_{k-1}+x_k\lambda_k\alpha_k=0\;\,\,\quad(3)$<br><br>$\;$(2)-(3):<br><br>$\;x_1(\lambda_1-\lambda_k)\alpha_1+x_2(\lambda_2-\lambda_k)\alpha_2+\cdots+x_{k-1}(\lambda_{k-1}-\lambda_k)\alpha_{k-1}=0$<br><br>$\;又因为\alpha_1,\alpha_2,\cdots,\alpha_{k-1}线性无关$<br><br>$\;所以x_1(\lambda_1-\lambda_k)=0,x_2(\lambda_2-\lambda_k)=0,\cdots,x_{k-1}(\lambda_{k-1}-\lambda_k)=0$<br><br>$\;因特征值\lambda_i\neq\lambda_j,从而\\<br>\quad x_1=0,x_2=0,\cdots,x_{k-1}=0$<br><br>$\;代入(1)式，得\\<br>\qquad x_k\alpha_k=0$<br><br>$\;因\;\alpha\neq0,\quad得\;x_k=0$<br><br>$\;故\alpha_1,\alpha_2,\cdots,\alpha_k线性无关$<br><br>所以当$S=k$时，命题成立<br><br>由数学归纳法可知对一切自然数，命题均成立。<br><br></li>
+<li>若$\;A\alpha=\lambda\alpha,\alpha\neq0$<br><br>$(A+kE)\alpha=(\lambda+k)\alpha$<br><br></li>
+<li>由$\;A\alpha=\lambda\alpha$<br><br>有$\;A^2\alpha=A(\lambda\alpha)=\lambda A\alpha=\lambda^2\alpha$<br><br>$\;\Rightarrow\;A^n\alpha^n=\lambda^n\alpha$<br><br></li>
+<li>由$A\alpha=\lambda\alpha,A$可逆<br><br>可得到$A^{-1}\alpha=\displaystyle\frac{1}{\lambda}\alpha$<br><br>$\qquad\quad A^*\alpha=\displaystyle\frac{|A|}{\lambda}\alpha$</li>
+</ol>
+<h1 id="相似矩阵"><a href="#相似矩阵" class="headerlink" title="相似矩阵"></a>相似矩阵</h1><blockquote>
+<p>设$A,B$都是n阶矩阵，如果存在可逆矩阵P,使得<br><br>$\qquad P^{-1}AP=B$<br><br>就称矩阵$A$相似于矩阵$B$，$B$是$A$的相似矩阵<br><br>记成$A\sim B$</p>
+</blockquote>
+<h2 id="性质-3"><a href="#性质-3" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>$A\sim B$<br><br></li>
+<li>如果$A\sim B$,则$B\sim A$.<br><br></li>
+<li>如果$A\sim B,B\sim C$则$\;A\sim C$.<br><br></li>
+<li>如果$A\sim B$,那么<br><br>(1) $A^2\sim B^2$<br><br>(2) $A+kE\sim B+kE$<br><br>(3) 如果$A$可逆，则$\;A^{-1}\sim B^{-1}$<br><br>(4)如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</li>
+</ol>
+<h2 id="两个矩阵相似的必要条件"><a href="#两个矩阵相似的必要条件" class="headerlink" title="两个矩阵相似的必要条件"></a>两个矩阵相似的必要条件</h2><p>如果$A\sim B$,</p>
+<ol>
+<li>$|\lambda E-A|=|\lambda E-B|\;\Rightarrow\lambda_A=\lambda_B$<br><br></li>
+<li>$r(A)=r(B)$<br><br></li>
+<li>$|A|=|B|$<br><br></li>
+<li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
+</ol>
+<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land$$\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
+<p><strong>证</strong>:下面以三阶矩阵为例</p>
+<p>首先将$P$按列分块<br><br>得到<br>$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即<br>$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$</p>
+<p>则有</p>
+<p>$(A\alpha_1,A\alpha_2,A\alpha_3)$</p>
+<p>$\begin{aligned}<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
+<p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
+<h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
+<p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
+<h1 id="实对称矩阵"><a href="#实对称矩阵" class="headerlink" title="实对称矩阵"></a>实对称矩阵</h1><blockquote>
+<p>若$A$矩阵的元素都是实数，且A的转置等于它本身，则称$A$为是对称矩阵</p>
+</blockquote>
+<h2 id="性质-4"><a href="#性质-4" class="headerlink" title="性质"></a>性质</h2><ol>
+<li>若$A$是n阶实对称矩阵,则$A$的特征值都是<strong>实数</strong><br><br></li>
+<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong> 2：<br>$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
+<li>对任意一个n阶实对称矩阵$A$,总存在n阶 <strong>正交矩阵</strong> $\;Q$，使得<br><br>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。<br><br></li>
+<li>n=1成立<br><br></li>
+<li>假设n-1成立<br><br>那么n时<br><br>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$<br><br>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$<br><br>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$<br><br>$\qquad\qquad\qquad\cdots$<br><br>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$<br><br>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br><br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)<br><br>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$<br><br>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$<br><br>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$<br>然后令Q_2=<br>\begin{bmatrix}<br> 1&amp;0\\<br> 0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$<br><br>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$<br><br><br>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$<br><br>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$<br><br>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>即n时结论成立<br><br>那么可得到结论成立<br>   </li>
+</ol>
+<h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
+<li>求特征值  </li>
+<li>求特征向量  </li>
+<li>改造特征向量  <ul>
+<li>$\lambda_i\neq\lambda_j$只需单位化  </li>
+<li>$\lambda_i=\lambda_j$<ul>
+<li>$[\alpha_i,\alpha_j]=0$只需单位化  </li>
+<li>$[\alpha_i,\alpha_j] \neq0$施密特正交化</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([1, 5, 5])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(np.diag(A))</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 0, 0],
-       [0, 5, 0],
-       [0, 0, 5]])
-</code></pre><ul>
-<li>np.trace</li>
+</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.trace(A)</span><br></pre></td></tr></table></figure>
-<pre><code>11
-</code></pre><ul>
-<li>np.linalg.det</li>
+</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.det(A)</span><br></pre></td></tr></table></figure>
-<pre><code>-17.999999999999996
-</code></pre><ul>
-<li>np.linalg.inv</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.inv(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.05555556, -0.11111111,  0.16666667],
-       [-1.88888889,  1.22222222, -0.33333333],
-       [ 1.61111111, -0.77777778,  0.16666667]])
-</code></pre><ul>
-<li>np.linalg.eig</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)</span><br></pre></td></tr></table></figure>
-<pre><code>(array([12.76913689, -2.36514612,  0.59600923]),
- array([[-0.28796344, -0.47551397,  0.10554127],
-        [-0.67379758, -0.38580557, -0.83390437],
-        [-0.68049532,  0.79059505,  0.54172368]]))
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eigvals(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([12.76913689, -2.36514612,  0.59600923])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.28796344, -0.47551397,  0.10554127],
-       [-0.67379758, -0.38580557, -0.83390437],
-       [-0.68049532,  0.79059505,  0.54172368]])
-</code></pre><ul>
-<li>np.linalg.solve</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">B = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">np.linalg.solve(A,B)</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 0.22222222, -1.44444444,  1.55555556])
-</code></pre><p>简单的使用了一下Numpy中关于线性代数的函数,也发现了一些问题，就是求行列式的值存在精度丢失，目前接触到的应用大概就这么多，当然后面会阅读一些文档对这一部分内容进行扩充</p>
+<p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
+<p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
 ]]></content>
       <categories>
-        <category>numpy</category>
+        <category>线性代数</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -4168,147 +4370,252 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>6.特征值与特征向量</title>
-    <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
-<p>设$\alpha=(a_1,a_2,\cdots,a_n)^T$ ,$\beta=(b_1,b_2,\cdots,b_n)$<br><br>令$[\alpha,\beta]=\large\sum\limits_{k=1}^{n}a_kb_k$<br><br>称为向量$\;\alpha\;$和$\;\beta\;$的内积</p>
-</blockquote>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
-<li>$[\alpha,\beta]=[\beta,\alpha]$</li>
-<li>$[\alpha+\beta,\gamma]=[\alpha,\gamma]+[\beta,\gamma]$</li>
-<li>$[k\alpha,\beta]=k[\alpha,\beta]$</li>
-<li>$[\alpha,\alpha]\geqslant0\;且\;[\alpha,\alpha]=0\;\Leftrightarrow\;\alpha=0$</li>
-<li>柯西不等式$\;[\alpha,\beta]^2\leqslant[\alpha,\alpha][\beta,\beta]$<br><br>当且仅当$\;\alpha,\beta\;$线性相关时取等</li>
-</ol>
-<p>如果$\;[\alpha,\beta]=0\;$称$\;\alpha\;$与$\;\beta\;$正交</p>
-<p><strong>柯西不等式的证明：</strong></p>
-<p>$<br>\begin{aligned}<br>&amp;a. 若\;\alpha,\beta\;线性无关,\;\forall x\in R都有x\alpha+\beta\neq0\\<br>&amp;\quad\; [x\alpha+\beta,x\alpha+\beta]\\<br>&amp;=[\alpha,\alpha]x^2+2[\alpha,\beta]x+[\beta,\beta]&gt;0\\<br>&amp;作为x的二次函数，对\forall x，f(x)&gt;0\\<br>&amp;故\;\;[2[\alpha,\beta]]^2-4[\alpha,\alpha][\beta,\beta]&lt;0\\<br>&amp;\therefore\;[\alpha,\beta]^2&lt;||\alpha||\cdot||\beta||\\<br>\end{aligned}<br>$</p>
-<p>$<br>\begin{aligned}<br>&amp;b. 若\;\alpha,\beta\;线性相关\\<br>&amp;当\;\alpha=0（或\;\beta=0）\\<br>&amp;\qquad[\alpha,\beta]^2=||\alpha||\cdot||\beta||\\<br>&amp;当\beta=k\alpha\neq0\\<br>&amp;\qquad[\alpha,\beta]^2\\<br>&amp;=[\alpha,k\alpha]^2\\<br>&amp;=k^2[\alpha,\alpha]^2\\<br>&amp;=[\alpha,\alpha]\cdot[k\alpha,k\alpha]\\<br>&amp;=||\alpha||\cdot||\beta||<br>\end{aligned}<br>$</p>
-<h2 id="向量的长度"><a href="#向量的长度" class="headerlink" title="向量的长度"></a>向量的长度</h2><blockquote>
-<p>$||\alpha||=\sqrt{[\alpha,\alpha]}=\sqrt{\sum\limits_{k=1}^n{\large a}_k^2}$</p>
-</blockquote>
-<p>如果$||\alpha||=1\;$称$\;\alpha\;$为单位向量<br><br>$\displaystyle\frac{1}{||\alpha||}\alpha\;\longrightarrow$单位化<br><br></p>
-<hr>
-<p>定理：若n维向量$\alpha_1,\alpha_2,\cdots,\alpha_r$是一组两两正交的非零向量，<br>则$\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关。</p>
-<p>证：设$k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r=0$</p>
-<p>用$\alpha_1$对等式两边作内积</p>
-<p>$\quad[\alpha_1,k_1\alpha_1+k_2\alpha_2+\cdots+k_r\alpha_r]=[\alpha_1,0]$</p>
-<p>$\quad k_1[\alpha_1,\alpha_1]+\cdots+k_r[\alpha_1,\alpha_r]=0$</p>
-<p>$\quad$因$\;\alpha_1\neq0,[\alpha_1,\alpha_1]&gt;0$<br>$\quad$而$\;[\alpha_1,\alpha_i]=0,i\geqslant2$</p>
-<p>$\quad\therefore\;k_1[\alpha_1,\alpha_1]=0\;$必有$k_1=0$</p>
-<p>$\quad$同理$\;k_2=0,\cdots,k_r=0$</p>
-<h2 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h2><p>设$\alpha_1,\alpha_2,\alpha_3\;$线性无关</p>
-<p>令$\quad\beta_1=\alpha_1$</p>
-<p>$\quad\beta_2=\alpha_2-\displaystyle\frac{[\alpha_2\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1$</p>
-<p>$\quad\beta_3=\alpha_3-\displaystyle\frac{[\alpha_3\;\beta_1]}{[\beta_1\;\beta_1]}\beta_1-\displaystyle\frac{[\alpha_3\;\beta_2]}{[\beta_2\;\beta_2]}\beta_2$</p>
-<p>则$\;\beta_1\;\beta_2\;\beta_3\;$两两正交<br><br><br>再单位化<br>$\qquad\gamma_1=\displaystyle\frac{\beta_1}{||\beta_1||}$,<br>$\gamma_2=\displaystyle\frac{\beta_2}{||\beta_2||}$,<br>$\gamma_3=\displaystyle\frac{\beta_3}{||\beta_3||}$</p>
-<p>这样其实就相当于构建直角坐标系</p>
-<h2 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h2><blockquote>
-<p>设$A$是n阶矩阵，满足<br>$AA^T=A^TA=E$,<br>则称$A$为正交矩阵</p>
-</blockquote>
-<h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
-<li><p>$A$是正交矩阵$\;\Leftrightarrow\;A^T=A^{-1}$</p>
-</li>
-<li><p>$A=(\alpha_1\;\alpha_2\;\alpha_3)$是正交矩阵<br>$\quad\Leftrightarrow\;\alpha_1,\alpha_2,\alpha_3\;$都是单位向量，且两两正交<br><br>证：<br>$<br>\begin{aligned}<br>A^TA<br>&amp;=\begin{bmatrix}<br> \alpha_1^T\\<br> \alpha_2^T\\<br> \alpha_3^T<br>\end{bmatrix}<br>[\alpha_1\;\alpha_2\;\alpha_3]\\<br>&amp;=\begin{bmatrix}    \alpha_1^T\alpha_1&amp;\alpha_1^T\alpha_2&amp;\alpha_1^T\alpha_3\\    \alpha_2^T\alpha_1&amp;\alpha_2^T\alpha_2&amp;\alpha_2^T\alpha_3\\<br>\alpha_3^T\alpha_1&amp;\alpha_3^T\alpha_2&amp;\alpha_3^T\alpha_3<br>\end{bmatrix}<br>=\begin{bmatrix}<br> 1&amp;0&amp;0\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;1<br>\end{bmatrix}\\<br>&amp;=E<br>\end{aligned}<br>$<br><br></p>
-</li>
-<li>如果$A$是正交矩阵，则$|A|$=1或-1<br><br></li>
-<li>若$A,B$都是正交矩阵，则$AB$也是正交矩阵<br><br>证：<br>$(AB)(AB)^T=A(BB^T)A^T=AA^T=E$</li>
-</ol>
-<h3 id="规范正交基"><a href="#规范正交基" class="headerlink" title="规范正交基"></a>规范正交基</h3><p>设$e_1,e_2,\cdots,e_n$是向量空间的一个基，<br><br>如果<br>$\qquad[e_i,e_j]=<br>\begin{cases}<br>    1\qquad i=j\\<br>     0\qquad i\neq j<br>\end{cases}<br>$</p>
-<p>$\qquad$则称$e_1,e_2,\cdots,e_n$为规范正交基。</p>
+    <title>6.线性代数（numpy）</title>
+    <url>/2021/07/05/6-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%EF%BC%88numpy%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="矩阵乘法-三种"><a href="#矩阵乘法-三种" class="headerlink" title="矩阵乘法(三种)"></a>矩阵乘法(三种)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line">y = np.array([[<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>],[<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]])</span><br><span class="line">x.dot(y)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 2.</span></span><br><span class="line">np.dot(x,y) </span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 3.</span></span><br><span class="line">x@y</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><h2 id="np-linalg"><a href="#np-linalg" class="headerlink" title="np.linalg"></a>np.linalg</h2><p>这里面有一组标准的矩阵分解运算以及诸如求逆和行列式之类的</p>
+<p><strong>常用的线性代数的函数</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">diag</td>
+<td style="text-align:left">以一维数组的形式返回方阵的对角线（或非对角线）元素，或将一堆数组转换为方阵（非对角线元素为0）</td>
+</tr>
+<tr>
+<td style="text-align:left">dot</td>
+<td style="text-align:left">矩阵乘法</td>
+</tr>
+<tr>
+<td style="text-align:left">trace</td>
+<td style="text-align:left">计算对角线元素的和</td>
+</tr>
+<tr>
+<td style="text-align:left">det</td>
+<td style="text-align:left">计算矩阵行列式</td>
+</tr>
+<tr>
+<td style="text-align:left">eig</td>
+<td style="text-align:left">计算方阵的特征值和特征向量</td>
+</tr>
+<tr>
+<td style="text-align:left">inv</td>
+<td style="text-align:left">计算方阵的逆</td>
+</tr>
+<tr>
+<td style="text-align:left">pinv</td>
+<td style="text-align:left">计算矩阵的Moore-Penrose伪逆</td>
+</tr>
+<tr>
+<td style="text-align:left">qr</td>
+<td style="text-align:left">计算QR分解</td>
+</tr>
+<tr>
+<td style="text-align:left">svd</td>
+<td style="text-align:left">计算奇异值分解(SVD)</td>
+</tr>
+<tr>
+<td style="text-align:left">solve</td>
+<td style="text-align:left">解线性方程组Ax = b,其中A为一个方阵</td>
+</tr>
+<tr>
+<td style="text-align:left">lstsq</td>
+<td style="text-align:left">计算Ax=b的最小二乘解</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>例</strong></p>
-<p>$<br>A=\begin{bmatrix}<br>    1&amp;0&amp;0&amp;-2\\<br>    0&amp;1&amp;0&amp;1<br>\end{bmatrix}<br>$</p>
-<p>$Ax=0\;$基础解系</p>
-<p>$\eta_1=(0,0,1,0)^T,\eta_2=(2,-1,0,1)^T$</p>
-<p>解空间的基：$\eta_1,\eta_2$</p>
-<p>解空间维数：2</p>
-<p>规范正交基：</p>
-<p>$(0,0,1,0)^T,{\large\frac{1}{\sqrt{6}}}(2,-1,0,1)^T$</p>
-<h1 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h1><blockquote>
-<p>设A是n阶矩阵，<span class="mark">$\alpha$是n维非0列向量</span>，满足<br>$\qquad A\alpha=\lambda\alpha$<br><br>则称:<br>$\lambda$是矩阵$A$的特征值<br><br>$\alpha$是矩阵$A$对应于特征值$\lambda$的特征向量.</p>
-</blockquote>
-<p>$A\alpha=\lambda\alpha\;$这个等式个人直观理解：特征向量$\alpha$经过A矩阵变换后等于特征向量$\alpha$的$\lambda$倍</p>
-<ol>
-<li>如果$\alpha$是$A$对应于特征值$\lambda$的特征向量，<br><br>那么只要$k\neq0$,则$k\alpha$仍是$A$对应于特征值$\lambda$的特征向量<br><br>$\because\;$如果$\;A\alpha=\lambda\alpha,\;\alpha\neq0$<br><br>$\quad$那么$A(k\alpha)=kA\alpha=k(\lambda\alpha)=\lambda(k\alpha)$<br><br></li>
-<li>若$\alpha_1,\alpha_2$都是矩阵$A$关于特征值$\lambda$的特征向量，<br><br>则$\;\forall k_1,k_2$，当$k_1\alpha_1+k_2\alpha_2\neq0$时，<br>$k_1\alpha_1+k_2\alpha_2$仍是$A$对应于$\lambda$的特征向量<br><br>由$A\alpha_1=\lambda\alpha_1,A\alpha_2=\lambda\alpha_2$<br><br><br>$<br>\begin{aligned}<br>得到： A(k_1\alpha_1+k_2\alpha_2)<br>&amp;=k_1A\alpha_1+k_2A\alpha_2\\<br>&amp;=k_1(\lambda\alpha_1)+k_2(\lambda\alpha_2)\\<br>&amp;=\lambda(k_1\alpha_1+k_2\alpha_2)\\<br>\end{aligned}<br>$</li>
-</ol>
-<h2 id="求解步骤和原理"><a href="#求解步骤和原理" class="headerlink" title="求解步骤和原理"></a>求解步骤和原理</h2><p>$\quad A\alpha=\lambda\alpha$</p>
-<p>$\Rightarrow(\lambda E-A)\alpha=0$</p>
-<p>$\quad\alpha\;$是$\;(\lambda E-A)x=0$的非零解</p>
-<p>$\rightarrow\;|\lambda E-A|=0$</p>
-<p>(1) 由$\;|\lambda E-A|=0\;$求特征值$\;\lambda_i$<br><br>$\quad$共n个(含重根)<br><br>(2) 由$\;(\lambda_iE-A)x=0\;$求基础解系<br><br>$\quad$即$\lambda_i$线性无关的特征向量</p>
-<p><strong>例</strong><br>求<br>$<br>A=\begin{bmatrix}<br>    0&amp;2&amp;-2\\<br>     2&amp;4&amp;4\\<br>     -2&amp;4&amp;-3<br>\end{bmatrix}<br>$<br>特征值，特征向量</p>
-<p>解：由特征多项式<br><br>$\quad\;<br>\begin{aligned}|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2\\<br>    -2&amp;\lambda-4&amp;-4\\<br>     2&amp;-4&amp;\lambda+3<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda&amp;-2&amp;2-2\lambda\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=\left|\begin{array}{ccc}<br>    \lambda+4&amp;-10&amp;0\\<br>    -2&amp;\lambda-4&amp;0\\<br>     2&amp;-4&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-1)(\lambda^2-36)<br>\end{aligned}$<br><br><br>$\therefore\;A的特征值为\;1,\pm6$<br><br></p>
-<ol>
-<li>当$\;\lambda=1\;时,由\;(E-A)x=0$<br><br>$E-A=\begin{bmatrix}<br> 1&amp;-2&amp;2\\<br> -2&amp;-3&amp;-4\\<br> 2&amp;-4&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;0&amp;2\\<br> 0&amp;1&amp;0\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br><br>$\qquad\therefore\;\alpha_1=(-2,0,1)^T$<br><br><br></li>
-<li>当$\;\lambda=6\;时，由(6E-A)x=0$<br><br>$6E-A=\begin{bmatrix}<br> 6&amp;-2&amp;2\\<br> -2&amp;2&amp;-4\\<br> 2&amp;-4&amp;9<br>\end{bmatrix}<br>\stackrel{把第一行写成0,0,0} { \huge\longrightarrow }<br>\begin{bmatrix}<br> 0&amp;0&amp;0\\<br> -2&amp;2&amp;4\\<br> 2&amp;-4&amp;9<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;-1&amp;2\\<br> 0&amp;-2&amp;5\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br><br>$\qquad\therefore\;\alpha_2=(1,5,2)^T$<br><br><br></li>
-<li>当$\lambda=-6时，由(-6E-A)x=0$<br><br>$-6E-A=\begin{bmatrix}<br> -6&amp;-2&amp;2\\<br> -2&amp;-10&amp;-4\\<br> 2&amp;-4&amp;-3<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br> 1&amp;1&amp;0\\<br> 0&amp;2&amp;1\\<br> 0&amp;0&amp;0<br>\end{bmatrix}$<br><br>$\quad\therefore\;\alpha_3=(-1,1,-2)^T$</li>
-</ol>
-<h2 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>设$A$是n阶矩阵<br><br>(1)$\;\sum\lambda_i=\sum {\large a}_{ii}=trA\;\rightarrow\;tr为矩阵的迹$<br><br>(2)$\;\prod\lambda_i=|A|$<br><br></li>
-<li>$A$可逆$\;\Leftrightarrow\;$$A$的n个特征值全不为0<br><br></li>
-<li>矩阵$A$对应于不同特征值的特征向量的特征向量是线性无关的<br><br><strong>证</strong>:$\quad$设$\lambda_1,\lambda_2,\cdots,\lambda_s$是矩阵$A$的S个不同的特征值，对应的特征向量分别是$\alpha_1,\alpha_2,\cdots,\alpha_s$<br><br>$\;$用数学归纳法<br><br>$\;那么,当S=1时，因\alpha_1\neq0,命题正确$<br><br>$\;假设S=k-1(k\geqslant2)时,结论成立$<br><br>$\;$当$S=k$时，<br>$x_1\alpha_1+x_2\alpha_2+\cdots+x_{k-1}\alpha_{k-1}+x_k\alpha_k=0\qquad(1)$<br><br>$\;用A左乘上式，有$<br><br>$\;x_1\lambda_1\alpha_1+x_2\lambda_2\alpha_2+\cdots+x_{k-1}\lambda_{k-1}\alpha_{k-1}+x_k\lambda_k\alpha_k=0\quad(2)$<br><br>$\;用\lambda_k乘(1)又有$<br><br>$\;x_1\lambda_k\alpha_1+x_2\lambda_k\alpha_2+\cdots+x_{k-1}\lambda_k\alpha_{k-1}+x_k\lambda_k\alpha_k=0\;\,\,\quad(3)$<br><br>$\;$(2)-(3):<br><br>$\;x_1(\lambda_1-\lambda_k)\alpha_1+x_2(\lambda_2-\lambda_k)\alpha_2+\cdots+x_{k-1}(\lambda_{k-1}-\lambda_k)\alpha_{k-1}=0$<br><br>$\;又因为\alpha_1,\alpha_2,\cdots,\alpha_{k-1}线性无关$<br><br>$\;所以x_1(\lambda_1-\lambda_k)=0,x_2(\lambda_2-\lambda_k)=0,\cdots,x_{k-1}(\lambda_{k-1}-\lambda_k)=0$<br><br>$\;因特征值\lambda_i\neq\lambda_j,从而\\<br>\quad x_1=0,x_2=0,\cdots,x_{k-1}=0$<br><br>$\;代入(1)式，得\\<br>\qquad x_k\alpha_k=0$<br><br>$\;因\;\alpha\neq0,\quad得\;x_k=0$<br><br>$\;故\alpha_1,\alpha_2,\cdots,\alpha_k线性无关$<br><br>所以当$S=k$时，命题成立<br><br>由数学归纳法可知对一切自然数，命题均成立。<br><br></li>
-<li>若$\;A\alpha=\lambda\alpha,\alpha\neq0$<br><br>$(A+kE)\alpha=(\lambda+k)\alpha$<br><br></li>
-<li>由$\;A\alpha=\lambda\alpha$<br><br>有$\;A^2\alpha=A(\lambda\alpha)=\lambda A\alpha=\lambda^2\alpha$<br><br>$\;\Rightarrow\;A^n\alpha^n=\lambda^n\alpha$<br><br></li>
-<li>由$A\alpha=\lambda\alpha,A$可逆<br><br>可得到$A^{-1}\alpha=\displaystyle\frac{1}{\lambda}\alpha$<br><br>$\qquad\quad A^*\alpha=\displaystyle\frac{|A|}{\lambda}\alpha$</li>
-</ol>
-<h1 id="相似矩阵"><a href="#相似矩阵" class="headerlink" title="相似矩阵"></a>相似矩阵</h1><blockquote>
-<p>设$A,B$都是n阶矩阵，如果存在可逆矩阵P,使得<br><br>$\qquad P^{-1}AP=B$<br><br>就称矩阵$A$相似于矩阵$B$，$B$是$A$的相似矩阵<br><br>记成$A\sim B$</p>
-</blockquote>
-<h2 id="性质-3"><a href="#性质-3" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>$A\sim B$<br><br></li>
-<li>如果$A\sim B$,则$B\sim A$.<br><br></li>
-<li>如果$A\sim B,B\sim C$则$\;A\sim C$.<br><br></li>
-<li>如果$A\sim B$,那么<br><br>(1) $A^2\sim B^2$<br><br>(2) $A+kE\sim B+kE$<br><br>(3) 如果$A$可逆，则$\;A^{-1}\sim B^{-1}$<br><br>(4)如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$</li>
-</ol>
-<h2 id="两个矩阵相似的必要条件"><a href="#两个矩阵相似的必要条件" class="headerlink" title="两个矩阵相似的必要条件"></a>两个矩阵相似的必要条件</h2><p>如果$A\sim B$,</p>
-<ol>
-<li>$|\lambda E-A|=|\lambda E-B|\;\Rightarrow\lambda_A=\lambda_B$<br><br></li>
-<li>$r(A)=r(B)$<br><br></li>
-<li>$|A|=|B|$<br><br></li>
-<li>$trA=trB\;\longrightarrow\;即\sum {\large a}_{ii}=\sum {\large b}_{ii}$</li>
-</ol>
-<h2 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h2><h3 id="相似对角化"><a href="#相似对角化" class="headerlink" title="相似对角化"></a>相似对角化</h3><p>$A\sim\land$$\;\Leftrightarrow\;$存在可逆矩阵$P$,使得$P^{-1}AP=\land$<br></p>
-<p><strong>证</strong>:下面以三阶矩阵为例</p>
-<p>首先将$P$按列分块<br><br>得到<br>$A(\alpha_1,\alpha_2,\alpha_3)=(\alpha_1,\alpha_2,\alpha_3)\;diag(a_1,a_2,a_3)$<br><br>即<br>$(A\alpha_1,A\alpha_2,A\alpha_3)=(a_1\alpha_1,a_2\alpha_2,a_3\alpha_3)$<br><br>$\therefore A\alpha_1=a_1\alpha_1\quad A\alpha_2=a_2\alpha_2\quad A\alpha_3=a_3\alpha_3$<br><br>$\qquad\downarrow$<br><br>不难发现，这就是特征值的定义形式<br>$\therefore A的特征值为:a_1,a_2,a_3\;\longrightarrow\;\land$<br><br>$\quad A的特征向量为:\alpha_1,\alpha_2,\alpha_3\rightarrow\; P$<br><br>$\therefore P$可逆$\;\Rightarrow\;|\alpha_1\;\alpha_2\;\alpha_3|\neq0\quad\alpha_1,\alpha_2,\alpha_3$线性无关<br><br>反之，若$A$有三个无关的特征向量$\;\alpha_1,\alpha_2,\alpha_3\;$,满足$\;A\alpha_i=\lambda_i\alpha_i\;(i=1,2,3)$</p>
-<p>则有</p>
-<p>$(A\alpha_1,A\alpha_2,A\alpha_3)$</p>
-<p>$\begin{aligned}<br>&amp;=(\lambda_1\alpha_1,\lambda_2\alpha_2,\lambda_3\alpha_3)\\<br>&amp;=(\alpha_1,\alpha_2,\alpha_3)\;diag(\lambda_1,\lambda_2,\lambda_3)<br>\end{aligned}<br>$<br><br>即得到$\;AP=P\land$<br><br>$\therefore\;P^{-1}AP=\land=diag(\lambda_1,\lambda_2,\lambda_3)$<br><br>其实这就很容易看出此问题最终还是转化为特征值特征向量问题<br></p>
-<p>定理:$A\sim\land\Longleftrightarrow$ $A$有n个线性无关的特征向量<br><br>如果$A$有n个不同的特征值，则$A\sim\land$</p>
-<h3 id="求-A-n-的方法"><a href="#求-A-n-的方法" class="headerlink" title="求$A^n$的方法"></a>求$A^n$的方法<br></h3><p>$\because P^{-1}A^nP=\land^n$<br><br>$\therefore A^n=P\land^n P^{-1}$</p>
-<p><strong>方法虽然不难，但是需要耐心和仔细！！</strong></p>
-<h1 id="实对称矩阵"><a href="#实对称矩阵" class="headerlink" title="实对称矩阵"></a>实对称矩阵</h1><blockquote>
-<p>若$A$矩阵的元素都是实数，且A的转置等于它本身，则称$A$为是对称矩阵</p>
-</blockquote>
-<h2 id="性质-4"><a href="#性质-4" class="headerlink" title="性质"></a>性质</h2><ol>
-<li>若$A$是n阶实对称矩阵,则$A$的特征值都是<strong>实数</strong><br><br></li>
-<li>$\lambda_1$与$\lambda_2$是$A$不同的特征值，$\alpha_1,\alpha_2$分别是属于$\lambda_1$与$\lambda_2$的特征向量，则$\alpha_1$与$\alpha_2$正交<br><br><br><strong>证</strong> 2：<br>$由A\alpha_1=\lambda_1\alpha_1,A\alpha_2=\lambda_2\alpha_2,\lambda_1\neq\lambda_2$ $\;\rightarrow\;[\alpha_1,\alpha_2]=\alpha_1^T\alpha_2=\alpha_2^T\alpha_1$<br><br>$<br>\begin{aligned}<br>\qquad\lambda_1\alpha_2^T\alpha_1<br>&amp;=\alpha_2^T A\alpha_1\;\rightarrow\;用\alpha_2^T来乘\\<br>&amp;=\alpha_2^T A^T\alpha_1\\<br>&amp;=(A\alpha_2)^T\alpha_1\\<br>&amp;=(\lambda_2\alpha_2)^T\alpha_1\\<br>&amp;=\lambda_2\alpha_2^T\alpha_1<br>\end{aligned}<br>$<br><br>$\quad\therefore\;(\lambda_1-\lambda_2)\alpha_2^T\alpha_1=0$<br><br>$\quad\therefore\;\alpha_2^T\alpha_1=0$<br><br></li>
-<li>对任意一个n阶实对称矩阵$A$,总存在n阶 <strong>正交矩阵</strong> $\;Q$，使得<br><br>$\qquad\qquad Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$\qquad$证明用数学归纳法<br><br>大体思路是：因为要证明的$Q$是正交矩阵，所以可以构造出来一组规范正交基，将$A\alpha_i$表示出来，从而就能构造出$AP=PB$这种形式，下面只需要说明$B$这个矩阵能够进行相似对角化，且是通过正交矩阵相似对角化，其中不要忘记使用正交矩阵的性质$A^{-1}=A^T$。<br><br></li>
-<li>n=1成立<br><br></li>
-<li>假设n-1成立<br><br>那么n时<br><br>$A\alpha_1=\lambda_1\alpha_1,将\alpha_1扩展到R^n，取一组单位正交基\alpha_1,\alpha_2,\cdots,\alpha_n$<br><br>$由A\alpha_1=\lambda_1\alpha_1 \;\rightarrow\; 因为A\alpha_1是空间里的一个向量，那么A\alpha_2\cdots也能用规范正交基表示$<br><br>$可得A\alpha_2=b_{12}\alpha_1+b_{22}\alpha_2+\cdots+b_{n2}\alpha_n\quad\rightarrow\;正交基的系数用字母代替，不需要具体表示$<br><br>$\qquad\qquad\qquad\cdots$<br><br>$\qquad A\alpha_2=b_{1n}\alpha_1+b_{2n}\alpha_2+\cdots+b_{nn}\alpha_n$<br><br>将上式用矩阵表示，并用分块矩阵的知识将矩阵分成四块<br><br>$A(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$令(\alpha_1,\alpha_2,\cdots,\alpha_n)=Q_1$<br>$得到AQ_1=Q_1<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>$即Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;b\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>两边同时转置(注意正交矩阵的性质:$\;Q_1^{-1}=Q^T$)<br><br>$[Q_1^{-1}AQ_1]^T=Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  b^T&amp;B^T\\<br>\end{bmatrix}\;\rightarrow这是一个对称矩阵<br>$<br><br>$\therefore\;b=b^T=0,B=B^T,即B是n-1阶实对称矩阵$<br><br>$\therefore\;Q_1^{-1}AQ_1=<br>\begin{bmatrix}<br> \lambda_1&amp;0\\<br>  0&amp;B\\<br>\end{bmatrix}<br>$<br><br>因为B是个n-1阶实对称矩阵，所以按归纳假设B一定可以用正交矩阵相似对角化<br><br>现在假设这个正交矩阵为$P$<br><br>$那么可得到\;P^{-1}BP=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$<br>然后令Q_2=<br>\begin{bmatrix}<br> 1&amp;0\\<br> 0&amp;P\\<br>\end{bmatrix}\;\rightarrow\;这个分块矩阵的构造可通过矩阵变换的思想理解<br>$<br><br>其实这里也可以用相似矩阵的性质：<br>如果$A_1\sim B_1,A_2\sim B_2$<br><br>$\quad$则$\;diag(A_1,A_2)\sim diag(B_1,B_2)$<br><br><br>$那么Q_2^{-1}Q_1^{-1}AQ_1Q_2=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>$令Q=Q_1Q_2,则Q^{-1}=Q_2^{-1}Q_1^{-1}$<br><br>$因为Q_1，Q_2是正交矩阵,所以Q是正交矩阵\;\rightarrow\;正交矩阵的性质$<br><br>$\therefore\;Q^{-1}AQ=diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$<br><br>即n时结论成立<br><br>那么可得到结论成立<br>   </li>
-</ol>
-<h2 id="求解是对称矩阵相似对角化的步骤"><a href="#求解是对称矩阵相似对角化的步骤" class="headerlink" title="求解是对称矩阵相似对角化的步骤"></a>求解是对称矩阵相似对角化的步骤</h2><ul>
-<li>求特征值  </li>
-<li>求特征向量  </li>
-<li>改造特征向量  <ul>
-<li>$\lambda_i\neq\lambda_j$只需单位化  </li>
-<li>$\lambda_i=\lambda_j$<ul>
-<li>$[\alpha_i,\alpha_j]=0$只需单位化  </li>
-<li>$[\alpha_i,\alpha_j] \neq0$施密特正交化</li>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [4, 5, 6],
+       [9, 4, 5]])
+</code></pre><ul>
+<li>np.diag</li>
 </ul>
-</li>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 5, 5])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(np.diag(A))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 0, 0],
+       [0, 5, 0],
+       [0, 0, 5]])
+</code></pre><ul>
+<li>np.trace</li>
 </ul>
-</li>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.trace(A)</span><br></pre></td></tr></table></figure>
+<pre><code>11
+</code></pre><ul>
+<li>np.linalg.det</li>
 </ul>
-<p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
-<p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.det(A)</span><br></pre></td></tr></table></figure>
+<pre><code>-17.999999999999996
+</code></pre><ul>
+<li>np.linalg.inv</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.inv(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.05555556, -0.11111111,  0.16666667],
+       [-1.88888889,  1.22222222, -0.33333333],
+       [ 1.61111111, -0.77777778,  0.16666667]])
+</code></pre><ul>
+<li>np.linalg.eig</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)</span><br></pre></td></tr></table></figure>
+<pre><code>(array([12.76913689, -2.36514612,  0.59600923]),
+ array([[-0.28796344, -0.47551397,  0.10554127],
+        [-0.67379758, -0.38580557, -0.83390437],
+        [-0.68049532,  0.79059505,  0.54172368]]))
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eigvals(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([12.76913689, -2.36514612,  0.59600923])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.28796344, -0.47551397,  0.10554127],
+       [-0.67379758, -0.38580557, -0.83390437],
+       [-0.68049532,  0.79059505,  0.54172368]])
+</code></pre><ul>
+<li>np.linalg.solve</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">B = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">np.linalg.solve(A,B)</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 0.22222222, -1.44444444,  1.55555556])
+</code></pre><p>简单的使用了一下Numpy中关于线性代数的函数,也发现了一些问题，就是求行列式的值存在精度丢失，目前接触到的应用大概就这么多，当然后面会阅读一些文档对这一部分内容进行扩充</p>
 ]]></content>
       <categories>
-        <category>线性代数</category>
+        <category>numpy</category>
       </categories>
       <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7.统计方法与排序（numpy）</title>
+    <url>/2021/07/07/7-%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8E%92%E5%BA%8F%EF%BC%88numpy%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="统计方法"><a href="#统计方法" class="headerlink" title="统计方法"></a>统计方法</h1><p><strong>基本数组统计方法</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">sum</td>
+<td style="text-align:left">对数组中全部或某轴向的元素求和。零长度的数组的sum为0</td>
+</tr>
+<tr>
+<td style="text-align:left">mean</td>
+<td style="text-align:left">算术平均数。零长度的数组的mean为NaN</td>
+</tr>
+<tr>
+<td style="text-align:left">std、var</td>
+<td style="text-align:left">分别为标准差和方差，自由度可调（默认为n）</td>
+</tr>
+<tr>
+<td style="text-align:left">min、max</td>
+<td style="text-align:left">最大值和最小值</td>
+</tr>
+<tr>
+<td style="text-align:left">argmin、argmax</td>
+<td style="text-align:left">分别为最大和最小元素的索引</td>
+</tr>
+<tr>
+<td style="text-align:left">cumsum</td>
+<td style="text-align:left">所有元素的累计和</td>
+</tr>
+<tr>
+<td style="text-align:left">cumprod</td>
+<td style="text-align:left">所有元素的累计积</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.54723045,  0.58597431, -0.96045403, -1.702082  ],
+       [ 1.06630288, -1.0836272 ,  2.29730989, -0.30115381],
+       [-0.95468451,  1.05624793,  1.01693306,  0.09056162],
+       [-0.36292065,  0.19475411, -0.01906396, -1.24974648],
+       [-1.90823323, -0.31973005,  1.06666693,  0.81091118]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean()</span><br></pre></td></tr></table></figure>
+<pre><code>-0.06116322299092232
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.mean(arr)</span><br></pre></td></tr></table></figure>
+<pre><code>-0.06116322299092232
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>-1.2232644598184463
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">max</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>2.2973098855173615
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">min</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>-1.9082332261211672
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.std()</span><br></pre></td></tr></table></figure>
+<pre><code>1.0584749116858456
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.var()</span><br></pre></td></tr></table></figure>
+<pre><code>1.1203691386683585
+</code></pre><p>mean和sum这类函数可以接受一个axis选项参数，用于计算该轴向上的统计值，最终结果是一个少一维的数组:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(<span class="number">1</span>)<span class="comment">#计算行的平均值</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(<span class="number">0</span>)<span class="comment">#计算每列的和</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
+</code></pre><p>在多维数组中，累加函数（如cumsum）返回的是同样大小的数组，但是会根据每个低维的切片沿着标记轴计算部分聚类：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr= np.arange(<span class="number">9</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumsum(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 3,  5,  7],
+       [ 9, 12, 15]], dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumprod(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[  0,   0,   0],
+       [  3,  12,  60],
+       [  6,  42, 336]], dtype=int32)
+</code></pre><p>当然可以使用布尔型数组，布尔值会被强制转换为1和0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr=np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 1,  2,  3],
+       [-1, -2, -3]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">(arr&gt;<span class="number">0</span>).<span class="built_in">sum</span>()<span class="comment">#这样就得到了数组中大于零的元素个数</span></span><br></pre></td></tr></table></figure>
+<pre><code>3
+</code></pre><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">6</span>,<span class="number">4</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [6, 4, 3],
+       [2, 3, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort()</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [3, 4, 6],
+       [2, 3, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort(<span class="number">0</span>)<span class="comment">#按0轴排序</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [2, 3, 6],
+       [3, 4, 7]])
+</code></pre>]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -4428,118 +4735,63 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>7.统计方法与排序（numpy）</title>
-    <url>/2021/07/07/7-%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8E%92%E5%BA%8F%EF%BC%88numpy%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="统计方法"><a href="#统计方法" class="headerlink" title="统计方法"></a>统计方法</h1><p><strong>基本数组统计方法</strong></p>
+    <title>9.元素的显示与隐藏</title>
+    <url>/2021/07/20/9-%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="元素显示与隐藏"><a href="#元素显示与隐藏" class="headerlink" title="元素显示与隐藏"></a>元素显示与隐藏</h1><p>本质：让一个元素在页面中隐藏或者显示出来</p>
+<ol>
+<li>display 显示隐藏</li>
+<li>visibility 显示隐藏</li>
+<li>overflow 溢出显示隐藏</li>
+</ol>
+<h2 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h2><p><strong>display</strong> 属性用于设置一个元素应如何显示</p>
+<ul>
+<li>display: none; 隐藏对象</li>
+<li>display: block; 除了转换为块级元素之外，同时还有显示元素的意思</li>
+</ul>
+<p><strong>display 隐藏元素后，不在占有原来的位置</strong></p>
+<h2 id="visibility-可见性"><a href="#visibility-可见性" class="headerlink" title="visibility 可见性"></a>visibility 可见性</h2><p><strong>visibility</strong> 属性用于指定一个元素应可见还是隐藏</p>
+<ul>
+<li>visibility: visible; 元素可见</li>
+<li>visibility: hidden; 元素隐藏</li>
+</ul>
+<p><strong>visibility隐藏元素后，继续占有原来的位置</strong></p>
+<h2 id="overflow-溢出"><a href="#overflow-溢出" class="headerlink" title="overflow 溢出"></a>overflow 溢出</h2><p><strong>overflow</strong> 属性指定了如果内容溢出一个元素的框（超过其指定高度及宽度）时</p>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:left">方法</th>
-<th style="text-align:left">说明</th>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">sum</td>
-<td style="text-align:left">对数组中全部或某轴向的元素求和。零长度的数组的sum为0</td>
+<td style="text-align:left">visible</td>
+<td style="text-align:left">不见且内容也不添加滚动条</td>
 </tr>
 <tr>
-<td style="text-align:left">mean</td>
-<td style="text-align:left">算术平均数。零长度的数组的mean为NaN</td>
+<td style="text-align:left">hidden</td>
+<td style="text-align:left">不显示超过对象尺寸的内容，超出的部分隐藏掉</td>
 </tr>
 <tr>
-<td style="text-align:left">std、var</td>
-<td style="text-align:left">分别为标准差和方差，自由度可调（默认为n）</td>
+<td style="text-align:left">scroll</td>
+<td style="text-align:left">不管有无超出内容，总是显示滚动条</td>
 </tr>
 <tr>
-<td style="text-align:left">min、max</td>
-<td style="text-align:left">最大值和最小值</td>
-</tr>
-<tr>
-<td style="text-align:left">argmin、argmax</td>
-<td style="text-align:left">分别为最大和最小元素的索引</td>
-</tr>
-<tr>
-<td style="text-align:left">cumsum</td>
-<td style="text-align:left">所有元素的累计和</td>
-</tr>
-<tr>
-<td style="text-align:left">cumprod</td>
-<td style="text-align:left">所有元素的累计积</td>
+<td style="text-align:left">auto</td>
+<td style="text-align:left">超出自动显示滚动条，不超出不显示滚动条</td>
 </tr>
 </tbody>
 </table>
 </div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.54723045,  0.58597431, -0.96045403, -1.702082  ],
-       [ 1.06630288, -1.0836272 ,  2.29730989, -0.30115381],
-       [-0.95468451,  1.05624793,  1.01693306,  0.09056162],
-       [-0.36292065,  0.19475411, -0.01906396, -1.24974648],
-       [-1.90823323, -0.31973005,  1.06666693,  0.81091118]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean()</span><br></pre></td></tr></table></figure>
-<pre><code>-0.06116322299092232
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.mean(arr)</span><br></pre></td></tr></table></figure>
-<pre><code>-0.06116322299092232
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>-1.2232644598184463
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">max</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>2.2973098855173615
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">min</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>-1.9082332261211672
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.std()</span><br></pre></td></tr></table></figure>
-<pre><code>1.0584749116858456
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.var()</span><br></pre></td></tr></table></figure>
-<pre><code>1.1203691386683585
-</code></pre><p>mean和sum这类函数可以接受一个axis选项参数，用于计算该轴向上的统计值，最终结果是一个少一维的数组:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(<span class="number">1</span>)<span class="comment">#计算行的平均值</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(<span class="number">0</span>)<span class="comment">#计算每列的和</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
-</code></pre><p>在多维数组中，累加函数（如cumsum）返回的是同样大小的数组，但是会根据每个低维的切片沿着标记轴计算部分聚类：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr= np.arange(<span class="number">9</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 2],
-       [3, 4, 5],
-       [6, 7, 8]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumsum(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  5,  7],
-       [ 9, 12, 15]], dtype=int32)
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumprod(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[  0,   0,   0],
-       [  3,  12,  60],
-       [  6,  42, 336]], dtype=int32)
-</code></pre><p>当然可以使用布尔型数组，布尔值会被强制转换为1和0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr=np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 1,  2,  3],
-       [-1, -2, -3]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">(arr&gt;<span class="number">0</span>).<span class="built_in">sum</span>()<span class="comment">#这样就得到了数组中大于零的元素个数</span></span><br></pre></td></tr></table></figure>
-<pre><code>3
-</code></pre><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">6</span>,<span class="number">4</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [6, 4, 3],
-       [2, 3, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort()</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [3, 4, 6],
-       [2, 3, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort(<span class="number">0</span>)<span class="comment">#按0轴排序</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [2, 3, 6],
-       [3, 4, 7]])
-</code></pre>]]></content>
+<p><strong>注意:</strong> 如果有定位的盒子，请慎用overflow:hidden 因为它会隐藏多余的部分</p>
+]]></content>
       <categories>
-        <category>numpy</category>
+        <category>CSS</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
+        <tag>CSS</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -4684,69 +4936,30 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>9.元素的显示与隐藏</title>
-    <url>/2021/07/20/9-%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="元素显示与隐藏"><a href="#元素显示与隐藏" class="headerlink" title="元素显示与隐藏"></a>元素显示与隐藏</h1><p>本质：让一个元素在页面中隐藏或者显示出来</p>
-<ol>
-<li>display 显示隐藏</li>
-<li>visibility 显示隐藏</li>
-<li>overflow 溢出显示隐藏</li>
-</ol>
-<h2 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h2><p><strong>display</strong> 属性用于设置一个元素应如何显示</p>
-<ul>
-<li>display: none; 隐藏对象</li>
-<li>display: block; 除了转换为块级元素之外，同时还有显示元素的意思</li>
-</ul>
-<p><strong>display 隐藏元素后，不在占有原来的位置</strong></p>
-<h2 id="visibility-可见性"><a href="#visibility-可见性" class="headerlink" title="visibility 可见性"></a>visibility 可见性</h2><p><strong>visibility</strong> 属性用于指定一个元素应可见还是隐藏</p>
-<ul>
-<li>visibility: visible; 元素可见</li>
-<li>visibility: hidden; 元素隐藏</li>
-</ul>
-<p><strong>visibility隐藏元素后，继续占有原来的位置</strong></p>
-<h2 id="overflow-溢出"><a href="#overflow-溢出" class="headerlink" title="overflow 溢出"></a>overflow 溢出</h2><p><strong>overflow</strong> 属性指定了如果内容溢出一个元素的框（超过其指定高度及宽度）时</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">visible</td>
-<td style="text-align:left">不见且内容也不添加滚动条</td>
-</tr>
-<tr>
-<td style="text-align:left">hidden</td>
-<td style="text-align:left">不显示超过对象尺寸的内容，超出的部分隐藏掉</td>
-</tr>
-<tr>
-<td style="text-align:left">scroll</td>
-<td style="text-align:left">不管有无超出内容，总是显示滚动条</td>
-</tr>
-<tr>
-<td style="text-align:left">auto</td>
-<td style="text-align:left">超出自动显示滚动条，不超出不显示滚动条</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意:</strong> 如果有定位的盒子，请慎用overflow:hidden 因为它会隐藏多余的部分</p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS基本结束</title>
     <url>/2021/07/23/CSS%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9D%9F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>花了两天的时间，在这里记录一下。这两天完成了一个购物网站的主页，列表页，注册页的制作，但是这只是初步完成，搭建了基本框架，完成了样式优化，这里只用了html5和CSS对网页进行初步搭建，还不是真正意义上的网页，后面还需要学习JavaScript进行进一步的优化，CSS基本结束，但是还有很多细节需要去了解和积累，之后的JavaScript vue……要学有的东西很多很多，很长的路要走，慢慢积累，继续加油吧……</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><html lang="ch-ZN">
+<head>
+    <style type="text/css">
+        .box:hover{
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+    <ul style="margin-top:40px">
+        <li style="width:100px;height:35px;margin:0;padding:0;border:0;line-height: 35px;text-align: center; list-style:none;perspective:500px;">
+            <div class="box" style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:all .4s;">
+                <div style="position:absolute;top:0;left:0;width:100%;background-color:skyblue;color:#fff;transform:translateZ(17.5px);">结束?</div>
+                <div style="position:absolute;top:0;left:0;width:100%;background-color:#c7edcc;color:#000;transform:translateY(17.5px) rotateX(-90deg);">想多了……</div>
+                </div>
+            
+        </li>
+    </ul>
+</body>
+</html>
+
+<p>花了两天的时间，在这里记录一下。这两天完成了一个购物网站的主页，列表页，注册页的制作，但是这只是初步完成，搭建了基本框架，完成了样式优化，这里只用了html5和CSS对网页进行初步搭建，还不是真正意义上的网页，后面还需要学习JavaScript进行进一步的优化，CSS基本结束，但是还有很多细节需要去了解和积累，之后的JavaScript vue……要学有的东西很多很多，很长的路要走，慢慢积累，继续加油吧……</p>
 ]]></content>
       <categories>
         <category>杂记</category>
@@ -4783,6 +4996,94 @@ array([[ 0,  0,  0,  0],
 ]]></content>
   </entry>
   <entry>
+    <title>pandas图(索引)</title>
+    <url>/2021/06/29/pandas%E5%9B%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><pre class="mermaid">graph LR
+classDef A fill: #C0D9D9
+classDef important fill: #FF0000 
+A(pandas):::A --- B(Series)
+B --- B1(可看作一列数据组成的数据集)
+B --- B2("三种创建方式,<br>创建语法为s = pd.Series(data,index=index),<br>可以不指定索引，将是默认从0开始")
+B2 --- B21(1.从列表创建Seies)
+B2 --- B22("2.从Ndarray(数组)创建Seris")
+B2 --- B23(3.从字典创建Series) 
+B --- B3(基本操作:增,删,改,查)
+B3 --- B31("修改索引 s1.index = ['index'] 索引数必须一致")
+B3 --- B32("纵向拼接 s2.append(s1)")
+B3 --- B33("按指定索引删除元素 s3.drop('e')")
+B3 --- B34("修改,查找,切片指定索引元素 s3['A']=6")
+B --- B4("Series运算(加,减,乘,除)<br>广播性质")
+B4:::important --- B41(加法)
+B41 --- B411("s4.add(s3)") & B412("s4+s3")
+B4 --- B42(减法)
+B42 --- B421("s4.sub(s3)") & B422("s4-s3")
+B4 --- B43(乘法)
+B43 --- B431("s4.mul(s3)") & B432("s4*s3")
+B4 --- B44(除法)
+B44 --- B441("s4.div(s3)") & B442("s4/s3")
+B4 --- B45(详解与区别)
+B45 --- B451(加减乘除法运算是按照索引对应计算,<br>若果索引不同,则填充为NaN)  
+B45 --- B452(两个ndarray执行的是element-wise的运算<br>而不是矩阵乘法的运算,矩阵乘法运算时需要维度之间严格匹配)
+B --- B5(Series数理分析)
+B5 --- B51(求和,最大值,最小值)
+B51 --- B511("s4.sum()")
+B51 --- B512("s4.max()")
+B51 --- B513("s4.min()")
+B5 --- B52("平均值  s3.mean()")
+B5 --- B53("将字符串转化为小写字母    string.str.lower()")
+B5 --- B54("将字符串转化为大写字母    string.str.upper()")
+C(DataFrame) --- A
+C1(可存放多列数据) --- C
+C2(创建的两种方式) --- C
+C21(通过numpy数组创建) --- C2
+C22(通过字典数组创建) --- C2
+C3(DataFrame 基本操作) --- C
+C31(浏览DataFrame部分数据) --- C3
+C311("df1.head() 预览DataFrame的前几行数据") 
+C312("df1.tial() 查看DataFrame的后几行数据")
+C32(查询DtaFrame字段) --- C3
+C321(df1.index 查看DataFrame的索引) --- C32
+C322(df1.columns 查看DataFrame的列名) --- C32
+C323("对DataFrame通过标签查询(单列)") --- C32
+C3231("df1['age']") --- C323
+C3232(df2.age) --- C323
+C324("df1[['age','name']] 对DataFrame通过标签查询(多列)")--- C32
+C325("df1.iloc[1:3] 对DataFrame通过位置查询") --- C32
+C326("浅拷贝 df1.copy() DataFrame副本拷贝") --- C323
+C33(DataFrame文件操作):::important --- C3
+C331("df1.to_csv('test.csv') CSV文件写入") --- C33
+C332("pd.read_csv('test.csv')" CSV文件读取) ---C33
+C333("df1.to_excel('test.xlsx',sheet_name-'Shhet1') EXCEL写入操作")
+C334("pd.read_excel('test.xlsx','Sheet1',index_col=None,na_values'['NA']) EXCEL读取操作")
+C4(DataFrame统计分析):::important --- C
+C41(df1.values 查看DataFrame的数值) --- C4
+C42("df1.describe 对DataFrame的描述性统计") --- C4
+C43(df1.T 转置操作) --- C4
+C44("df1.sort_values(by='age') 对DataFrame进行按列排序") ---C4
+C45(对DataFrame的值进行修改) --- C4
+C451("df1.iat[1,0]=2 根据DataFrame的下标值进行修改") ---C45
+C452("df1.loc['f','age']=1.5 根据DataFrame的标签对数据进行修改")---C45
+C46("df1['age'].sum() 对任意列做求和操作")---C4
+C47("df1.mean() 求平均值") --- C4
+C48(对缺失值补充) --- C4
+C481("df2.fillna(value=3)") --- C48
+C482("df2.dropna() 删除缺失值") --- C48
+C483("df2['xx']=df4['xx'].fillna(df['xx'].median()) 取平均") --- C48
+C484("df2.fillna(method='ffill') 用前面的值插值") --- C48
+C485("df2.fillna(method='ffil',limit=1,axis=1)") --- C48
+C486("data.fillna({'xx':2321}) 用字典来替换") --- C48
+C487(还有很多方法,比如三次样条,拟合等) --- C48
+click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，大体的了解其整体需要学习的方面，后面会针对思维导图里面的各方面进行细化学习，并让思维导图以的索引形式连接各部分的学习内容</p>
+]]></content>
+      <categories>
+        <category>python库</category>
+      </categories>
+      <tags>
+        <tag>python库</tag>
+        <tag>pandas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一些关于hexo的next主题的适配问题</title>
     <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
@@ -4794,15 +5095,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>杂记</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>初入</title>
-    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
   </entry>
   <entry>
     <title>2.html5新增特性</title>
@@ -5016,91 +5308,12 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>pandas图(索引)</title>
-    <url>/2021/06/29/pandas%E5%9B%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><pre class="mermaid">graph LR
-classDef A fill: #C0D9D9
-classDef important fill: #FF0000 
-A(pandas):::A --- B(Series)
-B --- B1(可看作一列数据组成的数据集)
-B --- B2("三种创建方式,<br>创建语法为s = pd.Series(data,index=index),<br>可以不指定索引，将是默认从0开始")
-B2 --- B21(1.从列表创建Seies)
-B2 --- B22("2.从Ndarray(数组)创建Seris")
-B2 --- B23(3.从字典创建Series) 
-B --- B3(基本操作:增,删,改,查)
-B3 --- B31("修改索引 s1.index = ['index'] 索引数必须一致")
-B3 --- B32("纵向拼接 s2.append(s1)")
-B3 --- B33("按指定索引删除元素 s3.drop('e')")
-B3 --- B34("修改,查找,切片指定索引元素 s3['A']=6")
-B --- B4("Series运算(加,减,乘,除)<br>广播性质")
-B4:::important --- B41(加法)
-B41 --- B411("s4.add(s3)") & B412("s4+s3")
-B4 --- B42(减法)
-B42 --- B421("s4.sub(s3)") & B422("s4-s3")
-B4 --- B43(乘法)
-B43 --- B431("s4.mul(s3)") & B432("s4*s3")
-B4 --- B44(除法)
-B44 --- B441("s4.div(s3)") & B442("s4/s3")
-B4 --- B45(详解与区别)
-B45 --- B451(加减乘除法运算是按照索引对应计算,<br>若果索引不同,则填充为NaN)  
-B45 --- B452(两个ndarray执行的是element-wise的运算<br>而不是矩阵乘法的运算,矩阵乘法运算时需要维度之间严格匹配)
-B --- B5(Series数理分析)
-B5 --- B51(求和,最大值,最小值)
-B51 --- B511("s4.sum()")
-B51 --- B512("s4.max()")
-B51 --- B513("s4.min()")
-B5 --- B52("平均值  s3.mean()")
-B5 --- B53("将字符串转化为小写字母    string.str.lower()")
-B5 --- B54("将字符串转化为大写字母    string.str.upper()")
-C(DataFrame) --- A
-C1(可存放多列数据) --- C
-C2(创建的两种方式) --- C
-C21(通过numpy数组创建) --- C2
-C22(通过字典数组创建) --- C2
-C3(DataFrame 基本操作) --- C
-C31(浏览DataFrame部分数据) --- C3
-C311("df1.head() 预览DataFrame的前几行数据") 
-C312("df1.tial() 查看DataFrame的后几行数据")
-C32(查询DtaFrame字段) --- C3
-C321(df1.index 查看DataFrame的索引) --- C32
-C322(df1.columns 查看DataFrame的列名) --- C32
-C323("对DataFrame通过标签查询(单列)") --- C32
-C3231("df1['age']") --- C323
-C3232(df2.age) --- C323
-C324("df1[['age','name']] 对DataFrame通过标签查询(多列)")--- C32
-C325("df1.iloc[1:3] 对DataFrame通过位置查询") --- C32
-C326("浅拷贝 df1.copy() DataFrame副本拷贝") --- C323
-C33(DataFrame文件操作):::important --- C3
-C331("df1.to_csv('test.csv') CSV文件写入") --- C33
-C332("pd.read_csv('test.csv')" CSV文件读取) ---C33
-C333("df1.to_excel('test.xlsx',sheet_name-'Shhet1') EXCEL写入操作")
-C334("pd.read_excel('test.xlsx','Sheet1',index_col=None,na_values'['NA']) EXCEL读取操作")
-C4(DataFrame统计分析):::important --- C
-C41(df1.values 查看DataFrame的数值) --- C4
-C42("df1.describe 对DataFrame的描述性统计") --- C4
-C43(df1.T 转置操作) --- C4
-C44("df1.sort_values(by='age') 对DataFrame进行按列排序") ---C4
-C45(对DataFrame的值进行修改) --- C4
-C451("df1.iat[1,0]=2 根据DataFrame的下标值进行修改") ---C45
-C452("df1.loc['f','age']=1.5 根据DataFrame的标签对数据进行修改")---C45
-C46("df1['age'].sum() 对任意列做求和操作")---C4
-C47("df1.mean() 求平均值") --- C4
-C48(对缺失值补充) --- C4
-C481("df2.fillna(value=3)") --- C48
-C482("df2.dropna() 删除缺失值") --- C48
-C483("df2['xx']=df4['xx'].fillna(df['xx'].median()) 取平均") --- C48
-C484("df2.fillna(method='ffill') 用前面的值插值") --- C48
-C485("df2.fillna(method='ffil',limit=1,axis=1)") --- C48
-C486("data.fillna({'xx':2321}) 用字典来替换") --- C48
-C487(还有很多方法,比如三次样条,拟合等) --- C48
-click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，大体的了解其整体需要学习的方面，后面会针对思维导图里面的各方面进行细化学习，并让思维导图以的索引形式连接各部分的学习内容</p>
+    <title>初入</title>
+    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
 ]]></content>
       <categories>
-        <category>python库</category>
+        <category>杂记</category>
       </categories>
-      <tags>
-        <tag>python库</tag>
-        <tag>pandas</tag>
-      </tags>
   </entry>
 </search>
