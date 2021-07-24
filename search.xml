@@ -1905,6 +1905,227 @@ False
       </tags>
   </entry>
   <entry>
+    <title>2.CSS字体与文本属性</title>
+    <url>/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS 使用 <strong>font-famliy</strong> 属性定义 <strong>字体</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>CSS使用 <strong>font-size</strong> 属性定义字体 <strong>大小</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>px（像素）大小是页面最常用的单位</li>
+<li>由于不同浏览器默认显示的字号可能不一致，所以尽量给一个明确值大小，不要默认大小</li>
+</ul>
+<h2 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h2><p>用 <strong>font-weight</strong> 定义字体 <strong>粗细</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>:bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">默认值（不加粗）</td>
+</tr>
+<tr>
+<td style="text-align:left">bold</td>
+<td style="text-align:left">定义粗体</td>
+</tr>
+<tr>
+<td style="text-align:left">100-900</td>
+<td style="text-align:left">400=normal,700=bold  <strong>（后面不跟单位）</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p><strong>font-style</strong> 属性定义文字风格<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">默认值</td>
+</tr>
+<tr>
+<td style="text-align:left">italic</td>
+<td style="text-align:left">斜体</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="字体符复合属性"><a href="#字体符复合属性" class="headerlink" title="字体符复合属性"></a>字体符复合属性</h2><p>也就是字体属性的简洁书写形式</p>
+<p>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-famliy;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: italic <span class="number">700</span> <span class="number">16px</span>/<span class="number">20px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: <span class="number">16px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意</strong></p>
+<ul>
+<li><strong>不能更换顺序书写</strong></li>
+<li><strong>必须保留font-size和font-family属性</strong>，否则font属性不起作用,其他的可以省略</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">字号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">font-size</td>
+<td style="text-align:left">字号</td>
+</tr>
+<tr>
+<td style="text-align:left">font-family</td>
+<td style="text-align:left">字体</td>
+</tr>
+<tr>
+<td style="text-align:left">font-weight</td>
+<td style="text-align:left">字体粗细</td>
+</tr>
+<tr>
+<td style="text-align:left">font-style</td>
+<td style="text-align:left">字体样式</td>
+</tr>
+<tr>
+<td style="text-align:left">font</td>
+<td style="text-align:left">字体连写</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-文本属性"><a href="#CSS-文本属性" class="headerlink" title="CSS 文本属性"></a>CSS 文本属性</h1><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>color属性定义文本的颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">表示</th>
+<th style="text-align:left">属性值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">预定义的颜色值</td>
+<td style="text-align:left">red,green,blue,pink</td>
+</tr>
+<tr>
+<td style="text-align:left">十六进制</td>
+<td style="text-align:left">#ff000,#ff6600···</td>
+</tr>
+<tr>
+<td style="text-align:left">RGB代码</td>
+<td style="text-align:left">rgb(255,0,0)或rgb(100%,0%,0%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h2><p><strong>text-aligh</strong> 属性用于设置元素内文本内容的水平对齐方式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">左对齐（默认）</td>
+</tr>
+<tr>
+<td style="text-align:left">right</td>
+<td style="text-align:left">右对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">center</td>
+<td style="text-align:left">居中对齐</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本装饰"><a href="#文本装饰" class="headerlink" title="文本装饰"></a>文本装饰</h2><p><strong>text-decoration</strong> 属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">默认，可以用来取消链接的下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">underline</td>
+<td style="text-align:left">下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">overline</td>
+<td style="text-align:left">上划线</td>
+</tr>
+<tr>
+<td style="text-align:left">line-through</td>
+<td style="text-align:left">删除线</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p><strong>text-indent</strong> 属性用来指定文本的第一行的缩进，通常是将段落 <strong>首行缩进</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>em</strong> 单位表示相对单位，就是当前1个文字的大小</p>
+<h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><p><strong>line-height</strong> 属性用于设置行间的距离（行高），可以控制文字行与行之间的距离<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid;border-bottom:0;">
+上方距离
+</div></p>
+<p><div style="width: 100px;height: 40px;text-align: center;line-height: 40px;border:1px solid;border-bottom:0;">文字大小</div></p>
+<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid">下方距离</div><br></p>
+<p><strong>line-height</strong> 是文字上下方距离和文字大小之和</p>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">文本颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">text-align</td>
+<td style="text-align:left">文本对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">text-indent</td>
+<td style="text-align:left">文本缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">text-decoration</td>
+<td style="text-align:left">文本修饰</td>
+</tr>
+<tr>
+<td style="text-align:left">line-height</td>
+<td style="text-align:left">行高</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>10.CSS3新增特性</title>
     <url>/2021/07/21/10-CSS3%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="新增选择器"><a href="#新增选择器" class="headerlink" title="新增选择器"></a>新增选择器</h1><h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>属性选择器可以根据元素特定属性来选择元素，这样就可以不用借助于类或者id选择器。</p>
@@ -2219,6 +2440,15 @@ False
 <li>transform-style:preserve-3d; 子元素开启立体空间</li>
 <li>代码写给父级，但是影响的是子盒子</li>
 </ul>
+<h1 id="浏览器私有前缀"><a href="#浏览器私有前缀" class="headerlink" title="浏览器私有前缀"></a>浏览器私有前缀</h1><p>浏览器私有前缀是为了兼容老版本的写法，比较新版本的浏览器无需添加</p>
+<p><strong>1.私有前缀</strong></p>
+<ul>
+<li>-moz-:代表firefox浏览器私有属性</li>
+<li>-ms-:代表ie浏览器私有属性</li>
+<li>-webkit-:代表safari、chrome私有属性</li>
+<li>-o-:代表Opera私有属性</li>
+</ul>
+<p><strong>2.提倡写法</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">-moz-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-webkit-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-o-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="attribute">border-radius</span>: <span class="number">10px</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>CSS</category>
@@ -2226,299 +2456,6 @@ False
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.CSS字体与文本属性</title>
-    <url>/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS 使用 <strong>font-famliy</strong> 属性定义 <strong>字体</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>CSS使用 <strong>font-size</strong> 属性定义字体 <strong>大小</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>px（像素）大小是页面最常用的单位</li>
-<li>由于不同浏览器默认显示的字号可能不一致，所以尽量给一个明确值大小，不要默认大小</li>
-</ul>
-<h2 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h2><p>用 <strong>font-weight</strong> 定义字体 <strong>粗细</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>:bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">normal</td>
-<td style="text-align:left">默认值（不加粗）</td>
-</tr>
-<tr>
-<td style="text-align:left">bold</td>
-<td style="text-align:left">定义粗体</td>
-</tr>
-<tr>
-<td style="text-align:left">100-900</td>
-<td style="text-align:left">400=normal,700=bold  <strong>（后面不跟单位）</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p><strong>font-style</strong> 属性定义文字风格<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">normal</td>
-<td style="text-align:left">默认值</td>
-</tr>
-<tr>
-<td style="text-align:left">italic</td>
-<td style="text-align:left">斜体</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="字体符复合属性"><a href="#字体符复合属性" class="headerlink" title="字体符复合属性"></a>字体符复合属性</h2><p>也就是字体属性的简洁书写形式</p>
-<p>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-famliy;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: italic <span class="number">700</span> <span class="number">16px</span>/<span class="number">20px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: <span class="number">16px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意</strong></p>
-<ul>
-<li><strong>不能更换顺序书写</strong></li>
-<li><strong>必须保留font-size和font-family属性</strong>，否则font属性不起作用,其他的可以省略</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">字号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">font-size</td>
-<td style="text-align:left">字号</td>
-</tr>
-<tr>
-<td style="text-align:left">font-family</td>
-<td style="text-align:left">字体</td>
-</tr>
-<tr>
-<td style="text-align:left">font-weight</td>
-<td style="text-align:left">字体粗细</td>
-</tr>
-<tr>
-<td style="text-align:left">font-style</td>
-<td style="text-align:left">字体样式</td>
-</tr>
-<tr>
-<td style="text-align:left">font</td>
-<td style="text-align:left">字体连写</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="CSS-文本属性"><a href="#CSS-文本属性" class="headerlink" title="CSS 文本属性"></a>CSS 文本属性</h1><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>color属性定义文本的颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">表示</th>
-<th style="text-align:left">属性值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">预定义的颜色值</td>
-<td style="text-align:left">red,green,blue,pink</td>
-</tr>
-<tr>
-<td style="text-align:left">十六进制</td>
-<td style="text-align:left">#ff000,#ff6600···</td>
-</tr>
-<tr>
-<td style="text-align:left">RGB代码</td>
-<td style="text-align:left">rgb(255,0,0)或rgb(100%,0%,0%)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h2><p><strong>text-aligh</strong> 属性用于设置元素内文本内容的水平对齐方式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">left</td>
-<td style="text-align:left">左对齐（默认）</td>
-</tr>
-<tr>
-<td style="text-align:left">right</td>
-<td style="text-align:left">右对齐</td>
-</tr>
-<tr>
-<td style="text-align:left">center</td>
-<td style="text-align:left">居中对齐</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本装饰"><a href="#文本装饰" class="headerlink" title="文本装饰"></a>文本装饰</h2><p><strong>text-decoration</strong> 属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">none</td>
-<td style="text-align:left">默认，可以用来取消链接的下划线</td>
-</tr>
-<tr>
-<td style="text-align:left">underline</td>
-<td style="text-align:left">下划线</td>
-</tr>
-<tr>
-<td style="text-align:left">overline</td>
-<td style="text-align:left">上划线</td>
-</tr>
-<tr>
-<td style="text-align:left">line-through</td>
-<td style="text-align:left">删除线</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p><strong>text-indent</strong> 属性用来指定文本的第一行的缩进，通常是将段落 <strong>首行缩进</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>em</strong> 单位表示相对单位，就是当前1个文字的大小</p>
-<h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><p><strong>line-height</strong> 属性用于设置行间的距离（行高），可以控制文字行与行之间的距离<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid;border-bottom:0;">
-上方距离
-</div></p>
-<p><div style="width: 100px;height: 40px;text-align: center;line-height: 40px;border:1px solid;border-bottom:0;">文字大小</div></p>
-<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid">下方距离</div><br></p>
-<p><strong>line-height</strong> 是文字上下方距离和文字大小之和</p>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">表示</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">color</td>
-<td style="text-align:left">文本颜色</td>
-</tr>
-<tr>
-<td style="text-align:left">text-align</td>
-<td style="text-align:left">文本对齐</td>
-</tr>
-<tr>
-<td style="text-align:left">text-indent</td>
-<td style="text-align:left">文本缩进</td>
-</tr>
-<tr>
-<td style="text-align:left">text-decoration</td>
-<td style="text-align:left">文本修饰</td>
-</tr>
-<tr>
-<td style="text-align:left">line-height</td>
-<td style="text-align:left">行高</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.算法(用C语言实现)</title>
-    <url>/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
-<ol>
-<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
-<li>若$r_1=0$,则$(a,b)=b$</li>
-<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
-<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
-</ol>
-<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
-<p>C语言代码实现</p>
-<p>1.while循环实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.函数嵌套实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
-<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
-<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
-</blockquote>
-<p>步骤：（正序为例）</p>
-<ol>
-<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
-<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
-<li>(小循环)针对前面未排序元素重复以上步骤。</li>
-<li>(大循环)重复上述步骤，直到排序完成</li>
-</ol>
-<p>C语言代码实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
-<p>时间复杂度为$O(n)$</p>
-<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
-<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
-<p>时间复杂度为$O(n^2)$</p>
-<p>平均时间复杂度$O(n^2)$</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
-<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
-</blockquote>
-<p>简单来说就是从后面的数选出较小的数排到前面</p>
-<p>C语言代码实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
-<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
-<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
-<ol>
-<li>从第一个元素开始，该元素可被认为已经排好序</li>
-<li>取出下一个元素，在已经排好的数组中向前扫描</li>
-<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
-<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
-<li>将取出元素插入到该空出的位置</li>
-<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</blockquote>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
-<ol>
-<li>如果n=1,结束</li>
-<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
-<li>将两个子序列分别采用归并排序</li>
-<li>将两个排好序的子序列合并成一个最终的排序序列</li>
-</ol>
-<p>C语言实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -2780,6 +2717,78 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数据分析</tag>
         <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2.算法(用C语言实现)</title>
+    <url>/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
+<ol>
+<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
+<li>若$r_1=0$,则$(a,b)=b$</li>
+<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
+<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
+</ol>
+<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
+<p>C语言代码实现</p>
+<p>1.while循环实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.函数嵌套实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
+<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
+<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
+</blockquote>
+<p>步骤：（正序为例）</p>
+<ol>
+<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
+<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
+<li>(小循环)针对前面未排序元素重复以上步骤。</li>
+<li>(大循环)重复上述步骤，直到排序完成</li>
+</ol>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
+<p>时间复杂度为$O(n)$</p>
+<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
+<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
+<p>时间复杂度为$O(n^2)$</p>
+<p>平均时间复杂度$O(n^2)$</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
+<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
+</blockquote>
+<p>简单来说就是从后面的数选出较小的数排到前面</p>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
+<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
+<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
+<ol>
+<li>从第一个元素开始，该元素可被认为已经排好序</li>
+<li>取出下一个元素，在已经排好的数组中向前扫描</li>
+<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
+<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
+<li>将取出元素插入到该空出的位置</li>
+<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
+<ol>
+<li>如果n=1,结束</li>
+<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
+<li>将两个子序列分别采用归并排序</li>
+<li>将两个排好序的子序列合并成一个最终的排序序列</li>
+</ol>
+<p>C语言实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -3451,215 +3460,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>5.CSS盒子模型</title>
-    <url>/2021/07/20/5-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="盒子模型组成"><a href="#盒子模型组成" class="headerlink" title="盒子模型组成"></a>盒子模型组成</h2><p><strong>盒子模型：</strong> 就是把HTML页面中的 <strong>布局元素看作是一个矩形的盒子</strong>，或者说是一个盛装内容的容器。</p>
-<p>CSS盒子模型包括：边框，外边距，内边距，内容。</p>
-<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><div style="width: 300px; height: 200px; border:5px solid #CCE8CF;text-align: center;line-height: 300px"><span style="width: 150px; height: 100px; border:5px solid #CCE8CF;  display:inline-block;"></span></div>
-
-<p><strong>border</strong> 属性用于设置边框，三部分：边框宽度、样式、颜色</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">border-width</td>
-<td style="text-align:left">边框粗细，单位是px</td>
-</tr>
-<tr>
-<td style="text-align:left">border-style</td>
-<td style="text-align:left">边框样式</td>
-</tr>
-<tr>
-<td style="text-align:left">border-color</td>
-<td style="text-align:left">边框颜色</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="边框的复合写法"><a href="#边框的复合写法" class="headerlink" title="边框的复合写法"></a>边框的复合写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border</span>: border-width border-style border-color;</span><br></pre></td></tr></table></figure>
-<p><strong>没有顺序</strong>，但一般按照此顺序书写</p>
-<h3 id="边框的分开写法"><a href="#边框的分开写法" class="headerlink" title="边框的分开写法"></a>边框的分开写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-top</span>: <span class="number">1px</span> solid red;</span><br><span class="line">只设定上边框，其余的同理</span><br></pre></td></tr></table></figure>
-<h3 id="表格的细线边框"><a href="#表格的细线边框" class="headerlink" title="表格的细线边框"></a>表格的细线边框</h3><p><strong>border-collapse</strong> 属性控制浏览器绘制 <strong>表格边框</strong> 的方式，它控制相邻单元格的边框。</p>
-<p>语法：<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-collapse</span>: collapse;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>collapse是合并的意思</li>
-<li>border-collapse: collapse;表示相邻边框合并在一起</li>
-</ul>
-<h3 id="边框影响盒子的实际大小"><a href="#边框影响盒子的实际大小" class="headerlink" title="边框影响盒子的实际大小"></a>边框影响盒子的实际大小</h3><p>边框会额外增加盒子的实际大小</p>
-<p>解决方案:</p>
-<ol>
-<li>测量盒子大小的时候，不量边框</li>
-<li>如果测量的时候包含了边框，则需要盒子长宽减去边框宽度</li>
-</ol>
-<h2 id="内边距（padding）"><a href="#内边距（padding）" class="headerlink" title="内边距（padding）"></a>内边距（padding）</h2><p>padding属性用于设置内边距，即边框与内容之间的距离。</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">padding-left</td>
-<td style="text-align:left">左内边距</td>
-</tr>
-<tr>
-<td style="text-align:left">padding-right</td>
-<td style="text-align:left">右内边距</td>
-</tr>
-<tr>
-<td style="text-align:left">padding-top</td>
-<td style="text-align:left">上内边距</td>
-</tr>
-<tr>
-<td style="text-align:left">padding-bottom</td>
-<td style="text-align:left">下内边距</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="padding复合写法"><a href="#padding复合写法" class="headerlink" title="padding复合写法"></a>padding复合写法</h3><p><strong>padding</strong> 属性可以有一到四个值</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">值的个数</th>
-<th style="text-align:left">意思</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1个值 padding: 5px;</td>
-<td style="text-align:left">上下左右内边距都是5px</td>
-</tr>
-<tr>
-<td style="text-align:left">2个值 padding: 5px;10px;</td>
-<td style="text-align:left">上下内边距是5px，左右内边距是10px</td>
-</tr>
-<tr>
-<td style="text-align:left">3个值 padding: 5px 10px 20px;</td>
-<td style="text-align:left">上内边距是5px，左右内边距10px，下内边距是20px</td>
-</tr>
-<tr>
-<td style="text-align:left">4个值 padding: 5px 10px 20px 30px;</td>
-<td style="text-align:left">上是5px，右是10px，下是20px，左是30px（顺时针）</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="padding影响盒子实际大小"><a href="#padding影响盒子实际大小" class="headerlink" title="padding影响盒子实际大小"></a>padding影响盒子实际大小</h3><p>如果盒子已经有了宽度和高度，也就是内容和边框有了距离，添加了内边距后就会撑大盒子</p>
-<p><strong>解决方法：</strong><br>如果保证盒子跟效果图大小保持一致，则 <strong>减去多出的内边距</strong> </p>
-<p><strong>如果盒子本身没有指定长宽属性，则padding不会撑开盒子</strong></p>
-<h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><p><strong>margin</strong> 属性用于设置外边距，即控制盒子和盒子之间的距离。</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">margin-left</td>
-<td style="text-align:left">左外边距</td>
-</tr>
-<tr>
-<td style="text-align:left">margin-right</td>
-<td style="text-align:left">右外边距</td>
-</tr>
-<tr>
-<td style="text-align:left">margin-top</td>
-<td style="text-align:left">上外边距</td>
-</tr>
-<tr>
-<td style="text-align:left">margin-bottom</td>
-<td style="text-align:left">下外边距</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>简写方式和padding一样</strong></p>
-<p><strong>1.块级盒子水平居中</strong><br>外边距可以让块级盒子 <strong>水平居中</strong>，但是必须满足两个条件：</p>
-<ol>
-<li>盒子 <strong>必须制定宽度</strong></li>
-<li>盒子左右的外边距都设置为auto<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.header</span> &#123; <span class="attribute">width</span>: <span class="number">960px</span>; <span class="attribute">margin</span>:<span class="number">0</span> auto;&#125;</span><br></pre></td></tr></table></figure>
-常见的写法，以下三种都可以：</li>
-</ol>
-<ul>
-<li>margin-left: auto; margin-right: auto;</li>
-<li>margin: auto;</li>
-<li>margin: 0 auto;</li>
-</ul>
-<p><strong>注意:</strong><br>以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加 <strong>text-align: center</strong> 即可</p>
-<p><strong>2.嵌套块元素垂直外边距的塌陷</strong><br>对于两个嵌套关系（父子关系）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。</p>
-<p>解决方案：</p>
-<p>1.可以为父元素定义边框</p>
-<p>2.可以为父元素定义内边距</p>
-<p>3.可以为父元素添加 <strong>overflow: hidden</strong></p>
-<p>还有其他方法，比如浮动，固定，绝对定位的盒子不会有塌陷问题</p>
-<h2 id="清除内外边距"><a href="#清除内外边距" class="headerlink" title="清除内外边距"></a>清除内外边距</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>:行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距，但是转换为块级和行内块元素就可以了</p>
-<h1 id="圆角边框"><a href="#圆角边框" class="headerlink" title="圆角边框"></a>圆角边框</h1><p>border-radius 属性用于设置元素的外边框圆角<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: length;</span><br><span class="line">这里length可以用百分比表示，例如<span class="number">50%</span>表示是高度的<span class="number">50%</span></span><br></pre></td></tr></table></figure><br>radius 半径（圆的半径）原理：（椭）圆与边框的交集形成圆角效果</p>
-<p>border-radius可以跟多个数值1~4个</p>
-<h1 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h1><p><strong>box-shadow</strong> 属性为盒子添加阴影<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: h-shadow v-shadow blur spread color inset（outset是默认值不能写）;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">h-shadow</td>
-<td style="text-align:left">必须，水平阴影的位置，允许负值</td>
-</tr>
-<tr>
-<td style="text-align:left">v-shadow</td>
-<td style="text-align:left">必须，垂直阴影的位置，允许负值</td>
-</tr>
-<tr>
-<td style="text-align:left">blur</td>
-<td style="text-align:left">可选，模糊距离</td>
-</tr>
-<tr>
-<td style="text-align:left">spread</td>
-<td style="text-align:left">可选，阴影的尺寸</td>
-</tr>
-<tr>
-<td style="text-align:left">color</td>
-<td style="text-align:left">可选，阴影的颜色</td>
-</tr>
-<tr>
-<td style="text-align:left">inset</td>
-<td style="text-align:left">可选，将外部阴影（outset）改为内部阴影</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意</strong><br>1.默认的是外阴影（outset）,但不可以写这个单词，否则阴影无效</p>
-<p>2.盒子阴影不占用空间，不会影响其他盒子排列</p>
-<h1 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h1><p>语法：<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-shadow</span>: h-shadow v-shadow blur color</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>4.n维向量</title>
     <url>/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
@@ -3906,6 +3706,215 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>5.CSS盒子模型</title>
+    <url>/2021/07/20/5-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="盒子模型组成"><a href="#盒子模型组成" class="headerlink" title="盒子模型组成"></a>盒子模型组成</h2><p><strong>盒子模型：</strong> 就是把HTML页面中的 <strong>布局元素看作是一个矩形的盒子</strong>，或者说是一个盛装内容的容器。</p>
+<p>CSS盒子模型包括：边框，外边距，内边距，内容。</p>
+<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><div style="width: 300px; height: 200px; border:5px solid #CCE8CF;text-align: center;line-height: 300px"><span style="width: 150px; height: 100px; border:5px solid #CCE8CF;  display:inline-block;"></span></div>
+
+<p><strong>border</strong> 属性用于设置边框，三部分：边框宽度、样式、颜色</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-width</td>
+<td style="text-align:left">边框粗细，单位是px</td>
+</tr>
+<tr>
+<td style="text-align:left">border-style</td>
+<td style="text-align:left">边框样式</td>
+</tr>
+<tr>
+<td style="text-align:left">border-color</td>
+<td style="text-align:left">边框颜色</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="边框的复合写法"><a href="#边框的复合写法" class="headerlink" title="边框的复合写法"></a>边框的复合写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border</span>: border-width border-style border-color;</span><br></pre></td></tr></table></figure>
+<p><strong>没有顺序</strong>，但一般按照此顺序书写</p>
+<h3 id="边框的分开写法"><a href="#边框的分开写法" class="headerlink" title="边框的分开写法"></a>边框的分开写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-top</span>: <span class="number">1px</span> solid red;</span><br><span class="line">只设定上边框，其余的同理</span><br></pre></td></tr></table></figure>
+<h3 id="表格的细线边框"><a href="#表格的细线边框" class="headerlink" title="表格的细线边框"></a>表格的细线边框</h3><p><strong>border-collapse</strong> 属性控制浏览器绘制 <strong>表格边框</strong> 的方式，它控制相邻单元格的边框。</p>
+<p>语法：<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-collapse</span>: collapse;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>collapse是合并的意思</li>
+<li>border-collapse: collapse;表示相邻边框合并在一起</li>
+</ul>
+<h3 id="边框影响盒子的实际大小"><a href="#边框影响盒子的实际大小" class="headerlink" title="边框影响盒子的实际大小"></a>边框影响盒子的实际大小</h3><p>边框会额外增加盒子的实际大小</p>
+<p>解决方案:</p>
+<ol>
+<li>测量盒子大小的时候，不量边框</li>
+<li>如果测量的时候包含了边框，则需要盒子长宽减去边框宽度</li>
+</ol>
+<h2 id="内边距（padding）"><a href="#内边距（padding）" class="headerlink" title="内边距（padding）"></a>内边距（padding）</h2><p>padding属性用于设置内边距，即边框与内容之间的距离。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">padding-left</td>
+<td style="text-align:left">左内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-right</td>
+<td style="text-align:left">右内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-top</td>
+<td style="text-align:left">上内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-bottom</td>
+<td style="text-align:left">下内边距</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="padding复合写法"><a href="#padding复合写法" class="headerlink" title="padding复合写法"></a>padding复合写法</h3><p><strong>padding</strong> 属性可以有一到四个值</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值的个数</th>
+<th style="text-align:left">意思</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1个值 padding: 5px;</td>
+<td style="text-align:left">上下左右内边距都是5px</td>
+</tr>
+<tr>
+<td style="text-align:left">2个值 padding: 5px;10px;</td>
+<td style="text-align:left">上下内边距是5px，左右内边距是10px</td>
+</tr>
+<tr>
+<td style="text-align:left">3个值 padding: 5px 10px 20px;</td>
+<td style="text-align:left">上内边距是5px，左右内边距10px，下内边距是20px</td>
+</tr>
+<tr>
+<td style="text-align:left">4个值 padding: 5px 10px 20px 30px;</td>
+<td style="text-align:left">上是5px，右是10px，下是20px，左是30px（顺时针）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="padding影响盒子实际大小"><a href="#padding影响盒子实际大小" class="headerlink" title="padding影响盒子实际大小"></a>padding影响盒子实际大小</h3><p>如果盒子已经有了宽度和高度，也就是内容和边框有了距离，添加了内边距后就会撑大盒子</p>
+<p><strong>解决方法：</strong><br>如果保证盒子跟效果图大小保持一致，则 <strong>减去多出的内边距</strong> </p>
+<p><strong>如果盒子本身没有指定长宽属性，则padding不会撑开盒子</strong></p>
+<h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><p><strong>margin</strong> 属性用于设置外边距，即控制盒子和盒子之间的距离。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">margin-left</td>
+<td style="text-align:left">左外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-right</td>
+<td style="text-align:left">右外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-top</td>
+<td style="text-align:left">上外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-bottom</td>
+<td style="text-align:left">下外边距</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>简写方式和padding一样</strong></p>
+<p><strong>1.块级盒子水平居中</strong><br>外边距可以让块级盒子 <strong>水平居中</strong>，但是必须满足两个条件：</p>
+<ol>
+<li>盒子 <strong>必须制定宽度</strong></li>
+<li>盒子左右的外边距都设置为auto<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.header</span> &#123; <span class="attribute">width</span>: <span class="number">960px</span>; <span class="attribute">margin</span>:<span class="number">0</span> auto;&#125;</span><br></pre></td></tr></table></figure>
+常见的写法，以下三种都可以：</li>
+</ol>
+<ul>
+<li>margin-left: auto; margin-right: auto;</li>
+<li>margin: auto;</li>
+<li>margin: 0 auto;</li>
+</ul>
+<p><strong>注意:</strong><br>以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加 <strong>text-align: center</strong> 即可</p>
+<p><strong>2.嵌套块元素垂直外边距的塌陷</strong><br>对于两个嵌套关系（父子关系）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。</p>
+<p>解决方案：</p>
+<p>1.可以为父元素定义边框</p>
+<p>2.可以为父元素定义内边距</p>
+<p>3.可以为父元素添加 <strong>overflow: hidden</strong></p>
+<p>还有其他方法，比如浮动，固定，绝对定位的盒子不会有塌陷问题</p>
+<h2 id="清除内外边距"><a href="#清除内外边距" class="headerlink" title="清除内外边距"></a>清除内外边距</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>:行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距，但是转换为块级和行内块元素就可以了</p>
+<h1 id="圆角边框"><a href="#圆角边框" class="headerlink" title="圆角边框"></a>圆角边框</h1><p>border-radius 属性用于设置元素的外边框圆角<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: length;</span><br><span class="line">这里length可以用百分比表示，例如<span class="number">50%</span>表示是高度的<span class="number">50%</span></span><br></pre></td></tr></table></figure><br>radius 半径（圆的半径）原理：（椭）圆与边框的交集形成圆角效果</p>
+<p>border-radius可以跟多个数值1~4个</p>
+<h1 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h1><p><strong>box-shadow</strong> 属性为盒子添加阴影<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: h-shadow v-shadow blur spread color inset（outset是默认值不能写）;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">h-shadow</td>
+<td style="text-align:left">必须，水平阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td style="text-align:left">v-shadow</td>
+<td style="text-align:left">必须，垂直阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td style="text-align:left">blur</td>
+<td style="text-align:left">可选，模糊距离</td>
+</tr>
+<tr>
+<td style="text-align:left">spread</td>
+<td style="text-align:left">可选，阴影的尺寸</td>
+</tr>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">可选，阴影的颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">inset</td>
+<td style="text-align:left">可选，将外部阴影（outset）改为内部阴影</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意</strong><br>1.默认的是外阴影（outset）,但不可以写这个单词，否则阴影无效</p>
+<p>2.盒子阴影不占用空间，不会影响其他盒子排列</p>
+<h1 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h1><p>语法：<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-shadow</span>: h-shadow v-shadow blur color</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5.向量空间</title>
     <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
@@ -4040,6 +4049,140 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.线性代数（numpy）</title>
+    <url>/2021/07/05/6-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%EF%BC%88numpy%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="矩阵乘法-三种"><a href="#矩阵乘法-三种" class="headerlink" title="矩阵乘法(三种)"></a>矩阵乘法(三种)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line">y = np.array([[<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>],[<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]])</span><br><span class="line">x.dot(y)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 2.</span></span><br><span class="line">np.dot(x,y) </span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 3.</span></span><br><span class="line">x@y</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><h2 id="np-linalg"><a href="#np-linalg" class="headerlink" title="np.linalg"></a>np.linalg</h2><p>这里面有一组标准的矩阵分解运算以及诸如求逆和行列式之类的</p>
+<p><strong>常用的线性代数的函数</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">diag</td>
+<td style="text-align:left">以一维数组的形式返回方阵的对角线（或非对角线）元素，或将一堆数组转换为方阵（非对角线元素为0）</td>
+</tr>
+<tr>
+<td style="text-align:left">dot</td>
+<td style="text-align:left">矩阵乘法</td>
+</tr>
+<tr>
+<td style="text-align:left">trace</td>
+<td style="text-align:left">计算对角线元素的和</td>
+</tr>
+<tr>
+<td style="text-align:left">det</td>
+<td style="text-align:left">计算矩阵行列式</td>
+</tr>
+<tr>
+<td style="text-align:left">eig</td>
+<td style="text-align:left">计算方阵的特征值和特征向量</td>
+</tr>
+<tr>
+<td style="text-align:left">inv</td>
+<td style="text-align:left">计算方阵的逆</td>
+</tr>
+<tr>
+<td style="text-align:left">pinv</td>
+<td style="text-align:left">计算矩阵的Moore-Penrose伪逆</td>
+</tr>
+<tr>
+<td style="text-align:left">qr</td>
+<td style="text-align:left">计算QR分解</td>
+</tr>
+<tr>
+<td style="text-align:left">svd</td>
+<td style="text-align:left">计算奇异值分解(SVD)</td>
+</tr>
+<tr>
+<td style="text-align:left">solve</td>
+<td style="text-align:left">解线性方程组Ax = b,其中A为一个方阵</td>
+</tr>
+<tr>
+<td style="text-align:left">lstsq</td>
+<td style="text-align:left">计算Ax=b的最小二乘解</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>例</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [4, 5, 6],
+       [9, 4, 5]])
+</code></pre><ul>
+<li>np.diag</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 5, 5])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(np.diag(A))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 0, 0],
+       [0, 5, 0],
+       [0, 0, 5]])
+</code></pre><ul>
+<li>np.trace</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.trace(A)</span><br></pre></td></tr></table></figure>
+<pre><code>11
+</code></pre><ul>
+<li>np.linalg.det</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.det(A)</span><br></pre></td></tr></table></figure>
+<pre><code>-17.999999999999996
+</code></pre><ul>
+<li>np.linalg.inv</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.inv(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.05555556, -0.11111111,  0.16666667],
+       [-1.88888889,  1.22222222, -0.33333333],
+       [ 1.61111111, -0.77777778,  0.16666667]])
+</code></pre><ul>
+<li>np.linalg.eig</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)</span><br></pre></td></tr></table></figure>
+<pre><code>(array([12.76913689, -2.36514612,  0.59600923]),
+ array([[-0.28796344, -0.47551397,  0.10554127],
+        [-0.67379758, -0.38580557, -0.83390437],
+        [-0.68049532,  0.79059505,  0.54172368]]))
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eigvals(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([12.76913689, -2.36514612,  0.59600923])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.28796344, -0.47551397,  0.10554127],
+       [-0.67379758, -0.38580557, -0.83390437],
+       [-0.68049532,  0.79059505,  0.54172368]])
+</code></pre><ul>
+<li>np.linalg.solve</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">B = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">np.linalg.solve(A,B)</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 0.22222222, -1.44444444,  1.55555556])
+</code></pre><p>简单的使用了一下Numpy中关于线性代数的函数,也发现了一些问题，就是求行列式的值存在精度丢失，目前接触到的应用大概就这么多，当然后面会阅读一些文档对这一部分内容进行扩充</p>
+]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -4367,140 +4510,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>6.线性代数（numpy）</title>
-    <url>/2021/07/05/6-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%EF%BC%88numpy%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<h2 id="矩阵乘法-三种"><a href="#矩阵乘法-三种" class="headerlink" title="矩阵乘法(三种)"></a>矩阵乘法(三种)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line">y = np.array([[<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>],[<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]])</span><br><span class="line">x.dot(y)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 2.</span></span><br><span class="line">np.dot(x,y) </span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 3.</span></span><br><span class="line">x@y</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><h2 id="np-linalg"><a href="#np-linalg" class="headerlink" title="np.linalg"></a>np.linalg</h2><p>这里面有一组标准的矩阵分解运算以及诸如求逆和行列式之类的</p>
-<p><strong>常用的线性代数的函数</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">函数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">diag</td>
-<td style="text-align:left">以一维数组的形式返回方阵的对角线（或非对角线）元素，或将一堆数组转换为方阵（非对角线元素为0）</td>
-</tr>
-<tr>
-<td style="text-align:left">dot</td>
-<td style="text-align:left">矩阵乘法</td>
-</tr>
-<tr>
-<td style="text-align:left">trace</td>
-<td style="text-align:left">计算对角线元素的和</td>
-</tr>
-<tr>
-<td style="text-align:left">det</td>
-<td style="text-align:left">计算矩阵行列式</td>
-</tr>
-<tr>
-<td style="text-align:left">eig</td>
-<td style="text-align:left">计算方阵的特征值和特征向量</td>
-</tr>
-<tr>
-<td style="text-align:left">inv</td>
-<td style="text-align:left">计算方阵的逆</td>
-</tr>
-<tr>
-<td style="text-align:left">pinv</td>
-<td style="text-align:left">计算矩阵的Moore-Penrose伪逆</td>
-</tr>
-<tr>
-<td style="text-align:left">qr</td>
-<td style="text-align:left">计算QR分解</td>
-</tr>
-<tr>
-<td style="text-align:left">svd</td>
-<td style="text-align:left">计算奇异值分解(SVD)</td>
-</tr>
-<tr>
-<td style="text-align:left">solve</td>
-<td style="text-align:left">解线性方程组Ax = b,其中A为一个方阵</td>
-</tr>
-<tr>
-<td style="text-align:left">lstsq</td>
-<td style="text-align:left">计算Ax=b的最小二乘解</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>例</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [4, 5, 6],
-       [9, 4, 5]])
-</code></pre><ul>
-<li>np.diag</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([1, 5, 5])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(np.diag(A))</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 0, 0],
-       [0, 5, 0],
-       [0, 0, 5]])
-</code></pre><ul>
-<li>np.trace</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.trace(A)</span><br></pre></td></tr></table></figure>
-<pre><code>11
-</code></pre><ul>
-<li>np.linalg.det</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.det(A)</span><br></pre></td></tr></table></figure>
-<pre><code>-17.999999999999996
-</code></pre><ul>
-<li>np.linalg.inv</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.inv(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.05555556, -0.11111111,  0.16666667],
-       [-1.88888889,  1.22222222, -0.33333333],
-       [ 1.61111111, -0.77777778,  0.16666667]])
-</code></pre><ul>
-<li>np.linalg.eig</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)</span><br></pre></td></tr></table></figure>
-<pre><code>(array([12.76913689, -2.36514612,  0.59600923]),
- array([[-0.28796344, -0.47551397,  0.10554127],
-        [-0.67379758, -0.38580557, -0.83390437],
-        [-0.68049532,  0.79059505,  0.54172368]]))
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eigvals(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([12.76913689, -2.36514612,  0.59600923])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.28796344, -0.47551397,  0.10554127],
-       [-0.67379758, -0.38580557, -0.83390437],
-       [-0.68049532,  0.79059505,  0.54172368]])
-</code></pre><ul>
-<li>np.linalg.solve</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">B = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">np.linalg.solve(A,B)</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 0.22222222, -1.44444444,  1.55555556])
-</code></pre><p>简单的使用了一下Numpy中关于线性代数的函数,也发现了一些问题，就是求行列式的值存在精度丢失，目前接触到的应用大概就这么多，当然后面会阅读一些文档对这一部分内容进行扩充</p>
-]]></content>
-      <categories>
-        <category>numpy</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -4936,22 +4945,35 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>end</title>
+    <url>/2021/06/24/end/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS基本结束</title>
     <url>/2021/07/23/CSS%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9D%9F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><html lang="ch-ZN">
 <head>
     <style type="text/css">
         .box:hover{
-            transform: rotateX(90deg);
+            -webkit-transform: rotateX(90deg);
         }
     </style>
 </head>
 <body>
     <ul style="margin-top:40px">
-        <li style="width:100px;height:35px;margin:0;padding:0;border:0;line-height: 35px;text-align: center; list-style:none;perspective:500px;">
-            <div class="box" style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:all .4s;">
-                <div style="position:absolute;top:0;left:0;width:100%;background-color:skyblue;color:#fff;transform:translateZ(17.5px);">结束?</div>
-                <div style="position:absolute;top:0;left:0;width:100%;background-color:#c7edcc;color:#000;transform:translateY(17.5px) rotateX(-90deg);">想多了……</div>
+        <li style="width:100px;height:35px;margin:0;padding:0;border:0;line-height: 35px;text-align: center; list-style:none;-webkit-perspective:500px;">
+            <div class="box" style="position:relative;width:100%;height:100%;-webkit-transform-style:preserve-3d;-webkit-transition:all .4s;">
+                <div style="position:absolute;top:0;left:0;width:100%;background-color:skyblue;color:#fff;-webkit-transform:translateZ(17.5px);">结束?</div>
+                <div style="position:absolute;top:0;left:0;width:100%;background-color:#c7edcc;color:#000;-webkit-transform:translateY(17.5px) rotateX(-90deg);">想多了……</div>
                 </div>
             
         </li>
@@ -4967,33 +4989,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>杂记</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>end</title>
-    <url>/2021/06/24/end/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/06/15/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>pandas图(索引)</title>
@@ -5082,6 +5077,20 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
         <tag>python库</tag>
         <tag>pandas</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/06/15/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>一些关于hexo的next主题的适配问题</title>
