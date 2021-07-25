@@ -185,6 +185,146 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/25/3-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/25/3-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-C/" class="post-title-link" itemprop="url">3.线性结构(C)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-25 09:55:34 / 修改时间：10:05:47" itemprop="dateCreated datePublished" datetime="2021-07-25T09:55:34+08:00">2021-07-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h1><p>就是指把所有的节点用一根 <strong>直线</strong>  串起来</p>
+<h2 id="连续存储-数组"><a href="#连续存储-数组" class="headerlink" title="连续存储[数组]"></a>连续存储[数组]</h2><p>1.数组是元素类型相同，大小相等的一组数</p>
+<p><strong>优缺点</strong><br>优点：存取速度很快</p>
+<p>缺点：</p>
+<ul>
+<li>事先必须知道数组的长度</li>
+<li>插入删除元素很慢</li>
+<li>空间通常有限制</li>
+<li>需要大块连续的内存块</li>
+</ul>
+<h2 id="离散存储-链表"><a href="#离散存储-链表" class="headerlink" title="离散存储[链表]"></a>离散存储[链表]</h2><p>n个节点离散分配，彼此通过指针相连，每个节点只有一个前驱节点，每个节点只有一个后续节点，首节点没有前驱节点，尾节点没有后续节点</p>
+<p><strong>优缺点</strong><br>优点：</p>
+<ul>
+<li>空间没有限制</li>
+<li>插入删除元素很快</li>
+</ul>
+<p>缺点：存取的速度很慢</p>
+<p>专业术语：</p>
+<ul>
+<li>首节点：第一个有效节点</li>
+<li>尾节点：最后一个有效节点</li>
+<li>头节点：<ul>
+<li>头结点的数据类型和首节点类型一样</li>
+<li>第一个有效节点之前的那个节点</li>
+<li>头节点并不存放有效数据</li>
+<li>加头结点的目的是方便对链表的操作</li>
+</ul>
+</li>
+<li>头指针：指向头结点的指针变量</li>
+<li>尾指针：指向尾节点的指针变量</li>
+</ul>
+<p><strong>如果希望通过一个函数来对链表进行处理我们至少需要接受哪些参数？</strong><br>只需要一个参数：头指针</p>
+<p>因为我们可以通过头指针推算出链表的其他所有参数</p>
+<p><strong>创建链表,并完成一些功能</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data; <span class="comment">//数据域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span> <span class="comment">//指针域</span></span><br><span class="line">&#125;NODE,*PNODE; <span class="comment">//NODE等价于struct Node,  PNODE等价于struct Node *</span></span><br><span class="line"><span class="function">PNODE <span class="title">create_list</span><span class="params">(<span class="keyword">void</span>)</span></span>;<span class="comment">//创建链表</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//输出链表的值</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_empty</span><span class="params">(PNODE)</span></span>;<span class="comment">//判断链表是否为空</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//判断链表长度</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//链表排序</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;<span class="comment">//向链表中插入一个节点</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">delete_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span>,<span class="keyword">int</span>*)</span></span>;<span class="comment">//删除链表中的节点</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PNODE pHead = <span class="literal">NULL</span>;<span class="comment">//等价于struct Node*pHead = NULL;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">	pHead = create_list();<span class="comment">//create_list()功能：创建一个非循环单链表</span></span><br><span class="line">	traverse_list(pHead);</span><br><span class="line">	<span class="comment">//int len = length_list(pHead);</span></span><br><span class="line">	<span class="comment">//printf(&quot;链表长度为%d\n&quot;,len);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//insert_list(pHead,4,33);//插入节点</span></span><br><span class="line">	<span class="comment">//traverse_list(pHead);</span></span><br><span class="line">	<span class="keyword">if</span>(delete_list(pHead,<span class="number">4</span>,&amp;val))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;删除成功，你删除的元素是：%d\n&quot;</span>,val);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;删除失败，删除的元素不存在\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	traverse_list(pHead);</span><br><span class="line">	<span class="comment">//sort_list(pHead);</span></span><br><span class="line">	<span class="comment">//traverse_list(pHead);</span></span><br><span class="line">	<span class="keyword">if</span>(is_empty(pHead))</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;链表为空\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;链表不空\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">PNODE <span class="title">create_list</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len;<span class="comment">//用来存放有效节点的个数</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> val;<span class="comment">//用来临时存放用户输入的节点的值</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入节点个数：&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;len);</span><br><span class="line">    PNODE pHead = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">    <span class="comment">//分配了一个不存放有效数字的头节点</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">NULL</span> == pHead)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;分配失败，程序终止/n&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    PNODE pTail = pHead;</span><br><span class="line">    <span class="comment">//规定pTail永远指向尾节点，这里也就是指向头节点</span></span><br><span class="line">    pTail-&gt;pNext = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;请输入第%d节点的值：&quot;</span>,i+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;val);</span><br><span class="line">        PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">        <span class="keyword">if</span>(<span class="literal">NULL</span>==pNew)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;分配失败，程序终止\n&quot;</span>);</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        pNew-&gt;data = val;</span><br><span class="line">        pTail-&gt;pNext = pNew;<span class="comment">//这里是让Ptail指针域存放临时节点</span></span><br><span class="line">        pNew-&gt;pNext = <span class="literal">NULL</span>;<span class="comment">//清空临时节点的指针域</span></span><br><span class="line">        pTail = pNew;<span class="comment">//这里是pTail指针指向了pNew</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pHead;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PNODE p = pHead-&gt;pNext;</span><br><span class="line">    <span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,p-&gt;data);</span><br><span class="line">        p = p-&gt;pNext;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_empty</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pHead-&gt;pNext == <span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE p = pHead-&gt;pNext;</span><br><span class="line">	<span class="keyword">int</span> len=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		len++;</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j,t;</span><br><span class="line">	<span class="keyword">int</span> len = length_list(pHead);</span><br><span class="line">	PNODE p,q;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,p=pHead-&gt;pNext;i&lt;len<span class="number">-1</span>;i++,p=p-&gt;pNext)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=i+<span class="number">1</span>,q=p-&gt;pNext;j&lt;len;j++,q=q-&gt;pNext)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(p-&gt;data &gt; q-&gt;data)<span class="comment">//类似于数组中的：a[i]&gt;a[j]</span></span><br><span class="line">			&#123;</span><br><span class="line">				t=p-&gt;data;</span><br><span class="line">				p-&gt;data=q-&gt;data;</span><br><span class="line">				q-&gt;data=t;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在pHead所指向的链表的第pos个节点的前面插入一个新的节点，</span></span><br><span class="line"><span class="comment">//该节点的值是val,并且pos的值是从1开始</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	PNODE p =pHead;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (p !=<span class="literal">NULL</span> &amp;&amp; i&lt;pos<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;pos<span class="number">-1</span> || p==<span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	<span class="keyword">if</span>(pNew == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;动态分配内存失败\n&quot;</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	pNew-&gt;data=val;</span><br><span class="line">	PNODE q = p-&gt;pNext;</span><br><span class="line">	p-&gt;pNext=pNew;</span><br><span class="line">	pNew-&gt;pNext=q;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">delete_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> *pVal)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	PNODE p = pHead;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (p != <span class="literal">NULL</span> &amp;&amp; i&lt;pos<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;pNext;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;pos<span class="number">-1</span> || p==<span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	PNODE q = p-&gt;pNext;</span><br><span class="line">	*pVal = q-&gt;data;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//删除p节点后面的节点</span></span><br><span class="line">	p-&gt;pNext = p-&gt;pNext-&gt;pNext;</span><br><span class="line">	<span class="built_in">free</span>(q);</span><br><span class="line">	q = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>分类：</p>
+<ul>
+<li>单链表</li>
+<li>双链表：每一个节点有两个 <strong>指针域</strong></li>
+<li>循环列表:能通过任何一个节点找到其他所有的节点</li>
+<li>非循环链表</li>
+</ul>
+<p>算法：</p>
+<ul>
+<li>遍历</li>
+<li>查找</li>
+<li>清空</li>
+<li>销毁</li>
+<li>求长度</li>
+<li>排序</li>
+<li>删除节点<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>错误案例</span><br><span class="line">p-&gt;pNext=p-&gt;pNext-&gt;pNext;<span class="comment">//因为没有free所删除的节点，所以这样会让内存泄漏</span></span><br><span class="line"><span class="number">2.</span>正确写法</span><br><span class="line">r=p-&gt;pNext;<span class="comment">//r指向p后面的那个节点</span></span><br><span class="line">p-&gt;pNext=r-&gt;pNext;</span><br><span class="line"><span class="built_in">free</span>(r);<span class="comment">//必须</span></span><br></pre></td></tr></table></figure></li>
+<li>插入节点<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span></span><br><span class="line">r=p-&gt;pNext;<span class="comment">//先用r来存放p的指针域</span></span><br><span class="line">p-&gt;pNext=q;<span class="comment">//使p的指针域指向插入的q节点</span></span><br><span class="line">q-&gt;pNext=r;<span class="comment">//q的指针域就是原来p的指针域</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span></span><br><span class="line">q-&gt;pNext=p-&gt;pNext;<span class="comment">//插入的q的指针域替换成p的指针域</span></span><br><span class="line">p-&gt;pNext=q;<span class="comment">//p的指针域指向q</span></span><br></pre></td></tr></table></figure>
+<strong>算法:</strong></li>
+<li><p>狭义的算法是与数据的存储方式密切相关</p>
+</li>
+<li><p>广义的算法是与数据的存储方式无关</p>
+</li>
+<li><p>泛型：利用某种技术达到的效果就是：不同的存数方式，执行的操作是一样的</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/23/CSS%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9D%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -325,7 +465,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-24 10:22:47" itemprop="dateModified" datetime="2021-07-24T10:22:47+08:00">2021-07-24</time>
+                <time title="修改时间：2021-07-24 21:29:04" itemprop="dateModified" datetime="2021-07-24T21:29:04+08:00">2021-07-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -682,7 +822,7 @@
 <li>-webkit-:代表safari、chrome私有属性</li>
 <li>-o-:代表Opera私有属性</li>
 </ul>
-<p><strong>2.提倡写法</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-moz-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-webkit-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-o-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="attribute">border-radius</span>: <span class="number">10px</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>2.提倡写法</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-moz-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-webkit-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-o-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -1107,222 +1247,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E5%8F%8A%E7%95%8C%E9%9D%A2%E6%A0%B7%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E5%8F%8A%E7%95%8C%E9%9D%A2%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">8.CSS网页布局及用户界面样式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-20 17:46:23" itemprop="dateCreated datePublished" datetime="2021-07-20T17:46:23+08:00">2021-07-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-22 08:21:57" itemprop="dateModified" datetime="2021-07-22T08:21:57+08:00">2021-07-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="网页布局"><a href="#网页布局" class="headerlink" title="网页布局"></a>网页布局</h1><p><strong>网页布局的核心本质就是利用CSS摆盒子</strong></p>
-<p><strong>网页布局的第一准则:</strong><br>多个块级元素纵向排列用标准流，多个块级元素横向排列用浮动。</p>
-<p><strong>网页布局的第二准则:</strong><br>先设置盒子大小，后设置盒子位置。</p>
-<h2 id="传统网页布局的三种方式"><a href="#传统网页布局的三种方式" class="headerlink" title="传统网页布局的三种方式"></a>传统网页布局的三种方式</h2><p>网页布局的本质————用CSS来摆放盒子</p>
-<p>CSS提供了三种传统布局方式：</p>
-<ul>
-<li>标准流（最基本）</li>
-<li>浮动</li>
-<li>定位</li>
-</ul>
-<h2 id="常见的网页布局"><a href="#常见的网页布局" class="headerlink" title="常见的网页布局"></a>常见的网页布局</h2><table style="width: 370px;background-color: #ecedf8;text-align: center;">
-  <tr>
-    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 145px;border:1px dashed;border-collapse: collapse;">main</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
-  </tr>
-</table>
-
-<p><table style="width: 370px;background-color: #ecedf8;text-align: center;">
-  <tr>
-    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
-  </tr>
-   <tr>
-    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
-  </tr>
-   <tr>
-    <td style="float:left;width: 115px;height: 145px;border:1px dashed;line-height: 145px;border-top:0;border-bottom:0;">left</td>
-    <td style="float:right;width: 195px;height: 145px;border:0;border-right:1px dashed;line-height: 145px;">right</td>
-  </tr>
-   <tr>
-    <td style="height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
-  </tr>
-</table></p>
-<div style="width: 100%;overflow:auto;">
-    <div style="width: 500px;height: 420px;border:1px solid;text-align:center;">
-    <div style="float:left;width: 480px;height: 25px;line-height:25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;">top</div>
-    <div style="float:left;width: 360px;height: 80px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px;line-height: 80px">banner</div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px 5px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
-    <div style="float:left;width: 480px;height: 90px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;line-height:90px;">footer</div>
-    </div>
-</div>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过CSS浮动、定位可以让每个盒子排列成为网页。</p>
-<p>一个完整的网页，是标准流、浮动、定位一起完成的布局的，每个都有自己专门的用法。</p>
-<p><strong>1.标准流</strong><br>可以让盒子上下排列或者左右排列，垂直的块级盒子显示就用标准流布局。<br><strong>2.浮动</strong><br>可以让多个块级元素一行显示或者左右对齐盒子，多个块级盒子水平显示就用浮动布局。<br><strong>3.定位</strong><br>定位最大的特点是有层叠的概念，就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。</p>
-<h1 id="CSS-用户界面样式"><a href="#CSS-用户界面样式" class="headerlink" title="CSS 用户界面样式"></a>CSS 用户界面样式</h1><h2 id="鼠标样式-cursor"><a href="#鼠标样式-cursor" class="headerlink" title="鼠标样式 cursor"></a>鼠标样式 cursor</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span> &#123; <span class="attribute">cursor</span>: pointer; &#125;</span><br></pre></td></tr></table></figure>
-<p>设置或检索在对象上移动的鼠标指针来采用何种系统预定义的光标形状</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">default</td>
-<td style="text-align:left">默认</td>
-</tr>
-<tr>
-<td style="text-align:left">pointer</td>
-<td style="text-align:left">小手</td>
-</tr>
-<tr>
-<td style="text-align:left">move</td>
-<td style="text-align:left">移动</td>
-</tr>
-<tr>
-<td style="text-align:left">text</td>
-<td style="text-align:left">文本</td>
-</tr>
-<tr>
-<td style="text-align:left">not-allowed</td>
-<td style="text-align:left">禁止</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="轮廓线"><a href="#轮廓线" class="headerlink" title="轮廓线"></a>轮廓线</h2><p>给表单添加 outline: 0;或者outline: none;样式之后，就可以去掉默认的蓝色边框。</p>
-<h2 id="防止拖拽文本域-resize"><a href="#防止拖拽文本域-resize" class="headerlink" title="防止拖拽文本域 resize"></a>防止拖拽文本域 resize</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span> &#123; <span class="attribute">resize</span>: none &#125;</span><br></pre></td></tr></table></figure>
-<h1 id="vertical-align-属性应用"><a href="#vertical-align-属性应用" class="headerlink" title="vertical-align 属性应用"></a>vertical-align 属性应用</h1><p>CSS的vertical-align属性使用场景：经常用于设置图片或者表单（行内块元素）和文字垂直对齐<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">vertical-align</span>: baseline | top | middle | bottom</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">baseline</td>
-<td style="text-align:left">默认，元素放置在父元素的基线上</td>
-</tr>
-<tr>
-<td style="text-align:left">top</td>
-<td style="text-align:left">把顶端元素与行中最高元素的顶端对齐</td>
-</tr>
-<tr>
-<td style="text-align:left">middle</td>
-<td style="text-align:left">把此元素放置在父元素的中间</td>
-</tr>
-<tr>
-<td style="text-align:left">bottom</td>
-<td style="text-align:left">把元素的顶端与行中最低的元素顶端对齐</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="溢出文字用省略号"><a href="#溢出文字用省略号" class="headerlink" title="溢出文字用省略号"></a>溢出文字用省略号</h1><h2 id="单行文字溢出用省略号"><a href="#单行文字溢出用省略号" class="headerlink" title="单行文字溢出用省略号"></a>单行文字溢出用省略号</h2><p>1.单行文本溢出显示省略号—必须满足三个条件<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1.先强制一行内显示文本 */</span></span><br><span class="line"><span class="attribute">white-space</span>: nowrap; （默认 <span class="attribute">normal</span> 自动换行）</span><br><span class="line"><span class="comment">/* 2.超出的部分隐藏 */</span></span><br><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="comment">/* 3.文字用省略号替代超出的部分 */</span></span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br></pre></td></tr></table></figure></p>
-<h2 id="多行文本溢出显示省略号"><a href="#多行文本溢出显示省略号" class="headerlink" title="多行文本溢出显示省略号"></a>多行文本溢出显示省略号</h2><p>多行文本溢出显示省略号，有较大兼容性问题，适合于webkit浏览器或移动端（移动端大部分是webkit内核）<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="comment">/* 弹性伸缩盒子模型显示 */</span></span><br><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line"><span class="comment">/* 限制在一个块元素显示的文本的行数 */</span></span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>;</span><br><span class="line"><span class="comment">/* 设置或检索伸缩盒对象的子元素的排列方式 */</span></span><br><span class="line">-webkit-box-crient: vertical;</span><br></pre></td></tr></table></figure></p>
-<h1 id="CSS-初始化"><a href="#CSS-初始化" class="headerlink" title="CSS 初始化"></a>CSS 初始化</h1><p>不同浏览器对有些标签的默认值是不同的，为了消除不同浏览器对HTML文本呈现的差异，照顾浏览器的兼容，我们需要对CSS初始化</p>
-<p><strong>简单理解:</strong> CSS初始化是指重设浏览器的样式（也称为CSS reset）</p>
-<p>每个网页都必须首先进行CSS 初始化</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1394,7 +1318,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1407,7 +1331,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1463,12 +1387,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">113k</span>
+    <span title="站点总字数">118k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:43</span>
+    <span title="站点阅读时长">1:47</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
