@@ -174,6 +174,398 @@
       </tags>
   </entry>
   <entry>
+    <title>1.CSS选择器</title>
+    <url>/2021/07/20/1-CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>分类</strong>： <strong>基础选择器</strong> 和 <strong>复合选择器</strong> </p>
+<p><strong>作用</strong>：选择标签</p>
+<h1 id="CSS-基础选择器"><a href="#CSS-基础选择器" class="headerlink" title="CSS 基础选择器"></a>CSS 基础选择器</h1><blockquote>
+<p> 基础选择器是由 <strong>单个</strong> 选择器组成的</p>
+</blockquote>
+<p>基础选择器包括：标签选择器、类选择器、id选择器和通配符选择器</p>
+<h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><p>标签选择器是用 <strong>HTML标签名</strong> 作为选择器，按标签名称分类，为页面中的某一类标签指定统一的CSS样式。</p>
+<h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><p>如果想要差异化选择不同的标签，单独选一个或者某几个标签，可以使用类标签</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">.类名 &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例如，将所有拥有red类的HTML元素均为红色。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.red</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>结构需要 <strong>class</strong> 属性来调用class类<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&#x27;red&#x27;&gt;红色&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong><br>(1) 类选择器使用”.”进行标识，后面紧跟类名(自定义)</p>
+<p>(2) 长名称或词组可以使用 <strong>中横线</strong> 来为选择器命名</p>
+<p>(3) 不要使用纯数字、中文等命名，尽量使用英文字母</p>
+<p>(4) 命名要有意义</p>
+<p>(5) <strong>类命名规则:</strong> 查web文档</p>
+<h2 id="类选择器-多类名"><a href="#类选择器-多类名" class="headerlink" title="类选择器-多类名"></a>类选择器-多类名</h2><p>一个标签可以指定多个类名，从而达到更多的选择目的<br>1.使用多类名的方法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;red font20&quot;&gt;hh&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br>(1) 在标签class属性中写多个类名<br>(2) 多个类名中间必须用空格分开<br>(3) 每个标签就可以分别具有这些类名的样式</p>
+<h2 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h2><p>用”#”定义<br>基本语法<br> <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#id</span>选择器名称 &#123;</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>注意:</p>
+<p>1.id是唯一性元素，一个页面上 <strong>不允许两个元素具有相同的id</strong>。一个HTML元素，也只允许使用一个id，<strong>不允许以空格分隔的id列表</strong></p>
+<p>2.当不确定时，有多个html元素来使用该样式时，使用类选择器</p>
+<p>3.id选择器的优先级高于class选择器的优先级。</p>
+<h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><p>用”*”定义，表示选取页面中的所有元素（标签）<br>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong></p>
+<ul>
+<li>通配符选择器不需要调用，自动就给所有元素使用样式</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">基础选择器</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">标签选择器</td>
+<td style="text-align:left">可以选出所有相同元素</td>
+<td style="text-align:left">p{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">类选择器</td>
+<td style="text-align:left">可以选出1个或者多个标签</td>
+<td style="text-align:left">.nav{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">id选择器</td>
+<td style="text-align:left">一次只能选择一个标签</td>
+<td style="text-align:left">#nav{color: red;}</td>
+</tr>
+<tr>
+<td style="text-align:left">通配符选择器</td>
+<td style="text-align:left">选择所有标签</td>
+<td style="text-align:left">*{color: red;}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-复合选择器"><a href="#CSS-复合选择器" class="headerlink" title="CSS 复合选择器"></a>CSS 复合选择器</h1><blockquote>
+<p>复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的</p>
+</blockquote>
+<p>常用复合选择器包括：后代选择器，子选择器，并集选择器，伪类选择器等</p>
+<h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><p>可以选择 <strong>父类元素里面的子元素</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span> 元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h2><p>只能选择作为某元素最近一级子元素<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>&gt;元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h2><p>可以选择多组标签，同时为他们定义相同样式</p>
+<p>通过逗号，（和的意思）连接而成</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>,</span><br><span class="line">元素<span class="number">2</span> &#123; </span><br><span class="line">	样式声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>用于某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素</p>
+<p>伪类选择器书写用冒号:表示</p>
+<h3 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器元素</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">a:link</td>
+<td style="text-align:left">选择所有未被访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:visited</td>
+<td style="text-align:left">选择所有已被访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:hover</td>
+<td style="text-align:left">选择鼠标指针位于其上的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">a:active</td>
+<td style="text-align:left">选择活动链接（鼠标按下未弹起的链接）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意:</strong></p>
+<ul>
+<li>必须按照顺序LVHA，要不然会不起作用</li>
+<li>因为a链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。</li>
+</ul>
+<h3 id="focus-伪类选择器"><a href="#focus-伪类选择器" class="headerlink" title=":focus 伪类选择器"></a>:focus 伪类选择器</h3><p>:focus 伪类选择器用于选取获得焦点的表单元素。<br>焦点是光标，一般情况&lt;input&gt;类表单元素才能获取，因此这个选择器也主要针对于表单元素来说</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">后代选择器</td>
+<td style="text-align:left">选择父类里面的子元素</td>
+<td style="text-align:left">空格</td>
+</tr>
+<tr>
+<td style="text-align:left">子代选择器</td>
+<td style="text-align:left">选择父类里面 <strong>最近一级的子元素元素</strong></td>
+<td style="text-align:left">大于&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">并集选择器</td>
+<td style="text-align:left">选择某些样式相同的元素</td>
+<td style="text-align:left">逗号,</td>
+</tr>
+<tr>
+<td style="text-align:left">链接伪类选择器</td>
+<td style="text-align:left">选择不同状态的链接</td>
+<td style="text-align:left">冒号，重点记住a{}和a:hover</td>
+</tr>
+<tr>
+<td style="text-align:left">:focus伪类选择器</td>
+<td style="text-align:left">选择获得光标的表单</td>
+<td style="text-align:left">input:focus</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0.数据结构与算法知识储备</title>
+    <url>/2021/07/25/0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="/2021/07/25/0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/frame.png"></p>
+<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><blockquote>
+<p>能输入计算机且能被计算机处理的 <strong>各种符号的集合</strong></p>
+</blockquote>
+<ul>
+<li>是信息的载体</li>
+<li>是对客观事物符号化的表示</li>
+<li>能够被计算机识别，存储和加工</li>
+</ul>
+<p>包括：</p>
+<ul>
+<li>数值型数据：整数、实数等</li>
+<li>非数值型数据：文字、图像、图形、声音等</li>
+</ul>
+<h2 id="数据元素"><a href="#数据元素" class="headerlink" title="数据元素"></a>数据元素</h2><ul>
+<li>是数据的 <strong>基本单位</strong>,在计算机程序中通常作为一个整体进行考虑和处理。</li>
+<li>也简称为元素，或称为记录、结点或顶点。</li>
+<li>一个 <strong>数据元素</strong> 可由若干个 <strong>数据项</strong> 组成</li>
+</ul>
+<h2 id="数据项"><a href="#数据项" class="headerlink" title="数据项"></a>数据项</h2><ul>
+<li>构成数据元素的不可分割的 <strong>最小单位</strong></li>
+</ul>
+<h2 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h2><ul>
+<li>是 <strong>性质相同的数据元素的集合</strong>，是数据的一个子集</li>
+</ul>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><blockquote>
+<p><strong>数据结构</strong> 是一门研究非数值计算的程序设计中计算机的操作对象以及它们之间的关系和操作的学科</p>
+</blockquote>
+<p>数据元素不是孤立存在的，它们之间存在着某种关系，数据元素相互之间的关系称为 <strong>结构</strong></p>
+<p>数据结构是指 <strong>相互之间存在一种或多种特定关系</strong> 的数据元素集合</p>
+<p>数据结构包括以下三个方面的内容：</p>
+<ol>
+<li>数据元素之间的逻辑关系，也称为逻辑结构</li>
+<li>数据元素及其关系在计算机内存中的表示（又称为映像），称为数据的 <strong>物理结构</strong> 或数据的 <strong>存储结构</strong></li>
+<li>数据的 <strong>运算和实现</strong>，即对数据元素可以施加的操作以及这些操作在相应的存储结构上的实现</li>
+</ol>
+<h2 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h2><ul>
+<li>描述数据元素之间的逻辑关系</li>
+<li>与数据的存储无关，独立于计算机</li>
+<li>是从具体问题抽象出来的数学模型</li>
+</ul>
+<p><strong>种类</strong><br><strong>划分方法一</strong></p>
+<ul>
+<li><strong>线性结构</strong><ul>
+<li>有且仅有一个开始和一个终端结点，并且所有结点最多只有一个直接前驱和一个直接后继。如：线性表、栈、队列、串</li>
+</ul>
+</li>
+<li><strong>非线性结构</strong><ul>
+<li>一个节点可能有多个直接前驱和直接后继。如树、图</li>
+</ul>
+</li>
+</ul>
+<p><strong>划分方法二</strong><br>(1)<strong>集合结构</strong>：结构中的数据元素之间除了 <strong>同属于一个集合</strong> 的关系外，无其他任何关系</p>
+<p>(2)<strong>线性结构</strong>：结构中的数据元素之间存在着 <strong>一对一</strong> 的线性关系</p>
+<p>(3)<strong>树形结构</strong>：结构中的数据元素之间存在 <strong>一对多</strong> 的层次关系</p>
+<p>(4)<strong>图状结构</strong> 或 <strong>网状结构</strong>：结构中的数据元素之间存在着 <strong>多对多</strong> 的任意关系</p>
+<h2 id="物理结构（存储结构）"><a href="#物理结构（存储结构）" class="headerlink" title="物理结构（存储结构）"></a>物理结构（存储结构）</h2><ul>
+<li>数据元素及其关系在计算机存储器中的结构（存储方式）</li>
+<li>是数据结构在计算机中的表示</li>
+</ul>
+<p><strong>种类</strong></p>
+<ul>
+<li>顺序存储结构<ul>
+<li>用一组 <strong>连续</strong> 的存储单元 <strong>依次</strong> 存储数据元素，数据元素之间的逻辑关系由元素的 <strong>存储位置</strong> 来表示</li>
+<li>C语言中用数组来实现顺序存储结构</li>
+</ul>
+</li>
+<li>链式存储结构<ul>
+<li>用一组 <strong>任意</strong> 的存储单元存储数据元素，数据元素之间的逻辑关系用 <strong>指针</strong> 来表示</li>
+<li>C语言中用指针来实现链式存储结构</li>
+</ul>
+</li>
+<li>索引存储结构<ul>
+<li>在存储节点信息的同时，还建立附加的 <strong>索引表</strong></li>
+<li>索引表中的每一项称为一个 <strong>索引项</strong></li>
+<li>索引项的 <strong>一般形式</strong> 是：(关键字，地址)</li>
+<li>关键字是能 <strong>唯一标识</strong> 一个结点的那些数据项</li>
+<li>若每个节点在索引表中都有一个索引项，则该索引表称之为 <strong>稠密索引</strong>。若一组结点在索引表中只对应一个索引项，则该索引表称之为 <strong>稀疏索引</strong></li>
+</ul>
+</li>
+<li>散列存储结构<ul>
+<li>根据结点的关键字直接计算出该节点的存储地址</li>
+</ul>
+</li>
+</ul>
+<h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><ul>
+<li>存储结构是逻辑关系的映像与元素本身的映像</li>
+<li>逻辑结构是数据结构的抽象，存储结构是数据结构的实现</li>
+</ul>
+<h2 id="数据类型和抽象数据类型"><a href="#数据类型和抽象数据类型" class="headerlink" title="数据类型和抽象数据类型"></a>数据类型和抽象数据类型</h2><h3 id="数据类型-Data-Type"><a href="#数据类型-Data-Type" class="headerlink" title="数据类型(Data Type)"></a>数据类型(Data Type)</h3><blockquote>
+<p>定义：数据类型是一组性质相同的 <strong>值的集合</strong> 以及定义这个集合上的 <strong>一组操作</strong> 的总称</p>
+</blockquote>
+<p><strong>数据类型 = 值的集合 + 值集合上的一组操作</strong> </p>
+<ul>
+<li>在使用高级程序设计语言编写程序时，必须对程序中出现的每个变量、常量或表达式，明确说明它们所属的 <strong>数据类型</strong><ul>
+<li>例如，C语言中：<ul>
+<li>提供int,char,float,double等基本数据类型</li>
+<li>数组、结构、共用体、枚举等构造数据类型</li>
+<li>还有指针、空(void)类型</li>
+<li>用户也可用typedef自己定义数据类型</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>一些最基本数据结构可以用数据类型来实现，如数组、字符串等；</li>
+<li>而另一些常用的数据结构。如栈、队列、树、图等，不能直接用数据类型来表示。</li>
+</ul>
+<p>数据类型的作用</p>
+<ul>
+<li>约束变量或常量的取值范围</li>
+<li>约束变量或常量的操作</li>
+</ul>
+<h3 id="抽象数据类型-Abstract-Data-Type-ADT"><a href="#抽象数据类型-Abstract-Data-Type-ADT" class="headerlink" title="抽象数据类型(Abstract Data Type,ADT)"></a>抽象数据类型(Abstract Data Type,ADT)</h3><blockquote>
+<p>是指一个数学模型以及定义在此数学模型上的一组操作</p>
+</blockquote>
+<ul>
+<li>由用户定义，从问题抽象出 <strong>数据模型</strong>（逻辑结构）</li>
+<li>还包括定义在数据模型上的一组 <strong>抽象运算</strong>（相关操作）</li>
+<li>不考虑计算机内的具体存储结构与运算的具体实现算法</li>
+</ul>
+<p>抽象数据类型 = 数据的逻辑结构 + 抽象运算</p>
+<p><strong>抽象数据类型的形式定义</strong><br>抽象数据类型可用（D,S,P）<strong>三元组</strong> 表示</p>
+<p>其中：D是数据对象；S是D上的关系集；P是对D的基本操作集</p>
+<p>一个抽象数据类型的 <strong>定义格式</strong> 如下<br><figure class="highlight bnf"><table><tr><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">	数据对象：<span class="attribute">&lt;数据对象的定义&gt;</span></span><br><span class="line">	数据关系：<span class="attribute">&lt;数据关系的定义&gt;</span></span><br><span class="line">	基本操作：<span class="attribute">&lt;基本操作的定义&gt;</span></span><br><span class="line">&#125;ADT 抽象数据类型名</span><br></pre></td></tr></table></figure><br>其中：</p>
+<ul>
+<li>数据对象、数据关系的定义用伪代码描述</li>
+<li>基本操作的定义格式为：<ul>
+<li>基本操作名：（参数表）</li>
+<li>初始条件：（初始条件描述）</li>
+<li>操作结果：（操作结果描述）</li>
+</ul>
+</li>
+</ul>
+<p><strong>基本操作</strong> 定义格式说明</p>
+<p>参数表：</p>
+<ul>
+<li>赋值参数 只为操作提供输入值</li>
+<li>引用参数以&amp;打头，除可提供输入值外，还将返回操作结果 </li>
+</ul>
+<p>初始条件：描述操作执行之前数据结构和参数应满足的条件，若不满足，则操作失败，并返回相应出错信息。若初始条件为空，则省略之。</p>
+<p>操作结果：说明操作完成之后，数据结构的变化状况和应返回的结果</p>
+<p><strong>抽象数据类型如何实现</strong></p>
+<ul>
+<li>抽象数据类型可以通过固有的数据类型（如整型、实型、字符型等）来表示和实现<ul>
+<li>即利用处理器中已存在的数据类型来说明新的结构，用已经实现的操作来组合新的操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/2021/07/25/0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/知识总结.png"></p>
+<h1 id="算法和算法分析"><a href="#算法和算法分析" class="headerlink" title="算法和算法分析"></a>算法和算法分析</h1><blockquote>
+<p>算法的定义：对特定问题 <strong>求解方法和步骤</strong> 的一种描述，它是 <strong>指令</strong> 的有限 <strong>序列</strong>。其中每个指令表示一个或多个操作 </p>
+</blockquote>
+<h2 id="算法的描述"><a href="#算法的描述" class="headerlink" title="算法的描述"></a>算法的描述</h2><ul>
+<li>自然语言：英语、中文</li>
+<li>流程图：传统流程图、NS流程图</li>
+<li>伪代码：类语言：类C语言</li>
+</ul>
+<h2 id="算法与程序"><a href="#算法与程序" class="headerlink" title="算法与程序"></a>算法与程序</h2><ul>
+<li><strong>算法</strong> 是解决问题的一种方法或一个过程，考虑如何将输入转换成输出，一个问题可以有多种算法</li>
+<li><strong>程序</strong> 是用某种程序设计语言对算法的具体实现。</li>
+</ul>
+<p><strong>程序 = 数据结构 + 算法</strong></p>
+<ul>
+<li>数据结构通过算法实现操作</li>
+<li>算法根据数据结构设计程序</li>
+</ul>
+<h2 id="算法特性"><a href="#算法特性" class="headerlink" title="算法特性"></a>算法特性</h2><ul>
+<li>有穷性：一个算法必须总是 在执行有穷步之后结束，且每一步都在又穷时间内完成</li>
+<li>确定性：算法中的每一条指令必须有确切的含义，没有二义性，在任何条件下，只有唯一的一条执行路径，即对于相同的输入只能得到相同的输出</li>
+<li>可行性：算法是可执行的，算法描述的操作可以通过已经实现的基本操作执行有限次来实现。</li>
+<li>输入：一个算法有零个或多个输入</li>
+<li>输入：一个算法有一个或多个输出</li>
+</ul>
+<h2 id="算法设计的要求"><a href="#算法设计的要求" class="headerlink" title="算法设计的要求"></a>算法设计的要求</h2><ul>
+<li>正确性</li>
+<li>可读性</li>
+<li>健壮性</li>
+<li>高效性</li>
+</ul>
+<h2 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h2><blockquote>
+<p>目的是看算法实际是否可行，并在同一问题存在多的算法时可进行性能上的比较，以便从中挑选出比较优的算法</p>
+</blockquote>
+<p>一个好的算法首先要具备正确性，然后是健壮性，可读性，在几个方面都满足的情况下，主要考虑 <strong>算法的效率</strong>,通过算法的效率高低来评判不同算法的优劣程度</p>
+<p>效率从两方面考虑：</p>
+<ol>
+<li><strong>时间效率</strong>：指的是算法耗费的 <strong>时间</strong></li>
+<li><strong>空间效率</strong>：指的是算法执行过程中所耗费的 <strong>存储空间</strong></li>
+</ol>
+<p><strong>时间效率和空间效率有时候是矛盾的</strong></p>
+<h3 id="算法时间效率的度量"><a href="#算法时间效率的度量" class="headerlink" title="算法时间效率的度量"></a>算法时间效率的度量</h3><p>算法的时间效率可以依据该算法编制的程序在计算机上执行 <strong>所消耗的时间</strong> 来度量</p>
+<p><strong>方法</strong></p>
+<ul>
+<li>事后统计<ul>
+<li>将算法实现，测算其时间和空间开销</li>
+<li>缺点：编写程序实现算法将花费较多的时间和精力；所得到实验结果依赖于计算机的软硬件等环境因素，掩盖算法本身的优劣</li>
+</ul>
+</li>
+<li>事前分析<ul>
+<li>对算法所消耗的资源的一种估算方法</li>
+</ul>
+</li>
+</ul>
+<p><strong>事前分析方法</strong></p>
+<ul>
+<li>一个算法的运行时间是指一个算法在计算机上运行所耗费的时间大致可以等于计算机执行一种简单的操作（如赋值、比较、移动等）所需的 <strong>时间</strong> 与算法中进行的简单操作 <strong>次数乘积</strong><br><strong>算法运行时间 = 一个简单操作所需的时间 × 简单操作次数</strong></li>
+<li>也即算法中每条语句的时间之和<br>  算法运行时间 = &sum; 每条语句的执行次数 &times; 该语句执行一次所需的时间</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++&gt;)<span class="comment">//n+1次</span></span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++&gt;)&#123;<span class="comment">//n(n+1)次</span></span><br><span class="line">		c[i][j]=<span class="number">0</span>;<span class="comment">//n*n次</span></span><br><span class="line">		<span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;n;k++)<span class="comment">//n*n*(n+1)次</span></span><br><span class="line">			c[i][j]=c[i][j]+a[i][k]*b[k][j];<span class="comment">//n*n*n次</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>我们把算法所耗费的时间定义为该算法中 <strong>每条语句的频度之和</strong>，则上述算法的时间消耗T(n)为：<br>$T(n)=2n^3+3n^2+2n+1$</li>
+</ul>
+<ul>
+<li>为了便于比较不同算法的时间效率，我们仅比较它们的数量级</li>
+</ul>
+<p>所以用时间复杂度表示,则$T(n)$可记作<br>$T(n)=O(n^3)$</p>
+<h3 id="算法空间效率的度量"><a href="#算法空间效率的度量" class="headerlink" title="算法空间效率的度量"></a>算法空间效率的度量</h3><blockquote>
+<p><strong>空间复杂度</strong>：算法所需存储空间的度量</p>
+</blockquote>
+<p>记作：$S(n)=O(f(n))$</p>
+<p>其中 <strong>n</strong> 为问题的规模（或大小）</p>
+<ul>
+<li>算法要占据的空间<ul>
+<li>算法本身要占据的空间，输入/输出，指令，常数，变量等 </li>
+<li>算法要使用的 <strong>辅助空间</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>算法一</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n/<span class="number">2</span>;i++)&#123;</span><br><span class="line">	t = a[i];</span><br><span class="line">	a[i] = a[n-i<span class="number">-1</span>];</span><br><span class="line">	a[n-i<span class="number">-1</span>] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>空间复杂度$S(n)=O(1)$</p>
+<p><strong>算法二</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	b[i]=a[n-i<span class="number">-1</span>];</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	a[i]=b[i];</span><br></pre></td></tr></table></figure><br>空间复杂度$S(n)=O(n)$</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.C语言的一些概念</title>
     <url>/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ol>
@@ -430,158 +822,6 @@
       </categories>
       <tags>
         <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>1.CSS选择器</title>
-    <url>/2021/07/20/1-CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>分类</strong>： <strong>基础选择器</strong> 和 <strong>复合选择器</strong> </p>
-<p><strong>作用</strong>：选择标签</p>
-<h1 id="CSS-基础选择器"><a href="#CSS-基础选择器" class="headerlink" title="CSS 基础选择器"></a>CSS 基础选择器</h1><blockquote>
-<p> 基础选择器是由 <strong>单个</strong> 选择器组成的</p>
-</blockquote>
-<p>基础选择器包括：标签选择器、类选择器、id选择器和通配符选择器</p>
-<h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><p>标签选择器是用 <strong>HTML标签名</strong> 作为选择器，按标签名称分类，为页面中的某一类标签指定统一的CSS样式。</p>
-<h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><p>如果想要差异化选择不同的标签，单独选一个或者某几个标签，可以使用类标签</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">.类名 &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>例如，将所有拥有red类的HTML元素均为红色。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.red</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>结构需要 <strong>class</strong> 属性来调用class类<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&#x27;red&#x27;&gt;红色&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong><br>(1) 类选择器使用”.”进行标识，后面紧跟类名(自定义)</p>
-<p>(2) 长名称或词组可以使用 <strong>中横线</strong> 来为选择器命名</p>
-<p>(3) 不要使用纯数字、中文等命名，尽量使用英文字母</p>
-<p>(4) 命名要有意义</p>
-<p>(5) <strong>类命名规则:</strong> 查web文档</p>
-<h2 id="类选择器-多类名"><a href="#类选择器-多类名" class="headerlink" title="类选择器-多类名"></a>类选择器-多类名</h2><p>一个标签可以指定多个类名，从而达到更多的选择目的<br>1.使用多类名的方法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;red font20&quot;&gt;hh&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure><br>(1) 在标签class属性中写多个类名<br>(2) 多个类名中间必须用空格分开<br>(3) 每个标签就可以分别具有这些类名的样式</p>
-<h2 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h2><p>用”#”定义<br>基本语法<br> <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#id</span>选择器名称 &#123;</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">    CSS属性:属性值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>注意:</p>
-<p>1.id是唯一性元素，一个页面上 <strong>不允许两个元素具有相同的id</strong>。一个HTML元素，也只允许使用一个id，<strong>不允许以空格分隔的id列表</strong></p>
-<p>2.当不确定时，有多个html元素来使用该样式时，使用类选择器</p>
-<p>3.id选择器的优先级高于class选择器的优先级。</p>
-<h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><p>用”*”定义，表示选取页面中的所有元素（标签）<br>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    属性<span class="number">1</span>: 属性值<span class="number">1</span>;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意:</strong></p>
-<ul>
-<li>通配符选择器不需要调用，自动就给所有元素使用样式</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">基础选择器</th>
-<th style="text-align:left">作用</th>
-<th style="text-align:left">用法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">标签选择器</td>
-<td style="text-align:left">可以选出所有相同元素</td>
-<td style="text-align:left">p{color: red;}</td>
-</tr>
-<tr>
-<td style="text-align:left">类选择器</td>
-<td style="text-align:left">可以选出1个或者多个标签</td>
-<td style="text-align:left">.nav{color: red;}</td>
-</tr>
-<tr>
-<td style="text-align:left">id选择器</td>
-<td style="text-align:left">一次只能选择一个标签</td>
-<td style="text-align:left">#nav{color: red;}</td>
-</tr>
-<tr>
-<td style="text-align:left">通配符选择器</td>
-<td style="text-align:left">选择所有标签</td>
-<td style="text-align:left">*{color: red;}</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="CSS-复合选择器"><a href="#CSS-复合选择器" class="headerlink" title="CSS 复合选择器"></a>CSS 复合选择器</h1><blockquote>
-<p>复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的</p>
-</blockquote>
-<p>常用复合选择器包括：后代选择器，子选择器，并集选择器，伪类选择器等</p>
-<h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><p>可以选择 <strong>父类元素里面的子元素</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span> 元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h2><p>只能选择作为某元素最近一级子元素<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>&gt;元素<span class="number">2</span> &#123; 样式声明 &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h2><p>可以选择多组标签，同时为他们定义相同样式</p>
-<p>通过逗号，（和的意思）连接而成</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">元素<span class="number">1</span>,</span><br><span class="line">元素<span class="number">2</span> &#123; </span><br><span class="line">	样式声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>用于某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素</p>
-<p>伪类选择器书写用冒号:表示</p>
-<h3 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选择器元素</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">a:link</td>
-<td style="text-align:left">选择所有未被访问的链接</td>
-</tr>
-<tr>
-<td style="text-align:left">a:visited</td>
-<td style="text-align:left">选择所有已被访问的链接</td>
-</tr>
-<tr>
-<td style="text-align:left">a:hover</td>
-<td style="text-align:left">选择鼠标指针位于其上的链接</td>
-</tr>
-<tr>
-<td style="text-align:left">a:active</td>
-<td style="text-align:left">选择活动链接（鼠标按下未弹起的链接）</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意:</strong></p>
-<ul>
-<li>必须按照顺序LVHA，要不然会不起作用</li>
-<li>因为a链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。</li>
-</ul>
-<h3 id="focus-伪类选择器"><a href="#focus-伪类选择器" class="headerlink" title=":focus 伪类选择器"></a>:focus 伪类选择器</h3><p>:focus 伪类选择器用于选取获得焦点的表单元素。<br>焦点是光标，一般情况&lt;input&gt;类表单元素才能获取，因此这个选择器也主要针对于表单元素来说</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选择器</th>
-<th style="text-align:left">作用</th>
-<th style="text-align:left">符号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">后代选择器</td>
-<td style="text-align:left">选择父类里面的子元素</td>
-<td style="text-align:left">空格</td>
-</tr>
-<tr>
-<td style="text-align:left">子代选择器</td>
-<td style="text-align:left">选择父类里面 <strong>最近一级的子元素元素</strong></td>
-<td style="text-align:left">大于&gt;</td>
-</tr>
-<tr>
-<td style="text-align:left">并集选择器</td>
-<td style="text-align:left">选择某些样式相同的元素</td>
-<td style="text-align:left">逗号,</td>
-</tr>
-<tr>
-<td style="text-align:left">链接伪类选择器</td>
-<td style="text-align:left">选择不同状态的链接</td>
-<td style="text-align:left">冒号，重点记住a{}和a:hover</td>
-</tr>
-<tr>
-<td style="text-align:left">:focus伪类选择器</td>
-<td style="text-align:left">选择获得光标的表单</td>
-<td style="text-align:left">input:focus</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1391,6 +1631,139 @@ False
       </tags>
   </entry>
   <entry>
+    <title>1.线性结构</title>
+    <url>/2021/07/26/1-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h1><p>就是指把所有的节点用一根 <strong>直线</strong>  串起来</p>
+<h2 id="连续存储-数组"><a href="#连续存储-数组" class="headerlink" title="连续存储[数组]"></a>连续存储[数组]</h2><p>1.数组是元素类型相同，大小相等的一组数</p>
+<p><strong>优缺点</strong><br>优点：存取速度很快</p>
+<p>缺点：</p>
+<ul>
+<li>事先必须知道数组的长度</li>
+<li>插入删除元素很慢</li>
+<li>空间通常有限制</li>
+<li>需要大块连续的内存块</li>
+</ul>
+<h2 id="离散存储-链表"><a href="#离散存储-链表" class="headerlink" title="离散存储[链表]"></a>离散存储[链表]</h2><p>n个节点离散分配，彼此通过指针相连，每个节点只有一个前驱节点，每个节点只有一个后续节点，首节点没有前驱节点，尾节点没有后续节点</p>
+<p><strong>优缺点</strong><br>优点：</p>
+<ul>
+<li>空间没有限制</li>
+<li>插入删除元素很快</li>
+</ul>
+<p>缺点：存取的速度很慢</p>
+<p>专业术语：</p>
+<ul>
+<li>首节点：第一个有效节点</li>
+<li>尾节点：最后一个有效节点</li>
+<li>头节点：<ul>
+<li>头结点的数据类型和首节点类型一样</li>
+<li>第一个有效节点之前的那个节点</li>
+<li>头节点并不存放有效数据</li>
+<li>加头结点的目的是方便对链表的操作</li>
+</ul>
+</li>
+<li>头指针：指向头结点的指针变量</li>
+<li>尾指针：指向尾节点的指针变量</li>
+</ul>
+<p><strong>如果希望通过一个函数来对链表进行处理我们至少需要接受哪些参数？</strong><br>只需要一个参数：头指针</p>
+<p>因为我们可以通过头指针推算出链表的其他所有参数</p>
+<p><strong>创建链表,并完成一些功能</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data; <span class="comment">//数据域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span> <span class="comment">//指针域</span></span><br><span class="line">&#125;NODE,*PNODE; <span class="comment">//NODE等价于struct Node,  PNODE等价于struct Node *</span></span><br><span class="line"><span class="function">PNODE <span class="title">create_list</span><span class="params">(<span class="keyword">void</span>)</span></span>;<span class="comment">//创建链表</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//输出链表的值</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_empty</span><span class="params">(PNODE)</span></span>;<span class="comment">//判断链表是否为空</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//判断链表长度</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//链表排序</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;<span class="comment">//向链表中插入一个节点</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">delete_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span>,<span class="keyword">int</span>*)</span></span>;<span class="comment">//删除链表中的节点</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PNODE pHead = <span class="literal">NULL</span>;<span class="comment">//等价于struct Node*pHead = NULL;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">	pHead = create_list();<span class="comment">//create_list()功能：创建一个非循环单链表</span></span><br><span class="line">	traverse_list(pHead);</span><br><span class="line">	<span class="comment">//int len = length_list(pHead);</span></span><br><span class="line">	<span class="comment">//printf(&quot;链表长度为%d\n&quot;,len);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//insert_list(pHead,4,33);//插入节点</span></span><br><span class="line">	<span class="comment">//traverse_list(pHead);</span></span><br><span class="line">	<span class="keyword">if</span>(delete_list(pHead,<span class="number">4</span>,&amp;val))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;删除成功，你删除的元素是：%d\n&quot;</span>,val);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;删除失败，删除的元素不存在\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	traverse_list(pHead);</span><br><span class="line">	<span class="comment">//sort_list(pHead);</span></span><br><span class="line">	<span class="comment">//traverse_list(pHead);</span></span><br><span class="line">	<span class="keyword">if</span>(is_empty(pHead))</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;链表为空\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;链表不空\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">PNODE <span class="title">create_list</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len;<span class="comment">//用来存放有效节点的个数</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> val;<span class="comment">//用来临时存放用户输入的节点的值</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入节点个数：&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;len);</span><br><span class="line">    PNODE pHead = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">    <span class="comment">//分配了一个不存放有效数字的头节点</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">NULL</span> == pHead)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;分配失败，程序终止/n&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    PNODE pTail = pHead;</span><br><span class="line">    <span class="comment">//规定pTail永远指向尾节点，这里也就是指向头节点</span></span><br><span class="line">    pTail-&gt;pNext = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;请输入第%d节点的值：&quot;</span>,i+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;val);</span><br><span class="line">        PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">        <span class="keyword">if</span>(<span class="literal">NULL</span>==pNew)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;分配失败，程序终止\n&quot;</span>);</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        pNew-&gt;data = val;</span><br><span class="line">        pTail-&gt;pNext = pNew;<span class="comment">//这里是让Ptail指针域存放临时节点</span></span><br><span class="line">        pNew-&gt;pNext = <span class="literal">NULL</span>;<span class="comment">//清空临时节点的指针域</span></span><br><span class="line">        pTail = pNew;<span class="comment">//这里是pTail指针指向了pNew</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pHead;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PNODE p = pHead-&gt;pNext;</span><br><span class="line">    <span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,p-&gt;data);</span><br><span class="line">        p = p-&gt;pNext;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_empty</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pHead-&gt;pNext == <span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE p = pHead-&gt;pNext;</span><br><span class="line">	<span class="keyword">int</span> len=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		len++;</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j,t;</span><br><span class="line">	<span class="keyword">int</span> len = length_list(pHead);</span><br><span class="line">	PNODE p,q;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,p=pHead-&gt;pNext;i&lt;len<span class="number">-1</span>;i++,p=p-&gt;pNext)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=i+<span class="number">1</span>,q=p-&gt;pNext;j&lt;len;j++,q=q-&gt;pNext)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(p-&gt;data &gt; q-&gt;data)<span class="comment">//类似于数组中的：a[i]&gt;a[j]</span></span><br><span class="line">			&#123;</span><br><span class="line">				t=p-&gt;data;</span><br><span class="line">				p-&gt;data=q-&gt;data;</span><br><span class="line">				q-&gt;data=t;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在pHead所指向的链表的第pos个节点的前面插入一个新的节点，</span></span><br><span class="line"><span class="comment">//该节点的值是val,并且pos的值是从1开始</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	PNODE p =pHead;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (p !=<span class="literal">NULL</span> &amp;&amp; i&lt;pos<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;pos<span class="number">-1</span> || p==<span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	<span class="keyword">if</span>(pNew == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;动态分配内存失败\n&quot;</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	pNew-&gt;data=val;</span><br><span class="line">	PNODE q = p-&gt;pNext;</span><br><span class="line">	p-&gt;pNext=pNew;</span><br><span class="line">	pNew-&gt;pNext=q;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">delete_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> *pVal)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	PNODE p = pHead;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (p != <span class="literal">NULL</span> &amp;&amp; i&lt;pos<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;pNext;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;pos<span class="number">-1</span> || p==<span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	PNODE q = p-&gt;pNext;</span><br><span class="line">	*pVal = q-&gt;data;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//删除p节点后面的节点</span></span><br><span class="line">	p-&gt;pNext = p-&gt;pNext-&gt;pNext;</span><br><span class="line">	<span class="built_in">free</span>(q);</span><br><span class="line">	q = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>分类：</p>
+<ul>
+<li>单链表</li>
+<li>双链表：每一个节点有两个 <strong>指针域</strong></li>
+<li>循环列表:能通过任何一个节点找到其他所有的节点</li>
+<li>非循环链表</li>
+</ul>
+<p>算法：</p>
+<ul>
+<li>遍历</li>
+<li>查找</li>
+<li>清空</li>
+<li>销毁</li>
+<li>求长度</li>
+<li>排序</li>
+<li>删除节点<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>错误案例</span><br><span class="line">p-&gt;pNext=p-&gt;pNext-&gt;pNext;<span class="comment">//因为没有free所删除的节点，所以这样会让内存泄漏</span></span><br><span class="line"><span class="number">2.</span>正确写法</span><br><span class="line">r=p-&gt;pNext;<span class="comment">//r指向p后面的那个节点</span></span><br><span class="line">p-&gt;pNext=r-&gt;pNext;</span><br><span class="line"><span class="built_in">free</span>(r);<span class="comment">//必须</span></span><br></pre></td></tr></table></figure></li>
+<li>插入节点<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span></span><br><span class="line">r=p-&gt;pNext;<span class="comment">//先用r来存放p的指针域</span></span><br><span class="line">p-&gt;pNext=q;<span class="comment">//使p的指针域指向插入的q节点</span></span><br><span class="line">q-&gt;pNext=r;<span class="comment">//q的指针域就是原来p的指针域</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span></span><br><span class="line">q-&gt;pNext=p-&gt;pNext;<span class="comment">//插入的q的指针域替换成p的指针域</span></span><br><span class="line">p-&gt;pNext=q;<span class="comment">//p的指针域指向q</span></span><br></pre></td></tr></table></figure>
+<strong>算法:</strong></li>
+<li><p>狭义的算法是与数据的存储方式密切相关</p>
+</li>
+<li><p>广义的算法是与数据的存储方式无关</p>
+</li>
+<li><p>泛型：利用某种技术达到的效果就是：不同的存数方式，执行的操作是一样的</p>
+</li>
+</ul>
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><blockquote>
+<p>一种可以实现数据存储”先进后出”的存储结构，类似于箱子</p>
+</blockquote>
+<p>分类：</p>
+<ul>
+<li>静态栈</li>
+<li>动态栈<br>算法</li>
+<li>出栈</li>
+<li>入栈<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span></span><br><span class="line">&#125;NODE,* PNODE;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	PNODE pTop;</span><br><span class="line">	PNODE pBottom;</span><br><span class="line">&#125;STACK,* PSTACK;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(PSTACK,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(PSTACK,<span class="keyword">int</span> *)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	STACK S;<span class="comment">//内存里面有了两个变量pTop,pBottom</span></span><br><span class="line"></span><br><span class="line">	init(&amp;S);<span class="comment">//造出一个空栈</span></span><br><span class="line">	push(&amp;S,<span class="number">1</span>);<span class="comment">//压栈</span></span><br><span class="line">	push(&amp;S,<span class="number">2</span>);</span><br><span class="line">	traverse(&amp;S);</span><br><span class="line">	clear(&amp;S);</span><br><span class="line">	<span class="comment">//traverse(&amp;S);</span></span><br><span class="line">	<span class="keyword">if</span>(pop(&amp;S, &amp;val))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;出栈成功，出栈的元素是%d\n&quot;</span>,val);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;出栈失败\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	traverse(&amp;S);<span class="comment">//遍历输出</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	pS-&gt;pTop = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	<span class="keyword">if</span> (pS-&gt;pTop == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;动态内存分配失败\n&quot;</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		pS-&gt;pBottom = pS-&gt;pTop;</span><br><span class="line">		pS-&gt;pTop-&gt;pNext = <span class="literal">NULL</span>;<span class="comment">//pS-&gt;pBottom-&gt;pNext = NULL; </span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(PSTACK pS,<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	pNew-&gt;data = val;</span><br><span class="line">	pNew-&gt;pNext = pS-&gt;pTop;<span class="comment">//pS-&gt;pTop不能改成pS-&gt;pBottom</span></span><br><span class="line">	pS-&gt;pTop = pNew;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE p = pS-&gt;pTop;</span><br><span class="line">	<span class="keyword">while</span>(p != pS-&gt;pBottom)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,p-&gt;data);</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pS-&gt;pTop == pS-&gt;pBottom)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//把pS所指向的栈出栈一次，并把出栈的元素存入pVal形参所指向的变量中</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(PSTACK pS,<span class="keyword">int</span> * pVal)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(empty(pS))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		PNODE r =pS-&gt;pTop;</span><br><span class="line">		*pVal = r-&gt;data;</span><br><span class="line">		pS-&gt;pTop=r-&gt;pNext;</span><br><span class="line">		r = <span class="literal">NULL</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//clear清空</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(empty(pS))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		PNODE p = pS-&gt;pTop;	</span><br><span class="line">		<span class="keyword">while</span>(p != pS-&gt;pBottom)</span><br><span class="line">		&#123;</span><br><span class="line">			pS-&gt;pTop = p-&gt;pNext;</span><br><span class="line">			<span class="built_in">free</span>(p);</span><br><span class="line">			p = pS-&gt;pTop;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>应用</strong></p>
+<ul>
+<li>函数调用</li>
+<li>中断</li>
+<li>表达式求值</li>
+<li>内存分配</li>
+<li>缓冲处理</li>
+<li>迷宫</li>
+</ul>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><blockquote>
+<p>一种可以实现”先进先出”的存储结构</p>
+</blockquote>
+<p>分类：</p>
+<ul>
+<li><p>链式队列：用链表实现</p>
+</li>
+<li><p>静态队列：用数组实现</p>
+<ul>
+<li>静态队列通常都必须是循环队列</li>
+</ul>
+</li>
+</ul>
+<p>循环队列：</p>
+<ol>
+<li>静态队列为什么必须是循环队列</li>
+<li>循环队列需要几个参数来确定</li>
+<li>循环队列各个参数的含义</li>
+<li>循环队列入队伪算法</li>
+<li>循环队列出队伪算法</li>
+<li>如何判断循环队列是否为空</li>
+<li>如何判断循环队列是否已满</li>
+</ol>
+<p>队列顺序表示和实现</p>
+<p>设立一个队首指针front,一个队尾指针rear，分别指向队首和队尾元素</p>
+<ul>
+<li>初始化：front=rear=0</li>
+<li>入队：将新元素插入rear所指的位置，然后rear加1</li>
+<li>出队：删去front所指的元素，然后加1并返回被删元素</li>
+<li>队列为空：front == rear</li>
+<li>队满：rear == MAX_QUEUE_SIZE-1或front==rear</li>
+</ul>
+<p>在非空队列里，队首指针始终指向队头元素，而队尾指针始终指向队尾元素的下一位置。</p>
+<p>1.顺序队列中存在 <strong>“假溢出”</strong> 现象。</p>
+<p><strong>假溢出:</strong> 尾指针已超出向量空间的上界而不能做入队操作</p>
+<p><strong>解决方法</strong>：将队列分配的向量空间看成一个首尾相接的圆环，并称这种队列为循环队列<br>C呈现<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(i+<span class="number">1</span> == MAX_QUEUE_SIZE)</span><br><span class="line">	i=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	i++;</span><br></pre></td></tr></table></figure><br><strong>用模运算可简化为</strong>:i=(i+1) % MAX_QUEUE_SIZE;</p>
+<p>2.队空和队满时头尾指针均相等，<strong>无法通过front=rear来判断队列”空”，还是”满”</strong>。</p>
+<p><strong>解决方法</strong>:约定入队前，测试指针在循环意义下加1后是否等于头指针，若相等则认为队满。即：</p>
+<ul>
+<li>rear所指的单元始终为空</li>
+<li>循环队列为空：font=rear</li>
+<li>循环队列满：(rear+1) % MAX_QUEUE_SIZE=font</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_QUEUE_SIZE 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">queue</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> Queue_array[MAX_QUEUE_SIZE];</span><br><span class="line">	<span class="keyword">int</span> font;</span><br><span class="line">	<span class="keyword">int</span> rear;</span><br><span class="line">&#125;SqQueue;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.matplotlib入门</title>
     <url>/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h1><h2 id="常见API介绍"><a href="#常见API介绍" class="headerlink" title="常见API介绍"></a>常见API介绍</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
@@ -1835,6 +2208,227 @@ False
       </tags>
   </entry>
   <entry>
+    <title>2.CSS字体与文本属性</title>
+    <url>/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS 使用 <strong>font-famliy</strong> 属性定义 <strong>字体</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>CSS使用 <strong>font-size</strong> 属性定义字体 <strong>大小</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>px（像素）大小是页面最常用的单位</li>
+<li>由于不同浏览器默认显示的字号可能不一致，所以尽量给一个明确值大小，不要默认大小</li>
+</ul>
+<h2 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h2><p>用 <strong>font-weight</strong> 定义字体 <strong>粗细</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>:bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">默认值（不加粗）</td>
+</tr>
+<tr>
+<td style="text-align:left">bold</td>
+<td style="text-align:left">定义粗体</td>
+</tr>
+<tr>
+<td style="text-align:left">100-900</td>
+<td style="text-align:left">400=normal,700=bold  <strong>（后面不跟单位）</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p><strong>font-style</strong> 属性定义文字风格<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">默认值</td>
+</tr>
+<tr>
+<td style="text-align:left">italic</td>
+<td style="text-align:left">斜体</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="字体符复合属性"><a href="#字体符复合属性" class="headerlink" title="字体符复合属性"></a>字体符复合属性</h2><p>也就是字体属性的简洁书写形式</p>
+<p>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-famliy;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: italic <span class="number">700</span> <span class="number">16px</span>/<span class="number">20px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: <span class="number">16px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意</strong></p>
+<ul>
+<li><strong>不能更换顺序书写</strong></li>
+<li><strong>必须保留font-size和font-family属性</strong>，否则font属性不起作用,其他的可以省略</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">字号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">font-size</td>
+<td style="text-align:left">字号</td>
+</tr>
+<tr>
+<td style="text-align:left">font-family</td>
+<td style="text-align:left">字体</td>
+</tr>
+<tr>
+<td style="text-align:left">font-weight</td>
+<td style="text-align:left">字体粗细</td>
+</tr>
+<tr>
+<td style="text-align:left">font-style</td>
+<td style="text-align:left">字体样式</td>
+</tr>
+<tr>
+<td style="text-align:left">font</td>
+<td style="text-align:left">字体连写</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-文本属性"><a href="#CSS-文本属性" class="headerlink" title="CSS 文本属性"></a>CSS 文本属性</h1><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>color属性定义文本的颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">表示</th>
+<th style="text-align:left">属性值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">预定义的颜色值</td>
+<td style="text-align:left">red,green,blue,pink</td>
+</tr>
+<tr>
+<td style="text-align:left">十六进制</td>
+<td style="text-align:left">#ff000,#ff6600···</td>
+</tr>
+<tr>
+<td style="text-align:left">RGB代码</td>
+<td style="text-align:left">rgb(255,0,0)或rgb(100%,0%,0%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h2><p><strong>text-aligh</strong> 属性用于设置元素内文本内容的水平对齐方式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">左对齐（默认）</td>
+</tr>
+<tr>
+<td style="text-align:left">right</td>
+<td style="text-align:left">右对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">center</td>
+<td style="text-align:left">居中对齐</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本装饰"><a href="#文本装饰" class="headerlink" title="文本装饰"></a>文本装饰</h2><p><strong>text-decoration</strong> 属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">默认，可以用来取消链接的下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">underline</td>
+<td style="text-align:left">下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">overline</td>
+<td style="text-align:left">上划线</td>
+</tr>
+<tr>
+<td style="text-align:left">line-through</td>
+<td style="text-align:left">删除线</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p><strong>text-indent</strong> 属性用来指定文本的第一行的缩进，通常是将段落 <strong>首行缩进</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>em</strong> 单位表示相对单位，就是当前1个文字的大小</p>
+<h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><p><strong>line-height</strong> 属性用于设置行间的距离（行高），可以控制文字行与行之间的距离<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid;border-bottom:0;">
+上方距离
+</div></p>
+<p><div style="width: 100px;height: 40px;text-align: center;line-height: 40px;border:1px solid;border-bottom:0;">文字大小</div></p>
+<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid">下方距离</div><br></p>
+<p><strong>line-height</strong> 是文字上下方距离和文字大小之和</p>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">文本颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">text-align</td>
+<td style="text-align:left">文本对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">text-indent</td>
+<td style="text-align:left">文本缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">text-decoration</td>
+<td style="text-align:left">文本修饰</td>
+</tr>
+<tr>
+<td style="text-align:left">line-height</td>
+<td style="text-align:left">行高</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.行列式</title>
     <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
@@ -2228,227 +2822,6 @@ False
 <li>-o-:代表Opera私有属性</li>
 </ul>
 <p><strong>2.提倡写法</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">-moz-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-webkit-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-o-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.CSS字体与文本属性</title>
-    <url>/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS 使用 <strong>font-famliy</strong> 属性定义 <strong>字体</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>CSS使用 <strong>font-size</strong> 属性定义字体 <strong>大小</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>px（像素）大小是页面最常用的单位</li>
-<li>由于不同浏览器默认显示的字号可能不一致，所以尽量给一个明确值大小，不要默认大小</li>
-</ul>
-<h2 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h2><p>用 <strong>font-weight</strong> 定义字体 <strong>粗细</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>:bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">normal</td>
-<td style="text-align:left">默认值（不加粗）</td>
-</tr>
-<tr>
-<td style="text-align:left">bold</td>
-<td style="text-align:left">定义粗体</td>
-</tr>
-<tr>
-<td style="text-align:left">100-900</td>
-<td style="text-align:left">400=normal,700=bold  <strong>（后面不跟单位）</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p><strong>font-style</strong> 属性定义文字风格<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">normal</td>
-<td style="text-align:left">默认值</td>
-</tr>
-<tr>
-<td style="text-align:left">italic</td>
-<td style="text-align:left">斜体</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="字体符复合属性"><a href="#字体符复合属性" class="headerlink" title="字体符复合属性"></a>字体符复合属性</h2><p>也就是字体属性的简洁书写形式</p>
-<p>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-famliy;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: italic <span class="number">700</span> <span class="number">16px</span>/<span class="number">20px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: <span class="number">16px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意</strong></p>
-<ul>
-<li><strong>不能更换顺序书写</strong></li>
-<li><strong>必须保留font-size和font-family属性</strong>，否则font属性不起作用,其他的可以省略</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">字号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">font-size</td>
-<td style="text-align:left">字号</td>
-</tr>
-<tr>
-<td style="text-align:left">font-family</td>
-<td style="text-align:left">字体</td>
-</tr>
-<tr>
-<td style="text-align:left">font-weight</td>
-<td style="text-align:left">字体粗细</td>
-</tr>
-<tr>
-<td style="text-align:left">font-style</td>
-<td style="text-align:left">字体样式</td>
-</tr>
-<tr>
-<td style="text-align:left">font</td>
-<td style="text-align:left">字体连写</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="CSS-文本属性"><a href="#CSS-文本属性" class="headerlink" title="CSS 文本属性"></a>CSS 文本属性</h1><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>color属性定义文本的颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">表示</th>
-<th style="text-align:left">属性值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">预定义的颜色值</td>
-<td style="text-align:left">red,green,blue,pink</td>
-</tr>
-<tr>
-<td style="text-align:left">十六进制</td>
-<td style="text-align:left">#ff000,#ff6600···</td>
-</tr>
-<tr>
-<td style="text-align:left">RGB代码</td>
-<td style="text-align:left">rgb(255,0,0)或rgb(100%,0%,0%)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h2><p><strong>text-aligh</strong> 属性用于设置元素内文本内容的水平对齐方式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">left</td>
-<td style="text-align:left">左对齐（默认）</td>
-</tr>
-<tr>
-<td style="text-align:left">right</td>
-<td style="text-align:left">右对齐</td>
-</tr>
-<tr>
-<td style="text-align:left">center</td>
-<td style="text-align:left">居中对齐</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本装饰"><a href="#文本装饰" class="headerlink" title="文本装饰"></a>文本装饰</h2><p><strong>text-decoration</strong> 属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">none</td>
-<td style="text-align:left">默认，可以用来取消链接的下划线</td>
-</tr>
-<tr>
-<td style="text-align:left">underline</td>
-<td style="text-align:left">下划线</td>
-</tr>
-<tr>
-<td style="text-align:left">overline</td>
-<td style="text-align:left">上划线</td>
-</tr>
-<tr>
-<td style="text-align:left">line-through</td>
-<td style="text-align:left">删除线</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p><strong>text-indent</strong> 属性用来指定文本的第一行的缩进，通常是将段落 <strong>首行缩进</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>em</strong> 单位表示相对单位，就是当前1个文字的大小</p>
-<h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><p><strong>line-height</strong> 属性用于设置行间的距离（行高），可以控制文字行与行之间的距离<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid;border-bottom:0;">
-上方距离
-</div></p>
-<p><div style="width: 100px;height: 40px;text-align: center;line-height: 40px;border:1px solid;border-bottom:0;">文字大小</div></p>
-<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid">下方距离</div><br></p>
-<p><strong>line-height</strong> 是文字上下方距离和文字大小之和</p>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">表示</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">color</td>
-<td style="text-align:left">文本颜色</td>
-</tr>
-<tr>
-<td style="text-align:left">text-align</td>
-<td style="text-align:left">文本对齐</td>
-</tr>
-<tr>
-<td style="text-align:left">text-indent</td>
-<td style="text-align:left">文本缩进</td>
-</tr>
-<tr>
-<td style="text-align:left">text-decoration</td>
-<td style="text-align:left">文本修饰</td>
-</tr>
-<tr>
-<td style="text-align:left">line-height</td>
-<td style="text-align:left">行高</td>
-</tr>
-</tbody>
-</table>
-</div>
 ]]></content>
       <categories>
         <category>CSS</category>
@@ -3021,6 +3394,368 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>0.数据结构与算法知识储备</title>
+    <url>/2021/07/25/3-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="/2021/07/25/3-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-C/frame.png"></p>
+<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><blockquote>
+<p>能输入计算机且能被计算机处理的 <strong>各种符号的集合</strong></p>
+</blockquote>
+<ul>
+<li>是信息的载体</li>
+<li>是对客观事物符号化的表示</li>
+<li>能够被计算机识别，存储和加工</li>
+</ul>
+<p>包括：</p>
+<ul>
+<li>数值型数据：整数、实数等</li>
+<li>非数值型数据：文字、图像、图形、声音等</li>
+</ul>
+<h2 id="数据元素"><a href="#数据元素" class="headerlink" title="数据元素"></a>数据元素</h2><ul>
+<li>是数据的 <strong>基本单位</strong>,在计算机程序中通常作为一个整体进行考虑和处理。</li>
+<li>也简称为元素，或称为记录、结点或顶点。</li>
+<li>一个 <strong>数据元素</strong> 可由若干个 <strong>数据项</strong> 组成</li>
+</ul>
+<h2 id="数据项"><a href="#数据项" class="headerlink" title="数据项"></a>数据项</h2><ul>
+<li>构成数据元素的不可分割的 <strong>最小单位</strong></li>
+</ul>
+<h2 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h2><ul>
+<li>是 <strong>性质相同的数据元素的集合</strong>，是数据的一个子集</li>
+</ul>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><blockquote>
+<p><strong>数据结构</strong> 是一门研究非数值计算的程序设计中计算机的操作对象以及它们之间的关系和操作的学科</p>
+</blockquote>
+<p>数据元素不是孤立存在的，它们之间存在着某种关系，数据元素相互之间的关系称为 <strong>结构</strong></p>
+<p>数据结构是指 <strong>相互之间存在一种或多种特定关系</strong> 的数据元素集合</p>
+<p>数据结构包括以下三个方面的内容：</p>
+<ol>
+<li>数据元素之间的逻辑关系，也称为逻辑结构</li>
+<li>数据元素及其关系在计算机内存中的表示（又称为映像），称为数据的 <strong>物理结构</strong> 或数据的 <strong>存储结构</strong></li>
+<li>数据的 <strong>运算和实现</strong>，即对数据元素可以施加的操作以及这些操作在相应的存储结构上的实现</li>
+</ol>
+<h2 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h2><ul>
+<li>描述数据元素之间的逻辑关系</li>
+<li>与数据的存储无关，独立于计算机</li>
+<li>是从具体问题抽象出来的数学模型</li>
+</ul>
+<p><strong>种类</strong><br><strong>划分方法一</strong></p>
+<ul>
+<li><strong>线性结构</strong><ul>
+<li>有且仅有一个开始和一个终端结点，并且所有结点最多只有一个直接前驱和一个直接后继。如：线性表、栈、队列、串</li>
+</ul>
+</li>
+<li><strong>非线性结构</strong><ul>
+<li>一个节点可能有多个直接前驱和直接后继。如树、图</li>
+</ul>
+</li>
+</ul>
+<p><strong>划分方法二</strong><br>(1)<strong>集合结构</strong>：结构中的数据元素之间除了 <strong>同属于一个集合</strong> 的关系外，无其他任何关系</p>
+<p>(2)<strong>线性结构</strong>：结构中的数据元素之间存在着 <strong>一对一</strong> 的线性关系</p>
+<p>(3)<strong>树形结构</strong>：结构中的数据元素之间存在 <strong>一对多</strong> 的层次关系</p>
+<p>(4)<strong>图状结构</strong> 或 <strong>网状结构</strong>：结构中的数据元素之间存在着 <strong>多对多</strong> 的任意关系</p>
+<h2 id="物理结构（存储结构）"><a href="#物理结构（存储结构）" class="headerlink" title="物理结构（存储结构）"></a>物理结构（存储结构）</h2><ul>
+<li>数据元素及其关系在计算机存储器中的结构（存储方式）</li>
+<li>是数据结构在计算机中的表示</li>
+</ul>
+<p><strong>种类</strong></p>
+<ul>
+<li>顺序存储结构<ul>
+<li>用一组 <strong>连续</strong> 的存储单元 <strong>依次</strong> 存储数据元素，数据元素之间的逻辑关系由元素的 <strong>存储位置</strong> 来表示</li>
+<li>C语言中用数组来实现顺序存储结构</li>
+</ul>
+</li>
+<li>链式存储结构<ul>
+<li>用一组 <strong>任意</strong> 的存储单元存储数据元素，数据元素之间的逻辑关系用 <strong>指针</strong> 来表示</li>
+<li>C语言中用指针来实现链式存储结构</li>
+</ul>
+</li>
+<li>索引存储结构<ul>
+<li>在存储节点信息的同时，还建立附加的 <strong>索引表</strong></li>
+<li>索引表中的每一项称为一个 <strong>索引项</strong></li>
+<li>索引项的 <strong>一般形式</strong> 是：(关键字，地址)</li>
+<li>关键字是能 <strong>唯一标识</strong> 一个结点的那些数据项</li>
+<li>若每个节点在索引表中都有一个索引项，则该索引表称之为 <strong>稠密索引</strong>。若一组结点在索引表中只对应一个索引项，则该索引表称之为 <strong>稀疏索引</strong></li>
+</ul>
+</li>
+<li>散列存储结构<ul>
+<li>根据结点的关键字直接计算出该节点的存储地址</li>
+</ul>
+</li>
+</ul>
+<h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><ul>
+<li>存储结构是逻辑关系的映像与元素本身的映像</li>
+<li>逻辑结构是数据结构的抽象，存储结构是数据结构的实现</li>
+</ul>
+<h2 id="数据类型和抽象数据类型"><a href="#数据类型和抽象数据类型" class="headerlink" title="数据类型和抽象数据类型"></a>数据类型和抽象数据类型</h2><h3 id="数据类型-Data-Type"><a href="#数据类型-Data-Type" class="headerlink" title="数据类型(Data Type)"></a>数据类型(Data Type)</h3><blockquote>
+<p>定义：数据类型是一组性质相同的 <strong>值的集合</strong> 以及定义这个集合上的 <strong>一组操作</strong> 的总称</p>
+</blockquote>
+<p><strong>数据类型 = 值的集合 + 值集合上的一组操作</strong> </p>
+<ul>
+<li>在使用高级程序设计语言编写程序时，必须对程序中出现的每个变量、常量或表达式，明确说明它们所属的 <strong>数据类型</strong><ul>
+<li>例如，C语言中：<ul>
+<li>提供int,char,float,double等基本数据类型</li>
+<li>数组、结构、共用体、枚举等构造数据类型</li>
+<li>还有指针、空(void)类型</li>
+<li>用户也可用typedef自己定义数据类型</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>一些最基本数据结构可以用数据类型来实现，如数组、字符串等；</li>
+<li>而另一些常用的数据结构。如栈、队列、树、图等，不能直接用数据类型来表示。</li>
+</ul>
+<p>数据类型的作用</p>
+<ul>
+<li>约束变量或常量的取值范围</li>
+<li>约束变量或常量的操作</li>
+</ul>
+<h3 id="抽象数据类型-Abstract-Data-Type-ADT"><a href="#抽象数据类型-Abstract-Data-Type-ADT" class="headerlink" title="抽象数据类型(Abstract Data Type,ADT)"></a>抽象数据类型(Abstract Data Type,ADT)</h3><blockquote>
+<p>是指一个数学模型以及定义在此数学模型上的一组操作</p>
+</blockquote>
+<ul>
+<li>由用户定义，从问题抽象出 <strong>数据模型</strong>（逻辑结构）</li>
+<li>还包括定义在数据模型上的一组 <strong>抽象运算</strong>（相关操作）</li>
+<li>不考虑计算机内的具体存储结构与运算的具体实现算法</li>
+</ul>
+<p>抽象数据类型 = 数据的逻辑结构 + 抽象运算</p>
+<p><strong>抽象数据类型的形式定义</strong><br>抽象数据类型可用（D,S,P）<strong>三元组</strong> 表示</p>
+<p>其中：D是数据对象；S是D上的关系集；P是对D的基本操作集</p>
+<p>一个抽象数据类型的 <strong>定义格式</strong> 如下<br><figure class="highlight bnf"><table><tr><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">	数据对象：<span class="attribute">&lt;数据对象的定义&gt;</span></span><br><span class="line">	数据关系：<span class="attribute">&lt;数据关系的定义&gt;</span></span><br><span class="line">	基本操作：<span class="attribute">&lt;基本操作的定义&gt;</span></span><br><span class="line">&#125;ADT 抽象数据类型名</span><br></pre></td></tr></table></figure><br>其中：</p>
+<ul>
+<li>数据对象、数据关系的定义用伪代码描述</li>
+<li>基本操作的定义格式为：<ul>
+<li>基本操作名：（参数表）</li>
+<li>初始条件：（初始条件描述）</li>
+<li>操作结果：（操作结果描述）</li>
+</ul>
+</li>
+</ul>
+<p><strong>基本操作</strong> 定义格式说明</p>
+<p>参数表：</p>
+<ul>
+<li>赋值参数 只为操作提供输入值</li>
+<li>引用参数以&amp;打头，除可提供输入值外，还将返回操作结果 </li>
+</ul>
+<p>初始条件：描述操作执行之前数据结构和参数应满足的条件，若不满足，则操作失败，并返回相应出错信息。若初始条件为空，则省略之。</p>
+<p>操作结果：说明操作完成之后，数据结构的变化状况和应返回的结果</p>
+<p><strong>抽象数据类型如何实现</strong></p>
+<ul>
+<li>抽象数据类型可以通过固有的数据类型（如整型、实型、字符型等）来表示和实现<ul>
+<li>即利用处理器中已存在的数据类型来说明新的结构，用已经实现的操作来组合新的操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/2021/07/25/3-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-C/知识总结.png"></p>
+<h1 id="算法和算法分析"><a href="#算法和算法分析" class="headerlink" title="算法和算法分析"></a>算法和算法分析</h1><blockquote>
+<p>算法的定义：对特定问题 <strong>求解方法和步骤</strong> 的一种描述，它是 <strong>指令</strong> 的有限 <strong>序列</strong>。其中每个指令表示一个或多个操作 </p>
+</blockquote>
+<h2 id="算法的描述"><a href="#算法的描述" class="headerlink" title="算法的描述"></a>算法的描述</h2><ul>
+<li>自然语言：英语、中文</li>
+<li>流程图：传统流程图、NS流程图</li>
+<li>伪代码：类语言：类C语言</li>
+</ul>
+<h2 id="算法与程序"><a href="#算法与程序" class="headerlink" title="算法与程序"></a>算法与程序</h2><ul>
+<li><strong>算法</strong> 是解决问题的一种方法或一个过程，考虑如何将输入转换成输出，一个问题可以有多种算法</li>
+<li><strong>程序</strong> 是用某种程序设计语言对算法的具体实现。</li>
+</ul>
+<p><strong>程序 = 数据结构 + 算法</strong></p>
+<ul>
+<li>数据结构通过算法实现操作</li>
+<li>算法根据数据结构设计程序</li>
+</ul>
+<h2 id="算法特性"><a href="#算法特性" class="headerlink" title="算法特性"></a>算法特性</h2><ul>
+<li>有穷性：一个算法必须总是 在执行有穷步之后结束，且每一步都在又穷时间内完成</li>
+<li>确定性：算法中的每一条指令必须有确切的含义，没有二义性，在任何条件下，只有唯一的一条执行路径，即对于相同的输入只能得到相同的输出</li>
+<li>可行性：算法是可执行的，算法描述的操作可以通过已经实现的基本操作执行有限次来实现。</li>
+<li>输入：一个算法有零个或多个输入</li>
+<li>输入：一个算法有一个或多个输出</li>
+</ul>
+<h2 id="算法设计的要求"><a href="#算法设计的要求" class="headerlink" title="算法设计的要求"></a>算法设计的要求</h2><ul>
+<li>正确性</li>
+<li>可读性</li>
+<li>健壮性</li>
+<li>高效性</li>
+</ul>
+<h2 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h2><blockquote>
+<p>目的是看算法实际是否可行，并在同一问题存在多的算法时可进行性能上的比较，以便从中挑选出比较优的算法</p>
+</blockquote>
+<p>一个好的算法首先要具备正确性，然后是健壮性，可读性，在几个方面都满足的情况下，主要考虑 <strong>算法的效率</strong>,通过算法的效率高低来评判不同算法的优劣程度</p>
+<p>效率从两方面考虑：</p>
+<ol>
+<li><strong>时间效率</strong>：指的是算法耗费的 <strong>时间</strong></li>
+<li><strong>空间效率</strong>：指的是算法执行过程中所耗费的 <strong>存储空间</strong></li>
+</ol>
+<p><strong>时间效率和空间效率有时候是矛盾的</strong></p>
+<h3 id="算法时间效率的度量"><a href="#算法时间效率的度量" class="headerlink" title="算法时间效率的度量"></a>算法时间效率的度量</h3><p>算法的时间效率可以依据该算法编制的程序在计算机上执行 <strong>所消耗的时间</strong> 来度量</p>
+<p><strong>方法</strong></p>
+<ul>
+<li>事后统计<ul>
+<li>将算法实现，测算其时间和空间开销</li>
+<li>缺点：编写程序实现算法将花费较多的时间和精力；所得到实验结果依赖于计算机的软硬件等环境因素，掩盖算法本身的优劣</li>
+</ul>
+</li>
+<li>事前分析<ul>
+<li>对算法所消耗的资源的一种估算方法</li>
+</ul>
+</li>
+</ul>
+<p><strong>事前分析方法</strong></p>
+<ul>
+<li>一个算法的运行时间是指一个算法在计算机上运行所耗费的时间大致可以等于计算机执行一种简单的操作（如赋值、比较、移动等）所需的 <strong>时间</strong> 与算法中进行的简单操作 <strong>次数乘积</strong><br><strong>算法运行时间 = 一个简单操作所需的时间 × 简单操作次数</strong></li>
+<li>也即算法中每条语句的时间之和<br>  算法运行时间 = &sum; 每条语句的执行次数 &times; 该语句执行一次所需的时间</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++&gt;)<span class="comment">//n+1次</span></span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++&gt;)&#123;<span class="comment">//n(n+1)次</span></span><br><span class="line">		c[i][j]=<span class="number">0</span>;<span class="comment">//n*n次</span></span><br><span class="line">		<span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;n;k++)<span class="comment">//n*n*(n+1)次</span></span><br><span class="line">			c[i][j]=c[i][j]+a[i][k]*b[k][j];<span class="comment">//n*n*n次</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>我们把算法所耗费的时间定义为该算法中 <strong>每条语句的频度之和</strong>，则上述算法的时间消耗T(n)为：<br>$T(n)=2n^3+3n^2+2n+1$</li>
+</ul>
+<ul>
+<li>为了便于比较不同算法的时间效率，我们仅比较它们的数量级</li>
+</ul>
+<p>所以用时间复杂度表示,则$T(n)$可记作<br>$T(n)=O(n^3)$</p>
+<h3 id="算法空间效率的度量"><a href="#算法空间效率的度量" class="headerlink" title="算法空间效率的度量"></a>算法空间效率的度量</h3><blockquote>
+<p><strong>空间复杂度</strong>：算法所需存储空间的度量</p>
+</blockquote>
+<p>记作：$S(n)=O(f(n))$</p>
+<p>其中 <strong>n</strong> 为问题的规模（或大小）</p>
+<ul>
+<li>算法要占据的空间<ul>
+<li>算法本身要占据的空间，输入/输出，指令，常数，变量等 </li>
+<li>算法要使用的 <strong>辅助空间</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>算法一</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n/<span class="number">2</span>;i++)&#123;</span><br><span class="line">	t = a[i];</span><br><span class="line">	a[i] = a[n-i<span class="number">-1</span>];</span><br><span class="line">	a[n-i<span class="number">-1</span>] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>空间复杂度$S(n)=O(1)$</p>
+<p><strong>算法二</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	b[i]=a[n-i<span class="number">-1</span>];</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	a[i]=b[i];</span><br></pre></td></tr></table></figure><br>空间复杂度$S(n)=O(n)$</p>
+<h1 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h1><p>就是指把所有的节点用一根 <strong>直线</strong>  串起来</p>
+<h2 id="连续存储-数组"><a href="#连续存储-数组" class="headerlink" title="连续存储[数组]"></a>连续存储[数组]</h2><p>1.数组是元素类型相同，大小相等的一组数</p>
+<p><strong>优缺点</strong><br>优点：存取速度很快</p>
+<p>缺点：</p>
+<ul>
+<li>事先必须知道数组的长度</li>
+<li>插入删除元素很慢</li>
+<li>空间通常有限制</li>
+<li>需要大块连续的内存块</li>
+</ul>
+<h2 id="离散存储-链表"><a href="#离散存储-链表" class="headerlink" title="离散存储[链表]"></a>离散存储[链表]</h2><p>n个节点离散分配，彼此通过指针相连，每个节点只有一个前驱节点，每个节点只有一个后续节点，首节点没有前驱节点，尾节点没有后续节点</p>
+<p><strong>优缺点</strong><br>优点：</p>
+<ul>
+<li>空间没有限制</li>
+<li>插入删除元素很快</li>
+</ul>
+<p>缺点：存取的速度很慢</p>
+<p>专业术语：</p>
+<ul>
+<li>首节点：第一个有效节点</li>
+<li>尾节点：最后一个有效节点</li>
+<li>头节点：<ul>
+<li>头结点的数据类型和首节点类型一样</li>
+<li>第一个有效节点之前的那个节点</li>
+<li>头节点并不存放有效数据</li>
+<li>加头结点的目的是方便对链表的操作</li>
+</ul>
+</li>
+<li>头指针：指向头结点的指针变量</li>
+<li>尾指针：指向尾节点的指针变量</li>
+</ul>
+<p><strong>如果希望通过一个函数来对链表进行处理我们至少需要接受哪些参数？</strong><br>只需要一个参数：头指针</p>
+<p>因为我们可以通过头指针推算出链表的其他所有参数</p>
+<p><strong>创建链表,并完成一些功能</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data; <span class="comment">//数据域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span> <span class="comment">//指针域</span></span><br><span class="line">&#125;NODE,*PNODE; <span class="comment">//NODE等价于struct Node,  PNODE等价于struct Node *</span></span><br><span class="line"><span class="function">PNODE <span class="title">create_list</span><span class="params">(<span class="keyword">void</span>)</span></span>;<span class="comment">//创建链表</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//输出链表的值</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_empty</span><span class="params">(PNODE)</span></span>;<span class="comment">//判断链表是否为空</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//判断链表长度</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//链表排序</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;<span class="comment">//向链表中插入一个节点</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">delete_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span>,<span class="keyword">int</span>*)</span></span>;<span class="comment">//删除链表中的节点</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PNODE pHead = <span class="literal">NULL</span>;<span class="comment">//等价于struct Node*pHead = NULL;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">	pHead = create_list();<span class="comment">//create_list()功能：创建一个非循环单链表</span></span><br><span class="line">	traverse_list(pHead);</span><br><span class="line">	<span class="comment">//int len = length_list(pHead);</span></span><br><span class="line">	<span class="comment">//printf(&quot;链表长度为%d\n&quot;,len);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//insert_list(pHead,4,33);//插入节点</span></span><br><span class="line">	<span class="comment">//traverse_list(pHead);</span></span><br><span class="line">	<span class="keyword">if</span>(delete_list(pHead,<span class="number">4</span>,&amp;val))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;删除成功，你删除的元素是：%d\n&quot;</span>,val);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;删除失败，删除的元素不存在\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	traverse_list(pHead);</span><br><span class="line">	<span class="comment">//sort_list(pHead);</span></span><br><span class="line">	<span class="comment">//traverse_list(pHead);</span></span><br><span class="line">	<span class="keyword">if</span>(is_empty(pHead))</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;链表为空\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;链表不空\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">PNODE <span class="title">create_list</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len;<span class="comment">//用来存放有效节点的个数</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> val;<span class="comment">//用来临时存放用户输入的节点的值</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入节点个数：&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;len);</span><br><span class="line">    PNODE pHead = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">    <span class="comment">//分配了一个不存放有效数字的头节点</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">NULL</span> == pHead)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;分配失败，程序终止/n&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    PNODE pTail = pHead;</span><br><span class="line">    <span class="comment">//规定pTail永远指向尾节点，这里也就是指向头节点</span></span><br><span class="line">    pTail-&gt;pNext = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;请输入第%d节点的值：&quot;</span>,i+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;val);</span><br><span class="line">        PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">        <span class="keyword">if</span>(<span class="literal">NULL</span>==pNew)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;分配失败，程序终止\n&quot;</span>);</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        pNew-&gt;data = val;</span><br><span class="line">        pTail-&gt;pNext = pNew;<span class="comment">//这里是让Ptail指针域存放临时节点</span></span><br><span class="line">        pNew-&gt;pNext = <span class="literal">NULL</span>;<span class="comment">//清空临时节点的指针域</span></span><br><span class="line">        pTail = pNew;<span class="comment">//这里是pTail指针指向了pNew</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pHead;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PNODE p = pHead-&gt;pNext;</span><br><span class="line">    <span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,p-&gt;data);</span><br><span class="line">        p = p-&gt;pNext;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_empty</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pHead-&gt;pNext == <span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE p = pHead-&gt;pNext;</span><br><span class="line">	<span class="keyword">int</span> len=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		len++;</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j,t;</span><br><span class="line">	<span class="keyword">int</span> len = length_list(pHead);</span><br><span class="line">	PNODE p,q;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,p=pHead-&gt;pNext;i&lt;len<span class="number">-1</span>;i++,p=p-&gt;pNext)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=i+<span class="number">1</span>,q=p-&gt;pNext;j&lt;len;j++,q=q-&gt;pNext)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(p-&gt;data &gt; q-&gt;data)<span class="comment">//类似于数组中的：a[i]&gt;a[j]</span></span><br><span class="line">			&#123;</span><br><span class="line">				t=p-&gt;data;</span><br><span class="line">				p-&gt;data=q-&gt;data;</span><br><span class="line">				q-&gt;data=t;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在pHead所指向的链表的第pos个节点的前面插入一个新的节点，</span></span><br><span class="line"><span class="comment">//该节点的值是val,并且pos的值是从1开始</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	PNODE p =pHead;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (p !=<span class="literal">NULL</span> &amp;&amp; i&lt;pos<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;pos<span class="number">-1</span> || p==<span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	<span class="keyword">if</span>(pNew == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;动态分配内存失败\n&quot;</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	pNew-&gt;data=val;</span><br><span class="line">	PNODE q = p-&gt;pNext;</span><br><span class="line">	p-&gt;pNext=pNew;</span><br><span class="line">	pNew-&gt;pNext=q;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">delete_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> *pVal)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	PNODE p = pHead;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (p != <span class="literal">NULL</span> &amp;&amp; i&lt;pos<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;pNext;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;pos<span class="number">-1</span> || p==<span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	PNODE q = p-&gt;pNext;</span><br><span class="line">	*pVal = q-&gt;data;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//删除p节点后面的节点</span></span><br><span class="line">	p-&gt;pNext = p-&gt;pNext-&gt;pNext;</span><br><span class="line">	<span class="built_in">free</span>(q);</span><br><span class="line">	q = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>分类：</p>
+<ul>
+<li>单链表</li>
+<li>双链表：每一个节点有两个 <strong>指针域</strong></li>
+<li>循环列表:能通过任何一个节点找到其他所有的节点</li>
+<li>非循环链表</li>
+</ul>
+<p>算法：</p>
+<ul>
+<li>遍历</li>
+<li>查找</li>
+<li>清空</li>
+<li>销毁</li>
+<li>求长度</li>
+<li>排序</li>
+<li>删除节点<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>错误案例</span><br><span class="line">p-&gt;pNext=p-&gt;pNext-&gt;pNext;<span class="comment">//因为没有free所删除的节点，所以这样会让内存泄漏</span></span><br><span class="line"><span class="number">2.</span>正确写法</span><br><span class="line">r=p-&gt;pNext;<span class="comment">//r指向p后面的那个节点</span></span><br><span class="line">p-&gt;pNext=r-&gt;pNext;</span><br><span class="line"><span class="built_in">free</span>(r);<span class="comment">//必须</span></span><br></pre></td></tr></table></figure></li>
+<li>插入节点<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span></span><br><span class="line">r=p-&gt;pNext;<span class="comment">//先用r来存放p的指针域</span></span><br><span class="line">p-&gt;pNext=q;<span class="comment">//使p的指针域指向插入的q节点</span></span><br><span class="line">q-&gt;pNext=r;<span class="comment">//q的指针域就是原来p的指针域</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span></span><br><span class="line">q-&gt;pNext=p-&gt;pNext;<span class="comment">//插入的q的指针域替换成p的指针域</span></span><br><span class="line">p-&gt;pNext=q;<span class="comment">//p的指针域指向q</span></span><br></pre></td></tr></table></figure>
+<strong>算法:</strong></li>
+<li><p>狭义的算法是与数据的存储方式密切相关</p>
+</li>
+<li><p>广义的算法是与数据的存储方式无关</p>
+</li>
+<li><p>泛型：利用某种技术达到的效果就是：不同的存数方式，执行的操作是一样的</p>
+</li>
+</ul>
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><blockquote>
+<p>一种可以实现数据存储”先进后出”的存储结构，类似于箱子</p>
+</blockquote>
+<p>分类：</p>
+<ul>
+<li>静态栈</li>
+<li>动态栈<br>算法</li>
+<li>出栈</li>
+<li>入栈<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span></span><br><span class="line">&#125;NODE,* PNODE;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	PNODE pTop;</span><br><span class="line">	PNODE pBottom;</span><br><span class="line">&#125;STACK,* PSTACK;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(PSTACK,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(PSTACK,<span class="keyword">int</span> *)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	STACK S;<span class="comment">//内存里面有了两个变量pTop,pBottom</span></span><br><span class="line"></span><br><span class="line">	init(&amp;S);<span class="comment">//造出一个空栈</span></span><br><span class="line">	push(&amp;S,<span class="number">1</span>);<span class="comment">//压栈</span></span><br><span class="line">	push(&amp;S,<span class="number">2</span>);</span><br><span class="line">	traverse(&amp;S);</span><br><span class="line">	clear(&amp;S);</span><br><span class="line">	<span class="comment">//traverse(&amp;S);</span></span><br><span class="line">	<span class="keyword">if</span>(pop(&amp;S, &amp;val))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;出栈成功，出栈的元素是%d\n&quot;</span>,val);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;出栈失败\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	traverse(&amp;S);<span class="comment">//遍历输出</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	pS-&gt;pTop = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	<span class="keyword">if</span> (pS-&gt;pTop == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;动态内存分配失败\n&quot;</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		pS-&gt;pBottom = pS-&gt;pTop;</span><br><span class="line">		pS-&gt;pTop-&gt;pNext = <span class="literal">NULL</span>;<span class="comment">//pS-&gt;pBottom-&gt;pNext = NULL; </span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(PSTACK pS,<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	pNew-&gt;data = val;</span><br><span class="line">	pNew-&gt;pNext = pS-&gt;pTop;<span class="comment">//pS-&gt;pTop不能改成pS-&gt;pBottom</span></span><br><span class="line">	pS-&gt;pTop = pNew;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE p = pS-&gt;pTop;</span><br><span class="line">	<span class="keyword">while</span>(p != pS-&gt;pBottom)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,p-&gt;data);</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pS-&gt;pTop == pS-&gt;pBottom)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//把pS所指向的栈出栈一次，并把出栈的元素存入pVal形参所指向的变量中</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(PSTACK pS,<span class="keyword">int</span> * pVal)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(empty(pS))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		PNODE r =pS-&gt;pTop;</span><br><span class="line">		*pVal = r-&gt;data;</span><br><span class="line">		pS-&gt;pTop=r-&gt;pNext;</span><br><span class="line">		r = <span class="literal">NULL</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//clear清空</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(empty(pS))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		PNODE p = pS-&gt;pTop;	</span><br><span class="line">		<span class="keyword">while</span>(p != pS-&gt;pBottom)</span><br><span class="line">		&#123;</span><br><span class="line">			pS-&gt;pTop = p-&gt;pNext;</span><br><span class="line">			<span class="built_in">free</span>(p);</span><br><span class="line">			p = pS-&gt;pTop;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>应用</strong></p>
+<ul>
+<li>函数调用</li>
+<li>中断</li>
+<li>表达式求值</li>
+<li>内存分配</li>
+<li>缓冲处理</li>
+<li>迷宫</li>
+</ul>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><blockquote>
+<p>一种可以实现”先进先出”的存储结构</p>
+</blockquote>
+<p>分类：</p>
+<ul>
+<li><p>链式队列：用链表实现</p>
+</li>
+<li><p>静态队列：用数组实现</p>
+<ul>
+<li>静态队列通常都必须是循环队列</li>
+</ul>
+</li>
+</ul>
+<p>循环队列：</p>
+<ol>
+<li>静态队列为什么必须是循环队列</li>
+<li>循环队列需要几个参数来确定</li>
+<li>循环队列各个参数的含义</li>
+<li>循环队列入队伪算法</li>
+<li>循环队列出队伪算法</li>
+<li>如何判断循环队列是否为空</li>
+<li>如何判断循环队列是否已满</li>
+</ol>
+<p>队列顺序表示和实现</p>
+<p>设立一个队首指针front,一个队尾指针rear，分别指向队首和队尾元素</p>
+<ul>
+<li>初始化：front=rear=0</li>
+<li>入队：将新元素插入rear所指的位置，然后rear加1</li>
+<li>出队：删去front所指的元素，然后加1并返回被删元素</li>
+<li>队列为空：front == rear</li>
+<li>队满：rear == MAX_QUEUE_SIZE-1或front==rear</li>
+</ul>
+<p>在非空队列里，队首指针始终指向队头元素，而队尾指针始终指向队尾元素的下一位置。</p>
+<p>1.顺序队列中存在 <strong>“假溢出”</strong> 现象。</p>
+<p><strong>假溢出:</strong> 尾指针已超出向量空间的上界而不能做入队操作</p>
+<p><strong>解决方法</strong>：将队列分配的向量空间看成一个首尾相接的圆环，并称这种队列为循环队列<br>C呈现<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(i+<span class="number">1</span> == MAX_QUEUE_SIZE)</span><br><span class="line">	i=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	i++;</span><br></pre></td></tr></table></figure><br><strong>用模运算可简化为</strong>:i=(i+1) % MAX_QUEUE_SIZE;</p>
+<p>2.队空和队满时头尾指针均相等，<strong>无法通过front=rear来判断队列”空”，还是”满”</strong>。</p>
+<p><strong>解决方法</strong>:约定入队前，测试指针在循环意义下加1后是否等于头指针，若相等则认为队满。即：</p>
+<ul>
+<li>rear所指的单元始终为空</li>
+<li>循环队列为空：font=rear</li>
+<li>循环队列满：(rear+1) % MAX_QUEUE_SIZE=font</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_QUEUE_SIZE 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">queue</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> Queue_array[MAX_QUEUE_SIZE];</span><br><span class="line">	<span class="keyword">int</span> font;</span><br><span class="line">	<span class="keyword">int</span> rear;</span><br><span class="line">&#125;SqQueue;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>3.numpy的数据类型</title>
     <url>/2021/07/03/3-numpy%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p><strong>因为在numpy中有许多的数据类型，所以今天就来着重梳理一下numpy中的数据类型及其应用</strong></p>
@@ -3225,74 +3960,51 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>3.线性结构(C)</title>
-    <url>/2021/07/25/3-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h1><p>就是指把所有的节点用一根 <strong>直线</strong>  串起来</p>
-<h2 id="连续存储-数组"><a href="#连续存储-数组" class="headerlink" title="连续存储[数组]"></a>连续存储[数组]</h2><p>1.数组是元素类型相同，大小相等的一组数</p>
-<p><strong>优缺点</strong><br>优点：存取速度很快</p>
-<p>缺点：</p>
-<ul>
-<li>事先必须知道数组的长度</li>
-<li>插入删除元素很慢</li>
-<li>空间通常有限制</li>
-<li>需要大块连续的内存块</li>
+    <title>3.方程组</title>
+    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><ul>
+<li>形式<br>$\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$<br><br>的系数行列式<br><br>$<br>D=\left|\begin{array}{ccc}<br> {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br> {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br> \vdots&amp;\vdots&amp;&amp;\vdots\\<br> {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$<br><br>则方程组有唯一解<br><br>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$<br><br>其中<br><br>$<br>D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</li>
 </ul>
-<h2 id="离散存储-链表"><a href="#离散存储-链表" class="headerlink" title="离散存储[链表]"></a>离散存储[链表]</h2><p>n个节点离散分配，彼此通过指针相连，每个节点只有一个前驱节点，每个节点只有一个后续节点，首节点没有前驱节点，尾节点没有后续节点</p>
-<p><strong>优缺点</strong><br>优点：</p>
+<p>证明：<br>以后补充……<br>推论:</p>
+<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
+<p>若齐次方程(2)有非零解,则$|A|=0$</p>
+<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
+<p>然后化成行最简型矩阵</p>
+<p>矩阵的 <strong><u>行</u></strong> 初等变换其实就是对应的方程组的三种变换</p>
+<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><ol>
+<li>无解<br>$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br></li>
+<li>唯一解<br>$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br></li>
+<li>无穷多解<br>$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt; n$<br><br><br> </li>
+</ol>
 <ul>
-<li>空间没有限制</li>
-<li>插入删除元素很快</li>
-</ul>
-<p>缺点：存取的速度很慢</p>
-<p>专业术语：</p>
-<ul>
-<li>首节点：第一个有效节点</li>
-<li>尾节点：最后一个有效节点</li>
-<li>头节点：<ul>
-<li>头结点的数据类型和首节点类型一样</li>
-<li>第一个有效节点之前的那个节点</li>
-<li>头节点并不存放有效数据</li>
-<li>加头结点的目的是方便对链表的操作</li>
-</ul>
+<li><p>齐次方程组$Ax=0$<br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
 </li>
-<li>头指针：指向头结点的指针变量</li>
-<li>尾指针：指向尾节点的指针变量</li>
-</ul>
-<p><strong>如果希望通过一个函数来对链表进行处理我们至少需要接受哪些参数？</strong><br>只需要一个参数：头指针</p>
-<p>因为我们可以通过头指针推算出链表的其他所有参数</p>
-<p><strong>创建链表,并完成一些功能</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data; <span class="comment">//数据域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span> <span class="comment">//指针域</span></span><br><span class="line">&#125;NODE,*PNODE; <span class="comment">//NODE等价于struct Node,  PNODE等价于struct Node *</span></span><br><span class="line"><span class="function">PNODE <span class="title">create_list</span><span class="params">(<span class="keyword">void</span>)</span></span>;<span class="comment">//创建链表</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//输出链表的值</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_empty</span><span class="params">(PNODE)</span></span>;<span class="comment">//判断链表是否为空</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//判断链表长度</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_list</span><span class="params">(PNODE pHead)</span></span>;<span class="comment">//链表排序</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;<span class="comment">//向链表中插入一个节点</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">delete_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span>,<span class="keyword">int</span>*)</span></span>;<span class="comment">//删除链表中的节点</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PNODE pHead = <span class="literal">NULL</span>;<span class="comment">//等价于struct Node*pHead = NULL;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">	pHead = create_list();<span class="comment">//create_list()功能：创建一个非循环单链表</span></span><br><span class="line">	traverse_list(pHead);</span><br><span class="line">	<span class="comment">//int len = length_list(pHead);</span></span><br><span class="line">	<span class="comment">//printf(&quot;链表长度为%d\n&quot;,len);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//insert_list(pHead,4,33);//插入节点</span></span><br><span class="line">	<span class="comment">//traverse_list(pHead);</span></span><br><span class="line">	<span class="keyword">if</span>(delete_list(pHead,<span class="number">4</span>,&amp;val))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;删除成功，你删除的元素是：%d\n&quot;</span>,val);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;删除失败，删除的元素不存在\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	traverse_list(pHead);</span><br><span class="line">	<span class="comment">//sort_list(pHead);</span></span><br><span class="line">	<span class="comment">//traverse_list(pHead);</span></span><br><span class="line">	<span class="keyword">if</span>(is_empty(pHead))</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;链表为空\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;链表不空\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">PNODE <span class="title">create_list</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len;<span class="comment">//用来存放有效节点的个数</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> val;<span class="comment">//用来临时存放用户输入的节点的值</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入节点个数：&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;len);</span><br><span class="line">    PNODE pHead = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">    <span class="comment">//分配了一个不存放有效数字的头节点</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">NULL</span> == pHead)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;分配失败，程序终止/n&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    PNODE pTail = pHead;</span><br><span class="line">    <span class="comment">//规定pTail永远指向尾节点，这里也就是指向头节点</span></span><br><span class="line">    pTail-&gt;pNext = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;请输入第%d节点的值：&quot;</span>,i+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;val);</span><br><span class="line">        PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">        <span class="keyword">if</span>(<span class="literal">NULL</span>==pNew)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;分配失败，程序终止\n&quot;</span>);</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        pNew-&gt;data = val;</span><br><span class="line">        pTail-&gt;pNext = pNew;<span class="comment">//这里是让Ptail指针域存放临时节点</span></span><br><span class="line">        pNew-&gt;pNext = <span class="literal">NULL</span>;<span class="comment">//清空临时节点的指针域</span></span><br><span class="line">        pTail = pNew;<span class="comment">//这里是pTail指针指向了pNew</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pHead;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PNODE p = pHead-&gt;pNext;</span><br><span class="line">    <span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,p-&gt;data);</span><br><span class="line">        p = p-&gt;pNext;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_empty</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pHead-&gt;pNext == <span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE p = pHead-&gt;pNext;</span><br><span class="line">	<span class="keyword">int</span> len=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		len++;</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_list</span><span class="params">(PNODE pHead)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j,t;</span><br><span class="line">	<span class="keyword">int</span> len = length_list(pHead);</span><br><span class="line">	PNODE p,q;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,p=pHead-&gt;pNext;i&lt;len<span class="number">-1</span>;i++,p=p-&gt;pNext)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=i+<span class="number">1</span>,q=p-&gt;pNext;j&lt;len;j++,q=q-&gt;pNext)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(p-&gt;data &gt; q-&gt;data)<span class="comment">//类似于数组中的：a[i]&gt;a[j]</span></span><br><span class="line">			&#123;</span><br><span class="line">				t=p-&gt;data;</span><br><span class="line">				p-&gt;data=q-&gt;data;</span><br><span class="line">				q-&gt;data=t;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在pHead所指向的链表的第pos个节点的前面插入一个新的节点，</span></span><br><span class="line"><span class="comment">//该节点的值是val,并且pos的值是从1开始</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	PNODE p =pHead;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (p !=<span class="literal">NULL</span> &amp;&amp; i&lt;pos<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;pos<span class="number">-1</span> || p==<span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	<span class="keyword">if</span>(pNew == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;动态分配内存失败\n&quot;</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	pNew-&gt;data=val;</span><br><span class="line">	PNODE q = p-&gt;pNext;</span><br><span class="line">	p-&gt;pNext=pNew;</span><br><span class="line">	pNew-&gt;pNext=q;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">delete_list</span><span class="params">(PNODE pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> *pVal)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	PNODE p = pHead;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (p != <span class="literal">NULL</span> &amp;&amp; i&lt;pos<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;pNext;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&gt;pos<span class="number">-1</span> || p==<span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	PNODE q = p-&gt;pNext;</span><br><span class="line">	*pVal = q-&gt;data;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//删除p节点后面的节点</span></span><br><span class="line">	p-&gt;pNext = p-&gt;pNext-&gt;pNext;</span><br><span class="line">	<span class="built_in">free</span>(q);</span><br><span class="line">	q = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>分类：</p>
-<ul>
-<li>单链表</li>
-<li>双链表：每一个节点有两个 <strong>指针域</strong></li>
-<li>循环列表:能通过任何一个节点找到其他所有的节点</li>
-<li>非循环链表</li>
-</ul>
-<p>算法：</p>
-<ul>
-<li>遍历</li>
-<li>查找</li>
-<li>清空</li>
-<li>销毁</li>
-<li>求长度</li>
-<li>排序</li>
-<li>删除节点<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>错误案例</span><br><span class="line">p-&gt;pNext=p-&gt;pNext-&gt;pNext;<span class="comment">//因为没有free所删除的节点，所以这样会让内存泄漏</span></span><br><span class="line"><span class="number">2.</span>正确写法</span><br><span class="line">r=p-&gt;pNext;<span class="comment">//r指向p后面的那个节点</span></span><br><span class="line">p-&gt;pNext=r-&gt;pNext;</span><br><span class="line"><span class="built_in">free</span>(r);<span class="comment">//必须</span></span><br></pre></td></tr></table></figure></li>
-<li>插入节点<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span></span><br><span class="line">r=p-&gt;pNext;<span class="comment">//先用r来存放p的指针域</span></span><br><span class="line">p-&gt;pNext=q;<span class="comment">//使p的指针域指向插入的q节点</span></span><br><span class="line">q-&gt;pNext=r;<span class="comment">//q的指针域就是原来p的指针域</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span></span><br><span class="line">q-&gt;pNext=p-&gt;pNext;<span class="comment">//插入的q的指针域替换成p的指针域</span></span><br><span class="line">p-&gt;pNext=q;<span class="comment">//p的指针域指向q</span></span><br></pre></td></tr></table></figure>
-<strong>算法:</strong></li>
-<li><p>狭义的算法是与数据的存储方式密切相关</p>
-</li>
-<li><p>广义的算法是与数据的存储方式无关</p>
-</li>
-<li><p>泛型：利用某种技术达到的效果就是：不同的存数方式，执行的操作是一样的</p>
+<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
 </li>
 </ul>
+<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
+<blockquote>
+<p>基础解系其实就是齐次方程组解向量的极大无关组<br><br>不过要注意与向量组的极大无关组进行区分</p>
+<hr>
+<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
+</blockquote>
+<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><ul>
+<li><strong>例</strong><br><br>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br><br>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>  1&amp;2&amp;-1&amp;0&amp;-5\\<br>   0&amp;1&amp;-2&amp;1&amp;1\\<br>   2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;3&amp;0&amp;-3\\<br>   0&amp;1&amp;-2&amp;0&amp;1\\<br>   0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</li>
+</ul>
+<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
+<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
+</ul>
+<ul>
+<li><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>  x_1-x_2-x_3+x_4=0\\<br>  x_1-x_2+x_3-3x_4=1\\<br>  x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br> 1&amp;-1&amp;-1&amp;1&amp;0\\<br> 1&amp;-1&amp;1&amp;-3&amp;1\\<br> 1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br> 1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br> 0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br> 0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$<br><br>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}$<br><br>令$\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$</4\;\rightarrow\;方程组有无穷解$<br></li>
+</ul>
+<p>$\Rightarrow\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，后面继续拓展深入研究……</p>
 ]]></content>
       <categories>
-        <category>C语言</category>
+        <category>线性代数</category>
       </categories>
       <tags>
-        <tag>C语言</tag>
-        <tag>数据结构</tag>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -3380,54 +4092,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3.方程组</title>
-    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><ul>
-<li>形式<br>$\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$<br><br>的系数行列式<br><br>$<br>D=\left|\begin{array}{ccc}<br> {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br> {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br> \vdots&amp;\vdots&amp;&amp;\vdots\\<br> {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$<br><br>则方程组有唯一解<br><br>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$<br><br>其中<br><br>$<br>D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</li>
-</ul>
-<p>证明：<br>以后补充……<br>推论:</p>
-<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
-<p>若齐次方程(2)有非零解,则$|A|=0$</p>
-<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
-<p>然后化成行最简型矩阵</p>
-<p>矩阵的 <strong><u>行</u></strong> 初等变换其实就是对应的方程组的三种变换</p>
-<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><ol>
-<li>无解<br>$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br></li>
-<li>唯一解<br>$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br></li>
-<li>无穷多解<br>$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt; n$<br><br><br> </li>
-</ol>
-<ul>
-<li><p>齐次方程组$Ax=0$<br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
-</li>
-<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
-</li>
-</ul>
-<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
-<blockquote>
-<p>基础解系其实就是齐次方程组解向量的极大无关组<br><br>不过要注意与向量组的极大无关组进行区分</p>
-<hr>
-<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
-</blockquote>
-<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><ul>
-<li><strong>例</strong><br><br>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br><br>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>  1&amp;2&amp;-1&amp;0&amp;-5\\<br>   0&amp;1&amp;-2&amp;1&amp;1\\<br>   2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;3&amp;0&amp;-3\\<br>   0&amp;1&amp;-2&amp;0&amp;1\\<br>   0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</li>
-</ul>
-<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
-<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
-</ul>
-<ul>
-<li><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>  x_1-x_2-x_3+x_4=0\\<br>  x_1-x_2+x_3-3x_4=1\\<br>  x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br> 1&amp;-1&amp;-1&amp;1&amp;0\\<br> 1&amp;-1&amp;1&amp;-3&amp;1\\<br> 1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br> 1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br> 0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br> 0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$<br><br>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}$<br><br>令$\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$</4\;\rightarrow\;方程组有无穷解$<br></li>
-</ul>
-<p>$\Rightarrow\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，后面继续拓展深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -3844,39 +4508,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>5.向量空间</title>
-    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
-<p>{n维向量；+，数乘}</p>
-</blockquote>
-<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
-<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
-<p>则称W是n维向量空间的子空间</p>
-<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
-<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
-<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
-<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
-<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
-<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
-<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
-<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
-<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
-<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
-<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
-<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
-<hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
-<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5.通用函数</title>
     <url>/2021/07/04/5-%E9%80%9A%E7%94%A8%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通用函数（即ufunc）是一种对ndarray中的数据执行元素级运算的函数。</p>
@@ -4017,6 +4648,39 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数据分析</tag>
         <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5.向量空间</title>
+    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
+<p>{n维向量；+，数乘}</p>
+</blockquote>
+<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
+<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
+<p>则称W是n维向量空间的子空间</p>
+<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
+<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
+<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
+<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
+<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
+<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
+<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
+<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
+<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
+<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
+<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
+<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
+<hr>
+<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
+<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -4585,6 +5249,121 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>7.统计方法与排序（numpy）</title>
+    <url>/2021/07/07/7-%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8E%92%E5%BA%8F%EF%BC%88numpy%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="统计方法"><a href="#统计方法" class="headerlink" title="统计方法"></a>统计方法</h1><p><strong>基本数组统计方法</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">sum</td>
+<td style="text-align:left">对数组中全部或某轴向的元素求和。零长度的数组的sum为0</td>
+</tr>
+<tr>
+<td style="text-align:left">mean</td>
+<td style="text-align:left">算术平均数。零长度的数组的mean为NaN</td>
+</tr>
+<tr>
+<td style="text-align:left">std、var</td>
+<td style="text-align:left">分别为标准差和方差，自由度可调（默认为n）</td>
+</tr>
+<tr>
+<td style="text-align:left">min、max</td>
+<td style="text-align:left">最大值和最小值</td>
+</tr>
+<tr>
+<td style="text-align:left">argmin、argmax</td>
+<td style="text-align:left">分别为最大和最小元素的索引</td>
+</tr>
+<tr>
+<td style="text-align:left">cumsum</td>
+<td style="text-align:left">所有元素的累计和</td>
+</tr>
+<tr>
+<td style="text-align:left">cumprod</td>
+<td style="text-align:left">所有元素的累计积</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.54723045,  0.58597431, -0.96045403, -1.702082  ],
+       [ 1.06630288, -1.0836272 ,  2.29730989, -0.30115381],
+       [-0.95468451,  1.05624793,  1.01693306,  0.09056162],
+       [-0.36292065,  0.19475411, -0.01906396, -1.24974648],
+       [-1.90823323, -0.31973005,  1.06666693,  0.81091118]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean()</span><br></pre></td></tr></table></figure>
+<pre><code>-0.06116322299092232
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.mean(arr)</span><br></pre></td></tr></table></figure>
+<pre><code>-0.06116322299092232
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>-1.2232644598184463
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">max</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>2.2973098855173615
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">min</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>-1.9082332261211672
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.std()</span><br></pre></td></tr></table></figure>
+<pre><code>1.0584749116858456
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.var()</span><br></pre></td></tr></table></figure>
+<pre><code>1.1203691386683585
+</code></pre><p>mean和sum这类函数可以接受一个axis选项参数，用于计算该轴向上的统计值，最终结果是一个少一维的数组:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(<span class="number">1</span>)<span class="comment">#计算行的平均值</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(<span class="number">0</span>)<span class="comment">#计算每列的和</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
+</code></pre><p>在多维数组中，累加函数（如cumsum）返回的是同样大小的数组，但是会根据每个低维的切片沿着标记轴计算部分聚类：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr= np.arange(<span class="number">9</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumsum(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 3,  5,  7],
+       [ 9, 12, 15]], dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumprod(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[  0,   0,   0],
+       [  3,  12,  60],
+       [  6,  42, 336]], dtype=int32)
+</code></pre><p>当然可以使用布尔型数组，布尔值会被强制转换为1和0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr=np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 1,  2,  3],
+       [-1, -2, -3]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">(arr&gt;<span class="number">0</span>).<span class="built_in">sum</span>()<span class="comment">#这样就得到了数组中大于零的元素个数</span></span><br></pre></td></tr></table></figure>
+<pre><code>3
+</code></pre><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">6</span>,<span class="number">4</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [6, 4, 3],
+       [2, 3, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort()</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [3, 4, 6],
+       [2, 3, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort(<span class="number">0</span>)<span class="comment">#按0轴排序</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [2, 3, 6],
+       [3, 4, 7]])
+</code></pre>]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>7.二次型</title>
     <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
@@ -4701,118 +5480,63 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>7.统计方法与排序（numpy）</title>
-    <url>/2021/07/07/7-%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8E%92%E5%BA%8F%EF%BC%88numpy%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="统计方法"><a href="#统计方法" class="headerlink" title="统计方法"></a>统计方法</h1><p><strong>基本数组统计方法</strong></p>
+    <title>9.元素的显示与隐藏</title>
+    <url>/2021/07/20/9-%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="元素显示与隐藏"><a href="#元素显示与隐藏" class="headerlink" title="元素显示与隐藏"></a>元素显示与隐藏</h1><p>本质：让一个元素在页面中隐藏或者显示出来</p>
+<ol>
+<li>display 显示隐藏</li>
+<li>visibility 显示隐藏</li>
+<li>overflow 溢出显示隐藏</li>
+</ol>
+<h2 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h2><p><strong>display</strong> 属性用于设置一个元素应如何显示</p>
+<ul>
+<li>display: none; 隐藏对象</li>
+<li>display: block; 除了转换为块级元素之外，同时还有显示元素的意思</li>
+</ul>
+<p><strong>display 隐藏元素后，不在占有原来的位置</strong></p>
+<h2 id="visibility-可见性"><a href="#visibility-可见性" class="headerlink" title="visibility 可见性"></a>visibility 可见性</h2><p><strong>visibility</strong> 属性用于指定一个元素应可见还是隐藏</p>
+<ul>
+<li>visibility: visible; 元素可见</li>
+<li>visibility: hidden; 元素隐藏</li>
+</ul>
+<p><strong>visibility隐藏元素后，继续占有原来的位置</strong></p>
+<h2 id="overflow-溢出"><a href="#overflow-溢出" class="headerlink" title="overflow 溢出"></a>overflow 溢出</h2><p><strong>overflow</strong> 属性指定了如果内容溢出一个元素的框（超过其指定高度及宽度）时</p>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:left">方法</th>
-<th style="text-align:left">说明</th>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">sum</td>
-<td style="text-align:left">对数组中全部或某轴向的元素求和。零长度的数组的sum为0</td>
+<td style="text-align:left">visible</td>
+<td style="text-align:left">不见且内容也不添加滚动条</td>
 </tr>
 <tr>
-<td style="text-align:left">mean</td>
-<td style="text-align:left">算术平均数。零长度的数组的mean为NaN</td>
+<td style="text-align:left">hidden</td>
+<td style="text-align:left">不显示超过对象尺寸的内容，超出的部分隐藏掉</td>
 </tr>
 <tr>
-<td style="text-align:left">std、var</td>
-<td style="text-align:left">分别为标准差和方差，自由度可调（默认为n）</td>
+<td style="text-align:left">scroll</td>
+<td style="text-align:left">不管有无超出内容，总是显示滚动条</td>
 </tr>
 <tr>
-<td style="text-align:left">min、max</td>
-<td style="text-align:left">最大值和最小值</td>
-</tr>
-<tr>
-<td style="text-align:left">argmin、argmax</td>
-<td style="text-align:left">分别为最大和最小元素的索引</td>
-</tr>
-<tr>
-<td style="text-align:left">cumsum</td>
-<td style="text-align:left">所有元素的累计和</td>
-</tr>
-<tr>
-<td style="text-align:left">cumprod</td>
-<td style="text-align:left">所有元素的累计积</td>
+<td style="text-align:left">auto</td>
+<td style="text-align:left">超出自动显示滚动条，不超出不显示滚动条</td>
 </tr>
 </tbody>
 </table>
 </div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.54723045,  0.58597431, -0.96045403, -1.702082  ],
-       [ 1.06630288, -1.0836272 ,  2.29730989, -0.30115381],
-       [-0.95468451,  1.05624793,  1.01693306,  0.09056162],
-       [-0.36292065,  0.19475411, -0.01906396, -1.24974648],
-       [-1.90823323, -0.31973005,  1.06666693,  0.81091118]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean()</span><br></pre></td></tr></table></figure>
-<pre><code>-0.06116322299092232
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.mean(arr)</span><br></pre></td></tr></table></figure>
-<pre><code>-0.06116322299092232
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>-1.2232644598184463
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">max</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>2.2973098855173615
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">min</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>-1.9082332261211672
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.std()</span><br></pre></td></tr></table></figure>
-<pre><code>1.0584749116858456
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.var()</span><br></pre></td></tr></table></figure>
-<pre><code>1.1203691386683585
-</code></pre><p>mean和sum这类函数可以接受一个axis选项参数，用于计算该轴向上的统计值，最终结果是一个少一维的数组:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(<span class="number">1</span>)<span class="comment">#计算行的平均值</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(<span class="number">0</span>)<span class="comment">#计算每列的和</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
-</code></pre><p>在多维数组中，累加函数（如cumsum）返回的是同样大小的数组，但是会根据每个低维的切片沿着标记轴计算部分聚类：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr= np.arange(<span class="number">9</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 2],
-       [3, 4, 5],
-       [6, 7, 8]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumsum(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  5,  7],
-       [ 9, 12, 15]], dtype=int32)
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumprod(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[  0,   0,   0],
-       [  3,  12,  60],
-       [  6,  42, 336]], dtype=int32)
-</code></pre><p>当然可以使用布尔型数组，布尔值会被强制转换为1和0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr=np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 1,  2,  3],
-       [-1, -2, -3]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">(arr&gt;<span class="number">0</span>).<span class="built_in">sum</span>()<span class="comment">#这样就得到了数组中大于零的元素个数</span></span><br></pre></td></tr></table></figure>
-<pre><code>3
-</code></pre><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">6</span>,<span class="number">4</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [6, 4, 3],
-       [2, 3, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort()</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [3, 4, 6],
-       [2, 3, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort(<span class="number">0</span>)<span class="comment">#按0轴排序</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [2, 3, 6],
-       [3, 4, 7]])
-</code></pre>]]></content>
+<p><strong>注意:</strong> 如果有定位的盒子，请慎用overflow:hidden 因为它会隐藏多余的部分</p>
+]]></content>
       <categories>
-        <category>numpy</category>
+        <category>CSS</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
+        <tag>CSS</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -4957,66 +5681,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>9.元素的显示与隐藏</title>
-    <url>/2021/07/20/9-%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="元素显示与隐藏"><a href="#元素显示与隐藏" class="headerlink" title="元素显示与隐藏"></a>元素显示与隐藏</h1><p>本质：让一个元素在页面中隐藏或者显示出来</p>
-<ol>
-<li>display 显示隐藏</li>
-<li>visibility 显示隐藏</li>
-<li>overflow 溢出显示隐藏</li>
-</ol>
-<h2 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h2><p><strong>display</strong> 属性用于设置一个元素应如何显示</p>
-<ul>
-<li>display: none; 隐藏对象</li>
-<li>display: block; 除了转换为块级元素之外，同时还有显示元素的意思</li>
-</ul>
-<p><strong>display 隐藏元素后，不在占有原来的位置</strong></p>
-<h2 id="visibility-可见性"><a href="#visibility-可见性" class="headerlink" title="visibility 可见性"></a>visibility 可见性</h2><p><strong>visibility</strong> 属性用于指定一个元素应可见还是隐藏</p>
-<ul>
-<li>visibility: visible; 元素可见</li>
-<li>visibility: hidden; 元素隐藏</li>
-</ul>
-<p><strong>visibility隐藏元素后，继续占有原来的位置</strong></p>
-<h2 id="overflow-溢出"><a href="#overflow-溢出" class="headerlink" title="overflow 溢出"></a>overflow 溢出</h2><p><strong>overflow</strong> 属性指定了如果内容溢出一个元素的框（超过其指定高度及宽度）时</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">visible</td>
-<td style="text-align:left">不见且内容也不添加滚动条</td>
-</tr>
-<tr>
-<td style="text-align:left">hidden</td>
-<td style="text-align:left">不显示超过对象尺寸的内容，超出的部分隐藏掉</td>
-</tr>
-<tr>
-<td style="text-align:left">scroll</td>
-<td style="text-align:left">不管有无超出内容，总是显示滚动条</td>
-</tr>
-<tr>
-<td style="text-align:left">auto</td>
-<td style="text-align:left">超出自动显示滚动条，不超出不显示滚动条</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意:</strong> 如果有定位的盒子，请慎用overflow:hidden 因为它会隐藏多余的部分</p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS基本结束</title>
     <url>/2021/07/23/CSS%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9D%9F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><html lang="ch-ZN">
@@ -5050,6 +5714,20 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2021/06/15/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>end</title>
     <url>/2021/06/24/end/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
@@ -5060,6 +5738,19 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些关于hexo的next主题的适配问题</title>
+    <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
+<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+      <tags>
+        <tag>杂记</tag>
       </tags>
   </entry>
   <entry>
@@ -5148,33 +5839,6 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       <tags>
         <tag>python库</tag>
         <tag>pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/06/15/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>一些关于hexo的next主题的适配问题</title>
-    <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
-<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
-      <tags>
-        <tag>杂记</tag>
       </tags>
   </entry>
   <entry>
