@@ -185,6 +185,169 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/29/pandas%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/29/pandas%E5%9B%BE/" class="post-title-link" itemprop="url">pandas图(索引)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-29 20:54:27" itemprop="dateCreated datePublished" datetime="2021-06-29T20:54:27+08:00">2021-06-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-30 21:58:45" itemprop="dateModified" datetime="2021-06-30T21:58:45+08:00">2021-06-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">python库</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><pre class="mermaid">graph LR
+classDef A fill: #C0D9D9
+classDef important fill: #FF0000 
+A(pandas):::A --- B(Series)
+B --- B1(可看作一列数据组成的数据集)
+B --- B2("三种创建方式,<br>创建语法为s = pd.Series(data,index=index),<br>可以不指定索引，将是默认从0开始")
+B2 --- B21(1.从列表创建Seies)
+B2 --- B22("2.从Ndarray(数组)创建Seris")
+B2 --- B23(3.从字典创建Series) 
+B --- B3(基本操作:增,删,改,查)
+B3 --- B31("修改索引 s1.index = ['index'] 索引数必须一致")
+B3 --- B32("纵向拼接 s2.append(s1)")
+B3 --- B33("按指定索引删除元素 s3.drop('e')")
+B3 --- B34("修改,查找,切片指定索引元素 s3['A']=6")
+B --- B4("Series运算(加,减,乘,除)<br>广播性质")
+B4:::important --- B41(加法)
+B41 --- B411("s4.add(s3)") & B412("s4+s3")
+B4 --- B42(减法)
+B42 --- B421("s4.sub(s3)") & B422("s4-s3")
+B4 --- B43(乘法)
+B43 --- B431("s4.mul(s3)") & B432("s4*s3")
+B4 --- B44(除法)
+B44 --- B441("s4.div(s3)") & B442("s4/s3")
+B4 --- B45(详解与区别)
+B45 --- B451(加减乘除法运算是按照索引对应计算,<br>若果索引不同,则填充为NaN)  
+B45 --- B452(两个ndarray执行的是element-wise的运算<br>而不是矩阵乘法的运算,矩阵乘法运算时需要维度之间严格匹配)
+B --- B5(Series数理分析)
+B5 --- B51(求和,最大值,最小值)
+B51 --- B511("s4.sum()")
+B51 --- B512("s4.max()")
+B51 --- B513("s4.min()")
+B5 --- B52("平均值  s3.mean()")
+B5 --- B53("将字符串转化为小写字母    string.str.lower()")
+B5 --- B54("将字符串转化为大写字母    string.str.upper()")
+C(DataFrame) --- A
+C1(可存放多列数据) --- C
+C2(创建的两种方式) --- C
+C21(通过numpy数组创建) --- C2
+C22(通过字典数组创建) --- C2
+C3(DataFrame 基本操作) --- C
+C31(浏览DataFrame部分数据) --- C3
+C311("df1.head() 预览DataFrame的前几行数据") 
+C312("df1.tial() 查看DataFrame的后几行数据")
+C32(查询DtaFrame字段) --- C3
+C321(df1.index 查看DataFrame的索引) --- C32
+C322(df1.columns 查看DataFrame的列名) --- C32
+C323("对DataFrame通过标签查询(单列)") --- C32
+C3231("df1['age']") --- C323
+C3232(df2.age) --- C323
+C324("df1[['age','name']] 对DataFrame通过标签查询(多列)")--- C32
+C325("df1.iloc[1:3] 对DataFrame通过位置查询") --- C32
+C326("浅拷贝 df1.copy() DataFrame副本拷贝") --- C323
+C33(DataFrame文件操作):::important --- C3
+C331("df1.to_csv('test.csv') CSV文件写入") --- C33
+C332("pd.read_csv('test.csv')" CSV文件读取) ---C33
+C333("df1.to_excel('test.xlsx',sheet_name-'Shhet1') EXCEL写入操作")
+C334("pd.read_excel('test.xlsx','Sheet1',index_col=None,na_values'['NA']) EXCEL读取操作")
+C4(DataFrame统计分析):::important --- C
+C41(df1.values 查看DataFrame的数值) --- C4
+C42("df1.describe 对DataFrame的描述性统计") --- C4
+C43(df1.T 转置操作) --- C4
+C44("df1.sort_values(by='age') 对DataFrame进行按列排序") ---C4
+C45(对DataFrame的值进行修改) --- C4
+C451("df1.iat[1,0]=2 根据DataFrame的下标值进行修改") ---C45
+C452("df1.loc['f','age']=1.5 根据DataFrame的标签对数据进行修改")---C45
+C46("df1['age'].sum() 对任意列做求和操作")---C4
+C47("df1.mean() 求平均值") --- C4
+C48(对缺失值补充) --- C4
+C481("df2.fillna(value=3)") --- C48
+C482("df2.dropna() 删除缺失值") --- C48
+C483("df2['xx']=df4['xx'].fillna(df['xx'].median()) 取平均") --- C48
+C484("df2.fillna(method='ffill') 用前面的值插值") --- C48
+C485("df2.fillna(method='ffil',limit=1,axis=1)") --- C48
+C486("data.fillna({'xx':2321}) 用字典来替换") --- C48
+C487(还有很多方法,比如三次样条,拟合等) --- C48
+click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，大体的了解其整体需要学习的方面，后面会针对思维导图里面的各方面进行细化学习，并让思维导图以的索引形式连接各部分的学习内容</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1267,92 +1430,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/24/end/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/24/end/" class="post-title-link" itemprop="url">end</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-24 10:04:26 / 修改时间：10:20:50" itemprop="dateCreated datePublished" datetime="2021-06-24T10:04:26+08:00">2021-06-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>83</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1420,14 +1501,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -1489,12 +1570,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">124k</span>
+    <span title="站点总字数">126k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:53</span>
+    <span title="站点阅读时长">1:55</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>

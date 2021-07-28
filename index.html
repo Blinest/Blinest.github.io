@@ -185,6 +185,121 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/28/3-%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/28/3-%E6%A0%91/" class="post-title-link" itemprop="url">3.树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-28 21:41:41 / 修改时间：23:05:02" itemprop="dateCreated datePublished" datetime="2021-07-28T21:41:41+08:00">2021-07-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">数据分析</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>877</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>树是n（n&geqslant;0）个结点的有限集.</p>
+<ul>
+<li>n=0，空树</li>
+<li>n&gt;0，则满足以下条件<ul>
+<li><strong>有且仅有一个</strong> 特定的称为 <strong>根</strong> 的结点</li>
+<li>其余节点可分为m（m&geqslant;0）个互不相交的有限集T1，T2，T3……，Tm，其中每一个集合本身又是一棵树，并称为根的 <strong>子树</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="树的基本术语"><a href="#树的基本术语" class="headerlink" title="树的基本术语"></a>树的基本术语</h2><p><strong>根节点</strong>：非空树中无前驱结点的结点</p>
+<p><strong>结点的度</strong>：结点拥有的子树数</p>
+<p><strong>树的度</strong>：树内各结点的度的最大值</p>
+<p><strong>度=0</strong> —&gt; 称为 <strong>叶子结点</strong>（终端结点）</p>
+<p><strong>度≠0</strong> —&gt; 称为 <strong>分支结点</strong>（非终端节点）</p>
+<p>根节点以外的分支结点称为 <strong>内部节点</strong></p>
+<p>结点的子树的根称为该结点的 <strong>孩子</strong>，该结点称为孩子的 <strong>双亲</strong></p>
+<p><strong>兄弟</strong>：深度相同，双亲结点相同</p>
+<p><strong>堂兄弟</strong>：深度相同，双亲结点不同</p>
+<p>结点的 <strong>祖先</strong>：从根到该结点所经分支上的所有结点</p>
+<p>结点的 <strong>子孙</strong>：以某结点为根的子树中的任一结点</p>
+<p><strong>树的深度</strong>：树中结点的最大层次</p>
+<p><strong>有序树</strong>：树中结点的各子树从左至右有次序</p>
+<p><strong>无序树</strong>：树中结点的各子树无次序</p>
+<p><strong>森林</strong>：是m（m&geqslant;0）棵互不相交的树的集合</p>
+<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>二叉树是n（n&geqslant;0）个结点的有限集.或是空集，或是一个根节点和两棵不相交的分别称作这个根的左子树和右子树的二叉树组成</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ol>
+<li>每个结点最多有两个孩子（二叉树中不存在度大于2的结点）</li>
+<li>子树有左右之分，其次序不能颠倒</li>
+<li>二叉树可以是空集合，根可以有空的左子树或空的右子树</li>
+</ol>
+<p><strong>注意</strong>：二叉树 <strong>不是</strong> 树的特殊情况，它们是两个概念</p>
+<p><strong>二叉树</strong> 结点的子树要 <strong>区分左子树和右子树</strong>，即使只有一棵子树也要区分，说明它是左子树，还是右子树</p>
+<p><strong>树</strong> 当节点只有一个孩子时，就 <strong>无需区分</strong> 它是左还是右的次序，因此二者是不同的。这是二叉树与树的最主要差别</p>
+<h2 id="二叉树的抽象数据类型定义"><a href="#二叉树的抽象数据类型定义" class="headerlink" title="二叉树的抽象数据类型定义"></a>二叉树的抽象数据类型定义</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ADT BinaryTree&#123;</span><br><span class="line">    数据对象D:  D是具有相同特性的数据元素的集合。</span><br><span class="line">    数据关系R:  若D=Φ,则R=Φ;</span><br><span class="line">                若D≠Φ,则R=&#123;H&#125;;H是如下二元关系:</span><br><span class="line">                <span class="number">1.</span>root唯一      <span class="comment">//关于根的说明</span></span><br><span class="line">                <span class="number">2.</span>D_j∩D_k=Φ     <span class="comment">//关于子树不相交的说明</span></span><br><span class="line">                <span class="number">3.</span>……            <span class="comment">//关于数据元素的说明</span></span><br><span class="line">                <span class="number">4.</span>……            <span class="comment">//关于左子树和右子树的说明</span></span><br><span class="line">    基本操作P</span><br><span class="line">&#125;ADT BinaryTree</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/27/2-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -208,10 +323,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-07-27 22:28:45 / 修改时间：22:33:25" itemprop="dateCreated datePublished" datetime="2021-07-27T22:28:45+08:00">2021-07-27</time>
+              <time title="创建时间：2021-07-27 22:28:45" itemprop="dateCreated datePublished" datetime="2021-07-27T22:28:45+08:00">2021-07-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-28 15:52:50" itemprop="dateModified" datetime="2021-07-28T15:52:50+08:00">2021-07-28</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -228,7 +349,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.8k</span>
+              <span>3.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -247,32 +368,64 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><blockquote>
-<p>一种可以实现数据存储”先进后出”的存储结构，类似于箱子</p>
+          <p><strong>栈和队列是线性表的子集（是插入和删除位置受限的线性表）</strong></p>
+<h1 id="栈-stack"><a href="#栈-stack" class="headerlink" title="栈(stack)"></a>栈(stack)</h1><blockquote>
+<p>限定只能在表的一端进行插入和删除运算的线性表</p>
 </blockquote>
+<p>又称为后进先出(Last In First Out)的线性表，简称 <strong>LIFO</strong> 结构</p>
+<h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><p>栈是进行插入、删除操作的线性表。</p>
+<p>表尾称为 <strong>栈顶</strong> Top；表头称为 <strong>栈底</strong> Base</p>
+<p>插入元素到 <strong>栈顶</strong> 的操作称为 <strong>入栈</strong> PUSH</p>
+<p>从 <strong>栈顶</strong> 删除最后一个元素的操作，称为 <strong>出栈</strong> POP</p>
+<p>逻辑结构：一对一</p>
+<p>存储结构：用 <strong>顺序栈</strong> 或 <strong>链栈</strong> 均可，顺序栈更常见</p>
+<p>运算规则：只能在栈顶运算，且访问结点时依照LIFO原则</p>
 <p>分类：</p>
 <ul>
 <li>静态栈</li>
 <li>动态栈</li>
 </ul>
-<p>算法：</p>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><ul>
+<li>设 <strong>top</strong> 指针，指示栈顶元素在顺序栈中的位置</li>
+<li>设 <strong>base</strong> 指针，指示栈底元素在顺序栈中的位置<br>为了方便操作，通常top指示真正的栈顶元素之上</li>
+<li>用 <strong>stacksize</strong> 表示栈可使用的最大容量</li>
+<li>空栈：base==top</li>
+<li>栈满：top-base==stacksize</li>
+</ul>
+<h2 id="C语言实现链栈的相关操作"><a href="#C语言实现链栈的相关操作" class="headerlink" title="C语言实现链栈的相关操作"></a>C语言实现链栈的相关操作</h2><p>顺序栈也类似<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span></span><br><span class="line">&#125;NODE,* PNODE;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	PNODE pTop;</span><br><span class="line">	PNODE pBottom;</span><br><span class="line">&#125;STACK,* PSTACK;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(PSTACK,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(PSTACK,<span class="keyword">int</span> *)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	STACK S;<span class="comment">//内存里面有了两个变量pTop,pBottom</span></span><br><span class="line"></span><br><span class="line">	init(&amp;S);<span class="comment">//造出一个空栈</span></span><br><span class="line">	push(&amp;S,<span class="number">1</span>);<span class="comment">//压栈</span></span><br><span class="line">	push(&amp;S,<span class="number">2</span>);</span><br><span class="line">	traverse(&amp;S);</span><br><span class="line">	clear(&amp;S);</span><br><span class="line">	<span class="comment">//traverse(&amp;S);</span></span><br><span class="line">	<span class="keyword">if</span>(pop(&amp;S, &amp;val))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;出栈成功，出栈的元素是%d\n&quot;</span>,val);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;出栈失败\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	traverse(&amp;S);<span class="comment">//遍历输出</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	pS-&gt;pTop = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	<span class="keyword">if</span> (pS-&gt;pTop == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;动态内存分配失败\n&quot;</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		pS-&gt;pBottom = pS-&gt;pTop;</span><br><span class="line">		pS-&gt;pTop-&gt;pNext = <span class="literal">NULL</span>;<span class="comment">//pS-&gt;pBottom-&gt;pNext = NULL; </span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(PSTACK pS,<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	pNew-&gt;data = val;</span><br><span class="line">	pNew-&gt;pNext = pS-&gt;pTop;<span class="comment">//pS-&gt;pTop不能改成pS-&gt;pBottom</span></span><br><span class="line">	pS-&gt;pTop = pNew;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE p = pS-&gt;pTop;</span><br><span class="line">	<span class="keyword">while</span>(p != pS-&gt;pBottom)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,p-&gt;data);</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pS-&gt;pTop == pS-&gt;pBottom)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//把pS所指向的栈出栈一次，并把出栈的元素存入pVal形参所指向的变量中</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(PSTACK pS,<span class="keyword">int</span> * pVal)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(empty(pS))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		PNODE r =pS-&gt;pTop;</span><br><span class="line">		*pVal = r-&gt;data;</span><br><span class="line">		pS-&gt;pTop=r-&gt;pNext;</span><br><span class="line">		r = <span class="literal">NULL</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//clear清空</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(empty(pS))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		PNODE p = pS-&gt;pTop;	</span><br><span class="line">		<span class="keyword">while</span>(p != pS-&gt;pBottom)</span><br><span class="line">		&#123;</span><br><span class="line">			pS-&gt;pTop = p-&gt;pNext;</span><br><span class="line">			<span class="built_in">free</span>(p);</span><br><span class="line">			p = pS-&gt;pTop;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p><strong>进制转换</strong></p>
+<p><strong>括号匹配</strong></p>
+<p><strong>表达式求值：</strong></p>
 <ul>
-<li>出栈</li>
-<li>入栈<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span></span><br><span class="line">&#125;NODE,* PNODE;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	PNODE pTop;</span><br><span class="line">	PNODE pBottom;</span><br><span class="line">&#125;STACK,* PSTACK;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(PSTACK,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(PSTACK,<span class="keyword">int</span> *)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(PSTACK)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	STACK S;<span class="comment">//内存里面有了两个变量pTop,pBottom</span></span><br><span class="line"></span><br><span class="line">	init(&amp;S);<span class="comment">//造出一个空栈</span></span><br><span class="line">	push(&amp;S,<span class="number">1</span>);<span class="comment">//压栈</span></span><br><span class="line">	push(&amp;S,<span class="number">2</span>);</span><br><span class="line">	traverse(&amp;S);</span><br><span class="line">	clear(&amp;S);</span><br><span class="line">	<span class="comment">//traverse(&amp;S);</span></span><br><span class="line">	<span class="keyword">if</span>(pop(&amp;S, &amp;val))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;出栈成功，出栈的元素是%d\n&quot;</span>,val);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;出栈失败\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	traverse(&amp;S);<span class="comment">//遍历输出</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	pS-&gt;pTop = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	<span class="keyword">if</span> (pS-&gt;pTop == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;动态内存分配失败\n&quot;</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		pS-&gt;pBottom = pS-&gt;pTop;</span><br><span class="line">		pS-&gt;pTop-&gt;pNext = <span class="literal">NULL</span>;<span class="comment">//pS-&gt;pBottom-&gt;pNext = NULL; </span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(PSTACK pS,<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE pNew = (PNODE)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(NODE));</span><br><span class="line">	pNew-&gt;data = val;</span><br><span class="line">	pNew-&gt;pNext = pS-&gt;pTop;<span class="comment">//pS-&gt;pTop不能改成pS-&gt;pBottom</span></span><br><span class="line">	pS-&gt;pTop = pNew;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	PNODE p = pS-&gt;pTop;</span><br><span class="line">	<span class="keyword">while</span>(p != pS-&gt;pBottom)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,p-&gt;data);</span><br><span class="line">		p=p-&gt;pNext;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(pS-&gt;pTop == pS-&gt;pBottom)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//把pS所指向的栈出栈一次，并把出栈的元素存入pVal形参所指向的变量中</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(PSTACK pS,<span class="keyword">int</span> * pVal)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(empty(pS))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		PNODE r =pS-&gt;pTop;</span><br><span class="line">		*pVal = r-&gt;data;</span><br><span class="line">		pS-&gt;pTop=r-&gt;pNext;</span><br><span class="line">		r = <span class="literal">NULL</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//clear清空</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(PSTACK pS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(empty(pS))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		PNODE p = pS-&gt;pTop;	</span><br><span class="line">		<span class="keyword">while</span>(p != pS-&gt;pBottom)</span><br><span class="line">		&#123;</span><br><span class="line">			pS-&gt;pTop = p-&gt;pNext;</span><br><span class="line">			<span class="built_in">free</span>(p);</span><br><span class="line">			p = pS-&gt;pTop;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>表达式组成<ul>
+<li>操作符(operand)：常数、变量</li>
+<li>运算符(operator)：算术运算符、关系运算符和逻辑运算符</li>
+<li>界限符(delimiter)：左右括弧和表达式结束符</li>
+</ul>
+</li>
+<li>需要两个栈：<ul>
+<li>算符栈OPTR，用于寄存运算符</li>
+<li>操作数栈OPND,用于寄存运算数和运算结果</li>
+</ul>
+</li>
+<li>求值的处理过程是自左向右扫描表达式的每一个字符<ul>
+<li>当扫描的是数字，将其压入栈OPND</li>
+<li>当扫描到的是运算符<ul>
+<li>若这个运算符比OPTR栈顶运算符优先级高，则入栈OPTR</li>
+<li>若这个运算符比OPTR栈顶运算符优先级低，则从OPND中弹出两个运算数，从OPTR中弹出栈顶运算符进行运算，将运算结果压入栈OPND</li>
+</ul>
 </li>
 </ul>
-<p><strong>应用</strong></p>
-<ul>
-<li>函数调用</li>
-<li>中断</li>
-<li>表达式求值</li>
-<li>内存分配</li>
-<li>缓冲处理</li>
-<li>迷宫</li>
+</li>
+<li>继续处理当前字符，直到结束符为止</li>
 </ul>
-<h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><blockquote>
-<p>一种可以实现”先进先出”的存储结构</p>
+<h1 id="队列-queue"><a href="#队列-queue" class="headerlink" title="队列(queue)"></a>队列(queue)</h1><blockquote>
+<p>只能在表头的一端进行插入运算，在表的另一端进行删除运算的线性表</p>
 </blockquote>
+<p>队列是一种 <strong>先进先出</strong>(First In First Out—<strong>FLFO</strong>)的线性表。在表一段插入（表尾），在另一端（表头）删除</p>
+<h2 id="相关概念-1"><a href="#相关概念-1" class="headerlink" title="相关概念"></a>相关概念</h2><p>逻辑结构：一对一</p>
+<p>存储结构：<strong>顺序队</strong> 或 <strong>链队</strong>，以循环顺序队列更常见</p>
+<p>运算规则：只能在队首和队尾运算，且访问结点时依照FIFO的原则</p>
 <p>分类：</p>
 <ul>
 <li><p>链式队列：用链表实现</p>
@@ -293,8 +446,7 @@
 <li>如何判断循环队列是否为空</li>
 <li>如何判断循环队列是否已满</li>
 </ol>
-<p>队列顺序表示和实现</p>
-<p>设立一个队首指针front,一个队尾指针rear，分别指向队首和队尾元素</p>
+<h2 id="队列顺序表示和实现"><a href="#队列顺序表示和实现" class="headerlink" title="队列顺序表示和实现"></a>队列顺序表示和实现</h2><p>设立一个队首指针front,一个队尾指针rear，分别指向队首和队尾元素</p>
 <ul>
 <li>初始化：front=rear=0</li>
 <li>入队：将新元素插入rear所指的位置，然后rear加1</li>
@@ -303,17 +455,25 @@
 <li>队满：rear == MAX_QUEUE_SIZE-1或front==rear</li>
 </ul>
 <p>在非空队列里，队首指针始终指向队头元素，而队尾指针始终指向队尾元素的下一位置。</p>
-<p>1.顺序队列中存在 <strong>“假溢出”</strong> 现象。</p>
+<h2 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h2><p>1.顺序队列中存在 <strong>“假溢出”</strong> 现象。</p>
 <p><strong>假溢出:</strong> 尾指针已超出向量空间的上界而不能做入队操作</p>
-<p><strong>解决方法</strong>：将队列分配的向量空间看成一个首尾相接的圆环，并称这种队列为循环队列<br>C呈现<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(i+<span class="number">1</span> == MAX_QUEUE_SIZE)</span><br><span class="line">	i=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	i++;</span><br></pre></td></tr></table></figure><br><strong>用模运算可简化为</strong>：i=(i+1) % MAX_QUEUE_SIZE;</p>
+<p><strong>解决方法</strong>：引入循环队列<br>C呈现<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(i+<span class="number">1</span> == MAX_QUEUE_SIZE)</span><br><span class="line">	i=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	i++;</span><br></pre></td></tr></table></figure><br><strong>用模运算可简化为</strong>：i=(i+1) % MAX_QUEUE_SIZE;</p>
 <p>2.队空和队满时头尾指针均相等，<strong>无法通过front=rear来判断队列”空”，还是”满”</strong>。</p>
-<p><strong>解决方法</strong>:约定入队前，测试指针在循环意义下加1后是否等于头指针，若相等则认为队满。即：</p>
+<p><strong>解决方法</strong>:</p>
 <ul>
-<li>rear所指的单元始终为空</li>
-<li>循环队列为空：font=rear</li>
-<li>循环队列满：(rear+1) % MAX_QUEUE_SIZE=font</li>
+<li>1.另外 <strong>设一个标志tag</strong> 以区别队空、队满（如队满为1，队空为0）</li>
+<li>2.另外设一个变量，记录元素个数</li>
+<li>3.<strong>少用一个元素空间</strong><ul>
+<li>队空：front==rear</li>
+<li>队满：(rear+1)%MAX_QUEUE_SIZE==font<br><img src="/2021/07/27/2-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/queue1.png"></li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_QUEUE_SIZE 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">queue</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> Queue_array[MAX_QUEUE_SIZE];</span><br><span class="line">	<span class="keyword">int</span> font;</span><br><span class="line">	<span class="keyword">int</span> rear;</span><br><span class="line">&#125;SqQueue;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="循环队列的操作"><a href="#循环队列的操作" class="headerlink" title="循环队列的操作"></a>循环队列的操作</h2><ul>
+<li>队列初始化：分配空间，头尾指针置为0</li>
+<li><strong>队列长度</strong>：(reat-front+MAX_QUEUE_SIZE)%MAX_QUEUE_SIZE</li>
+</ul>
+
       
     </div>
 
@@ -930,418 +1090,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/21/10-CSS3%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/21/10-CSS3%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/" class="post-title-link" itemprop="url">10.CSS3新增特性</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-21 17:51:55" itemprop="dateCreated datePublished" datetime="2021-07-21T17:51:55+08:00">2021-07-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-24 21:29:04" itemprop="dateModified" datetime="2021-07-24T21:29:04+08:00">2021-07-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>4.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="新增选择器"><a href="#新增选择器" class="headerlink" title="新增选择器"></a>新增选择器</h1><h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>属性选择器可以根据元素特定属性来选择元素，这样就可以不用借助于类或者id选择器。</p>
-<p>选择符|简介<br>E[att]|选择具有att属性的 E 元素<br>E[att=”val”]|选择具有att 属性且属性值等于val 的E 元素<br>E[att^=”val”]|匹配具有att 属性且值以val 开头的E 元素<br>E[att$=”val”]|匹配具有att 属性且值以val 结尾的E 元素<br>E[att*=”val”]|匹配具有att属性且值中含有val 的E 元素</p>
-<h2 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h2><p>结构伪类选择器主要根据文档结构来选择，常用于父级选择器里面的子元素</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选择符</th>
-<th style="text-align:left">简介</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">E:first-child</td>
-<td style="text-align:left">匹配父元素中的第一个子元素E</td>
-</tr>
-<tr>
-<td style="text-align:left">E:last-child</td>
-<td style="text-align:left">匹配父元素中最后一个E 元素</td>
-</tr>
-<tr>
-<td style="text-align:left">E:nth-child(n)</td>
-<td style="text-align:left">匹配父元素中的第n个子元素E</td>
-</tr>
-<tr>
-<td style="text-align:left">E:first-of-type</td>
-<td style="text-align:left">指定类型E 的第一个</td>
-</tr>
-<tr>
-<td style="text-align:left">E:last-of-type</td>
-<td style="text-align:left">指定类型E 的最后一个</td>
-</tr>
-<tr>
-<td style="text-align:left">E:nth-of-type(n)</td>
-<td style="text-align:left">指定类型E的第n个</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>nth-child(n)</strong> 选择某个父元素的一个或多个特定的子元素</p>
-<ul>
-<li><strong>n可以是数字，关键字和公式</strong></li>
-<li>n如果是数字，就是选择第n个子元素，里面数字从1开始</li>
-<li>n可以是关键字:even偶数，odd奇数</li>
-</ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">公式</th>
-<th style="text-align:left">取值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">2n</td>
-<td style="text-align:left">偶数</td>
-</tr>
-<tr>
-<td style="text-align:left">2n+1</td>
-<td style="text-align:left">奇数</td>
-</tr>
-<tr>
-<td style="text-align:left">5n</td>
-<td style="text-align:left">5 10 15…</td>
-</tr>
-<tr>
-<td style="text-align:left">n+5</td>
-<td style="text-align:left">从第5个开始（包含第五个）到最后</td>
-</tr>
-<tr>
-<td style="text-align:left">-n+5</td>
-<td style="text-align:left">前五个（包含第5个）</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>nth-child(n)</strong> 和 <strong>nth-of-type(n)</strong> 的区别<br>nth-child 会把所有的子元素排列序号</p>
-<p>nth-child 只会把指定的子元素排序号</p>
-<h2 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h2><p>伪元素选择器可以帮助我们利用CSS 创建新标签元素，而不需要HTML标签，从而简化HTML结构</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选择符</th>
-<th style="text-align:left">简介</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">::before</td>
-<td style="text-align:left">在元素内部的前面插入内容</td>
-</tr>
-<tr>
-<td style="text-align:left">::after</td>
-<td style="text-align:left">在元素内部的后面插入内容</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意：</strong></p>
-<ul>
-<li><strong>before</strong> 和 <strong>after</strong> 创建一个元素，但是属于行内元素</li>
-<li>新创建的这个元素在文档树中是找不到的，所以我们称之为伪元素</li>
-<li><strong>语法：element::before{}</strong></li>
-<li>before 在父元素内容的前面创建元素，after 在父元素内容的后面插入元素</li>
-<li>伪元素选择器和标签选择器一样，权重为1</li>
-</ul>
-<h2 id="CSS3-盒子模型"><a href="#CSS3-盒子模型" class="headerlink" title="CSS3 盒子模型"></a>CSS3 盒子模型</h2><p>CSS3中可以通过 <strong>box-sizing</strong> 来指定盒子模型，有两个值：即可指定为 <strong>content-box</strong>、<strong>border-box</strong>，这样我们计算盒子大小的方式就发生了改变</p>
-<p>1.box-sizing: content-box 盒子大小为width + padding + border （默认）</p>
-<p>2.box-sizing: border-box 就不会撑大盒子（前提padding和border不会超过width宽度）</p>
-<h1 id="CSS3-过渡"><a href="#CSS3-过渡" class="headerlink" title="CSS3 过渡"></a>CSS3 过渡</h1><p>过渡（transition）让我们可以在不适用flash动画或javascript的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。</p>
-<p>过渡动画：是从一个状态渐渐的过渡到另外一个状态</p>
-<p><strong>经常和:hover一起搭配使用</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tansition: 要过渡的属性 花费时间 曲线运动 何时开始;</span><br></pre></td></tr></table></figure>
-<p><strong>1.属性</strong>：想要变化的CSS属性，宽度高度 背景颜色 内外边距都可以。如果想要所有的属性都变化过渡，写一个 <strong>all</strong> 就可以</p>
-<p><strong>2.花费时间</strong>：单位 s（必须）</p>
-<p><strong>3.曲线运动</strong>：默认是ease（可省略）</p>
-<p><strong>4.何时开始</strong>：单位 s（必须）可以设置延迟出发时间 默认是0s（可省略）</p>
-<h1 id="CSS3-2D转换"><a href="#CSS3-2D转换" class="headerlink" title="CSS3 2D转换"></a>CSS3 2D转换</h1><blockquote>
-<p><strong>转换（transform）</strong> 可以实现元素的位移、旋转、缩放等效果，转换可以简单理解为变形</p>
-<h2 id="二维坐标系"><a href="#二维坐标系" class="headerlink" title="二维坐标系"></a>二维坐标系</h2><p>2D转换是改变标签在二维平面上的位置和形状的一种技术</p>
-<h2 id="2D-转换之移动-translate"><a href="#2D-转换之移动-translate" class="headerlink" title="2D 转换之移动 translate"></a>2D 转换之移动 translate</h2><p>2D移动是2D转换里面的一种功能，可以改变元素在页面中的位置，类似 <strong>定位</strong></p>
-</blockquote>
-<p>1.语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate</span>(x,y)或者分开写</span><br><span class="line">transform: <span class="built_in">translateX</span>(n)</span><br><span class="line">transform: <span class="built_in">translateY</span>(n)</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.重点</strong></p>
-<ul>
-<li>定义2D转换中的移动，沿着X和Y轴移动元素</li>
-<li>translate最大的优点：不会影响到其他元素的位置</li>
-<li>translate中的百分比单位是相对于自身元素的translate:(50%,50%);</li>
-<li>对行内元素没有效果</li>
-</ul>
-<h2 id="2D-转换之旋转-rotate"><a href="#2D-转换之旋转-rotate" class="headerlink" title="2D 转换之旋转 rotate"></a>2D 转换之旋转 rotate</h2><blockquote>
-<p>2D旋转指的是让元素在2维平面内顺时针旋转或者逆时针旋转</p>
-</blockquote>
-<p>1.语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>:<span class="built_in">rotate</span>(度数)</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.重点</strong></p>
-<ul>
-<li>rotate里面跟度数，单位是deg 比如 rotate(45deg)</li>
-<li>角度为正时，顺时针，负时，为逆时针</li>
-<li>默认旋转的中心点是元素的中心点</li>
-</ul>
-<h2 id="2D-转换中心点-transform-origin"><a href="#2D-转换中心点-transform-origin" class="headerlink" title="2D 转换中心点 transform-origin"></a>2D 转换中心点 transform-origin</h2><p>1.语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform-origin</span>: x y;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.重点</strong></p>
-<ul>
-<li>注意后面参数x和y用空格隔开</li>
-<li>x y默认转换的中心点是元素元素的中心点(50% 50%)</li>
-<li>还可以给x y 设置 像素 或者 方位名词 (top bottom left right cneter)</li>
-</ul>
-<h2 id="2D转换之缩放-scale"><a href="#2D转换之缩放-scale" class="headerlink" title="2D转换之缩放 scale"></a>2D转换之缩放 scale</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>:<span class="built_in">scale</span>(x,y);</span><br></pre></td></tr></table></figure>
-<p><strong>2.注意</strong></p>
-<ul>
-<li>注意其中的x和y用逗号分隔</li>
-<li>transform:scale(1,1)：宽和高都放大一倍，相当于没放大</li>
-<li>transform:scale(2,2)：宽和高都放大2倍</li>
-<li>transform:scale(2)：只写一个参数，第二个参数则和第一个参数一样，相当于scale(2,2)</li>
-<li>transform缩放最大的优势：可以设置转换 <strong>中心点</strong> 缩放，默认为中心点缩放的，而且 <strong>不影响其他盒子</strong></li>
-</ul>
-<h2 id="2D转换的综合写法"><a href="#2D转换的综合写法" class="headerlink" title="2D转换的综合写法"></a>2D转换的综合写法</h2><p><strong>注意:</strong><br>1.同时使用多个转换，其格式为：transform:translate() rotate() scale()…等，</p>
-<p>2.其顺序会影响转换的效果。(先旋转会改变坐标轴方向)</p>
-<p><strong>3.当我们同时有位移和其他属性的时候，记得要将位移放到最前</strong></p>
-<h1 id="CSS3-动画"><a href="#CSS3-动画" class="headerlink" title="CSS3 动画"></a>CSS3 动画</h1><blockquote>
-<p><strong>动画</strong> 可通过设置多个节点来精确控制一个或一组动画，常用来实现复杂的动画效果。</p>
-</blockquote>
-<p>相比较过渡，动画可以实现更多变化，更多控制，连续自动播放等效果</p>
-<h2 id="动画的基本使用"><a href="#动画的基本使用" class="headerlink" title="动画的基本使用"></a>动画的基本使用</h2><p>制作动画分为两步：</p>
-<p>1.先定义动画</p>
-<p>2.再使用（调用）动画</p>
-<p><strong>1.用keyframes定义动画（类似定义类选择器）</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>动画序列</strong></p>
-<ul>
-<li>0%是动画的 <strong>开始</strong>,100%是动画的 <strong>完成</strong></li>
-<li>在 <strong>@keyframes</strong> 中规定某项CSS样式，就能创建由当前样式逐渐改为新样式的动画效果</li>
-<li>动画是使元素从一种样式逐渐变化为另一种样式的效果。可以改变任意多的 <strong>次数</strong></li>
-<li>使用百分比来规定变化发生的时间，或用关键词”<strong>from</strong>“和”<strong>to</strong>“，等同于 <strong>0%</strong> 和 <strong>100%</strong></li>
-</ul>
-<p><strong>2.元素使用动画</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: aqua;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">    <span class="comment">/* 调用动画 */</span></span><br><span class="line">    <span class="attribute">animation-name</span>: 动画名称;</span><br><span class="line">    <span class="comment">/* 持续时间 */</span></span><br><span class="line">    <span class="attribute">animation-duration</span>: 持续时间;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="动画常用属性"><a href="#动画常用属性" class="headerlink" title="动画常用属性"></a>动画常用属性</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">@keyframes</td>
-<td style="text-align:left">规定动画</td>
-</tr>
-<tr>
-<td style="text-align:left">animation</td>
-<td style="text-align:left">所有动画属性的简写属性，除了animathion-play-state属性</td>
-</tr>
-<tr>
-<td style="text-align:left">animation-name</td>
-<td style="text-align:left">规定@keyframes动画的名称（必须）</td>
-</tr>
-<tr>
-<td style="text-align:left">animation-duration</td>
-<td style="text-align:left">规定动画完成一个周期所花费的秒或毫秒，默认是0。（必须）</td>
-</tr>
-<tr>
-<td style="text-align:left">animation-timing-funciton</td>
-<td style="text-align:left">规定动画的速度曲线，默认”ease”</td>
-</tr>
-<tr>
-<td style="text-align:left">animation-delay</td>
-<td style="text-align:left">规定动画何时开始，默认是0</td>
-</tr>
-<tr>
-<td style="text-align:left">animation-iteration-count</td>
-<td style="text-align:left">规定动画被播放的次数，默认是1，还有infinite</td>
-</tr>
-<tr>
-<td style="text-align:left">animation-direction</td>
-<td style="text-align:left">规定动画是否在下一个周期逆向播放，默认是”normal”,alternate逆播放</td>
-</tr>
-<tr>
-<td style="text-align:left">animation-play-state</td>
-<td style="text-align:left">规定动画是否正在运行或暂停，默认是”running”,还有”pause”</td>
-</tr>
-<tr>
-<td style="text-align:left">animation-fill-mode</td>
-<td style="text-align:left">规定动画结束后状态，保持forwards回到起始backwards</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="动画简写属性"><a href="#动画简写属性" class="headerlink" title="动画简写属性"></a>动画简写属性</h2><p>animation: 动画名称 持续时间 曲线运动 何时开始 播放次数 是否反方向 动画起始或者结束的状态<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">animation</span>: myfirst <span class="number">5s</span> linear <span class="number">2s</span> infinite alternate;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>简写属性里面不包含 <strong>animation-play-state</strong></li>
-<li>暂停动画:<strong>animation-play-state:paused;</strong> 经常和鼠标经过等其他搭配使用</li>
-<li>想要动画走回来，而不是直接跳回来：animation-diraction:alternate</li>
-<li>盒子动画结束后，停在结束位置： animation-fill-mode: forwards</li>
-</ul>
-<h2 id="速度曲线细节"><a href="#速度曲线细节" class="headerlink" title="速度曲线细节"></a>速度曲线细节</h2><p>animation-timing-function:规定动画的速度曲线，默认是”ease”</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">linear</td>
-<td style="text-align:left">动画从头到尾的速度是相同的。匀速</td>
-</tr>
-<tr>
-<td style="text-align:left">ease</td>
-<td style="text-align:left">默认。动画以低速开始，然后加快，在结束前变慢</td>
-</tr>
-<tr>
-<td style="text-align:left">ease-in</td>
-<td style="text-align:left">动画以低速开始</td>
-</tr>
-<tr>
-<td style="text-align:left">ease-out</td>
-<td style="text-align:left">动画以低速结束</td>
-</tr>
-<tr>
-<td style="text-align:left">ease-in-out</td>
-<td style="text-align:left">动画以低速开始和结束</td>
-</tr>
-<tr>
-<td style="text-align:left">steps()</td>
-<td style="text-align:left">指定了时间函数中的间隔数量（步长）</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="CSS3-3D转换"><a href="#CSS3-3D转换" class="headerlink" title="CSS3 3D转换"></a>CSS3 3D转换</h1><h2 id="三维坐标系"><a href="#三维坐标系" class="headerlink" title="三维坐标系"></a>三维坐标系</h2><ul>
-<li>x轴：向右为正</li>
-<li>y轴：向下为正</li>
-<li>z轴：向外为正</li>
-</ul>
-<h2 id="3D位移-translate3d"><a href="#3D位移-translate3d" class="headerlink" title="3D位移 translate3d"></a>3D位移 translate3d</h2><ul>
-<li>transform:translate3dX(100px):仅在X轴上移动</li>
-<li>transform:translate3dY(100px):仅在y轴上移动</li>
-<li>transform:translate3dZ(100px):仅在z轴上移动<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate3d</span>(x,y,z)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>xyz是不能有省略的，如果没有就写0</strong></p>
-<h2 id="透视-perspective"><a href="#透视-perspective" class="headerlink" title="透视 perspective"></a>透视 perspective</h2><ul>
-<li>如果想要在网页中产生3D效果需要透视</li>
-<li>模拟人的视觉位置，可认为安排一只眼去看</li>
-<li>透视我们也称为视距：视距就是人的眼睛到屏幕的距离</li>
-<li>距离视觉点越近的在电脑平面成像越大，越远成像越小</li>
-<li>透视的单位是像素</li>
-</ul>
-<p><strong>透视写在被观察元素的父盒子上面的</strong></p>
-<p><strong>d</strong>:就是视距，视距就是一个距离人的眼睛到屏幕的距离</p>
-<p><strong>z</strong>:就是z轴，物体距离屏幕的距离，z轴越大（正值）我们看到的物体越大。</p>
-<h2 id="3D旋转-rotate3d"><a href="#3D旋转-rotate3d" class="headerlink" title="3D旋转 rotate3d"></a>3D旋转 rotate3d</h2><ul>
-<li>transform:rotateX(45deg):沿 <strong>x轴正方向</strong> 旋转45°</li>
-<li>transform:rotateY(45deg):沿 <strong>y轴正方向</strong> 旋转45°</li>
-<li>transform:rotateZ(45deg):沿 <strong>z轴正方向</strong> 旋转45°</li>
-<li>transform:rotate3d(x,y,z,deg):（了解）</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">45deg</span>)</span><br><span class="line">这个是按照矢量叠加，也就是沿(<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>)旋转</span><br></pre></td></tr></table></figure>
-<p><strong>左手准则</strong></p>
-<ul>
-<li>左手的手拇指指向x轴的正方向</li>
-<li>其余手指的弯曲方向就是该元素沿x轴旋转的方向</li>
-</ul>
-<h2 id="3D呈现-transform-style"><a href="#3D呈现-transform-style" class="headerlink" title="3D呈现 transform-style"></a>3D呈现 transform-style</h2><ul>
-<li>子元素是否开启三维立体环境</li>
-<li>transform-style:flat 子元素不开启3d立体空间， 默认</li>
-<li>transform-style:preserve-3d; 子元素开启立体空间</li>
-<li>代码写给父级，但是影响的是子盒子</li>
-</ul>
-<h1 id="浏览器私有前缀"><a href="#浏览器私有前缀" class="headerlink" title="浏览器私有前缀"></a>浏览器私有前缀</h1><p>浏览器私有前缀是为了兼容老版本的写法，比较新版本的浏览器无需添加</p>
-<p><strong>1.私有前缀</strong></p>
-<ul>
-<li>-moz-:代表firefox浏览器私有属性</li>
-<li>-ms-:代表ie浏览器私有属性</li>
-<li>-webkit-:代表safari、chrome私有属性</li>
-<li>-o-:代表Opera私有属性</li>
-</ul>
-<p><strong>2.提倡写法</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-moz-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-webkit-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">-o-<span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1409,14 +1161,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -1478,12 +1230,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">124k</span>
+    <span title="站点总字数">126k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:53</span>
+    <span title="站点阅读时长">1:55</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
