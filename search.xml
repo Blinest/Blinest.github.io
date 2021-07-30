@@ -153,6 +153,27 @@
       </tags>
   </entry>
   <entry>
+    <title>0. 知识储备</title>
+    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
+<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
+<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
+<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
+<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
+<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
+<ul>
+<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
+</ul>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>0.数据结构与算法知识储备</title>
     <url>/2021/07/25/0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="/2021/07/25/0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/frame.png"></p>
@@ -397,27 +418,6 @@
       </categories>
       <tags>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>0. 知识储备</title>
-    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
-<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
-<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
-<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
-<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
-<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
-<ul>
-<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
-</ul>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -2246,227 +2246,6 @@ False
       </tags>
   </entry>
   <entry>
-    <title>2.CSS字体与文本属性</title>
-    <url>/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS 使用 <strong>font-famliy</strong> 属性定义 <strong>字体</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>CSS使用 <strong>font-size</strong> 属性定义字体 <strong>大小</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>px（像素）大小是页面最常用的单位</li>
-<li>由于不同浏览器默认显示的字号可能不一致，所以尽量给一个明确值大小，不要默认大小</li>
-</ul>
-<h2 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h2><p>用 <strong>font-weight</strong> 定义字体 <strong>粗细</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>:bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">normal</td>
-<td style="text-align:left">默认值（不加粗）</td>
-</tr>
-<tr>
-<td style="text-align:left">bold</td>
-<td style="text-align:left">定义粗体</td>
-</tr>
-<tr>
-<td style="text-align:left">100-900</td>
-<td style="text-align:left">400=normal,700=bold  <strong>（后面不跟单位）</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p><strong>font-style</strong> 属性定义文字风格<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">normal</td>
-<td style="text-align:left">默认值</td>
-</tr>
-<tr>
-<td style="text-align:left">italic</td>
-<td style="text-align:left">斜体</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="字体符复合属性"><a href="#字体符复合属性" class="headerlink" title="字体符复合属性"></a>字体符复合属性</h2><p>也就是字体属性的简洁书写形式</p>
-<p>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-famliy;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: italic <span class="number">700</span> <span class="number">16px</span>/<span class="number">20px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: <span class="number">16px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意</strong></p>
-<ul>
-<li><strong>不能更换顺序书写</strong></li>
-<li><strong>必须保留font-size和font-family属性</strong>，否则font属性不起作用,其他的可以省略</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">字号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">font-size</td>
-<td style="text-align:left">字号</td>
-</tr>
-<tr>
-<td style="text-align:left">font-family</td>
-<td style="text-align:left">字体</td>
-</tr>
-<tr>
-<td style="text-align:left">font-weight</td>
-<td style="text-align:left">字体粗细</td>
-</tr>
-<tr>
-<td style="text-align:left">font-style</td>
-<td style="text-align:left">字体样式</td>
-</tr>
-<tr>
-<td style="text-align:left">font</td>
-<td style="text-align:left">字体连写</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="CSS-文本属性"><a href="#CSS-文本属性" class="headerlink" title="CSS 文本属性"></a>CSS 文本属性</h1><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>color属性定义文本的颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">表示</th>
-<th style="text-align:left">属性值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">预定义的颜色值</td>
-<td style="text-align:left">red,green,blue,pink</td>
-</tr>
-<tr>
-<td style="text-align:left">十六进制</td>
-<td style="text-align:left">#ff000,#ff6600···</td>
-</tr>
-<tr>
-<td style="text-align:left">RGB代码</td>
-<td style="text-align:left">rgb(255,0,0)或rgb(100%,0%,0%)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h2><p><strong>text-aligh</strong> 属性用于设置元素内文本内容的水平对齐方式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">left</td>
-<td style="text-align:left">左对齐（默认）</td>
-</tr>
-<tr>
-<td style="text-align:left">right</td>
-<td style="text-align:left">右对齐</td>
-</tr>
-<tr>
-<td style="text-align:left">center</td>
-<td style="text-align:left">居中对齐</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本装饰"><a href="#文本装饰" class="headerlink" title="文本装饰"></a>文本装饰</h2><p><strong>text-decoration</strong> 属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">none</td>
-<td style="text-align:left">默认，可以用来取消链接的下划线</td>
-</tr>
-<tr>
-<td style="text-align:left">underline</td>
-<td style="text-align:left">下划线</td>
-</tr>
-<tr>
-<td style="text-align:left">overline</td>
-<td style="text-align:left">上划线</td>
-</tr>
-<tr>
-<td style="text-align:left">line-through</td>
-<td style="text-align:left">删除线</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p><strong>text-indent</strong> 属性用来指定文本的第一行的缩进，通常是将段落 <strong>首行缩进</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>em</strong> 单位表示相对单位，就是当前1个文字的大小</p>
-<h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><p><strong>line-height</strong> 属性用于设置行间的距离（行高），可以控制文字行与行之间的距离<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid;border-bottom:0;">
-上方距离
-</div></p>
-<p><div style="width: 100px;height: 40px;text-align: center;line-height: 40px;border:1px solid;border-bottom:0;">文字大小</div></p>
-<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid">下方距离</div><br></p>
-<p><strong>line-height</strong> 是文字上下方距离和文字大小之和</p>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">表示</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">color</td>
-<td style="text-align:left">文本颜色</td>
-</tr>
-<tr>
-<td style="text-align:left">text-align</td>
-<td style="text-align:left">文本对齐</td>
-</tr>
-<tr>
-<td style="text-align:left">text-indent</td>
-<td style="text-align:left">文本缩进</td>
-</tr>
-<tr>
-<td style="text-align:left">text-decoration</td>
-<td style="text-align:left">文本修饰</td>
-</tr>
-<tr>
-<td style="text-align:left">line-height</td>
-<td style="text-align:left">行高</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>10.CSS3新增特性</title>
     <url>/2021/07/21/10-CSS3%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="新增选择器"><a href="#新增选择器" class="headerlink" title="新增选择器"></a>新增选择器</h1><h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>属性选择器可以根据元素特定属性来选择元素，这样就可以不用借助于类或者id选择器。</p>
@@ -3010,6 +2789,227 @@ False
       </tags>
   </entry>
   <entry>
+    <title>2.CSS字体与文本属性</title>
+    <url>/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS 使用 <strong>font-famliy</strong> 属性定义 <strong>字体</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>CSS使用 <strong>font-size</strong> 属性定义字体 <strong>大小</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>px（像素）大小是页面最常用的单位</li>
+<li>由于不同浏览器默认显示的字号可能不一致，所以尽量给一个明确值大小，不要默认大小</li>
+</ul>
+<h2 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h2><p>用 <strong>font-weight</strong> 定义字体 <strong>粗细</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>:bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">默认值（不加粗）</td>
+</tr>
+<tr>
+<td style="text-align:left">bold</td>
+<td style="text-align:left">定义粗体</td>
+</tr>
+<tr>
+<td style="text-align:left">100-900</td>
+<td style="text-align:left">400=normal,700=bold  <strong>（后面不跟单位）</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><p><strong>font-style</strong> 属性定义文字风格<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">默认值</td>
+</tr>
+<tr>
+<td style="text-align:left">italic</td>
+<td style="text-align:left">斜体</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="字体符复合属性"><a href="#字体符复合属性" class="headerlink" title="字体符复合属性"></a>字体符复合属性</h2><p>也就是字体属性的简洁书写形式</p>
+<p>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: font-style font-weight font-size/line-height font-famliy;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: italic <span class="number">700</span> <span class="number">16px</span>/<span class="number">20px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">font</span>: <span class="number">16px</span> <span class="string">&#x27;Microsoft yahei&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>注意</strong></p>
+<ul>
+<li><strong>不能更换顺序书写</strong></li>
+<li><strong>必须保留font-size和font-family属性</strong>，否则font属性不起作用,其他的可以省略</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">字号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">font-size</td>
+<td style="text-align:left">字号</td>
+</tr>
+<tr>
+<td style="text-align:left">font-family</td>
+<td style="text-align:left">字体</td>
+</tr>
+<tr>
+<td style="text-align:left">font-weight</td>
+<td style="text-align:left">字体粗细</td>
+</tr>
+<tr>
+<td style="text-align:left">font-style</td>
+<td style="text-align:left">字体样式</td>
+</tr>
+<tr>
+<td style="text-align:left">font</td>
+<td style="text-align:left">字体连写</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-文本属性"><a href="#CSS-文本属性" class="headerlink" title="CSS 文本属性"></a>CSS 文本属性</h1><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>color属性定义文本的颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">表示</th>
+<th style="text-align:left">属性值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">预定义的颜色值</td>
+<td style="text-align:left">red,green,blue,pink</td>
+</tr>
+<tr>
+<td style="text-align:left">十六进制</td>
+<td style="text-align:left">#ff000,#ff6600···</td>
+</tr>
+<tr>
+<td style="text-align:left">RGB代码</td>
+<td style="text-align:left">rgb(255,0,0)或rgb(100%,0%,0%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h2><p><strong>text-aligh</strong> 属性用于设置元素内文本内容的水平对齐方式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">左对齐（默认）</td>
+</tr>
+<tr>
+<td style="text-align:left">right</td>
+<td style="text-align:left">右对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">center</td>
+<td style="text-align:left">居中对齐</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本装饰"><a href="#文本装饰" class="headerlink" title="文本装饰"></a>文本装饰</h2><p><strong>text-decoration</strong> 属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等。<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">默认，可以用来取消链接的下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">underline</td>
+<td style="text-align:left">下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">overline</td>
+<td style="text-align:left">上划线</td>
+</tr>
+<tr>
+<td style="text-align:left">line-through</td>
+<td style="text-align:left">删除线</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><p><strong>text-indent</strong> 属性用来指定文本的第一行的缩进，通常是将段落 <strong>首行缩进</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>em</strong> 单位表示相对单位，就是当前1个文字的大小</p>
+<h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><p><strong>line-height</strong> 属性用于设置行间的距离（行高），可以控制文字行与行之间的距离<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid;border-bottom:0;">
+上方距离
+</div></p>
+<p><div style="width: 100px;height: 40px;text-align: center;line-height: 40px;border:1px solid;border-bottom:0;">文字大小</div></p>
+<p><div style="width: 100px;height: 20px;text-align: center;line-height: 20px;border:1px solid">下方距离</div><br></p>
+<p><strong>line-height</strong> 是文字上下方距离和文字大小之和</p>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">文本颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">text-align</td>
+<td style="text-align:left">文本对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">text-indent</td>
+<td style="text-align:left">文本缩进</td>
+</tr>
+<tr>
+<td style="text-align:left">text-decoration</td>
+<td style="text-align:left">文本修饰</td>
+</tr>
+<tr>
+<td style="text-align:left">line-height</td>
+<td style="text-align:left">行高</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.n维数组</title>
     <url>/2021/07/02/2-n%E7%BB%B4%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="N维数组（ndarray）"><a href="#N维数组（ndarray）" class="headerlink" title="N维数组（ndarray）"></a>N维数组（ndarray）</h1><blockquote>
@@ -3271,79 +3271,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>2.算法(用C语言实现)</title>
-    <url>/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
-<ol>
-<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
-<li>若$r_1=0$,则$(a,b)=b$</li>
-<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
-<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
-</ol>
-<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
-<p>C语言代码实现</p>
-<p>1.while循环实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.函数嵌套实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
-<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
-<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
-</blockquote>
-<p>步骤：（正序为例）</p>
-<ol>
-<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
-<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
-<li>(小循环)针对前面未排序元素重复以上步骤。</li>
-<li>(大循环)重复上述步骤，直到排序完成</li>
-</ol>
-<p>C语言代码实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
-<p>时间复杂度为$O(n)$</p>
-<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
-<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
-<p>时间复杂度为$O(n^2)$</p>
-<p>平均时间复杂度$O(n^2)$</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
-<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
-</blockquote>
-<p>简单来说就是从后面的数选出较小的数排到前面</p>
-<p>C语言代码实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
-<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
-<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
-<ol>
-<li>从第一个元素开始，该元素可被认为已经排好序</li>
-<li>取出下一个元素，在已经排好的数组中向前扫描</li>
-<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
-<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
-<li>将取出元素插入到该空出的位置</li>
-<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</blockquote>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
-<ol>
-<li>如果n=1,结束</li>
-<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
-<li>将两个子序列分别采用归并排序</li>
-<li>将两个排好序的子序列合并成一个最终的排序序列</li>
-</ol>
-<p>C语言实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="链表反转"><a href="#链表反转" class="headerlink" title="链表反转"></a>链表反转</h1><p>将单链表顺序反转过来</p>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2.栈和队列</title>
     <url>/2021/07/27/2-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>栈和队列是线性表的子集（是插入和删除位置受限的线性表）</strong></p>
@@ -3580,6 +3507,79 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>2.算法(用C语言实现)</title>
+    <url>/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
+<ol>
+<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
+<li>若$r_1=0$,则$(a,b)=b$</li>
+<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
+<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
+</ol>
+<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
+<p>C语言代码实现</p>
+<p>1.while循环实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.函数嵌套实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
+<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
+<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
+</blockquote>
+<p>步骤：（正序为例）</p>
+<ol>
+<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
+<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
+<li>(小循环)针对前面未排序元素重复以上步骤。</li>
+<li>(大循环)重复上述步骤，直到排序完成</li>
+</ol>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
+<p>时间复杂度为$O(n)$</p>
+<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
+<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
+<p>时间复杂度为$O(n^2)$</p>
+<p>平均时间复杂度$O(n^2)$</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
+<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
+</blockquote>
+<p>简单来说就是从后面的数选出较小的数排到前面</p>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
+<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
+<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
+<ol>
+<li>从第一个元素开始，该元素可被认为已经排好序</li>
+<li>取出下一个元素，在已经排好的数组中向前扫描</li>
+<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
+<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
+<li>将取出元素插入到该空出的位置</li>
+<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
+<ol>
+<li>如果n=1,结束</li>
+<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
+<li>将两个子序列分别采用归并排序</li>
+<li>将两个排好序的子序列合并成一个最终的排序序列</li>
+</ol>
+<p>C语言实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="链表反转"><a href="#链表反转" class="headerlink" title="链表反转"></a>链表反转</h1><p>将单链表顺序反转过来</p>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>3.CSS的背景</title>
     <url>/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的背景"><a href="#CSS-的背景" class="headerlink" title="CSS 的背景"></a>CSS 的背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><strong>background-color</strong> 属性定义了元素的背景颜色<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></table></figure><br>一般情况下元素背景颜色默认值是 <strong>transparent(透明)</strong>，我们也可以手动指定背景颜色为透明色。</p>
@@ -3685,6 +3685,201 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3.树和森林</title>
+    <url>/2021/07/28/3-%E6%A0%91/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>树是n（n&geqslant;0）个结点的有限集.</p>
+<ul>
+<li>n=0，空树</li>
+<li>n&gt;0，则满足以下条件<ul>
+<li><strong>有且仅有一个</strong> 特定的称为 <strong>根</strong> 的结点</li>
+<li>其余节点可分为m（m&geqslant;0）个互不相交的有限集T1，T2，T3……，Tm，其中每一个集合本身又是一棵树，并称为根的 <strong>子树</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="树的基本术语"><a href="#树的基本术语" class="headerlink" title="树的基本术语"></a>树的基本术语</h2><p><strong>根节点</strong>：非空树中无前驱结点的结点</p>
+<p><strong>结点的度</strong>：结点拥有的子树数</p>
+<p><strong>树的度</strong>：树内各结点的度的最大值</p>
+<p><strong>度=0</strong> —&gt; 称为 <strong>叶子结点</strong>（终端结点）</p>
+<p><strong>度≠0</strong> —&gt; 称为 <strong>分支结点</strong>（非终端节点）</p>
+<p>根节点以外的分支结点称为 <strong>内部节点</strong></p>
+<p>结点的子树的根称为该结点的 <strong>孩子</strong>，该结点称为孩子的 <strong>双亲</strong></p>
+<p><strong>兄弟</strong>：深度相同，双亲结点相同</p>
+<p><strong>堂兄弟</strong>：深度相同，双亲结点不同</p>
+<p>结点的 <strong>祖先</strong>：从根到该结点所经分支上的所有结点</p>
+<p>结点的 <strong>子孙</strong>：以某结点为根的子树中的任一结点</p>
+<p><strong>树的深度</strong>：树中结点的最大层次</p>
+<p><strong>有序树</strong>：树中结点的各子树从左至右有次序</p>
+<p><strong>无序树</strong>：树中结点的各子树无次序</p>
+<p><strong>森林</strong>：是m（m&geqslant;0）棵互不相交的树的集合</p>
+<h1 id="二叉树-Binary-Tree"><a href="#二叉树-Binary-Tree" class="headerlink" title="二叉树(Binary Tree)"></a>二叉树(Binary Tree)</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>二叉树是n（n&geqslant;0）个结点的有限集.或是空集，或是一个根节点和两棵不相交的分别称作这个根的左子树和右子树的二叉树组成</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ol>
+<li>每个结点最多有两个孩子（二叉树中不存在度大于2的结点）</li>
+<li>子树有左右之分，其次序不能颠倒</li>
+<li>二叉树可以是空集合，根可以有空的左子树或空的右子树</li>
+</ol>
+<p><strong>注意</strong>：二叉树 <strong>不是</strong> 树的特殊情况，它们是两个概念</p>
+<p><strong>二叉树</strong> 结点的子树要 <strong>区分左子树和右子树</strong>，即使只有一棵子树也要区分，说明它是左子树，还是右子树</p>
+<p><strong>树</strong> 当节点只有一个孩子时，就 <strong>无需区分</strong> 它是左还是右的次序，因此二者是不同的。这是二叉树与树的最主要差别</p>
+<h2 id="二叉树的抽象数据类型定义"><a href="#二叉树的抽象数据类型定义" class="headerlink" title="二叉树的抽象数据类型定义"></a>二叉树的抽象数据类型定义</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT BinaryTree&#123;</span><br><span class="line">    数据对象D:  D是具有相同特性的数据元素的集合。</span><br><span class="line">    数据关系R:  若D=Φ,则R=Φ;</span><br><span class="line">                若D≠Φ,则R=&#123;H&#125;;H是如下二元关系:</span><br><span class="line">                <span class="number">1.</span>root唯一      <span class="comment">//关于根的说明</span></span><br><span class="line">                <span class="number">2.</span>D_j∩D_k=Φ     <span class="comment">//关于子树不相交的说明</span></span><br><span class="line">                <span class="number">3.</span>……            <span class="comment">//关于数据元素的说明</span></span><br><span class="line">                <span class="number">4.</span>……            <span class="comment">//关于左子树和右子树的说明</span></span><br><span class="line">    基本操作P</span><br><span class="line">&#125;ADT BinaryTree</span><br></pre></td></tr></table></figure>
+<h2 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h2><blockquote>
+<p>所有的结点都在，即深度为k且右 $2^k-1$ 个结点的二叉树称为满二叉树</p>
+<h2 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h2><p>深度为k的具有n个结点的二叉树，当且仅当其每一个结点都与深度为k的 <strong>满二叉树</strong> 中 <strong>编号</strong> 为1~n的结点 <strong>一一对应</strong> 时，称之为完全二叉树。</p>
+</blockquote>
+<p><strong>注：</strong> 满二叉树中，最后一个结点开始，<strong>连续</strong> 去掉 <strong>任意</strong> 个结点，即是一棵完全二叉树</p>
+<p><strong>满二叉树一定是完全二叉树</strong></p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>1.具有n个节点的完全二叉树深度为 $\lfloor \log_2n \rfloor +1$</p>
+<p>注：$\lfloor x \rfloor$：称作x的底，表示不大于x的最大整数</p>
+<p>2.如果对对一棵有n个结点的完全二叉树，结点按层序编号，则对 <strong>任一结点i</strong>(i&leqslant;i&leqslant;n),有：</p>
+<ul>
+<li>如果i = 1，则结点i是二叉树的根，无双亲；如果 i&gt;1 ，则其双亲是 <strong>结点 $\lfloor i/2 \rfloor$</strong></li>
+<li>如果2i &gt; n，则结点i为叶子结点，无左孩子；否则，其 <strong>左孩子是结点 2i</strong></li>
+<li>如果2i+1 &gt; n，则结点i无右孩子；否则，其 <strong>右孩子是结点 2i+1</strong> </li>
+</ul>
+<h2 id="二叉树的顺序存储"><a href="#二叉树的顺序存储" class="headerlink" title="二叉树的顺序存储"></a>二叉树的顺序存储</h2><p>实现：按 <strong>满二叉树</strong> 的结点层次编号，依次存放二叉树中的数据元素<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//二叉树顺序存储表示</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXTSIZE 100</span></span><br><span class="line">Typedef TElemTye SqBiTree[MAXTSIZE]</span><br><span class="line">SqBiTree bt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>缺点</strong>:<br>会浪费空间，所以适合 <strong>满二叉树</strong> 和 <strong>完全二叉树</strong></p>
+<h2 id="二叉树的链式存储"><a href="#二叉树的链式存储" class="headerlink" title="二叉树的链式存储"></a>二叉树的链式存储</h2><p><strong>二叉链表</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiNode</span>&#123;</span></span><br><span class="line">    TElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span><span class="comment">//左右孩子指针</span></span><br><span class="line">&#125;BiNode,*BiTree;</span><br></pre></td></tr></table></figure></p>
+<p>n个结点的二叉链表中有，<strong>n+1</strong> 个空指针域</p>
+<ul>
+<li>因为每个非空指针域都存放着一个结点</li>
+</ul>
+<p><strong>三叉链表</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TriTNode</span>&#123;</span></span><br><span class="line">    TelemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TriTNode</span> *<span class="title">lchild</span>*<span class="title">parent</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">    <span class="comment">//比二叉节点多了一个双亲指针</span></span><br><span class="line">&#125;TriTNode,*TriTree;</span><br></pre></td></tr></table></figure></p>
+<h2 id="遍历二叉树"><a href="#遍历二叉树" class="headerlink" title="遍历二叉树"></a>遍历二叉树</h2><p><strong>方法</strong><br>假设：L：遍历左子树，D：访问根结点，R：遍历右子树</p>
+<p>遍历方案共有六种：DLR、LDR、LRD、DRL、RLD</p>
+<p>若规定 <strong>先左后右</strong>，则只有前三种情况：</p>
+<ul>
+<li><strong>DLR</strong>——先序（根）遍历</li>
+<li><strong>LDR</strong>——中序（根）遍历</li>
+<li><strong>LRD</strong>——后序（根）遍历</li>
+</ul>
+<p><strong>先序遍历递归算法</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pre</span><span class="params">(BiTree *T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,T-&gt;data);</span><br><span class="line">        pre(T-&gt;lchild);</span><br><span class="line">        pre(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>中序遍历非递归算法</strong><br>算法设计思路：使用栈<br><strong>二叉树的层次遍历</strong><br>算法设计思路：使用一个队列</p>
+<ul>
+<li>将根节点进队;</li>
+<li>队不空时循环：从队列中出列一个结点*p，访问它；<ul>
+<li>若它有左孩子结点，将左孩子结点进队；</li>
+<li>若它有右孩子结点，将右孩子结点进队。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">LevelOrder</span><span class="params">(BTNode *b)</span></span>&#123;</span><br><span class="line">    BTNode *p; SqQueue *qu;</span><br><span class="line">    initQueue(qu);<span class="comment">//初始化队列</span></span><br><span class="line">    enQueue(qu,b);<span class="comment">//根结点指针进入队列</span></span><br><span class="line">    <span class="keyword">while</span>(!QueueEmpty(qu))&#123;<span class="comment">//队不为空，则循环</span></span><br><span class="line">        deQueue(qu,p);<span class="comment">//出队结点p</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,p-&gt;data);<span class="comment">//访问结点p</span></span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild!=<span class="literal">NULL</span>)<span class="comment">//有左孩子时将其进队</span></span><br><span class="line">            enQueue(qu,p-&gt;lchild);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild!=<span class="literal">NULL</span>)<span class="comment">//有右孩子时将其进队</span></span><br><span class="line">            enQueue(qu,p-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="根据遍历序列确定二叉树"><a href="#根据遍历序列确定二叉树" class="headerlink" title="根据遍历序列确定二叉树"></a>根据遍历序列确定二叉树</h2><ul>
+<li>若二叉树中各结点的值均不相同，则二叉树的结点的先序序列，中序序列，后序序列都是唯一的</li>
+<li>由二叉树的先序序列和中序序列，或由二叉树的后序序列和中序序列可以确定唯一一棵二叉树</li>
+</ul>
+<h2 id="二叉树的建立"><a href="#二叉树的建立" class="headerlink" title="二叉树的建立"></a>二叉树的建立</h2><p>C语言描述<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> data;</span><br><span class="line">	BiTNode *lchild,*rchild;</span><br><span class="line">&#125;BiTree,*pBiTree;</span><br><span class="line"></span><br><span class="line"><span class="function">pBiTree <span class="title">Create</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(pBiTree )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	pBiTree p=<span class="literal">NULL</span>;</span><br><span class="line">	p=Create();</span><br><span class="line">	<span class="keyword">if</span>(p!=<span class="literal">NULL</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;创建成功\n&quot;</span>);</span><br><span class="line">	traverse(p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;遍历成功\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">pBiTree <span class="title">Create</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	pBiTree T;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;ch);</span><br><span class="line">	<span class="keyword">if</span>(ch==<span class="string">&#x27;#&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		T=<span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		T=(pBiTree)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BiTree));</span><br><span class="line">		T-&gt;data = ch;</span><br><span class="line">		T-&gt;lchild=Create();</span><br><span class="line">		T-&gt;rchild=Create();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> T;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(pBiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>,T-&gt;data);</span><br><span class="line">		traverse(T-&gt;lchild);</span><br><span class="line">		traverse(T-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="线索二叉树-Threaded-Binary-Tree"><a href="#线索二叉树-Threaded-Binary-Tree" class="headerlink" title="线索二叉树(Threaded Binary Tree)"></a>线索二叉树(Threaded Binary Tree)</h2><p>问题：如何寻找特定遍历序列中二叉树结点的前驱和后继</p>
+<p>解决方法：</p>
+<ol>
+<li>通过遍历寻找—-费时间</li>
+<li>再增设前驱、后继指针域—-增加存储负担</li>
+<li><p><strong>利用二叉链表中的空指针域</strong></p>
+<ul>
+<li>如果某个结点的左孩子为空，则将空的左孩子指针域改为 <strong>指向其前驱</strong>；如果某结点的右孩子为空，则将空的右孩子指针域改为 <strong>指向其后继</strong>——这种改变指向的指针称为“线索”</li>
+</ul>
+<p>为区分lchild和rchild指针到底是指向孩子的指针，还是指向前驱或者后继的指针，对二叉链表中每个结点增设两个标志域ltag和rtag，并约定：</p>
+<ul>
+<li>l(r)tag = 0 l(r)child指向该结点的左（右）孩子</li>
+<li>l(r)tag = 1 l(r)child指向该结点的前驱（后继）</li>
+</ul>
+<p><strong>增设了一个头结点</strong>以中序遍历为例）：</p>
+<ul>
+<li>ltag=0,lchild指向根结点，</li>
+<li>rtag=1,rchild指向遍历序列中最后一个结点</li>
+<li>遍历序列中第一个结点的lc域和最后一个结点的rc域都指向头结点</li>
+</ul>
+</li>
+</ol>
+<h1 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h1><h2 id="双亲表示法"><a href="#双亲表示法" class="headerlink" title="双亲表示法"></a>双亲表示法</h2><p>实现：</p>
+<ul>
+<li>定义结构数组存放树的结点，每个结点含两个域<ul>
+<li>数据域：存放结点本身信息</li>
+<li>双亲域：指示本结点的双亲结点在数组中的位置</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_TREE_SIZE 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span> <span class="comment">//树的结构</span></span><br><span class="line">    PTNode nodes[MAX_TREE_SIZE];</span><br><span class="line">    <span class="keyword">int</span> r,n;    <span class="comment">//根结点位置和结点个数</span></span><br><span class="line">&#125;PTree;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">PTNode</span>&#123;</span></span><br><span class="line">    TElemType data;</span><br><span class="line">    <span class="keyword">int</span> parent;<span class="comment">//双亲位置域</span></span><br><span class="line">&#125;PTNode;</span><br></pre></td></tr></table></figure>
+<h2 id="双亲表示法-1"><a href="#双亲表示法-1" class="headerlink" title="双亲表示法"></a>双亲表示法</h2><p>把每个结点的孩子结点排列起来，看成是一个线性表，用单链表存储，则n个结点有n个孩子链表（叶子的孩子链表为空表）。而n个头指针又组成一个线性表，用顺序表（含n个元素的结构数组）存储</p>
+<p><strong>特点</strong><br>找孩子容易，找双亲难</p>
+<p><strong>孩子结点结构</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">CTNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> child;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">CTNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;*childPtr;</span><br></pre></td></tr></table></figure></p>
+<p><strong>双亲结点结构</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    TElemType data;</span><br><span class="line">    ChildPtr firstchild;<span class="comment">//孩子链表头指针</span></span><br><span class="line">&#125;CTbox;</span><br></pre></td></tr></table></figure></p>
+<p><strong>树结构</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    CTBox nodes[MAX_TREE_SIZE];</span><br><span class="line">    <span class="keyword">int</span> n,r;    <span class="comment">//结点数和根结点的位置</span></span><br><span class="line">&#125;CTree;</span><br></pre></td></tr></table></figure></p>
+<h2 id="二叉链表表示法"><a href="#二叉链表表示法" class="headerlink" title="二叉链表表示法"></a>二叉链表表示法</h2><p>实现：用二叉链表作树的存储结构，链表中每个结点的两个指针域分别指向其 <strong>第一个孩子结点</strong> 和 <strong>下一个兄弟结点</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">CSNode</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">CSNode</span> *<span class="title">firstchild</span>,*<span class="title">nextsibling</span>;</span></span><br><span class="line">&#125;CSNode,*CSTree;</span><br></pre></td></tr></table></figure>
+<h1 id="树与二叉树的转换"><a href="#树与二叉树的转换" class="headerlink" title="树与二叉树的转换"></a>树与二叉树的转换</h1><ul>
+<li>将树转换成二叉树进行处理，利用二叉树的算法实现对数的操作</li>
+<li>由于树和二叉树都可以用二叉链表作存储结构，则 <strong>以二叉链表作媒介</strong> 可以导出树与二叉树之间的一个对应关系。</li>
+</ul>
+<p><strong>口诀：兄弟相连留长子</strong></p>
+<h1 id="森林"><a href="#森林" class="headerlink" title="森林"></a>森林</h1><blockquote>
+<p>森林是m(m&geqslant;0)棵互不相交的树的集合<br>森林—-&gt;树—-&gt;二叉树</p>
+</blockquote>
+<p>森林变二叉树：树变二叉根相连</p>
+<h2 id="树和森林的遍历"><a href="#树和森林的遍历" class="headerlink" title="树和森林的遍历"></a>树和森林的遍历</h2><p><strong>1.树的遍历方式（三种）</strong></p>
+<ul>
+<li><strong>先根（次序）遍历</strong>：<ul>
+<li>若树不空，则先访问根结点，然后依次先根遍历各课子树</li>
+</ul>
+</li>
+<li><strong>后根（次序）遍历</strong>:<ul>
+<li>若树不空，则先依次后根遍历各棵子树，然后访问根结点</li>
+</ul>
+</li>
+<li><strong>按层次遍历</strong>：<ul>
+<li>若树不空，则自上而下自左至右访问树中每个结点</li>
+</ul>
+</li>
+</ul>
+<p><strong>2.森林的遍历</strong><br>将森林看作由三部分构成：</p>
+<ul>
+<li>森林中第一棵树的根结点；</li>
+<li>森林中第一棵树的子树森林</li>
+<li><p>森林中其它树构成的森林</p>
+</li>
+<li><p><strong>先序遍历</strong></p>
+<ul>
+<li>若树不空，则</li>
+<li><strong>访问森林中第一棵树的根结点</strong></li>
+<li>先序遍历森林中第一棵树的子树森林</li>
+<li>先序遍历森林中（除第一棵树外）其余树构成的森林<blockquote>
+<p>即依次从左至右对森林中的每一棵树进行先根遍历</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>中序遍历</strong></p>
+<ul>
+<li>若树不空，则</li>
+<li>中序遍历森林中第一棵树的子树森林</li>
+<li>访问森林中第一棵树的根结点</li>
+<li>中序遍历森林中（除第一棵树外）其余树构成的森林<blockquote>
+<p>即依次从左到右对森林中的每一棵树进行后根遍历</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>1.<strong>路径</strong>：从树中一个结点到另一个结点之间的 <strong>分支</strong> 构成这两个结点间的路径</p>
+<p>2.<strong>结点的路径长度</strong>：两个结点路径上的 <strong>分支数</strong></p>
+<p>3.<strong>树的路径长度</strong>：从 <strong>树根</strong> 到每个结点的 <strong>路径长度之和</strong>。记作：TL</p>
+<p>结点数目相同的二叉树中，完全二叉树是路径长度最短的二叉树</p>
+<p>4.<strong>权</strong>：将树中结点赋给一个有着某种含义的数值，则这个数值称为该结点的权</p>
+<p>5.<strong>结点的带权路径长度</strong>：从根结点到该结点之间的 <strong>路径长度</strong> 与该结点的 <strong>权</strong> 的 <strong>乘积</strong></p>
+<p>6.<strong>树的带权路径长度</strong>：树中所有 <strong>叶子</strong> 结点的 <strong>带权路径长度之和</strong> 记WPL</p>
+<h2 id="哈夫曼树的构造算法"><a href="#哈夫曼树的构造算法" class="headerlink" title="哈夫曼树的构造算法"></a>哈夫曼树的构造算法</h2><p><strong>哈夫曼算法</strong></p>
+<ul>
+<li>构造森林全是根</li>
+<li>选用两小造新树</li>
+<li>删除两小添新人</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数据分析</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -3889,51 +4084,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数据分析</tag>
         <tag>numpy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3.树</title>
-    <url>/2021/07/28/3-%E6%A0%91/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>树是n（n&geqslant;0）个结点的有限集.</p>
-<ul>
-<li>n=0，空树</li>
-<li>n&gt;0，则满足以下条件<ul>
-<li><strong>有且仅有一个</strong> 特定的称为 <strong>根</strong> 的结点</li>
-<li>其余节点可分为m（m&geqslant;0）个互不相交的有限集T1，T2，T3……，Tm，其中每一个集合本身又是一棵树，并称为根的 <strong>子树</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="树的基本术语"><a href="#树的基本术语" class="headerlink" title="树的基本术语"></a>树的基本术语</h2><p><strong>根节点</strong>：非空树中无前驱结点的结点</p>
-<p><strong>结点的度</strong>：结点拥有的子树数</p>
-<p><strong>树的度</strong>：树内各结点的度的最大值</p>
-<p><strong>度=0</strong> —&gt; 称为 <strong>叶子结点</strong>（终端结点）</p>
-<p><strong>度≠0</strong> —&gt; 称为 <strong>分支结点</strong>（非终端节点）</p>
-<p>根节点以外的分支结点称为 <strong>内部节点</strong></p>
-<p>结点的子树的根称为该结点的 <strong>孩子</strong>，该结点称为孩子的 <strong>双亲</strong></p>
-<p><strong>兄弟</strong>：深度相同，双亲结点相同</p>
-<p><strong>堂兄弟</strong>：深度相同，双亲结点不同</p>
-<p>结点的 <strong>祖先</strong>：从根到该结点所经分支上的所有结点</p>
-<p>结点的 <strong>子孙</strong>：以某结点为根的子树中的任一结点</p>
-<p><strong>树的深度</strong>：树中结点的最大层次</p>
-<p><strong>有序树</strong>：树中结点的各子树从左至右有次序</p>
-<p><strong>无序树</strong>：树中结点的各子树无次序</p>
-<p><strong>森林</strong>：是m（m&geqslant;0）棵互不相交的树的集合</p>
-<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>二叉树是n（n&geqslant;0）个结点的有限集.或是空集，或是一个根节点和两棵不相交的分别称作这个根的左子树和右子树的二叉树组成</p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ol>
-<li>每个结点最多有两个孩子（二叉树中不存在度大于2的结点）</li>
-<li>子树有左右之分，其次序不能颠倒</li>
-<li>二叉树可以是空集合，根可以有空的左子树或空的右子树</li>
-</ol>
-<p><strong>注意</strong>：二叉树 <strong>不是</strong> 树的特殊情况，它们是两个概念</p>
-<p><strong>二叉树</strong> 结点的子树要 <strong>区分左子树和右子树</strong>，即使只有一棵子树也要区分，说明它是左子树，还是右子树</p>
-<p><strong>树</strong> 当节点只有一个孩子时，就 <strong>无需区分</strong> 它是左还是右的次序，因此二者是不同的。这是二叉树与树的最主要差别</p>
-<h2 id="二叉树的抽象数据类型定义"><a href="#二叉树的抽象数据类型定义" class="headerlink" title="二叉树的抽象数据类型定义"></a>二叉树的抽象数据类型定义</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT BinaryTree&#123;</span><br><span class="line">    数据对象D:  D是具有相同特性的数据元素的集合。</span><br><span class="line">    数据关系R:  若D=Φ,则R=Φ;</span><br><span class="line">                若D≠Φ,则R=&#123;H&#125;;H是如下二元关系:</span><br><span class="line">                <span class="number">1.</span>root唯一      <span class="comment">//关于根的说明</span></span><br><span class="line">                <span class="number">2.</span>D_j∩D_k=Φ     <span class="comment">//关于子树不相交的说明</span></span><br><span class="line">                <span class="number">3.</span>……            <span class="comment">//关于数据元素的说明</span></span><br><span class="line">                <span class="number">4.</span>……            <span class="comment">//关于左子树和右子树的说明</span></span><br><span class="line">    基本操作P</span><br><span class="line">&#125;ADT BinaryTree</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>数据分析</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -4485,39 +4635,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>5.向量空间</title>
-    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
-<p>{n维向量；+，数乘}</p>
-</blockquote>
-<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
-<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
-<p>则称W是n维向量空间的子空间</p>
-<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
-<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
-<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
-<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
-<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
-<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
-<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
-<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
-<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
-<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
-<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
-<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
-<hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
-<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5.通用函数</title>
     <url>/2021/07/04/5-%E9%80%9A%E7%94%A8%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通用函数（即ufunc）是一种对ndarray中的数据执行元素级运算的函数。</p>
@@ -4661,6 +4778,39 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>5.向量空间</title>
+    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
+<p>{n维向量；+，数乘}</p>
+</blockquote>
+<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
+<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
+<p>则称W是n维向量空间的子空间</p>
+<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
+<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
+<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
+<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
+<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
+<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
+<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
+<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
+<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
+<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
+<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
+<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
+<hr>
+<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
+<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6.CSS浮动</title>
     <url>/2021/07/20/6-CSS%E6%B5%AE%E5%8A%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div style="width: 200px;height: 200px;"><div style="float: left;width: 100px;height: 100px;background: rgba(0,0,0,.1);"></div><div style="float: right;width: 100px;height: 100px;background: rgba(0,0,0,.3);"></div><div style="float: left;width: 100px;height: 100px;background: rgba(0,0,0,.5);"></div><div style="float: right;width: 100px;height: 100px;background: rgba(0,0,0,.7);"></div></div>
@@ -4762,140 +4912,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>6.线性代数（numpy）</title>
-    <url>/2021/07/05/6-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%EF%BC%88numpy%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<h2 id="矩阵乘法-三种"><a href="#矩阵乘法-三种" class="headerlink" title="矩阵乘法(三种)"></a>矩阵乘法(三种)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line">y = np.array([[<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>],[<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]])</span><br><span class="line">x.dot(y)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 2.</span></span><br><span class="line">np.dot(x,y) </span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 3.</span></span><br><span class="line">x@y</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 30,  24,  18],
-       [ 84,  69,  54],
-       [138, 114,  90]])
-</code></pre><h2 id="np-linalg"><a href="#np-linalg" class="headerlink" title="np.linalg"></a>np.linalg</h2><p>这里面有一组标准的矩阵分解运算以及诸如求逆和行列式之类的</p>
-<p><strong>常用的线性代数的函数</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">函数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">diag</td>
-<td style="text-align:left">以一维数组的形式返回方阵的对角线（或非对角线）元素，或将一堆数组转换为方阵（非对角线元素为0）</td>
-</tr>
-<tr>
-<td style="text-align:left">dot</td>
-<td style="text-align:left">矩阵乘法</td>
-</tr>
-<tr>
-<td style="text-align:left">trace</td>
-<td style="text-align:left">计算对角线元素的和</td>
-</tr>
-<tr>
-<td style="text-align:left">det</td>
-<td style="text-align:left">计算矩阵行列式</td>
-</tr>
-<tr>
-<td style="text-align:left">eig</td>
-<td style="text-align:left">计算方阵的特征值和特征向量</td>
-</tr>
-<tr>
-<td style="text-align:left">inv</td>
-<td style="text-align:left">计算方阵的逆</td>
-</tr>
-<tr>
-<td style="text-align:left">pinv</td>
-<td style="text-align:left">计算矩阵的Moore-Penrose伪逆</td>
-</tr>
-<tr>
-<td style="text-align:left">qr</td>
-<td style="text-align:left">计算QR分解</td>
-</tr>
-<tr>
-<td style="text-align:left">svd</td>
-<td style="text-align:left">计算奇异值分解(SVD)</td>
-</tr>
-<tr>
-<td style="text-align:left">solve</td>
-<td style="text-align:left">解线性方程组Ax = b,其中A为一个方阵</td>
-</tr>
-<tr>
-<td style="text-align:left">lstsq</td>
-<td style="text-align:left">计算Ax=b的最小二乘解</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>例</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [4, 5, 6],
-       [9, 4, 5]])
-</code></pre><ul>
-<li>np.diag</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([1, 5, 5])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(np.diag(A))</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 0, 0],
-       [0, 5, 0],
-       [0, 0, 5]])
-</code></pre><ul>
-<li>np.trace</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.trace(A)</span><br></pre></td></tr></table></figure>
-<pre><code>11
-</code></pre><ul>
-<li>np.linalg.det</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.det(A)</span><br></pre></td></tr></table></figure>
-<pre><code>-17.999999999999996
-</code></pre><ul>
-<li>np.linalg.inv</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.inv(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.05555556, -0.11111111,  0.16666667],
-       [-1.88888889,  1.22222222, -0.33333333],
-       [ 1.61111111, -0.77777778,  0.16666667]])
-</code></pre><ul>
-<li>np.linalg.eig</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)</span><br></pre></td></tr></table></figure>
-<pre><code>(array([12.76913689, -2.36514612,  0.59600923]),
- array([[-0.28796344, -0.47551397,  0.10554127],
-        [-0.67379758, -0.38580557, -0.83390437],
-        [-0.68049532,  0.79059505,  0.54172368]]))
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eigvals(A)</span><br></pre></td></tr></table></figure>
-<pre><code>array([12.76913689, -2.36514612,  0.59600923])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.28796344, -0.47551397,  0.10554127],
-       [-0.67379758, -0.38580557, -0.83390437],
-       [-0.68049532,  0.79059505,  0.54172368]])
-</code></pre><ul>
-<li>np.linalg.solve</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">B = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">np.linalg.solve(A,B)</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 0.22222222, -1.44444444,  1.55555556])
-</code></pre><p>简单的使用了一下Numpy中关于线性代数的函数,也发现了一些问题，就是求行列式的值存在精度丢失，目前接触到的应用大概就这么多，当然后面会阅读一些文档对这一部分内容进行扩充</p>
-]]></content>
-      <categories>
-        <category>numpy</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -5040,6 +5056,140 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.线性代数（numpy）</title>
+    <url>/2021/07/05/6-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%EF%BC%88numpy%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h2 id="矩阵乘法-三种"><a href="#矩阵乘法-三种" class="headerlink" title="矩阵乘法(三种)"></a>矩阵乘法(三种)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line">y = np.array([[<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>],[<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]])</span><br><span class="line">x.dot(y)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 2.</span></span><br><span class="line">np.dot(x,y) </span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 3.</span></span><br><span class="line">x@y</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</code></pre><h2 id="np-linalg"><a href="#np-linalg" class="headerlink" title="np.linalg"></a>np.linalg</h2><p>这里面有一组标准的矩阵分解运算以及诸如求逆和行列式之类的</p>
+<p><strong>常用的线性代数的函数</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">diag</td>
+<td style="text-align:left">以一维数组的形式返回方阵的对角线（或非对角线）元素，或将一堆数组转换为方阵（非对角线元素为0）</td>
+</tr>
+<tr>
+<td style="text-align:left">dot</td>
+<td style="text-align:left">矩阵乘法</td>
+</tr>
+<tr>
+<td style="text-align:left">trace</td>
+<td style="text-align:left">计算对角线元素的和</td>
+</tr>
+<tr>
+<td style="text-align:left">det</td>
+<td style="text-align:left">计算矩阵行列式</td>
+</tr>
+<tr>
+<td style="text-align:left">eig</td>
+<td style="text-align:left">计算方阵的特征值和特征向量</td>
+</tr>
+<tr>
+<td style="text-align:left">inv</td>
+<td style="text-align:left">计算方阵的逆</td>
+</tr>
+<tr>
+<td style="text-align:left">pinv</td>
+<td style="text-align:left">计算矩阵的Moore-Penrose伪逆</td>
+</tr>
+<tr>
+<td style="text-align:left">qr</td>
+<td style="text-align:left">计算QR分解</td>
+</tr>
+<tr>
+<td style="text-align:left">svd</td>
+<td style="text-align:left">计算奇异值分解(SVD)</td>
+</tr>
+<tr>
+<td style="text-align:left">solve</td>
+<td style="text-align:left">解线性方程组Ax = b,其中A为一个方阵</td>
+</tr>
+<tr>
+<td style="text-align:left">lstsq</td>
+<td style="text-align:left">计算Ax=b的最小二乘解</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>例</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [4, 5, 6],
+       [9, 4, 5]])
+</code></pre><ul>
+<li>np.diag</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 5, 5])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.diag(np.diag(A))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 0, 0],
+       [0, 5, 0],
+       [0, 0, 5]])
+</code></pre><ul>
+<li>np.trace</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.trace(A)</span><br></pre></td></tr></table></figure>
+<pre><code>11
+</code></pre><ul>
+<li>np.linalg.det</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.det(A)</span><br></pre></td></tr></table></figure>
+<pre><code>-17.999999999999996
+</code></pre><ul>
+<li>np.linalg.inv</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.inv(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.05555556, -0.11111111,  0.16666667],
+       [-1.88888889,  1.22222222, -0.33333333],
+       [ 1.61111111, -0.77777778,  0.16666667]])
+</code></pre><ul>
+<li>np.linalg.eig</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)</span><br></pre></td></tr></table></figure>
+<pre><code>(array([12.76913689, -2.36514612,  0.59600923]),
+ array([[-0.28796344, -0.47551397,  0.10554127],
+        [-0.67379758, -0.38580557, -0.83390437],
+        [-0.68049532,  0.79059505,  0.54172368]]))
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eigvals(A)</span><br></pre></td></tr></table></figure>
+<pre><code>array([12.76913689, -2.36514612,  0.59600923])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.linalg.eig(A)[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.28796344, -0.47551397,  0.10554127],
+       [-0.67379758, -0.38580557, -0.83390437],
+       [-0.68049532,  0.79059505,  0.54172368]])
+</code></pre><ul>
+<li>np.linalg.solve</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">B = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">np.linalg.solve(A,B)</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 0.22222222, -1.44444444,  1.55555556])
+</code></pre><p>简单的使用了一下Numpy中关于线性代数的函数,也发现了一些问题，就是求行列式的值存在精度丢失，目前接触到的应用大概就这么多，当然后面会阅读一些文档对这一部分内容进行扩充</p>
+]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -5806,15 +5956,6 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       </tags>
   </entry>
   <entry>
-    <title>初入</title>
-    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>一些关于hexo的next主题的适配问题</title>
     <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
@@ -5826,5 +5967,14 @@ click A "/2021/06/24/matplotlib/" _blank</pre><br>先绘制一张思维导图，
       <tags>
         <tag>杂记</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>初入</title>
+    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>&emsp;&emsp;第一次搭建完成个人博客，写篇文章纪念一下。虽然踩了许多坑，但也学到很多。接下来的时间我会对博客页面进行优化，并进行学习笔记的整理, 并记录一些生活中的事与一些个人感悟在杂记中。<br>&emsp;&emsp;也希望以后有更多志同道合的人一起共同探讨，交流学习。</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
   </entry>
 </search>
