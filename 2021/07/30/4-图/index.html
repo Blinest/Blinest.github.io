@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|华文行楷:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="图术语完全图：任意两个点都有一条边相连  无向完全图：没有方向 有向完全图：有方向  稀疏图：有很少边或弧的图 稠密图：有较多边或弧的图 邻接：有边&#x2F;弧相连的两个顶点之间的关系  存在$(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点 存在$$，则称 $v_i$ 邻接到 $v_j$ ，$v_j$ 邻接于$v_i$  关联：边&#x2F;弧与顶点之间的关系  存在$(v_i,v_j)&#x2F;$，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4.图">
+<meta property="og:url" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/index.html">
+<meta property="og:site_name" content="追梦">
+<meta property="og:description" content="图术语完全图：任意两个点都有一条边相连  无向完全图：没有方向 有向完全图：有方向  稀疏图：有很少边或弧的图 稠密图：有较多边或弧的图 邻接：有边&#x2F;弧相连的两个顶点之间的关系  存在$(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点 存在$$，则称 $v_i$ 邻接到 $v_j$ ，$v_j$ 邻接于$v_i$  关联：边&#x2F;弧与顶点之间的关系  存在$(v_i,v_j)&#x2F;$，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic2.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic3.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic4.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic5.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic6.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic7.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic8.png">
+<meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic9.png">
+<meta property="article:published_time" content="2021-07-30T15:20:52.000Z">
+<meta property="article:modified_time" content="2021-08-01T09:46:50.914Z">
+<meta property="article:author" content="lbl">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic1.png">
+
+<link rel="canonical" href="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>4.图 | 追梦</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">追梦</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          4.图
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-30 23:20:52" itemprop="dateCreated datePublished" datetime="2021-07-30T23:20:52+08:00">2021-07-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-01 17:46:50" itemprop="dateModified" datetime="2021-08-01T17:46:50+08:00">2021-08-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p><strong>完全图</strong>：任意两个点都有一条边相连</p>
+<ul>
+<li>无向完全图：没有方向</li>
+<li>有向完全图：有方向<br><img src="/2021/07/30/4-%E5%9B%BE/pic1.png"></li>
+</ul>
+<p><strong>稀疏图</strong>：有很少边或弧的图</p>
+<p><strong>稠密图</strong>：有较多边或弧的图</p>
+<p><strong>邻接</strong>：有边/弧相连的两个顶点之间的关系</p>
+<ul>
+<li>存在$(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点</li>
+<li>存在$<v_i,v_j>$，则称 $v_i$ <strong>邻接到</strong> $v_j$ ，$v_j$ <strong>邻接于</strong>$v_i$</v_i,v_j></li>
+</ul>
+<p><strong>关联</strong>：边/弧与顶点之间的关系</p>
+<ul>
+<li>存在$(v_i,v_j)/<v_i,v_j>$，则称该边/弧关联于$v_i$和$v_j$</v_i,v_j></li>
+</ul>
+<p><strong>顶点的度</strong>：与该顶点相关联的边的数目，记为TD(v)</p>
+<ul>
+<li>在有向图中，顶点的度等于该顶点的 <strong>入度</strong> 和 <strong>出度</strong> 之和<ul>
+<li>顶点v的 <strong>入度</strong> 是 <strong>以v为终点</strong> 的有向边的条数，记作ID(v)</li>
+<li>顶点v的 <strong>出度</strong> 是以 <strong>v为始点</strong> 的有向边的条数，记作OD(v)</li>
+</ul>
+</li>
+</ul>
+<p><strong>路径</strong>：接续的边构成的顶点序列</p>
+<p><strong>路径长度</strong>：路径上边或弧的数目/权值之和</p>
+<p><strong>回路（环）</strong>：第一个顶点和最后一个顶点相同的路径</p>
+<p><strong>简单路径</strong>：除路径起点和终点可以相同外，其余顶点均不相同的路径</p>
+<p><strong>简单回路</strong>：除路径起点和终点相同外，其余顶点均不相同</p>
+<p><img src="/2021/07/30/4-%E5%9B%BE/pic2.png"></p>
+<p><strong>连通图（强连通图）</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic3.png"></p>
+<p><strong>权</strong>：图中边或弧所具有的相关数称为 <strong>权</strong>。表明从一个顶点到另一个顶点的距离或耗费</p>
+<p><strong>网</strong>：边/弧带权的图</p>
+<p><strong>子图</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic4.png"></p>
+<p><strong>连通分量（强连通分量）</strong></p>
+<ul>
+<li>无向图G的 <strong>极大连通子图</strong> 称为G的 <strong>连通分量</strong><br>极大连通子图：该子图是G连通子图，将G的任何不在该子图中的顶点加入，子图不再连通</li>
+<li>有向图G的极大强连通子图称为G的强连通分量<br>极大强连通子图：该子图是G的强连通子图，将D的任何不在该子图中的顶点加入，子图不再是强连通的</li>
+</ul>
+<p><strong>极小连通子图</strong>：该子图是G的连通子图，在该子图中删除任何一条边，子图不再连通</p>
+<p><strong>生成树</strong>：包含无向图G所有顶点的极小连通子图</p>
+<p><strong>生成森林</strong>：对非连通图，由各个连通分量的生成树的集合<br><img src="/2021/07/30/4-%E5%9B%BE/pic5.png"></p>
+<h2 id="图的存储结构"><a href="#图的存储结构" class="headerlink" title="图的存储结构"></a>图的存储结构</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p>1、数组（邻接矩阵）表示法</p>
+<ul>
+<li>建立一个 <strong>顶点表</strong>（记录各个顶点信息）和一个 <strong>邻接矩阵</strong>（表示各个顶点之间关系）</li>
+</ul>
+<p><strong>无向图的邻接矩阵表示法：</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic6.png"></p>
+<p><strong>有向图的邻接矩阵表示法：</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic7.png"></p>
+<p><strong>行为出度，列为入度</strong></p>
+<p><strong>网（即有权图）的邻接矩阵表示法</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic8.png"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MVNum 100 <span class="comment">//最大顶点数</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VerTexType;<span class="comment">//设顶点的数据类型为字符型 </span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ArcType; <span class="comment">//假设边的权值类型为整型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    VerTexType vexs[MVNum]; <span class="comment">//顶点表</span></span><br><span class="line">    ArcType arcs[MVNum][MVNum]; <span class="comment">//邻接矩阵</span></span><br><span class="line">    <span class="keyword">int</span> vexnum,arcnum; <span class="comment">//图的当前点数和边数</span></span><br><span class="line">&#125;AMGragh;<span class="comment">//Adjacency Matrix Graph</span></span><br></pre></td></tr></table></figure>
+<p>2、采用邻接矩阵表示法 <strong>创建无向网</strong></p>
+<ul>
+<li>输入总顶点数和总边数</li>
+<li>依次输入点的信息存入顶点表中</li>
+<li>初始化邻接矩阵，使每个权值初始化为极大值</li>
+<li>构造邻接矩阵</li>
+</ul>
+<p>邻接矩阵优点：</p>
+<ul>
+<li>直观、简单、好理解</li>
+<li>方便检查任意一对顶点间是否存在边</li>
+<li>方便计算任一顶点的”度”</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不便于增加或删除顶点</li>
+<li>浪费空间—-存稀疏图（点很多而且边很少）有大量无效元素<ul>
+<li>当然对稠密图（特别是完全图）划算</li>
+</ul>
+</li>
+<li>浪费时间—-统计稀疏图中一共有多少条边</li>
+</ul>
+<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>1、邻接表表示法（链式）<br><img src="/2021/07/30/4-%E5%9B%BE/pic9.png"></p>
+<ul>
+<li>顶点：<ul>
+<li>按编号顺序将顶点数据存储在 <strong>一维数组</strong> 中</li>
+</ul>
+</li>
+<li>关联同一顶点的边（以顶点为尾的弧）：<ul>
+<li>用线性 <strong>链表</strong> 存储</li>
+</ul>
+</li>
+</ul>
+<p><strong>顶点结点结构</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">VNode</span>&#123;</span></span><br><span class="line">    VerTexType data;<span class="comment">//顶点信息</span></span><br><span class="line">    ArcNode *firstarc;<span class="comment">//指向第一条依附该顶点的边的指针</span></span><br><span class="line">&#125;VNode,AdjList[MVNum];<span class="comment">//AdjList表示邻接表类型</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>弧（边）的结点结构</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MVNum 100 <span class="comment">//最大顶点数</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcNode</span>&#123;</span><span class="comment">//边结点</span></span><br><span class="line">    <span class="keyword">int</span> adjvex;<span class="comment">//该边所指向的顶点的位置</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ArcNode</span> * <span class="title">nextarc</span>;</span><span class="comment">//指向下一条边的指针</span></span><br><span class="line">    OtherInfo info;<span class="comment">//和边相关的信息</span></span><br><span class="line">&#125;ArcNode;</span><br></pre></td></tr></table></figure></p>
+<p><strong>图的结构定义</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    AdjList vertices;<span class="comment">//vertices--vertex的复数</span></span><br><span class="line">    <span class="keyword">int</span> vexnum,arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">&#125;ALGraph</span><br></pre></td></tr></table></figure></p>
+<p>2、采用邻接表法创建无向网</p>
+<p>算法思想</p>
+<ul>
+<li>输入总顶点数和总边数</li>
+<li>建立顶点表<ul>
+<li>依次输入点的信息存入顶点表中</li>
+<li>使每个表头结点的指针域初始化为NULL</li>
+</ul>
+</li>
+<li><p>创建邻接表</p>
+<ul>
+<li>依次输入每条边依附的两个顶点</li>
+<li>确定两个顶点的序号i和j，建立边结点</li>
+<li>将此边结点分别插入到$v_i$和$v_j$对应的两个边链表的头部</li>
+</ul>
+</li>
+<li><p>方便找任一顶点的所有“邻接点”</p>
+</li>
+<li>节约稀疏图的空间<ul>
+<li>需要N个头指针+2E个结点（每个结点至少两个域）</li>
+</ul>
+</li>
+<li>计算任一顶点的“度”<ul>
+<li>对无向图：是</li>
+<li>对有向图：只能计算“出度”；需要构造“逆邻接表”来计算“入度”</li>
+</ul>
+</li>
+</ul>
+<h2 id="图的遍历"><a href="#图的遍历" class="headerlink" title="图的遍历"></a>图的遍历</h2><ul>
+<li>深度优先搜索（Depth_First Search—-DFS）</li>
+<li>广度优先搜索（Breadth_First Search—-BFS）</li>
+</ul>
+<h3 id="深度优先遍历的算法实现"><a href="#深度优先遍历的算法实现" class="headerlink" title="深度优先遍历的算法实现"></a>深度优先遍历的算法实现</h3><p>邻接矩阵表示的无向图深度遍历实现：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(AMGraph G,<span class="keyword">int</span> V)</span></span>&#123;<span class="comment">//图G为邻接矩阵类型</span></span><br><span class="line">    cout&lt;&lt;v;visited[v]=<span class="literal">true</span>;<span class="comment">//访问第v个顶点</span></span><br><span class="line">    <span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)<span class="comment">//依次检查邻接矩阵v所在的行</span></span><br><span class="line">        <span class="keyword">if</span>((G.arcs[v][w]!=<span class="number">0</span>)&amp;&amp;(!visited[w]))</span><br><span class="line">            <span class="built_in">DFS</span>(G,w);</span><br><span class="line">        <span class="comment">//w是v的邻接点，如果w未访问，则递归调用DFS</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="广度优先遍历算法实现"><a href="#广度优先遍历算法实现" class="headerlink" title="广度优先遍历算法实现"></a>广度优先遍历算法实现</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">(Graph G,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    cout&lt;&lt;v;visted[v]=<span class="literal">true</span>;<span class="comment">//访问第v个顶点</span></span><br><span class="line">    <span class="built_in">InitQueue</span>(Q);<span class="comment">//辅助队列Q初始化，置空</span></span><br><span class="line">    <span class="built_in">EnQueue</span>(Q,v);<span class="comment">//v进队</span></span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">QueueEmpty</span>(Q))&#123;<span class="comment">//队列非空</span></span><br><span class="line">        <span class="built_in">DeQueue</span>(Q,u);<span class="comment">//队头元素出队并置为u</span></span><br><span class="line">        <span class="keyword">for</span>(w=<span class="built_in">FirstAdjVex</span>(G,u);w&gt;=<span class="number">0</span>;w=<span class="built_in">NextAdjVex</span>(G,u,w))</span><br><span class="line">        <span class="keyword">if</span>(!visited[w])&#123;<span class="comment">//w为u的尚未访问的邻接顶点</span></span><br><span class="line">            cout&lt;&lt;w;visted[w]=<span class="literal">true</span>; <span class="built_in">EnQueue</span>(Q,w);<span class="comment">//w进队</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2><p><strong>1、普利姆（prim）算法</strong><br>适应范围：稠密图<br>时间复杂度$O(n^2)$<br><strong>2、克鲁斯卡尔(Kruskal)算法</strong><br>适应范围：稀疏图<br>时间复杂度：$O(e\log e)$</p>
+<h2 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h2><ol>
+<li>单源最短路径—用 Dijkstra(迪杰斯特拉)算法<ul>
+<li>初始化：先找出从源点 $v_0$ 到各终点 $v_k$ 的直达路径($v_0$,$v_k$)，即通过一条弧到达的路径</li>
+<li>选择：从这些路径中找出一条长度最短的路径($v_0$ , u)</li>
+<li>更新：然后对其余各条路径进行适当调整：<ul>
+<li>若在途中存在弧（u , $v_k$），且($v_0$ , u)+(u , $v_k$) &lt; ($v_0$ , $v_k$)，则以路径则以路径($v_0$ , u , $v_k$)代替($v_0$ , $v_k$)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>所有顶点间的最短路径—用 Floyd(弗洛伊德)算法<br>s</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/07/28/3-%E6%A0%91/" rel="prev" title="3.树和森林">
+      <i class="fa fa-chevron-left"></i> 3.树和森林
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE"><span class="nav-number">1.</span> <span class="nav-text">图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AF%E8%AF%AD"><span class="nav-number">1.1.</span> <span class="nav-text">术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">图的存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5"><span class="nav-number">1.2.1.</span> <span class="nav-text">邻接矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%82%BB%E6%8E%A5%E8%A1%A8"><span class="nav-number">1.2.2.</span> <span class="nav-text">邻接表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86"><span class="nav-number">1.3.</span> <span class="nav-text">图的遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%9A%84%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.3.1.</span> <span class="nav-text">深度优先遍历的算法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.3.2.</span> <span class="nav-text">广度优先遍历算法实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="nav-number">1.4.</span> <span class="nav-text">最小生成树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84"><span class="nav-number">1.5.</span> <span class="nav-text">最短路径</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lbl"
+      src="/images/wallhaven-m9q6e9.jpg">
+  <p class="site-author-name" itemprop="name">lbl</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+       <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+	<!--网易云-->
+    <div class="aplayer"
+      data-id="2773494627"
+      data-server="netease"
+      data-type="playlist"
+      data-fixed="false"
+      data-autoplay="false"
+      data-list-folded="true"
+      data-mutex="true"
+      data-order="random"
+      data-loop="all"
+      data-volume="0.4"
+      data-theme="#FADFA3"
+      date-preload="auto" >
+    </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lbl</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">134k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:02</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>
