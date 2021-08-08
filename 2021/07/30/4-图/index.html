@@ -11,7 +11,16 @@
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
-
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|华文行楷:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
@@ -20,12 +29,12 @@
     var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="图术语完全图：任意两个点都有一条边相连  无向完全图：没有方向 有向完全图：有方向  稀疏图：有很少边或弧的图 稠密图：有较多边或弧的图 邻接：有边&#x2F;弧相连的两个顶点之间的关系  存在$(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点 存在$$，则称 $v_i$ 邻接到 $v_j$ ，$v_j$ 邻接于$v_i$  关联：边&#x2F;弧与顶点之间的关系  存在$(v_i,v_j)&#x2F;$，">
+  <meta name="description" content="图术语完全图：任意两个点都有一条边相连  无向完全图：没有方向 有向完全图：有方向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4.图">
 <meta property="og:url" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/index.html">
 <meta property="og:site_name" content="追梦">
-<meta property="og:description" content="图术语完全图：任意两个点都有一条边相连  无向完全图：没有方向 有向完全图：有方向  稀疏图：有很少边或弧的图 稠密图：有较多边或弧的图 邻接：有边&#x2F;弧相连的两个顶点之间的关系  存在$(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点 存在$$，则称 $v_i$ 邻接到 $v_j$ ，$v_j$ 邻接于$v_i$  关联：边&#x2F;弧与顶点之间的关系  存在$(v_i,v_j)&#x2F;$，">
+<meta property="og:description" content="图术语完全图：任意两个点都有一条边相连  无向完全图：没有方向 有向完全图：有方向">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic1.png">
 <meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic2.png">
@@ -37,7 +46,7 @@
 <meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic8.png">
 <meta property="og:image" content="https://mdreamers.github.io/2021/07/30/4-%E5%9B%BE/pic9.png">
 <meta property="article:published_time" content="2021-07-30T15:20:52.000Z">
-<meta property="article:modified_time" content="2021-08-01T09:46:50.914Z">
+<meta property="article:modified_time" content="2021-08-08T14:21:47.063Z">
 <meta property="article:author" content="lbl">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
@@ -231,7 +240,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-01 17:46:50" itemprop="dateModified" datetime="2021-08-01T17:46:50+08:00">2021-08-01</time>
+                <time title="修改时间：2021-08-08 22:21:47" itemprop="dateModified" datetime="2021-08-08T22:21:47+08:00">2021-08-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -243,7 +252,14 @@
                 </span>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -271,18 +287,19 @@
         <h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p><strong>完全图</strong>：任意两个点都有一条边相连</p>
 <ul>
 <li>无向完全图：没有方向</li>
-<li>有向完全图：有方向<br><img src="/2021/07/30/4-%E5%9B%BE/pic1.png"></li>
+<li>有向完全图：有方向<span id="more"></span>
+<img style="transform:scale(0.5);" src="/2021/07/30/4-%E5%9B%BE/pic1.png"></li>
 </ul>
 <p><strong>稀疏图</strong>：有很少边或弧的图</p>
 <p><strong>稠密图</strong>：有较多边或弧的图</p>
 <p><strong>邻接</strong>：有边/弧相连的两个顶点之间的关系</p>
 <ul>
-<li>存在$(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点</li>
-<li>存在$<v_i,v_j>$，则称 $v_i$ <strong>邻接到</strong> $v_j$ ，$v_j$ <strong>邻接于</strong>$v_i$</v_i,v_j></li>
+<li>存在 $(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点</li>
+<li>存在 &lt;$v_i,v_j$&gt;，则称 $v_i$ <strong>邻接到</strong> $v_j$ ，$v_j$ <strong>邻接于</strong> $v_i$</li>
 </ul>
 <p><strong>关联</strong>：边/弧与顶点之间的关系</p>
 <ul>
-<li>存在$(v_i,v_j)/<v_i,v_j>$，则称该边/弧关联于$v_i$和$v_j$</v_i,v_j></li>
+<li>存在 $(v_i,v_j)$ /&lt;$v_i,v_j$&gt; ，则称该边/弧关联于 $v_i$ 和 $v_j$</li>
 </ul>
 <p><strong>顶点的度</strong>：与该顶点相关联的边的数目，记为TD(v)</p>
 <ul>
@@ -297,11 +314,11 @@
 <p><strong>回路（环）</strong>：第一个顶点和最后一个顶点相同的路径</p>
 <p><strong>简单路径</strong>：除路径起点和终点可以相同外，其余顶点均不相同的路径</p>
 <p><strong>简单回路</strong>：除路径起点和终点相同外，其余顶点均不相同</p>
-<p><img src="/2021/07/30/4-%E5%9B%BE/pic2.png"></p>
-<p><strong>连通图（强连通图）</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic3.png"></p>
+<p><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic2.png"></p>
+<p><strong>连通图（强连通图）</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic3.png"></p>
 <p><strong>权</strong>：图中边或弧所具有的相关数称为 <strong>权</strong>。表明从一个顶点到另一个顶点的距离或耗费</p>
 <p><strong>网</strong>：边/弧带权的图</p>
-<p><strong>子图</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic4.png"></p>
+<p><strong>子图</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic4.png"></p>
 <p><strong>连通分量（强连通分量）</strong></p>
 <ul>
 <li>无向图G的 <strong>极大连通子图</strong> 称为G的 <strong>连通分量</strong><br>极大连通子图：该子图是G连通子图，将G的任何不在该子图中的顶点加入，子图不再连通</li>
@@ -309,15 +326,15 @@
 </ul>
 <p><strong>极小连通子图</strong>：该子图是G的连通子图，在该子图中删除任何一条边，子图不再连通</p>
 <p><strong>生成树</strong>：包含无向图G所有顶点的极小连通子图</p>
-<p><strong>生成森林</strong>：对非连通图，由各个连通分量的生成树的集合<br><img src="/2021/07/30/4-%E5%9B%BE/pic5.png"></p>
+<p><strong>生成森林</strong>：对非连通图，由各个连通分量的生成树的集合<br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic5.png"></p>
 <h2 id="图的存储结构"><a href="#图的存储结构" class="headerlink" title="图的存储结构"></a>图的存储结构</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p>1、数组（邻接矩阵）表示法</p>
 <ul>
 <li>建立一个 <strong>顶点表</strong>（记录各个顶点信息）和一个 <strong>邻接矩阵</strong>（表示各个顶点之间关系）</li>
 </ul>
-<p><strong>无向图的邻接矩阵表示法：</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic6.png"></p>
-<p><strong>有向图的邻接矩阵表示法：</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic7.png"></p>
+<p><strong>无向图的邻接矩阵表示法：</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic6.png"></p>
+<p><strong>有向图的邻接矩阵表示法：</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic7.png"></p>
 <p><strong>行为出度，列为入度</strong></p>
-<p><strong>网（即有权图）的邻接矩阵表示法</strong><br><img src="/2021/07/30/4-%E5%9B%BE/pic8.png"></p>
+<p><strong>网（即有权图）的邻接矩阵表示法</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic8.png"></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MVNum 100 <span class="comment">//最大顶点数</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VerTexType;<span class="comment">//设顶点的数据类型为字符型 </span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ArcType; <span class="comment">//假设边的权值类型为整型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    VerTexType vexs[MVNum]; <span class="comment">//顶点表</span></span><br><span class="line">    ArcType arcs[MVNum][MVNum]; <span class="comment">//邻接矩阵</span></span><br><span class="line">    <span class="keyword">int</span> vexnum,arcnum; <span class="comment">//图的当前点数和边数</span></span><br><span class="line">&#125;AMGragh;<span class="comment">//Adjacency Matrix Graph</span></span><br></pre></td></tr></table></figure>
 <p>2、采用邻接矩阵表示法 <strong>创建无向网</strong></p>
 <ul>
@@ -341,7 +358,7 @@
 </li>
 <li>浪费时间—-统计稀疏图中一共有多少条边</li>
 </ul>
-<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>1、邻接表表示法（链式）<br><img src="/2021/07/30/4-%E5%9B%BE/pic9.png"></p>
+<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>1、邻接表表示法（链式）<br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic9.png"></p>
 <ul>
 <li>顶点：<ul>
 <li>按编号顺序将顶点数据存储在 <strong>一维数组</strong> 中</li>
@@ -573,7 +590,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">134k</span>
+    <span title="站点总字数">135k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
@@ -595,6 +612,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
