@@ -185,6 +185,222 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E5%8F%8A%E7%95%8C%E9%9D%A2%E6%A0%B7%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E5%8F%8A%E7%95%8C%E9%9D%A2%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">8.CSS网页布局及用户界面样式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-20 17:46:23" itemprop="dateCreated datePublished" datetime="2021-07-20T17:46:23+08:00">2021-07-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-22 08:21:57" itemprop="dateModified" datetime="2021-07-22T08:21:57+08:00">2021-07-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="网页布局"><a href="#网页布局" class="headerlink" title="网页布局"></a>网页布局</h1><p><strong>网页布局的核心本质就是利用CSS摆盒子</strong></p>
+<p><strong>网页布局的第一准则:</strong><br>多个块级元素纵向排列用标准流，多个块级元素横向排列用浮动。</p>
+<p><strong>网页布局的第二准则:</strong><br>先设置盒子大小，后设置盒子位置。</p>
+<h2 id="传统网页布局的三种方式"><a href="#传统网页布局的三种方式" class="headerlink" title="传统网页布局的三种方式"></a>传统网页布局的三种方式</h2><p>网页布局的本质————用CSS来摆放盒子</p>
+<p>CSS提供了三种传统布局方式：</p>
+<ul>
+<li>标准流（最基本）</li>
+<li>浮动</li>
+<li>定位</li>
+</ul>
+<h2 id="常见的网页布局"><a href="#常见的网页布局" class="headerlink" title="常见的网页布局"></a>常见的网页布局</h2><table style="width: 370px;background-color: #ecedf8;text-align: center;">
+  <tr>
+    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 145px;border:1px dashed;border-collapse: collapse;">main</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
+  </tr>
+</table>
+
+<p><table style="width: 370px;background-color: #ecedf8;text-align: center;">
+  <tr>
+    <td style="width: 370px;height: 65px;border:1px dashed;border-collapse: collapse;">top</td>
+  </tr>
+   <tr>
+    <td style="width: 370px;height: 25px;border:1px dashed;border-collapse: collapse;">banner</td>
+  </tr>
+   <tr>
+    <td style="float:left;width: 115px;height: 145px;border:1px dashed;line-height: 145px;border-top:0;border-bottom:0;">left</td>
+    <td style="float:right;width: 195px;height: 145px;border:0;border-right:1px dashed;line-height: 145px;">right</td>
+  </tr>
+   <tr>
+    <td style="height: 90px;border:1px dashed;border-collapse: collapse;">footer</td>
+  </tr>
+</table></p>
+<div style="width: 100%;overflow:auto;">
+    <div style="width: 500px;height: 420px;border:1px solid;text-align:center;">
+    <div style="float:left;width: 480px;height: 25px;line-height:25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;">top</div>
+    <div style="float:left;width: 360px;height: 80px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px;line-height: 80px">banner</div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 25px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 70px 0px 5px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px 70px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 80px;height: 130px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 5px 0px;"></div>
+    <div style="float:left;width: 480px;height: 90px;background-color: #ecedf8;border:1px dashed;border-collapse: collapse;margin:10px 10px 0px;line-height:90px;">footer</div>
+    </div>
+</div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过CSS浮动、定位可以让每个盒子排列成为网页。</p>
+<p>一个完整的网页，是标准流、浮动、定位一起完成的布局的，每个都有自己专门的用法。</p>
+<p><strong>1.标准流</strong><br>可以让盒子上下排列或者左右排列，垂直的块级盒子显示就用标准流布局。<br><strong>2.浮动</strong><br>可以让多个块级元素一行显示或者左右对齐盒子，多个块级盒子水平显示就用浮动布局。<br><strong>3.定位</strong><br>定位最大的特点是有层叠的概念，就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。</p>
+<h1 id="CSS-用户界面样式"><a href="#CSS-用户界面样式" class="headerlink" title="CSS 用户界面样式"></a>CSS 用户界面样式</h1><h2 id="鼠标样式-cursor"><a href="#鼠标样式-cursor" class="headerlink" title="鼠标样式 cursor"></a>鼠标样式 cursor</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span> &#123; <span class="attribute">cursor</span>: pointer; &#125;</span><br></pre></td></tr></table></figure>
+<p>设置或检索在对象上移动的鼠标指针来采用何种系统预定义的光标形状</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">default</td>
+<td style="text-align:left">默认</td>
+</tr>
+<tr>
+<td style="text-align:left">pointer</td>
+<td style="text-align:left">小手</td>
+</tr>
+<tr>
+<td style="text-align:left">move</td>
+<td style="text-align:left">移动</td>
+</tr>
+<tr>
+<td style="text-align:left">text</td>
+<td style="text-align:left">文本</td>
+</tr>
+<tr>
+<td style="text-align:left">not-allowed</td>
+<td style="text-align:left">禁止</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="轮廓线"><a href="#轮廓线" class="headerlink" title="轮廓线"></a>轮廓线</h2><p>给表单添加 outline: 0;或者outline: none;样式之后，就可以去掉默认的蓝色边框。</p>
+<h2 id="防止拖拽文本域-resize"><a href="#防止拖拽文本域-resize" class="headerlink" title="防止拖拽文本域 resize"></a>防止拖拽文本域 resize</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span> &#123; <span class="attribute">resize</span>: none &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="vertical-align-属性应用"><a href="#vertical-align-属性应用" class="headerlink" title="vertical-align 属性应用"></a>vertical-align 属性应用</h1><p>CSS的vertical-align属性使用场景：经常用于设置图片或者表单（行内块元素）和文字垂直对齐<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">vertical-align</span>: baseline | top | middle | bottom</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">baseline</td>
+<td style="text-align:left">默认，元素放置在父元素的基线上</td>
+</tr>
+<tr>
+<td style="text-align:left">top</td>
+<td style="text-align:left">把顶端元素与行中最高元素的顶端对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">middle</td>
+<td style="text-align:left">把此元素放置在父元素的中间</td>
+</tr>
+<tr>
+<td style="text-align:left">bottom</td>
+<td style="text-align:left">把元素的顶端与行中最低的元素顶端对齐</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="溢出文字用省略号"><a href="#溢出文字用省略号" class="headerlink" title="溢出文字用省略号"></a>溢出文字用省略号</h1><h2 id="单行文字溢出用省略号"><a href="#单行文字溢出用省略号" class="headerlink" title="单行文字溢出用省略号"></a>单行文字溢出用省略号</h2><p>1.单行文本溢出显示省略号—必须满足三个条件<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1.先强制一行内显示文本 */</span></span><br><span class="line"><span class="attribute">white-space</span>: nowrap; （默认 <span class="attribute">normal</span> 自动换行）</span><br><span class="line"><span class="comment">/* 2.超出的部分隐藏 */</span></span><br><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="comment">/* 3.文字用省略号替代超出的部分 */</span></span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br></pre></td></tr></table></figure></p>
+<h2 id="多行文本溢出显示省略号"><a href="#多行文本溢出显示省略号" class="headerlink" title="多行文本溢出显示省略号"></a>多行文本溢出显示省略号</h2><p>多行文本溢出显示省略号，有较大兼容性问题，适合于webkit浏览器或移动端（移动端大部分是webkit内核）<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="comment">/* 弹性伸缩盒子模型显示 */</span></span><br><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line"><span class="comment">/* 限制在一个块元素显示的文本的行数 */</span></span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>;</span><br><span class="line"><span class="comment">/* 设置或检索伸缩盒对象的子元素的排列方式 */</span></span><br><span class="line">-webkit-box-crient: vertical;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CSS-初始化"><a href="#CSS-初始化" class="headerlink" title="CSS 初始化"></a>CSS 初始化</h1><p>不同浏览器对有些标签的默认值是不同的，为了消除不同浏览器对HTML文本呈现的差异，照顾浏览器的兼容，我们需要对CSS初始化</p>
+<p><strong>简单理解:</strong> CSS初始化是指重设浏览器的样式（也称为CSS reset）</p>
+<p>每个网页都必须首先进行CSS 初始化</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/20/7-CSS%E7%9A%84%E5%AE%9A%E4%BD%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1040,183 +1256,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/" class="post-title-link" itemprop="url">3.CSS的背景</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-07-20 16:41:01 / 修改时间：18:29:11" itemprop="dateCreated datePublished" datetime="2021-07-20T16:41:01+08:00">2021-07-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="CSS-的背景"><a href="#CSS-的背景" class="headerlink" title="CSS 的背景"></a>CSS 的背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><strong>background-color</strong> 属性定义了元素的背景颜色<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></table></figure><br>一般情况下元素背景颜色默认值是 <strong>transparent(透明)</strong>，我们也可以手动指定背景颜色为透明色。</p>
-<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p><strong>background-image</strong> 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">绝对或相对位置</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h2><p>如果需要在HTML页面上对背景图像进行平铺，可以使用 <strong>background-repeat</strong> 属性<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat | no-repeat | repeat-x | repeat-y </span><br></pre></td></tr></table></figure></p>
-<h2 id="背景图片位置"><a href="#背景图片位置" class="headerlink" title="背景图片位置"></a>背景图片位置</h2><p>利用 <strong>bcakground-positon</strong> 属性可以改变图片在背景中的位置。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br></pre></td></tr></table></figure><br>参数代表的意思是：x坐标和y坐标，可以使用方位名词或者精确单位</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数值</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">length</td>
-<td style="text-align:left">百分数 / 由浮点数字和单位标识符组成的长度值</td>
-</tr>
-<tr>
-<td style="text-align:left">position</td>
-<td style="text-align:left">方位名词：<br>top / center / bottom <br>left / center / right </td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>1.参数是方位名词</strong></p>
-<ul>
-<li>如果指定的两个值都是方位名词，则两个值前后顺序无关，比如left top和top left 效果一样</li>
-<li>如果指定了一个方位名词，另一个省略，则第二个值默认居中对齐</li>
-</ul>
-<p><strong>2.参数是精确单位</strong></p>
-<ul>
-<li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个肯定是y坐标</li>
-<li>如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中</li>
-</ul>
-<p><strong>3.参数是混合单位</strong></p>
-<ul>
-<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标</li>
-</ul>
-<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2><p><strong>background-attachment</strong> 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
-<p>background-attachment后期可以制作时差滚动效果<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: <span class="built_in">fixed</span>(固定) | <span class="built_in">scroll</span>(滚动) </span><br></pre></td></tr></table></figure></p>
-<h2 id="背景复合写法"><a href="#背景复合写法" class="headerlink" title="背景复合写法"></a>背景复合写法</h2><p>我们可以将这些属性合并写在同一个属性background中，约定的顺序为：</p>
-<p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
-<h2 id="背景色半透明"><a href="#背景色半透明" class="headerlink" title="背景色半透明"></a>背景色半透明</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>rgba也就是red、green、blue、alpha</strong></p>
-<ul>
-<li>最后一个参数是 <strong>alpha</strong> 透明度，取值范围0~1之间</li>
-<li><strong>习惯上把0.3的0省略</strong>，写为background: rgba(0,0,0,.3);</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-<th style="text-align:left">值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">background-color</td>
-<td style="text-align:left">背景颜色</td>
-<td style="text-align:left">预定义颜色值、十六进制、RGB代码</td>
-</tr>
-<tr>
-<td style="text-align:left">background-image</td>
-<td style="text-align:left">背景图片</td>
-<td style="text-align:left">url(图片路径)</td>
-</tr>
-<tr>
-<td style="text-align:left">background-repeat</td>
-<td style="text-align:left">是否平铺</td>
-<td style="text-align:left">repeat / no-repeat / repeat-x / repeat-y</td>
-</tr>
-<tr>
-<td style="text-align:left">background-position</td>
-<td style="text-align:left">背景位置</td>
-<td style="text-align:left">length / positon 分别是x和y坐标</td>
-</tr>
-<tr>
-<td style="text-align:left">background-attachment</td>
-<td style="text-align:left">背景附着</td>
-<td style="text-align:left">scroll(滚动) / fixed(固定)</td>
-</tr>
-<tr>
-<td style="text-align:left">背景简写</td>
-<td style="text-align:left">减少代码量</td>
-<td style="text-align:left">background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置;</td>
-</tr>
-<tr>
-<td style="text-align:left">背景色半透明</td>
-<td style="text-align:left">背景颜色半透明</td>
-<td style="text-align:left">background:(0,0,0,.3); 后面必须是4个值</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1288,7 +1327,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1357,12 +1396,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">132k</span>
+    <span title="站点总字数">134k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:01</span>
+    <span title="站点阅读时长">2:02</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
