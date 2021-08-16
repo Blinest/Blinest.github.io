@@ -216,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-15 22:58:12" itemprop="dateModified" datetime="2021-08-15T22:58:12+08:00">2021-08-15</time>
+                <time title="修改时间：2021-08-16 19:13:58" itemprop="dateModified" datetime="2021-08-16T19:13:58+08:00">2021-08-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,14 +234,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.4k</span>
+              <span>5.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>5 分钟</span>
             </span>
 
         </div>
@@ -253,10 +253,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="格林公式"><a href="#格林公式" class="headerlink" title="格林公式"></a>格林公式</h1><h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>格林公式描述了第二种曲线积分（向量的形式），和二重积分的一种关系</p>
-<ul>
+          <p>曲线曲面积分理解起来并不是很难，主要是计算挺复杂，第一类曲线曲面积分，知道弧微分，二重积分求面积时的面积元素，也就是积分区域与投影区域的倍数关系就可以了，而第二类曲线曲面积分就是将有向曲线沿x,y进行分解，然后再进行求解。当然求解第二类曲线曲面有时候需要一些工具，也就是下面所介绍的三个公式，也是我认为曲线曲面积分中最有意思的地方，后面也会引入 $\nabla$ 算子（就是梯度符号），方便书写记忆</p>
+<h1 id="格林公式"><a href="#格林公式" class="headerlink" title="格林公式"></a>格林公式</h1><blockquote>
+<p>格林公式描述了第二种曲线积分（向量的形式），和二重积分的一种关系</p>
+<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><ul>
 <li>1<br>$<br>\nabla\times \vec{F} (x,y)·d\vec{s}$<br><br>$=\left(\displaystyle\frac{\partial}{\partial x}\;\vec{i}+\displaystyle\frac{\partial}{\partial y}\;\vec{j}\right)\times[P(x,y)\;\vec{i}+Q(x,y)\;\vec{j}]·d\vec{s}$<br><br>$=(\displaystyle\frac{\partial}{\partial x}\;\vec{i}\times P(x,y)\;\vec{i}+\displaystyle\frac{\partial}{\partial y}\;\vec{j}\times Q(x,y)\;\vec{j}+\displaystyle\frac{\partial}{\partial y}\;\vec{j}\times P(x,y)\;\vec{i}+\displaystyle\frac{\partial}{\partial x}\;\vec{i}\times Q(x,y)\;\vec{j})·d\vec{s}$<br><br>$=\left(\displaystyle\frac{\partial Q}{\partial x}-\displaystyle\frac{\partial P}{\partial y} \right)\;\vec{k}·d\vec{s}$<br><br>$=\left(\displaystyle\frac{\partial Q}{\partial x}-\displaystyle\frac{\partial P}{\partial y} \right)dxdy<br>$</li>
 </ul>
+</blockquote>
 <script type="math/tex; mode=display">
 \therefore\iint\limits_D\nabla\times \vec{F} (x,y)·d\vec{s}=\oint\limits_LPdx+Qdy=\iint\limits_D\left(\displaystyle\frac{\partial Q}{\partial x}-\displaystyle\frac{\partial P}{\partial y} \right)dxdy</script><p>2</p>
 <p>当然理解的时候可以站在几何的角度，一个 <strong>有向</strong> 闭合曲线内部可以分成无数个小的 <strong>有向</strong> 闭合曲线，并且部分有向边界可以 <strong>相互抵消</strong>（方向相反的线）</p>
@@ -290,13 +293,25 @@
 </ul>
 <p><strong>2、已知全微分求原函数</strong><br>如果函数$P(x,y)$、$Q(x,y)$在单连通区域$\;D\;$内具有 <strong>连续的一阶偏导数</strong>，<strong>且$\displaystyle\frac{\partial Q}{\partial x}=\displaystyle\frac{\partial P}{\partial y}$</strong>，则 $Pdx+Qdy$ 是某个函数$u(x,y)$的全微分，且有</p>
 <script type="math/tex; mode=display">u(x,y)=\int_{(x_0,y_0)}^{(x,y)}Pdx+Qdy</script><p>其中$(x_0,y_0)$是区域 $D$ 内的某一定点，$(x,y)$是 $D$ 内的任一点</p>
-<h1 id="高斯公式"><a href="#高斯公式" class="headerlink" title="高斯公式"></a>高斯公式</h1><p>高斯公式描述了第二种曲面积分（向量的形式），和三重积分的一种关系</p>
+<h1 id="高斯公式"><a href="#高斯公式" class="headerlink" title="高斯公式"></a>高斯公式</h1><blockquote>
+<p>高斯公式描述了第二种曲面积分（向量的形式），和三重积分的一种关系</p>
+</blockquote>
 <p>高斯公式就像是格林公式升一维后的产物，所以这里直接给出公式</p>
-<script type="math/tex; mode=display">\oiint\limits_{\sum}Pdxdy+Qdxydy+Rdxdy=\iiint\limits_{\Omega}\left(\displaystyle\frac{\partial P}{\partial x}+\displaystyle\frac{\partial Q}{\partial y}+\displaystyle\frac{\partial R}{\partial z}\right)dxdydz</script><p>或</p>
-<script type="math/tex; mode=display">\oiint\limits_{\sum}(P\cos\alpha+Q\cos\beta+R\cos\gamma)dS=\iiint\limits_{\Omega}\left(\displaystyle\frac{\partial P}{\partial x}+\displaystyle\frac{\partial Q}{\partial y}+\displaystyle\frac{\partial R}{\partial z}\right)dxdydz</script><h1 id="斯托克公式"><a href="#斯托克公式" class="headerlink" title="斯托克公式"></a>斯托克公式</h1><p>斯托克斯公式就是格林公式的推广，其一般情况是应用在三维空间中的曲线和二重积分的一种关系，当然有时也可以进一步利用高斯公式将二重积分进一步转化为三重积分。</p>
-<p>公式：</p>
-<script type="math/tex; mode=display">
-\oint_L Pdx+Qdy+Rdz=\iint\limits_{\sum}
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><script type="math/tex; mode=display">
+\iint\limits_{\Sigma}Pdxdy+Qdxydy+Rdxdy=\iiint\limits_{\Omega}\left(\displaystyle\frac{\partial P}{\partial x}+\displaystyle\frac{\partial Q}{\partial y}+\displaystyle\frac{\partial R}{\partial z}\right)dxdydz</script><p>或</p>
+<script type="math/tex; mode=display">\iint\limits_{\Sigma}(P\cos\alpha+Q\cos\beta+R\cos\gamma)dS=\iiint\limits_{\Omega}\left(\displaystyle\frac{\partial P}{\partial x}+\displaystyle\frac{\partial Q}{\partial y}+\displaystyle\frac{\partial R}{\partial z}\right)dxdydz</script><p>这里二重积分表示的都是 <strong>闭合曲面</strong>，mathjax似乎不支持闭合二重积分符号</p>
+<p>这个证明跟前面证明格林公式基本一致</p>
+<h2 id="通量与散度"><a href="#通量与散度" class="headerlink" title="通量与散度"></a>通量与散度</h2><p>设向量场</p>
+<script type="math/tex; mode=display">\vec{A}(x,y,z)=P(x,y,z)\;\vec{i}+Q(x,y,z)\;\vec{j}+R(x,y,z)\;\vec{k}</script><p>其中P、Q、R具有连续的一阶偏导数，&sum; 是场内的一个有向曲面，则称</p>
+<script type="math/tex; mode=display">\Phi=\iint\limits_{\Sigma}\vec{A}·d\vec{S}=\iint\limits_{\Sigma}Pdydz+Qdzdx+Rdxdy</script><p>为向量场 $\vec{A}$ 通过曲面 &sum;的通量（或流量）</p>
+<p>$<br>\displaystyle\frac{\partial P}{\partial x}+\displaystyle\frac{\partial Q}{\partial y}+\displaystyle\frac{\partial R}{\partial z}<br>$<br>称为向量场 $\vec{A}$ 的散度，记作div$\vec{A}$，即</p>
+<script type="math/tex; mode=display">\text{div}\vec{A}=\displaystyle\frac{\partial P}{\partial x}+\displaystyle\frac{\partial Q}{\partial y}+\displaystyle\frac{\partial R}{\partial z}</script><p>所以高斯公式也可简写成</p>
+<script type="math/tex; mode=display">\iint\limits_{\Sigma}\vec{A} · d\vec{S}=\iiint\limits_{\Omega}\text{div}\vec{A}dV</script><p>这里散度的概念是从物理学中抽象出来的</p>
+<h1 id="斯托克斯公式"><a href="#斯托克斯公式" class="headerlink" title="斯托克斯公式"></a>斯托克斯公式</h1><blockquote>
+<p>斯托克斯公式就是格林公式的推广，其一般情况是应用在三维空间中的曲线和二重积分的一种关系，当然有时也可以进一步利用高斯公式将二重积分进一步转化为三重积分。</p>
+</blockquote>
+<h2 id="公式-1"><a href="#公式-1" class="headerlink" title="公式"></a>公式</h2><script type="math/tex; mode=display">
+\oint_L Pdx+Qdy+Rdz=\iint\limits_{\Sigma}
 \begin{vmatrix}
 dydz&dzdx&dxdy\\
 \\
@@ -306,7 +321,7 @@ dydz&dzdx&dxdy\\
 \\
 P&Q&R
 \end{vmatrix}
-=\iint\limits_{\sum}
+=\iint\limits_{\Sigma}
 \begin{vmatrix}
 \cos\alpha&\cos\beta&\cos\gamma\\
 \\
@@ -315,7 +330,48 @@ P&Q&R
 \displaystyle\frac{\partial}{\partial z}\\
 \\
 P&Q&R
-\end{vmatrix}</script>
+\end{vmatrix}</script><p>这个证明跟前面证明格林公式基本一致</p>
+<p>$\nabla\times \vec{F} (x,y,z)·d\vec{s}$，将这个混合积用行列式书写也就是公式中的这玩意</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+dydz&dzdx&dxdy\\
+\\
+\displaystyle\frac{\partial}{\partial x}&
+\displaystyle\frac{\partial}{\partial y}&
+\displaystyle\frac{\partial}{\partial z}\\
+\\
+P&Q&R
+\end{vmatrix}</script><p>当然上面的格林公式其实也可以写成这种行列式的形式</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+0&0&dxdy\\
+\\
+\displaystyle\frac{\partial}{\partial x}&
+\displaystyle\frac{\partial}{\partial y}&
+0\\
+\\
+P&Q&0
+\end{vmatrix}</script><p>所以为什么说斯托克斯公式其实就是格林公式的推广</p>
+<h2 id="环流量与旋度"><a href="#环流量与旋度" class="headerlink" title="环流量与旋度"></a>环流量与旋度</h2><p>设向量场</p>
+<script type="math/tex; mode=display">\vec{A}(x,y,z)=P(x,y,z)\;\vec{i}+Q(x,y,z)\;\vec{j}+R(x,y,z)\;\vec{k}</script><p>L是场内的一条有向闭曲线，则称</p>
+<script type="math/tex; mode=display">\Gamma=\oint_L\vec{A} · d\vec{S}=\oint_L Pdx+Qdy+Rdz</script><p>为向量场 $\vec{A}$ 沿曲线L的环流量，并称向量</p>
+<script type="math/tex; mode=display">
+\left(\displaystyle\frac{\partial R}{\partial y}-\displaystyle\frac{\partial Q}{\partial z}\right)\vec{i}+\left(\displaystyle\frac{\partial P}{\partial z}-\displaystyle\frac{\partial R}{\partial x}\right)\vec{j}+\left(\displaystyle\frac{\partial Q}{\partial x}-\displaystyle\frac{\partial P}{\partial y}\right)\vec{k}</script><p>为向量 $\vec{A}$ 的旋度，记作rot$\vec{A}$，即</p>
+<script type="math/tex; mode=display">
+\text{rot} \vec{A}=
+\begin{vmatrix}
+\vec{i}&\vec{j}&\vec{k}\\
+\\
+\displaystyle\frac{\partial}{\partial x}&
+\displaystyle\frac{\partial}{\partial y}&
+\displaystyle\frac{\partial}{\partial z}\\
+\\
+P&Q&R
+\end{vmatrix}
+=\left(\displaystyle\frac{\partial R}{\partial y}-\displaystyle\frac{\partial Q}{\partial z}\right)\vec{i}+\left(\displaystyle\frac{\partial P}{\partial z}-\displaystyle\frac{\partial R}{\partial x}\right)\vec{j}+\left(\displaystyle\frac{\partial Q}{\partial x}-\displaystyle\frac{\partial P}{\partial y}\right)\vec{k}</script><p>所以斯托克斯公式可简写成</p>
+<script type="math/tex; mode=display">
+\oint_L \vec{A}·d\vec{r}=\iint\limits_{\Sigma}\text{rot}\vec{A}·d\vec{S}</script><p>其中<br>$d\vec{r}=dx\vec{i}+dy\vec{j}+dz\vec{k}$<br>$d\vec{S}=dydz\vec{i}+dzdx\vec{j}+dxdy\vec{k}$</p>
+
       
     </div>
 
@@ -881,12 +937,12 @@ P&Q&R
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">138k</span>
+    <span title="站点总字数">143k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:06</span>
+    <span title="站点阅读时长">2:10</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
