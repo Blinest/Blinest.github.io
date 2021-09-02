@@ -19,15 +19,15 @@
     var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="第十届微分中值定理设 $f(x,y)$ 在区域 $D$ 内可微，且 $\sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2+\left(\dfrac{\partial f}{\partial y}\right)^2 }\leqslant M$ ，$A(x_1,y_1)$，$B(x_2,y_2)$是 $D$ 内两点，线段$AB$ 包含在 $D$ 内，">
+  <meta name="description" content="第一届格林公式问题： 已知平面区域 $D&#x3D;\{(x, y) \mid 0 \leqslant x \leqslant \pi, 0 \leqslant y \leqslant \pi\} \quad L$ 为 $D$的正向边界, 试证：  \begin{aligned} &amp;(1)\oint_{L} x e^{\sin y} d y-y e^{-\sin x} d x&#x3D;\oint_{L} x e^{">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数学竞赛试题收录">
 <meta property="og:url" content="https://mdreamers.github.io/2021/08/23/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B%E8%AF%95%E9%A2%98%E6%94%B6%E5%BD%95/index.html">
 <meta property="og:site_name" content="追梦">
-<meta property="og:description" content="第十届微分中值定理设 $f(x,y)$ 在区域 $D$ 内可微，且 $\sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2+\left(\dfrac{\partial f}{\partial y}\right)^2 }\leqslant M$ ，$A(x_1,y_1)$，$B(x_2,y_2)$是 $D$ 内两点，线段$AB$ 包含在 $D$ 内，">
+<meta property="og:description" content="第一届格林公式问题： 已知平面区域 $D&#x3D;\{(x, y) \mid 0 \leqslant x \leqslant \pi, 0 \leqslant y \leqslant \pi\} \quad L$ 为 $D$的正向边界, 试证：  \begin{aligned} &amp;(1)\oint_{L} x e^{\sin y} d y-y e^{-\sin x} d x&#x3D;\oint_{L} x e^{">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-23T13:45:30.000Z">
-<meta property="article:modified_time" content="2021-08-23T16:32:29.723Z">
+<meta property="article:modified_time" content="2021-09-02T15:56:33.745Z">
 <meta property="article:author" content="lbl">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="高数">
@@ -222,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-24 00:32:29" itemprop="dateModified" datetime="2021-08-24T00:32:29+08:00">2021-08-24</time>
+                <time title="修改时间：2021-09-02 23:56:33" itemprop="dateModified" datetime="2021-09-02T23:56:33+08:00">2021-09-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,14 +247,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.8k</span>
+              <span>7.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -266,7 +266,453 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="第十届"><a href="#第十届" class="headerlink" title="第十届"></a>第十届</h1><p><strong>微分中值定理</strong><br>设 $f(x,y)$ 在区域 $D$ 内可微，且 $\sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2+\left(\dfrac{\partial f}{\partial y}\right)^2 }\leqslant M$ ，$A(x_1,y_1)$，$B(x_2,y_2)$是 $D$ 内两点，线段$AB$ 包含在 $D$ 内，证明：$|f(x_1,y_1)-f(x_2,y_2)|\leqslant M|AB|$ ，其中$|AB|$表示线段$AB$的长度<br><br><br>分析：拿到这一题，我们很容易明确目标，如何建立偏导数和函数之间的关系呢？很显然应该需要用到微分中值定理</p>
+        <h1 id="第一届"><a href="#第一届" class="headerlink" title="第一届"></a>第一届</h1><h2 id="格林公式"><a href="#格林公式" class="headerlink" title="格林公式"></a>格林公式</h2><p><strong>问题</strong>：</p>
+<p>已知平面区域 $D=\{(x, y) \mid 0 \leqslant x \leqslant \pi, 0 \leqslant y \leqslant \pi\} \quad L$ 为 $D$的正向边界, 试证：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&(1)\oint_{L} x e^{\sin y} d y-y e^{-\sin x} d x=\oint_{L} x e^{-\sin y} d y-y e^{\sin x} d x\\
+&(2)\oint_{L} x e^{\sin y} d y-y e^{-\sin x} d x \geqslant \dfrac{5}{2} \pi^{2}
+\end{aligned}</script><hr>
+<p><strong>分析</strong>：</p>
+<p>第一问很基础，可以用格林公式，也可以用对称性</p>
+<p>第二问主要就在于放缩的精度问题，这里不能用基本不等式，因为精度不够。</p>
+<span id="more"></span>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\oint_Lxe^{\sin y}dy -ye^{-\sin x}dx&=\iint\limits_D e^{\sin y}+e^{-\sin x}dxdy\\
+&=\iint\limits_D e^{\sin x}+e^{-\sin x}dxdy\\
+\end{aligned}</script><p>所以本题目标很明确，只需要对 $e^x+e^{-x}$ 进行放缩，我们知道 $e^x$ 的泰勒级数</p>
+<script type="math/tex; mode=display">
+e^x=\sum\limits_{n=0}^∞\frac{1}{n!}x^n</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+e^x+e^{-x}&=\sum\limits_{n=0}^∞\frac{1}{n!}x^n+\sum\limits_{n=0}^∞(-1)^n\frac{1}{n!}x^n\\
+&=2\sum\limits_{n=0}^∞\frac{1}{(2n)!}x^{2n}
+\end{aligned}</script><p>根据题目，这里只需要取前两项</p>
+<p>也就是 $e^x+e^{-x}\geqslant2+x^2$</p>
+<script type="math/tex; mode=display">
+\iint\limits_D e^{\sin x}+e^{-\sin x}dxdy\geqslant\iint\limits_D2+x^2d\delta\geqslant\frac{5}{2}\pi^2</script><hr>
+<h2 id="积分审敛法"><a href="#积分审敛法" class="headerlink" title="积分审敛法"></a>积分审敛法</h2><p><strong>问题</strong>：</p>
+<p>求 $x\rightarrow 1^-$ 时，与 $\sum\limits_{n=0}^∞x^{n^2}$等价的无穷大量</p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>等价无穷大，也就是</p>
+<script type="math/tex; mode=display">
+\lim\limits_{x\rightarrow1^-}\frac{\sum\limits_{n=0}^\infty x^{n^2} }{f(x) }=1</script><p>如何寻找 $f(x)$ 呢？利用 <strong>级数和积分的联系</strong>，级数可以说是数列的“反常积分”</p>
+<p>观察这个式子，我们会发现这种形式类似于高斯积分</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} e^{-ax^2}dx=\frac12\sqrt\frac{\pi}{a}</script><p>而由积分审敛法</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} x^{t^2}dt\leqslant\sum\limits_{n=0}^\infty x^{n^2}\leqslant1+\int_0^{+\infty} x^{t^2}dt</script><p>所以可求得其等价无穷大量</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} x^{t^2}dt=\int_0^{+\infty}e^{-t^2\ln\frac{1}{x} }dt=\frac12\sqrt\frac{\pi}{\ln\frac1x}</script><p>用到了积分审敛法，说实话有点超纲……</p>
+<h1 id="第二届"><a href="#第二届" class="headerlink" title="第二届"></a>第二届</h1><h2 id="极限技巧"><a href="#极限技巧" class="headerlink" title="极限技巧"></a>极限技巧</h2><p><strong>问题</strong>：</p>
+<p>设$x_n=$ $(1+a)$ · $(1+a^2)$ $\cdots$ $(1+a^{2^n})$，其中$|a|&lt;1$，求$\lim\limits_{n\rightarrow+\infty}x_n$</p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>这一题其实并不难，但是很容易把人带入坑中，因为这种形式非常类似于取对数可以转化成积分的题，但是取完对数之后，却发现还是不容易做，而这一题其实更巧妙的方法，在这里收录一下</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+x_n&=(1+a) · (1+a^2)\cdots(1+a^{2^n})\\
+&=\frac{(1-a)(1+a) · (1+a^2)\cdots(1+a^{2^n})}{1-a}\\
+&=\frac{1-a^{2^{n+1} } }{1-a}\\
+&=\frac{1}{1-a}
+\end{aligned}</script><hr>
+<h2 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h2><ul>
+<li>和的极限判断敛散</li>
+<li>柯西收敛准则</li>
+</ul>
+<p><strong>问题</strong></p>
+<p>设$a_n&gt;0$，$S_n=\sum\limits_{k=1}^na_k$，证明：</p>
+<p>(1) 当 $\alpha&gt;1$ 时，级数 $\sum\limits_{n=1}^{+\infty}\dfrac{a_n}{S_n^\alpha}$ 收敛</p>
+<p>(2) 当 $\alpha\leqslant1$，且 $S_n\rightarrow\infty$ $(n\rightarrow \infty)$时，$\sum\limits_{n=1}^{+\infty}\dfrac{a_n}{S_n^\alpha}$ 发散</p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>级数的题目确实比较灵活，准备将级数放缩的方法进行一些整理，像这一题，应该是用比较审敛法，如何用放缩找到一个可以判断收敛的级数呢？这得一步步来</p>
+<p>首先第一问，这一题将 $S_i$ 转化成 $a_i$ 会让变量增多，而且这题没有其他特殊条件，所以不容易处理，那么就将 $a_n$ 转化成 $S_n-S_{n-1}$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum\limits_{n=1}^{+\infty}\frac{a_n}{S_n^\alpha}&=\sum\limits_{n=1}^{+\infty}\frac{S_n-S_{n-1} }{S_n^\alpha}\\
+\end{aligned}</script><p>到这一步我卡了很久，怎么将其进行放缩呢？在这里我进入了一个误区，认为必须要将其放缩成常见的收敛级数，例如 p级数，但是却始终无法办到，这里我忽略了另一种办法，其实可以放缩找到一个可以进行裂项求和的级数，只要它的和收敛就行，这与证明级数 $\sum\limits_{n=1}^\infty \dfrac1n$ 发散的方法类似。</p>
+<p>ok，有了这样的思路，我们就可以去寻找一个这种类型的项，其实很好发现，也就是 $S_{n-1}^{1-\alpha}-S_n^{1-\alpha}$，但是这里很难用放缩直接判断它们的大小关系，为了方便观察这里令 $m=S_n$，$n=S_{n-1}$</p>
+<p>只要证</p>
+<script type="math/tex; mode=display">
+n^{1-\alpha}-m^{1-\alpha}\geqslant\frac{m-n}{m^\alpha}</script><p>这就非常清晰了，只需要借助拉格朗日中值定理，就可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+n^{1-\alpha}-m^{1-\alpha}&=(n-m)(1-\alpha)\xi^{-\alpha}\quad\xi\in(m,n)\\
+&\geqslant(\alpha-1)(m-n)m^{-\alpha}\\
+&\geqslant\frac{m-n}{m^\alpha}
+\end{aligned}</script><p>当然正常做的时候这里构造个函数 $f(x)=x^{1-\alpha}$ ，然后利用拉格朗日中值定理</p>
+<p>因为</p>
+<script type="math/tex; mode=display">
+\sum\limits_{n=1}^\infty S_{n-1}^{1-\alpha}-S_n^{1-\alpha}=S_1^{1-\alpha}\quad\text{收敛}</script><p>所以原级数收敛</p>
+<p>第二问，由于 $\alpha\leqslant1$ 时，$\dfrac{a_n}{S_n^\alpha}$ $\geqslant\dfrac{a_n}{S_n}$</p>
+<p>所以只要证明 $\alpha=1$时发散就行了</p>
+<p>这一个就不容易求和的极限了</p>
+<p>但是，我们可以将这个级数任意截取p个数，使得这p个数能够大于零，那么取极限就会趋近于无穷了，其实就是柯西收敛准则</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum\limits_{i=n+1}^{n+p}\frac{a_i}{S_i}\geqslant\frac{1}{S_{n+p} }\sum_{i=n+1}^{n+p}a_i&=\frac{S_{n+p}-S_n}{S_{n+p} }\\
+&=1-\frac{S_n}{S_{n+p} }
+\end{aligned}</script><p>对于任意 n，总存在 $p\in\N$，使得 $\dfrac{S_{n} }{S_{n+p} }$ $\leqslant$ $\dfrac12 $</p>
+<p>即 $\sum\limits_{i=n+1}^{n+p}\dfrac{a_i}{S_i}$ $\geqslant$ $\dfrac12$</p>
+<p>所以级数 $\sum\limits_{n=1}^\infty\dfrac{a_n}{S_n}$ 发散</p>
+<h1 id="第三届"><a href="#第三届" class="headerlink" title="第三届"></a>第三届</h1><h2 id="stolz定理"><a href="#stolz定理" class="headerlink" title="stolz定理"></a>stolz定理</h2><p><strong>问题</strong></p>
+<p>设 $\{a_n\}_{n=0}^\infty$ 为数列，$a$，$\lambda$ 为有限数，求证：</p>
+<ol>
+<li>如果$\lim\limits_{n\rightarrow\infty}a_n=a$，则$\lim\limits_{n\rightarrow\infty}\dfrac{a_1+a_2+\cdots+a_n}{n} =a$；</li>
+<li>如果存在正整数 $p$，使得$\lim\limits_{n\rightarrow\infty}(a_{n+p}-a_n)=\lambda$ ，则 $\lim\limits_{n\rightarrow\infty}\dfrac{a_n}{n}$ = $\dfrac{\lambda}{p}$ </li>
+</ol>
+<hr>
+<p><strong>分析</strong></p>
+<p>第一问直接用stolz定理就行了，没啥难度</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\lim\limits_{n\rightarrow\infty}\frac{a_1+a_2+\cdots+a_n}{n}\\
+&=\lim\limits_{n\rightarrow\infty}\frac{(a_1+a_2+\cdots+a_n)-(a_1+a_2+\cdots+a_{n-1})}{n-(n-1)}\\
+&=\lim\limits_{n\rightarrow\infty}a_n\\
+&=a
+\end{aligned}</script><p>第二问就不满足stolz定理的条件了，而且这道题我们必然会想到累项求和。</p>
+<p>令 $A_n=a_{n+p}-a_n$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\qquad\lim_{n\rightarrow\infty}\frac{A_1+A_2+\cdots+A_n}{n}=\lim\limits_{n\rightarrow\infty}\frac{a_{n+p}-a_1}{n}=\lim\limits_{n\rightarrow\infty}A_n=\lambda\\
+\\
+&\Rightarrow\;\;\lim\limits_{n\rightarrow\infty}\frac{a_{n+p} }{n+p}=\lim_{n\rightarrow\infty}\frac{a_{n+p} }{n}\frac{n}{n+p}=\frac{\lambda}{p}
+\end{aligned}</script><hr>
+<h2 id="曲面积分的几何理解"><a href="#曲面积分的几何理解" class="headerlink" title="曲面积分的几何理解"></a>曲面积分的几何理解</h2><p><strong>问题</strong></p>
+<p>设函数 $f(x)$ 连续，$a,b,c$为常数，$\Sigma$ 是单位球面 $x^2+y^2+z^2=1$。记第一型曲面积分</p>
+<script type="math/tex; mode=display">
+I=\iint\limits_{\Sigma}f(ax+by+cz)dS.</script><p>求证：$I=2\pi\int_{-1}^1f(\sqrt{a^2+b^2+c^2}u)du$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>拿到这一题，直接硬解的话并不容易，我们先一步步进行分析</p>
+<p>首先，我们很容易发现 $f$ 括号里的东西发生了变化</p>
+<p>这里得分两种情况</p>
+<ul>
+<li><p>$a,b,c$全为零，显然成立</p>
+</li>
+<li><p>$a,b,c$不全为零</p>
+</li>
+</ul>
+<p>令</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\qquad ax+by+cz=\sqrt{a^2+b^2+c^2}u\\
+\\
+&\Rightarrow u=\frac{ax+by+cz}{\sqrt{a^2+b^2+c^2} }
+\end{aligned}</script><p>也就是说, $|u|$ 的几何意义就是单位球面上的点$P(x,y,z)$，到平面 $ax+by+cz=0$ 的距离</p>
+<p>而球面到过原点平面的距离 $|u|\in[0,1]$</p>
+<p>即 $-1\leqslant u\leqslant 1$</p>
+<p>我们可以将|u|,|u+du|所截的区域，被积函数范围就是$f(\sqrt{a^2+b^2+c^2}u)$，而它的面积微元$ds$其实就是定积分中旋转体面积微元</p>
+<p>为了好表示，我们这里令$v^2=\sqrt{1-u^2}$</p>
+<p>那么</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ds&=2\pi\sqrt{1-u^2}\sqrt{1+\left(\frac{dv}{du}\right)^2}du\\
+&=2\pi\sqrt{1-u^2}\frac{1}{\sqrt{1-u^2} }du\\
+&=2\pi du
+\end{aligned}</script><p>所以说 $I=2\pi\displaystyle\int_{-1}^1f(\sqrt{a^2+b^2+c^2}u)du$</p>
+<p>答案的思路也是这样，并不是从代数的角度直接去证明的，而纯代数角度进行证明也确实复杂，有时间可以再试一试</p>
+<h1 id="第四届"><a href="#第四届" class="headerlink" title="第四届"></a>第四届</h1><h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><p><strong>问题</strong></p>
+<p>求极限 </p>
+<script type="math/tex; mode=display">
+\lim\limits_{x\rightarrow+\infty}\sqrt[3]{x}\int_x^{x+1}\frac{\sin t}{\sqrt{t+\cos t} }dt</script><hr>
+<p><strong>分析</strong></p>
+<p>这一题其实并不难，因为思路比较局限，泰勒公式，洛必达肯定没法用，肯定就是夹逼定理，但是这里的难点就是如何进行放缩，把这样复杂的形式放缩简单，我们其实可以猜测极限取0，再结合正余弦函数的值域</p>
+<p>那么</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left|\sqrt[3]{x}\int_x^{x+1}\frac{\sin t}{\sqrt{t+\cos t} }dt\right|&\leqslant\sqrt[3]{x}\int_x^{x+1}\frac{1}{\sqrt{t-1} }dt\\
+&=2\sqrt[3]{x}\;(\sqrt{x}-\sqrt{x-1})\\
+&=2\frac{\sqrt[3]{x} }{\sqrt{x}+\sqrt{x-1} }\rightarrow0
+\end{aligned}</script><p>问题也就解决了</p>
+<p>一般来说三角函数的放缩如果是趋近于零，那么我们可以结合泰勒级数来进行放缩，而这一题显然不可以，那么我们就可以借助它的值域来进行放缩，从而化简式子，而且像这种题极限一般都是趋向于0的.</p>
+<hr>
+<h2 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h2><p><strong>问题</strong><br>计算</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty}e^{-2x}|\sin x|dx</script><hr>
+<p><strong>分析</strong></p>
+<p>这一题比较烦的就是这个绝对值，我们没法直接用分部积分法，因为 |sinx| 的一些点导数不存在</p>
+<p>但是这种取绝对值的方法我也是第一次见，说实话，如果不看解答方法，这一题思路很难想到，简单的来说就是，在区间$[0,\infty)$上，按步长为$\pi$进行分割，达到去绝对值的目的</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int_0^{+\infty}e^{-2x}|\sin x|dx\\
+\\
+=&\sum\limits_{k=0}^\infty(-1)^k\int_{k\pi}^{(k+1)\pi}e^{-2x}\sin xdx\\
+\\
+=&\sum\limits_{k=0}^\infty\;\frac15[e^{-2(k+1)\pi}+e^{-2k\pi}]\\
+\\
+=&\frac15(e^{-2\pi}+1)\sum\limits_{k=0}^\infty e^{-2k\pi}
+\end{aligned}</script><p>下面就转化为了求 $\sum\limits_{k=1}^\infty e^{-2k\pi}$ 这个级数的值，这个就是等比级数</p>
+<p>也就是说</p>
+<script type="math/tex; mode=display">
+\sum\limits_{k=0}^\infty e^{-2k\pi}=\frac{1}{1-e^{-2\pi} }</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty}e^{-2x}|\sin x|dx=\frac{e^{2\pi}+1}{5(e^{2\pi}-1)}</script><hr>
+<h2 id="级数-1"><a href="#级数-1" class="headerlink" title="级数"></a>级数</h2><p><strong>裂项相消</strong></p>
+<p><strong>问题</strong><br>设 $\sum\limits_{n=1}^\infty a_n$ 和 $\sum\limits_{n=1}^\infty b_n$ 为正项级数</p>
+<p>(1)若 $\lim\limits_{n\rightarrow\infty}\left(\dfrac{a_n}{a_{n+1}b_n}-\dfrac{1}{b_{n+1} }\right)&gt;0$ ，则 $\sum\limits_{n=1}^\infty a_n$ 收敛</p>
+<p>(2)若 $\lim\limits_{n\rightarrow\infty}\left(\dfrac{a_n}{a_{n+1}b_n}-\dfrac{1}{b_{n+1} }\right)&lt;0$ 且 $\sum\limits_{n=1}^\infty b_n$ 发散，则 $\sum\limits_{n=1}^\infty a_n$ 发散</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>虽然作为第四届的压轴题，但是思路却非常清晰，并不是很难，但是里面的一些细节却需要注意</p>
+<p>第一问假设 $\lim\limits_{n\rightarrow\infty}\left(\dfrac{a_n}{a_{n+1}b_n}-\dfrac{1}{b_{n+1} }\right)=$ $\delta&gt;0$</p>
+<p>由极限的保号性可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\exists\;N\in N^*，\text{使得}，n\geqslant N\,\text{时}，\\
+&\frac{a_n}{a_{n+1}b_n}-\frac{1}{b_{n+1} }>\frac{\delta}{2}\\
+\Rightarrow\;&\frac{\delta}{2}\;a_{n+1}<\frac{a_n}{b_n}-\frac{a_{n+1} }{b_{n+1} }\\
+\Rightarrow\;&\frac{\delta}{2}\sum\limits_{n=1}^\infty a_n < \frac{\delta}{2}\sum\limits_{n=0}^{N-1}a_n+\sum\limits_{n=N}^\infty(\frac{a_n}{b_n}-\frac{a_{n+1} }{b_{n+1} })\\
+&=\frac{\delta}{2}\sum\limits_{n=0}^{N-1}a_n+\frac{a_N}{b_N}-\frac{a_{n+1} }{b_{n+1} }<\frac{\delta}{2}\sum\limits_{n=0}^{N-1}a_n+\frac{a_N}{b_N}
+\end{aligned}</script><p>第二问也是同样的方法，用比较审敛法即可得出</p>
+<hr>
+<h1 id="第五届"><a href="#第五届" class="headerlink" title="第五届"></a>第五届</h1><h2 id="广义积分敛散性"><a href="#广义积分敛散性" class="headerlink" title="广义积分敛散性"></a>广义积分敛散性</h2><p><strong>问题</strong></p>
+<p>注意这里证明的是绝对收敛，因为我们知道这个广义积分条件收敛，并且收敛于 $\dfrac{\pi}{2}$</p>
+<p>证明广义积分 $\displaystyle\int_0^{+\infty}\dfrac{\sin x}{x}dx$ 不是绝对收敛的</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>广义积分的敛散性证明其实可以转化成级数的敛散性证明</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\int_0^\infty\frac{|\sin x|}{x}dx
+&=\sum_{n=0}^\infty\int_{n\pi}^{(n+1)\pi}\frac{|\sin x|}{x}dx\\
+&=\sum_{n=0}^\infty a_n
+\end{aligned}</script><p>下面就通过比较审敛法证明 $\sum\limits_{n=0}^\infty a_n$ 发散即可</p>
+<p>由于</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+a_n
+&=\int_{n\pi}^{(n+1)\pi}\frac{|\sin x|}{x}dx\\
+&\geqslant\frac{1}{(n+1)\pi}\int_{n\pi}^{(n+1)\pi}|\sin x|dx\\
+&=\frac{1}{(n+1)\pi}\int_0^\pi|\sin x|dx\\
+&=\frac{2}{(n+1)\pi}
+\end{aligned}</script><p>因为 $\sum\limits_{n=0}^\infty\dfrac{2}{(n+1)\pi}$发散，所以原级数发散</p>
+<hr>
+<h2 id="不等式-含三角"><a href="#不等式-含三角" class="headerlink" title="不等式(含三角)"></a>不等式(含三角)</h2><p><strong>问题</strong></p>
+<p>设 $|f(x)|\leqslant\pi$，$f’(x)\geqslant$ $m&gt;0$ $(a\leqslant x\leqslant b)$，证明：$|\displaystyle\int_a^b\sin f(x)dx|$ $\leqslant$ $\dfrac{2}{m}$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>这一题比较烦的就是 $\sin f(x)$ 中的 $f(x)$，我们可以选择将其代换掉，但这里为了方便些就不做代换了，还有一点就是我们必须凑出 $\dfrac{1}{m}$ 这种形式，不难发现 </p>
+<script type="math/tex; mode=display">
+\frac{1}{f'(x)}=\frac{dx}{df(x)}\leqslant \frac{1}{m}</script><p>沿着这个思路，我们就可以进行如下放缩</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+|\int_a^b\sin f(x)dx|&=|\int_a^b\sin f(x)\frac{dx}{df(x)}df(x)|\\
+&\leqslant\frac1m|\int_a^b\sin f(x)df(x)|\\
+&=\frac1m|\cos f(a)-\cos f(b)|\leqslant\frac2m
+\end{aligned}</script><hr>
+<h1 id="第六届"><a href="#第六届" class="headerlink" title="第六届"></a>第六届</h1><p><strong>这题先放一放</strong><br><strong>问题</strong></p>
+<p>设 $f$ 在 $[a,b]$ 上非负连续，严格单调，且存在 $x_n\in[a,b]$ 使得</p>
+<script type="math/tex; mode=display">
+[f(x_n)]^n=\frac{1}{b-a}\int_a^b[f(x)]^ndx</script><p>求 $\lim\limits_{n\rightarrow\infty}x_n.$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>我认为这一题难度很大</p>
+<p>根据定义域，我们知道 $x_n\in[a,b]$</p>
+<hr>
+<h2 id="极限-1"><a href="#极限-1" class="headerlink" title="极限"></a>极限</h2><p><strong>求和与积分</strong><br><strong>问题</strong><br>设</p>
+<script type="math/tex; mode=display">
+A_n=\frac{n}{n^2+1}+\frac{n}{n^2+2^2}+\cdots+\frac{n}{n^2+n^2}</script><p>求 $\lim\limits_{n\rightarrow\infty}n\left(\dfrac{\pi}{4}-A_n\right)$</p>
+<hr>
+<p><strong>分析</strong><br>首先很容易得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim\limits_{n\rightarrow\infty}A_n
+&=\lim\limits_{n\rightarrow\infty}\frac1n\sum_{k=1}^n\frac{1}{1+(\frac {k}{n})^2}\\
+&=\int_0^1\frac{1}{1+x^2}dx\\
+&=\frac{\pi}{4}
+\end{aligned}</script><p>将它转化为积分与和的形式</p>
+<p>即</p>
+<script type="math/tex; mode=display">
+\frac{\pi}{4}=\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}\frac{1}{1+x^2}dx</script><script type="math/tex; mode=display">
+A_n=\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}\frac{1}{1+(\frac{i}{n})^2}dx</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\lim\limits_{n\rightarrow\infty}n\left(\frac{\pi}{4}-A_n\right)\\
+=&\lim\limits_{n\rightarrow\infty}n\left(\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}(\frac{1}{1+x^2}-\frac{1}{1+(\frac{i}{n})^2})dx\right)\\
+=&\lim\limits_{n\rightarrow\infty}n\left(\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}(f(x)-f(\frac{i}{n})dx\right)\\
+=&\lim\limits_{n\rightarrow\infty}n\left(\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}f'(\xi)(x-\frac{i}{n})dx\right)
+\end{aligned}</script><p>这里没法直接用积分中值定理，需要用到介值定理，</p>
+<p>因为 $f’(x)$在定义域上连续，则$m\leqslant f’(x)\leqslant M$</p>
+<p>而</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&M\int_\frac{i-1}{n}^\frac{i}{n}(x-\frac{i}{n})dx\leqslant\int_\frac{i-1}{n}^\frac{i}{n}f'(\xi)(x-\frac{i}{n})dx\leqslant m\int_\frac{i-1}{n}^\frac{i}{n}(x-\frac{i}{n})dx\\
+\Rightarrow&m\leqslant-2n^2\int_\frac{i-1}{n}^\frac{i}{n}f'(\xi)(x-\frac{i}{n})dx\leqslant M
+\end{aligned}</script><p>所以存在 $f’(\eta)$，使得 $f’(\eta)$ $=-2n^2\displaystyle\int_\frac{i-1}{n}^\frac{i}{n}f’(\xi)(x-\frac{i}{n})dx$ 成立</p>
+<p>其中 $\eta\in[x,\dfrac{i}{n}]$</p>
+<p>那么就可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\lim\limits_{n\rightarrow\infty}n\left(\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}f'(\xi)(x-\frac{i}{n})dx\right)\\
+=&\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\eta)\\
+\end{aligned}</script><p>然后用夹逼定理就可以得到</p>
+<script type="math/tex; mode=display">
+\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\frac{i-1}{n})\leqslant\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\eta)\leqslant\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\frac{i}{n})</script><p>而</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\frac{i-1}{n})&=\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\frac{i}{n})\\
+&=-\frac12\int_0^1f'(x)dx\\
+&=-\frac12[\;f(1)-f(0)\;]\\
+&=\frac14
+\end{aligned}</script><p>这一题就是把它们转化成积分与求和的形式，但是里面的一些细节还是需要注意的，比如介值定理，夹逼定理的使用</p>
+<h1 id="第七届"><a href="#第七届" class="headerlink" title="第七届"></a>第七届</h1><h2 id="反证"><a href="#反证" class="headerlink" title="反证"></a>反证</h2><p><strong>问题</strong></p>
+<p>设函数 $f$ 在 $[0,1]$ 上连续，且 $\displaystyle\int_0^1f(x)dx=0$，$\displaystyle\int_0^1xf(x)dx=1$，试证：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&(1)\;\exists\,x_0\in[0,1]，\text{使得}|f(x_0)|>4；\\
+&(2)\;\exists \,x_1\in[0,1]，\text{使得}|f(x_1)|=4.
+\end{aligned}</script><hr>
+<p><strong>分析</strong></p>
+<p>第一问要我们证明的是存在性问题，可以通过反证法，将其转化为恒成立问题</p>
+<p>也就是证明对于 $\forall\;x_0\in[0,1]$，都有 $|f(x_0)|$ $\leqslant4$ 这个命题为假就行</p>
+<p>我们令$F(x)=\displaystyle\int_0^xf(t)dt$</p>
+<p>那么我们能得到 $F(1)=0$ </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\int_0^1F(x)dx&=F(x)x\big|_0^1-\int_0^1xf(x)dx\\
+&=0-1\\
+&=-1
+\end{aligned}</script><p><strong>我们可以用待定系数法凑出</strong></p>
+<script type="math/tex; mode=display">
+a=\int_0^1(ax+b)f(x)dx\leqslant\int_0^1|ax+b||f(x)|dx\leqslant4\int_0^1|ax+b|dx=a</script><p>使得两边相等</p>
+<p>这样就可以让$\displaystyle\int_0^1|ax+b||f(x)|dx$ $=$ $4\displaystyle\int_0^1|ax+b|dx$ 恒成立</p>
+<p>也就是说 $x\in[0,1]$时，$f(x)\equiv4$，这就与$\displaystyle\int_0^1f(x)dx=0$ 矛盾，那么就证出来了</p>
+<p>要说明这两个相等，只要使得 $4\displaystyle\int_0^1|ax+b|dx=a$ 即可</p>
+<p>也就是</p>
+<script type="math/tex; mode=display">
+4\int_0^1|x+\frac{b}{a}|dx=1</script><p>取一个特殊的情况，$\dfrac{b}{a}=-\dfrac12$，让 $a=1$，$b=-\dfrac12$即可</p>
+<p>当然待定系数法的步骤在草稿纸上进行即可，我们只需要直接写出构造出的不等式</p>
+<p>第二问其实就比较简单了，有了第一问的铺垫就可以得到有一点 $x_0$ 大于4，我们只要找到一个点$\xi$小于4，就可以用介值定理得到等于4的情况</p>
+<p>这里我是多项式拟合进行构造</p>
+<p>令$g(x)=F(x)-2x+2$</p>
+<p>那么<br>$g(1)=0$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\int_0^1g(x)dx&=\int_0^1F(x)dx-\int_0^1(2x-2)dx\\
+&=-1+1=0
+\end{aligned}</script><p>因为g(x)在[0,1]上连续，由积分中值定理可以得到 </p>
+<p>存在一点 $\xi\in(0,1)$ 使得 $g(\xi)$ $=$ $\displaystyle\int_0^1g(x)dx=0$ 成立</p>
+<p>得到$g(1)=g(\xi)=0$</p>
+<p>然后用罗尔定理就可以得到存在一点 $\eta$，使得 $g’(\eta)=0$</p>
+<p>即 $|f(\eta)|=2$</p>
+<p>而在区间[0,1]上又存在大于4的点，通过介值定理即可得到存在一点$x_0$，使得 $|f(x_0)|=4$ 成立</p>
+<hr>
+<h2 id="二元泰勒公式"><a href="#二元泰勒公式" class="headerlink" title="二元泰勒公式"></a>二元泰勒公式</h2><p><strong>问题</strong></p>
+<p>设 $f(x,y)$ 在 $x^2+y^2\leqslant 1$ 上，有连续的二阶导数，$f_{xx}^2+2f_{xy}^2+f_{yy}^2$ $\leqslant$ $M$，若</p>
+<script type="math/tex; mode=display">
+f(0,0)=f_x(0,0)=f_y(0,0)=0</script><p>证明：</p>
+<script type="math/tex; mode=display">
+\left|\iint\limits_{x^2+y^2\leqslant 1}f(x,y)dxdy\right|\leqslant \frac{\pi\sqrt{M} }{4}.</script><hr>
+<p><strong>分析</strong></p>
+<p>很容易看出这一题得用到二元泰勒展开</p>
+<p>将 $f(x,y)$ 在(0,0)处泰勒展开</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+|f(x,y)|&=\left|f(0,0)+\left(x\frac{\partial}{\partial x}+y\frac{\partial}{\partial y}\right)f(0,0)+\frac12\left(x\frac{\partial}{\partial x}+y\frac{\partial}{\partial y}\right)^2f(0,0)\right|\\
+&=\frac12\left(x\frac{\partial}{\partial x}+y\frac{\partial}{\partial y}\right)^2|f(\theta x,\theta y)|\\
+&=\frac12\left|x^2\frac{\partial^2}{\partial x^2}+2xy\frac{\partial^2}{\partial x\partial y}+y^2\frac{\partial^2}{\partial y^2}\right||f(\theta x,\theta y)|
+\end{aligned}</script><p>由柯西不等式可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\left|x^2\frac{\partial^2}{\partial x^2}+2xy\frac{\partial^2}{\partial x\partial y}+y^2\frac{\partial^2}{\partial y^2}\right|\\
+\\
+\leqslant&\sqrt{(x^2)^2+(\sqrt{2\,}xy)^2+(y^2)^2}\sqrt{\left(\frac{\partial^2}{\partial x^2}\right)^2+\left(\sqrt{2\,}\frac{\partial^2}{\partial x\partial y}\right)^2+\left(\frac{\partial^2}{\partial y^2}\right)^2}\\
+\\
+=&(x^2+y^2)\sqrt{\left(\frac{\partial^2}{\partial x^2}\right)^2+\left(\sqrt{2\,}\frac{\partial^2}{\partial x\partial y}\right)^2+\left(\frac{\partial^2}{\partial y^2}\right)^2}
+\end{aligned}</script><p>又因为$f_{xx}^2+2f_{xy}^2+f_{yy}^2$ $\leqslant$ $M$</p>
+<p>那么就得到了</p>
+<script type="math/tex; mode=display">
+|f(x,y)|\leqslant\frac{\sqrt{M} }{2}(x^2+y^2)</script><p>而</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left|\iint\limits_{x^2+y^2\leqslant 1}f(x,y)dxdy\right|&\leqslant\iint\limits_{x^2+y^2\leqslant 1}|f(x,y)|dxdy\\
+&\leqslant\frac{\sqrt{M} }{2}\iint\limits_{x^2+y^2\leqslant 1}(x^2+y^2)dxdy\\
+&=\frac{\sqrt{M} }{2}\int_0^{2\pi}d\theta\int_0^1r^3dr\\
+&=\frac{\pi\sqrt{M} }{4} 
+\end{aligned}</script><hr>
+<h1 id="第八届"><a href="#第八届" class="headerlink" title="第八届"></a>第八届</h1><h2 id="双中值"><a href="#双中值" class="headerlink" title="双中值"></a>双中值</h2><p><strong>问题</strong><br>设函数 $f(x)$ 在区间 [0,1]上连续，且</p>
+<script type="math/tex; mode=display">
+I=\int_0^1f(x)dx\neq0.</script><p>证明：在 $(0,1)$内存在不同的两点$x_1,x_2$，使得</p>
+<script type="math/tex; mode=display">
+\frac{1}{f(x_1)}+\frac{1}{f(x_2)}=\frac{2}{I}</script><hr>
+<p><strong>分析</strong></p>
+<p>首先这一题，我们可以很容易看出这是一道双中值问题</p>
+<p>那么我们就可以将区间拆成两份</p>
+<script type="math/tex; mode=display">
+I=\int_0^1f(x)dx=\int_0^cf(x)dx+\int_c^1f(x)dx</script><p>然后通过积分中值定理可以得到</p>
+<script type="math/tex; mode=display">
+\int_0^cf(x)dx=cf(x_1)</script><script type="math/tex; mode=display">
+\int_c^1f(x)dx=(1-c)f(x_2)</script><p>也就是说</p>
+<script type="math/tex; mode=display">
+\frac{1}{f(x_1)}+\frac{1}{f(x_2)}=\frac{c}{\displaystyle\int_0^cf(x)dx}+\frac{1-c}{\displaystyle\int_c^1f(x)dx}=\frac{2}{I}</script><p>我们就需要找到一个c，使其能够满足$\displaystyle\int_0^cf(x)dx=$ $\dfrac{I}{2}$ 即可</p>
+<p>可是这儿怎么找呢？</p>
+<p>为了好表示，我们令 $F(x)=\displaystyle\int_0^xf(t)dt$</p>
+<p>那么就可以得到 $F(0)=0$，$F(1)=I\neq0$</p>
+<p>那么由介值定理我们就可以找到一点 $\xi$，使其满足c的条件</p>
+<p>那么就证明出来了</p>
+<hr>
+<h2 id="傅里叶级数"><a href="#傅里叶级数" class="headerlink" title="傅里叶级数"></a>傅里叶级数</h2><p><strong>问题</strong></p>
+<p>设 $f(x)$在$(-\infty,+\infty)$上可导，且</p>
+<script type="math/tex; mode=display">
+f(x)=f(x+2)=f(x+\sqrt{3}).</script><p>用傅里叶级数理论证明$f(x)$为常数。</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>傅里叶级数其实并不是太熟悉，这么多竞赛试题下来，就这么一道傅里叶级数的证明题，因此将它收录下来，也许不难，但是也能帮助我更好的运用</p>
+<p>由题可得 $f(x)$的周期为 $\sqrt{3}$ 和 2</p>
+<p>傅里叶系数为</p>
+<script type="math/tex; mode=display">
+a_n=\int_{-1}^1f(x)\cos n\pi xdx\\
+b_n=\int_{-1}^1f(x)\sin n\pi xdx</script><p>再由 $f(x)=f(x+\sqrt{3})$ 可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+a_n&=\int_{-1}^1f(x)\cos n\pi xdx\\
+&=\int_{-1}^1f(x+\sqrt{3})\cos n\pi xdx\\
+&\xlongequal{t=x+\sqrt{3} }\int_{-1+\sqrt{3} }^{1+\sqrt{3} }f(t)\cos n\pi(t-\sqrt{3})dt\\
+&=\int_{-1+\sqrt{3} }^{1+\sqrt{3} }f(t)[\;\cos n\pi t\cos\sqrt{3}n\pi +\sin n\pi t\sin\sqrt{3}n\pi \;]dt\\
+&=\cos\sqrt{3}n\pi\int_{-1+\sqrt{3} }^{1+\sqrt{3} }\cos n\pi tdt+\sin\sqrt{3}n\pi\int_{-1+\sqrt{3} }^{1+\sqrt{3} }\sin n\pi tdt\\
+&=\cos\sqrt{3}n\pi\int_{-1}^1\cos n\pi tdt+\sin\sqrt{3}n\pi\int_{-1}^1\sin n\pi tdt 
+\end{aligned}</script><p>所以说 $a_n=a_n\cos\sqrt{3}n\pi+b_n\sin\sqrt{3}n\pi$</p>
+<p>同理可得 $b_n=b_n\cos\sqrt{3}n\pi-a_n\sin\sqrt{3}n\pi$</p>
+<p>联立方程就可以得到$a_n=b_n=0$ $(n=1,2\cdots)$</p>
+<p>所以 $f(x)=\dfrac{a_0}{2}$</p>
+<h1 id="第九届"><a href="#第九届" class="headerlink" title="第九届"></a>第九届</h1><h2 id="不等式（取二次积分）"><a href="#不等式（取二次积分）" class="headerlink" title="不等式（取二次积分）"></a>不等式（取二次积分）</h2><p><strong>问题</strong></p>
+<p>设函数 $f(x)&gt;0$ 且在实轴上连续，若对任意实数t，有 $\displaystyle\int_{-\infty}^{+\infty}e^{-|t-x|}f(x)dx$ $\leqslant1$，证明：$\forall$ $a,b$，$a &lt; b$，有</p>
+<script type="math/tex; mode=display">
+\int_a^bf(x)dx\leqslant\frac{b-a+2}{2}</script><hr>
+<p><strong>分析</strong></p>
+<p>这一题我们会想到按t进行划分，从而达到去绝对值的目的，但是尝试之后发现很难继续下去了，这里我们肯定不能让积分区域从负无穷到正无穷，这就太宽泛了，因此取积分a-b，而这里运用的方法就非常巧妙</p>
+<p>两边同时积分，转化成二次积分</p>
+<script type="math/tex; mode=display">
+\int_a^b\left[\int_a^be^{-|t-x|}f(x)dx\right]dt\leqslant\int_a^b1·dx=b-a</script><p>那么这里就可以先对t积，再对x积</p>
+<script type="math/tex; mode=display">
+\int_a^b\left[\int_a^be^{-|t-x|}f(x)dx\right]dt=\int_a^bf(x)dx\int_a^be^{-|t-x|}dt</script><p>这样的好处就是消去t这个烦人的量</p>
+<p>而</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\int_a^be^{-|t-x|}dt&=\int_a^xe^{t-x}dt+\int_x^be^{x-t}dt\\
+&=-[e^{t-x}]_a^x+[e^{x-t}]_x^b\\
+&=2-e^{a-t}-e^{t-b}
+\end{aligned}</script><p>这样就可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int_a^b(2-e^{a-t}-e^{t-b})f(x)dx\\
+=\;&2\int_a^bf(x)dx-\int_a^be^{a-t}f(x)dx-\int_a^be^{t-b}f(x)dx\\
+\leqslant\;&b-a\\
+\\
+\Rightarrow&\int_a^bf(x)dx\\
+\leqslant\;&\frac{b-a}{2}+\frac12\left(\int_a^be^{a-t}f(x)dx+\int_a^be^{t-b}f(x)dx\right)\\
+\leqslant\;&\frac{b-a}{2}+1
+\end{aligned}</script><p>证毕</p>
+<p>这一题的核心就是那个二次积分，将变量 t 先积出来，然后就能发现分离出 $\displaystyle\int_a^bf(x)$ 这个量了</p>
+<h1 id="第十届"><a href="#第十届" class="headerlink" title="第十届"></a>第十届</h1><h2 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h2><p><strong>问题</strong>:</p>
+<p>设 $f(x,y)$ 在区域 $D$ 内可微，且 $\sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2+\left(\dfrac{\partial f}{\partial y}\right)^2 }\leqslant M$ ，$A(x_1,y_1)$，$B(x_2,y_2)$是 $D$ 内两点，线段$AB$ 包含在 $D$ 内，证明：$|f(x_1,y_1)-f(x_2,y_2)|$ $\leqslant$ $M|AB|$ ，其中$|AB|$表示线段$AB$的长度<br><br></p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>拿到这一题，我们很容易明确目标，如何建立偏导数和函数之间的关系呢？很显然应该需要用到微分中值定理</p>
 <p>首先我们先观察一下$M|AB|$，这里的 $|AB|$很好表示，也就是$\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$，那么问题就可以转化成证明</p>
 <script type="math/tex; mode=display">
 |f(x_1,y_1)-f(x_2,y_2)|\leqslant\sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2+\left(\dfrac{\partial f}{\partial y}\right)^2 }\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}</script><p>进一步进行转化，用柯西不等式可以得到</p>
@@ -281,7 +727,10 @@
 <script type="math/tex; mode=display">
 f(x_2,y_2)-f(x_1,y_1)=f_1'(x_1-x_2)+f_2'(y_1-y_2)</script><p>那么问题也就解决了</p>
 <hr>
-<p><strong>积分定义</strong><br>证明：对连续函数$f(x)&gt;0$，有 $\ln\int_0^1 f(x)dx\geqslant\int_0^1\ln f(x)dx$.<br><br><br></p>
+<h2 id="积分定义"><a href="#积分定义" class="headerlink" title="积分定义"></a>积分定义</h2><p><strong>问题</strong>:</p>
+<p>证明：对连续函数$f(x)&gt;0$，有 $\ln\displaystyle\int_0^1 f(x)dx\geqslant\int_0^1\ln f(x)dx$.</p>
+<hr>
+<p><strong>分析</strong>:</p>
 <p>这一题我们拿到手中会很容易想到一种方法，构造辅助函数</p>
 <script type="math/tex; mode=display">
 \psi(x)=\ln\int_0^xf(t)dt-\int_0^x\ln f(t)dt</script><p>然后求导，研究单调性</p>
@@ -299,21 +748,236 @@ f(x_2,y_2)-f(x_1,y_1)=f_1'(x_1-x_2)+f_2'(y_1-y_2)</script><p>那么问题也就�
 <script type="math/tex; mode=display">
 \frac1n\sum\limits_{i=1}^nf(x_i)\geqslant\left(\prod\limits_{i=1}^nf(x_i)\right)^{\dfrac1n}</script><p>然后两边取极限就证出来了</p>
 <hr>
-<p><strong>级数</strong><br>已知 {$a_k$}，{$b_k$} 是正数数列，且$b_{k+1}-b_k\geqslant\delta&gt;0$，$k=1,2,\cdots$，$\delta$ 为一常数，证明：若级数 $\sum\limits_{k=1}^{+∞}a_k$ 收敛，则级数 $\sum\limits_{k=1}^{+∞}\dfrac{k\sqrt[k]{(a_1a_2\cdots a_k)(b_1b_2\cdots b_k)} }{b_{k+1}b_k}$ 收敛<br><br><br></p>
-<p>分析：这一题只需要我们判断是否收敛，那么我们会想到两种审敛法，一种是比较审敛法，一种是对数审敛法</p>
+<h2 id="级数-2"><a href="#级数-2" class="headerlink" title="级数"></a>级数</h2><p><strong>问题</strong>：</p>
+<p>已知 {$a_k$}，{$b_k$} 是正数数列，且$b_{k+1}-b_k\geqslant\delta&gt;0$，$k=1,2,\cdots$，$\delta$ 为一常数，证明：若级数 $\sum\limits_{k=1}^{+∞}a_k$ 收敛，则级数 $\sum\limits_{k=1}^{+∞}\dfrac{k\sqrt[k]{(a_1a_2\cdots a_k)(b_1b_2\cdots b_k)} }{b_{k+1}b_k}$ 收敛</p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>这一题只需要我们判断是否收敛，那么我们会想到两种审敛法，一种是比较审敛法，一种是对数审敛法</p>
 <p>如果利用比较审敛法，就必然需要用到一些不等式，而且也要充分利用 $\sum\limits_{k=1}^{+∞}a_k$收敛，和 <strong>递增正数</strong> 数列 { $b_j$ }</p>
 <p>观察所要证明的级数，可以和根号联系起来的不等式，我们很容易想到均值不等式，</p>
 <script type="math/tex; mode=display">
-\sum\limits_{i=1}^ka_i\geqslant k\left(\prod_{i=1}^ka_i\right)^{\dfrac{1}{k}}</script><p>我们发现所要证明的式子有个k，那么应该就不是写两个不等式，相乘，这样就会产生 $k^2$，就不容易处理了，那么不等式如何用才能只会产生 $k$ 呢？这里我们就可以把 $a_ib_i$看成整体</p>
+\sum\limits_{i=1}^ka_i\geqslant k\left(\prod_{i=1}^ka_i\right)^{\dfrac{1}{k} }</script><p>我们发现所要证明的式子有个k，那么应该就不是写两个不等式，相乘，这样就会产生 $k^2$，就不容易处理了，那么不等式如何用才能只会产生 $k$ 呢？这里我们就可以把 $a_ib_i$看成整体</p>
 <p>也就是</p>
 <script type="math/tex; mode=display">
-\sum\limits_{i=1}^ka_ib_i\geqslant k\left(\prod_{i=1}^ka_ib_i\right)^{\dfrac{1}{k}}</script><p>此时问题就转换成证明级数$\sum\limits_{k=1}^∞\dfrac{\sum\limits_{i=1}^ka_ib_i}{b_kb_{k+1} }<br>$收敛，这样的形式肯定就比根号下要好证了，我们一看就能发现它是收敛的。</p>
+\sum\limits_{i=1}^ka_ib_i\geqslant k\left(\prod_{i=1}^ka_ib_i\right)^{\dfrac{1}{k} }</script><p>此时问题就转换成证明级数$\sum\limits_{k=1}^∞\dfrac{\sum\limits_{i=1}^ka_ib_i}{b_kb_{k+1} }<br>$收敛，这样的形式肯定就比根号下要好证了，我们一看就能发现它是收敛的。</p>
 <p>因为数列 { $b_k$ }是正项非递减数列，所以说 $\dfrac{b_i}{b_{k+1} }\leqslant1$，$i\in[1,k-1]$ 恒成立</p>
 <p>那么</p>
 <script type="math/tex; mode=display">
 \frac{\sum\limits_{i=1}^ka_ib_i}{b_kb_{k+1} }=\sum\limits_{i=1}^{k-1}a_i\left(\frac{b_i}{b_{k+1} }\right)+a_k\leqslant\sum\limits_{i=1}^{k-1}a_i+a_k=\sum\limits_{i=1}^ka_i</script><p>又因为 $\sum\limits_{k=1}^{+∞}a_k$收敛</p>
 <p>那么根据比较收敛法，所证级数收敛</p>
-
+<h1 id="第十一届"><a href="#第十一届" class="headerlink" title="第十一届"></a>第十一届</h1><h2 id="函数归零"><a href="#函数归零" class="headerlink" title="函数归零"></a>函数归零</h2><p><strong>问题</strong><br>设 $f(x)$ 在 $[0,+\infty]$ 上可微，$f(0)=0$，且存在常数 $A&gt;0$，使得 $|f’(x)|\leqslant A|f(x)|$ 在 $[0,+\infty]$ 上成立，试证明在 $(0,+\infty)$ 上有 $f(x)$ $\equiv0$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>这一题因为带绝对值，所以没法直接解微分方程，而观察其形式，如何让导数和函数挂钩呢，这样我们就会想到拉格朗日中值定理</p>
+<p>由拉格朗日中值定理我们可以得到</p>
+<script type="math/tex; mode=display">
+f(x)=xf'(\xi)\quad\xi\in(0,x)</script><p>那么代入题目所给的不等式，可得</p>
+<script type="math/tex; mode=display">
+|f'(x)|\leqslant Ax|f'(\xi)|</script><p>这里可以限制x的取值范围在 $[0,\dfrac{1}{2A}]$</p>
+<p>那么放缩可以得到</p>
+<script type="math/tex; mode=display">
+|f'(x)|\leqslant Ax|f'(\xi)|\leqslant \frac12|f'(\xi)|</script><p>这里假设$|f(x_0)|=\max\{|f(x)|\}$</p>
+<script type="math/tex; mode=display">
+|f(x_0)|=x_0|f'(\xi)|\leqslant \frac{1}{2A}|f'(\xi)|\leqslant\frac12|f(x_0)|</script><p>那么就得到了 $f(x)\equiv 0$ 其中 $x\in[0,\dfrac{1}{2A}]$</p>
+<p>下面进行解析延拓</p>
+<p>由于得到$f(\dfrac{1}{2A})=0$<br>那么就可以递推出在区间 $[\dfrac{1}{2A},\dfrac{2}{2A}]$ 上</p>
+<p>$f(x)\equiv 0$也成立</p>
+<p>一直递推可得到在所有 $x\in[\dfrac{i}{2A},\dfrac{i+1}{2A}]$ ( 其中 $i=0,1,2\cdots$ ) 上</p>
+<p>$f(x)\equiv0$都成立</p>
+<p>所以说$f(x)\equiv0$</p>
+<hr>
+<h2 id="积分转化（曲面积分）"><a href="#积分转化（曲面积分）" class="headerlink" title="积分转化（曲面积分）"></a>积分转化（曲面积分）</h2><p><strong>问题</strong><br>计算积分</p>
+<script type="math/tex; mode=display">
+I=\int_0^{2\pi}d\phi\int_0^\pi e^{\sin\theta(\cos\phi-\sin\phi)}\sin\theta d\theta</script><hr>
+<p><strong>分析</strong></p>
+<p>这道题的方法非常巧妙</p>
+<p>首先我们很难直接入手这道题，交换积分次序也并不好求，这一题用到的方法是将其转化成第一类曲面积分的形式，为什么想到转化成第一类曲面积分呢？其实它可以通过通过几何意义转化成定积分的形式，这一点我们可以参照第三届的一道曲面积分的证明题。</p>
+<p>当然这一题我们也很容易发现它形式的特殊性，进而联想到，球面的参数方程</p>
+<p>因此我们令<br>$x=\sin\theta\cos\phi$，$y=\sin\theta\sin\phi$，$z=\cos\theta$</p>
+<p>我们可以得到球面的面积微元</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+dS&=\sqrt{1+f_x^2+f_y^2}dxdy\\
+&=\sqrt{\frac{1}{z^2} }\;\frac{\partial(x,y)}{\partial(\theta.\phi)}\;d\theta d\phi\\
+&=\sin\theta d\theta d\phi
+\end{aligned}</script><p>那么原式就可以转化成</p>
+<script type="math/tex; mode=display">
+\iint\limits_{\Sigma}e^{x-y}dxdy</script><p>这里有这样一个结论</p>
+<script type="math/tex; mode=display">
+\iint\limits_{\Sigma}f(ax+by+cz)dS=2\pi\int_{-1}^1f(\sqrt{a^2+b^2+c^2}u)du</script><p>具体推导方法参照第三届曲面积分证明题</p>
+<p>那么根据公式我们很容易得到</p>
+<script type="math/tex; mode=display">
+\iint\limits_{\Sigma}e^{x-y}=2\pi\int_{-1}^1e^{\sqrt{2}u}du=\sqrt{2}\pi(e^{\sqrt{2} }-e^{-\sqrt{2} })</script><hr>
+<h2 id="极限-2"><a href="#极限-2" class="headerlink" title="极限"></a>极限</h2><p><strong>问题</strong></p>
+<p>设 $f(x)$ 是仅有正实根的多项式函数，满足</p>
+<script type="math/tex; mode=display">
+\frac{f'(x)}{f(x)}=-\sum\limits_{n=0}^{+\infty}c_n x^n</script><p>证明：$c_n&gt;0$ $(n\geq0)$，极限 $\lim\limits_{n\rightarrow+\infty}\dfrac{1}{\sqrt[n]{c_n} }$存在，且等于 $f(x)$的最小根</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>注意到这里 $f(x)$ 是仅有正实根的多项式，这一点非常特殊，我们可以直接设出$f(x)$的形式</p>
+<p>设</p>
+<script type="math/tex; mode=display">
+f(x)=A(x-a_1)^{k_1}(x-a_2)^{k_2}\cdots(x-a_m)^{k_m}</script><p>并且 $a_1,a_2,\cdots a_n$ 按从小到大排列</p>
+<p>这样设的好处是可以表示重根的情况，且更具有一般性</p>
+<p>首先由于 <strong>$f(x)$ 在分母</strong>，所以可以得到 $f(x)$的定义域为$x\neq a_1,\cdots a_n$</p>
+<p>要时刻注意函数的定义域</p>
+<p>我们就可以进行如下化简</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{f'(x)}{f(x)}&=\frac{d\ln|f(x)|}{dx}\\
+&=(\ln|A|+k_1\ln|x-a_1|\cdots k_m\ln|x-a_m|)'\\
+&=\frac{k_1}{x-a_1}+\frac{k_2}{x-a_2}+\cdots+\frac{k_m}{x-a_m}
+\end{aligned}</script><p>那现在怎么样才能和右边建立等号，并且和 $c_n$建立联系呢？</p>
+<p>其实我们可以发现右方的无穷级数其实就类似于 $\sum\limits_{n=0}^\infty x^n$ $=\dfrac{1}{1-x}$</p>
+<p>在跟左面进行比较就可以变换其形式</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{f'(x)}{f(x)}&=-\left(\;\frac{k_1}{a_1}\;\frac{1}{1-\frac{x}{a_1} }+\frac{k_2}{a_2}\;\frac{1}{1-\frac{x}{a_2} }+\cdots+\frac{k_m}{a_m}\;\frac{1}{1-\frac{x}{a_m} }\;\right)\\
+\\
+&=-\left[\;\frac{k_1}{a_1}\;\sum\limits_{n=0}^\infty\left(\frac{x}{a_1}\right)^n+\frac{k_2}{a_2}\;\sum\limits_{n=0}^\infty\left(\frac{x}{a_2}\right)^n+\cdots+\frac{k_m}{a_m}\;\sum\limits_{n=0}^\infty\left(\frac{x}{a_m}\right)^n\;\right]\\
+&=-\sum\limits_{n=0}^\infty(k_1a_1^{1-n}+k_2a_2^{1-n}+\cdots+k_ma_m^{1-n})x^n
+\end{aligned}</script><p>所以就可以得到</p>
+<script type="math/tex; mode=display">
+c_n=k_1a_1^{1-n}+k_2a_2^{1-n}+\cdots+k_ma_m^{1-n}</script><p>题目要求的是 $\lim\limits_{n\rightarrow+\infty}\dfrac{1}{\sqrt[n]{c_n} }$ 这个极限</p>
+<p>因为分数不太好研究，所以我们就来研究一下 $\lim\limits_{n\rightarrow+\infty}\sqrt[n]{c_n}$ 的值，然后取倒数即可</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim\limits_{n\rightarrow+\infty}\sqrt[n]{c_n}&=\lim\limits_{n\rightarrow+\infty}\exp(\,{\frac{\ln c_n}{n} }\,)\\
+&=\lim\limits_{n\rightarrow+\infty}\exp[\,{\frac{\ln c_n-\ln c_{n-1} }{n-(n-1)} }\,]\\
+&=\lim\limits_{n\rightarrow+\infty}\exp[\,\ln\frac{k_1a_1^{1-n}+k_2a_2^{1-n}+\cdots+k_ma_m^{1-n}}{k_1a_1^{2-n}+k_2a_2^{2-n}+\cdots+k_ma_m^{2-n}} \,]\\
+&=\frac{1}{a_1}
+\end{aligned}</script><p>这里面用了stolz定理，考试中用的话要在之前说明一下</p>
+<p>那么就得到了 $\lim\limits_{n\rightarrow+\infty}\dfrac{1}{\sqrt[n]{c_n} }=a_1$</p>
+<p>其中 $a_1$ 为 $f(x)$ 最小根</p>
+<h1 id="第十二届"><a href="#第十二届" class="headerlink" title="第十二届"></a>第十二届</h1><h2 id="积分和求和"><a href="#积分和求和" class="headerlink" title="积分和求和"></a>积分和求和</h2><p><strong>问题</strong></p>
+<p><strong>三角函数</strong><br><strong>取整函数的处理</strong></p>
+<p>证明</p>
+<script type="math/tex; mode=display">
+f(n)=\sum\limits_{m=1}^n\int_0^m\cos\frac{2\pi n[x+1]}{m}dx</script><p>等于 n 的所有因子（包括1和n本身之和），其中$[x+1]$表示不超过 $x+1$ 的最大整数，并且计算 $f(2021)$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>这里因为有取整函数，所以我们需要将积分区间进行拆分</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int_0^m\cos\frac{2\pi n[x+1]}{m}dx\\
+=&\sum_{k=1}^m\int_{k-1}^k\cos\frac{2\pi nk}{m}dx\\
+=&\sum_{k=1}^m\cos\frac{2\pi n}{m}k
+\end{aligned}</script><p>首先先看 $\dfrac{2\pi n}{m}k$ </p>
+<p>1.如果m是n的因子</p>
+<p>那么就可以得到 $\dfrac{2\pi n}{m}k$ 是 $2\pi$ 的整数倍，即可得到 $\cos\dfrac{2\pi n}{m}k=1$</p>
+<p>$<br>\therefore\;\displaystyle\int_0^m\cos\frac{2\pi n[x+1]}{m}dx=m<br>$</p>
+<p>2.如果m不是n的因子</p>
+<p>那么为了表达简便，令 $\dfrac{2\pi n}{m}=t$</p>
+<p>即可得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int_0^m\cos\frac{2\pi n[x+1]}{m}dx\\
+=&\sum_{k=1}^m\cos tk\\
+=&\cos t+\cos 2t+\cdots+\cos mt
+\end{aligned}</script><p>那么怎么化简 $\cos t+\cos 2t+\cdots+\cos mt$ 呢？</p>
+<ul>
+<li>方法一<br><strong>积化和差</strong></li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\cos t+\cos 2t+\cdots+\cos mt\\
+=&\frac{(\cos t+\cos 2t+\cdots+\cos mt)\sin t}{\sin t}\\
+=&\frac{(\sin 2t-\sin 0)+(\sin3t-\sin t)+(\sin 4t-\sin 2t)+\cdots+[\sin (m+1)t-\sin (m-1)t]}{2\sin t}\\
+=&\frac{\sin(m+1)t+\sin mt-\sin t}{2\sin t}\\
+=&\frac{\sin mt\cos t+\sin t\cos mt+\sin mt-\sin t}{2\sin t}\\
+\xlongequal{t=\frac{2\pi n}{m} }&\frac{\sin m\frac{2\pi n}{m}\cos \frac{2\pi n}{m}+\sin \frac{2\pi n}{m}\cos m\frac{2\pi n}{m}+\sin m\frac{2\pi n}{m}-\sin \frac{2\pi n}{m} }{2\sin \frac{2\pi n}{m} }\\
+=&0
+\end{aligned}</script><ul>
+<li>方法二<br><strong>欧拉公式</strong></li>
+</ul>
+<p>利用 $e^{ix}=\cos x+i\sin x$</p>
+<p>可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+e^{it}+e^{2it}+\cdots+e^{mit}&=(\cos t+\cos2t+\cdots+\cos mt)+i(\sin t+\sin2t+\cdots+\sin mt)\\
+&=\frac{e^{it}(1-e^{mit})}{1-e^{it} }
+\end{aligned}</script><p>又因为 $1-e^{it}=1-\cos x-i\sin x$</p>
+<p>那么</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&[(\cos t+\cos2t+\cdots+\cos mt)+i(\sin t+\sin2t+\cdots+\sin mt)](1-\cos x-i\sin x)\\
+=&e^{it}(1-e^{mit})\\
+=&(\cos t+i\sin t)(1-\cos mt-i\sin mt)
+\end{aligned}</script><p>然后实部虚部进行比对解方程得到</p>
+<p>不过还是推荐 <strong>第一种方法</strong></p>
+<p>这里面我们就得到了如果m不是n的因子，那么$f(n)=0$</p>
+<p>那么也就是说不是其因子的数都是零，使其因子的数其值就等于因子本身</p>
+<p>所以也就证明出来了</p>
+<p>下面又让我们求 $f(2021)$的值</p>
+<p>这就比较无聊了，我们需要找出它的因子：1,43,47,2021</p>
+<p>所以说$f(2021)=1+41+47+2021=2112$</p>
+<p>这题其实就是套了一个积分的壳子，本质其实是三角函数的一些运算</p>
+<hr>
+<h2 id="级数-3"><a href="#级数-3" class="headerlink" title="级数"></a>级数</h2><p><strong>数列极限</strong></p>
+<p><strong>问题</strong></p>
+<p>设</p>
+<script type="math/tex; mode=display">
+u_n=\int_0^1\frac{dt}{\left(1+t^4\right)^n}\quad(n\geqslant 1)</script><p>(1) 证明数列 {$u_n$} 收敛，并求极限 $\lim\limits_{n\rightarrow\infty}u_n$</p>
+<p>(2) 证明级数 $\sum\limits_{n=1}^\infty(-1)^nu_n$ 条件收敛</p>
+<p>(3) 证明当 $p\geqslant 1$ 时，级数 $\sum\limits_{n=1}^\infty \dfrac{u_n}{n^p}$收敛，并求级数 $\sum\limits_{n=1}^\infty\dfrac{u_n}{n}$ 的和</p>
+<p>第一小问并不难，因为我们可以很容易发现它的极限应该是趋向于0的，所亦可以用极限定义来解决</p>
+<p>$\forall \epsilon&gt;0$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+u_n=\int_0^1\frac{dt}{(1+t^4)^n}
+&=\int_0^{\frac{\epsilon}{2} }\frac{dt}{(1+t^4)^n}+\int_{\frac{\epsilon}{2} }^1\frac{dt}{(1+t^4)^n}\\
+&\leqslant\frac{\epsilon}{2}+\int_{\frac{\epsilon}{2} }^1\frac{dt}{[1+(\frac{\epsilon}{2})^4]^n}\\
+&\leqslant\frac{\epsilon}{2}+\frac{1-\dfrac{\epsilon}{2} }{[1+(\frac{\epsilon}{2})^4]^n}
+\end{aligned}</script><p>对于 $\exists N\in N^*$ ，当 $x&gt;N$ 时，有</p>
+<script type="math/tex; mode=display">
+\frac{1-\dfrac{\epsilon}{2} }{[1+(\frac{\epsilon}{2})^4]^n}<\frac{\epsilon}{2}</script><p>即 $u_n&lt;\epsilon$</p>
+<p>所以说就得到了 $\lim\limits_{n\rightarrow\infty}u_n=0$</p>
+<p>第二问</p>
+<p>首先说明它单调递减，很简单就不写了，然后再又因为 $\lim\limits_{n\rightarrow \infty} u_n=0$</p>
+<p>所以现在只要证明 $\sum\limits_{n=0}^\infty u_n$ 发散就行</p>
+<p>像这种题目一般都是用比较审敛法</p>
+<p>这一题也很容得到放缩方法</p>
+<script type="math/tex; mode=display">
+u_n=\int_0^1\frac{dt}{(1+t^4)^n}\geqslant \int_0^1\frac{dt}{(1+t)^n}=\frac{1}{n-1}(1-2^{1-n})</script><p>$\sum\limits_{n=2}^\infty\dfrac{1}{n-1}$ 发散，而级数$\sum\limits_{n=2}^\infty\dfrac{1-2^{1-n}}{n-1}$ 收敛，（可以用比值审敛法得出）</p>
+<p>那么就得到了 $\sum\limits_{n=2}^\infty\dfrac{1}{n-1}(1-2^{1-n})$ 发散</p>
+<p>所以说原级数条件收敛</p>
+<p>第三问</p>
+<p>这里只需要考虑p=1时是否收敛就行，当p&gt;1时，可以用比较审敛法得出.</p>
+<p>注意到这一题后面还有求级数的和，那么就不能简单的放缩了，得具体一点。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+u_n&=\int_0^1\frac{dt}{(1+t^4)^n}\\
+&=\int_0^1(1+t^4)^{1-n}dt-\frac14\int_0^1\frac{t}{(1+t^4)^n}d(t^4+1)\\
+&=\frac1n\int_0^1(1+t^4)^{1-n}dt-\frac{1}{4n}\int_0^1t\;d(t^4+1)^{1-n}\\
+&=\int_0^1(1+t^4)^{1-n}dt-\frac{1}{4(n-1)}\left[t(t^4+1)^{1-n}\bigg|_0^1-\int_0^1(1+t^4)^{1-n}dt\right]\\
+&=u_{n-1}+\frac{1}{4(n-1)}[2^{1-n}-u_{n-1}]
+\end{aligned}</script><p>不过这样似乎很难看出有什么递推关系，因为这种题最好能出现两数之差的形式，这样可以有利于求和</p>
+<p>稍微整理一下</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&u_{n-1}=4(n-1)(u_{n-1}-u_n)+2^{1-n}\\
+\Rightarrow&u_n=4n(u_n-u_{n+1})+2^{-n}
+\end{aligned}</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum\limits_{n=1}^\infty\frac{u_n}{n}&=\sum\limits_{n=1}^\infty\frac{1}{ n\;2^{n} }+4\sum\limits_{n=1}^\infty(u_n-u_{n+1})\\
+&=\sum\limits_{n=1}^\infty\frac{1}{ n\;2^{n} }+4u_1
+\end{aligned}</script><p>那么下面只要求出 $\sum\limits_{n=1}^\infty\dfrac{1}{ n\;2^{n} }$ 即可</p>
+<p>易知</p>
+<script type="math/tex; mode=display">
+\int\frac{1}{1-x}dx=-\ln(1-x)=\sum\limits_{n=0}^\infty\frac{1}{n+1}x^{n+1}</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\sum\limits_{n=1}^\infty\frac{1}{ n\;2^{n} }=-\ln\frac12=\ln2</script><p>所以说级数 $\sum\limits_{n=1}^\infty \dfrac{u_n}{n^p}$</p>
+<p>且它的和为 $\ln2+4u_1$</p>
+<p>其中</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+u_1&=\int_0^1\frac{1}{1+t^4}dt\\
+&=\frac12\left[\int_0^1\frac{1+t^2}{1+t^4}dt+\int_0^1\frac{1-t^2}{1+t^4}dt\right]\\
+&=\frac12\left[\int_0^1\frac{d(t-\frac1t)}{(t-\frac1t)^2+2}-\int_0^1\frac{d(t+\frac1t)}{(t+\frac1t)^2-2}\right]\\
+&=\frac{\sqrt{2} }{4}\left[\arctan \frac{\sqrt{2} }{2}(t-\frac1t)-\frac12\ln\frac{(t+\frac{1}{t})-\sqrt{2} }{(t+\frac1t)+\sqrt{2} }\right]_0^1\\
+&=\frac{\sqrt{2} }{8}[\;\pi+2\ln(1+\sqrt{2})\;]
+\end{aligned}</script>
     </div>
 
     
@@ -394,7 +1058,7 @@ f(x_2,y_2)-f(x_1,y_1)=f_1'(x_1-x_2)+f_2'(y_1-y_2)</script><p>那么问题也就�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E5%B1%8A"><span class="nav-number">1.</span> <span class="nav-text">第十届</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%B1%8A"><span class="nav-number">1.</span> <span class="nav-text">第一届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E6%9E%97%E5%85%AC%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">格林公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%AF%E5%88%86%E5%AE%A1%E6%95%9B%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">积分审敛法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E5%B1%8A"><span class="nav-number">2.</span> <span class="nav-text">第二届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E6%8A%80%E5%B7%A7"><span class="nav-number">2.1.</span> <span class="nav-text">极限技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text">级数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E5%B1%8A"><span class="nav-number">3.</span> <span class="nav-text">第三届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#stolz%E5%AE%9A%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text">stolz定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86%E7%9A%84%E5%87%A0%E4%BD%95%E7%90%86%E8%A7%A3"><span class="nav-number">3.2.</span> <span class="nav-text">曲面积分的几何理解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E5%B1%8A"><span class="nav-number">4.</span> <span class="nav-text">第四届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90"><span class="nav-number">4.1.</span> <span class="nav-text">极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86"><span class="nav-number">4.2.</span> <span class="nav-text">反常积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0-1"><span class="nav-number">4.3.</span> <span class="nav-text">级数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E5%B1%8A"><span class="nav-number">5.</span> <span class="nav-text">第五届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%BF%E4%B9%89%E7%A7%AF%E5%88%86%E6%95%9B%E6%95%A3%E6%80%A7"><span class="nav-number">5.1.</span> <span class="nav-text">广义积分敛散性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E7%AD%89%E5%BC%8F-%E5%90%AB%E4%B8%89%E8%A7%92"><span class="nav-number">5.2.</span> <span class="nav-text">不等式(含三角)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E5%B1%8A"><span class="nav-number">6.</span> <span class="nav-text">第六届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90-1"><span class="nav-number">6.1.</span> <span class="nav-text">极限</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E5%B1%8A"><span class="nav-number">7.</span> <span class="nav-text">第七届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E8%AF%81"><span class="nav-number">7.1.</span> <span class="nav-text">反证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%85%83%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F"><span class="nav-number">7.2.</span> <span class="nav-text">二元泰勒公式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E5%B1%8A"><span class="nav-number">8.</span> <span class="nav-text">第八届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E4%B8%AD%E5%80%BC"><span class="nav-number">8.1.</span> <span class="nav-text">双中值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="nav-number">8.2.</span> <span class="nav-text">傅里叶级数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E5%B1%8A"><span class="nav-number">9.</span> <span class="nav-text">第九届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E7%AD%89%E5%BC%8F%EF%BC%88%E5%8F%96%E4%BA%8C%E6%AC%A1%E7%A7%AF%E5%88%86%EF%BC%89"><span class="nav-number">9.1.</span> <span class="nav-text">不等式（取二次积分）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E5%B1%8A"><span class="nav-number">10.</span> <span class="nav-text">第十届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="nav-number">10.1.</span> <span class="nav-text">微分中值定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%AF%E5%88%86%E5%AE%9A%E4%B9%89"><span class="nav-number">10.2.</span> <span class="nav-text">积分定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0-2"><span class="nav-number">10.3.</span> <span class="nav-text">级数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E5%B1%8A"><span class="nav-number">11.</span> <span class="nav-text">第十一届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BD%92%E9%9B%B6"><span class="nav-number">11.1.</span> <span class="nav-text">函数归零</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%AF%E5%88%86%E8%BD%AC%E5%8C%96%EF%BC%88%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86%EF%BC%89"><span class="nav-number">11.2.</span> <span class="nav-text">积分转化（曲面积分）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90-2"><span class="nav-number">11.3.</span> <span class="nav-text">极限</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%B1%8A"><span class="nav-number">12.</span> <span class="nav-text">第十二届</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%AF%E5%88%86%E5%92%8C%E6%B1%82%E5%92%8C"><span class="nav-number">12.1.</span> <span class="nav-text">积分和求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0-3"><span class="nav-number">12.2.</span> <span class="nav-text">级数</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -479,12 +1143,12 @@ f(x_2,y_2)-f(x_1,y_1)=f_1'(x_1-x_2)+f_2'(y_1-y_2)</script><p>那么问题也就�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">155k</span>
+    <span title="站点总字数">159k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:20</span>
+    <span title="站点阅读时长">2:24</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
@@ -648,6 +1312,59 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 

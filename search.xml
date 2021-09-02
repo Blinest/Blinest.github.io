@@ -400,6 +400,27 @@
       </tags>
   </entry>
   <entry>
+    <title>0. 知识储备</title>
+    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
+<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
+<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
+<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
+<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
+<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
+<ul>
+<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
+</ul>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.CSS选择器</title>
     <url>/2021/07/20/1-CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>分类</strong>： <strong>基础选择器</strong> 和 <strong>复合选择器</strong> </p>
@@ -549,27 +570,6 @@
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>0. 知识储备</title>
-    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
-<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
-<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
-<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
-<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
-<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
-<ul>
-<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
-</ul>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -4178,93 +4178,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>4.CSS的元素显示模式</title>
-    <url>/2021/07/20/4-CSS%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的元素显示模式"><a href="#CSS-的元素显示模式" class="headerlink" title="CSS 的元素显示模式"></a>CSS 的元素显示模式</h1><blockquote>
-<p>元素显示模式就是元素（标签）以什么方式进行显示，比如&lt;div&gt;自己占一行，比如一行可以放多个&lt;span&gt;</p>
-</blockquote>
-<p>HTML元素一般分为 <strong>块元素</strong> 和 <strong>行内元素</strong></p>
-<h2 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h2><p>常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;li&gt;等，其中&lt;div&gt;标签式最典型的块元素</p>
-<p>块级元素特点：</p>
-<p>1.独占一行</p>
-<p>2.高度，宽度，外边距以及内边距都可以控制。</p>
-<p>3.宽度默认是容器（父级宽度）的100%。</p>
-<p>4.是一个容器及盒子，里面可以放行内或者块级元素。</p>
-<p><strong>注意:</strong></p>
-<ul>
-<li>文字类元素内不能使用块级元素</li>
-<li>&lt;p&gt;标签主要用于存放文字，因此&lt;p&gt;里面不能放块级元素，特别是不能放&lt;div&gt;</li>
-<li>同理，&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签，里面也不能放其他块级元素</li>
-</ul>
-<h2 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h2><p>常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等，其中&lt;span&gt;标签是最典型的行内元素。</p>
-<p>行内元素的特点：</p>
-<p>1.相邻行内元素在一行上，一行可以显示多个。</p>
-<p>2.高、宽直接设置是无效的</p>
-<p>3.默认宽度就是它本身内容的宽度。</p>
-<p>4.行内元素只能容纳文本或其它行内元素。</p>
-<p><strong>注意:</strong></p>
-<ul>
-<li>链接里面不能再放链接</li>
-<li>特殊情况&lt;a&gt;里面可以放块级元素，但是给&lt;a&gt;转换一下块级模式最安全</li>
-</ul>
-<h2 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h2><p>在行内元素中有几个特殊的标签 —— &lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;，他们同时具有块元素和行内元素的特点，有些资料称它们为行内块元素。</p>
-<p>行内块元素的特点：</p>
-<p>1.和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙，一行可以显示多个（行内元素特点）</p>
-<p>2.默认宽度就是它本身内容的宽度（行内元素的特点）</p>
-<p>3.高度、行高、外边距以及内边距都可以控制（块级元素特点）</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">元素模式</th>
-<th style="text-align:left">元素排列</th>
-<th style="text-align:left">设置样式</th>
-<th style="text-align:left">默认宽度</th>
-<th style="text-align:left">包含</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">块级元素</td>
-<td style="text-align:left">一行只能放一个块级元素</td>
-<td style="text-align:left">可以设置宽度高度</td>
-<td style="text-align:left">容器的100%</td>
-<td style="text-align:left">容器可以包含任何标签</td>
-</tr>
-<tr>
-<td style="text-align:left">行内元素</td>
-<td style="text-align:left">一行可以放多个行内元素</td>
-<td style="text-align:left">不可以设置宽度高度</td>
-<td style="text-align:left">它自身内容的宽度</td>
-<td style="text-align:left">容纳文本或者其他行内元素</td>
-</tr>
-<tr>
-<td style="text-align:left">行内块元素</td>
-<td style="text-align:left">一行放多个行内块元素</td>
-<td style="text-align:left">可以设置宽度高度</td>
-<td style="text-align:left">它本身内容的宽度</td>
-<td style="text-align:left"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="元素显示模式转换"><a href="#元素显示模式转换" class="headerlink" title="元素显示模式转换"></a>元素显示模式转换</h2><p>特殊情况下，我们需要元素模式的转换，简单理解：一个模式的元素需要另外一种模式的特性，比如想要增加链接&lt;a&gt;的触发范围</p>
-<ul>
-<li>转换为块元素：display:block;</li>
-<li>转换为行内元素： display:inline;</li>
-<li>转换为行内块元素： display:inline-block;</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>3.方程组</title>
     <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><ul>
@@ -4310,256 +4223,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4.索引补充</title>
-    <url>/2021/07/04/4-%E7%B4%A2%E5%BC%95%E8%A1%A5%E5%85%85/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="基本方式"><a href="#基本方式" class="headerlink" title="基本方式"></a>基本方式</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>5
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">2</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([2, 3, 4])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">b = np.arange(<span class="number">24</span>).reshape(<span class="number">2</span>,<span class="number">2</span>,<span class="number">6</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
-<pre><code>array([[[ 0,  1,  2,  3,  4,  5],
-        [ 6,  7,  8,  9, 10, 11]],
-
-       [[12, 13, 14, 15, 16, 17],
-        [18, 19, 20, 21, 22, 23]]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">b[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3,  4,  5],
-       [ 6,  7,  8,  9, 10, 11]])
-</code></pre><h1 id="切片索引"><a href="#切片索引" class="headerlink" title="切片索引"></a>切片索引</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">arr2d</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>] <span class="comment"># 表示选取前两行</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 2, 3],
-       [4, 5, 6, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[<span class="number">1</span>:] <span class="comment"># 表示选取第1行之后的所有行</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>,<span class="number">1</span>:] <span class="comment"># 两个结合起来使用，第一个选取行，第二个选取列</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [5, 6, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:,<span class="number">2</span>] <span class="comment"># 只有冒号表示整个轴</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([ 2,  6, 10])
-</code></pre><h1 id="布尔型索引"><a href="#布尔型索引" class="headerlink" title="布尔型索引"></a>布尔型索引</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = np.array([<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;wang&quot;</span>])</span><br><span class="line">data =  np.arange(<span class="number">21</span>).reshape(<span class="number">7</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name</span><br></pre></td></tr></table></figure>
-<pre><code>array([&#39;liu&#39;, &#39;wang&#39;, &#39;zhang&#39;, &#39;liu&#39;, &#39;zhang&#39;, &#39;wang&#39;, &#39;wang&#39;],
-      dtype=&#39;&lt;U5&#39;)
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  4,  5],
-       [ 6,  7,  8],
-       [ 9, 10, 11],
-       [12, 13, 14],
-       [15, 16, 17],
-       [18, 19, 20]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>,:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1],
-       [ 9, 10]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[(name==<span class="string">&#x27;liu&#x27;</span>)|(name==<span class="string">&#x27;wang&#x27;</span>)]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  4,  5],
-       [ 9, 10, 11],
-       [15, 16, 17],
-       [18, 19, 20]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[data &lt; <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-</code></pre><p>也就是说布尔索引会把括号里面为真的按顺序返回</p>
-<h1 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h1><blockquote>
-<p>利用整数数组进行索引</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.empty((<span class="number">8</span>,<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8</span>):</span><br><span class="line">    arr[i] = i</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0., 0., 0., 0.],
-       [1., 1., 1., 1.],
-       [2., 2., 2., 2.],
-       [3., 3., 3., 3.],
-       [4., 4., 4., 4.],
-       [5., 5., 5., 5.],
-       [6., 6., 6., 6.],
-       [7., 7., 7., 7.]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr[[<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[2., 2., 2., 2.],
-       [4., 4., 4., 4.],
-       [5., 5., 5., 5.],
-       [1., 1., 1., 1.]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 2, 11,  5, 10])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]][:,[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 5,  6],
-       [ 9, 10]])
-</code></pre><p>花式索引和切片不一样，它总是复制到新数组中</p>
-]]></content>
-      <categories>
-        <category>numpy</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4.图</title>
-    <url>/2021/07/30/4-%E5%9B%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p><strong>完全图</strong>：任意两个点都有一条边相连</p>
-<ul>
-<li>无向完全图：没有方向</li>
-<li>有向完全图：有方向<span id="more"></span>
-<img style="transform:scale(0.5);" src="/2021/07/30/4-%E5%9B%BE/pic1.png"></li>
-</ul>
-<p><strong>稀疏图</strong>：有很少边或弧的图</p>
-<p><strong>稠密图</strong>：有较多边或弧的图</p>
-<p><strong>邻接</strong>：有边/弧相连的两个顶点之间的关系</p>
-<ul>
-<li>存在 $(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点</li>
-<li>存在 &lt;$v_i,v_j$&gt;，则称 $v_i$ <strong>邻接到</strong> $v_j$ ，$v_j$ <strong>邻接于</strong> $v_i$</li>
-</ul>
-<p><strong>关联</strong>：边/弧与顶点之间的关系</p>
-<ul>
-<li>存在 $(v_i,v_j)$ /&lt;$v_i,v_j$&gt; ，则称该边/弧关联于 $v_i$ 和 $v_j$</li>
-</ul>
-<p><strong>顶点的度</strong>：与该顶点相关联的边的数目，记为TD(v)</p>
-<ul>
-<li>在有向图中，顶点的度等于该顶点的 <strong>入度</strong> 和 <strong>出度</strong> 之和<ul>
-<li>顶点v的 <strong>入度</strong> 是 <strong>以v为终点</strong> 的有向边的条数，记作ID(v)</li>
-<li>顶点v的 <strong>出度</strong> 是以 <strong>v为始点</strong> 的有向边的条数，记作OD(v)</li>
-</ul>
-</li>
-</ul>
-<p><strong>路径</strong>：接续的边构成的顶点序列</p>
-<p><strong>路径长度</strong>：路径上边或弧的数目/权值之和</p>
-<p><strong>回路（环）</strong>：第一个顶点和最后一个顶点相同的路径</p>
-<p><strong>简单路径</strong>：除路径起点和终点可以相同外，其余顶点均不相同的路径</p>
-<p><strong>简单回路</strong>：除路径起点和终点相同外，其余顶点均不相同</p>
-<p><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic2.png"></p>
-<p><strong>连通图（强连通图）</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic3.png"></p>
-<p><strong>权</strong>：图中边或弧所具有的相关数称为 <strong>权</strong>。表明从一个顶点到另一个顶点的距离或耗费</p>
-<p><strong>网</strong>：边/弧带权的图</p>
-<p><strong>子图</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic4.png"></p>
-<p><strong>连通分量（强连通分量）</strong></p>
-<ul>
-<li>无向图G的 <strong>极大连通子图</strong> 称为G的 <strong>连通分量</strong><br>极大连通子图：该子图是G连通子图，将G的任何不在该子图中的顶点加入，子图不再连通</li>
-<li>有向图G的极大强连通子图称为G的强连通分量<br>极大强连通子图：该子图是G的强连通子图，将D的任何不在该子图中的顶点加入，子图不再是强连通的</li>
-</ul>
-<p><strong>极小连通子图</strong>：该子图是G的连通子图，在该子图中删除任何一条边，子图不再连通</p>
-<p><strong>生成树</strong>：包含无向图G所有顶点的极小连通子图</p>
-<p><strong>生成森林</strong>：对非连通图，由各个连通分量的生成树的集合<br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic5.png"></p>
-<h2 id="图的存储结构"><a href="#图的存储结构" class="headerlink" title="图的存储结构"></a>图的存储结构</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p>1、数组（邻接矩阵）表示法</p>
-<ul>
-<li>建立一个 <strong>顶点表</strong>（记录各个顶点信息）和一个 <strong>邻接矩阵</strong>（表示各个顶点之间关系）</li>
-</ul>
-<p><strong>无向图的邻接矩阵表示法：</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic6.png"></p>
-<p><strong>有向图的邻接矩阵表示法：</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic7.png"></p>
-<p><strong>行为出度，列为入度</strong></p>
-<p><strong>网（即有权图）的邻接矩阵表示法</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic8.png"></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MVNum 100 <span class="comment">//最大顶点数</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VerTexType;<span class="comment">//设顶点的数据类型为字符型 </span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ArcType; <span class="comment">//假设边的权值类型为整型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    VerTexType vexs[MVNum]; <span class="comment">//顶点表</span></span><br><span class="line">    ArcType arcs[MVNum][MVNum]; <span class="comment">//邻接矩阵</span></span><br><span class="line">    <span class="keyword">int</span> vexnum,arcnum; <span class="comment">//图的当前点数和边数</span></span><br><span class="line">&#125;AMGragh;<span class="comment">//Adjacency Matrix Graph</span></span><br></pre></td></tr></table></figure>
-<p>2、采用邻接矩阵表示法 <strong>创建无向网</strong></p>
-<ul>
-<li>输入总顶点数和总边数</li>
-<li>依次输入点的信息存入顶点表中</li>
-<li>初始化邻接矩阵，使每个权值初始化为极大值</li>
-<li>构造邻接矩阵</li>
-</ul>
-<p>邻接矩阵优点：</p>
-<ul>
-<li>直观、简单、好理解</li>
-<li>方便检查任意一对顶点间是否存在边</li>
-<li>方便计算任一顶点的”度”</li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li>不便于增加或删除顶点</li>
-<li>浪费空间—-存稀疏图（点很多而且边很少）有大量无效元素<ul>
-<li>当然对稠密图（特别是完全图）划算</li>
-</ul>
-</li>
-<li>浪费时间—-统计稀疏图中一共有多少条边</li>
-</ul>
-<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>1、邻接表表示法（链式）<br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic9.png"></p>
-<ul>
-<li>顶点：<ul>
-<li>按编号顺序将顶点数据存储在 <strong>一维数组</strong> 中</li>
-</ul>
-</li>
-<li>关联同一顶点的边（以顶点为尾的弧）：<ul>
-<li>用线性 <strong>链表</strong> 存储</li>
-</ul>
-</li>
-</ul>
-<p><strong>顶点结点结构</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">VNode</span>&#123;</span></span><br><span class="line">    VerTexType data;<span class="comment">//顶点信息</span></span><br><span class="line">    ArcNode *firstarc;<span class="comment">//指向第一条依附该顶点的边的指针</span></span><br><span class="line">&#125;VNode,AdjList[MVNum];<span class="comment">//AdjList表示邻接表类型</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>弧（边）的结点结构</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MVNum 100 <span class="comment">//最大顶点数</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcNode</span>&#123;</span><span class="comment">//边结点</span></span><br><span class="line">    <span class="keyword">int</span> adjvex;<span class="comment">//该边所指向的顶点的位置</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ArcNode</span> * <span class="title">nextarc</span>;</span><span class="comment">//指向下一条边的指针</span></span><br><span class="line">    OtherInfo info;<span class="comment">//和边相关的信息</span></span><br><span class="line">&#125;ArcNode;</span><br></pre></td></tr></table></figure></p>
-<p><strong>图的结构定义</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    AdjList vertices;<span class="comment">//vertices--vertex的复数</span></span><br><span class="line">    <span class="keyword">int</span> vexnum,arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">&#125;ALGraph</span><br></pre></td></tr></table></figure></p>
-<p>2、采用邻接表法创建无向网</p>
-<p>算法思想</p>
-<ul>
-<li>输入总顶点数和总边数</li>
-<li>建立顶点表<ul>
-<li>依次输入点的信息存入顶点表中</li>
-<li>使每个表头结点的指针域初始化为NULL</li>
-</ul>
-</li>
-<li><p>创建邻接表</p>
-<ul>
-<li>依次输入每条边依附的两个顶点</li>
-<li>确定两个顶点的序号i和j，建立边结点</li>
-<li>将此边结点分别插入到$v_i$和$v_j$对应的两个边链表的头部</li>
-</ul>
-</li>
-<li><p>方便找任一顶点的所有“邻接点”</p>
-</li>
-<li>节约稀疏图的空间<ul>
-<li>需要N个头指针+2E个结点（每个结点至少两个域）</li>
-</ul>
-</li>
-<li>计算任一顶点的“度”<ul>
-<li>对无向图：是</li>
-<li>对有向图：只能计算“出度”；需要构造“逆邻接表”来计算“入度”</li>
-</ul>
-</li>
-</ul>
-<h2 id="图的遍历"><a href="#图的遍历" class="headerlink" title="图的遍历"></a>图的遍历</h2><ul>
-<li>深度优先搜索（Depth_First Search—-DFS）</li>
-<li>广度优先搜索（Breadth_First Search—-BFS）</li>
-</ul>
-<h3 id="深度优先遍历的算法实现"><a href="#深度优先遍历的算法实现" class="headerlink" title="深度优先遍历的算法实现"></a>深度优先遍历的算法实现</h3><p>邻接矩阵表示的无向图深度遍历实现：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(AMGraph G,<span class="keyword">int</span> V)</span></span>&#123;<span class="comment">//图G为邻接矩阵类型</span></span><br><span class="line">    cout&lt;&lt;v;visited[v]=<span class="literal">true</span>;<span class="comment">//访问第v个顶点</span></span><br><span class="line">    <span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)<span class="comment">//依次检查邻接矩阵v所在的行</span></span><br><span class="line">        <span class="keyword">if</span>((G.arcs[v][w]!=<span class="number">0</span>)&amp;&amp;(!visited[w]))</span><br><span class="line">            <span class="built_in">DFS</span>(G,w);</span><br><span class="line">        <span class="comment">//w是v的邻接点，如果w未访问，则递归调用DFS</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="广度优先遍历算法实现"><a href="#广度优先遍历算法实现" class="headerlink" title="广度优先遍历算法实现"></a>广度优先遍历算法实现</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">(Graph G,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    cout&lt;&lt;v;visted[v]=<span class="literal">true</span>;<span class="comment">//访问第v个顶点</span></span><br><span class="line">    <span class="built_in">InitQueue</span>(Q);<span class="comment">//辅助队列Q初始化，置空</span></span><br><span class="line">    <span class="built_in">EnQueue</span>(Q,v);<span class="comment">//v进队</span></span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">QueueEmpty</span>(Q))&#123;<span class="comment">//队列非空</span></span><br><span class="line">        <span class="built_in">DeQueue</span>(Q,u);<span class="comment">//队头元素出队并置为u</span></span><br><span class="line">        <span class="keyword">for</span>(w=<span class="built_in">FirstAdjVex</span>(G,u);w&gt;=<span class="number">0</span>;w=<span class="built_in">NextAdjVex</span>(G,u,w))</span><br><span class="line">        <span class="keyword">if</span>(!visited[w])&#123;<span class="comment">//w为u的尚未访问的邻接顶点</span></span><br><span class="line">            cout&lt;&lt;w;visted[w]=<span class="literal">true</span>; <span class="built_in">EnQueue</span>(Q,w);<span class="comment">//w进队</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2><p><strong>1、普利姆（prim）算法</strong><br>适应范围：稠密图<br>时间复杂度$O(n^2)$<br><strong>2、克鲁斯卡尔(Kruskal)算法</strong><br>适应范围：稀疏图<br>时间复杂度：$O(e\log e)$</p>
-<h2 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h2><ol>
-<li>单源最短路径—用 Dijkstra(迪杰斯特拉)算法<ul>
-<li>初始化：先找出从源点 $v_0$ 到各终点 $v_k$ 的直达路径($v_0$,$v_k$)，即通过一条弧到达的路径</li>
-<li>选择：从这些路径中找出一条长度最短的路径($v_0$ , u)</li>
-<li>更新：然后对其余各条路径进行适当调整：<ul>
-<li>若在途中存在弧（u , $v_k$），且($v_0$ , u)+(u , $v_k$) &lt; ($v_0$ , $v_k$)，则以路径则以路径($v_0$ , u , $v_k$)代替($v_0$ , $v_k$)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<ol>
-<li>所有顶点间的最短路径—用 Floyd(弗洛伊德)算法<br>s</li>
-</ol>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -4991,6 +4654,107 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>4.索引补充</title>
+    <url>/2021/07/04/4-%E7%B4%A2%E5%BC%95%E8%A1%A5%E5%85%85/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="基本方式"><a href="#基本方式" class="headerlink" title="基本方式"></a>基本方式</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>5
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">2</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([2, 3, 4])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">b = np.arange(<span class="number">24</span>).reshape(<span class="number">2</span>,<span class="number">2</span>,<span class="number">6</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<pre><code>array([[[ 0,  1,  2,  3,  4,  5],
+        [ 6,  7,  8,  9, 10, 11]],
+
+       [[12, 13, 14, 15, 16, 17],
+        [18, 19, 20, 21, 22, 23]]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">b[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3,  4,  5],
+       [ 6,  7,  8,  9, 10, 11]])
+</code></pre><h1 id="切片索引"><a href="#切片索引" class="headerlink" title="切片索引"></a>切片索引</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">arr2d</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>] <span class="comment"># 表示选取前两行</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2, 3],
+       [4, 5, 6, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[<span class="number">1</span>:] <span class="comment"># 表示选取第1行之后的所有行</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>,<span class="number">1</span>:] <span class="comment"># 两个结合起来使用，第一个选取行，第二个选取列</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [5, 6, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:,<span class="number">2</span>] <span class="comment"># 只有冒号表示整个轴</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([ 2,  6, 10])
+</code></pre><h1 id="布尔型索引"><a href="#布尔型索引" class="headerlink" title="布尔型索引"></a>布尔型索引</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = np.array([<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;wang&quot;</span>])</span><br><span class="line">data =  np.arange(<span class="number">21</span>).reshape(<span class="number">7</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name</span><br></pre></td></tr></table></figure>
+<pre><code>array([&#39;liu&#39;, &#39;wang&#39;, &#39;zhang&#39;, &#39;liu&#39;, &#39;zhang&#39;, &#39;wang&#39;, &#39;wang&#39;],
+      dtype=&#39;&lt;U5&#39;)
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 6,  7,  8],
+       [ 9, 10, 11],
+       [12, 13, 14],
+       [15, 16, 17],
+       [18, 19, 20]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>,:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1],
+       [ 9, 10]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[(name==<span class="string">&#x27;liu&#x27;</span>)|(name==<span class="string">&#x27;wang&#x27;</span>)]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 9, 10, 11],
+       [15, 16, 17],
+       [18, 19, 20]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[data &lt; <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</code></pre><p>也就是说布尔索引会把括号里面为真的按顺序返回</p>
+<h1 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h1><blockquote>
+<p>利用整数数组进行索引</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.empty((<span class="number">8</span>,<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8</span>):</span><br><span class="line">    arr[i] = i</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0., 0., 0., 0.],
+       [1., 1., 1., 1.],
+       [2., 2., 2., 2.],
+       [3., 3., 3., 3.],
+       [4., 4., 4., 4.],
+       [5., 5., 5., 5.],
+       [6., 6., 6., 6.],
+       [7., 7., 7., 7.]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr[[<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[2., 2., 2., 2.],
+       [4., 4., 4., 4.],
+       [5., 5., 5., 5.],
+       [1., 1., 1., 1.]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 2, 11,  5, 10])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]][:,[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 5,  6],
+       [ 9, 10]])
+</code></pre><p>花式索引和切片不一样，它总是复制到新数组中</p>
+]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5.通用函数</title>
     <url>/2021/07/04/5-%E9%80%9A%E7%94%A8%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>通用函数（即ufunc）是一种对ndarray中的数据执行元素级运算的函数。</p>
@@ -5134,39 +4898,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>5.向量空间</title>
-    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
-<p>{n维向量；+，数乘}</p>
-</blockquote>
-<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
-<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
-<p>则称W是n维向量空间的子空间</p>
-<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
-<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
-<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
-<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
-<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
-<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
-<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
-<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
-<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
-<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
-<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
-<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
-<hr>
-<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
-<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>6.CSS浮动</title>
     <url>/2021/07/20/6-CSS%E6%B5%AE%E5%8A%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div style="width: 200px;height: 200px;"><div style="float: left;width: 100px;height: 100px;background: rgba(0,0,0,.1);"></div><div style="float: right;width: 100px;height: 100px;background: rgba(0,0,0,.3);"></div><div style="float: left;width: 100px;height: 100px;background: rgba(0,0,0,.5);"></div><div style="float: right;width: 100px;height: 100px;background: rgba(0,0,0,.7);"></div></div>
@@ -5268,6 +4999,126 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4.CSS的元素显示模式</title>
+    <url>/2021/07/20/4-CSS%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的元素显示模式"><a href="#CSS-的元素显示模式" class="headerlink" title="CSS 的元素显示模式"></a>CSS 的元素显示模式</h1><blockquote>
+<p>元素显示模式就是元素（标签）以什么方式进行显示，比如&lt;div&gt;自己占一行，比如一行可以放多个&lt;span&gt;</p>
+</blockquote>
+<p>HTML元素一般分为 <strong>块元素</strong> 和 <strong>行内元素</strong></p>
+<h2 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h2><p>常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;li&gt;等，其中&lt;div&gt;标签式最典型的块元素</p>
+<p>块级元素特点：</p>
+<p>1.独占一行</p>
+<p>2.高度，宽度，外边距以及内边距都可以控制。</p>
+<p>3.宽度默认是容器（父级宽度）的100%。</p>
+<p>4.是一个容器及盒子，里面可以放行内或者块级元素。</p>
+<p><strong>注意:</strong></p>
+<ul>
+<li>文字类元素内不能使用块级元素</li>
+<li>&lt;p&gt;标签主要用于存放文字，因此&lt;p&gt;里面不能放块级元素，特别是不能放&lt;div&gt;</li>
+<li>同理，&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签，里面也不能放其他块级元素</li>
+</ul>
+<h2 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h2><p>常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等，其中&lt;span&gt;标签是最典型的行内元素。</p>
+<p>行内元素的特点：</p>
+<p>1.相邻行内元素在一行上，一行可以显示多个。</p>
+<p>2.高、宽直接设置是无效的</p>
+<p>3.默认宽度就是它本身内容的宽度。</p>
+<p>4.行内元素只能容纳文本或其它行内元素。</p>
+<p><strong>注意:</strong></p>
+<ul>
+<li>链接里面不能再放链接</li>
+<li>特殊情况&lt;a&gt;里面可以放块级元素，但是给&lt;a&gt;转换一下块级模式最安全</li>
+</ul>
+<h2 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h2><p>在行内元素中有几个特殊的标签 —— &lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;，他们同时具有块元素和行内元素的特点，有些资料称它们为行内块元素。</p>
+<p>行内块元素的特点：</p>
+<p>1.和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙，一行可以显示多个（行内元素特点）</p>
+<p>2.默认宽度就是它本身内容的宽度（行内元素的特点）</p>
+<p>3.高度、行高、外边距以及内边距都可以控制（块级元素特点）</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">元素模式</th>
+<th style="text-align:left">元素排列</th>
+<th style="text-align:left">设置样式</th>
+<th style="text-align:left">默认宽度</th>
+<th style="text-align:left">包含</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">块级元素</td>
+<td style="text-align:left">一行只能放一个块级元素</td>
+<td style="text-align:left">可以设置宽度高度</td>
+<td style="text-align:left">容器的100%</td>
+<td style="text-align:left">容器可以包含任何标签</td>
+</tr>
+<tr>
+<td style="text-align:left">行内元素</td>
+<td style="text-align:left">一行可以放多个行内元素</td>
+<td style="text-align:left">不可以设置宽度高度</td>
+<td style="text-align:left">它自身内容的宽度</td>
+<td style="text-align:left">容纳文本或者其他行内元素</td>
+</tr>
+<tr>
+<td style="text-align:left">行内块元素</td>
+<td style="text-align:left">一行放多个行内块元素</td>
+<td style="text-align:left">可以设置宽度高度</td>
+<td style="text-align:left">它本身内容的宽度</td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="元素显示模式转换"><a href="#元素显示模式转换" class="headerlink" title="元素显示模式转换"></a>元素显示模式转换</h2><p>特殊情况下，我们需要元素模式的转换，简单理解：一个模式的元素需要另外一种模式的特性，比如想要增加链接&lt;a&gt;的触发范围</p>
+<ul>
+<li>转换为块元素：display:block;</li>
+<li>转换为行内元素： display:inline;</li>
+<li>转换为行内块元素： display:inline-block;</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5.向量空间</title>
+    <url>/2021/06/21/5.%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><blockquote>
+<p>{n维向量；+，数乘}</p>
+</blockquote>
+<h2 id="向量空间的子空间"><a href="#向量空间的子空间" class="headerlink" title="向量空间的子空间"></a>向量空间的子空间</h2><p>W是n维向量的非空集合，且</p>
+<p>(1) $\forall\alpha,\beta\in W\;\Rightarrow\;\alpha+\beta\in W$<br><br>(2) $\forall\alpha\in W,\forall k\;\Rightarrow\;k\alpha\in W$</p>
+<p>则称W是n维向量空间的子空间</p>
+<h2 id="向量空间的基和维数"><a href="#向量空间的基和维数" class="headerlink" title="向量空间的基和维数"></a>向量空间的基和维数</h2><p>$\quad$如果向量空间V中的向量$\alpha_1\alpha_2\cdots\alpha_m$<br><br>满足：<br>$\qquad$(1)$\alpha_1\alpha_2\cdots\alpha_m$线性无关;<br><br>$\qquad$(2)V中任意向量$\beta$均可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示，即<br><br>$\qquad\quad x_1\alpha_1+x_2\alpha_2+\cdots+x_m\alpha_m=\beta$</p>
+<p>$\qquad$则称$\alpha_1\alpha_2\cdots\alpha_m$是向量空间V的基$\;\longrightarrow\;$其实就是向量组里极大无关组的概念</p>
+<p>$\qquad$m称为向量空间的维数，称V是m维向量空间</p>
+<h2 id="过渡矩阵"><a href="#过渡矩阵" class="headerlink" title="过渡矩阵"></a>过渡矩阵</h2><p>如果$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基，<br></p>
+<p>设<br>$<br>\beta_1={\large c}_{11}\alpha_1+{\large c}_{21}\alpha_2+{\large c}_{31}\alpha_3$</p>
+<p>$\beta_2={\large c}_{12}\alpha_1+{\large c}_{22}\alpha_2+{\large c}_{32}\alpha_3$</p>
+<p>$\beta_3={\large c}_{13}\alpha_1+{\large c}_{23}\alpha_2+{\large c}_{33}\alpha_3$<br><br><br>$<br>\begin{aligned}<br>即\;\;<br>[\beta_1\;\beta_2\;\beta_3]<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]<br>\begin{bmatrix}<br>{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}\\<br>{\large c}_{31}&amp;{\large c}_{32}&amp;{\large c}_{33}<br>\end{bmatrix}\\<br>\\<br>&amp;=[\alpha_1\;\alpha_2\;\alpha_3]C<br>\end{aligned}<br>$<br><br><br>称矩阵C为由基$\;\alpha_1,\alpha_2,\alpha_3\;$到基$\;\beta_1,\beta_2,\beta_3\;$的过渡矩阵</p>
+<h3 id="坐标变换公式"><a href="#坐标变换公式" class="headerlink" title="坐标变换公式"></a>坐标变换公式</h3><p>设$\;\alpha_1,\alpha_2,\alpha_3\;$与$\;\beta_1,\beta_2,\beta_3\;$是$R^3$的两个基<br>且$(\beta_1\;\beta_2\;\beta_3)=(\alpha_1\;\alpha_2\;\alpha_3)C$<br><br>若向量$\gamma$在这两个基下的坐标分别是</p>
+<p>$(x_1,x_2,x_3)^T\;与\;(y_1,y_2,y_3)^T$</p>
+<p>即<br>$\gamma=x_1\alpha_1+x_2\alpha_2+x_3\alpha_3=(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}$</p>
+<p>$\gamma=y_1\beta_1+y_2\beta_2+y_3\beta_3=(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}$</p>
+<p>那么<br>$<br>\qquad\begin{aligned}<br>(\alpha_1\;\alpha_2\;\alpha_3)<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}<br>&amp;=<br>(\beta_1\;\beta_2\;\beta_3)<br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}\\<br>&amp;=(\alpha_1\;\alpha_2\;\alpha_3)<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\end{aligned}<br>$<br><br></p>
+<hr>
+<p>$\therefore\;\;<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>x_3<br>\end{bmatrix}=<br>C\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3<br>\end{bmatrix}<br>\longrightarrow$坐标变换公式<br><br>$\; x=Cy$</p>
+<p>向量空间是属于n维向量中的内容，虽然目前知道了一些基本概念，但对n维空间理解的并不好，因此单独拿出来，后面进行单独的理解学习，并对笔记进行扩充</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -5405,6 +5256,155 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>4.图</title>
+    <url>/2021/07/30/4-%E5%9B%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p><strong>完全图</strong>：任意两个点都有一条边相连</p>
+<ul>
+<li>无向完全图：没有方向</li>
+<li>有向完全图：有方向<span id="more"></span>
+<img style="transform:scale(0.5);" src="/2021/07/30/4-%E5%9B%BE/pic1.png"></li>
+</ul>
+<p><strong>稀疏图</strong>：有很少边或弧的图</p>
+<p><strong>稠密图</strong>：有较多边或弧的图</p>
+<p><strong>邻接</strong>：有边/弧相连的两个顶点之间的关系</p>
+<ul>
+<li>存在 $(v_i,v_j)$，则称 $v_i$ 和 $v_j$ 互为临邻接点</li>
+<li>存在 &lt;$v_i,v_j$&gt;，则称 $v_i$ <strong>邻接到</strong> $v_j$ ，$v_j$ <strong>邻接于</strong> $v_i$</li>
+</ul>
+<p><strong>关联</strong>：边/弧与顶点之间的关系</p>
+<ul>
+<li>存在 $(v_i,v_j)$ /&lt;$v_i,v_j$&gt; ，则称该边/弧关联于 $v_i$ 和 $v_j$</li>
+</ul>
+<p><strong>顶点的度</strong>：与该顶点相关联的边的数目，记为TD(v)</p>
+<ul>
+<li>在有向图中，顶点的度等于该顶点的 <strong>入度</strong> 和 <strong>出度</strong> 之和<ul>
+<li>顶点v的 <strong>入度</strong> 是 <strong>以v为终点</strong> 的有向边的条数，记作ID(v)</li>
+<li>顶点v的 <strong>出度</strong> 是以 <strong>v为始点</strong> 的有向边的条数，记作OD(v)</li>
+</ul>
+</li>
+</ul>
+<p><strong>路径</strong>：接续的边构成的顶点序列</p>
+<p><strong>路径长度</strong>：路径上边或弧的数目/权值之和</p>
+<p><strong>回路（环）</strong>：第一个顶点和最后一个顶点相同的路径</p>
+<p><strong>简单路径</strong>：除路径起点和终点可以相同外，其余顶点均不相同的路径</p>
+<p><strong>简单回路</strong>：除路径起点和终点相同外，其余顶点均不相同</p>
+<p><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic2.png"></p>
+<p><strong>连通图（强连通图）</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic3.png"></p>
+<p><strong>权</strong>：图中边或弧所具有的相关数称为 <strong>权</strong>。表明从一个顶点到另一个顶点的距离或耗费</p>
+<p><strong>网</strong>：边/弧带权的图</p>
+<p><strong>子图</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic4.png"></p>
+<p><strong>连通分量（强连通分量）</strong></p>
+<ul>
+<li>无向图G的 <strong>极大连通子图</strong> 称为G的 <strong>连通分量</strong><br>极大连通子图：该子图是G连通子图，将G的任何不在该子图中的顶点加入，子图不再连通</li>
+<li>有向图G的极大强连通子图称为G的强连通分量<br>极大强连通子图：该子图是G的强连通子图，将D的任何不在该子图中的顶点加入，子图不再是强连通的</li>
+</ul>
+<p><strong>极小连通子图</strong>：该子图是G的连通子图，在该子图中删除任何一条边，子图不再连通</p>
+<p><strong>生成树</strong>：包含无向图G所有顶点的极小连通子图</p>
+<p><strong>生成森林</strong>：对非连通图，由各个连通分量的生成树的集合<br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic5.png"></p>
+<h2 id="图的存储结构"><a href="#图的存储结构" class="headerlink" title="图的存储结构"></a>图的存储结构</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><p>1、数组（邻接矩阵）表示法</p>
+<ul>
+<li>建立一个 <strong>顶点表</strong>（记录各个顶点信息）和一个 <strong>邻接矩阵</strong>（表示各个顶点之间关系）</li>
+</ul>
+<p><strong>无向图的邻接矩阵表示法：</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic6.png"></p>
+<p><strong>有向图的邻接矩阵表示法：</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic7.png"></p>
+<p><strong>行为出度，列为入度</strong></p>
+<p><strong>网（即有权图）的邻接矩阵表示法</strong><br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic8.png"></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MVNum 100 <span class="comment">//最大顶点数</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VerTexType;<span class="comment">//设顶点的数据类型为字符型 </span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ArcType; <span class="comment">//假设边的权值类型为整型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    VerTexType vexs[MVNum]; <span class="comment">//顶点表</span></span><br><span class="line">    ArcType arcs[MVNum][MVNum]; <span class="comment">//邻接矩阵</span></span><br><span class="line">    <span class="keyword">int</span> vexnum,arcnum; <span class="comment">//图的当前点数和边数</span></span><br><span class="line">&#125;AMGragh;<span class="comment">//Adjacency Matrix Graph</span></span><br></pre></td></tr></table></figure>
+<p>2、采用邻接矩阵表示法 <strong>创建无向网</strong></p>
+<ul>
+<li>输入总顶点数和总边数</li>
+<li>依次输入点的信息存入顶点表中</li>
+<li>初始化邻接矩阵，使每个权值初始化为极大值</li>
+<li>构造邻接矩阵</li>
+</ul>
+<p>邻接矩阵优点：</p>
+<ul>
+<li>直观、简单、好理解</li>
+<li>方便检查任意一对顶点间是否存在边</li>
+<li>方便计算任一顶点的”度”</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不便于增加或删除顶点</li>
+<li>浪费空间—-存稀疏图（点很多而且边很少）有大量无效元素<ul>
+<li>当然对稠密图（特别是完全图）划算</li>
+</ul>
+</li>
+<li>浪费时间—-统计稀疏图中一共有多少条边</li>
+</ul>
+<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>1、邻接表表示法（链式）<br><img style="transform:scale(0.7);" src="/2021/07/30/4-%E5%9B%BE/pic9.png"></p>
+<ul>
+<li>顶点：<ul>
+<li>按编号顺序将顶点数据存储在 <strong>一维数组</strong> 中</li>
+</ul>
+</li>
+<li>关联同一顶点的边（以顶点为尾的弧）：<ul>
+<li>用线性 <strong>链表</strong> 存储</li>
+</ul>
+</li>
+</ul>
+<p><strong>顶点结点结构</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">VNode</span>&#123;</span></span><br><span class="line">    VerTexType data;<span class="comment">//顶点信息</span></span><br><span class="line">    ArcNode *firstarc;<span class="comment">//指向第一条依附该顶点的边的指针</span></span><br><span class="line">&#125;VNode,AdjList[MVNum];<span class="comment">//AdjList表示邻接表类型</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>弧（边）的结点结构</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MVNum 100 <span class="comment">//最大顶点数</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcNode</span>&#123;</span><span class="comment">//边结点</span></span><br><span class="line">    <span class="keyword">int</span> adjvex;<span class="comment">//该边所指向的顶点的位置</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ArcNode</span> * <span class="title">nextarc</span>;</span><span class="comment">//指向下一条边的指针</span></span><br><span class="line">    OtherInfo info;<span class="comment">//和边相关的信息</span></span><br><span class="line">&#125;ArcNode;</span><br></pre></td></tr></table></figure></p>
+<p><strong>图的结构定义</strong><br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    AdjList vertices;<span class="comment">//vertices--vertex的复数</span></span><br><span class="line">    <span class="keyword">int</span> vexnum,arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">&#125;ALGraph</span><br></pre></td></tr></table></figure></p>
+<p>2、采用邻接表法创建无向网</p>
+<p>算法思想</p>
+<ul>
+<li>输入总顶点数和总边数</li>
+<li>建立顶点表<ul>
+<li>依次输入点的信息存入顶点表中</li>
+<li>使每个表头结点的指针域初始化为NULL</li>
+</ul>
+</li>
+<li><p>创建邻接表</p>
+<ul>
+<li>依次输入每条边依附的两个顶点</li>
+<li>确定两个顶点的序号i和j，建立边结点</li>
+<li>将此边结点分别插入到$v_i$和$v_j$对应的两个边链表的头部</li>
+</ul>
+</li>
+<li><p>方便找任一顶点的所有“邻接点”</p>
+</li>
+<li>节约稀疏图的空间<ul>
+<li>需要N个头指针+2E个结点（每个结点至少两个域）</li>
+</ul>
+</li>
+<li>计算任一顶点的“度”<ul>
+<li>对无向图：是</li>
+<li>对有向图：只能计算“出度”；需要构造“逆邻接表”来计算“入度”</li>
+</ul>
+</li>
+</ul>
+<h2 id="图的遍历"><a href="#图的遍历" class="headerlink" title="图的遍历"></a>图的遍历</h2><ul>
+<li>深度优先搜索（Depth_First Search—-DFS）</li>
+<li>广度优先搜索（Breadth_First Search—-BFS）</li>
+</ul>
+<h3 id="深度优先遍历的算法实现"><a href="#深度优先遍历的算法实现" class="headerlink" title="深度优先遍历的算法实现"></a>深度优先遍历的算法实现</h3><p>邻接矩阵表示的无向图深度遍历实现：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(AMGraph G,<span class="keyword">int</span> V)</span></span>&#123;<span class="comment">//图G为邻接矩阵类型</span></span><br><span class="line">    cout&lt;&lt;v;visited[v]=<span class="literal">true</span>;<span class="comment">//访问第v个顶点</span></span><br><span class="line">    <span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)<span class="comment">//依次检查邻接矩阵v所在的行</span></span><br><span class="line">        <span class="keyword">if</span>((G.arcs[v][w]!=<span class="number">0</span>)&amp;&amp;(!visited[w]))</span><br><span class="line">            <span class="built_in">DFS</span>(G,w);</span><br><span class="line">        <span class="comment">//w是v的邻接点，如果w未访问，则递归调用DFS</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="广度优先遍历算法实现"><a href="#广度优先遍历算法实现" class="headerlink" title="广度优先遍历算法实现"></a>广度优先遍历算法实现</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">(Graph G,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    cout&lt;&lt;v;visted[v]=<span class="literal">true</span>;<span class="comment">//访问第v个顶点</span></span><br><span class="line">    <span class="built_in">InitQueue</span>(Q);<span class="comment">//辅助队列Q初始化，置空</span></span><br><span class="line">    <span class="built_in">EnQueue</span>(Q,v);<span class="comment">//v进队</span></span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">QueueEmpty</span>(Q))&#123;<span class="comment">//队列非空</span></span><br><span class="line">        <span class="built_in">DeQueue</span>(Q,u);<span class="comment">//队头元素出队并置为u</span></span><br><span class="line">        <span class="keyword">for</span>(w=<span class="built_in">FirstAdjVex</span>(G,u);w&gt;=<span class="number">0</span>;w=<span class="built_in">NextAdjVex</span>(G,u,w))</span><br><span class="line">        <span class="keyword">if</span>(!visited[w])&#123;<span class="comment">//w为u的尚未访问的邻接顶点</span></span><br><span class="line">            cout&lt;&lt;w;visted[w]=<span class="literal">true</span>; <span class="built_in">EnQueue</span>(Q,w);<span class="comment">//w进队</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2><p><strong>1、普利姆（prim）算法</strong><br>适应范围：稠密图<br>时间复杂度$O(n^2)$<br><strong>2、克鲁斯卡尔(Kruskal)算法</strong><br>适应范围：稀疏图<br>时间复杂度：$O(e\log e)$</p>
+<h2 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h2><ol>
+<li>单源最短路径—用 Dijkstra(迪杰斯特拉)算法<ul>
+<li>初始化：先找出从源点 $v_0$ 到各终点 $v_k$ 的直达路径($v_0$,$v_k$)，即通过一条弧到达的路径</li>
+<li>选择：从这些路径中找出一条长度最短的路径($v_0$ , u)</li>
+<li>更新：然后对其余各条路径进行适当调整：<ul>
+<li>若在途中存在弧（u , $v_k$），且($v_0$ , u)+(u , $v_k$) &lt; ($v_0$ , $v_k$)，则以路径则以路径($v_0$ , u , $v_k$)代替($v_0$ , $v_k$)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>所有顶点间的最短路径—用 Floyd(弗洛伊德)算法<br>s</li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6.特征值与特征向量</title>
     <url>/2021/06/22/6.%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="向量的内积与正交矩阵"><a href="#向量的内积与正交矩阵" class="headerlink" title="向量的内积与正交矩阵"></a>向量的内积与正交矩阵</h1><h2 id="向量的内积"><a href="#向量的内积" class="headerlink" title="向量的内积"></a>向量的内积</h2><blockquote>
@@ -5539,122 +5539,6 @@ array([[ 0,  0,  0,  0],
 </ul>
 <p>特征值与特征向量$\;\rightarrow\;$相似对角化$\;\rightarrow\;$实对称矩阵相似对角化$\;\rightarrow\;$二次型的正交变换法</p>
 <p>线性代数最核心的就是矩阵和行列式，由此衍生出其他的东西，之间其实联系还是很紧密的。而这一章核心就是特征值与特征向量，其实特征值可以理解为特征向量经过矩阵变换后的伸缩倍数，还有一些工具像施密特正交化，也给了一些其他概念，比如向量的内积(通过内积来理解柯西不等式感觉挺不错)，正交矩阵，相似矩阵，实对称矩阵，而这一章通过这些概念工具就能够让一些矩阵相似对角化。虽然清楚这些概念，但是对于特征值这个特征的理解总感觉缺少了什么，以前学习微分方程的时候有特征方程这个概念，究竟这两个特征的本质是否是同一个概念，后面继续进行学习研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>7.二次型</title>
-    <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
-<li>二次型的矩阵表示<br>$f(x_1,x_2,x_3)$<br><br>$\begin{aligned}<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>其中$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵<br><br></li>
-<li>标准形<blockquote>
-<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$<br><br></p>
-</blockquote>
-</li>
-<li>规范形<blockquote>
-<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$<br><br></p>
-</blockquote>
-</li>
-<li>正惯性指数p，负惯性指数q，符号差<blockquote>
-<p>p,q就是标准形系数正负个数<br><br>符号差就是p-q<br><br>例$x_1^2+x_2^2-4x_3^2\quad$</p>
-<p>正惯性指数=2，负惯性指数=1,符号差=1<br><br></p>
-</blockquote>
-</li>
-<li>二次型的秩<blockquote>
-<p>$r(f)=r(A)$<br><br></p>
-</blockquote>
-</li>
-<li>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$<br><br></li>
-<li>合同<blockquote>
-<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
-<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><ul>
-<li><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。<br><br>解：<br>$\begin{aligned}<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]\\<br>&amp;\quad -(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3)^2<br>\end{aligned}<br>$<br><br>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$<br><br>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$<br><br>坐标变换公式<br>$x=Cy$<br><br>$C=<br>\begin{bmatrix}<br>  1&amp;-1&amp;1\\<br>  0&amp;1&amp;-2\\<br>  0&amp;0&amp;1<br>\end{bmatrix}<br>$<br><br>得$f=y_1^2+y_2^2$</li>
-</ul>
-<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
-<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)，使二次型化为标准形<br><br>$\quad x^TAx=y^T\land y=\lambda_1y_1^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
-</blockquote>
-<ul>
-<li><strong>证</strong>：<br>首先要知道二次型中$A$是实对称矩阵<br><br>因为实对称矩阵，$Q^{-1}AQ=\land$<br><br>$Q$是正交矩阵(则$Q^T=Q^{-1}$)<br><br>所以$Q^TAQ=\land$<br><br>若令$x=Qy$,则<br><br>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</li>
-</ul>
-<p><strong>例</strong>：将二次型<br>$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
-<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
-<p>由特征多项式<br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-5)(\lambda+1)^2<br>\end{aligned}<br>$</p>
-<p>$\therefore A$的特征值为5，-1，-1</p>
-<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>$得到\alpha_1=(1,1,1)^T$</p>
-<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
-<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$</p>
-<p>因为这两个向量不垂直</p>
-<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
-<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
-<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
-<p>单位化</p>
-<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix},<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix},$<br>$\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}$</p>
-<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
-<p>那么，二次型$x^TAx$经正交变换</p>
-<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
-<p>化为标准形</p>
-<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
-<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
-<p><strong>推论：</strong></p>
-<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
-<ul>
-<li><strong>例</strong>:<br>$f=y_1^2+3y_2^2-2y_3^2$<br><br>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$<br><br>那么$f=z_1^2+z_2^2-z_3^2$</li>
-</ul>
-<p>变成规范形步骤：</p>
-<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
-<h2 id="惯性定理"><a href="#惯性定理" class="headerlink" title="惯性定理"></a>惯性定理</h2><blockquote>
-<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
-</blockquote>
-<p>即二次型的规范形是唯一的</p>
-<ul>
-<li><strong>证</strong>：<br>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，<br>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾<br><br>设$r(C^TAC)=r(A)=r(f)=r$<br><br>如果经坐标变换$x=Py\;$和$\;x=Qz$<br><br>二次型$x^TAx$化成规范形，分别为<br><br>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$<br><br>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$<br><br><strong>反证法</strong><br>如果$s &lt; t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等<br><br>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$<br><br>不妨设<br><br>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$<br><br>其中($i=1,2,\cdots,n$)<br><br><br>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项<br><br>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾<br><br>即<br>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$<br><br>也就是<br>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$<br><br>方程个数<br>$s+(n-t)=n+s-t&lt; n$<br><br>方程组(1)必有非零解<br><br>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解<br><br>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$<br><br>因为$P,Q$均为可逆矩阵，$\eta\neq0$<br><br>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$<br><br>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$<br><br>把$\eta$代入$(I)$和$(II)$,有<br><br>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt; 0$<br><br>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$<br><br>矛盾<br><br>$\because s,t$地位相等<br><br>$\therefore\;s=t$</li>
-</ul>
-<p>由惯性定理推出:</p>
-<p>实对称矩阵$A$和$B$合同</p>
-<p>$\Leftrightarrow p_A=p_B,q_A=q_B\;$<br>(p为正惯性指数，q为负惯性指数)</p>
-<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
-<p>设二次型$f(x)=x^TAx$<br><br>如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,<br><br>恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
-</blockquote>
-<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
-<p>二次型经坐标变换，其正定性不变</p>
-<p>$x^TAx$正定</p>
-<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
-<p>$\Leftrightarrow\;A\simeq E$,即存在可逆矩阵$C,$</p>
-<p>$C^TAC=E(或写成A=C^TEC，E可省略)$</p>
-<p>$\Leftrightarrow\;A$特征值全大于0</p>
-<p>$\Leftrightarrow\;A$的顺序主子式 <strong>全</strong> 大于0</p>
-<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
-<p><strong>例</strong>：判断二次型</p>
-<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
-<p>是否是正定二次型。</p>
-<p><strong>解</strong>：</p>
-<ul>
-<li>顺序主子式<br>二次型矩阵<br><br>$A$=$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$<br><br>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$<br><br>$\Delta_3=|A|=10&gt;0$<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<hr>
-<ul>
-<li>特征值<br>由特征多项式<br><br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$<br><br>$A$的特征值：1,1,10$\quad$全大于零<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<hr>
-<ul>
-<li>配方法$^*$<br><br>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]\\<br>&amp;\quad -2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$<br><br>$p=3,q=0$<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
-<p>半正定$f\geqslant0$</p>
-<p>负定$f&lt;0$</p>
-<p>半负定$f\leqslant0$</p>
 ]]></content>
       <categories>
         <category>线性代数</category>
@@ -5848,6 +5732,121 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>7.统计方法与排序（numpy）</title>
+    <url>/2021/07/07/7-%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8E%92%E5%BA%8F%EF%BC%88numpy%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="统计方法"><a href="#统计方法" class="headerlink" title="统计方法"></a>统计方法</h1><p><strong>基本数组统计方法</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">sum</td>
+<td style="text-align:left">对数组中全部或某轴向的元素求和。零长度的数组的sum为0</td>
+</tr>
+<tr>
+<td style="text-align:left">mean</td>
+<td style="text-align:left">算术平均数。零长度的数组的mean为NaN</td>
+</tr>
+<tr>
+<td style="text-align:left">std、var</td>
+<td style="text-align:left">分别为标准差和方差，自由度可调（默认为n）</td>
+</tr>
+<tr>
+<td style="text-align:left">min、max</td>
+<td style="text-align:left">最大值和最小值</td>
+</tr>
+<tr>
+<td style="text-align:left">argmin、argmax</td>
+<td style="text-align:left">分别为最大和最小元素的索引</td>
+</tr>
+<tr>
+<td style="text-align:left">cumsum</td>
+<td style="text-align:left">所有元素的累计和</td>
+</tr>
+<tr>
+<td style="text-align:left">cumprod</td>
+<td style="text-align:left">所有元素的累计积</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[-0.54723045,  0.58597431, -0.96045403, -1.702082  ],
+       [ 1.06630288, -1.0836272 ,  2.29730989, -0.30115381],
+       [-0.95468451,  1.05624793,  1.01693306,  0.09056162],
+       [-0.36292065,  0.19475411, -0.01906396, -1.24974648],
+       [-1.90823323, -0.31973005,  1.06666693,  0.81091118]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean()</span><br></pre></td></tr></table></figure>
+<pre><code>-0.06116322299092232
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.mean(arr)</span><br></pre></td></tr></table></figure>
+<pre><code>-0.06116322299092232
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>-1.2232644598184463
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">max</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>2.2973098855173615
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">min</span>()</span><br></pre></td></tr></table></figure>
+<pre><code>-1.9082332261211672
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.std()</span><br></pre></td></tr></table></figure>
+<pre><code>1.0584749116858456
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.var()</span><br></pre></td></tr></table></figure>
+<pre><code>1.1203691386683585
+</code></pre><p>mean和sum这类函数可以接受一个axis选项参数，用于计算该轴向上的统计值，最终结果是一个少一维的数组:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(<span class="number">1</span>)<span class="comment">#计算行的平均值</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(<span class="number">0</span>)<span class="comment">#计算每列的和</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
+</code></pre><p>在多维数组中，累加函数（如cumsum）返回的是同样大小的数组，但是会根据每个低维的切片沿着标记轴计算部分聚类：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr= np.arange(<span class="number">9</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumsum(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 3,  5,  7],
+       [ 9, 12, 15]], dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumprod(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[  0,   0,   0],
+       [  3,  12,  60],
+       [  6,  42, 336]], dtype=int32)
+</code></pre><p>当然可以使用布尔型数组，布尔值会被强制转换为1和0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr=np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 1,  2,  3],
+       [-1, -2, -3]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">(arr&gt;<span class="number">0</span>).<span class="built_in">sum</span>()<span class="comment">#这样就得到了数组中大于零的元素个数</span></span><br></pre></td></tr></table></figure>
+<pre><code>3
+</code></pre><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">6</span>,<span class="number">4</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [6, 4, 3],
+       [2, 3, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort()</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [3, 4, 6],
+       [2, 3, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort(<span class="number">0</span>)<span class="comment">#按0轴排序</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [2, 3, 6],
+       [3, 4, 7]])
+</code></pre>]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>8.CSS网页布局及用户界面样式</title>
     <url>/2021/07/20/8-CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E5%8F%8A%E7%95%8C%E9%9D%A2%E6%A0%B7%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="网页布局"><a href="#网页布局" class="headerlink" title="网页布局"></a>网页布局</h1><p><strong>网页布局的核心本质就是利用CSS摆盒子</strong></p>
@@ -5989,118 +5988,119 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>7.统计方法与排序（numpy）</title>
-    <url>/2021/07/07/7-%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8E%92%E5%BA%8F%EF%BC%88numpy%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="统计方法"><a href="#统计方法" class="headerlink" title="统计方法"></a>统计方法</h1><p><strong>基本数组统计方法</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">方法</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">sum</td>
-<td style="text-align:left">对数组中全部或某轴向的元素求和。零长度的数组的sum为0</td>
-</tr>
-<tr>
-<td style="text-align:left">mean</td>
-<td style="text-align:left">算术平均数。零长度的数组的mean为NaN</td>
-</tr>
-<tr>
-<td style="text-align:left">std、var</td>
-<td style="text-align:left">分别为标准差和方差，自由度可调（默认为n）</td>
-</tr>
-<tr>
-<td style="text-align:left">min、max</td>
-<td style="text-align:left">最大值和最小值</td>
-</tr>
-<tr>
-<td style="text-align:left">argmin、argmax</td>
-<td style="text-align:left">分别为最大和最小元素的索引</td>
-</tr>
-<tr>
-<td style="text-align:left">cumsum</td>
-<td style="text-align:left">所有元素的累计和</td>
-</tr>
-<tr>
-<td style="text-align:left">cumprod</td>
-<td style="text-align:left">所有元素的累计积</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[-0.54723045,  0.58597431, -0.96045403, -1.702082  ],
-       [ 1.06630288, -1.0836272 ,  2.29730989, -0.30115381],
-       [-0.95468451,  1.05624793,  1.01693306,  0.09056162],
-       [-0.36292065,  0.19475411, -0.01906396, -1.24974648],
-       [-1.90823323, -0.31973005,  1.06666693,  0.81091118]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean()</span><br></pre></td></tr></table></figure>
-<pre><code>-0.06116322299092232
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">np.mean(arr)</span><br></pre></td></tr></table></figure>
-<pre><code>-0.06116322299092232
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>-1.2232644598184463
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">max</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>2.2973098855173615
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">min</span>()</span><br></pre></td></tr></table></figure>
-<pre><code>-1.9082332261211672
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.std()</span><br></pre></td></tr></table></figure>
-<pre><code>1.0584749116858456
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.var()</span><br></pre></td></tr></table></figure>
-<pre><code>1.1203691386683585
-</code></pre><p>mean和sum这类函数可以接受一个axis选项参数，用于计算该轴向上的统计值，最终结果是一个少一维的数组:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.mean(<span class="number">1</span>)<span class="comment">#计算行的平均值</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([-0.65594804,  0.49470794,  0.30226452, -0.35924424, -0.08759629])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.<span class="built_in">sum</span>(<span class="number">0</span>)<span class="comment">#计算每列的和</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([-2.70676596,  0.4336191 ,  3.40139188, -2.35150948])
-</code></pre><p>在多维数组中，累加函数（如cumsum）返回的是同样大小的数组，但是会根据每个低维的切片沿着标记轴计算部分聚类：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr= np.arange(<span class="number">9</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 2],
-       [3, 4, 5],
-       [6, 7, 8]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumsum(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  5,  7],
-       [ 9, 12, 15]], dtype=int32)
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.cumprod(axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([[  0,   0,   0],
-       [  3,  12,  60],
-       [  6,  42, 336]], dtype=int32)
-</code></pre><p>当然可以使用布尔型数组，布尔值会被强制转换为1和0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr=np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 1,  2,  3],
-       [-1, -2, -3]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">(arr&gt;<span class="number">0</span>).<span class="built_in">sum</span>()<span class="comment">#这样就得到了数组中大于零的元素个数</span></span><br></pre></td></tr></table></figure>
-<pre><code>3
-</code></pre><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">6</span>,<span class="number">4</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>]])</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [6, 4, 3],
-       [2, 3, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort()</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [3, 4, 6],
-       [2, 3, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr.sort(<span class="number">0</span>)<span class="comment">#按0轴排序</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [2, 3, 6],
-       [3, 4, 7]])
-</code></pre>]]></content>
+    <title>7.二次型</title>
+    <url>/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
+<li>二次型的矩阵表示<br>$f(x_1,x_2,x_3)$<br><br>$\begin{aligned}<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>其中$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵<br><br></li>
+<li>标准形<blockquote>
+<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$<br><br></p>
+</blockquote>
+</li>
+<li>规范形<blockquote>
+<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$<br><br></p>
+</blockquote>
+</li>
+<li>正惯性指数p，负惯性指数q，符号差<blockquote>
+<p>p,q就是标准形系数正负个数<br><br>符号差就是p-q<br><br>例$x_1^2+x_2^2-4x_3^2\quad$</p>
+<p>正惯性指数=2，负惯性指数=1,符号差=1<br><br></p>
+</blockquote>
+</li>
+<li>二次型的秩<blockquote>
+<p>$r(f)=r(A)$<br><br></p>
+</blockquote>
+</li>
+<li>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$<br><br></li>
+<li>合同<blockquote>
+<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
+<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><ul>
+<li><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。<br><br>解：<br>$\begin{aligned}<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]\\<br>&amp;\quad -(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3)^2<br>\end{aligned}<br>$<br><br>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$<br><br>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$<br><br>坐标变换公式<br>$x=Cy$<br><br>$C=<br>\begin{bmatrix}<br>  1&amp;-1&amp;1\\<br>  0&amp;1&amp;-2\\<br>  0&amp;0&amp;1<br>\end{bmatrix}<br>$<br><br>得$f=y_1^2+y_2^2$</li>
+</ul>
+<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
+<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)，使二次型化为标准形<br><br>$\quad x^TAx=y^T\land y=\lambda_1y_1^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
+</blockquote>
+<ul>
+<li><strong>证</strong>：<br>首先要知道二次型中$A$是实对称矩阵<br><br>因为实对称矩阵，$Q^{-1}AQ=\land$<br><br>$Q$是正交矩阵(则$Q^T=Q^{-1}$)<br><br>所以$Q^TAQ=\land$<br><br>若令$x=Qy$,则<br><br>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</li>
+</ul>
+<p><strong>例</strong>：将二次型<br>$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
+<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
+<p>由特征多项式<br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-5)(\lambda+1)^2<br>\end{aligned}<br>$</p>
+<p>$\therefore A$的特征值为5，-1，-1</p>
+<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
+<p>$得到\alpha_1=(1,1,1)^T$</p>
+<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
+<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
+<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$</p>
+<p>因为这两个向量不垂直</p>
+<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
+<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
+<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
+<p>单位化</p>
+<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix},<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix},$<br>$\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}$</p>
+<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
+<p>那么，二次型$x^TAx$经正交变换</p>
+<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
+<p>化为标准形</p>
+<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
+<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
+<p><strong>推论：</strong></p>
+<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
+<ul>
+<li><strong>例</strong>:<br>$f=y_1^2+3y_2^2-2y_3^2$<br><br>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$<br><br>那么$f=z_1^2+z_2^2-z_3^2$</li>
+</ul>
+<p>变成规范形步骤：</p>
+<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
+<h2 id="惯性定理"><a href="#惯性定理" class="headerlink" title="惯性定理"></a>惯性定理</h2><blockquote>
+<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
+</blockquote>
+<p>即二次型的规范形是唯一的</p>
+<ul>
+<li><strong>证</strong>：<br>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，<br>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾<br><br>设$r(C^TAC)=r(A)=r(f)=r$<br><br>如果经坐标变换$x=Py\;$和$\;x=Qz$<br><br>二次型$x^TAx$化成规范形，分别为<br><br>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$<br><br>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$<br><br><strong>反证法</strong><br>如果$s &lt; t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等<br><br>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$<br><br>不妨设<br><br>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$<br><br>其中($i=1,2,\cdots,n$)<br><br><br>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项<br><br>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾<br><br>即<br>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$<br><br>也就是<br>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$<br><br>方程个数<br>$s+(n-t)=n+s-t&lt; n$<br><br>方程组(1)必有非零解<br><br>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解<br><br>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$<br><br>因为$P,Q$均为可逆矩阵，$\eta\neq0$<br><br>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$<br><br>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$<br><br>把$\eta$代入$(I)$和$(II)$,有<br><br>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt; 0$<br><br>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$<br><br>矛盾<br><br>$\because s,t$地位相等<br><br>$\therefore\;s=t$</li>
+</ul>
+<p>由惯性定理推出:</p>
+<p>实对称矩阵$A$和$B$合同</p>
+<p>$\Leftrightarrow p_A=p_B,q_A=q_B\;$<br>(p为正惯性指数，q为负惯性指数)</p>
+<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
+<p>设二次型$f(x)=x^TAx$<br><br>如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,<br><br>恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
+</blockquote>
+<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
+<p>二次型经坐标变换，其正定性不变</p>
+<p>$x^TAx$正定</p>
+<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
+<p>$\Leftrightarrow\;A\simeq E$,即存在可逆矩阵$C,$</p>
+<p>$C^TAC=E(或写成A=C^TEC，E可省略)$</p>
+<p>$\Leftrightarrow\;A$特征值全大于0</p>
+<p>$\Leftrightarrow\;A$的顺序主子式 <strong>全</strong> 大于0</p>
+<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
+<p><strong>例</strong>：判断二次型</p>
+<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
+<p>是否是正定二次型。</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>顺序主子式<br>二次型矩阵<br><br>$A$=$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$<br><br>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$<br><br>$\Delta_3=|A|=10&gt;0$<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<hr>
+<ul>
+<li>特征值<br>由特征多项式<br><br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$<br><br>$A$的特征值：1,1,10$\quad$全大于零<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<hr>
+<ul>
+<li>配方法$^*$<br><br>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]\\<br>&amp;\quad -2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$<br><br>$p=3,q=0$<br><br>$\therefore\;f\;$是正定二次型</li>
+</ul>
+<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
+<p>半正定$f\geqslant0$</p>
+<p>负定$f&lt;0$</p>
+<p>半负定$f\leqslant0$</p>
+]]></content>
       <categories>
-        <category>numpy</category>
+        <category>线性代数</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -6164,33 +6164,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/06/15/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>end</title>
-    <url>/2021/06/24/end/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS基本结束</title>
     <url>/2021/07/23/CSS%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9D%9F/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码错误, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -6213,6 +6186,33 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>end</title>
+    <url>/2021/06/24/end/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/06/15/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>一些关于hexo的next主题的适配问题</title>
     <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
@@ -6224,25 +6224,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>杂记</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>初入</title>
-    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码错误, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="b0ca2ef9541fede87b8c708a533c49229e736ec76cfc1393c6388623a747d871">b932aaa1676845656e99a89ce5708d0a6d629f27376e686be0b7b81e242a554ca974cb7c0d19940d116aac2233fcde8c0eaaa3f436a53ab205c47dd54ff1d66cf3e524aec81cb572511195ff71a4c0e06e620fff646ae43ba520c1ae0f329c5dffba1e93b59f84a0c2e570805a0ed6ceb0b9ed142ef2b3b0e86f5b7c752329902963b266d8ecf12d7ce1be312d2bb6f9595f2b670482e5713110f82d2a2f865ca301078ffccbd1b588c0c1f26f4500ba867d1fde9951ff463ee5b992cc3f349d0d89b4caa0eb3460a8f1be637f6bc948af3229c57d9f719e0c0f45513e595a66df62e9da096655e355d51cdd32e2b3efd3308c1a2de4424c9e3e5f059bf33fa7a46d57972a8d440a32545d2ffa75a01f81c0af8979df87c4f26acc1d4182e2baf55748e271f618ca61c55df3ebd9f473a3017555f54ce12602f483c695ef5c7f3a9765c6405bb25eb7f5f4a96d9be65c830c784451c8c97e869239b5746673f2ea8b3f3cc7467e2e74e91259924bfca411b4d30a06d71be6859c7bebde9e9349912c90c8805cd3152df3e549be7ffb40fe2fe31ab56a91ae73f890c8a111dbc7c443521f4d7f12992588f0fd41b5fe299bd135ee19f4c196d5c620d5554a3ad785cf3afe7b9724b0ea0dd0d92445e566697a1bea4b0018a626dc364372db46c9af9e5dbcc2948ce471ef093e70ec3fcfbf5aa8ff12e3ecd505ac142b0a82e1e9e0043af9756589b2ee868f361c92108f74f8d6e2995fa35a76dda720b3bfb438f25d214a45f3878e262b6abda60fe07bef03958a389f863164d05c893a5863300bea6a777046af655fb3b366c540935c766bc2b7c4c1d1f6d16662fd1321730bd182da504af842c2c01585322ae8768f750ba584a8e8eb53e4b32ed1afb7ca786c82ebfd2d3ef6ad2c03e749ffdcfdfd5f1c1e94c11ec03e5d959f25b73a9ea7</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-shrink">
-      <input class="hbe hbe-input-field hbe-input-field-shrink" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-shrink" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-shrink">请输入密码</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
   </entry>
   <entry>
     <title>不等式</title>
@@ -6299,9 +6280,474 @@ f(\frac{a+b}{2})\;\geqslant\;\frac{f(a)+f(b)}{2}</script>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>初入</title>
+    <url>/2021/06/15/%E5%88%9D%E5%85%A5/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码错误, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="b0ca2ef9541fede87b8c708a533c49229e736ec76cfc1393c6388623a747d871">b932aaa1676845656e99a89ce5708d0a6d629f27376e686be0b7b81e242a554ca974cb7c0d19940d116aac2233fcde8c0eaaa3f436a53ab205c47dd54ff1d66cf3e524aec81cb572511195ff71a4c0e06e620fff646ae43ba520c1ae0f329c5dffba1e93b59f84a0c2e570805a0ed6ceb0b9ed142ef2b3b0e86f5b7c752329902963b266d8ecf12d7ce1be312d2bb6f9595f2b670482e5713110f82d2a2f865ca301078ffccbd1b588c0c1f26f4500ba867d1fde9951ff463ee5b992cc3f349d0d89b4caa0eb3460a8f1be637f6bc948af3229c57d9f719e0c0f45513e595a66df62e9da096655e355d51cdd32e2b3efd3308c1a2de4424c9e3e5f059bf33fa7a46d57972a8d440a32545d2ffa75a01f81c0af8979df87c4f26acc1d4182e2baf55748e271f618ca61c55df3ebd9f473a3017555f54ce12602f483c695ef5c7f3a9765c6405bb25eb7f5f4a96d9be65c830c784451c8c97e869239b5746673f2ea8b3f3cc7467e2e74e91259924bfca411b4d30a06d71be6859c7bebde9e9349912c90c8805cd3152df3e549be7ffb40fe2fe31ab56a91ae73f890c8a111dbc7c443521f4d7f12992588f0fd41b5fe299bd135ee19f4c196d5c620d5554a3ad785cf3afe7b9724b0ea0dd0d92445e566697a1bea4b0018a626dc364372db46c9af9e5dbcc2948ce471ef093e70ec3fcfbf5aa8ff12e3ecd505ac142b0a82e1e9e0043af9756589b2ee868f361c92108f74f8d6e2995fa35a76dda720b3bfb438f25d214a45f3878e262b6abda60fe07bef03958a389f863164d05c893a5863300bea6a777046af655fb3b366c540935c766bc2b7c4c1d1f6d16662fd1321730bd182da504af842c2c01585322ae8768f750ba584a8e8eb53e4b32ed1afb7ca786c82ebfd2d3ef6ad2c03e749ffdcfdfd5f1c1e94c11ec03e5d959f25b73a9ea7</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-shrink">
+      <input class="hbe hbe-input-field hbe-input-field-shrink" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-shrink" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-shrink">请输入密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数学竞赛试题收录</title>
     <url>/2021/08/23/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B%E8%AF%95%E9%A2%98%E6%94%B6%E5%BD%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="第十届"><a href="#第十届" class="headerlink" title="第十届"></a>第十届</h1><p><strong>微分中值定理</strong><br>设 $f(x,y)$ 在区域 $D$ 内可微，且 $\sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2+\left(\dfrac{\partial f}{\partial y}\right)^2 }\leqslant M$ ，$A(x_1,y_1)$，$B(x_2,y_2)$是 $D$ 内两点，线段$AB$ 包含在 $D$ 内，证明：$|f(x_1,y_1)-f(x_2,y_2)|\leqslant M|AB|$ ，其中$|AB|$表示线段$AB$的长度<br><br><br>分析：拿到这一题，我们很容易明确目标，如何建立偏导数和函数之间的关系呢？很显然应该需要用到微分中值定理</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="第一届"><a href="#第一届" class="headerlink" title="第一届"></a>第一届</h1><h2 id="格林公式"><a href="#格林公式" class="headerlink" title="格林公式"></a>格林公式</h2><p><strong>问题</strong>：</p>
+<p>已知平面区域 $D=\{(x, y) \mid 0 \leqslant x \leqslant \pi, 0 \leqslant y \leqslant \pi\} \quad L$ 为 $D$的正向边界, 试证：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&(1)\oint_{L} x e^{\sin y} d y-y e^{-\sin x} d x=\oint_{L} x e^{-\sin y} d y-y e^{\sin x} d x\\
+&(2)\oint_{L} x e^{\sin y} d y-y e^{-\sin x} d x \geqslant \dfrac{5}{2} \pi^{2}
+\end{aligned}</script><hr>
+<p><strong>分析</strong>：</p>
+<p>第一问很基础，可以用格林公式，也可以用对称性</p>
+<p>第二问主要就在于放缩的精度问题，这里不能用基本不等式，因为精度不够。</p>
+<span id="more"></span>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\oint_Lxe^{\sin y}dy -ye^{-\sin x}dx&=\iint\limits_D e^{\sin y}+e^{-\sin x}dxdy\\
+&=\iint\limits_D e^{\sin x}+e^{-\sin x}dxdy\\
+\end{aligned}</script><p>所以本题目标很明确，只需要对 $e^x+e^{-x}$ 进行放缩，我们知道 $e^x$ 的泰勒级数</p>
+<script type="math/tex; mode=display">
+e^x=\sum\limits_{n=0}^∞\frac{1}{n!}x^n</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+e^x+e^{-x}&=\sum\limits_{n=0}^∞\frac{1}{n!}x^n+\sum\limits_{n=0}^∞(-1)^n\frac{1}{n!}x^n\\
+&=2\sum\limits_{n=0}^∞\frac{1}{(2n)!}x^{2n}
+\end{aligned}</script><p>根据题目，这里只需要取前两项</p>
+<p>也就是 $e^x+e^{-x}\geqslant2+x^2$</p>
+<script type="math/tex; mode=display">
+\iint\limits_D e^{\sin x}+e^{-\sin x}dxdy\geqslant\iint\limits_D2+x^2d\delta\geqslant\frac{5}{2}\pi^2</script><hr>
+<h2 id="积分审敛法"><a href="#积分审敛法" class="headerlink" title="积分审敛法"></a>积分审敛法</h2><p><strong>问题</strong>：</p>
+<p>求 $x\rightarrow 1^-$ 时，与 $\sum\limits_{n=0}^∞x^{n^2}$等价的无穷大量</p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>等价无穷大，也就是</p>
+<script type="math/tex; mode=display">
+\lim\limits_{x\rightarrow1^-}\frac{\sum\limits_{n=0}^\infty x^{n^2} }{f(x) }=1</script><p>如何寻找 $f(x)$ 呢？利用 <strong>级数和积分的联系</strong>，级数可以说是数列的“反常积分”</p>
+<p>观察这个式子，我们会发现这种形式类似于高斯积分</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} e^{-ax^2}dx=\frac12\sqrt\frac{\pi}{a}</script><p>而由积分审敛法</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} x^{t^2}dt\leqslant\sum\limits_{n=0}^\infty x^{n^2}\leqslant1+\int_0^{+\infty} x^{t^2}dt</script><p>所以可求得其等价无穷大量</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} x^{t^2}dt=\int_0^{+\infty}e^{-t^2\ln\frac{1}{x} }dt=\frac12\sqrt\frac{\pi}{\ln\frac1x}</script><p>用到了积分审敛法，说实话有点超纲……</p>
+<h1 id="第二届"><a href="#第二届" class="headerlink" title="第二届"></a>第二届</h1><h2 id="极限技巧"><a href="#极限技巧" class="headerlink" title="极限技巧"></a>极限技巧</h2><p><strong>问题</strong>：</p>
+<p>设$x_n=$ $(1+a)$ · $(1+a^2)$ $\cdots$ $(1+a^{2^n})$，其中$|a|&lt;1$，求$\lim\limits_{n\rightarrow+\infty}x_n$</p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>这一题其实并不难，但是很容易把人带入坑中，因为这种形式非常类似于取对数可以转化成积分的题，但是取完对数之后，却发现还是不容易做，而这一题其实更巧妙的方法，在这里收录一下</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+x_n&=(1+a) · (1+a^2)\cdots(1+a^{2^n})\\
+&=\frac{(1-a)(1+a) · (1+a^2)\cdots(1+a^{2^n})}{1-a}\\
+&=\frac{1-a^{2^{n+1} } }{1-a}\\
+&=\frac{1}{1-a}
+\end{aligned}</script><hr>
+<h2 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h2><ul>
+<li>和的极限判断敛散</li>
+<li>柯西收敛准则</li>
+</ul>
+<p><strong>问题</strong></p>
+<p>设$a_n&gt;0$，$S_n=\sum\limits_{k=1}^na_k$，证明：</p>
+<p>(1) 当 $\alpha&gt;1$ 时，级数 $\sum\limits_{n=1}^{+\infty}\dfrac{a_n}{S_n^\alpha}$ 收敛</p>
+<p>(2) 当 $\alpha\leqslant1$，且 $S_n\rightarrow\infty$ $(n\rightarrow \infty)$时，$\sum\limits_{n=1}^{+\infty}\dfrac{a_n}{S_n^\alpha}$ 发散</p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>级数的题目确实比较灵活，准备将级数放缩的方法进行一些整理，像这一题，应该是用比较审敛法，如何用放缩找到一个可以判断收敛的级数呢？这得一步步来</p>
+<p>首先第一问，这一题将 $S_i$ 转化成 $a_i$ 会让变量增多，而且这题没有其他特殊条件，所以不容易处理，那么就将 $a_n$ 转化成 $S_n-S_{n-1}$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum\limits_{n=1}^{+\infty}\frac{a_n}{S_n^\alpha}&=\sum\limits_{n=1}^{+\infty}\frac{S_n-S_{n-1} }{S_n^\alpha}\\
+\end{aligned}</script><p>到这一步我卡了很久，怎么将其进行放缩呢？在这里我进入了一个误区，认为必须要将其放缩成常见的收敛级数，例如 p级数，但是却始终无法办到，这里我忽略了另一种办法，其实可以放缩找到一个可以进行裂项求和的级数，只要它的和收敛就行，这与证明级数 $\sum\limits_{n=1}^\infty \dfrac1n$ 发散的方法类似。</p>
+<p>ok，有了这样的思路，我们就可以去寻找一个这种类型的项，其实很好发现，也就是 $S_{n-1}^{1-\alpha}-S_n^{1-\alpha}$，但是这里很难用放缩直接判断它们的大小关系，为了方便观察这里令 $m=S_n$，$n=S_{n-1}$</p>
+<p>只要证</p>
+<script type="math/tex; mode=display">
+n^{1-\alpha}-m^{1-\alpha}\geqslant\frac{m-n}{m^\alpha}</script><p>这就非常清晰了，只需要借助拉格朗日中值定理，就可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+n^{1-\alpha}-m^{1-\alpha}&=(n-m)(1-\alpha)\xi^{-\alpha}\quad\xi\in(m,n)\\
+&\geqslant(\alpha-1)(m-n)m^{-\alpha}\\
+&\geqslant\frac{m-n}{m^\alpha}
+\end{aligned}</script><p>当然正常做的时候这里构造个函数 $f(x)=x^{1-\alpha}$ ，然后利用拉格朗日中值定理</p>
+<p>因为</p>
+<script type="math/tex; mode=display">
+\sum\limits_{n=1}^\infty S_{n-1}^{1-\alpha}-S_n^{1-\alpha}=S_1^{1-\alpha}\quad\text{收敛}</script><p>所以原级数收敛</p>
+<p>第二问，由于 $\alpha\leqslant1$ 时，$\dfrac{a_n}{S_n^\alpha}$ $\geqslant\dfrac{a_n}{S_n}$</p>
+<p>所以只要证明 $\alpha=1$时发散就行了</p>
+<p>这一个就不容易求和的极限了</p>
+<p>但是，我们可以将这个级数任意截取p个数，使得这p个数能够大于零，那么取极限就会趋近于无穷了，其实就是柯西收敛准则</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum\limits_{i=n+1}^{n+p}\frac{a_i}{S_i}\geqslant\frac{1}{S_{n+p} }\sum_{i=n+1}^{n+p}a_i&=\frac{S_{n+p}-S_n}{S_{n+p} }\\
+&=1-\frac{S_n}{S_{n+p} }
+\end{aligned}</script><p>对于任意 n，总存在 $p\in\N$，使得 $\dfrac{S_{n} }{S_{n+p} }$ $\leqslant$ $\dfrac12 $</p>
+<p>即 $\sum\limits_{i=n+1}^{n+p}\dfrac{a_i}{S_i}$ $\geqslant$ $\dfrac12$</p>
+<p>所以级数 $\sum\limits_{n=1}^\infty\dfrac{a_n}{S_n}$ 发散</p>
+<h1 id="第三届"><a href="#第三届" class="headerlink" title="第三届"></a>第三届</h1><h2 id="stolz定理"><a href="#stolz定理" class="headerlink" title="stolz定理"></a>stolz定理</h2><p><strong>问题</strong></p>
+<p>设 $\{a_n\}_{n=0}^\infty$ 为数列，$a$，$\lambda$ 为有限数，求证：</p>
+<ol>
+<li>如果$\lim\limits_{n\rightarrow\infty}a_n=a$，则$\lim\limits_{n\rightarrow\infty}\dfrac{a_1+a_2+\cdots+a_n}{n} =a$；</li>
+<li>如果存在正整数 $p$，使得$\lim\limits_{n\rightarrow\infty}(a_{n+p}-a_n)=\lambda$ ，则 $\lim\limits_{n\rightarrow\infty}\dfrac{a_n}{n}$ = $\dfrac{\lambda}{p}$ </li>
+</ol>
+<hr>
+<p><strong>分析</strong></p>
+<p>第一问直接用stolz定理就行了，没啥难度</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\lim\limits_{n\rightarrow\infty}\frac{a_1+a_2+\cdots+a_n}{n}\\
+&=\lim\limits_{n\rightarrow\infty}\frac{(a_1+a_2+\cdots+a_n)-(a_1+a_2+\cdots+a_{n-1})}{n-(n-1)}\\
+&=\lim\limits_{n\rightarrow\infty}a_n\\
+&=a
+\end{aligned}</script><p>第二问就不满足stolz定理的条件了，而且这道题我们必然会想到累项求和。</p>
+<p>令 $A_n=a_{n+p}-a_n$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\qquad\lim_{n\rightarrow\infty}\frac{A_1+A_2+\cdots+A_n}{n}=\lim\limits_{n\rightarrow\infty}\frac{a_{n+p}-a_1}{n}=\lim\limits_{n\rightarrow\infty}A_n=\lambda\\
+\\
+&\Rightarrow\;\;\lim\limits_{n\rightarrow\infty}\frac{a_{n+p} }{n+p}=\lim_{n\rightarrow\infty}\frac{a_{n+p} }{n}\frac{n}{n+p}=\frac{\lambda}{p}
+\end{aligned}</script><hr>
+<h2 id="曲面积分的几何理解"><a href="#曲面积分的几何理解" class="headerlink" title="曲面积分的几何理解"></a>曲面积分的几何理解</h2><p><strong>问题</strong></p>
+<p>设函数 $f(x)$ 连续，$a,b,c$为常数，$\Sigma$ 是单位球面 $x^2+y^2+z^2=1$。记第一型曲面积分</p>
+<script type="math/tex; mode=display">
+I=\iint\limits_{\Sigma}f(ax+by+cz)dS.</script><p>求证：$I=2\pi\int_{-1}^1f(\sqrt{a^2+b^2+c^2}u)du$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>拿到这一题，直接硬解的话并不容易，我们先一步步进行分析</p>
+<p>首先，我们很容易发现 $f$ 括号里的东西发生了变化</p>
+<p>这里得分两种情况</p>
+<ul>
+<li><p>$a,b,c$全为零，显然成立</p>
+</li>
+<li><p>$a,b,c$不全为零</p>
+</li>
+</ul>
+<p>令</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\qquad ax+by+cz=\sqrt{a^2+b^2+c^2}u\\
+\\
+&\Rightarrow u=\frac{ax+by+cz}{\sqrt{a^2+b^2+c^2} }
+\end{aligned}</script><p>也就是说, $|u|$ 的几何意义就是单位球面上的点$P(x,y,z)$，到平面 $ax+by+cz=0$ 的距离</p>
+<p>而球面到过原点平面的距离 $|u|\in[0,1]$</p>
+<p>即 $-1\leqslant u\leqslant 1$</p>
+<p>我们可以将|u|,|u+du|所截的区域，被积函数范围就是$f(\sqrt{a^2+b^2+c^2}u)$，而它的面积微元$ds$其实就是定积分中旋转体面积微元</p>
+<p>为了好表示，我们这里令$v^2=\sqrt{1-u^2}$</p>
+<p>那么</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ds&=2\pi\sqrt{1-u^2}\sqrt{1+\left(\frac{dv}{du}\right)^2}du\\
+&=2\pi\sqrt{1-u^2}\frac{1}{\sqrt{1-u^2} }du\\
+&=2\pi du
+\end{aligned}</script><p>所以说 $I=2\pi\displaystyle\int_{-1}^1f(\sqrt{a^2+b^2+c^2}u)du$</p>
+<p>答案的思路也是这样，并不是从代数的角度直接去证明的，而纯代数角度进行证明也确实复杂，有时间可以再试一试</p>
+<h1 id="第四届"><a href="#第四届" class="headerlink" title="第四届"></a>第四届</h1><h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><p><strong>问题</strong></p>
+<p>求极限 </p>
+<script type="math/tex; mode=display">
+\lim\limits_{x\rightarrow+\infty}\sqrt[3]{x}\int_x^{x+1}\frac{\sin t}{\sqrt{t+\cos t} }dt</script><hr>
+<p><strong>分析</strong></p>
+<p>这一题其实并不难，因为思路比较局限，泰勒公式，洛必达肯定没法用，肯定就是夹逼定理，但是这里的难点就是如何进行放缩，把这样复杂的形式放缩简单，我们其实可以猜测极限取0，再结合正余弦函数的值域</p>
+<p>那么</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left|\sqrt[3]{x}\int_x^{x+1}\frac{\sin t}{\sqrt{t+\cos t} }dt\right|&\leqslant\sqrt[3]{x}\int_x^{x+1}\frac{1}{\sqrt{t-1} }dt\\
+&=2\sqrt[3]{x}\;(\sqrt{x}-\sqrt{x-1})\\
+&=2\frac{\sqrt[3]{x} }{\sqrt{x}+\sqrt{x-1} }\rightarrow0
+\end{aligned}</script><p>问题也就解决了</p>
+<p>一般来说三角函数的放缩如果是趋近于零，那么我们可以结合泰勒级数来进行放缩，而这一题显然不可以，那么我们就可以借助它的值域来进行放缩，从而化简式子，而且像这种题极限一般都是趋向于0的.</p>
+<hr>
+<h2 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h2><p><strong>问题</strong><br>计算</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty}e^{-2x}|\sin x|dx</script><hr>
+<p><strong>分析</strong></p>
+<p>这一题比较烦的就是这个绝对值，我们没法直接用分部积分法，因为 |sinx| 的一些点导数不存在</p>
+<p>但是这种取绝对值的方法我也是第一次见，说实话，如果不看解答方法，这一题思路很难想到，简单的来说就是，在区间$[0,\infty)$上，按步长为$\pi$进行分割，达到去绝对值的目的</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int_0^{+\infty}e^{-2x}|\sin x|dx\\
+\\
+=&\sum\limits_{k=0}^\infty(-1)^k\int_{k\pi}^{(k+1)\pi}e^{-2x}\sin xdx\\
+\\
+=&\sum\limits_{k=0}^\infty\;\frac15[e^{-2(k+1)\pi}+e^{-2k\pi}]\\
+\\
+=&\frac15(e^{-2\pi}+1)\sum\limits_{k=0}^\infty e^{-2k\pi}
+\end{aligned}</script><p>下面就转化为了求 $\sum\limits_{k=1}^\infty e^{-2k\pi}$ 这个级数的值，这个就是等比级数</p>
+<p>也就是说</p>
+<script type="math/tex; mode=display">
+\sum\limits_{k=0}^\infty e^{-2k\pi}=\frac{1}{1-e^{-2\pi} }</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty}e^{-2x}|\sin x|dx=\frac{e^{2\pi}+1}{5(e^{2\pi}-1)}</script><hr>
+<h2 id="级数-1"><a href="#级数-1" class="headerlink" title="级数"></a>级数</h2><p><strong>裂项相消</strong></p>
+<p><strong>问题</strong><br>设 $\sum\limits_{n=1}^\infty a_n$ 和 $\sum\limits_{n=1}^\infty b_n$ 为正项级数</p>
+<p>(1)若 $\lim\limits_{n\rightarrow\infty}\left(\dfrac{a_n}{a_{n+1}b_n}-\dfrac{1}{b_{n+1} }\right)&gt;0$ ，则 $\sum\limits_{n=1}^\infty a_n$ 收敛</p>
+<p>(2)若 $\lim\limits_{n\rightarrow\infty}\left(\dfrac{a_n}{a_{n+1}b_n}-\dfrac{1}{b_{n+1} }\right)&lt;0$ 且 $\sum\limits_{n=1}^\infty b_n$ 发散，则 $\sum\limits_{n=1}^\infty a_n$ 发散</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>虽然作为第四届的压轴题，但是思路却非常清晰，并不是很难，但是里面的一些细节却需要注意</p>
+<p>第一问假设 $\lim\limits_{n\rightarrow\infty}\left(\dfrac{a_n}{a_{n+1}b_n}-\dfrac{1}{b_{n+1} }\right)=$ $\delta&gt;0$</p>
+<p>由极限的保号性可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\exists\;N\in N^*，\text{使得}，n\geqslant N\,\text{时}，\\
+&\frac{a_n}{a_{n+1}b_n}-\frac{1}{b_{n+1} }>\frac{\delta}{2}\\
+\Rightarrow\;&\frac{\delta}{2}\;a_{n+1}<\frac{a_n}{b_n}-\frac{a_{n+1} }{b_{n+1} }\\
+\Rightarrow\;&\frac{\delta}{2}\sum\limits_{n=1}^\infty a_n < \frac{\delta}{2}\sum\limits_{n=0}^{N-1}a_n+\sum\limits_{n=N}^\infty(\frac{a_n}{b_n}-\frac{a_{n+1} }{b_{n+1} })\\
+&=\frac{\delta}{2}\sum\limits_{n=0}^{N-1}a_n+\frac{a_N}{b_N}-\frac{a_{n+1} }{b_{n+1} }<\frac{\delta}{2}\sum\limits_{n=0}^{N-1}a_n+\frac{a_N}{b_N}
+\end{aligned}</script><p>第二问也是同样的方法，用比较审敛法即可得出</p>
+<hr>
+<h1 id="第五届"><a href="#第五届" class="headerlink" title="第五届"></a>第五届</h1><h2 id="广义积分敛散性"><a href="#广义积分敛散性" class="headerlink" title="广义积分敛散性"></a>广义积分敛散性</h2><p><strong>问题</strong></p>
+<p>注意这里证明的是绝对收敛，因为我们知道这个广义积分条件收敛，并且收敛于 $\dfrac{\pi}{2}$</p>
+<p>证明广义积分 $\displaystyle\int_0^{+\infty}\dfrac{\sin x}{x}dx$ 不是绝对收敛的</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>广义积分的敛散性证明其实可以转化成级数的敛散性证明</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\int_0^\infty\frac{|\sin x|}{x}dx
+&=\sum_{n=0}^\infty\int_{n\pi}^{(n+1)\pi}\frac{|\sin x|}{x}dx\\
+&=\sum_{n=0}^\infty a_n
+\end{aligned}</script><p>下面就通过比较审敛法证明 $\sum\limits_{n=0}^\infty a_n$ 发散即可</p>
+<p>由于</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+a_n
+&=\int_{n\pi}^{(n+1)\pi}\frac{|\sin x|}{x}dx\\
+&\geqslant\frac{1}{(n+1)\pi}\int_{n\pi}^{(n+1)\pi}|\sin x|dx\\
+&=\frac{1}{(n+1)\pi}\int_0^\pi|\sin x|dx\\
+&=\frac{2}{(n+1)\pi}
+\end{aligned}</script><p>因为 $\sum\limits_{n=0}^\infty\dfrac{2}{(n+1)\pi}$发散，所以原级数发散</p>
+<hr>
+<h2 id="不等式-含三角"><a href="#不等式-含三角" class="headerlink" title="不等式(含三角)"></a>不等式(含三角)</h2><p><strong>问题</strong></p>
+<p>设 $|f(x)|\leqslant\pi$，$f’(x)\geqslant$ $m&gt;0$ $(a\leqslant x\leqslant b)$，证明：$|\displaystyle\int_a^b\sin f(x)dx|$ $\leqslant$ $\dfrac{2}{m}$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>这一题比较烦的就是 $\sin f(x)$ 中的 $f(x)$，我们可以选择将其代换掉，但这里为了方便些就不做代换了，还有一点就是我们必须凑出 $\dfrac{1}{m}$ 这种形式，不难发现 </p>
+<script type="math/tex; mode=display">
+\frac{1}{f'(x)}=\frac{dx}{df(x)}\leqslant \frac{1}{m}</script><p>沿着这个思路，我们就可以进行如下放缩</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+|\int_a^b\sin f(x)dx|&=|\int_a^b\sin f(x)\frac{dx}{df(x)}df(x)|\\
+&\leqslant\frac1m|\int_a^b\sin f(x)df(x)|\\
+&=\frac1m|\cos f(a)-\cos f(b)|\leqslant\frac2m
+\end{aligned}</script><hr>
+<h1 id="第六届"><a href="#第六届" class="headerlink" title="第六届"></a>第六届</h1><p><strong>这题先放一放</strong><br><strong>问题</strong></p>
+<p>设 $f$ 在 $[a,b]$ 上非负连续，严格单调，且存在 $x_n\in[a,b]$ 使得</p>
+<script type="math/tex; mode=display">
+[f(x_n)]^n=\frac{1}{b-a}\int_a^b[f(x)]^ndx</script><p>求 $\lim\limits_{n\rightarrow\infty}x_n.$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>我认为这一题难度很大</p>
+<p>根据定义域，我们知道 $x_n\in[a,b]$</p>
+<hr>
+<h2 id="极限-1"><a href="#极限-1" class="headerlink" title="极限"></a>极限</h2><p><strong>求和与积分</strong><br><strong>问题</strong><br>设</p>
+<script type="math/tex; mode=display">
+A_n=\frac{n}{n^2+1}+\frac{n}{n^2+2^2}+\cdots+\frac{n}{n^2+n^2}</script><p>求 $\lim\limits_{n\rightarrow\infty}n\left(\dfrac{\pi}{4}-A_n\right)$</p>
+<hr>
+<p><strong>分析</strong><br>首先很容易得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim\limits_{n\rightarrow\infty}A_n
+&=\lim\limits_{n\rightarrow\infty}\frac1n\sum_{k=1}^n\frac{1}{1+(\frac {k}{n})^2}\\
+&=\int_0^1\frac{1}{1+x^2}dx\\
+&=\frac{\pi}{4}
+\end{aligned}</script><p>将它转化为积分与和的形式</p>
+<p>即</p>
+<script type="math/tex; mode=display">
+\frac{\pi}{4}=\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}\frac{1}{1+x^2}dx</script><script type="math/tex; mode=display">
+A_n=\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}\frac{1}{1+(\frac{i}{n})^2}dx</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\lim\limits_{n\rightarrow\infty}n\left(\frac{\pi}{4}-A_n\right)\\
+=&\lim\limits_{n\rightarrow\infty}n\left(\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}(\frac{1}{1+x^2}-\frac{1}{1+(\frac{i}{n})^2})dx\right)\\
+=&\lim\limits_{n\rightarrow\infty}n\left(\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}(f(x)-f(\frac{i}{n})dx\right)\\
+=&\lim\limits_{n\rightarrow\infty}n\left(\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}f'(\xi)(x-\frac{i}{n})dx\right)
+\end{aligned}</script><p>这里没法直接用积分中值定理，需要用到介值定理，</p>
+<p>因为 $f’(x)$在定义域上连续，则$m\leqslant f’(x)\leqslant M$</p>
+<p>而</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&M\int_\frac{i-1}{n}^\frac{i}{n}(x-\frac{i}{n})dx\leqslant\int_\frac{i-1}{n}^\frac{i}{n}f'(\xi)(x-\frac{i}{n})dx\leqslant m\int_\frac{i-1}{n}^\frac{i}{n}(x-\frac{i}{n})dx\\
+\Rightarrow&m\leqslant-2n^2\int_\frac{i-1}{n}^\frac{i}{n}f'(\xi)(x-\frac{i}{n})dx\leqslant M
+\end{aligned}</script><p>所以存在 $f’(\eta)$，使得 $f’(\eta)$ $=-2n^2\displaystyle\int_\frac{i-1}{n}^\frac{i}{n}f’(\xi)(x-\frac{i}{n})dx$ 成立</p>
+<p>其中 $\eta\in[x,\dfrac{i}{n}]$</p>
+<p>那么就可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\lim\limits_{n\rightarrow\infty}n\left(\sum_{i=1}^n\int_\frac{i-1}{n}^\frac{i}{n}f'(\xi)(x-\frac{i}{n})dx\right)\\
+=&\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\eta)\\
+\end{aligned}</script><p>然后用夹逼定理就可以得到</p>
+<script type="math/tex; mode=display">
+\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\frac{i-1}{n})\leqslant\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\eta)\leqslant\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\frac{i}{n})</script><p>而</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\frac{i-1}{n})&=\lim\limits_{n\rightarrow\infty}-\frac{1}{2n}\sum_{i=1}^nf'(\frac{i}{n})\\
+&=-\frac12\int_0^1f'(x)dx\\
+&=-\frac12[\;f(1)-f(0)\;]\\
+&=\frac14
+\end{aligned}</script><p>这一题就是把它们转化成积分与求和的形式，但是里面的一些细节还是需要注意的，比如介值定理，夹逼定理的使用</p>
+<h1 id="第七届"><a href="#第七届" class="headerlink" title="第七届"></a>第七届</h1><h2 id="反证"><a href="#反证" class="headerlink" title="反证"></a>反证</h2><p><strong>问题</strong></p>
+<p>设函数 $f$ 在 $[0,1]$ 上连续，且 $\displaystyle\int_0^1f(x)dx=0$，$\displaystyle\int_0^1xf(x)dx=1$，试证：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&(1)\;\exists\,x_0\in[0,1]，\text{使得}|f(x_0)|>4；\\
+&(2)\;\exists \,x_1\in[0,1]，\text{使得}|f(x_1)|=4.
+\end{aligned}</script><hr>
+<p><strong>分析</strong></p>
+<p>第一问要我们证明的是存在性问题，可以通过反证法，将其转化为恒成立问题</p>
+<p>也就是证明对于 $\forall\;x_0\in[0,1]$，都有 $|f(x_0)|$ $\leqslant4$ 这个命题为假就行</p>
+<p>我们令$F(x)=\displaystyle\int_0^xf(t)dt$</p>
+<p>那么我们能得到 $F(1)=0$ </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\int_0^1F(x)dx&=F(x)x\big|_0^1-\int_0^1xf(x)dx\\
+&=0-1\\
+&=-1
+\end{aligned}</script><p><strong>我们可以用待定系数法凑出</strong></p>
+<script type="math/tex; mode=display">
+a=\int_0^1(ax+b)f(x)dx\leqslant\int_0^1|ax+b||f(x)|dx\leqslant4\int_0^1|ax+b|dx=a</script><p>使得两边相等</p>
+<p>这样就可以让$\displaystyle\int_0^1|ax+b||f(x)|dx$ $=$ $4\displaystyle\int_0^1|ax+b|dx$ 恒成立</p>
+<p>也就是说 $x\in[0,1]$时，$f(x)\equiv4$，这就与$\displaystyle\int_0^1f(x)dx=0$ 矛盾，那么就证出来了</p>
+<p>要说明这两个相等，只要使得 $4\displaystyle\int_0^1|ax+b|dx=a$ 即可</p>
+<p>也就是</p>
+<script type="math/tex; mode=display">
+4\int_0^1|x+\frac{b}{a}|dx=1</script><p>取一个特殊的情况，$\dfrac{b}{a}=-\dfrac12$，让 $a=1$，$b=-\dfrac12$即可</p>
+<p>当然待定系数法的步骤在草稿纸上进行即可，我们只需要直接写出构造出的不等式</p>
+<p>第二问其实就比较简单了，有了第一问的铺垫就可以得到有一点 $x_0$ 大于4，我们只要找到一个点$\xi$小于4，就可以用介值定理得到等于4的情况</p>
+<p>这里我是多项式拟合进行构造</p>
+<p>令$g(x)=F(x)-2x+2$</p>
+<p>那么<br>$g(1)=0$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\int_0^1g(x)dx&=\int_0^1F(x)dx-\int_0^1(2x-2)dx\\
+&=-1+1=0
+\end{aligned}</script><p>因为g(x)在[0,1]上连续，由积分中值定理可以得到 </p>
+<p>存在一点 $\xi\in(0,1)$ 使得 $g(\xi)$ $=$ $\displaystyle\int_0^1g(x)dx=0$ 成立</p>
+<p>得到$g(1)=g(\xi)=0$</p>
+<p>然后用罗尔定理就可以得到存在一点 $\eta$，使得 $g’(\eta)=0$</p>
+<p>即 $|f(\eta)|=2$</p>
+<p>而在区间[0,1]上又存在大于4的点，通过介值定理即可得到存在一点$x_0$，使得 $|f(x_0)|=4$ 成立</p>
+<hr>
+<h2 id="二元泰勒公式"><a href="#二元泰勒公式" class="headerlink" title="二元泰勒公式"></a>二元泰勒公式</h2><p><strong>问题</strong></p>
+<p>设 $f(x,y)$ 在 $x^2+y^2\leqslant 1$ 上，有连续的二阶导数，$f_{xx}^2+2f_{xy}^2+f_{yy}^2$ $\leqslant$ $M$，若</p>
+<script type="math/tex; mode=display">
+f(0,0)=f_x(0,0)=f_y(0,0)=0</script><p>证明：</p>
+<script type="math/tex; mode=display">
+\left|\iint\limits_{x^2+y^2\leqslant 1}f(x,y)dxdy\right|\leqslant \frac{\pi\sqrt{M} }{4}.</script><hr>
+<p><strong>分析</strong></p>
+<p>很容易看出这一题得用到二元泰勒展开</p>
+<p>将 $f(x,y)$ 在(0,0)处泰勒展开</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+|f(x,y)|&=\left|f(0,0)+\left(x\frac{\partial}{\partial x}+y\frac{\partial}{\partial y}\right)f(0,0)+\frac12\left(x\frac{\partial}{\partial x}+y\frac{\partial}{\partial y}\right)^2f(0,0)\right|\\
+&=\frac12\left(x\frac{\partial}{\partial x}+y\frac{\partial}{\partial y}\right)^2|f(\theta x,\theta y)|\\
+&=\frac12\left|x^2\frac{\partial^2}{\partial x^2}+2xy\frac{\partial^2}{\partial x\partial y}+y^2\frac{\partial^2}{\partial y^2}\right||f(\theta x,\theta y)|
+\end{aligned}</script><p>由柯西不等式可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\left|x^2\frac{\partial^2}{\partial x^2}+2xy\frac{\partial^2}{\partial x\partial y}+y^2\frac{\partial^2}{\partial y^2}\right|\\
+\\
+\leqslant&\sqrt{(x^2)^2+(\sqrt{2\,}xy)^2+(y^2)^2}\sqrt{\left(\frac{\partial^2}{\partial x^2}\right)^2+\left(\sqrt{2\,}\frac{\partial^2}{\partial x\partial y}\right)^2+\left(\frac{\partial^2}{\partial y^2}\right)^2}\\
+\\
+=&(x^2+y^2)\sqrt{\left(\frac{\partial^2}{\partial x^2}\right)^2+\left(\sqrt{2\,}\frac{\partial^2}{\partial x\partial y}\right)^2+\left(\frac{\partial^2}{\partial y^2}\right)^2}
+\end{aligned}</script><p>又因为$f_{xx}^2+2f_{xy}^2+f_{yy}^2$ $\leqslant$ $M$</p>
+<p>那么就得到了</p>
+<script type="math/tex; mode=display">
+|f(x,y)|\leqslant\frac{\sqrt{M} }{2}(x^2+y^2)</script><p>而</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left|\iint\limits_{x^2+y^2\leqslant 1}f(x,y)dxdy\right|&\leqslant\iint\limits_{x^2+y^2\leqslant 1}|f(x,y)|dxdy\\
+&\leqslant\frac{\sqrt{M} }{2}\iint\limits_{x^2+y^2\leqslant 1}(x^2+y^2)dxdy\\
+&=\frac{\sqrt{M} }{2}\int_0^{2\pi}d\theta\int_0^1r^3dr\\
+&=\frac{\pi\sqrt{M} }{4} 
+\end{aligned}</script><hr>
+<h1 id="第八届"><a href="#第八届" class="headerlink" title="第八届"></a>第八届</h1><h2 id="双中值"><a href="#双中值" class="headerlink" title="双中值"></a>双中值</h2><p><strong>问题</strong><br>设函数 $f(x)$ 在区间 [0,1]上连续，且</p>
+<script type="math/tex; mode=display">
+I=\int_0^1f(x)dx\neq0.</script><p>证明：在 $(0,1)$内存在不同的两点$x_1,x_2$，使得</p>
+<script type="math/tex; mode=display">
+\frac{1}{f(x_1)}+\frac{1}{f(x_2)}=\frac{2}{I}</script><hr>
+<p><strong>分析</strong></p>
+<p>首先这一题，我们可以很容易看出这是一道双中值问题</p>
+<p>那么我们就可以将区间拆成两份</p>
+<script type="math/tex; mode=display">
+I=\int_0^1f(x)dx=\int_0^cf(x)dx+\int_c^1f(x)dx</script><p>然后通过积分中值定理可以得到</p>
+<script type="math/tex; mode=display">
+\int_0^cf(x)dx=cf(x_1)</script><script type="math/tex; mode=display">
+\int_c^1f(x)dx=(1-c)f(x_2)</script><p>也就是说</p>
+<script type="math/tex; mode=display">
+\frac{1}{f(x_1)}+\frac{1}{f(x_2)}=\frac{c}{\displaystyle\int_0^cf(x)dx}+\frac{1-c}{\displaystyle\int_c^1f(x)dx}=\frac{2}{I}</script><p>我们就需要找到一个c，使其能够满足$\displaystyle\int_0^cf(x)dx=$ $\dfrac{I}{2}$ 即可</p>
+<p>可是这儿怎么找呢？</p>
+<p>为了好表示，我们令 $F(x)=\displaystyle\int_0^xf(t)dt$</p>
+<p>那么就可以得到 $F(0)=0$，$F(1)=I\neq0$</p>
+<p>那么由介值定理我们就可以找到一点 $\xi$，使其满足c的条件</p>
+<p>那么就证明出来了</p>
+<hr>
+<h2 id="傅里叶级数"><a href="#傅里叶级数" class="headerlink" title="傅里叶级数"></a>傅里叶级数</h2><p><strong>问题</strong></p>
+<p>设 $f(x)$在$(-\infty,+\infty)$上可导，且</p>
+<script type="math/tex; mode=display">
+f(x)=f(x+2)=f(x+\sqrt{3}).</script><p>用傅里叶级数理论证明$f(x)$为常数。</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>傅里叶级数其实并不是太熟悉，这么多竞赛试题下来，就这么一道傅里叶级数的证明题，因此将它收录下来，也许不难，但是也能帮助我更好的运用</p>
+<p>由题可得 $f(x)$的周期为 $\sqrt{3}$ 和 2</p>
+<p>傅里叶系数为</p>
+<script type="math/tex; mode=display">
+a_n=\int_{-1}^1f(x)\cos n\pi xdx\\
+b_n=\int_{-1}^1f(x)\sin n\pi xdx</script><p>再由 $f(x)=f(x+\sqrt{3})$ 可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+a_n&=\int_{-1}^1f(x)\cos n\pi xdx\\
+&=\int_{-1}^1f(x+\sqrt{3})\cos n\pi xdx\\
+&\xlongequal{t=x+\sqrt{3} }\int_{-1+\sqrt{3} }^{1+\sqrt{3} }f(t)\cos n\pi(t-\sqrt{3})dt\\
+&=\int_{-1+\sqrt{3} }^{1+\sqrt{3} }f(t)[\;\cos n\pi t\cos\sqrt{3}n\pi +\sin n\pi t\sin\sqrt{3}n\pi \;]dt\\
+&=\cos\sqrt{3}n\pi\int_{-1+\sqrt{3} }^{1+\sqrt{3} }\cos n\pi tdt+\sin\sqrt{3}n\pi\int_{-1+\sqrt{3} }^{1+\sqrt{3} }\sin n\pi tdt\\
+&=\cos\sqrt{3}n\pi\int_{-1}^1\cos n\pi tdt+\sin\sqrt{3}n\pi\int_{-1}^1\sin n\pi tdt 
+\end{aligned}</script><p>所以说 $a_n=a_n\cos\sqrt{3}n\pi+b_n\sin\sqrt{3}n\pi$</p>
+<p>同理可得 $b_n=b_n\cos\sqrt{3}n\pi-a_n\sin\sqrt{3}n\pi$</p>
+<p>联立方程就可以得到$a_n=b_n=0$ $(n=1,2\cdots)$</p>
+<p>所以 $f(x)=\dfrac{a_0}{2}$</p>
+<h1 id="第九届"><a href="#第九届" class="headerlink" title="第九届"></a>第九届</h1><h2 id="不等式（取二次积分）"><a href="#不等式（取二次积分）" class="headerlink" title="不等式（取二次积分）"></a>不等式（取二次积分）</h2><p><strong>问题</strong></p>
+<p>设函数 $f(x)&gt;0$ 且在实轴上连续，若对任意实数t，有 $\displaystyle\int_{-\infty}^{+\infty}e^{-|t-x|}f(x)dx$ $\leqslant1$，证明：$\forall$ $a,b$，$a &lt; b$，有</p>
+<script type="math/tex; mode=display">
+\int_a^bf(x)dx\leqslant\frac{b-a+2}{2}</script><hr>
+<p><strong>分析</strong></p>
+<p>这一题我们会想到按t进行划分，从而达到去绝对值的目的，但是尝试之后发现很难继续下去了，这里我们肯定不能让积分区域从负无穷到正无穷，这就太宽泛了，因此取积分a-b，而这里运用的方法就非常巧妙</p>
+<p>两边同时积分，转化成二次积分</p>
+<script type="math/tex; mode=display">
+\int_a^b\left[\int_a^be^{-|t-x|}f(x)dx\right]dt\leqslant\int_a^b1·dx=b-a</script><p>那么这里就可以先对t积，再对x积</p>
+<script type="math/tex; mode=display">
+\int_a^b\left[\int_a^be^{-|t-x|}f(x)dx\right]dt=\int_a^bf(x)dx\int_a^be^{-|t-x|}dt</script><p>这样的好处就是消去t这个烦人的量</p>
+<p>而</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\int_a^be^{-|t-x|}dt&=\int_a^xe^{t-x}dt+\int_x^be^{x-t}dt\\
+&=-[e^{t-x}]_a^x+[e^{x-t}]_x^b\\
+&=2-e^{a-t}-e^{t-b}
+\end{aligned}</script><p>这样就可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int_a^b(2-e^{a-t}-e^{t-b})f(x)dx\\
+=\;&2\int_a^bf(x)dx-\int_a^be^{a-t}f(x)dx-\int_a^be^{t-b}f(x)dx\\
+\leqslant\;&b-a\\
+\\
+\Rightarrow&\int_a^bf(x)dx\\
+\leqslant\;&\frac{b-a}{2}+\frac12\left(\int_a^be^{a-t}f(x)dx+\int_a^be^{t-b}f(x)dx\right)\\
+\leqslant\;&\frac{b-a}{2}+1
+\end{aligned}</script><p>证毕</p>
+<p>这一题的核心就是那个二次积分，将变量 t 先积出来，然后就能发现分离出 $\displaystyle\int_a^bf(x)$ 这个量了</p>
+<h1 id="第十届"><a href="#第十届" class="headerlink" title="第十届"></a>第十届</h1><h2 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h2><p><strong>问题</strong>:</p>
+<p>设 $f(x,y)$ 在区域 $D$ 内可微，且 $\sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2+\left(\dfrac{\partial f}{\partial y}\right)^2 }\leqslant M$ ，$A(x_1,y_1)$，$B(x_2,y_2)$是 $D$ 内两点，线段$AB$ 包含在 $D$ 内，证明：$|f(x_1,y_1)-f(x_2,y_2)|$ $\leqslant$ $M|AB|$ ，其中$|AB|$表示线段$AB$的长度<br><br></p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>拿到这一题，我们很容易明确目标，如何建立偏导数和函数之间的关系呢？很显然应该需要用到微分中值定理</p>
 <p>首先我们先观察一下$M|AB|$，这里的 $|AB|$很好表示，也就是$\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$，那么问题就可以转化成证明</p>
 <script type="math/tex; mode=display">
 |f(x_1,y_1)-f(x_2,y_2)|\leqslant\sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2+\left(\dfrac{\partial f}{\partial y}\right)^2 }\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}</script><p>进一步进行转化，用柯西不等式可以得到</p>
@@ -6316,7 +6762,10 @@ f(\frac{a+b}{2})\;\geqslant\;\frac{f(a)+f(b)}{2}</script>]]></content>
 <script type="math/tex; mode=display">
 f(x_2,y_2)-f(x_1,y_1)=f_1'(x_1-x_2)+f_2'(y_1-y_2)</script><p>那么问题也就解决了</p>
 <hr>
-<p><strong>积分定义</strong><br>证明：对连续函数$f(x)&gt;0$，有 $\ln\int_0^1 f(x)dx\geqslant\int_0^1\ln f(x)dx$.<br><br><br></p>
+<h2 id="积分定义"><a href="#积分定义" class="headerlink" title="积分定义"></a>积分定义</h2><p><strong>问题</strong>:</p>
+<p>证明：对连续函数$f(x)&gt;0$，有 $\ln\displaystyle\int_0^1 f(x)dx\geqslant\int_0^1\ln f(x)dx$.</p>
+<hr>
+<p><strong>分析</strong>:</p>
 <p>这一题我们拿到手中会很容易想到一种方法，构造辅助函数</p>
 <script type="math/tex; mode=display">
 \psi(x)=\ln\int_0^xf(t)dt-\int_0^x\ln f(t)dt</script><p>然后求导，研究单调性</p>
@@ -6334,21 +6783,236 @@ f(x_2,y_2)-f(x_1,y_1)=f_1'(x_1-x_2)+f_2'(y_1-y_2)</script><p>那么问题也就�
 <script type="math/tex; mode=display">
 \frac1n\sum\limits_{i=1}^nf(x_i)\geqslant\left(\prod\limits_{i=1}^nf(x_i)\right)^{\dfrac1n}</script><p>然后两边取极限就证出来了</p>
 <hr>
-<p><strong>级数</strong><br>已知 {$a_k$}，{$b_k$} 是正数数列，且$b_{k+1}-b_k\geqslant\delta&gt;0$，$k=1,2,\cdots$，$\delta$ 为一常数，证明：若级数 $\sum\limits_{k=1}^{+∞}a_k$ 收敛，则级数 $\sum\limits_{k=1}^{+∞}\dfrac{k\sqrt[k]{(a_1a_2\cdots a_k)(b_1b_2\cdots b_k)} }{b_{k+1}b_k}$ 收敛<br><br><br></p>
-<p>分析：这一题只需要我们判断是否收敛，那么我们会想到两种审敛法，一种是比较审敛法，一种是对数审敛法</p>
+<h2 id="级数-2"><a href="#级数-2" class="headerlink" title="级数"></a>级数</h2><p><strong>问题</strong>：</p>
+<p>已知 {$a_k$}，{$b_k$} 是正数数列，且$b_{k+1}-b_k\geqslant\delta&gt;0$，$k=1,2,\cdots$，$\delta$ 为一常数，证明：若级数 $\sum\limits_{k=1}^{+∞}a_k$ 收敛，则级数 $\sum\limits_{k=1}^{+∞}\dfrac{k\sqrt[k]{(a_1a_2\cdots a_k)(b_1b_2\cdots b_k)} }{b_{k+1}b_k}$ 收敛</p>
+<hr>
+<p><strong>分析</strong>：</p>
+<p>这一题只需要我们判断是否收敛，那么我们会想到两种审敛法，一种是比较审敛法，一种是对数审敛法</p>
 <p>如果利用比较审敛法，就必然需要用到一些不等式，而且也要充分利用 $\sum\limits_{k=1}^{+∞}a_k$收敛，和 <strong>递增正数</strong> 数列 { $b_j$ }</p>
 <p>观察所要证明的级数，可以和根号联系起来的不等式，我们很容易想到均值不等式，</p>
 <script type="math/tex; mode=display">
-\sum\limits_{i=1}^ka_i\geqslant k\left(\prod_{i=1}^ka_i\right)^{\dfrac{1}{k}}</script><p>我们发现所要证明的式子有个k，那么应该就不是写两个不等式，相乘，这样就会产生 $k^2$，就不容易处理了，那么不等式如何用才能只会产生 $k$ 呢？这里我们就可以把 $a_ib_i$看成整体</p>
+\sum\limits_{i=1}^ka_i\geqslant k\left(\prod_{i=1}^ka_i\right)^{\dfrac{1}{k} }</script><p>我们发现所要证明的式子有个k，那么应该就不是写两个不等式，相乘，这样就会产生 $k^2$，就不容易处理了，那么不等式如何用才能只会产生 $k$ 呢？这里我们就可以把 $a_ib_i$看成整体</p>
 <p>也就是</p>
 <script type="math/tex; mode=display">
-\sum\limits_{i=1}^ka_ib_i\geqslant k\left(\prod_{i=1}^ka_ib_i\right)^{\dfrac{1}{k}}</script><p>此时问题就转换成证明级数$\sum\limits_{k=1}^∞\dfrac{\sum\limits_{i=1}^ka_ib_i}{b_kb_{k+1} }<br>$收敛，这样的形式肯定就比根号下要好证了，我们一看就能发现它是收敛的。</p>
+\sum\limits_{i=1}^ka_ib_i\geqslant k\left(\prod_{i=1}^ka_ib_i\right)^{\dfrac{1}{k} }</script><p>此时问题就转换成证明级数$\sum\limits_{k=1}^∞\dfrac{\sum\limits_{i=1}^ka_ib_i}{b_kb_{k+1} }<br>$收敛，这样的形式肯定就比根号下要好证了，我们一看就能发现它是收敛的。</p>
 <p>因为数列 { $b_k$ }是正项非递减数列，所以说 $\dfrac{b_i}{b_{k+1} }\leqslant1$，$i\in[1,k-1]$ 恒成立</p>
 <p>那么</p>
 <script type="math/tex; mode=display">
 \frac{\sum\limits_{i=1}^ka_ib_i}{b_kb_{k+1} }=\sum\limits_{i=1}^{k-1}a_i\left(\frac{b_i}{b_{k+1} }\right)+a_k\leqslant\sum\limits_{i=1}^{k-1}a_i+a_k=\sum\limits_{i=1}^ka_i</script><p>又因为 $\sum\limits_{k=1}^{+∞}a_k$收敛</p>
 <p>那么根据比较收敛法，所证级数收敛</p>
-]]></content>
+<h1 id="第十一届"><a href="#第十一届" class="headerlink" title="第十一届"></a>第十一届</h1><h2 id="函数归零"><a href="#函数归零" class="headerlink" title="函数归零"></a>函数归零</h2><p><strong>问题</strong><br>设 $f(x)$ 在 $[0,+\infty]$ 上可微，$f(0)=0$，且存在常数 $A&gt;0$，使得 $|f’(x)|\leqslant A|f(x)|$ 在 $[0,+\infty]$ 上成立，试证明在 $(0,+\infty)$ 上有 $f(x)$ $\equiv0$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>这一题因为带绝对值，所以没法直接解微分方程，而观察其形式，如何让导数和函数挂钩呢，这样我们就会想到拉格朗日中值定理</p>
+<p>由拉格朗日中值定理我们可以得到</p>
+<script type="math/tex; mode=display">
+f(x)=xf'(\xi)\quad\xi\in(0,x)</script><p>那么代入题目所给的不等式，可得</p>
+<script type="math/tex; mode=display">
+|f'(x)|\leqslant Ax|f'(\xi)|</script><p>这里可以限制x的取值范围在 $[0,\dfrac{1}{2A}]$</p>
+<p>那么放缩可以得到</p>
+<script type="math/tex; mode=display">
+|f'(x)|\leqslant Ax|f'(\xi)|\leqslant \frac12|f'(\xi)|</script><p>这里假设$|f(x_0)|=\max\{|f(x)|\}$</p>
+<script type="math/tex; mode=display">
+|f(x_0)|=x_0|f'(\xi)|\leqslant \frac{1}{2A}|f'(\xi)|\leqslant\frac12|f(x_0)|</script><p>那么就得到了 $f(x)\equiv 0$ 其中 $x\in[0,\dfrac{1}{2A}]$</p>
+<p>下面进行解析延拓</p>
+<p>由于得到$f(\dfrac{1}{2A})=0$<br>那么就可以递推出在区间 $[\dfrac{1}{2A},\dfrac{2}{2A}]$ 上</p>
+<p>$f(x)\equiv 0$也成立</p>
+<p>一直递推可得到在所有 $x\in[\dfrac{i}{2A},\dfrac{i+1}{2A}]$ ( 其中 $i=0,1,2\cdots$ ) 上</p>
+<p>$f(x)\equiv0$都成立</p>
+<p>所以说$f(x)\equiv0$</p>
+<hr>
+<h2 id="积分转化（曲面积分）"><a href="#积分转化（曲面积分）" class="headerlink" title="积分转化（曲面积分）"></a>积分转化（曲面积分）</h2><p><strong>问题</strong><br>计算积分</p>
+<script type="math/tex; mode=display">
+I=\int_0^{2\pi}d\phi\int_0^\pi e^{\sin\theta(\cos\phi-\sin\phi)}\sin\theta d\theta</script><hr>
+<p><strong>分析</strong></p>
+<p>这道题的方法非常巧妙</p>
+<p>首先我们很难直接入手这道题，交换积分次序也并不好求，这一题用到的方法是将其转化成第一类曲面积分的形式，为什么想到转化成第一类曲面积分呢？其实它可以通过通过几何意义转化成定积分的形式，这一点我们可以参照第三届的一道曲面积分的证明题。</p>
+<p>当然这一题我们也很容易发现它形式的特殊性，进而联想到，球面的参数方程</p>
+<p>因此我们令<br>$x=\sin\theta\cos\phi$，$y=\sin\theta\sin\phi$，$z=\cos\theta$</p>
+<p>我们可以得到球面的面积微元</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+dS&=\sqrt{1+f_x^2+f_y^2}dxdy\\
+&=\sqrt{\frac{1}{z^2} }\;\frac{\partial(x,y)}{\partial(\theta.\phi)}\;d\theta d\phi\\
+&=\sin\theta d\theta d\phi
+\end{aligned}</script><p>那么原式就可以转化成</p>
+<script type="math/tex; mode=display">
+\iint\limits_{\Sigma}e^{x-y}dxdy</script><p>这里有这样一个结论</p>
+<script type="math/tex; mode=display">
+\iint\limits_{\Sigma}f(ax+by+cz)dS=2\pi\int_{-1}^1f(\sqrt{a^2+b^2+c^2}u)du</script><p>具体推导方法参照第三届曲面积分证明题</p>
+<p>那么根据公式我们很容易得到</p>
+<script type="math/tex; mode=display">
+\iint\limits_{\Sigma}e^{x-y}=2\pi\int_{-1}^1e^{\sqrt{2}u}du=\sqrt{2}\pi(e^{\sqrt{2} }-e^{-\sqrt{2} })</script><hr>
+<h2 id="极限-2"><a href="#极限-2" class="headerlink" title="极限"></a>极限</h2><p><strong>问题</strong></p>
+<p>设 $f(x)$ 是仅有正实根的多项式函数，满足</p>
+<script type="math/tex; mode=display">
+\frac{f'(x)}{f(x)}=-\sum\limits_{n=0}^{+\infty}c_n x^n</script><p>证明：$c_n&gt;0$ $(n\geq0)$，极限 $\lim\limits_{n\rightarrow+\infty}\dfrac{1}{\sqrt[n]{c_n} }$存在，且等于 $f(x)$的最小根</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>注意到这里 $f(x)$ 是仅有正实根的多项式，这一点非常特殊，我们可以直接设出$f(x)$的形式</p>
+<p>设</p>
+<script type="math/tex; mode=display">
+f(x)=A(x-a_1)^{k_1}(x-a_2)^{k_2}\cdots(x-a_m)^{k_m}</script><p>并且 $a_1,a_2,\cdots a_n$ 按从小到大排列</p>
+<p>这样设的好处是可以表示重根的情况，且更具有一般性</p>
+<p>首先由于 <strong>$f(x)$ 在分母</strong>，所以可以得到 $f(x)$的定义域为$x\neq a_1,\cdots a_n$</p>
+<p>要时刻注意函数的定义域</p>
+<p>我们就可以进行如下化简</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{f'(x)}{f(x)}&=\frac{d\ln|f(x)|}{dx}\\
+&=(\ln|A|+k_1\ln|x-a_1|\cdots k_m\ln|x-a_m|)'\\
+&=\frac{k_1}{x-a_1}+\frac{k_2}{x-a_2}+\cdots+\frac{k_m}{x-a_m}
+\end{aligned}</script><p>那现在怎么样才能和右边建立等号，并且和 $c_n$建立联系呢？</p>
+<p>其实我们可以发现右方的无穷级数其实就类似于 $\sum\limits_{n=0}^\infty x^n$ $=\dfrac{1}{1-x}$</p>
+<p>在跟左面进行比较就可以变换其形式</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{f'(x)}{f(x)}&=-\left(\;\frac{k_1}{a_1}\;\frac{1}{1-\frac{x}{a_1} }+\frac{k_2}{a_2}\;\frac{1}{1-\frac{x}{a_2} }+\cdots+\frac{k_m}{a_m}\;\frac{1}{1-\frac{x}{a_m} }\;\right)\\
+\\
+&=-\left[\;\frac{k_1}{a_1}\;\sum\limits_{n=0}^\infty\left(\frac{x}{a_1}\right)^n+\frac{k_2}{a_2}\;\sum\limits_{n=0}^\infty\left(\frac{x}{a_2}\right)^n+\cdots+\frac{k_m}{a_m}\;\sum\limits_{n=0}^\infty\left(\frac{x}{a_m}\right)^n\;\right]\\
+&=-\sum\limits_{n=0}^\infty(k_1a_1^{1-n}+k_2a_2^{1-n}+\cdots+k_ma_m^{1-n})x^n
+\end{aligned}</script><p>所以就可以得到</p>
+<script type="math/tex; mode=display">
+c_n=k_1a_1^{1-n}+k_2a_2^{1-n}+\cdots+k_ma_m^{1-n}</script><p>题目要求的是 $\lim\limits_{n\rightarrow+\infty}\dfrac{1}{\sqrt[n]{c_n} }$ 这个极限</p>
+<p>因为分数不太好研究，所以我们就来研究一下 $\lim\limits_{n\rightarrow+\infty}\sqrt[n]{c_n}$ 的值，然后取倒数即可</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim\limits_{n\rightarrow+\infty}\sqrt[n]{c_n}&=\lim\limits_{n\rightarrow+\infty}\exp(\,{\frac{\ln c_n}{n} }\,)\\
+&=\lim\limits_{n\rightarrow+\infty}\exp[\,{\frac{\ln c_n-\ln c_{n-1} }{n-(n-1)} }\,]\\
+&=\lim\limits_{n\rightarrow+\infty}\exp[\,\ln\frac{k_1a_1^{1-n}+k_2a_2^{1-n}+\cdots+k_ma_m^{1-n}}{k_1a_1^{2-n}+k_2a_2^{2-n}+\cdots+k_ma_m^{2-n}} \,]\\
+&=\frac{1}{a_1}
+\end{aligned}</script><p>这里面用了stolz定理，考试中用的话要在之前说明一下</p>
+<p>那么就得到了 $\lim\limits_{n\rightarrow+\infty}\dfrac{1}{\sqrt[n]{c_n} }=a_1$</p>
+<p>其中 $a_1$ 为 $f(x)$ 最小根</p>
+<h1 id="第十二届"><a href="#第十二届" class="headerlink" title="第十二届"></a>第十二届</h1><h2 id="积分和求和"><a href="#积分和求和" class="headerlink" title="积分和求和"></a>积分和求和</h2><p><strong>问题</strong></p>
+<p><strong>三角函数</strong><br><strong>取整函数的处理</strong></p>
+<p>证明</p>
+<script type="math/tex; mode=display">
+f(n)=\sum\limits_{m=1}^n\int_0^m\cos\frac{2\pi n[x+1]}{m}dx</script><p>等于 n 的所有因子（包括1和n本身之和），其中$[x+1]$表示不超过 $x+1$ 的最大整数，并且计算 $f(2021)$</p>
+<hr>
+<p><strong>分析</strong></p>
+<p>这里因为有取整函数，所以我们需要将积分区间进行拆分</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int_0^m\cos\frac{2\pi n[x+1]}{m}dx\\
+=&\sum_{k=1}^m\int_{k-1}^k\cos\frac{2\pi nk}{m}dx\\
+=&\sum_{k=1}^m\cos\frac{2\pi n}{m}k
+\end{aligned}</script><p>首先先看 $\dfrac{2\pi n}{m}k$ </p>
+<p>1.如果m是n的因子</p>
+<p>那么就可以得到 $\dfrac{2\pi n}{m}k$ 是 $2\pi$ 的整数倍，即可得到 $\cos\dfrac{2\pi n}{m}k=1$</p>
+<p>$<br>\therefore\;\displaystyle\int_0^m\cos\frac{2\pi n[x+1]}{m}dx=m<br>$</p>
+<p>2.如果m不是n的因子</p>
+<p>那么为了表达简便，令 $\dfrac{2\pi n}{m}=t$</p>
+<p>即可得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int_0^m\cos\frac{2\pi n[x+1]}{m}dx\\
+=&\sum_{k=1}^m\cos tk\\
+=&\cos t+\cos 2t+\cdots+\cos mt
+\end{aligned}</script><p>那么怎么化简 $\cos t+\cos 2t+\cdots+\cos mt$ 呢？</p>
+<ul>
+<li>方法一<br><strong>积化和差</strong></li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\cos t+\cos 2t+\cdots+\cos mt\\
+=&\frac{(\cos t+\cos 2t+\cdots+\cos mt)\sin t}{\sin t}\\
+=&\frac{(\sin 2t-\sin 0)+(\sin3t-\sin t)+(\sin 4t-\sin 2t)+\cdots+[\sin (m+1)t-\sin (m-1)t]}{2\sin t}\\
+=&\frac{\sin(m+1)t+\sin mt-\sin t}{2\sin t}\\
+=&\frac{\sin mt\cos t+\sin t\cos mt+\sin mt-\sin t}{2\sin t}\\
+\xlongequal{t=\frac{2\pi n}{m} }&\frac{\sin m\frac{2\pi n}{m}\cos \frac{2\pi n}{m}+\sin \frac{2\pi n}{m}\cos m\frac{2\pi n}{m}+\sin m\frac{2\pi n}{m}-\sin \frac{2\pi n}{m} }{2\sin \frac{2\pi n}{m} }\\
+=&0
+\end{aligned}</script><ul>
+<li>方法二<br><strong>欧拉公式</strong></li>
+</ul>
+<p>利用 $e^{ix}=\cos x+i\sin x$</p>
+<p>可以得到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+e^{it}+e^{2it}+\cdots+e^{mit}&=(\cos t+\cos2t+\cdots+\cos mt)+i(\sin t+\sin2t+\cdots+\sin mt)\\
+&=\frac{e^{it}(1-e^{mit})}{1-e^{it} }
+\end{aligned}</script><p>又因为 $1-e^{it}=1-\cos x-i\sin x$</p>
+<p>那么</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&[(\cos t+\cos2t+\cdots+\cos mt)+i(\sin t+\sin2t+\cdots+\sin mt)](1-\cos x-i\sin x)\\
+=&e^{it}(1-e^{mit})\\
+=&(\cos t+i\sin t)(1-\cos mt-i\sin mt)
+\end{aligned}</script><p>然后实部虚部进行比对解方程得到</p>
+<p>不过还是推荐 <strong>第一种方法</strong></p>
+<p>这里面我们就得到了如果m不是n的因子，那么$f(n)=0$</p>
+<p>那么也就是说不是其因子的数都是零，使其因子的数其值就等于因子本身</p>
+<p>所以也就证明出来了</p>
+<p>下面又让我们求 $f(2021)$的值</p>
+<p>这就比较无聊了，我们需要找出它的因子：1,43,47,2021</p>
+<p>所以说$f(2021)=1+41+47+2021=2112$</p>
+<p>这题其实就是套了一个积分的壳子，本质其实是三角函数的一些运算</p>
+<hr>
+<h2 id="级数-3"><a href="#级数-3" class="headerlink" title="级数"></a>级数</h2><p><strong>数列极限</strong></p>
+<p><strong>问题</strong></p>
+<p>设</p>
+<script type="math/tex; mode=display">
+u_n=\int_0^1\frac{dt}{\left(1+t^4\right)^n}\quad(n\geqslant 1)</script><p>(1) 证明数列 {$u_n$} 收敛，并求极限 $\lim\limits_{n\rightarrow\infty}u_n$</p>
+<p>(2) 证明级数 $\sum\limits_{n=1}^\infty(-1)^nu_n$ 条件收敛</p>
+<p>(3) 证明当 $p\geqslant 1$ 时，级数 $\sum\limits_{n=1}^\infty \dfrac{u_n}{n^p}$收敛，并求级数 $\sum\limits_{n=1}^\infty\dfrac{u_n}{n}$ 的和</p>
+<p>第一小问并不难，因为我们可以很容易发现它的极限应该是趋向于0的，所亦可以用极限定义来解决</p>
+<p>$\forall \epsilon&gt;0$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+u_n=\int_0^1\frac{dt}{(1+t^4)^n}
+&=\int_0^{\frac{\epsilon}{2} }\frac{dt}{(1+t^4)^n}+\int_{\frac{\epsilon}{2} }^1\frac{dt}{(1+t^4)^n}\\
+&\leqslant\frac{\epsilon}{2}+\int_{\frac{\epsilon}{2} }^1\frac{dt}{[1+(\frac{\epsilon}{2})^4]^n}\\
+&\leqslant\frac{\epsilon}{2}+\frac{1-\dfrac{\epsilon}{2} }{[1+(\frac{\epsilon}{2})^4]^n}
+\end{aligned}</script><p>对于 $\exists N\in N^*$ ，当 $x&gt;N$ 时，有</p>
+<script type="math/tex; mode=display">
+\frac{1-\dfrac{\epsilon}{2} }{[1+(\frac{\epsilon}{2})^4]^n}<\frac{\epsilon}{2}</script><p>即 $u_n&lt;\epsilon$</p>
+<p>所以说就得到了 $\lim\limits_{n\rightarrow\infty}u_n=0$</p>
+<p>第二问</p>
+<p>首先说明它单调递减，很简单就不写了，然后再又因为 $\lim\limits_{n\rightarrow \infty} u_n=0$</p>
+<p>所以现在只要证明 $\sum\limits_{n=0}^\infty u_n$ 发散就行</p>
+<p>像这种题目一般都是用比较审敛法</p>
+<p>这一题也很容得到放缩方法</p>
+<script type="math/tex; mode=display">
+u_n=\int_0^1\frac{dt}{(1+t^4)^n}\geqslant \int_0^1\frac{dt}{(1+t)^n}=\frac{1}{n-1}(1-2^{1-n})</script><p>$\sum\limits_{n=2}^\infty\dfrac{1}{n-1}$ 发散，而级数$\sum\limits_{n=2}^\infty\dfrac{1-2^{1-n}}{n-1}$ 收敛，（可以用比值审敛法得出）</p>
+<p>那么就得到了 $\sum\limits_{n=2}^\infty\dfrac{1}{n-1}(1-2^{1-n})$ 发散</p>
+<p>所以说原级数条件收敛</p>
+<p>第三问</p>
+<p>这里只需要考虑p=1时是否收敛就行，当p&gt;1时，可以用比较审敛法得出.</p>
+<p>注意到这一题后面还有求级数的和，那么就不能简单的放缩了，得具体一点。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+u_n&=\int_0^1\frac{dt}{(1+t^4)^n}\\
+&=\int_0^1(1+t^4)^{1-n}dt-\frac14\int_0^1\frac{t}{(1+t^4)^n}d(t^4+1)\\
+&=\frac1n\int_0^1(1+t^4)^{1-n}dt-\frac{1}{4n}\int_0^1t\;d(t^4+1)^{1-n}\\
+&=\int_0^1(1+t^4)^{1-n}dt-\frac{1}{4(n-1)}\left[t(t^4+1)^{1-n}\bigg|_0^1-\int_0^1(1+t^4)^{1-n}dt\right]\\
+&=u_{n-1}+\frac{1}{4(n-1)}[2^{1-n}-u_{n-1}]
+\end{aligned}</script><p>不过这样似乎很难看出有什么递推关系，因为这种题最好能出现两数之差的形式，这样可以有利于求和</p>
+<p>稍微整理一下</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&u_{n-1}=4(n-1)(u_{n-1}-u_n)+2^{1-n}\\
+\Rightarrow&u_n=4n(u_n-u_{n+1})+2^{-n}
+\end{aligned}</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum\limits_{n=1}^\infty\frac{u_n}{n}&=\sum\limits_{n=1}^\infty\frac{1}{ n\;2^{n} }+4\sum\limits_{n=1}^\infty(u_n-u_{n+1})\\
+&=\sum\limits_{n=1}^\infty\frac{1}{ n\;2^{n} }+4u_1
+\end{aligned}</script><p>那么下面只要求出 $\sum\limits_{n=1}^\infty\dfrac{1}{ n\;2^{n} }$ 即可</p>
+<p>易知</p>
+<script type="math/tex; mode=display">
+\int\frac{1}{1-x}dx=-\ln(1-x)=\sum\limits_{n=0}^\infty\frac{1}{n+1}x^{n+1}</script><p>所以说</p>
+<script type="math/tex; mode=display">
+\sum\limits_{n=1}^\infty\frac{1}{ n\;2^{n} }=-\ln\frac12=\ln2</script><p>所以说级数 $\sum\limits_{n=1}^\infty \dfrac{u_n}{n^p}$</p>
+<p>且它的和为 $\ln2+4u_1$</p>
+<p>其中</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+u_1&=\int_0^1\frac{1}{1+t^4}dt\\
+&=\frac12\left[\int_0^1\frac{1+t^2}{1+t^4}dt+\int_0^1\frac{1-t^2}{1+t^4}dt\right]\\
+&=\frac12\left[\int_0^1\frac{d(t-\frac1t)}{(t-\frac1t)^2+2}-\int_0^1\frac{d(t+\frac1t)}{(t+\frac1t)^2-2}\right]\\
+&=\frac{\sqrt{2} }{4}\left[\arctan \frac{\sqrt{2} }{2}(t-\frac1t)-\frac12\ln\frac{(t+\frac{1}{t})-\sqrt{2} }{(t+\frac1t)+\sqrt{2} }\right]_0^1\\
+&=\frac{\sqrt{2} }{8}[\;\pi+2\ln(1+\sqrt{2})\;]
+\end{aligned}</script>]]></content>
       <categories>
         <category>高数</category>
       </categories>
