@@ -27,7 +27,7 @@
 <meta property="og:description" content="第一届格林公式问题： 已知平面区域 $D&#x3D;\{(x, y) \mid 0 \leqslant x \leqslant \pi, 0 \leqslant y \leqslant \pi\} \quad L$ 为 $D$的正向边界, 试证：  \begin{aligned} &amp;(1)\oint_{L} x e^{\sin y} d y-y e^{-\sin x} d x&#x3D;\oint_{L} x e^{">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-23T13:45:30.000Z">
-<meta property="article:modified_time" content="2021-09-02T15:56:33.745Z">
+<meta property="article:modified_time" content="2021-09-03T04:43:07.696Z">
 <meta property="article:author" content="lbl">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="高数">
@@ -222,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-02 23:56:33" itemprop="dateModified" datetime="2021-09-02T23:56:33+08:00">2021-09-02</time>
+                <time title="修改时间：2021-09-03 12:43:07" itemprop="dateModified" datetime="2021-09-03T12:43:07+08:00">2021-09-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -355,7 +355,7 @@ n^{1-\alpha}-m^{1-\alpha}&=(n-m)(1-\alpha)\xi^{-\alpha}\quad\xi\in(m,n)\\
 \begin{aligned}
 \sum\limits_{i=n+1}^{n+p}\frac{a_i}{S_i}\geqslant\frac{1}{S_{n+p} }\sum_{i=n+1}^{n+p}a_i&=\frac{S_{n+p}-S_n}{S_{n+p} }\\
 &=1-\frac{S_n}{S_{n+p} }
-\end{aligned}</script><p>对于任意 n，总存在 $p\in\N$，使得 $\dfrac{S_{n} }{S_{n+p} }$ $\leqslant$ $\dfrac12 $</p>
+\end{aligned}</script><p>对于任意 n，总存在 $p\in N$，使得 $\dfrac{S_{n} }{S_{n+p} }$ $\leqslant$ $\dfrac12 $</p>
 <p>即 $\sum\limits_{i=n+1}^{n+p}\dfrac{a_i}{S_i}$ $\geqslant$ $\dfrac12$</p>
 <p>所以级数 $\sum\limits_{n=1}^\infty\dfrac{a_n}{S_n}$ 发散</p>
 <h1 id="第三届"><a href="#第三届" class="headerlink" title="第三届"></a>第三届</h1><h2 id="stolz定理"><a href="#stolz定理" class="headerlink" title="stolz定理"></a>stolz定理</h2><p><strong>问题</strong></p>
@@ -910,7 +910,7 @@ e^{it}+e^{2it}+\cdots+e^{mit}&=(\cos t+\cos2t+\cdots+\cos mt)+i(\sin t+\sin2t+\c
 <p>所以也就证明出来了</p>
 <p>下面又让我们求 $f(2021)$的值</p>
 <p>这就比较无聊了，我们需要找出它的因子：1,43,47,2021</p>
-<p>所以说$f(2021)=1+41+47+2021=2112$</p>
+<p>所以说 f(2021)=1+41+47+2021=2112</p>
 <p>这题其实就是套了一个积分的壳子，本质其实是三角函数的一些运算</p>
 <hr>
 <h2 id="级数-3"><a href="#级数-3" class="headerlink" title="级数"></a>级数</h2><p><strong>数列极限</strong></p>
@@ -948,8 +948,8 @@ u_n=\int_0^1\frac{dt}{(1+t^4)^n}\geqslant \int_0^1\frac{dt}{(1+t)^n}=\frac{1}{n-
 \begin{aligned}
 u_n&=\int_0^1\frac{dt}{(1+t^4)^n}\\
 &=\int_0^1(1+t^4)^{1-n}dt-\frac14\int_0^1\frac{t}{(1+t^4)^n}d(t^4+1)\\
-&=\frac1n\int_0^1(1+t^4)^{1-n}dt-\frac{1}{4n}\int_0^1t\;d(t^4+1)^{1-n}\\
-&=\int_0^1(1+t^4)^{1-n}dt-\frac{1}{4(n-1)}\left[t(t^4+1)^{1-n}\bigg|_0^1-\int_0^1(1+t^4)^{1-n}dt\right]\\
+&=\int_0^1(1+t^4)^{1-n}dt+\frac{1}{4(n-1)}\int_0^1t\;d(t^4+1)^{1-n}\\
+&=\int_0^1(1+t^4)^{1-n}dt+\frac{1}{4(n-1)}\left[t(t^4+1)^{1-n}\bigg|_0^1-\int_0^1(1+t^4)^{1-n}dt\right]\\
 &=u_{n-1}+\frac{1}{4(n-1)}[2^{1-n}-u_{n-1}]
 \end{aligned}</script><p>不过这样似乎很难看出有什么递推关系，因为这种题最好能出现两数之差的形式，这样可以有利于求和</p>
 <p>稍微整理一下</p>
