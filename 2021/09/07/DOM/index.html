@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|华文行楷:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文档对象模型（Document Object Model,简称 DOM），是W3C组织推荐的处理可扩展标记语言（HTML或XML）的标准程序接口 DOM 树graph TD  a[文档] --- b[根元素] b --- c1[元素: &amp;lthead&amp;gt] c1 --- d1[元素: &amp;lttitle&amp;gt] d1 --- e1[ 文本: &#39;&#39;标题&#39;&#39;] b --- c2[元素: &amp;ltbody">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM 基础">
+<meta property="og:url" content="https://mdreamers.github.io/2021/09/07/DOM/index.html">
+<meta property="og:site_name" content="追梦">
+<meta property="og:description" content="文档对象模型（Document Object Model,简称 DOM），是W3C组织推荐的处理可扩展标记语言（HTML或XML）的标准程序接口 DOM 树graph TD  a[文档] --- b[根元素] b --- c1[元素: &amp;lthead&amp;gt] c1 --- d1[元素: &amp;lttitle&amp;gt] d1 --- e1[ 文本: &#39;&#39;标题&#39;&#39;] b --- c2[元素: &amp;ltbody">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-07T11:42:44.000Z">
+<meta property="article:modified_time" content="2021-09-13T11:50:57.587Z">
+<meta property="article:author" content="lbl">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mdreamers.github.io/2021/09/07/DOM/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>DOM 基础 | 追梦</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">追梦</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Learning is the ladder of progress</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/09/07/DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DOM 基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-07 19:42:44" itemprop="dateCreated datePublished" datetime="2021-09-07T19:42:44+08:00">2021-09-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-13 19:50:57" itemprop="dateModified" datetime="2021-09-13T19:50:57+08:00">2021-09-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>文档对象模型</strong>（Document Object Model,简称 <strong>DOM</strong>），是W3C组织推荐的处理可扩展标记语言（HTML或XML）的标准<strong>程序接口</strong></p>
+<h1 id="DOM-树"><a href="#DOM-树" class="headerlink" title="DOM 树"></a>DOM 树</h1><pre class="mermaid">graph TD 
+a[文档] --- b[根元素]
+b --- c1[元素: &lthead&gt]
+c1 --- d1[元素: &lttitle&gt]
+d1 --- e1[ 文本: ''标题'']
+b --- c2[元素: &ltbody&gt]
+c2 --- d2[元素: &lta&gt]
+c2 --- d3[元素: &lth1&gt]
+d2 --- e2[文本: ''链接'']
+d2 --- e3[属性: href]
+d3 --- e4[文本: ''标题'']</pre>
+
+<span id="more"></span>
+<h1 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h1><h2 id="根据ID获取"><a href="#根据ID获取" class="headerlink" title="根据ID获取"></a>根据ID获取</h2><p><strong>getElementById()方法</strong></p>
+<ul>
+<li>文档页面从上往下加载，所以要把script写在标签的下面</li>
+<li><p>参数id是大小写敏感的字符串</p>
+</li>
+<li><p>返回的是一个元素对象</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> id=&quot;<span class="selector-tag">time</span>&quot;&gt;<span class="number">2019</span>-<span class="number">9</span>-<span class="number">9</span>&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="selector-tag">var</span> timier = document<span class="selector-class">.GetElementById</span>(&#x27;<span class="selector-tag">time</span>&#x27;);</span><br><span class="line">	console<span class="selector-class">.log</span>(timer);</span><br><span class="line">	console<span class="selector-class">.dir</span>(timer);//打印返回元素对象 更好的查看里面的属性和方法</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="根据标签名获取"><a href="#根据标签名获取" class="headerlink" title="根据标签名获取"></a>根据标签名获取</h2><p><strong>getElemtsByTagName()方法</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ol = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;ol&#x27;</span>);</span><br><span class="line">ol.getElementsByTagName(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="H5新增获取方式"><a href="#H5新增获取方式" class="headerlink" title="H5新增获取方式"></a>H5新增获取方式</h2><p><strong>getElementsByClassName(‘类名’)方法</strong></p>
+<p>根据类名获得某些元素集合</p>
+<p><strong>querySelector（‘选择器’）方法</strong></p>
+<p>返回指定选择器的<strong>第一个</strong>元素对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> firstBox = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> nav = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#nav&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;li&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>querySelectorAll(‘选择器’)方法</strong></p>
+<p>返回指定选择器的<strong>所有</strong>元素对象</p>
+<h2 id="获取特殊元素"><a href="#获取特殊元素" class="headerlink" title="获取特殊元素"></a>获取特殊元素</h2><p><strong>获取body元素</strong></p>
+<p>document.body</p>
+<p><strong>获取html元素</strong></p>
+<p>document.documentElement</p>
+<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="事件三要素"><a href="#事件三要素" class="headerlink" title="事件三要素"></a>事件三要素</h2><ul>
+<li>事件源：事件被触发的对象</li>
+<li>事件类型：如何触发该事件</li>
+<li>事件处理程序：通过一个函数赋值的方式完成</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">button</span> id=&quot;btn&quot;&gt;点击&lt;/<span class="selector-tag">button</span>&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="selector-tag">var</span> btn = document<span class="selector-class">.getElementById</span>(&#x27;btn&#x27;);</span><br><span class="line">	btn<span class="selector-class">.onclick</span> = function() &#123;</span><br><span class="line">    	alert(&#x27;完成&#x27;)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="常见的鼠标事件"><a href="#常见的鼠标事件" class="headerlink" title="常见的鼠标事件"></a>常见的鼠标事件</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">鼠标事件</th>
+<th style="text-align:left">触发条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">onclick</td>
+<td style="text-align:left">鼠标点击左键触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmouseover</td>
+<td style="text-align:left">鼠标经过触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmouseout</td>
+<td style="text-align:left">鼠标离开触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onfocus</td>
+<td style="text-align:left">获得鼠标焦点触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onblur</td>
+<td style="text-align:left">失去鼠标焦点触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmousemove</td>
+<td style="text-align:left">鼠标移动触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmouseup</td>
+<td style="text-align:left">鼠标弹起触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmousedown</td>
+<td style="text-align:left">鼠标按下触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="操作元素"><a href="#操作元素" class="headerlink" title="操作元素"></a>操作元素</h1><h2 id="改变元素内容"><a href="#改变元素内容" class="headerlink" title="改变元素内容"></a>改变元素内容</h2><p><strong>element.innerText() 方法</strong></p>
+<p>从起始位置到终止位置的内容，但<strong>不识别html标签，同时空格和换行也会去掉</strong></p>
+<p><strong>element.innerHTML()  方法</strong></p>
+<p>起始到终止位置的全部内容，<strong>包括html标签，同时保留空格和换行</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    div.innerText = <span class="string">&#x27;2019-6-6&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="常见元素"><a href="#常见元素" class="headerlink" title="常见元素"></a>常见元素</h2><p>scr、href、title、alt等</p>
+<h2 id="表单元素的属性操作"><a href="#表单元素的属性操作" class="headerlink" title="表单元素的属性操作"></a>表单元素的属性操作</h2><p>利用DOM可以操作如下表单元素的属性：</p>
+<p>type、value、checked、selected、disabled</p>
+<h2 id="样式属性操作"><a href="#样式属性操作" class="headerlink" title="样式属性操作"></a>样式属性操作</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> element.style 行内样式操作</span><br><span class="line"><span class="number">2.</span> element.className 类名样式操作</span><br></pre></td></tr></table></figure>
+<p>行内样式操作适合 <strong>样式较少</strong> 的时候</p>
+<p>类名样式操作适合 <strong>样式较多</strong> 的时候</p>
+<h2 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h2><ol>
+<li><p><strong>获取属性值</strong></p>
+<ul>
+<li><p>element.属性：获取属性值</p>
+</li>
+<li><p>element.getAttribute(‘属性’);</p>
+<p><strong>区别：</strong></p>
+</li>
+<li><p>element.属性：获取内置属性值（元素本身自带的属性）</p>
+</li>
+<li><p>element.getAttribute(‘属性’)：主要获得自定义的属性（标准） </p>
+</li>
+</ul>
+</li>
+<li><p><strong>设置属性值</strong></p>
+<ul>
+<li>element.属性 = ‘值’</li>
+<li>element.setAttribute(‘属性’,’值’)：主要针对自定义属性</li>
+</ul>
+</li>
+<li><p><strong>移除属性</strong></p>
+<p>element.removeAttribute(‘index’)</p>
+</li>
+</ol>
+<h2 id="h5自定义属性"><a href="#h5自定义属性" class="headerlink" title="h5自定义属性"></a>h5自定义属性</h2><p>H5规定自定义属性data-开头做为属性名且赋值</p>
+<p>data-index=”2”</p>
+<p><strong>获取自定义属性方法</strong></p>
+<p>兼容性获取：element.getAttribute(‘data-index’);</p>
+<p>H5新增element.dataset.index或者element.dataset[‘index’];</p>
+<h1 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h1><p>获取元素的两种方式</p>
+<ol>
+<li>利用DOM提供的方法获取元素<ul>
+<li>document.getElementById()</li>
+<li>document.getElementByTagName()</li>
+<li>document.querySelector()</li>
+<li>缺点：逻辑性不强、繁琐</li>
+</ul>
+</li>
+<li>利用节点层级关系获取元素<ul>
+<li>利用父子兄节点关系获取元素</li>
+<li>逻辑性强，但是兼容性稍差</li>
+</ul>
+</li>
+</ol>
+<h2 id="节点概述"><a href="#节点概述" class="headerlink" title="节点概述"></a>节点概述</h2><p>节点至少拥有nodeType（节点类型）、nodeName（节点名称）和nodeValue（节点值）这三个基本属性</p>
+<ul>
+<li>元素节点 nodeType 为 1</li>
+<li>属性节点 nodeType 为 2</li>
+<li>文本节点 nodeType 为 3<strong>（文本节点包括文字、空格、换行等）</strong></li>
+</ul>
+<p>在实际开发中，节点操作主要操作的是<strong>元素节点</strong></p>
+<h2 id="节点层级"><a href="#节点层级" class="headerlink" title="节点层级"></a>节点层级</h2><h3 id="父级节点"><a href="#父级节点" class="headerlink" title="父级节点"></a>父级节点</h3><p>node.parentNode</p>
+<ul>
+<li>parentNode 属性可返回某节点的父节点，注意是<strong>最近的一个父节点</strong></li>
+<li>如果指定的节点没有父节点则返回null</li>
+</ul>
+<h3 id="子节点"><a href="#子节点" class="headerlink" title="子节点"></a>子节点</h3><p><strong>获取所有子节点</strong></p>
+<ul>
+<li><p>parentNode.<strong>childNodes</strong> <strong>（标准，不常用）</strong></p>
+<p>parentNode.childNodes得到的是集合</p>
+<p><strong>注意：</strong> 返回值里面包含了所有子节点，包含元素节点，文本节点等</p>
+<p>如果只想要获取里面的元素节点，则需要专门处理，所以<strong>不提倡使用</strong></p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; ul.childNodes.length;i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (ul.childeNodes[i].nodeType == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="comment">//此时ul.childeNodes[i]是元素节点</span></span><br><span class="line">        <span class="built_in">console</span>.log(ul.childNodes[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>parentNode.<strong>children</strong> <strong>（不标准,常用）</strong></p>
+<p>该方法可用于获取所有的<strong>子元素节点</strong></p>
+</li>
+</ul>
+<p><strong>获取第一个最后一个子节点</strong></p>
+<ul>
+<li><p>parentNode.<strong>firstChild</strong></p>
+</li>
+<li><p>parentNode.<strong>lastChild</strong></p>
+</li>
+</ul>
+<p>这是<strong>包含所有的节点</strong>的</p>
+<ul>
+<li>parentNode.<strong>firstElementChild</strong></li>
+<li>parentNode.<strong>lastElementChild</strong></li>
+</ul>
+<p>只是包含<strong>元素节点</strong></p>
+<p><strong>实际开发的写法</strong></p>
+<p><strong>parentNode.children[i];</strong></p>
+<p>最后一个子元素：parentNode.children<strong>[parentNode.children.length-1];</strong></p>
+<h3 id="兄弟结点"><a href="#兄弟结点" class="headerlink" title="兄弟结点"></a>兄弟结点</h3><p>node.<strong>nextElementSibling</strong></p>
+<p>nextElementSibling 返回当前元素下一个兄弟元素节点，找不到返回null</p>
+<p>node.<strong>previousElementSibling</strong></p>
+<p>previousElementSibling 返回当前元素上一个兄弟节点，找不到返回null</p>
+<h3 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h3><p><strong>document.createElement(‘tagName’)</strong></p>
+<h3 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h3><p>node.<strong>appendChild(child)</strong></p>
+<p>node.appendChild() 方法将一个节点添加到指定父节点的子节点列表<strong>末尾</strong></p>
+<p>node.<strong>insertBefore(child,指定元素)</strong></p>
+<p>node.insertBefore() 方法将一个节点添加父节点的指定子节点<strong>前面</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 创建节点元素节点</span></span><br><span class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"><span class="comment">//2. 添加节点 node.appendChild(child) node 父级 child 子集 </span></span><br><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line">ul.appendChild(li);</span><br><span class="line"><span class="comment">//3. 添加节点 node.insertBefore(child,指定元素)</span></span><br><span class="line"><span class="keyword">var</span> lili = <span class="built_in">document</span>.createElement(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line">ul.insertBefore(lili,ul.childre[<span class="number">0</span>]);</span><br><span class="line"><span class="comment">//4. 想要添加一个新元素：1.创建元素；2.添加元素</span></span><br></pre></td></tr></table></figure>
+<h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><p>node.<strong>removeChild(child)</strong></p>
+<p>node.removeChild() 方法从DOM 中删除一个子节点，返回删除的节点</p>
+<h3 id="复制节点"><a href="#复制节点" class="headerlink" title="复制节点"></a>复制节点</h3><p>node.<strong>cloneNode();</strong></p>
+<p><strong>注意：</strong></p>
+<p>1.如果括号为<strong>空或false</strong>，则是<strong>浅拷贝</strong>，即只复制节点本身，不克隆里面的子节点</p>
+<p>2.如果括号参数为 <strong>true</strong>，则是<strong>深度拷贝</strong>，会复制节点本身以及里面的所有子节点</p>
+<h2 id="三种创建元素的区别"><a href="#三种创建元素的区别" class="headerlink" title="三种创建元素的区别"></a>三种创建元素的区别</h2><ul>
+<li><p><strong>document.write()</strong></p>
+</li>
+<li><p><strong>document.innerHTML()</strong></p>
+</li>
+<li><p><strong>document.createElement()</strong></p>
+</li>
+</ul>
+<p>1.<strong>document.wirte()</strong> 是直接将内容写入页面的内容流，但是<strong>文档流执行完毕，则它会导致页面全部重绘</strong> </p>
+<p>2.innerHTML 是将内容写入某个DOM节点，不会导致页面全部重绘</p>
+<p>3.innerHTML 创建多个元素效率更高（<strong>不要拼接字符串，采用数组形式拼接</strong>），结构稍微复杂</p>
+<p>4.createElement() 常见多个元素效率稍低一点点，但是结构更清晰</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><ol>
+<li>document.write</li>
+<li>innerHTML</li>
+<li>createElement</li>
+</ol>
+<h2 id="增"><a href="#增" class="headerlink" title="增"></a>增</h2><ol>
+<li>appendChild</li>
+<li>innerBefore</li>
+</ol>
+<h2 id="删"><a href="#删" class="headerlink" title="删"></a>删</h2><ol>
+<li>removeChild</li>
+</ol>
+<h2 id="改"><a href="#改" class="headerlink" title="改"></a>改</h2><p>修改dom元素的属性，dom元素的内容、属性、表单的值等</p>
+<ol>
+<li>修改元素属性：src、href、title等</li>
+<li>修改普通元素内容：innerHTML、innerText</li>
+<li>修改表单元素：value、type、disabled等</li>
+<li>修改元素样式：style、className</li>
+</ol>
+<h2 id="查"><a href="#查" class="headerlink" title="查"></a>查</h2><p>主要获取查询dom元素</p>
+<ol>
+<li>DOM提供的API方法：getElementById、getElementByTagName <strong>不推荐</strong></li>
+<li>H5提供的新方法：querySelector、querySelectorAll <strong>推荐</strong></li>
+<li>利用节点操作元素：父（parentNode）、子（childen）、兄（previousElementSibling、nextElementSibling）<strong>推荐</strong></li>
+</ol>
+<h2 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h2><p>主要针对自定义属性</p>
+<ol>
+<li>setAttribute：设置dom的属性值</li>
+<li>getAttribute：得到dom的属性值</li>
+<li>removeAttribute 移除属性</li>
+</ol>
+<h2 id="事件操作"><a href="#事件操作" class="headerlink" title="事件操作"></a>事件操作</h2><p>给元素注册事件，采取 事件源.事件类型 = 事件处理程序</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">鼠标事件</th>
+<th style="text-align:left">触发条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">onclick</td>
+<td style="text-align:left">鼠标点击左键触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmouseover</td>
+<td style="text-align:left">鼠标经过触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmouseout</td>
+<td style="text-align:left">鼠标离开触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onfocus</td>
+<td style="text-align:left">获得鼠标焦点触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onblur</td>
+<td style="text-align:left">失去鼠标焦点触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmousemove</td>
+<td style="text-align:left">鼠标移动触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmouseup</td>
+<td style="text-align:left">鼠标弹起触发</td>
+</tr>
+<tr>
+<td style="text-align:left">onmousedown</td>
+<td style="text-align:left">鼠标按下触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/06/%E7%AB%9E%E8%B5%9B%E6%80%BB%E7%BB%93/" rel="prev" title="竞赛总结">
+      <i class="fa fa-chevron-left"></i> 竞赛总结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/13/DOM%E4%BA%8B%E4%BB%B6%E9%AB%98%E7%BA%A7/" rel="next" title="DOM事件高级">
+      DOM事件高级 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM-%E6%A0%91"><span class="nav-number">1.</span> <span class="nav-text">DOM 树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0"><span class="nav-number">2.</span> <span class="nav-text">获取元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AEID%E8%8E%B7%E5%8F%96"><span class="nav-number">2.1.</span> <span class="nav-text">根据ID获取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E6%A0%87%E7%AD%BE%E5%90%8D%E8%8E%B7%E5%8F%96"><span class="nav-number">2.2.</span> <span class="nav-text">根据标签名获取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#H5%E6%96%B0%E5%A2%9E%E8%8E%B7%E5%8F%96%E6%96%B9%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">H5新增获取方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E7%89%B9%E6%AE%8A%E5%85%83%E7%B4%A0"><span class="nav-number">2.4.</span> <span class="nav-text">获取特殊元素</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">3.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="nav-number">3.1.</span> <span class="nav-text">事件三要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">常见的鼠标事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0"><span class="nav-number">4.</span> <span class="nav-text">操作元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E5%85%83%E7%B4%A0%E5%86%85%E5%AE%B9"><span class="nav-number">4.1.</span> <span class="nav-text">改变元素内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%85%83%E7%B4%A0"><span class="nav-number">4.2.</span> <span class="nav-text">常见元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C"><span class="nav-number">4.3.</span> <span class="nav-text">表单元素的属性操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C"><span class="nav-number">4.4.</span> <span class="nav-text">样式属性操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7"><span class="nav-number">4.5.</span> <span class="nav-text">自定义属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#h5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7"><span class="nav-number">4.6.</span> <span class="nav-text">h5自定义属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C"><span class="nav-number">5.</span> <span class="nav-text">节点操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E6%A6%82%E8%BF%B0"><span class="nav-number">5.1.</span> <span class="nav-text">节点概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E5%B1%82%E7%BA%A7"><span class="nav-number">5.2.</span> <span class="nav-text">节点层级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%B6%E7%BA%A7%E8%8A%82%E7%82%B9"><span class="nav-number">5.2.1.</span> <span class="nav-text">父级节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E8%8A%82%E7%82%B9"><span class="nav-number">5.2.2.</span> <span class="nav-text">子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%84%E5%BC%9F%E7%BB%93%E7%82%B9"><span class="nav-number">5.2.3.</span> <span class="nav-text">兄弟结点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%8A%82%E7%82%B9"><span class="nav-number">5.2.4.</span> <span class="nav-text">创建节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9"><span class="nav-number">5.2.5.</span> <span class="nav-text">添加节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9"><span class="nav-number">5.2.6.</span> <span class="nav-text">删除节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E8%8A%82%E7%82%B9"><span class="nav-number">5.2.7.</span> <span class="nav-text">复制节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">5.3.</span> <span class="nav-text">三种创建元素的区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">6.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A2%9E"><span class="nav-number">6.2.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0"><span class="nav-number">6.3.</span> <span class="nav-text">删</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9"><span class="nav-number">6.4.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5"><span class="nav-number">6.5.</span> <span class="nav-text">查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C"><span class="nav-number">6.6.</span> <span class="nav-text">属性操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">6.7.</span> <span class="nav-text">事件操作</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lbl"
+      src="/images/wallhaven-m9q6e9.jpg">
+  <p class="site-author-name" itemprop="name">lbl</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+       <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+	<!--网易云-->
+    <div class="aplayer"
+      data-id="2773494627"
+      data-server="netease"
+      data-type="playlist"
+      data-fixed="false"
+      data-autoplay="false"
+      data-list-folded="true"
+      data-mutex="true"
+      data-order="random"
+      data-loop="all"
+      data-volume="0.4"
+      data-theme="#FADFA3"
+      date-preload="auto" >
+    </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lbl</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">170k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:35</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>
