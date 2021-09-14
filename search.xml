@@ -1,6 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>0.CSS的一些规范和特性</title>
+    <url>/2021/07/20/0-CSS%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E8%8C%83%E5%92%8C%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS代码规范"><a href="#CSS代码规范" class="headerlink" title="CSS代码规范"></a>CSS代码规范</h1><h2 id="样式格式书写"><a href="#样式格式书写" class="headerlink" title="样式格式书写"></a>样式格式书写</h2><p>(1) 紧凑格式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123; <span class="attribute">color</span>: red;<span class="attribute">font-size</span>: <span class="number">20px</span>; &#125;</span><br></pre></td></tr></table></figure></p>
+<p>(2) 展开格式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="样式大小写"><a href="#样式大小写" class="headerlink" title="样式大小写"></a>样式大小写</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">COLOR</span>: PINK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>样式选择器，属性名，属性值关键字虽然大小写都行，但最好使用 <strong>小写字母</strong> ,特殊情况除外。</p>
+<h2 id="空格规范"><a href="#空格规范" class="headerlink" title="空格规范"></a>空格规范</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>(1) 属性值前面，冒号后面，保留一个空格</p>
+<p>(2) 选择器（标签）和大括号中间保留空格</p>
+<h2 id="CSS-属性书写顺序"><a href="#CSS-属性书写顺序" class="headerlink" title="CSS 属性书写顺序"></a>CSS 属性书写顺序</h2><ol>
+<li>布局定位属性：display / position / float / clear / visibility / overflow（建议display第一个写）</li>
+<li>自身属性：width / height / margin / padding / border / background</li>
+<li>文本属性：color / font / text-decoration / text-align / vertical-align / white-space / break-word</li>
+<li>其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient…</li>
+</ol>
+<h1 id="CSS-引入方式"><a href="#CSS-引入方式" class="headerlink" title="CSS 引入方式"></a>CSS 引入方式</h1><h2 id="CSS-的三种样式表"><a href="#CSS-的三种样式表" class="headerlink" title="CSS 的三种样式表"></a>CSS 的三种样式表</h2><p>1.行内样式表（行内式）</p>
+<p>2.内部样式表（嵌入式）</p>
+<p>3.外部样式表（链接式）</p>
+<h2 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h2><p>内部样式表就是在html页面内部写样式，但是单独写到style标签内部<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0</span>00;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>&lt;style&gt; 标签里理论上可以放在HTML文档的任何地方，但一般会放在文档的&lt;head&gt; 标签中</li>
+<li>通过此种方式可以方便控制当前整个页面元素样式设置</li>
+<li>代码结构清晰，但是没有实现结构与样式完全分离</li>
+</ul>
+<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2><p>在元素标签内部的sytle属性中设定CSS样式，修改一些简单样式<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: red;font-size: 12px;&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><br>不推荐大量使用</p>
+<h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><p>适用于样式比较多的情况下，核心:样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用。</p>
+<p>引入外部样式表的步骤：<br>1.新建一个后缀名为.css的样式文件,把所有CSS代码都放到此文件中。 </p>
+<p>2.在HTML页面中，使用&lt;link&gt;标签引入这个文件。<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css文件路径&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">rel</td>
+<td style="text-align:left">定义当前文档与被链接文档之间的关系，在这里需要指定为”stylesheet”,表示被链接文档是一个样式表文件</td>
+</tr>
+<tr>
+<td style="text-align:left">href</td>
+<td style="text-align:left">定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">样式表</th>
+<th style="text-align:left">优点</th>
+<th style="text-align:left">控制范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">行内样式表</td>
+<td style="text-align:left">书写方便，权重高</td>
+<td style="text-align:left">控制一个标签</td>
+</tr>
+<tr>
+<td style="text-align:left">内部样式表</td>
+<td style="text-align:left">部分结构和样式相分离</td>
+<td style="text-align:left">控制一个页面</td>
+</tr>
+<tr>
+<td style="text-align:left">外部样式表</td>
+<td style="text-align:left">完全实现结构和样式相分离</td>
+<td style="text-align:left">控制多个页面</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CSS-的三大特性"><a href="#CSS-的三大特性" class="headerlink" title="CSS 的三大特性"></a>CSS 的三大特性</h1><blockquote>
+<p>CSS有三个非常重要的特性：层叠性、继承性、优先级。</p>
+</blockquote>
+<h2 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h2><p>相同选择器给设置的样式，此时一个样式就会覆盖（层叠）另一个冲突的样式。层叠性主要解决样式冲突的问题。</p>
+<p>层叠性原则：</p>
+<ul>
+<li>样式冲突：就近原则那个样式离结构近，就执行哪个样式</li>
+<li>样式不冲突，不会层叠。</li>
+</ul>
+<h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><p>CSS中的继承：<strong>子标签</strong> 会继承 <strong>父标签</strong> 的某些样式，如文本颜色和字号</p>
+<ul>
+<li>恰当使用继承可以简化代码，降低CSS样式的复杂性</li>
+<li>子标签可以继承父标签的样式（text-,font-,line- 以及color属性）</li>
+</ul>
+<p><strong>行高的继承</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: <span class="number">12px</span>/<span class="number">1.5</span> Microsoft YaHei</span><br><span class="line">    这个<span class="number">1.5</span>就是当前元素文字大小font-size的<span class="number">1.5</span>倍</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>行高可以跟单位也可以不跟单位</li>
+</ul>
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>当同一个元素指定多个选择器，就会有优先级产生。</p>
+<ul>
+<li>选择器相同，则执行层叠性</li>
+<li>选择器不同，则根据 <strong>选择器权重</strong> 执行</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器</th>
+<th style="text-align:left">选择器权重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">继承或*</td>
+<td style="text-align:left">0,0,0,0</td>
+</tr>
+<tr>
+<td style="text-align:left">元素选择器</td>
+<td style="text-align:left">0,0,0,1</td>
+</tr>
+<tr>
+<td style="text-align:left">类选择器，伪类选择器</td>
+<td style="text-align:left">0,0,1,0</td>
+</tr>
+<tr>
+<td style="text-align:left">ID选择器</td>
+<td style="text-align:left">0,1,0,0</td>
+</tr>
+<tr>
+<td style="text-align:left">行内样式style=””</td>
+<td style="text-align:left">1,0,0,0</td>
+</tr>
+<tr>
+<td style="text-align:left">!important 重要的</td>
+<td style="text-align:left">无穷大</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意点</strong></p>
+<ul>
+<li>权重是有4组数字组成，但是不会有进位</li>
+<li>等级判断从左向右，如果某一位数值相同，则判断下一位数值。</li>
+<li><strong>继承的权重是0</strong>,如果该元素没有直接选中，不管父元素权重多高，子元素得到的权重都是0。</li>
+</ul>
+<p><strong>权重叠加</strong>：如果是复合选择器，则会有权重叠加，需要计算权重</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>0.数据结构与算法知识储备</title>
     <url>/2021/07/25/0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="/2021/07/25/0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/frame.png"></p>
@@ -248,179 +400,6 @@
       </tags>
   </entry>
   <entry>
-    <title>0. 知识储备</title>
-    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
-<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
-<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
-<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
-<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
-<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
-<ul>
-<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
-</ul>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>0.CSS的一些规范和特性</title>
-    <url>/2021/07/20/0-CSS%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E8%8C%83%E5%92%8C%E7%89%B9%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS代码规范"><a href="#CSS代码规范" class="headerlink" title="CSS代码规范"></a>CSS代码规范</h1><h2 id="样式格式书写"><a href="#样式格式书写" class="headerlink" title="样式格式书写"></a>样式格式书写</h2><p>(1) 紧凑格式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123; <span class="attribute">color</span>: red;<span class="attribute">font-size</span>: <span class="number">20px</span>; &#125;</span><br></pre></td></tr></table></figure></p>
-<p>(2) 展开格式<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="样式大小写"><a href="#样式大小写" class="headerlink" title="样式大小写"></a>样式大小写</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">COLOR</span>: PINK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>样式选择器，属性名，属性值关键字虽然大小写都行，但最好使用 <strong>小写字母</strong> ,特殊情况除外。</p>
-<h2 id="空格规范"><a href="#空格规范" class="headerlink" title="空格规范"></a>空格规范</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>(1) 属性值前面，冒号后面，保留一个空格</p>
-<p>(2) 选择器（标签）和大括号中间保留空格</p>
-<h2 id="CSS-属性书写顺序"><a href="#CSS-属性书写顺序" class="headerlink" title="CSS 属性书写顺序"></a>CSS 属性书写顺序</h2><ol>
-<li>布局定位属性：display / position / float / clear / visibility / overflow（建议display第一个写）</li>
-<li>自身属性：width / height / margin / padding / border / background</li>
-<li>文本属性：color / font / text-decoration / text-align / vertical-align / white-space / break-word</li>
-<li>其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient…</li>
-</ol>
-<h1 id="CSS-引入方式"><a href="#CSS-引入方式" class="headerlink" title="CSS 引入方式"></a>CSS 引入方式</h1><h2 id="CSS-的三种样式表"><a href="#CSS-的三种样式表" class="headerlink" title="CSS 的三种样式表"></a>CSS 的三种样式表</h2><p>1.行内样式表（行内式）</p>
-<p>2.内部样式表（嵌入式）</p>
-<p>3.外部样式表（链接式）</p>
-<h2 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h2><p>内部样式表就是在html页面内部写样式，但是单独写到style标签内部<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0</span>00;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>&lt;style&gt; 标签里理论上可以放在HTML文档的任何地方，但一般会放在文档的&lt;head&gt; 标签中</li>
-<li>通过此种方式可以方便控制当前整个页面元素样式设置</li>
-<li>代码结构清晰，但是没有实现结构与样式完全分离</li>
-</ul>
-<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2><p>在元素标签内部的sytle属性中设定CSS样式，修改一些简单样式<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: red;font-size: 12px;&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><br>不推荐大量使用</p>
-<h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><p>适用于样式比较多的情况下，核心:样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用。</p>
-<p>引入外部样式表的步骤：<br>1.新建一个后缀名为.css的样式文件,把所有CSS代码都放到此文件中。 </p>
-<p>2.在HTML页面中，使用&lt;link&gt;标签引入这个文件。<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css文件路径&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">rel</td>
-<td style="text-align:left">定义当前文档与被链接文档之间的关系，在这里需要指定为”stylesheet”,表示被链接文档是一个样式表文件</td>
-</tr>
-<tr>
-<td style="text-align:left">href</td>
-<td style="text-align:left">定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">样式表</th>
-<th style="text-align:left">优点</th>
-<th style="text-align:left">控制范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">行内样式表</td>
-<td style="text-align:left">书写方便，权重高</td>
-<td style="text-align:left">控制一个标签</td>
-</tr>
-<tr>
-<td style="text-align:left">内部样式表</td>
-<td style="text-align:left">部分结构和样式相分离</td>
-<td style="text-align:left">控制一个页面</td>
-</tr>
-<tr>
-<td style="text-align:left">外部样式表</td>
-<td style="text-align:left">完全实现结构和样式相分离</td>
-<td style="text-align:left">控制多个页面</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="CSS-的三大特性"><a href="#CSS-的三大特性" class="headerlink" title="CSS 的三大特性"></a>CSS 的三大特性</h1><blockquote>
-<p>CSS有三个非常重要的特性：层叠性、继承性、优先级。</p>
-</blockquote>
-<h2 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h2><p>相同选择器给设置的样式，此时一个样式就会覆盖（层叠）另一个冲突的样式。层叠性主要解决样式冲突的问题。</p>
-<p>层叠性原则：</p>
-<ul>
-<li>样式冲突：就近原则那个样式离结构近，就执行哪个样式</li>
-<li>样式不冲突，不会层叠。</li>
-</ul>
-<h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><p>CSS中的继承：<strong>子标签</strong> 会继承 <strong>父标签</strong> 的某些样式，如文本颜色和字号</p>
-<ul>
-<li>恰当使用继承可以简化代码，降低CSS样式的复杂性</li>
-<li>子标签可以继承父标签的样式（text-,font-,line- 以及color属性）</li>
-</ul>
-<p><strong>行高的继承</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: <span class="number">12px</span>/<span class="number">1.5</span> Microsoft YaHei</span><br><span class="line">    这个<span class="number">1.5</span>就是当前元素文字大小font-size的<span class="number">1.5</span>倍</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>行高可以跟单位也可以不跟单位</li>
-</ul>
-<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>当同一个元素指定多个选择器，就会有优先级产生。</p>
-<ul>
-<li>选择器相同，则执行层叠性</li>
-<li>选择器不同，则根据 <strong>选择器权重</strong> 执行</li>
-</ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选择器</th>
-<th style="text-align:left">选择器权重</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">继承或*</td>
-<td style="text-align:left">0,0,0,0</td>
-</tr>
-<tr>
-<td style="text-align:left">元素选择器</td>
-<td style="text-align:left">0,0,0,1</td>
-</tr>
-<tr>
-<td style="text-align:left">类选择器，伪类选择器</td>
-<td style="text-align:left">0,0,1,0</td>
-</tr>
-<tr>
-<td style="text-align:left">ID选择器</td>
-<td style="text-align:left">0,1,0,0</td>
-</tr>
-<tr>
-<td style="text-align:left">行内样式style=””</td>
-<td style="text-align:left">1,0,0,0</td>
-</tr>
-<tr>
-<td style="text-align:left">!important 重要的</td>
-<td style="text-align:left">无穷大</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意点</strong></p>
-<ul>
-<li>权重是有4组数字组成，但是不会有进位</li>
-<li>等级判断从左向右，如果某一位数值相同，则判断下一位数值。</li>
-<li><strong>继承的权重是0</strong>,如果该元素没有直接选中，不管父元素权重多高，子元素得到的权重都是0。</li>
-</ul>
-<p><strong>权重叠加</strong>：如果是复合选择器，则会有权重叠加，需要计算权重</p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1.CSS选择器</title>
     <url>/2021/07/20/1-CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>分类</strong>： <strong>基础选择器</strong> 和 <strong>复合选择器</strong> </p>
@@ -570,6 +549,27 @@
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0. 知识储备</title>
+    <url>/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
+<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
+<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
+<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
+<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
+<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
+<ul>
+<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
+</ul>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -1780,76 +1780,6 @@ a2---a21(为边缘部分服务)</pre>
       </tags>
   </entry>
   <entry>
-    <title>1.行列式</title>
-    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
-<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
-<p><strong>例</strong><br></p>
-<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
-<p>解：由于系数行列式<br></p>
-<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
-<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
-<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
-<p>故方程组的解为：</p>
-<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
-<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
-<ul>
-<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
-</ul>
-<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
-<ul>
-<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
-</ul>
-<p><strong>其他的性质:</strong></p>
-<ul>
-<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
-</li>
-<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
-</li>
-<li><p>（方阵）$|AB|=|A||B|$</p>
-</li>
-<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
-</li>
-<li><p>$|2A|=2^n|A|$</p>
-</li>
-</ul>
-<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
-<ul>
-<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
-</ul>
-<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
-<p>下三角：</p>
-<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
-<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
-<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
-<p><strong>应用</strong>  </p>
-<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
-<ul>
-<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
-</ul>
-<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
-<li>有一块全是零的行列式</li>
-</ul>
-<hr>
-<ul>
-<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
-<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1.matplotlib入门</title>
     <url>/2021/06/24/1.matplotlib%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h1><h2 id="常见API介绍"><a href="#常见API介绍" class="headerlink" title="常见API介绍"></a>常见API介绍</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
@@ -2627,6 +2557,286 @@ a2---a21(为边缘部分服务)</pre>
       </tags>
   </entry>
   <entry>
+    <title>1.行列式</title>
+    <url>/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
+<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p><strong>例</strong><br></p>
+<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
+<p>解：由于系数行列式<br></p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
+<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
+<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
+<p>故方程组的解为：</p>
+<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
+<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
+<ul>
+<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
+</ul>
+<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
+<ul>
+<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
+</ul>
+<p><strong>其他的性质:</strong></p>
+<ul>
+<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
+</li>
+<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
+</li>
+<li><p>（方阵）$|AB|=|A||B|$</p>
+</li>
+<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
+</li>
+<li><p>$|2A|=2^n|A|$</p>
+</li>
+</ul>
+<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
+<ul>
+<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
+</ul>
+<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
+<p>下三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
+<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
+<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
+<p><strong>应用</strong>  </p>
+<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
+<ul>
+<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
+</ul>
+<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
+<li>有一块全是零的行列式</li>
+</ul>
+<hr>
+<ul>
+<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
+<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2.html5新增特性</title>
+    <url>/2021/07/21/2-html5%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="HTML5的新增特性"><a href="#HTML5的新增特性" class="headerlink" title="HTML5的新增特性"></a>HTML5的新增特性</h1><h2 id="HTML5-新增的带有语义化的标签"><a href="#HTML5-新增的带有语义化的标签" class="headerlink" title="HTML5 新增的带有语义化的标签"></a>HTML5 新增的带有语义化的标签</h2><ul>
+<li>&lt;header&gt;：头部标签</li>
+<li>&lt;nav&gt;：导航标签</li>
+<li>&lt;article&gt;：内容标签</li>
+<li>&lt;section&gt;：定义文档的某个区域</li>
+<li>&lt;aside&gt;：侧边栏标签</li>
+<li>&lt;footer&gt;：尾部标签</li>
+</ul>
+<h2 id="HTML5-新增的多媒体标签"><a href="#HTML5-新增的多媒体标签" class="headerlink" title="HTML5 新增的多媒体标签"></a>HTML5 新增的多媒体标签</h2><p>新增的多媒体标签主要包含两个：</p>
+<p>1.音频：&lt;audio&gt;</p>
+<p>2.视频：&lt;video&gt;</p>
+<p>使用它们可以很方便的在页面中嵌入音频和视频，而不再去使用flash和其他浏览器插件</p>
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>&lt;video&gt;元素支持三种视频格式：MP4、WebM、Ogg</p>
+<p><strong>1.视频：&lt;video&gt;————常见属性</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:left">视频就绪自动播放（谷歌浏览器需要添加muted来解决自动播放问题）</td>
+</tr>
+<tr>
+<td style="text-align:left">control</td>
+<td style="text-align:left">controls</td>
+<td style="text-align:left">向用户显示播放控件</td>
+</tr>
+<tr>
+<td style="text-align:left">width</td>
+<td style="text-align:left">pixels（像素）</td>
+<td style="text-align:left">设置播放器宽度</td>
+</tr>
+<tr>
+<td style="text-align:left">height</td>
+<td style="text-align:left">pixels（像素）</td>
+<td style="text-align:left">设置值播放器高度</td>
+</tr>
+<tr>
+<td style="text-align:left">loop</td>
+<td style="text-align:left">loop</td>
+<td style="text-align:left">播放完是否继续播放该视频，循环播放</td>
+</tr>
+<tr>
+<td style="text-align:left">preioad</td>
+<td style="text-align:left">auto（预加载视频）<br>none（不应加载视频）</td>
+<td style="text-align:left">规定是否预加载视频（如果有了autoplay，就忽略该属性）</td>
+</tr>
+<tr>
+<td style="text-align:left">src</td>
+<td style="text-align:left">url</td>
+<td style="text-align:left">视频url地址</td>
+</tr>
+<tr>
+<td style="text-align:left">poster</td>
+<td style="text-align:left">imgurl</td>
+<td style="text-align:left">视频等待的画面图片</td>
+</tr>
+<tr>
+<td style="text-align:left">muted</td>
+<td style="text-align:left">muted</td>
+<td style="text-align:left">静音播放</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>常见属性</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:left">音频在就绪后马上播放</td>
+</tr>
+<tr>
+<td style="text-align:left">controls</td>
+<td style="text-align:left">controls</td>
+<td style="text-align:left">向用户显示控件</td>
+</tr>
+<tr>
+<td style="text-align:left">loop</td>
+<td style="text-align:left">loop</td>
+<td style="text-align:left">循环播放</td>
+</tr>
+<tr>
+<td style="text-align:left">src</td>
+<td style="text-align:left">url</td>
+<td style="text-align:left">要播放的音频URL</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>谷歌浏览器把音频和视频自动播放都禁止了</li>
+</ul>
+<h2 id="HTML5-新增的-input-表单"><a href="#HTML5-新增的-input-表单" class="headerlink" title="HTML5 新增的 input 表单"></a>HTML5 新增的 input 表单</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">type=”email”</td>
+<td style="text-align:left">限制用户输入必须为Email类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”url”</td>
+<td style="text-align:left">限制用户输入必须为URL类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”date”</td>
+<td style="text-align:left">限制用户输入必须为日期类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”time”</td>
+<td style="text-align:left">限制用户输入必须为时间类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”month”</td>
+<td style="text-align:left">限制用户输入必须为月类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”week”</td>
+<td style="text-align:left">限制用户输入必须为周类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”number”</td>
+<td style="text-align:left">限制用户输入必须为数字类型</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”tel”</td>
+<td style="text-align:left">手机号码</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”search”</td>
+<td style="text-align:left">搜索框</td>
+</tr>
+<tr>
+<td style="text-align:left">type=”color”</td>
+<td style="text-align:left">生成一个颜色选择表单</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="HTML5-新增的表单属性"><a href="#HTML5-新增的表单属性" class="headerlink" title="HTML5 新增的表单属性"></a>HTML5 新增的表单属性</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
+<td style="text-align:left">表单拥有该属性表示其内容不能为空，必填</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>placeholder</strong></td>
+<td style="text-align:left">提示文本</td>
+<td style="text-align:left">表单的提示信息，存在默认值将不显示</td>
+</tr>
+<tr>
+<td style="text-align:left">autofocus</td>
+<td style="text-align:left">autofocus</td>
+<td style="text-align:left">自动聚焦属性，页面加载完成自动聚焦到指定表单</td>
+</tr>
+<tr>
+<td style="text-align:left">autocomplete</td>
+<td style="text-align:left">off / on</td>
+<td style="text-align:left">当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项<br>默认已经打开，如autocomplete=”on”，关闭autocomplete=”off”<br>需要放在表单内同时加上 name 属性,同时成功提交</td>
+</tr>
+<tr>
+<td style="text-align:left">multiple</td>
+<td style="text-align:left">multiple</td>
+<td style="text-align:left">可以多选文件提交</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.CSS字体与文本属性</title>
     <url>/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a>CSS 字体属性</h1><h2 id="字体系列"><a href="#字体系列" class="headerlink" title="字体系列"></a>字体系列</h2><p>CSS 使用 <strong>font-famliy</strong> 属性定义 <strong>字体</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">font</span>-famliy: Arial,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span><br></pre></td></tr></table></figure></p>
@@ -2844,216 +3054,6 @@ a2---a21(为边缘部分服务)</pre>
       </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.html5新增特性</title>
-    <url>/2021/07/21/2-html5%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="HTML5的新增特性"><a href="#HTML5的新增特性" class="headerlink" title="HTML5的新增特性"></a>HTML5的新增特性</h1><h2 id="HTML5-新增的带有语义化的标签"><a href="#HTML5-新增的带有语义化的标签" class="headerlink" title="HTML5 新增的带有语义化的标签"></a>HTML5 新增的带有语义化的标签</h2><ul>
-<li>&lt;header&gt;：头部标签</li>
-<li>&lt;nav&gt;：导航标签</li>
-<li>&lt;article&gt;：内容标签</li>
-<li>&lt;section&gt;：定义文档的某个区域</li>
-<li>&lt;aside&gt;：侧边栏标签</li>
-<li>&lt;footer&gt;：尾部标签</li>
-</ul>
-<h2 id="HTML5-新增的多媒体标签"><a href="#HTML5-新增的多媒体标签" class="headerlink" title="HTML5 新增的多媒体标签"></a>HTML5 新增的多媒体标签</h2><p>新增的多媒体标签主要包含两个：</p>
-<p>1.音频：&lt;audio&gt;</p>
-<p>2.视频：&lt;video&gt;</p>
-<p>使用它们可以很方便的在页面中嵌入音频和视频，而不再去使用flash和其他浏览器插件</p>
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>&lt;video&gt;元素支持三种视频格式：MP4、WebM、Ogg</p>
-<p><strong>1.视频：&lt;video&gt;————常见属性</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">autoplay</td>
-<td style="text-align:left">autoplay</td>
-<td style="text-align:left">视频就绪自动播放（谷歌浏览器需要添加muted来解决自动播放问题）</td>
-</tr>
-<tr>
-<td style="text-align:left">control</td>
-<td style="text-align:left">controls</td>
-<td style="text-align:left">向用户显示播放控件</td>
-</tr>
-<tr>
-<td style="text-align:left">width</td>
-<td style="text-align:left">pixels（像素）</td>
-<td style="text-align:left">设置播放器宽度</td>
-</tr>
-<tr>
-<td style="text-align:left">height</td>
-<td style="text-align:left">pixels（像素）</td>
-<td style="text-align:left">设置值播放器高度</td>
-</tr>
-<tr>
-<td style="text-align:left">loop</td>
-<td style="text-align:left">loop</td>
-<td style="text-align:left">播放完是否继续播放该视频，循环播放</td>
-</tr>
-<tr>
-<td style="text-align:left">preioad</td>
-<td style="text-align:left">auto（预加载视频）<br>none（不应加载视频）</td>
-<td style="text-align:left">规定是否预加载视频（如果有了autoplay，就忽略该属性）</td>
-</tr>
-<tr>
-<td style="text-align:left">src</td>
-<td style="text-align:left">url</td>
-<td style="text-align:left">视频url地址</td>
-</tr>
-<tr>
-<td style="text-align:left">poster</td>
-<td style="text-align:left">imgurl</td>
-<td style="text-align:left">视频等待的画面图片</td>
-</tr>
-<tr>
-<td style="text-align:left">muted</td>
-<td style="text-align:left">muted</td>
-<td style="text-align:left">静音播放</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>常见属性</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">autoplay</td>
-<td style="text-align:left">autoplay</td>
-<td style="text-align:left">音频在就绪后马上播放</td>
-</tr>
-<tr>
-<td style="text-align:left">controls</td>
-<td style="text-align:left">controls</td>
-<td style="text-align:left">向用户显示控件</td>
-</tr>
-<tr>
-<td style="text-align:left">loop</td>
-<td style="text-align:left">loop</td>
-<td style="text-align:left">循环播放</td>
-</tr>
-<tr>
-<td style="text-align:left">src</td>
-<td style="text-align:left">url</td>
-<td style="text-align:left">要播放的音频URL</td>
-</tr>
-</tbody>
-</table>
-</div>
-<ul>
-<li>谷歌浏览器把音频和视频自动播放都禁止了</li>
-</ul>
-<h2 id="HTML5-新增的-input-表单"><a href="#HTML5-新增的-input-表单" class="headerlink" title="HTML5 新增的 input 表单"></a>HTML5 新增的 input 表单</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">type=”email”</td>
-<td style="text-align:left">限制用户输入必须为Email类型</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”url”</td>
-<td style="text-align:left">限制用户输入必须为URL类型</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”date”</td>
-<td style="text-align:left">限制用户输入必须为日期类型</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”time”</td>
-<td style="text-align:left">限制用户输入必须为时间类型</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”month”</td>
-<td style="text-align:left">限制用户输入必须为月类型</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”week”</td>
-<td style="text-align:left">限制用户输入必须为周类型</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”number”</td>
-<td style="text-align:left">限制用户输入必须为数字类型</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”tel”</td>
-<td style="text-align:left">手机号码</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”search”</td>
-<td style="text-align:left">搜索框</td>
-</tr>
-<tr>
-<td style="text-align:left">type=”color”</td>
-<td style="text-align:left">生成一个颜色选择表单</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="HTML5-新增的表单属性"><a href="#HTML5-新增的表单属性" class="headerlink" title="HTML5 新增的表单属性"></a>HTML5 新增的表单属性</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">值</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">required</td>
-<td style="text-align:left">required</td>
-<td style="text-align:left">表单拥有该属性表示其内容不能为空，必填</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>placeholder</strong></td>
-<td style="text-align:left">提示文本</td>
-<td style="text-align:left">表单的提示信息，存在默认值将不显示</td>
-</tr>
-<tr>
-<td style="text-align:left">autofocus</td>
-<td style="text-align:left">autofocus</td>
-<td style="text-align:left">自动聚焦属性，页面加载完成自动聚焦到指定表单</td>
-</tr>
-<tr>
-<td style="text-align:left">autocomplete</td>
-<td style="text-align:left">off / on</td>
-<td style="text-align:left">当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项<br>默认已经打开，如autocomplete=”on”，关闭autocomplete=”off”<br>需要放在表单内同时加上 name 属性,同时成功提交</td>
-</tr>
-<tr>
-<td style="text-align:left">multiple</td>
-<td style="text-align:left">multiple</td>
-<td style="text-align:left">可以多选文件提交</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>html</category>
-      </categories>
-      <tags>
         <tag>前端</tag>
       </tags>
   </entry>
@@ -3946,6 +3946,54 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>3.方程组</title>
+    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><ul>
+<li>形式<br>$\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$<br><br>的系数行列式<br><br>$<br>D=\left|\begin{array}{ccc}<br> {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br> {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br> \vdots&amp;\vdots&amp;&amp;\vdots\\<br> {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$<br><br>则方程组有唯一解<br><br>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$<br><br>其中<br><br>$<br>D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</li>
+</ul>
+<p>证明：<br>以后补充……<br>推论:</p>
+<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
+<p>若齐次方程(2)有非零解,则$|A|=0$</p>
+<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
+<p>然后化成行最简型矩阵</p>
+<p>矩阵的 <strong><u>行</u></strong> 初等变换其实就是对应的方程组的三种变换</p>
+<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><ol>
+<li>无解<br>$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br></li>
+<li>唯一解<br>$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br></li>
+<li>无穷多解<br>$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt; n$<br><br><br> </li>
+</ol>
+<ul>
+<li><p>齐次方程组$Ax=0$<br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
+</li>
+<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
+</li>
+</ul>
+<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
+<blockquote>
+<p>基础解系其实就是齐次方程组解向量的极大无关组<br><br>不过要注意与向量组的极大无关组进行区分</p>
+<hr>
+<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
+</blockquote>
+<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><ul>
+<li><strong>例</strong><br><br>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br><br>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>  1&amp;2&amp;-1&amp;0&amp;-5\\<br>   0&amp;1&amp;-2&amp;1&amp;1\\<br>   2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;3&amp;0&amp;-3\\<br>   0&amp;1&amp;-2&amp;0&amp;1\\<br>   0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</li>
+</ul>
+<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
+<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
+</ul>
+<ul>
+<li><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>  x_1-x_2-x_3+x_4=0\\<br>  x_1-x_2+x_3-3x_4=1\\<br>  x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br> 1&amp;-1&amp;-1&amp;1&amp;0\\<br> 1&amp;-1&amp;1&amp;-3&amp;1\\<br> 1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br> 1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br> 0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br> 0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$<br><br>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}$<br><br>令$\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$</4\;\rightarrow\;方程组有无穷解$<br></li>
+</ul>
+<p>$\Rightarrow\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，后面继续拓展深入研究……</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>3.树和森林</title>
     <url>/2021/07/28/3-%E6%A0%91/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>树是n（n&geqslant;0）个结点的有限集.</p>
@@ -4178,54 +4226,6 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
-    <title>3.方程组</title>
-    <url>/2021/06/19/3.%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h1><h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><ul>
-<li>形式<br>$\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n={\large b}_1\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n={\large b}_2\qquad(1)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n={\large b}_b<br>\end{cases}<br>$<br><br>的系数行列式<br><br>$<br>D=\left|\begin{array}{ccc}<br> {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br> {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br> \vdots&amp;\vdots&amp;&amp;\vdots\\<br> {\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|\not=0<br>$<br><br>则方程组有唯一解<br><br>$\displaystyle {\large x}_1=\frac{D_1}{D},{\large x}_2=\frac{D_2}{D},\cdots, {\large x}_n=\frac{D_n}{D}$<br><br>其中<br><br>$<br>D_j=\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;\cdots&amp;{\large a}_{1 j-1}&amp;{\large b}_1&amp;{\large a}_{1 j+1}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;\cdots&amp;{\large a}_{2 j-1}&amp;{\large b}_2&amp;{\large a}_{2 j+1}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>{\large a}_{n1}&amp;\cdots&amp;{\large a}_{n j-1}&amp;{\large b}_n&amp;{\large a}_{n j+1}&amp;\cdots&amp;{\large a}_{nn}<br>\end{array}\right|<br>$</li>
-</ul>
-<p>证明：<br>以后补充……<br>推论:</p>
-<p>$<br>\begin{cases}<br>{\large a}_{11}{\large x}_1+{\large a}_{12}{\large x}_2+\cdots+{\large a}_{1n}{\large x}_n=0\\<br>{\large a}_{21}{\large x}_1+{\large a}_{22}{\large x}_2+\cdots+{\large a}_{2n}{\large x}_n=0\qquad(2)\\<br>\qquad\cdots\cdots\\<br>{\large a}_{n1}{\large x}_1+{\large a}_{n2}{\large x}_2+\cdots+{\large a}_{nn}{\large x}_n=0<br>\end{cases}<br>$<br><br><br>$|A|\not=0$,则方程只有零解</p>
-<p>若齐次方程(2)有非零解,则$|A|=0$</p>
-<h2 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h2><p>把矩阵化成行阶梯型</p>
-<p>然后化成行最简型矩阵</p>
-<p>矩阵的 <strong><u>行</u></strong> 初等变换其实就是对应的方程组的三种变换</p>
-<h2 id="n元线性方程组-Ax-b"><a href="#n元线性方程组-Ax-b" class="headerlink" title="n元线性方程组$Ax=b$"></a>n元线性方程组$Ax=b$</h2><ol>
-<li>无解<br>$\;\Longleftrightarrow\;r(A)+1=r(\overline{A})$<br><br></li>
-<li>唯一解<br>$\;\Longleftrightarrow\;r(A)=r(\overline{A})=n\;\longrightarrow\;A是可逆矩阵\Leftrightarrow|A|\neq0$<br><br></li>
-<li>无穷多解<br>$\;\Longleftrightarrow\;r(A)=r(\overline{A})&lt; n$<br><br><br> </li>
-</ol>
-<ul>
-<li><p>齐次方程组$Ax=0$<br><br>$\qquad$有非0解$\;\Longleftrightarrow\;r(A) &lt; n$<br><br>$\qquad$只有零解$\;\Longleftrightarrow\;r(A)=n$</p>
-</li>
-<li><p>$\;$矩阵方程$AX=B$有解$\;\Longleftrightarrow\;r(A)=r(A\vdots B)\longrightarrow\;$其实就是上面的推广</p>
-</li>
-</ul>
-<h2 id="基础解系"><a href="#基础解系" class="headerlink" title="基础解系"></a>基础解系</h2><p>理论基础：$A-m\times n,r(A)=r&lt;n$,则齐次方程组$Ax=0\;$由n-r个线性无关的解，且$Ax=0$的任一个解可由这n-r个线性无关的解线性表示</p>
-<blockquote>
-<p>基础解系其实就是齐次方程组解向量的极大无关组<br><br>不过要注意与向量组的极大无关组进行区分</p>
-<hr>
-<p>即，如果满足：<br><br>$\quad$(1)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是$Ax=0$的解；<br><br><br>$\quad$(2)$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性无关;<br><br><br>$\quad$(3)$Ax=0$的任一个解均可由$\eta_1\;\eta_2\;\cdots\;\eta_t\;$线性表示<br><br><br>则$\eta_1\;\eta_2\;\cdots\;\eta_t\;$是齐次方程组$Ax=0$的基础解系</p>
-</blockquote>
-<h3 id="齐次方程求基础解系和通解"><a href="#齐次方程求基础解系和通解" class="headerlink" title="齐次方程求基础解系和通解"></a>齐次方程求基础解系和通解</h3><ul>
-<li><strong>例</strong><br><br>求齐次方程组<br><br>$<br>\begin{cases}<br>x_1+2x_2-x_3-5x_5=0\\<br>x_2-x_3+x_4+x_5=0\\<br>2x_1+4x_2-2x_3+x_4-8x_5=0<br>\end{cases}<br>$<br><br>的基础解系与通解<br><br>解：<br>对系数矩阵作初等行变换化为行最简型<br><br>$<br>A=<br>\begin{pmatrix}<br>  1&amp;2&amp;-1&amp;0&amp;-5\\<br>   0&amp;1&amp;-2&amp;1&amp;1\\<br>   2&amp;4&amp;-2&amp;1&amp;-8<br>\end{pmatrix}<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;3&amp;0&amp;-3\\<br>   0&amp;1&amp;-2&amp;0&amp;1\\<br>   0&amp;0&amp;0&amp;1&amp;2<br>\end{pmatrix}<br>$<br><br><br>$<br>n-r(A)=5-3=2\quad\longrightarrow\;表明该方程组由两个基础解系<br>$<br><br><br>同解方程组<br><br>$<br>\begin{cases}<br>x_1+3x_3-3x_5=0\\<br>x_2-2x_3-x_5=0\\<br>x_4+2x_5=0<br>\end{cases}<br>$<br><br><br>$<br>\begin{cases}<br>x_1=-3x_3+3x_5\\<br>x_2=2x_3+x_5\\<br>x_4=-2x_5<br>\end{cases}<br>$<br><br><br>$<br>分别令\begin{bmatrix}x_3\\x_5\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$<br><br><br>代入方程组对应求出<br>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}为\begin{bmatrix}-3\\2\\0\end{bmatrix}和\begin{bmatrix}3\\1\\ -2\end{bmatrix}<br>$<br><br><br>得到基础解系：<br>$\quad\eta_1=[-3,2,1,0,0]^T$<br><br>$\quad\eta_2=[3,1,0,-2,1]^T$<br><br><br>通解：<br>$k_1\eta_1+k_2\eta_2$<br><br>$即\;\;k_1\begin{bmatrix}-3\\2\\1\\0\\0\end{bmatrix}+k_2\begin{bmatrix}3\\1\\0\\ -2\\1\end{bmatrix}$</li>
-</ul>
-<h3 id="非齐次线性方程求通解"><a href="#非齐次线性方程求通解" class="headerlink" title="非齐次线性方程求通解"></a>非齐次线性方程求通解</h3><ul>
-<li>方程组$Ax=b$的通解：<br><br>$\alpha_0+k_1\eta_1+k_2\eta_2+\cdots+k_{n-r}\eta_{n-r}$<br><br>其中$\eta_1\eta_2\cdots\eta_{n-1}$是导出组$Ax=0$的基础解系$，\alpha_0$是$Ax=b$的一个解<br><br>$\qquad\longrightarrow$微分方程也是这个思想</li>
-</ul>
-<ul>
-<li><strong>例</strong><br><br>解方程组<br><br>$<br>\begin{cases}<br>  x_1-x_2-x_3+x_4=0\\<br>  x_1-x_2+x_3-3x_4=1\\<br>  x_1-x_2-2x_3+3x_4=-\frac{1}{2}<br>\end{cases}<br>$<br><br>解：<br>对增广矩阵做初等行变换，化为行最简型<br><br>$<br>\overline{A}=<br>\begin{pmatrix}<br> 1&amp;-1&amp;-1&amp;1&amp;0\\<br> 1&amp;-1&amp;1&amp;-3&amp;1\\<br> 1&amp;-1&amp;-2&amp;3&amp;-\frac{1}{2}<br>\end{pmatrix}<br>\rightarrow<br>\begin{pmatrix}<br> 1&amp;-1&amp;0&amp;-1&amp;\frac{1}{2}\\<br> 0&amp;0&amp;1&amp;-2&amp;\frac{1}{2}\\<br> 0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br>$r(A)=r(\overline{A})=2<4\;\rightarrow\;方程组有无穷解$<br><br>$n-r(A)=4-2=2$<br><br>$<br>\begin{cases}<br>x_1=x_2+x_4+\displaystyle\frac{1}{2}\\<br>x_3=2x_4+\displaystyle\frac{1}{2}<br>\end{cases}$<br><br>令$\;x_2=x_4=0\;\Rightarrow\;x_1=\displaystyle\frac{1}{2},x_3=\displaystyle\frac{1}{2}<br>$<br><br><br>特解$\quad\alpha=\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}$<br><br><br>令$\begin{bmatrix}x_2\\x_4\end{bmatrix}$分别为$\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}0\\1\end{bmatrix}<br>$</4\;\rightarrow\;方程组有无穷解$<br></li>
-</ul>
-<p>$\Rightarrow\begin{bmatrix}x_1\\x_3\end{bmatrix}为\begin{bmatrix}1\\0\end{bmatrix}和\begin{bmatrix}1\\2\end{bmatrix}$<br><br><br>则基础解系为<br><br>$\eta_1=[1,1,0,0]^T，\eta_2=[1,0,2,1]^T$<br><br><br>$\therefore$方程组组的通解：<br><br>$<br>x=<br>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=<br>k_1\begin{bmatrix}1\\1\\0\\0\end{bmatrix}+<br>k_2\begin{bmatrix}1\\0\\2\\1\end{bmatrix}+<br>\begin{bmatrix}\displaystyle\frac{1}{2}\\0\\ \displaystyle\frac{1}{2}\\0\end{bmatrix}<br>$<br><br><br>这里的方程组我认为可以和向量空间，后面继续拓展深入研究……</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>4.CSS的元素显示模式</title>
     <url>/2021/07/20/4-CSS%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-的元素显示模式"><a href="#CSS-的元素显示模式" class="headerlink" title="CSS 的元素显示模式"></a>CSS 的元素显示模式</h1><blockquote>
@@ -4310,107 +4310,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4.索引补充</title>
-    <url>/2021/07/04/4-%E7%B4%A2%E5%BC%95%E8%A1%A5%E5%85%85/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="基本方式"><a href="#基本方式" class="headerlink" title="基本方式"></a>基本方式</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>5
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">2</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([2, 3, 4])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">b = np.arange(<span class="number">24</span>).reshape(<span class="number">2</span>,<span class="number">2</span>,<span class="number">6</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
-<pre><code>array([[[ 0,  1,  2,  3,  4,  5],
-        [ 6,  7,  8,  9, 10, 11]],
-
-       [[12, 13, 14, 15, 16, 17],
-        [18, 19, 20, 21, 22, 23]]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">b[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3,  4,  5],
-       [ 6,  7,  8,  9, 10, 11]])
-</code></pre><h1 id="切片索引"><a href="#切片索引" class="headerlink" title="切片索引"></a>切片索引</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">arr2d</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>] <span class="comment"># 表示选取前两行</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[0, 1, 2, 3],
-       [4, 5, 6, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[<span class="number">1</span>:] <span class="comment"># 表示选取第1行之后的所有行</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>,<span class="number">1</span>:] <span class="comment"># 两个结合起来使用，第一个选取行，第二个选取列</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [5, 6, 7]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:,<span class="number">2</span>] <span class="comment"># 只有冒号表示整个轴</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([ 2,  6, 10])
-</code></pre><h1 id="布尔型索引"><a href="#布尔型索引" class="headerlink" title="布尔型索引"></a>布尔型索引</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = np.array([<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;wang&quot;</span>])</span><br><span class="line">data =  np.arange(<span class="number">21</span>).reshape(<span class="number">7</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name</span><br></pre></td></tr></table></figure>
-<pre><code>array([&#39;liu&#39;, &#39;wang&#39;, &#39;zhang&#39;, &#39;liu&#39;, &#39;zhang&#39;, &#39;wang&#39;, &#39;wang&#39;],
-      dtype=&#39;&lt;U5&#39;)
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  4,  5],
-       [ 6,  7,  8],
-       [ 9, 10, 11],
-       [12, 13, 14],
-       [15, 16, 17],
-       [18, 19, 20]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>,:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1],
-       [ 9, 10]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[(name==<span class="string">&#x27;liu&#x27;</span>)|(name==<span class="string">&#x27;wang&#x27;</span>)]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2],
-       [ 3,  4,  5],
-       [ 9, 10, 11],
-       [15, 16, 17],
-       [18, 19, 20]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[data &lt; <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-</code></pre><p>也就是说布尔索引会把括号里面为真的按顺序返回</p>
-<h1 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h1><blockquote>
-<p>利用整数数组进行索引</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.empty((<span class="number">8</span>,<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8</span>):</span><br><span class="line">    arr[i] = i</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
-<pre><code>array([[0., 0., 0., 0.],
-       [1., 1., 1., 1.],
-       [2., 2., 2., 2.],
-       [3., 3., 3., 3.],
-       [4., 4., 4., 4.],
-       [5., 5., 5., 5.],
-       [6., 6., 6., 6.],
-       [7., 7., 7., 7.]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr[[<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[2., 2., 2., 2.],
-       [4., 4., 4., 4.],
-       [5., 5., 5., 5.],
-       [1., 1., 1., 1.]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([ 2, 11,  5, 10])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]][:,[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 5,  6],
-       [ 9, 10]])
-</code></pre><p>花式索引和切片不一样，它总是复制到新数组中</p>
-]]></content>
-      <categories>
-        <category>numpy</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -4560,6 +4459,210 @@ array([[ 0,  0,  0,  0],
       </categories>
       <tags>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4.索引补充</title>
+    <url>/2021/07/04/4-%E7%B4%A2%E5%BC%95%E8%A1%A5%E5%85%85/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="基本方式"><a href="#基本方式" class="headerlink" title="基本方式"></a>基本方式</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>5
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[<span class="number">2</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([2, 3, 4])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">b = np.arange(<span class="number">24</span>).reshape(<span class="number">2</span>,<span class="number">2</span>,<span class="number">6</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<pre><code>array([[[ 0,  1,  2,  3,  4,  5],
+        [ 6,  7,  8,  9, 10, 11]],
+
+       [[12, 13, 14, 15, 16, 17],
+        [18, 19, 20, 21, 22, 23]]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">b[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3,  4,  5],
+       [ 6,  7,  8,  9, 10, 11]])
+</code></pre><h1 id="切片索引"><a href="#切片索引" class="headerlink" title="切片索引"></a>切片索引</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">arr2d</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>] <span class="comment"># 表示选取前两行</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2, 3],
+       [4, 5, 6, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[<span class="number">1</span>:] <span class="comment"># 表示选取第1行之后的所有行</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:<span class="number">2</span>,<span class="number">1</span>:] <span class="comment"># 两个结合起来使用，第一个选取行，第二个选取列</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [5, 6, 7]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2d[:,<span class="number">2</span>] <span class="comment"># 只有冒号表示整个轴</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([ 2,  6, 10])
+</code></pre><h1 id="布尔型索引"><a href="#布尔型索引" class="headerlink" title="布尔型索引"></a>布尔型索引</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = np.array([<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;liu&quot;</span>,<span class="string">&quot;zhang&quot;</span>,<span class="string">&quot;wang&quot;</span>,<span class="string">&quot;wang&quot;</span>])</span><br><span class="line">data =  np.arange(<span class="number">21</span>).reshape(<span class="number">7</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name</span><br></pre></td></tr></table></figure>
+<pre><code>array([&#39;liu&#39;, &#39;wang&#39;, &#39;zhang&#39;, &#39;liu&#39;, &#39;zhang&#39;, &#39;wang&#39;, &#39;wang&#39;],
+      dtype=&#39;&lt;U5&#39;)
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 6,  7,  8],
+       [ 9, 10, 11],
+       [12, 13, 14],
+       [15, 16, 17],
+       [18, 19, 20]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[name == <span class="string">&quot;liu&quot;</span>,:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1],
+       [ 9, 10]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[(name==<span class="string">&#x27;liu&#x27;</span>)|(name==<span class="string">&#x27;wang&#x27;</span>)]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 9, 10, 11],
+       [15, 16, 17],
+       [18, 19, 20]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data[data &lt; <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</code></pre><p>也就是说布尔索引会把括号里面为真的按顺序返回</p>
+<h1 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h1><blockquote>
+<p>利用整数数组进行索引</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr = np.empty((<span class="number">8</span>,<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8</span>):</span><br><span class="line">    arr[i] = i</span><br><span class="line">arr</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0., 0., 0., 0.],
+       [1., 1., 1., 1.],
+       [2., 2., 2., 2.],
+       [3., 3., 3., 3.],
+       [4., 4., 4., 4.],
+       [5., 5., 5., 5.],
+       [6., 6., 6., 6.],
+       [7., 7., 7., 7.]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr[[<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[2., 2., 2., 2.],
+       [4., 4., 4., 4.],
+       [5., 5., 5., 5.],
+       [1., 1., 1., 1.]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 2, 11,  5, 10])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+</code></pre><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[[<span class="number">1</span>,<span class="number">2</span>]][:,[<span class="number">1</span>,<span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 5,  6],
+       [ 9, 10]])
+</code></pre><p>花式索引和切片不一样，它总是复制到新数组中</p>
+]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4.n维向量</title>
+    <url>/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
+<p>n个数$a_1,a_2,\cdots a_n$构成的有序数组</p>
+</blockquote>
+<p>$\left[\begin{array}{c}a_1\\a_2\\ \vdots \\a_n\end{array}\right]$<br>或$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]^T\longrightarrow$列向量<br><br><br>$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]\longrightarrow$行向量</p>
+<h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><p>运算方法其实就是矩阵的运算方法</p>
+<h2 id="线性表示"><a href="#线性表示" class="headerlink" title="线性表示"></a>线性表示</h2><h3 id="向量的线性表示"><a href="#向量的线性表示" class="headerlink" title="向量的线性表示"></a>向量的线性表示</h3><blockquote>
+<p>m个n维向量$\alpha_1\alpha_2\cdots\alpha_m$及m个实数$k_1,k_2,\cdots,k_m$,称</p>
+<p>$\quad k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
+<p>是向量$\alpha_1\alpha_2\cdots\alpha_m$的一个线性组合，$k_1,k_2,\cdots,k_m$为这个线性组合的系数<br><br><br>如果向量$\beta$能表示为$\alpha_1\alpha_2\cdots\alpha_m$的线性组合，即</p>
+<p>$\qquad\qquad \beta=k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
+<p>则称向量$\beta$可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示</p>
+</blockquote>
+<p>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=\beta$<br><br>$\Longleftrightarrow方程组$<br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=\beta\;\;有解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)= r(\alpha_1\alpha_2\cdots\alpha_m\beta)$</p>
+<p><strong>例</strong></p>
+<p>$设\alpha_1=[1,-1,1]^T，\alpha_2=[-2,1,1]^T$<br>$\alpha_3=[4,-3,1]^T，\beta=[3,-1,3]^T$<br><br>$判断\beta能否由\alpha_1\alpha_2\alpha_3线性表示$</p>
+<p>解：<br>$设k_1\alpha_1+k_2\alpha_2+k_3\alpha_3=\beta$<br><br>即<br>$k_1[1,-1,1]^T+k_2[-2,1,1]^T+k_3[4,-3,1]^T$<br>$=[3,-1,3]^T$<br></p>
+<ul>
+<li>即<br>$\begin{cases}<br>  k_1-2k_2+4k_3=3\\<br>  -x_1+x_2-3x_3=-1\\<br>  x_1+x_2+x_3=-1\\<br>\end{cases}$</li>
+</ul>
+<p>$下面就转化为了高斯消元法进行求解出k_1k_2k_3$<br><br>$\qquad\qquad\downarrow$<br><br>$\overline{A}=<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}$<br><br>$\therefore$可以将上面的向量直接转化成增广矩阵进行求解</p>
+<p>在这里将方程组用矩阵进行表示就可以抽象为<br><br>$<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}<br>\begin{pmatrix}<br>    x_1\\<br>    x_2\\<br>    x_3\\<br>    x_4<br>\end{pmatrix}<br>=\begin{pmatrix}<br>    -3\\<br>    1\\<br>    -1<br>\end{pmatrix}<br>$<br><br>也就是说一组坐标经过有限次线性变换后可以将其转化成$\beta$</p>
+<h3 id="向量组的线性表示"><a href="#向量组的线性表示" class="headerlink" title="向量组的线性表示"></a>向量组的线性表示</h3><blockquote>
+<p>设向量组<br>$(a)\alpha_1,\alpha_2,\cdots,\alpha_s,\;<br> \;(b)\beta_1,\beta_2,\cdots,\beta_t$<br><br>若(a)中的每个向量$\alpha_i(i=1,2,\cdots,s)$ <strong>均</strong> 可由(b)线性表示，则称向量组(a)可由向量组(b)线性表示,如果两个向量组可以互相表示，则称两个向量组等价</p>
+</blockquote>
+<p><strong>例</strong></p>
+<p>设$A，B$均为3阶矩阵，且$AB=C$</p>
+<p>证明：$C$的列向量可由$A$的列向量线性表示,若矩阵$B$可逆,则$C$和$A$的列向量组等价。</p>
+<p>设$A=[\alpha_1\;\alpha_2\;\alpha_3],C=[\gamma_1\;\gamma_2\;\gamma_3],B=[b_{ij}]_{3\times3}$</p>
+<p>$A$和$C$都是按照按列进行划分</p>
+<p>$由\;AB=C\;有$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>\left[\begin{array}{ccc}b_{11}&amp;b_{12}&amp;b_{13}\\<br>    b_{21}&amp;b_{22}&amp;b_{23}\\<br>    b_{31}&amp;b_{32}&amp;b_{33}<br>\end{array}\right]=[\gamma_1\;\gamma_2\;\gamma_3]<br>$</p>
+<ul>
+<li>即<br>$<br>\begin{cases}<br>b_{11}\alpha_1+b_{21}\alpha_2+b_{31}\alpha_3=\gamma_1\\<br>b_{12}\alpha_1+b_{22}\alpha_2+b_{32}\alpha_3=\gamma_2\\<br>b_{13}\alpha_1+b_{23}\alpha_2+b_{33}\alpha_3=\gamma_3\\<br>\end{cases}<br>$<br><br>$<br>\therefore\;C的列向量可由A的列向量线性表示<br>$</li>
+</ul>
+<p>$\because B可逆$<br><br>$\therefore A=CB^{-1}\;,记B^{-1}=[k_{ij}]_{3\times3}$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>=[\gamma_1\;\gamma_2\;\gamma_3]<br>\left[\begin{array}{ccc}<br>    k_{11}&amp;k_{12}&amp;k_{13}\\<br>    k_{21}&amp;k_{22}&amp;k_{23}\\<br>    k_{31}&amp;k_{32}&amp;k_{33}<br>\end{array}\right]<br>$</p>
+<ul>
+<li>即<br>$<br>\begin{cases}<br>k_{11}\gamma_1+k_{21}\gamma_2+k_{31}\gamma_3=\alpha_1\\<br>k_{12}\gamma_1+k_{22}\gamma_2+k_{32}\gamma_3=\alpha_2\\<br>k_{13}\gamma_1+k_{23}\gamma_2+k_{33}\gamma_3=\alpha_3\\<br>\end{cases}<br>$<br><br>$ \therefore A的列向量可由C的列向量线性表示$<br><br>$\therefore C$的列向量可由A的列向量线性表示</li>
+</ul>
+<p>因为矩阵$B$可逆</p>
+<p>则$C$和$A$的列向量组等价。<br></p>
+<h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价：A经初等变换可以变成B<br><br>向量组(a)和(b)等价：(a)和(b)可以 <strong>互相</strong> 线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
+<h4 id="用方程组理解向量组的线性表示"><a href="#用方程组理解向量组的线性表示" class="headerlink" title="用方程组理解向量组的线性表示"></a>用方程组理解向量组的线性表示</h4><blockquote>
+<p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可以用向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br><br>则$r(B)\leqslant r(A)$<br><br>其中$B=(\beta_1\;\beta_2\;\cdots\;\beta_t),$<br><br>$A=(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)$<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
+</blockquote>
+<p>个人直观理解：<br>B的秩肯定小于A的秩，如果大于的话矩阵最后有几行就不能被表示了，<br>小于的话，最后几行就算多出来，$k_{ij}$令为0就行了<br>而两者的秩如果相等，那么两者就正好能被互相表示出来，也就是说两个向量组等价</p>
+<p>证明：<br>$\beta_1\;\beta_2\;\cdots\;\beta_t$可由$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示</p>
+<p>$\Leftrightarrow\;$方程组</p>
+<p>$\quad\; Ax=\beta_1，Ax=\beta_2，\cdots，Ax=\beta_t$有解</p>
+<p>$\Leftrightarrow\;r(A)=r(A,B)$</p>
+<p>$\because r(B)\leqslant r(A,B)\;\longleftarrow\;$矩阵的秩的性质</p>
+<p>$\therefore r(B)\leqslant r(A)$</p>
+<h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><blockquote>
+<p>$给定m个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_m，$如果存在不全为零的数$k_1，k_2，\cdots，k_m$使得<br><br>$\qquad k_1\alpha_1+k_2\alpha_2+\cdots k_m\alpha_m=0$<br><br>则称向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_m$线性相关，否则为线性无关</p>
+</blockquote>
+<p>个人直观理解：<br>线性相关其实就是向量经过长度变换能够首尾相连，就是线性表示的一种特殊情况</p>
+<p><strong>注意</strong>：<br>有零向量的向量组肯定线性相关</p>
+<hr>
+<p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0$<br><br>$\Longleftrightarrow方程组$<br><br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)&lt; m$<br>$\quad m$就是方程组解的个数</p>
+<p><strong>推论</strong></p>
+<ol>
+<li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;$相关<br><br>$\Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
+<li>$n+1个n维向量必线性相关 \rightarrow r \leqslant n &lt; n+1$<br><br></li>
+<li>如果$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性相关，则$\alpha_1\;\alpha_2\;\cdots\;\alpha_s\;\cdots\;\alpha_t$线性相关<br><br></li>
+<li>如果向量组线性无关，增加维度仍然线性无关</li>
+</ol>
+<h3 id="相关定理及结论"><a href="#相关定理及结论" class="headerlink" title="相关定理及结论"></a>相关定理及结论</h3><ol>
+<li>向量组$<br>\alpha_1,\alpha_2,\cdots,\alpha_s(s\leqslant2)$线性相关<br>$\Leftrightarrow\;$至少有一个向量$\alpha_i$可由其余向量$\alpha_1,\alpha_2,\cdots,\alpha_{i-1},\alpha_{i+1},\cdots,\alpha_s$线性表示<br><br></li>
+<li>如果n维向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，而$\alpha_1,\alpha_2,\cdots,\alpha_s,\beta\;$线性相关，则向量$\beta\;$必能由$\alpha_1,\alpha_2,\cdots,\alpha_s$线性表示，且表示法唯一<br><br></li>
+<li>如果$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示，且$s&gt;t$,则$\alpha_1,\alpha_2,\cdots,\alpha_s$必线性相关<br><br>推论：如果$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，且$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示,则$\;s\leqslant t$（极大线性无关组）<br><br></li>
+<li>$n+1$个$n$维向量必线性相关<br><br></li>
+<li>初等 <strong>行变换</strong> 不改变矩阵的 <strong>列向量组</strong> 之间的线性关系；初等 <strong>列变换</strong> 不改变 <strong>行向量组</strong> 之间的线性关系<br><br></li>
+<li>一个零向量线性相关，一个非零向量线性无关</li>
+</ol>
+<blockquote>
+<p>线性表示和线性相关无关的定理和结论都是从定义出发进行推理的，推理主要是通过方程组的思想。</p>
+</blockquote>
+<h2 id="向量组的秩"><a href="#向量组的秩" class="headerlink" title="向量组的秩"></a>向量组的秩</h2><blockquote>
+<p>向量组的$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组中所含 <strong>向量的个数r</strong> 称为向量组的秩.<br>记为$R(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)=r$<br><br>规定只有零向量的向量组的秩为0<br>三秩相等：矩阵A的秩等于A 的列向量的秩，也等于A的行向量的秩</p>
+</blockquote>
+<h3 id="极大线性无关组："><a href="#极大线性无关组：" class="headerlink" title="极大线性无关组："></a>极大线性无关组：</h3><blockquote>
+<p>$\qquad$在向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$中，如果存在r个向量$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}$线性 <strong>无关</strong> ，<strong>再</strong> 添加任一个向量$\alpha_j,(j=1,2,\cdots,s)$,向量组$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}\alpha_j$就线性 <strong>相关</strong> ，则称$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}$是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的一个极大线性无关组。<br><br><br>其实很好理解，极大线性无关组就是把向量组中挑出来一组最多线性无关的向量能够表示这个向量组的任何向量。</p>
+</blockquote>
+<p>定理：<br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则$r=t$</p>
+<p>证：<br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，</p>
+<p>那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$<br><br>必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$<br><br>能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关<br><br>则有$\;t\leqslant r$.<br><br>又因为两者地位相等，同理可得$\;r\leqslant t$.<br><br>所以$r=t$</p>
+<p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br>a.相同的线性相关性<br>b.相同的线性表示.</p>
+<ul>
+<li>例.求向量组$\alpha_1=(2,1,4,3)^T,$ $\alpha_2=(-1,1,-6,6)^T,$ $\alpha_3=(-1,-2,2,-9)^T,$ $\alpha_4=(1,1,-2,7)^T,$ $\alpha_5=(2,4,4,9)^T$的秩,一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。<br><br><br>解：构造矩阵$\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)$作初等变换化为行最简型，有<br><br>$<br>A=\begin{pmatrix}<br>  2&amp;-1&amp;-1&amp;1&amp;2\\<br>  1&amp;1&amp;-2&amp;1&amp;4\\<br>  4&amp;-6&amp;2&amp;-2&amp;4\\<br>  3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>$<br><br><br>$<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;-1&amp;0&amp;4\\<br>  0&amp;1&amp;-1&amp;0&amp;3\\<br>  0&amp;0&amp;0&amp;1&amp;-3\\<br>  0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3$</li>
+</ul>
+<p>极大线性无关组：$\alpha_1\;\alpha_2\;\alpha_4$</p>
+<p>$\therefore\alpha_3=-\alpha_1-\alpha_2$</p>
+<p>$\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4$</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -4769,109 +4872,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>CSS</tag>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4.n维向量</title>
-    <url>/2021/06/20/4.n%E7%BB%B4%E5%90%91%E9%87%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="n维向量"><a href="#n维向量" class="headerlink" title="n维向量"></a>n维向量</h1><blockquote>
-<p>n个数$a_1,a_2,\cdots a_n$构成的有序数组</p>
-</blockquote>
-<p>$\left[\begin{array}{c}a_1\\a_2\\ \vdots \\a_n\end{array}\right]$<br>或$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]^T\longrightarrow$列向量<br><br><br>$\left[\begin{array}{c}a_1\;a_2\;\cdots\;a_n\end{array}\right]\longrightarrow$行向量</p>
-<h2 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h2><p>运算方法其实就是矩阵的运算方法</p>
-<h2 id="线性表示"><a href="#线性表示" class="headerlink" title="线性表示"></a>线性表示</h2><h3 id="向量的线性表示"><a href="#向量的线性表示" class="headerlink" title="向量的线性表示"></a>向量的线性表示</h3><blockquote>
-<p>m个n维向量$\alpha_1\alpha_2\cdots\alpha_m$及m个实数$k_1,k_2,\cdots,k_m$,称</p>
-<p>$\quad k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
-<p>是向量$\alpha_1\alpha_2\cdots\alpha_m$的一个线性组合，$k_1,k_2,\cdots,k_m$为这个线性组合的系数<br><br><br>如果向量$\beta$能表示为$\alpha_1\alpha_2\cdots\alpha_m$的线性组合，即</p>
-<p>$\qquad\qquad \beta=k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$</p>
-<p>则称向量$\beta$可由$\alpha_1\alpha_2\cdots\alpha_m$线性表示</p>
-</blockquote>
-<p>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=\beta$<br><br>$\Longleftrightarrow方程组$<br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=\beta\;\;有解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)= r(\alpha_1\alpha_2\cdots\alpha_m\beta)$</p>
-<p><strong>例</strong></p>
-<p>$设\alpha_1=[1,-1,1]^T，\alpha_2=[-2,1,1]^T$<br>$\alpha_3=[4,-3,1]^T，\beta=[3,-1,3]^T$<br><br>$判断\beta能否由\alpha_1\alpha_2\alpha_3线性表示$</p>
-<p>解：<br>$设k_1\alpha_1+k_2\alpha_2+k_3\alpha_3=\beta$<br><br>即<br>$k_1[1,-1,1]^T+k_2[-2,1,1]^T+k_3[4,-3,1]^T$<br>$=[3,-1,3]^T$<br></p>
-<ul>
-<li>即<br>$\begin{cases}<br>  k_1-2k_2+4k_3=3\\<br>  -x_1+x_2-3x_3=-1\\<br>  x_1+x_2+x_3=-1\\<br>\end{cases}$</li>
-</ul>
-<p>$下面就转化为了高斯消元法进行求解出k_1k_2k_3$<br><br>$\qquad\qquad\downarrow$<br><br>$\overline{A}=<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}$<br><br>$\therefore$可以将上面的向量直接转化成增广矩阵进行求解</p>
-<p>在这里将方程组用矩阵进行表示就可以抽象为<br><br>$<br>\begin{pmatrix}<br>    1&amp;-2&amp;4&amp;3\\<br>    -1&amp;1&amp;-3&amp;-1\\<br>    1&amp;1&amp;1&amp;-3<br>\end{pmatrix}<br>\begin{pmatrix}<br>    x_1\\<br>    x_2\\<br>    x_3\\<br>    x_4<br>\end{pmatrix}<br>=\begin{pmatrix}<br>    -3\\<br>    1\\<br>    -1<br>\end{pmatrix}<br>$<br><br>也就是说一组坐标经过有限次线性变换后可以将其转化成$\beta$</p>
-<h3 id="向量组的线性表示"><a href="#向量组的线性表示" class="headerlink" title="向量组的线性表示"></a>向量组的线性表示</h3><blockquote>
-<p>设向量组<br>$(a)\alpha_1,\alpha_2,\cdots,\alpha_s,\;<br> \;(b)\beta_1,\beta_2,\cdots,\beta_t$<br><br>若(a)中的每个向量$\alpha_i(i=1,2,\cdots,s)$ <strong>均</strong> 可由(b)线性表示，则称向量组(a)可由向量组(b)线性表示,如果两个向量组可以互相表示，则称两个向量组等价</p>
-</blockquote>
-<p><strong>例</strong></p>
-<p>设$A，B$均为3阶矩阵，且$AB=C$</p>
-<p>证明：$C$的列向量可由$A$的列向量线性表示,若矩阵$B$可逆,则$C$和$A$的列向量组等价。</p>
-<p>设$A=[\alpha_1\;\alpha_2\;\alpha_3],C=[\gamma_1\;\gamma_2\;\gamma_3],B=[b_{ij}]_{3\times3}$</p>
-<p>$A$和$C$都是按照按列进行划分</p>
-<p>$由\;AB=C\;有$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>\left[\begin{array}{ccc}b_{11}&amp;b_{12}&amp;b_{13}\\<br>    b_{21}&amp;b_{22}&amp;b_{23}\\<br>    b_{31}&amp;b_{32}&amp;b_{33}<br>\end{array}\right]=[\gamma_1\;\gamma_2\;\gamma_3]<br>$</p>
-<ul>
-<li>即<br>$<br>\begin{cases}<br>b_{11}\alpha_1+b_{21}\alpha_2+b_{31}\alpha_3=\gamma_1\\<br>b_{12}\alpha_1+b_{22}\alpha_2+b_{32}\alpha_3=\gamma_2\\<br>b_{13}\alpha_1+b_{23}\alpha_2+b_{33}\alpha_3=\gamma_3\\<br>\end{cases}<br>$<br><br>$<br>\therefore\;C的列向量可由A的列向量线性表示<br>$</li>
-</ul>
-<p>$\because B可逆$<br><br>$\therefore A=CB^{-1}\;,记B^{-1}=[k_{ij}]_{3\times3}$<br><br><br>$<br>[\alpha_1\;\alpha_2\;\alpha_3]<br>=[\gamma_1\;\gamma_2\;\gamma_3]<br>\left[\begin{array}{ccc}<br>    k_{11}&amp;k_{12}&amp;k_{13}\\<br>    k_{21}&amp;k_{22}&amp;k_{23}\\<br>    k_{31}&amp;k_{32}&amp;k_{33}<br>\end{array}\right]<br>$</p>
-<ul>
-<li>即<br>$<br>\begin{cases}<br>k_{11}\gamma_1+k_{21}\gamma_2+k_{31}\gamma_3=\alpha_1\\<br>k_{12}\gamma_1+k_{22}\gamma_2+k_{32}\gamma_3=\alpha_2\\<br>k_{13}\gamma_1+k_{23}\gamma_2+k_{33}\gamma_3=\alpha_3\\<br>\end{cases}<br>$<br><br>$ \therefore A的列向量可由C的列向量线性表示$<br><br>$\therefore C$的列向量可由A的列向量线性表示</li>
-</ul>
-<p>因为矩阵$B$可逆</p>
-<p>则$C$和$A$的列向量组等价。<br></p>
-<h4 id="矩阵和向量组等价的概念区分"><a href="#矩阵和向量组等价的概念区分" class="headerlink" title="矩阵和向量组等价的概念区分"></a>矩阵和向量组等价的概念区分</h4><p>矩阵的A和B等价：A经初等变换可以变成B<br><br>向量组(a)和(b)等价：(a)和(b)可以 <strong>互相</strong> 线性表示<br><br>$\therefore$两者没有必然的联系，不要搞混</p>
-<h4 id="用方程组理解向量组的线性表示"><a href="#用方程组理解向量组的线性表示" class="headerlink" title="用方程组理解向量组的线性表示"></a>用方程组理解向量组的线性表示</h4><blockquote>
-<p>向量组$\beta_1\;\beta_2\;\cdots\;\beta_t$可以用向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示，<br><br>则$r(B)\leqslant r(A)$<br><br>其中$B=(\beta_1\;\beta_2\;\cdots\;\beta_t),$<br><br>$A=(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)$<br><br><br>如果$r(A)=r(B)$，则两个向量组等价</p>
-</blockquote>
-<p>个人直观理解：<br>B的秩肯定小于A的秩，如果大于的话矩阵最后有几行就不能被表示了，<br>小于的话，最后几行就算多出来，$k_{ij}$令为0就行了<br>而两者的秩如果相等，那么两者就正好能被互相表示出来，也就是说两个向量组等价</p>
-<p>证明：<br>$\beta_1\;\beta_2\;\cdots\;\beta_t$可由$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性表示</p>
-<p>$\Leftrightarrow\;$方程组</p>
-<p>$\quad\; Ax=\beta_1，Ax=\beta_2，\cdots，Ax=\beta_t$有解</p>
-<p>$\Leftrightarrow\;r(A)=r(A,B)$</p>
-<p>$\because r(B)\leqslant r(A,B)\;\longleftarrow\;$矩阵的秩的性质</p>
-<p>$\therefore r(B)\leqslant r(A)$</p>
-<h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><blockquote>
-<p>$给定m个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_m，$如果存在不全为零的数$k_1，k_2，\cdots，k_m$使得<br><br>$\qquad k_1\alpha_1+k_2\alpha_2+\cdots k_m\alpha_m=0$<br><br>则称向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_m$线性相关，否则为线性无关</p>
-</blockquote>
-<p>个人直观理解：<br>线性相关其实就是向量经过长度变换能够首尾相连，就是线性表示的一种特殊情况</p>
-<p><strong>注意</strong>：<br>有零向量的向量组肯定线性相关</p>
-<hr>
-<p>线性相关同样可以用高斯消元法求出$k_1,k_2,\cdots k_m$，<br><br>因为这其实就是线性表示$\beta$为零向量，且$k_i$不全为零的一种特殊情况<br><br><br>$[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}k_1\\k_2\\ \vdots\\k_m\end{array}\right]=0$<br><br>$\Longleftrightarrow方程组$<br><br>$\qquad[\alpha_1\alpha_2\cdots\alpha_m]\left[\begin{array}{c}x_1\\x_2\\ \vdots\\x_m\end{array}\right]=0\;\;有非零解$<br><br>$\Longleftrightarrow r(\alpha_1\alpha_2\cdots\alpha_m)&lt; m$<br>$\quad m$就是方程组解的个数</p>
-<p><strong>推论</strong></p>
-<ol>
-<li>$n个n维向量\alpha_1\;\alpha_2\;\cdots\;\alpha_n\;$相关<br><br>$\Leftrightarrow\;|\alpha_1\;\alpha_2\;\cdots\;\alpha_n|=0\;$<br><br></li>
-<li>$n+1个n维向量必线性相关 \rightarrow r \leqslant n &lt; n+1$<br><br></li>
-<li>如果$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$线性相关，则$\alpha_1\;\alpha_2\;\cdots\;\alpha_s\;\cdots\;\alpha_t$线性相关<br><br></li>
-<li>如果向量组线性无关，增加维度仍然线性无关</li>
-</ol>
-<h3 id="相关定理及结论"><a href="#相关定理及结论" class="headerlink" title="相关定理及结论"></a>相关定理及结论</h3><ol>
-<li>向量组$<br>\alpha_1,\alpha_2,\cdots,\alpha_s(s\leqslant2)$线性相关<br>$\Leftrightarrow\;$至少有一个向量$\alpha_i$可由其余向量$\alpha_1,\alpha_2,\cdots,\alpha_{i-1},\alpha_{i+1},\cdots,\alpha_s$线性表示<br><br></li>
-<li>如果n维向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，而$\alpha_1,\alpha_2,\cdots,\alpha_s,\beta\;$线性相关，则向量$\beta\;$必能由$\alpha_1,\alpha_2,\cdots,\alpha_s$线性表示，且表示法唯一<br><br></li>
-<li>如果$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示，且$s&gt;t$,则$\alpha_1,\alpha_2,\cdots,\alpha_s$必线性相关<br><br>推论：如果$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，且$\alpha_1,\alpha_2,\cdots,\alpha_s$可由$\;\beta_1,\beta_2,\cdots,\beta_t\;$线性表示,则$\;s\leqslant t$（极大线性无关组）<br><br></li>
-<li>$n+1$个$n$维向量必线性相关<br><br></li>
-<li>初等 <strong>行变换</strong> 不改变矩阵的 <strong>列向量组</strong> 之间的线性关系；初等 <strong>列变换</strong> 不改变 <strong>行向量组</strong> 之间的线性关系<br><br></li>
-<li>一个零向量线性相关，一个非零向量线性无关</li>
-</ol>
-<blockquote>
-<p>线性表示和线性相关无关的定理和结论都是从定义出发进行推理的，推理主要是通过方程组的思想。</p>
-</blockquote>
-<h2 id="向量组的秩"><a href="#向量组的秩" class="headerlink" title="向量组的秩"></a>向量组的秩</h2><blockquote>
-<p>向量组的$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组中所含 <strong>向量的个数r</strong> 称为向量组的秩.<br>记为$R(\alpha_1\;\alpha_2\;\cdots\;\alpha_s)=r$<br><br>规定只有零向量的向量组的秩为0<br>三秩相等：矩阵A的秩等于A 的列向量的秩，也等于A的行向量的秩</p>
-</blockquote>
-<h3 id="极大线性无关组："><a href="#极大线性无关组：" class="headerlink" title="极大线性无关组："></a>极大线性无关组：</h3><blockquote>
-<p>$\qquad$在向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$中，如果存在r个向量$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}$线性 <strong>无关</strong> ，<strong>再</strong> 添加任一个向量$\alpha_j,(j=1,2,\cdots,s)$,向量组$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}\alpha_j$就线性 <strong>相关</strong> ，则称$\alpha_{i1}\;\alpha_{i2}\;\cdots\alpha_{ir}$是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的一个极大线性无关组。<br><br><br>其实很好理解，极大线性无关组就是把向量组中挑出来一组最多线性无关的向量能够表示这个向量组的任何向量。</p>
-</blockquote>
-<p>定理：<br>如果$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$与$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$都是向量组$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，则$r=t$</p>
-<p>证：<br>因为$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$是$\alpha_1\;\alpha_2\;\cdots\;\alpha_s$的极大线性无关组，</p>
-<p>那么$\forall\alpha_{jp}(p=1,2,\cdots,t),$<br><br>必有$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\alpha_{jp}$线性相关；<br><br>又因$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性无关<br><br>那么$\alpha_{jp}(p=1,2,\cdots,t)$<br><br>能够由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>于是$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$可由$\alpha_{i1}\;\alpha_{i2}\;\cdots\;\alpha_{ir}\;$线性表示<br><br>又因为$\alpha_{j1}\;\alpha_{j2}\;\cdots\;\alpha_{jt}\;$线性无关<br><br>则有$\;t\leqslant r$.<br><br>又因为两者地位相等，同理可得$\;r\leqslant t$.<br><br>所以$r=t$</p>
-<p>PA=B$\;\longrightarrow$A经过有限次行变换变成B<br><br>A的列向量与B的列向量<br>a.相同的线性相关性<br>b.相同的线性表示.</p>
-<ul>
-<li>例.求向量组$\alpha_1=(2,1,4,3)^T,$ $\alpha_2=(-1,1,-6,6)^T,$ $\alpha_3=(-1,-2,2,-9)^T,$ $\alpha_4=(1,1,-2,7)^T,$ $\alpha_5=(2,4,4,9)^T$的秩,一个极大线性无关组，并把其余的向量用该极大线性无关组线性表示。<br><br><br>解：构造矩阵$\;A=(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)$作初等变换化为行最简型，有<br><br>$<br>A=\begin{pmatrix}<br>  2&amp;-1&amp;-1&amp;1&amp;2\\<br>  1&amp;1&amp;-2&amp;1&amp;4\\<br>  4&amp;-6&amp;2&amp;-2&amp;4\\<br>  3&amp;6&amp;-9&amp;7&amp;9<br>\end{pmatrix}<br>$<br><br><br>$<br>\longrightarrow<br>\begin{pmatrix}<br>  1&amp;0&amp;-1&amp;0&amp;4\\<br>  0&amp;1&amp;-1&amp;0&amp;3\\<br>  0&amp;0&amp;0&amp;1&amp;-3\\<br>  0&amp;0&amp;0&amp;0&amp;0<br>\end{pmatrix}<br>$<br><br><br>$r(\alpha_1\alpha_2\alpha_3\alpha_4\alpha_5)=3$</li>
-</ul>
-<p>极大线性无关组：$\alpha_1\;\alpha_2\;\alpha_4$</p>
-<p>$\therefore\alpha_3=-\alpha_1-\alpha_2$</p>
-<p>$\quad\alpha_5=4\alpha_1+3\alpha_2-3\alpha_4$</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -5167,6 +5167,110 @@ array([[ 0,  0,  0,  0],
       </tags>
   </entry>
   <entry>
+    <title>6.CSS浮动</title>
+    <url>/2021/07/20/6-CSS%E6%B5%AE%E5%8A%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div style="width: 200px;height: 200px;"><div style="float: left;width: 100px;height: 100px;background: rgba(0,0,0,.1);"></div><div style="float: right;width: 100px;height: 100px;background: rgba(0,0,0,.3);"></div><div style="float: left;width: 100px;height: 100px;background: rgba(0,0,0,.5);"></div><div style="float: right;width: 100px;height: 100px;background: rgba(0,0,0,.7);"></div></div>
+
+<h1 id="浮动的用法"><a href="#浮动的用法" class="headerlink" title="浮动的用法"></a>浮动的用法</h1><p><strong>float</strong> 属性用于创建浮动框，将其移动到一边，知道左边缘或右边缘触及包含块或另一个浮动框的边缘</p>
+<p>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; <span class="attribute">float</span>: 属性值; &#125;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">元素不浮动（默认）</td>
+</tr>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">元素向左浮动</td>
+</tr>
+<tr>
+<td style="text-align:left">right</td>
+<td style="text-align:left">元素向右浮动</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="浮动的特性"><a href="#浮动的特性" class="headerlink" title="浮动的特性"></a>浮动的特性</h1><p>1.浮动元素会脱离标准流（脱标）</p>
+<p>2.浮动的元素会一行内显示并且元素顶部对齐</p>
+<p>3.浮动的元素会具有行内块元素的特性</p>
+<hr>
+<p>设置了浮动（float）的元素 <strong>最重要</strong> 的特性：</p>
+<p>1.脱离标准流的控制（浮）移动到指定位置（动），（俗称脱标）</p>
+<p>2.浮动的盒子不再保留原先位置</p>
+<h1 id="浮动布局的注意点"><a href="#浮动布局的注意点" class="headerlink" title="浮动布局的注意点"></a>浮动布局的注意点</h1><p><strong>1.浮动和标准流的父盒子搭配</strong><br>先用标准流的父元素排列上下位置，之后内部子元素采取浮动排列左右位置。</p>
+<p><strong>2.一个元素浮动了，理论上其余的兄弟元素也要浮动</strong><br>一个元素里面有多个子盒子，如果其中一个盒子浮动了 ，那么其他兄弟也应该浮动，否则会出现错误。</p>
+<p>浮动的盒子只会影响浮动盒子后面的标准流，不会影响前面的标准流。</p>
+<h1 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>如果 <strong>父类盒子没有高度</strong>，由于子盒子浮动不占有位置，最后父级盒子高度为0，那么就会影响下面的标准流盒子，从而影响排版。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1.<strong>额外标签法</strong> 也称为隔离法，是W3C推荐的做法。</p>
+<p>2.<strong>父级</strong> 添加overflow属性</p>
+<p>3.<strong>父级</strong> 添加after伪元素</p>
+<p>4.<strong>父级</strong> 添加双伪元素</p>
+<p>策略：<strong>闭合浮动</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; <span class="attribute">clear</span>: 属性值 &#125;</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">不允许有左侧浮动元素（清除左侧浮动的影响）</td>
+</tr>
+<tr>
+<td style="text-align:left">right</td>
+<td style="text-align:left">不允许右侧有浮动元素（清除右侧浮动的影响）</td>
+</tr>
+<tr>
+<td style="text-align:left">both</td>
+<td style="text-align:left">同时清楚左右两侧浮动的影响</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>实际工作中几乎只用 <strong>clear: both;</strong></p>
+<h3 id="额外标签法"><a href="#额外标签法" class="headerlink" title="额外标签法"></a>额外标签法</h3><p>额外标签法就是在浮动元素末尾添加一个空的标签。例如&lt;div style=”clear: both”&gt;&lt;/div&gt;,或者其他标签（如&lt;br/&gt;等）。</p>
+<ul>
+<li>优点：通俗易懂，书写方便</li>
+<li>缺点：添加许多无意义的标签，结构化较差<br><strong>注意:这个新的空标签必须是块级元素</strong></li>
+</ul>
+<h3 id="父级添加overflow"><a href="#父级添加overflow" class="headerlink" title="父级添加overflow"></a>父级添加overflow</h3><p>可以给 <strong>父级</strong> 添加overflow属性，将其属性值设置为hidden、auto或scroll</p>
+<ul>
+<li>优点：代码简洁</li>
+<li>缺点：无法显示溢出部分</li>
+</ul>
+<h3 id="after伪元素法"><a href="#after伪元素法" class="headerlink" title=":after伪元素法"></a>:after伪元素法</h3><p>:after方式是额外标签的升级版，也是给父元素添加<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>:after &#123;</span><br><span class="line">    content: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom: <span class="number">1</span>;<span class="comment">/*IE6、7专有*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>优点：没有增加标签，结构更简单</li>
+<li>缺点：照顾低版本浏览器</li>
+<li>代表网站：百度、淘宝网、网易等</li>
+</ul>
+<h3 id="双伪元素清除浮动"><a href="#双伪元素清除浮动" class="headerlink" title="双伪元素清除浮动"></a>双伪元素清除浮动</h3><p>也是给父元素添加<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>:before,.clearfix:after &#123;</span><br><span class="line">    content:<span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span>:after &#123;</span><br><span class="line">    clear:both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom:<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>优点：代码更简洁</li>
+<li>缺点：照顾低版本浏览器</li>
+<li>代表网站：小米、腾讯等</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6.线性代数（numpy）</title>
     <url>/2021/07/05/6-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%EF%BC%88numpy%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
@@ -5442,110 +5546,6 @@ array([[ 0,  0,  0,  0],
       <tags>
         <tag>数学</tag>
         <tag>线性代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>6.CSS浮动</title>
-    <url>/2021/07/20/6-CSS%E6%B5%AE%E5%8A%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div style="width: 200px;height: 200px;"><div style="float: left;width: 100px;height: 100px;background: rgba(0,0,0,.1);"></div><div style="float: right;width: 100px;height: 100px;background: rgba(0,0,0,.3);"></div><div style="float: left;width: 100px;height: 100px;background: rgba(0,0,0,.5);"></div><div style="float: right;width: 100px;height: 100px;background: rgba(0,0,0,.7);"></div></div>
-
-<h1 id="浮动的用法"><a href="#浮动的用法" class="headerlink" title="浮动的用法"></a>浮动的用法</h1><p><strong>float</strong> 属性用于创建浮动框，将其移动到一边，知道左边缘或右边缘触及包含块或另一个浮动框的边缘</p>
-<p>语法<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; <span class="attribute">float</span>: 属性值; &#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">none</td>
-<td style="text-align:left">元素不浮动（默认）</td>
-</tr>
-<tr>
-<td style="text-align:left">left</td>
-<td style="text-align:left">元素向左浮动</td>
-</tr>
-<tr>
-<td style="text-align:left">right</td>
-<td style="text-align:left">元素向右浮动</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="浮动的特性"><a href="#浮动的特性" class="headerlink" title="浮动的特性"></a>浮动的特性</h1><p>1.浮动元素会脱离标准流（脱标）</p>
-<p>2.浮动的元素会一行内显示并且元素顶部对齐</p>
-<p>3.浮动的元素会具有行内块元素的特性</p>
-<hr>
-<p>设置了浮动（float）的元素 <strong>最重要</strong> 的特性：</p>
-<p>1.脱离标准流的控制（浮）移动到指定位置（动），（俗称脱标）</p>
-<p>2.浮动的盒子不再保留原先位置</p>
-<h1 id="浮动布局的注意点"><a href="#浮动布局的注意点" class="headerlink" title="浮动布局的注意点"></a>浮动布局的注意点</h1><p><strong>1.浮动和标准流的父盒子搭配</strong><br>先用标准流的父元素排列上下位置，之后内部子元素采取浮动排列左右位置。</p>
-<p><strong>2.一个元素浮动了，理论上其余的兄弟元素也要浮动</strong><br>一个元素里面有多个子盒子，如果其中一个盒子浮动了 ，那么其他兄弟也应该浮动，否则会出现错误。</p>
-<p>浮动的盒子只会影响浮动盒子后面的标准流，不会影响前面的标准流。</p>
-<h1 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>如果 <strong>父类盒子没有高度</strong>，由于子盒子浮动不占有位置，最后父级盒子高度为0，那么就会影响下面的标准流盒子，从而影响排版。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1.<strong>额外标签法</strong> 也称为隔离法，是W3C推荐的做法。</p>
-<p>2.<strong>父级</strong> 添加overflow属性</p>
-<p>3.<strong>父级</strong> 添加after伪元素</p>
-<p>4.<strong>父级</strong> 添加双伪元素</p>
-<p>策略：<strong>闭合浮动</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123; <span class="attribute">clear</span>: 属性值 &#125;</span><br></pre></td></tr></table></figure>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">left</td>
-<td style="text-align:left">不允许有左侧浮动元素（清除左侧浮动的影响）</td>
-</tr>
-<tr>
-<td style="text-align:left">right</td>
-<td style="text-align:left">不允许右侧有浮动元素（清除右侧浮动的影响）</td>
-</tr>
-<tr>
-<td style="text-align:left">both</td>
-<td style="text-align:left">同时清楚左右两侧浮动的影响</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>实际工作中几乎只用 <strong>clear: both;</strong></p>
-<h3 id="额外标签法"><a href="#额外标签法" class="headerlink" title="额外标签法"></a>额外标签法</h3><p>额外标签法就是在浮动元素末尾添加一个空的标签。例如&lt;div style=”clear: both”&gt;&lt;/div&gt;,或者其他标签（如&lt;br/&gt;等）。</p>
-<ul>
-<li>优点：通俗易懂，书写方便</li>
-<li>缺点：添加许多无意义的标签，结构化较差<br><strong>注意:这个新的空标签必须是块级元素</strong></li>
-</ul>
-<h3 id="父级添加overflow"><a href="#父级添加overflow" class="headerlink" title="父级添加overflow"></a>父级添加overflow</h3><p>可以给 <strong>父级</strong> 添加overflow属性，将其属性值设置为hidden、auto或scroll</p>
-<ul>
-<li>优点：代码简洁</li>
-<li>缺点：无法显示溢出部分</li>
-</ul>
-<h3 id="after伪元素法"><a href="#after伪元素法" class="headerlink" title=":after伪元素法"></a>:after伪元素法</h3><p>:after方式是额外标签的升级版，也是给父元素添加<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>:after &#123;</span><br><span class="line">    content: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom: <span class="number">1</span>;<span class="comment">/*IE6、7专有*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>优点：没有增加标签，结构更简单</li>
-<li>缺点：照顾低版本浏览器</li>
-<li>代表网站：百度、淘宝网、网易等</li>
-</ul>
-<h3 id="双伪元素清除浮动"><a href="#双伪元素清除浮动" class="headerlink" title="双伪元素清除浮动"></a>双伪元素清除浮动</h3><p>也是给父元素添加<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>:before,.clearfix:after &#123;</span><br><span class="line">    content:<span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span>:after &#123;</span><br><span class="line">    clear:both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom:<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>优点：代码更简洁</li>
-<li>缺点：照顾低版本浏览器</li>
-<li>代表网站：小米、腾讯等</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -6191,10 +6191,10 @@ array([[ 0,  0,  0,  0],
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>文档对象模型</strong>（Document Object Model,简称 <strong>DOM</strong>），是W3C组织推荐的处理可扩展标记语言（HTML或XML）的标准<strong>程序接口</strong></p>
 <h1 id="DOM-树"><a href="#DOM-树" class="headerlink" title="DOM 树"></a>DOM 树</h1><pre class="mermaid">graph TD 
 a[文档] --- b[根元素]
-b --- c1[元素: &lthead&gt]
+b --- c1[元素: &lt head &gt]
 c1 --- d1[元素: &lttitle&gt]
 d1 --- e1[ 文本: ''标题'']
-b --- c2[元素: &ltbody&gt]
+b --- c2[元素: &lt body &gt]
 c2 --- d2[元素: &lta&gt]
 c2 --- d3[元素: &lth1&gt]
 d2 --- e2[文本: ''链接'']
@@ -6422,12 +6422,12 @@ d3 --- e4[文本: ''标题'']</pre>
 <ol>
 <li>DOM提供的API方法：getElementById、getElementByTagName <strong>不推荐</strong></li>
 <li>H5提供的新方法：querySelector、querySelectorAll <strong>推荐</strong></li>
-<li>利用节点操作元素：父（parentNode）、子（childen）、兄（previousElementSibling、nextElementSibling）<strong>推荐</strong></li>
+<li>利用节点操作元素：父（parentNode）、子（children）、兄（previousElementSibling、nextElementSibling）<strong>推荐</strong></li>
 </ol>
 <h2 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h2><p>主要针对自定义属性</p>
 <ol>
-<li>setAttribute：设置dom的属性值</li>
-<li>getAttribute：得到dom的属性值</li>
+<li>setAttribute：设置DOM的属性值</li>
+<li>getAttribute：得到DOM的属性值</li>
 <li>removeAttribute 移除属性</li>
 </ol>
 <h2 id="事件操作"><a href="#事件操作" class="headerlink" title="事件操作"></a>事件操作</h2><p>给元素注册事件，采取 事件源.事件类型 = 事件处理程序</p>
@@ -6653,6 +6653,19 @@ d3 --- e4[文本: ''标题'']</pre>
       </tags>
   </entry>
   <entry>
+    <title>一些关于hexo的next主题的适配问题</title>
+    <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
+<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+      <tags>
+        <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/06/15/hello-world/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -6665,19 +6678,6 @@ d3 --- e4[文本: ''标题'']</pre>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>一些关于hexo的next主题的适配问题</title>
-    <url>/2021/06/25/%E4%B8%80%E4%BA%9Bhexo%E7%9A%84%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这里记录一些hexo方面的问题</p>
-<p>今天对于next主题的移动端的问题进行了一些研究，发现在mathjax渲染下存在手机屏幕右方预留出大量空白的问题，<br>问题一：latex数学符号编辑 <strong>$$</strong> 中的内容过长，导致公式溢出屏幕。解决方法：1.将符号用 <strong>$$</strong> 包裹，文字不进行包裹，这样<br>文字是markdown的形式，可以实现自动换行，2.对于过长的数学等式，我目前采用的方法是在前面添加-或1.这种<br>形式在移动端的浏览器，比如百度，夸克……可以实现左右滚动处理<br>问题二：mathjax渲染问题，经过筛选，我发现用cases来编写方程组，aligned内部//过多……会造成即使符号未溢出屏幕，<br>也会造成手机页面右方预留出大量空白，解决方法：仍然是添加-或1.让其实现类似于代码块的左右滚动处理。<br>但是对于问题二，目前没有想出为什么会出现这种情况，因为对前端不是很了解，所以这个问题暂且搁置，等以后进行分析，<br>当然目前的这些解决方法并不能从根本上解决问题，但目前在网络上并没又找到类似问题的解决方法，所以暂时只好这样处理这<br>两个问题,更好的解决办法以后再寻找<br>问题三:移动端不同浏览器的适配问题，我发现在不同浏览器中笔记的显示不太一样，目前适配比较好的是夸克，以后慢慢研究</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
-      <tags>
-        <tag>杂记</tag>
-      </tags>
   </entry>
   <entry>
     <title>不等式</title>
@@ -7581,29 +7581,6 @@ f(t)=\displaystyle\frac{a_0}{2}+\sum\limits_{n=1}^∞a_n\cos(n\;\frac{\pi}{l}\;t
       </tags>
   </entry>
   <entry>
-    <title>竞赛总结</title>
-    <url>/2021/09/06/%E7%AB%9E%E8%B5%9B%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码错误, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="341d459099ff70ca8d014f3d20f1f2bac1f601596016a7f31fc56f288a4bb7ed">a6b5137951dad53d15c33a27274ad48a800eac88c8b81e2c37b4b9e2f75bf7e5206f84c930f14cbe5e1a146c30a08539e66c9de5d6cbeb363c1fe257573828ceceefd39098921c7eb783e398150598166c1f870c0144299919d9d31e7aba9d590822af6b9304a0d15bc05b9344febabfd4014649454c7b83ec3b03da6e9a24ab502d364e730ddd482bc70bbf4294bf92519ef0b0282768f640b2e8c27f4b6ae31b7917722f9fd6352d22cc82faa2655881bc48d77e4e69ec182466d9fb24866f0260552c8f70b60c7593c3ed13f1c494ced9da8e6651a9e53994925219ac7f9713bc8b9f544930c388c55b5178935ba2dbfcb92f267aababdc1cfab8006461f5705c5d98e61f47294ba8b8eced88b3d7b7d611da252ad924e84b7cf70218d475a728dd21cd0819a73f6f431138bc3904e47c395fabd21a8e276e07b361656b183367dafd5b9b21ada308298938f3a5fcce7b8215929eeb04cf9f0913613c0d01fba1f369935eb9ac0d5eac5f3846c35d3207753319e0d82cad08919dd0024b05c70f8283ece8bcbd3fb4dacacf8a7b78e004ec94a4dbac712afa723adc704d32de38467b3c024e9aec7f120ac344a47fba170d5094c9adf8ec7cd98514c15b2cf6d4b2c9eb924a8577c2759333c419097f7350e1cedd41d2b49ec5d5a77880f04e71b5bd0a0aea5085e44ba0dc0045047dc636916ee8c51ec7e5cf86ab973bca198bbd89b8b652ed3e78dd041e5106a46523260298c8bc23e1ca4433089645d74b4b114d03f51278a6e6636405381e2efb275c3ffe77aa55ae6add8ea9dbab9c3f0ca23039021375eec7bc683e1b5f2e548a60add81d3a6a07f2f4e81ac794d1d65712487506dae1389fc372047e77aa7962bcf11dd6c6fbdb8a15c6326450372ef61a67d2b37faa303373b2de527a7df96faca3032f9c6bd83592fda17a6a84f106147d0f058b9d14a632331bbf517e51b7b9c0733dd52e525bb70017d755eb4b3283ab23c82d9ce5ee3cf197f66aceac325888dcbf7eae9c6d43fb1d9c01ed6727a04f147324f30dbef2bf817e38e6d08623ea3ddf77c842f74dc677cca28ccf8adb9544d06065c89d7a74ef41bb40708ec7cb5514774ed815d24daae79e91289ae757a0df0546a67d1678f201ab62325ea5ee01fc79549f05665bf54d386320450f26c1bb620fcc01047cf1ad045b0698a7800b1d5577e8ed1b94a17b27cdd71434c92df7486765b73ac2716014b6740ea7bc38919e7f1bd86ec1783c78204a242a58ea9b1cedf8206a4fca54584da42c369dd4b8a2153441868a71648aaa9c087a970ca576a041084ad5013c9596d1f467c76acbd7804b46c1935fc3d556b2ad6e234ea75ec775c44e29cb280cad096d008fe85fa3e80661a38f9e5d44af10c0af68bd686a90b932847f60277204a8315cf16638e74df8fc0b4262c6ce69e1b0aeb824b976cb95b6b6dbdd9c7dce47f4df4e2969a585a8ec4c41434a3d04ccef592617f658fae41ea64794e4052656b0bed8fb2fe742e02e09929efc1a80919a58696d5ca373b69a49bff18fab279d75d589d5361472bdad08f1175d091f69289c9c593ad69f2bcb85e737986faeca4820acacc54789d802afca231eeb1314a836a64317122d42fa31a5fa5f8b9f4e9dd91a409c8f58045d989d31730de49cb420169c481b36c7de04dfa237b2c65c89be792e8d7a198684f2711759e9767de43bedc77da9db773bf76bb221f54575c9a1ece6f3414ab6ec848ca4ececc8245e9f4da8f68aa3a2f1023f27beb84f53727b285cb10dd739ceaffccd8c3f36d4d78925743affc25dfb93fc4a7e1e7a18f90fed7efafdd618b7a3f41a53e184f53d80e0d8a1ec4a83a7f38a5f211e2e1c2afccb40686275306c9142aea2006accd82bacd9e4b0f08459fe5c08ea5a6ed88c6e9074f8fa44ba5ae4a29110d4d1d9f2ffeb7c4dac9e74d586ee8ac677fd16a3633f432fd71ac6df69486400ab7f595aa42fbaffa78420cc7065965136750fb3f540919dda1099477b306376546ae0ab12a53010b13aed9854b890aa8922006a35900ce7fcdf8c7c009d1adf5d96eb2b7b1298af18b93cd997e94403014dd1ff5f8edaf68f179e1cd403035fef484919423c0cc3be40af08e977b3e383b582458bd619f6dd5ad9eefa75bee4eaa30bd1a3e67c3db743f29b654cdd47886dadae05c586687a5711c556563fc600b947b1efd40d7dc42a55ab63bce59fe77fe510a0501ded6a7c94908fc0743f25d20a36aed90e2f931fcf565483ef4edc1c64e8e07fb6e5fad9ec925d7c67210baf75b889a3d38079a33624e8f2c9f457d69dfb08d77ff62228e96d76d3cc4920cad1e1dea5cd29046f647455ba14b840aefebf2b7652e0371646fb2a7cbf9f187b659731b0ab952545957224b094780dba0002fbb27fa51256af49ebc4fb82f1d2cfc4994d40475940d16359cac1ee8b1df68a9fa75ea6bfbc512fb14c31f3fcee02b2bd0d949f7d2488c2c83b6fdd8c82b7fe33306659c60fc1f88a4de6eee2b0c7185d5820f50085f68fb0282e530c142633c5911c9bc2912994b75ff0a4db9205159564b901b60a502f1a9a270ed9cc3fdd9bf16dd7f50876decd8ec3035e04a4d697d92f567122849742a90ec858b41b8dad3018422ee19284ea6f63589571d14a8db9c313880165c20febbf2336396b7c9991591bdecec2480672d7e765533620e4968011f920f8ece7e22b5787a3e13cc525861b2bcb9ae3e03d8628d401e182a23a32ff85e739f9cb7b4422fe75c3ebd2d423ef2a1fdb5ffaf30e8fb2ac1efaea3a005ad444a0bfe9ce233a30fe8949d5817878eb419e204c32d8dad7571ee5eb6c8880cd87a01f76028ae9dae7b5d70a05f0eb73b1e0d7b85ec3741451e4d30c932e8a2a44c6d2ebd06b3cb64c5bb386f012c413f3ac47f0d0382cd734e3df17948ea144f6c3e58883c53130b3c09edbd41b1cb4723a3be1765d50e5de6d049aa997656521ef25b205ed5e8a4009a4f2427f66a75f7ea56c9ad3a329341c5bdef43bf55b31115daecab325c9f06aa6792c523d090abffe33b4d48226db3d8f6ad166681127e13e2fd64e54c82814250df5b6100914f25d3cd30115d1eca4c667e4a9c6e652058511261fbd1a22089a05acbc1646d06bdb5750cc69687304b30bf851389b1037c437f9f9d82ad1af42092a586d17451b92bfd2e9ba701eb2e0d539d3f7d265e6507d6ac0ec99fb175cec78f3ceb06f141aff67198a09a0aea60c5a2fb44a87b4a510ec855c1ae971def2f6ebf8cde7d38d8d6652f29461ac9373f00a0c0275ca48d057a54c386bd5307afd3171fb6379b9bf65136401c92d02d492649e4f603d5fa97fe316d41110934d1be8b4b3d2458c5ecaeb13ca7643c269a5e85cebd6f7170c3e44c51865394004cf3b06e62cb22b109eb41ef5b2088c60e31a8ddfb39eb8d3e96186c42c90ef65f3c3f82dc8874710a0aabecc74dc3eaf69a4039fea1bbec2e102ac7860b9f393cb13340367133122bd3a587146000eb92206b42ced285d0b46765cc145ae55b8b339a3a635072df6dcccd575a81827f52bfbac9c9312c55dd949fb970ccab502a14a5a370af94c8eb54817ea4978aa1c7cc47c38a7ba7fab155091d75fca1cbaa00df3987fb64a16935418820730336453c7258d0340efb3d089e5acb365f82ff44084035f77046e0b48869bb1b5bc52c7cb51c5c5256a12e0630cc9b96388083029ef6a204b30401ddcef2c1f11ac92eb730ab4f16223a33f10e34def22f1e6cb6480ea427bac92bb467af5c10b2bcddf261665b32300280352cc5ad86934b7415cb96ae6359b03f4211fd780b95c57e7fd9dc5fac8fd778cb9f7cf9076fb2cf1a1df9578fbb22780d9fd0a2fd708b2d67271466fee358067747f999dbef881d3079f68da83b6014ef0f935a0d8ab4c438c0452c0022601c0df236e2ebd30e3eb62d45b5842c67129e9256bcebd7011040f3b1f584d0ef67eda44823ef3fe4cfc88364f05f1000589ef7ec0529d31c71ae850bbf6c8372edb45a43e91ceeb81feb816e9b1baae892a456105cd465fc07e83dec01d990a44b13472c3968bf373a62c29c05a4804ad41f01b20260104d3a5b7fb2b08b242d0e5a2abdc1a4a73bec78b8ccaa60bb4ca59f039d3c54607618678f2651f723b2f24ec88459c8bde0f4ae7f045298b1bafe2a617c1689dcb0a0db1794f642e09ee1785c6cbded83cdea4b7043b7a5ec7fb59ffc206a910a613718642e8e7a976db41e20ea867de5c834636c77e9ad1e700af84ac611eb98b895e5d34f6845e7222b840cb8b62ca82a4f2b7cb0e994149cb4fd11d2cac41635ce3a3989bbe7ceb9b399c3d703fc36a3a317fc305147e01af3a066599a88730045ff27ce3a86d83c1bf6f23fb495f05c6fad9443735f31468dcfcfcb02ba555efc7e5ec7f9990b495bbc4d8f32ab20855bd8dc694aba17ac24726394ac091b53265e65990b9e82beadc6a32f6beaad0ad540c60bbc5d75d7deb54c56908e3aaf06e999ffb45c4d9907e8365148d7a1bf68fd3b52055bf21e959949db312c07a9ba6ecf4606f8c7b7a5a55d1a2c284cdcfc4e40d3913b73a945e19626713374a235d9e5422a2f6ac239542fc400bb93cf4963662606985af4e981f58e146bea517c4c8b1db5f574d3f7cb718cb25280711bd697b0cae01942b0b8872c73de0dd0f491ae45c16f3b127c97f3485966e37fed629a8893dcc0bacb1040cddad4963a596e924e83e333725d294066e6ddcd09cd4ca8f3d866f86546762dbbec981898f2d5fc3a0f0b08775dd123421899cdeac7c27baa13bceb5b7c6f0daac16f201e9fe18d179fe925b6e679af14963ddac14b65425442f1222069ec82379f6cef94b8b1a50fad3d63cd0ed9e86147f3dab7d7bf0dc58391141d897ab1b058067986ea7c3707c7d89496e2c734747a482ba56688a7b1115d5f7344565f85764e442ae5a74fe3f4778dd376c07be59e6dc85db14a655b6c02078d33f93b1469096a496f7adad5e3f2c10e2850f8c142f59cb96db02214d3bd9a0e2456b06260206d4c15d6447cdb535f29d9512b78793e6b056d50964abf72cc3e22f1a98a2e3d0a6542329b18d52cb9cf414bb481710182b9ae17b0ebba5e35b4ffcf581d0d6ec6d262b6d2184e43d3699248d726a58cae0ee383b8005bd31accb7eafab40b12e7f5620cf487abd873dfe65e0cae3da28e0219281af01d486896260aab9c4c39477a63f13966aeb87d652875b5da8aee0ec6c4846a467da5625359590e2476850767517986dfddaee1f8adcb252236741898f46353a9219b6b7dab103db6876494505f43fbf73d1d47e4cb4501a67f4bef9ea2b50ee74743ba39221cabdfc4a43fa00e0b3b993840d50157b19f95a88a9f3c9187faef8d8fa24cae7577600a1255ff5879aca950746c6606e2a1f2cedbc7b6d42a41ceb76793d63d630de428d05bc737183039b77e67ecfbfadb2786b2ea3087606ff1e4383d0aafcffe0aa3f11e60c7133aa2b56915bcec0b188d5b70fee97862a9c56c366f756b3a642eff6529b2324f42fc8acf38b06fb7f307baf367634ae78f2447e0910adb6ddb2688223f9f7d54262be84195e78d338bea803401b8544a2e59c5bf6b66fbc492cd0ea959e218598cc2804bdf5e23b230f34ee7d194cf76286cb654521223ee774b1ed2b8981516882a5934e142b9200f3f69ca4539e8c2dafb20653ce00b1a324d5d2a87c1b92fa74602d802ad5a0d8452ef951006ac4831a6929d12f78d21cbf2faa1e7d623c6e49e6b2758b45aff2972a00b8046fab5954a2e7948ea0a86205f50d567c19b873b8a7f410f0698a6966fc7cd706615b930a091b5da0021f72de9f2badf440ac70ca42892b1306a1f17ba2d2359c1cf158889f86c39beb89dd237da86c0e0233808f9c3ee81c81755a3cf90310f77d3ef1d8d96d157e94c28da645cb0aca76c992713d5fe223b916149d1a229f32011040aeff7cc5e949bad9c7bed2d7240b3ab5115679edfd0f4669cac09ba26abe7c30bb12ea6039d309b02014aa2fc02ea8a126c0342feec2796b59382bf2ba4767bacfefbb7a76bd762e7e97a0c03f31b514050d9f9e5dc7a3adde3376ecbb3126954ee867f5a44713a1c140ae784a926202b2aaf704ab873597395229d310fb1dcffc1f27228ab76275560e21aeedbe12836581d545a9e9c68fe88439657af475eadeb93386403b616ba2274a60460e6cf4ce34f21c3857643beef4b243f362eca2069ce9f2a7710b1106826c89252f2e40bf3d11c7ceddfa7d495f450a9eb9412593501edc3850348f185f28e8a0cccbecb927b1bc3e221c325396c4d75b2b60fe90ca0ce4cf0e6c35a25c5f4b26f7541044ad40d6c30e562e32b2dc022af7bdfbf7fc3ed2eeda96622b8ee585397ba0ac0486c20cd61a6714f4ae649f75febd9a4c27b78cbe339e35b51e9fd7d44b0f3fc43e7ba54de82274eae32bd4001fe0c40fcbbcbfd821d75bf94edd55932609e3bc32b213bdc9d527ff513ef2e7fbc9284e64a269c84b5c31e22b0169dafd6701416b3d34a4f21a672cb1b6e62bb805cba0d9d6e230ec13e3dc87c105af12742af3197d0c6a2ee100c18b1c64c488638ade73b74976ffa08a5aa92546fc376d811129e78ac1fa08163c0cb07ef1d9319fb5e8747b8d9600f3044e8c84e7f4df0b68e307dc489360584bc9b48634e79408f3e6a01642c563898d8c7477d6e2bd1ffb013e7e315f323e67cf6411cb618f17b03d4da872c8b1f1444c1a18ee3a0bcf8837ca13337826d0b517cee875ebe6fbb21f7eb3721502b54d1191c5d165d81d2415edd8718b70236a42b29234d21aabf3b5dba9fb78558b3fd35972b330c1c68c8881138e9c861be3400b25a709fddef6c492a239f5a5e248f8b20920c10ec7de21878b9596bf515e9ef0c3f8f8eaee59252ba00d4db2c1f91f772293243ead734e12dc55e454c0ab1be20a4d96021bf252b0ca4d9c051ac7a1f91467faa4c616afdf11d6f5ec374e42fcf61f4f401d7d3938ee4e6e4a3b239eb2a0f8d9bc645b8ac9b68140fd840c8ee8687a439db046c25c873414a8e2990af7dbf71820d838dee4b1004c47b210ee7251653eff5002fd30995121cb2b3940959ffee120872b10dc176a5ba28dced9e682e079920424583f85c2c769deb4ceb008ac0918d1ad8dde261aa2f076ccb5135f09d0e8c0848146337d49c4cadc3ae28d0311bf17943f43d8374609d5064ca27c921eb0d214145a6712995a093266db6235cf4eb6df243dd27f3c215be943a7a29b7dba34ca9e44e740486ba3d01cb0ba137d41757cd2175e90a72d7c5328a2915f8705a45bacf808d55f0d4b2ea51a51cca27b88296debe159d519faa0ac837f004105298f6aa7b78549b69a36545ae45d95eb025eae73aa688cd285828db54f29afbeb17f79d10a75b4b670f3994040e93b0b519b1a4d6e984931545aaca38c289481bc804e40d4508d1446ddc9ff526ae76c08bdd960fb709cc746577d5e7f698adf8bbdd6b8dd385d86cfeedab993b82e97600697ccab4393befada7f80d7d8601fdc8585c45850f3f655f345f853d1cbc8b43fb3402a087496a44dc2cfcebb29b01a6b8a4e86ec2de89f1d1907930b2372e094e368ba80f7ca8190efe207787a76bbe160caa0904f103b8c5e20764c9722272c2f4d3c2081bca0ef9be5b67f5acc5504c0d2a2f06d7b38b6e8a77a9c1fa4ea4875261f75cc71ce57c0b648feb06d4a0bab3e66200a74781ba663b616dc41b7422faa69bb7d292b8aec0b8f8ec501bbd357c2cc74ce7eed2675d6f7b9b0821d1a4ef017f7784807bfc62fd4aed6a9341d274e845e1a9be04dba13ceeca0f0c7eefd3d784f3d144c153f47a259c837a2411b73f93b0f69cd42d8f9dd691b6a8f6bbed42f46eb8e503b722649ff082d54b908856ee0dbf8b0c8135102ecf58f1cb9bbca684261e328a2b656ab55988fa2980580ebb60da59d7d58f5fe775254548d91c7fb2699f60a8b491df2ee2996d6cc8312cb173caf73e4285cd6990d2aecc9659fa07cae5a89438aca93aff2fcefe189aebc148b589fd9577e0096af1192a90ff7b0830ec26acba26c4f4620331810a19d8e747347383a72cac31827a767a03a86b17c0415e07147fcf84a7d5c06dfbe5ce4eee5a571676f9412ea3234a9f4de1ddbf144f8fbefd9eb2be012c241cd5bfd629d53521ac46cbb47366d692ef7f08d9229fec6d9f3ddcf6981eda3d6b3823cce1f6e9301fda833132f6fe3f45b5e06a33dbe0217d661ff955d5df782b15e1e93f2088cc6ddf51423e56adc6d98b8df06fc7e062f2bfcf931b487810f00bf2eb5687992b8cd0f9633d37c5bcf351042f0f8817b33200e5336b83279b0cb117988178fc43777766a44d76219ad5fc5cce99f561396713488053217d1c73ea78abba474f7a1ca192e0bb28f84f37be0baa92deb725fa01e0fde6539ab320578cde610c0636ceaca27cf4e5cdee9c09f53108c27c254a3907da7d0f9397660cc998d706f63ff757d2899f8c5aaef28cec6221204e689024f141029e32b3c3b2fc0da15839f9cf0aed98bf7f68a14a31290ded8f7c77b97398b2ee5874f0819ef51594bdc41a6f47b476a466c39fbe33ad5bf2cea3153d1a19eb60fecb6e43187bacfffd6e3185bd6c43a4e9b96787cdc1c924ae067df8ae9048b86d99caef8c1b76ff28614b205af67106d4769ba82ca285fc45928e976119b78d74149c210b44e200e8be1ac67d0694a71e69cf1309335e20b57ebfa99a0729b8b1f1c6c08810f8d02506856a99f5db0a398a8067e6c24156ecdec5d0becb22c1552c7236b6705fef9b0492b084fc7275a71ba09975795556ff83a85dba99dfc72be8344c05d778d979cef08b177c80306e5abdba1506f845ea5afa8702207361988ce87470cbec4c5dc57923695c5d53ef4c8cb83f041ee64db24689a1b3264fb6ed048e6a091ea6cee182b612a0b7f2d824e5e3d8a4035312c1247cded0fd54d23ed961812f440a9b104f5d437fa2c4a3662aa0b249f566a17c0f467a922537b5d9c24709e0a786a4eb72800fb2f4af49dda347358fb5e88da6d7e659ac220c064a732afa479bbbcf129ae53e1005f390797fb4b028a8b34beb53d980dafcee3aac58971efd1bd80935a7664562a7951894acd09f4ea49dd5ceaacb988e16201e4e59d1a119e0472de8cfa890aab6bb92586c460af05dbafc61f9f5323a92398dc3b6d6f0081e231f4da51ec8704f9d968be3dbd0c191cfbfe92d15a79b8c9a4e6b09785dcffc1bd98123834a2823483a3a9ea79e21ccfb556d674180221c339eef3fe5f494f356ba67c1a217e3641b8b3a2979ec1b85fd73142ea13f2c81a47aa11eb1b127cd677d2b090b8e9d65acb6cd6cdab93248e9fd9429996c4b2de24711f7233cfdd45828aeb7fd097e35008eb232a80029833fcacbc87d48cda9262387b85383744060ac2c6628a779814907e4a199dd02a316c5af5ab0e4adcdf82598bde6c947947f6e9e0140eeab93ff9e4ca359957f5f7e60415c4d37aa7faa4676fe77f3783ab108e21746d4491b7dd1074b2216eb32449d9dfbf0df362ae7a63874d07db06fc2d250a339d34afcd99450c9b6285d0e9f50302ffa1bdd217fcb95475865906e5ca623bf0b745bf20f8e2a38b58b90ca4a419cc76bafbc2ba295d38a20e761d1551c4040312e58c6971ccba7e0ed44975237c19023cc68a1963b540f2b6bedf3dc0d6851c9dc22fa6b8e5cdf673497b31bfe7bf0e75378984ac9153dc60bbd83ccae43642affa43e1adcb6843a7dd9513adedc0cda8c45e812c04ae2adae0f0fa4f926228d61ed0f9cc91ffc5f659fc314aa7be13ee6b604a804172a810f3a10329e46b1fe911668611e9aa3f5ca8ea76d5053608a2e733c091b2f7172ea82350cfa50444bf02f43d0db8757886eb188399e4bccfc599878c20d81d48dccc965bd8615c7a094c7de71130e60fc7ee85ae3d7d850f1ba0244a0a352f08b436db525752da25a1456904c92d50e63654fdc2881566bbc1c60e1fea619172becc1a8a388d3775431941fb3929184646c9371620678ed6c95179883b1b56aeedc68eb6a04eb65e647b8478d0b9acd7dd4c5f04272cd22e97ec5501150b8569e439a3a7333ef2fdd641aad0d7a9270258ad430aac554aa09dd9ecd316d2dc6273fbe39fd0859c4be5755b73d741f0e355ff6c0ee1d94c5af47480be56ed462faebb3da53971e659d9f7dd401dc511803406f503c9fd941651994c077d4396d818ea9023cf580f1cdd4a5c3f9cb7373b24eaa7fbd9bda5256c1884275c0f1e8898fad4ea68d53891c164b3d96b62d4ba9f74fd800e44723d1d707a491789bac625e9b223cc0a4e7ccf28ff67de034c8f21d15f7e79a742c0daee210bdfe1191d4e2e5e59537c0fa1dedbc5e8542cb6a872ff69efbd458d18b7187528ea8af6fe105bcd3efebbfd58941c0a9230397ee9aa4bc3cd47065f2bc0e40df5b2d48caa80ff5a6b738cacb89ebd5daeaae212d3885e8fc09418fb305ae2e19c43e840e1328fa66261eba0bfed9e1c963ddcc9d377cf81e1c8f3c0c4201eeee337b6e952143f0752decbe17a0884375771b02afa585c6e1b28d8db29be33b57157d089633982abcba474be2dbf5c137cca681604171eacb451df24ff8314fbeb54d4e29f7a17e965adb839be84a8cfac96616078fa33e3207a3833a4218f0ff1447bc361ae83fffa74a4f208f892efed2faf320cb87fffae4ffb9455d16a37ec897d79eecf908505d035d0cf4e8d8f9fa9a6e6b97ef705a9fdeb6923d5317944f1d7646e74a5c7cb3d1222b7716e1aa6b97fc2cff1d415daf90fe1f579eb4144ac4929acf167d4b63f4745c0f9b561f4ce33b9f9ceb12685c6a369285d9af114a9a43c1d2fc0a5fed7eb91555ff249f284dcb95527b709fa86d57eec3519ef27cc56f2d7bb99f5cd989d7cc8c89fb79f81d00656c8748ed42ab015270febe51108d81f41a909b04eb0716bb63b808e6b779d729d24884b984c75826268cfa416fe0c0ac3613f10f6b7a0896c1723fc2f01e64a239ab51b8c8dc12e9a7e10ddbc26cde08b35be2210a27d1542fbbdadba8abc87f07404c5f1594aa01bf2e237d3a83ece51000e2aec0321131aae9a9618000bca847fc19b6c92d7725682d76d899736c2730fa05ead185aac03b5d7ea4ad422d75dbcbccc7301c09ddd93cb08506acb5f9f21397bb06ac3ae5213aa623b836c71f45b65ce2a0d8d610714a10218d1218eda38852e730728442640ee5cbc1decbf21c7e326643e7f7fda20d0e91bf78500b648ff0bad0f6bccc23e4f1ca34de18e5ee31769cf90a8c246204e6797452b73b582345bbec3263df89547decfa4a3518209df443dfec9ad2dd8caac0c1525d79e327dd298b65e4b9a0a265acd86c2d16e01452741c60f1af3c8debda2f75ad5418bdebfbfb66f6eb76463370d41b3d76b64b47dae6920d66d8643fc316a5b7e81d58042ee5122f311d7d5d61cf63efd2e7958076d9d3b50b28e97f4bb49c849dff903f0b28819e8f6f3e39a3310737ea7d83ee2b0050e50a715a2324b2942966ff15460aa4f195461e08f869b3286acb4403aa1a5b9698effbf7cea695ac492c74312dce7f5b361a2893a93654d3d30d82932b20099fc679f95133f9cbbf48cb5c8d7f746acea3ee1d1ce3788811d95b990245dc7d589f59ba36a62e2011201da399b1ca46f6c10e61f04af2de04d4242ffab1ba7981b50f9b90e3ea507067a5116bbdfdd5aed48b24af3d8a4bfaeecd6595d62a0641390371b2850d0399b8b07317d74bdc220146889660de890179c5b1f05b8fcd7eae888c6413e7cabdb6d3e07bedd742bd366d020fafb307ffb884c4b35f68c9566c40c71acc35bb8c3d2495a116208c7d47da1c0bace69b3eb2bc7eda9ace73e516a5cfdebe70bf704252bce7d7237d22f11710a7f954bb30c2eec2f691661a802dd08d28c733312c44fd2aa3567c74c435475acf0394650934d735b2c46bffe74176e4f4be01d5d89f607703a66e3c462232b265cd5808a1cf87475246d2ec00c5e5b2275f798b68eeb37193c5ee1e877570926dd71b56a95c1861f30c528746a9caaa4019f1cbf9d354c77eb7ce3834342305cce02d4ea44e3f4c83e91aa812ae0952912e357c3fbf917fdee48e6fced7e1afd89b1e33b425dc8fa791124149d0d182032aa4442346e37f50f993a4d561785c7f42dbf429bc145f99112825e533d8c38610ad66a948467ea20b01d83e8588f1612b6ec8aed9d06ce1f5bdd92899b9f524a2b6ead4dbd17db42dc121dbcb9c8638265f4d87d345d7675bb23ab61c7d57b44b81071090014f44712454ef58a989b715a4babd6cfb1747d5a41c6e540204698851fffcc87332f56730fe9f22738cb51b932529f2bfd70715ea5104394deb8c2d28686563a8e5d34e44b634af669b151bd186b6187729d9c8e1a05e6018a301b3782db11b09c807b58485259b6a107f5a945a8299023a38061e8d242a0dfab4a1d06c2c9636400a1982067f916b5f23fa08dc7c8f9c6eaeefe45062108c9c03c8d4badc1ead72d6066f870c273c980b09c4cc004b8dcab615e4a366ff8e5b99f60343c077e539574d468f3a0f173e38f29e6f084c220ff380cc4201d72a1f31101f59109c5f1b4e4023af840baac60cca8fa4df2fc52a28f7dc7af72c0cb50cb48f939e7fd8988d14df47316dc01acd55427631f9876fef2867ebb22e14c8b7b0c006e47cfa7439044fd3a9570a105f27e44f98a7648e0e15e2b2d43b6584eb1de58c648d662c2e43414772f611cd60aaff051171872372e55c65350a493cc98e4955289845f318ebc955a330fe7817f137c8da728ab082130d72c0dafac75798f5f37c26363a5eac80d1499ccd6ead6cb64d7b562e7cd244e34cb285e230f3c9de66f02e1e8d1b85b3807c8320927bf56a69907f6059929a03a8a3a110027cdf1232dea0070e4ef7c54bfa7466bfd7ec9341be6a15f788c6dca54c6f8c89b7722043dac68a55c27f567a04c933f1dfc278d25f2ee688b31086fe220a7b96df0b58fed7cd96ad47bcc55b94c8f358371961f289dab53a02ba6e9253b210a2cc27775083db4fcb99fc7350e06dc95780e33d0482d580d2707956a6acdef5c8b9fe2f76dd862474df0d3b62408dcffe8efe0cabbb282eaf1b61d5a6f9fcea7558f27558e62bf6d1672812d738713d4749697102d51ee97a366d88c43cfca875b3d763aed5157370d67ef1b4136a28dcffa705809397d9aa894914d444ef0ae6964c819a3c6ace881ffc7ab99a694b429b634eb27cc8b96efddd77978fd94584b89168ded8a5b997a2a26ccbdd98ced1f24bc27f6e8506c1961053535259ef6898e8fd3c418ed6b1ee2ad346ac0b8f5d68e3e23a28943db604927ca575eb9eea572cd3b806b12a9604f996fce6c29eacb616ffebf3c6a4da374e900d90ea3598a7589a6621efcf7ce71a48f1384221dcff29a58fdd0c5c3ba12061c73ac4bb1929491c399553f54e85030255c5252733ceba5294d5dc76c21d8cb08198ce5ada94d7c41496c99860d453cf95a6913b080824099d44e268cecfa044c3ef86c13b10b2d0a9e27a58b74e24281b610ea0cf5319617115f5d2c0715dbb1bd85b740044712429b2b507f2a67f7931dd143f51722aa1c4e1af81a20d3b008a6583efee1c9f0b4ca4aed076741b6ecb696cbe6ae598507af1c72f807f7a588390abe69d42cc4729f730ae593c01e0dadd3c6f80453b736a17ae45ef0b499f90de2e99c715551176eb265651b1d2e117184d2cfcf3d765bba8b24121558f850f5336880f3e14fc19a70bd95207ddc468fd9f1459bd3ebff11db913ae3efb1d1779681b65aa00031c00fd7402f50c785d0b9dba1c847af2406ad2d4813c54369219a2936933ea3bc4db6d99bed31f67550bc3fc1b7c6c70069b3a9adc8e09f364fabde1fafe3189254a39c0bcc41546934dd84b95e21e9c8e4539517efe10e575bf2d758b5ebde90519befcd99d0ff7b420cc743e2e86530b81c24027426a70b7b32a319799b130017aa5731f55fad576c956dc299ea8101cb0bfd8db447d557f11cf04a4ee23b96afdd2c8138ede393a46fcdca6aa38dbc9daea1fda864c46f09950063f7ecf741058059b19431877d732d593cd9c6ea4be965d4895d21e5e8ec47740c94f0c72364cf9760df9af7f83cbdeabc2c9865e3e8273240c3c64a1c89c005c9829dd234761b76ead37fb41b5968e3516d42530239a2150187906e9d4c745ada183412d497527d8771ff895c8fe7ee691925ba36091deca2ba83a4e963a78b02901a4867082f1d2decdffc196ab880c575c6127c417e3ad29b6d6769b0f88d8a10b3215c0ad3a0f3932de49b93f51cf5548fb86d42c5dc01c651fba6966a2c6eca4fcf932e59cf9529cb0fb3281915a6fbabd989c026a1ae1742e336f63cacd77efd92c27a15d292f7ba3351a841dbea813cb9d10931ad03d1adc106a35f5c2b5dbf5b22afb46a5023c43aacc925e8857a0bd6a53606e6066bc4aa1a440eca9001c50e1c98c6c4439f35f3fc301216c054078171c34e51b64a448a0bb1ef82438593b3f049ac6f60dabd95f385667b1ffbf38745405cfa8e4ac0d8490043c6eda27d9db92c4dbd41393f2d87e6382e8e8f478e42596a521c8fa2a2483f59f6e2da61f8425d7f34a7dc3419df7f9dca6e6a3f2dea595c5d12d50645c63be239fdbcb67bd9dc2693de8d689dd3b8e4000336fbd7c72697bd5784bcb18d8654541f6b6d8fdc33b1e63cdaae3b0ec6d8a30b1212ebce228015bb605f7cb6e3d18b237ace77655d49a544eeb3b525cdca0624f7596fe299be340e6a19ddf9d020419f67091174a3f7b8a1e98b532a0b2200cf37d0686e43233de3fde478066cd4fe7a296a45a91a479feb6ddfa09c4f578a7ee223fa8655d42385d95421d26462d6c99ec0d4f20b44c81829ba659d8934b06970b989fab6bb1f2df347c6393d55bba455f38cbb0a904e122f947158fa3d4c7c27de2fb2a361fc68e9465cb96a9fc3f67873cafd0b66a16d2ec50f2d03ea34b5bc2fcbce65692e14392adc9794fefbec2a683a9924f17b6f82f329b70cbc0bd42b1fbd40e8474c5db44163a240f27a0c93b67e5d7e8e70e345ce23c28cebe7880b82152a2077b573c8443d809cc0d2d80da4fea1e930da55fd84098748f7c1e6433235b8e8c1446d830b5863d9107755c96056ba045952a9c846a2214d501f547121cf170051af9baeb6999f5b39cfef992a3cdd009b71b8be9dcbdbbed23021f89a305994fde6c02e18485d858115262de9ee83ae9575629108a15d56a5fdb61e0a49c31c2ff4ad44d3bc39c0b5ed7ef9e22acafa2b56a4ac8a607e435ada0d2290b58c513c7edecce4f4377261fd54bdc9b0b571e720fd157cecb8b5bdda5e424a80f4da16d2194dc040891b39f76bb92a6c7813953e503ba7d9936210f1f7c2a719fca9ad7b18b831b68b1659f831d012777ee4e5b38d235e8ff4cbce7f16f72b013d2ad96e39b8cc276a55b92018038f650cbcd6be1271829eceeb0328d05ee93717ce2d96dbc2b6e2bc54874dc502cd1f800702efe8d91fa0381c20eb0e56861aafec44383384ad5f34b38895146506a954bd4141faeea3d753656c9583bb611927e895df40d5e511c5b1585928b432ce089f92645194d3dbe3f444212b27825824c97ff1980441ee2f58c32fce9d0fd22f97ee4472e9d9a74e7a3aa4a060bdaf2b18177425dc2113f66c91f9c9290014020954734d9daa2fe88f7fdded78bbd11b9384d95e9fcd574893e2b2ec565fa0ef8f5705ced8e81853c40e2138a6d78ec6b62b35ac2a5197c4b16220f50a1ea61805403728c854a1b96daea2f693ff71aafdc2a28652c70044e376c515f68a05ea1682ea79cb61f9658107c24d21ed3a976aade03ac623c21a47c2d8c4bf0334a7d87da8d12917cbc42cb0122fc11ba8e9b2a89fb40962b4269fd544d2c376603694a40586f893fb4624da1d57af11caa22a4b6c12c603aa0ea12379cc709fefeff84082535976ee0e8b0fad6dd305a145277101fea93d4c41b190b2b6c3244172d028c1011bf6c1b1679efe93582f3ed6fb7dc522f31042a39c3911daa781b1a1f5aa82e960d796ec9e0e09277221f4ff55cb12938fb1ccd386e35763f38922cf2e4559e03e50ab536f8ccf95a9f44e205b407270579e2103dbfd811d3808503872673b417720d3106016073a787724f666617c3871e7707bfbf1417ed43d611fe81787cf115a3f728284c12e38862b6cb6c80b315834e59a3fdc90573f3c2949f0e4732d4b81b50b4ec8a7f55f24f06c6dffd476d40e3033693b2150f738e823f581473e1351b4af6188869e6a1336564ddd194b61b06c070095d16f0521823413a91ea5143b5190351e7f51730bc7d22f316fec1548072a9d66f295bbc13e3699161749cc169ba001f38b959ca1c8112823e13b099801942d21acf6ac1375b72806ffada2f9aa9a92e05d0d31184bcee48bd4c3209a24cb67066c51714e03300e7ddffc3a9271068e0e79788ade53201b86e6669d18f53d0f41ff1d7a78b90ee60c7db0e34a2e0dfbcb322e233cae011cd7375267842dcdb44b09b05f487d963730d5d03342bcc19e5eed6d084ebe66f70445ba3294fdc7d038b3851ddeb88db6cebb85651100f6ae027b9fad9bed92fe2de76c8249d223fab41bd62b9990aaec313bb73687dd2b6f6482a71e011606a53fe30b95092af45f6bd6aa48bfd7abd882c3df2433702399f6fe64e9f987a86f875bafaa4c1b606eca50ef100a406cc73e78d2a57c8bc3abce19223e72e02a61dc3d5da0c5ac552ab2e07ee7d3a8f2f41b09ceeae512b8f5469697037d41e0452902d07f6d64db830bb149274e0e9bf66b45b385ec77221e41e8f8f05442f6698955ce78e6250505f1b13010fc01048d797426b4a6e0623432efd68c33796df38eb2ba5da6ab63f08177fb11c922abd40859095b315a57f28095d373507d5424fd6c357a48450e379fb5e601230694444a447556c325da548e2b952ae4c601d2d2797fd15b364784ca153ad38ae07fb651fbffaa234d5c3b68eb647e99153ca18097d11fb977970e292f3c909d3e6c205ad34f63448216245c8e987b54bd6a3da6422493f1fcd84f989105bbbdce0909277003fc5e0448c1c103c269f96ea25393626ccd42dd37aa22b3d2c71c72afbe779d2f5b542a5cbaec9bbd0a37a622c0eec81e2ca3b9386d1bc5b428fd574b860ab75092d73bb25c91e837d96b76d12a9cf9a56b8d05d77581f2a6e52d20bfd34a5d909cffd925ca8f448e68b21c5a7584d25f9817a4d85730bf5d602bd1690aeed0b980d4ee912a839b60efc7549fd85bba309c1b5305418202383899a260e234bddb92b182636b9c19cf304fb6862b5cce561fe528bd0f39e50f909f4625a7343bdc216fef2fa101cee2e5a6e166e1f47d98c5482fe1f15e9180dc80c3909f893f3f2a10d8cf12bfefaaf390d49b2faec97871cabdea4d2c7e36b7f2f754dfb292f5f3a939acd35b83f70f4d55678044bca0dbd29fb90f0c7d17aa8d7a69c9764d441c626d7b65041bcd7c6536b177fd1861abbc17b2f5b945ff67b1caa85e426f1f830bd0f5e62c020f848967b1f6e4e9ac4de5ea1619f18c5974c67057315a1d4d9b8f7d33d54aa1bea940c745b76b63cc2723b72a996f0adbcb0122e3aff0acfb31006854482d1012c755c166665c451bef9eb21ed24b1040d26a2cda151f42ecd4e2f04f79a860de0f800c16c5a28b2f84aa1d598885fa40fb3c61fa8da7967406e038db4d01a8ae46df975890f6ddf8c9dbb168ad41dc392cb8bae63f6d5d8ab3349a69b6ae0d78868deada0ade355dcbd54d4694ab24742741d552e67b5df95e667a12cb7e010470af0a270f1e50ba8053686704896030364344bf5b8f91360e7f7b9c636b478af2c8621dec2d32b6e5969f82ca0789a45606797bcfc5baf3834e10d95fbe9515bf76015d115f582ca5d860cc5c126f02e3fe5d305b0f993543352cbc1d5530b2dfdad85b7c7c03c2d32100e2de5bfe8ba912dd7a95e7ffbead926ae6ad4ee9dbb968e3e1de060330a8ce5f6b14b997c3f934ef469b31983360227968b7111c9a0cdaa550206f6d066f3b4620aa6a31db817aa7e4ac0544b1b9e9be82f757f768073439cf7d61ae93be723ff2e4f00d2eacd1375cb75664c7d390ac983ed90fdf7f5235b672ff133d25b3ffed0be6eaac9d2fab0d5f04287be0d400d7d39a1b5ccdf2fb79c99e61ae34a0ea8a797e6055075c3bbf43a168b9cc16921833ca20e30ca027849410bb4b5845e662eccedf7c562cf44cf011a43341cbcc55d0622dcc92c5778fb8d6ba8a2288b0602d84b373cec366ba01263cc7fb2761ee1fb425ef5bad7279b1129fcdd8213dbfa402cb5cf1b05eed94fd36d8f929463f2930b19c5208b68c8b93382489820d8db9adb83c6f245eecda970f79c6d0c6c1b5aa9305b251d9b89b48901478048de6e5c885e90579e58d967df5446d7c722398b70c6b818aef30e74231984ff7dc3c3dacf8e9e98360baab9563b2a01ef928de36ab2f4d0310900ad207ad4a305484da7f5f42031ec70895d1813b5fc3eb387b206765243531a82892149899478c9d22bd18d762112169f55ee9ac7dcad0028390f17849db8c797d2df7267b1fc01fb85758f6fdd1cdb75aa5d3e0d84d2457d1d4c72a202c354265357811203335cae39f9cdd819d7faaab8ac7afb8b0995f81f7ff7a59371b046eb8f8fb7fd1bec9bdcba46360d06e76aeeee67a2f680e25d478c31d36ccf2f114f5899b9a0c847fba04f0305a5e1f15658194394853c3ddf26833069c621296e9cb00d1fb3541478ffbde2c5a39b72e085e2b567762fa18a2c7e9f1ea6758c83cf3d27411f3f0631757e4442255dbe941b4cf731fa28648319739362f1bd30696a1878b59256519d24dc8be2bcbc7db370ec802eec802fb27d1e0b084c8f483ad4d369007f895b5e43baeb850691ced51ef8f5fa52b6f9ddd79cac86e3bcf0dbfacb37c75fb7565c579e193426241fbaccc18d325a2b95984ba64037014a36973937ced1cf5b81fde20b90dc8d9c011651f17f99121cec25f3ab5d9b90a66e5d427bef9f744dc62a6f012bd5b0e1c21c7218479404aae33ae9730f1b3ca3f21b592191b2c0bef6dac0bbf426baba291e30a01494636a4bcc87761525a8e7e465d2203be7eb09e36b1558d891e9b6499e6f18c59faef0133579298167aaafb4b9926da9fd2526bba59510f246ee84dc76f860eb8bece3b93ebf950594e1e29a2f8279a410855884bfd48fbced32051d6673d7b87360c9e5487cc8eed27dfcb2123abc1e981769e50c24676afae4369bc23ac34731dcc7500e623e20816d56814b3bc679f26ae8cbc58b1fd0d84312e44fe72d30e7551674720c7eae189cdc32139a9cb41e6cf9dcbcced02c11e8a48db1733496255ce0c707e4cfb19dec12e1a18b4dd826cf547adfa4c302152ed1e02dee5eeea133771b8dc949e0b14ae3bd0a2714598201ab7a390bb6a0c493cb622804baaffa43ca60ac6de18ad7e83446cae93a0cb8ac6a70d58e6bb69adeee714a97f8b76c20890148c21037d84dac049a20f66a9c4bb7d0dfaa09e31e4ce4006cfe04ebbf7f13af73372ea5fff227b5f86c6df50e93b6582ae2f86b915474545b323607325003d22ec145e9dbb5cc0c0b577ec96dde007728b497987c076c25690578ed8c458f254d7ccc8f1242056ac8f32689a4738cf396b44aadab05e0fdb648f7baa40d80fcb1f5c2e64f9783f12496c681b386612f0401387cad195af85bf1394e08f76e6dfff60e1e11446f7c951c7c0b766fe93130d453ef46fbb2ed7669d82fdb07a3f97b08c43b01838a1ca3ccc15e1f94effd239533f9df4168f9a519f7ea52b4cd613705e529d89a84855221acc9c11c56e6aceed9e2d4ed2cfb58c63c23023d468912a7fd03154122dc23c60ec94405d450a7fe4418d4344b9358649384d882abab230c4b8890d9166b33a689da49093cf31c40cdcccf9e259b3ef38e01ead6887e68c87d0f9796dbdbdb30ced8a6da9c7a84611907b0ab0e0cbe9929a6787c1dcb2980bbdfa8096c66d1d8453518e941182cc49beb1434d7b773d40b7c729811e67ad21dbe7968585e9e996803655aada2afa31fd435d524f162e14a8a90f0afb26a8788ebd8392f50599077f8e54f16182ab7e4f4ef1e222cdca8f6a29317f081c1109f15c423e326f4bc3026e10b99fc5a52c8e97e28d03454178499bbeffabc52a0ef12d1dfff8fe9d017544117137cf8fa937013a315bfdfca7fd6cb09f8e1dbe3eb75fd274005ae476b100e71f4e8da6afc980cdbf3174d5edb4764b8800402b4cf7b32b9953f535ffb0e86ee22df3a7d16d2050ef11ab830c5e4c741a0730bc47ae7157d530b34b225b4b7b31b4bf5369501a7073bd71a727a8cea767fc5f15987c76e3daa89679ea36ccd9c436dc5c69ae32be0cbdf997c1b0d8f43d21a8502d1ac8dbd0f52b9b18f5259419849e8479f77edfd0d9855e3d70d38398867c9efd1b56e3cee8b15d7b3fa1840206967084a84429b02bb9a33d7bdc43fb92b1316c88c1e0023b29642558bc13a50944653c7f32632d8f7af85f681b914bf3825e2bb85daa5a69739f2441ccaae17d9c49741544846a1f</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-shrink">
-      <input class="hbe hbe-input-field hbe-input-field-shrink" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-shrink" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-shrink">请输入密码</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>高数</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-        <tag>高数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>曲线曲面积分</title>
     <url>/2021/08/14/%E6%9B%B2%E7%BA%BF%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>曲线曲面积分理解起来并不是很难，主要是计算挺复杂，第一类曲线曲面积分，知道弧微分，二重积分求面积时的面积元素，也就是积分区域与投影区域的倍数关系就可以了，而第二类曲线曲面积分就是将有向曲线沿x,y进行分解，然后再进行求解。当然求解第二类曲线曲面有时候需要一些工具，也就是下面所介绍的三个公式，也是我认为曲线曲面积分中最有意思的地方，后面也会引入 $\nabla$ 算子（就是梯度符号），方便书写记忆</p>
@@ -7856,6 +7833,29 @@ dxdydz=\begin{vmatrix}
 \dfrac{\partial z}{\partial u}&\dfrac{\partial z}{\partial v}&\dfrac{\partial z}{\partial w}
 \end{vmatrix}\;dudvdw</script><p>当然这种方法可推至n维，但是其计算难度也在递增</p>
 ]]></content>
+      <categories>
+        <category>高数</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>高数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>竞赛总结</title>
+    <url>/2021/09/06/%E7%AB%9E%E8%B5%9B%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码错误, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="341d459099ff70ca8d014f3d20f1f2bac1f601596016a7f31fc56f288a4bb7ed">a6b5137951dad53d15c33a27274ad48a800eac88c8b81e2c37b4b9e2f75bf7e5206f84c930f14cbe5e1a146c30a08539e66c9de5d6cbeb363c1fe257573828ceceefd39098921c7eb783e398150598166c1f870c0144299919d9d31e7aba9d590822af6b9304a0d15bc05b9344febabfd4014649454c7b83ec3b03da6e9a24ab502d364e730ddd482bc70bbf4294bf92519ef0b0282768f640b2e8c27f4b6ae31b7917722f9fd6352d22cc82faa2655881bc48d77e4e69ec182466d9fb24866f0260552c8f70b60c7593c3ed13f1c494ced9da8e6651a9e53994925219ac7f9713bc8b9f544930c388c55b5178935ba2dbfcb92f267aababdc1cfab8006461f5705c5d98e61f47294ba8b8eced88b3d7b7d611da252ad924e84b7cf70218d475a728dd21cd0819a73f6f431138bc3904e47c395fabd21a8e276e07b361656b183367dafd5b9b21ada308298938f3a5fcce7b8215929eeb04cf9f0913613c0d01fba1f369935eb9ac0d5eac5f3846c35d3207753319e0d82cad08919dd0024b05c70f8283ece8bcbd3fb4dacacf8a7b78e004ec94a4dbac712afa723adc704d32de38467b3c024e9aec7f120ac344a47fba170d5094c9adf8ec7cd98514c15b2cf6d4b2c9eb924a8577c2759333c419097f7350e1cedd41d2b49ec5d5a77880f04e71b5bd0a0aea5085e44ba0dc0045047dc636916ee8c51ec7e5cf86ab973bca198bbd89b8b652ed3e78dd041e5106a46523260298c8bc23e1ca4433089645d74b4b114d03f51278a6e6636405381e2efb275c3ffe77aa55ae6add8ea9dbab9c3f0ca23039021375eec7bc683e1b5f2e548a60add81d3a6a07f2f4e81ac794d1d65712487506dae1389fc372047e77aa7962bcf11dd6c6fbdb8a15c6326450372ef61a67d2b37faa303373b2de527a7df96faca3032f9c6bd83592fda17a6a84f106147d0f058b9d14a632331bbf517e51b7b9c0733dd52e525bb70017d755eb4b3283ab23c82d9ce5ee3cf197f66aceac325888dcbf7eae9c6d43fb1d9c01ed6727a04f147324f30dbef2bf817e38e6d08623ea3ddf77c842f74dc677cca28ccf8adb9544d06065c89d7a74ef41bb40708ec7cb5514774ed815d24daae79e91289ae757a0df0546a67d1678f201ab62325ea5ee01fc79549f05665bf54d386320450f26c1bb620fcc01047cf1ad045b0698a7800b1d5577e8ed1b94a17b27cdd71434c92df7486765b73ac2716014b6740ea7bc38919e7f1bd86ec1783c78204a242a58ea9b1cedf8206a4fca54584da42c369dd4b8a2153441868a71648aaa9c087a970ca576a041084ad5013c9596d1f467c76acbd7804b46c1935fc3d556b2ad6e234ea75ec775c44e29cb280cad096d008fe85fa3e80661a38f9e5d44af10c0af68bd686a90b932847f60277204a8315cf16638e74df8fc0b4262c6ce69e1b0aeb824b976cb95b6b6dbdd9c7dce47f4df4e2969a585a8ec4c41434a3d04ccef592617f658fae41ea64794e4052656b0bed8fb2fe742e02e09929efc1a80919a58696d5ca373b69a49bff18fab279d75d589d5361472bdad08f1175d091f69289c9c593ad69f2bcb85e737986faeca4820acacc54789d802afca231eeb1314a836a64317122d42fa31a5fa5f8b9f4e9dd91a409c8f58045d989d31730de49cb420169c481b36c7de04dfa237b2c65c89be792e8d7a198684f2711759e9767de43bedc77da9db773bf76bb221f54575c9a1ece6f3414ab6ec848ca4ececc8245e9f4da8f68aa3a2f1023f27beb84f53727b285cb10dd739ceaffccd8c3f36d4d78925743affc25dfb93fc4a7e1e7a18f90fed7efafdd618b7a3f41a53e184f53d80e0d8a1ec4a83a7f38a5f211e2e1c2afccb40686275306c9142aea2006accd82bacd9e4b0f08459fe5c08ea5a6ed88c6e9074f8fa44ba5ae4a29110d4d1d9f2ffeb7c4dac9e74d586ee8ac677fd16a3633f432fd71ac6df69486400ab7f595aa42fbaffa78420cc7065965136750fb3f540919dda1099477b306376546ae0ab12a53010b13aed9854b890aa8922006a35900ce7fcdf8c7c009d1adf5d96eb2b7b1298af18b93cd997e94403014dd1ff5f8edaf68f179e1cd403035fef484919423c0cc3be40af08e977b3e383b582458bd619f6dd5ad9eefa75bee4eaa30bd1a3e67c3db743f29b654cdd47886dadae05c586687a5711c556563fc600b947b1efd40d7dc42a55ab63bce59fe77fe510a0501ded6a7c94908fc0743f25d20a36aed90e2f931fcf565483ef4edc1c64e8e07fb6e5fad9ec925d7c67210baf75b889a3d38079a33624e8f2c9f457d69dfb08d77ff62228e96d76d3cc4920cad1e1dea5cd29046f647455ba14b840aefebf2b7652e0371646fb2a7cbf9f187b659731b0ab952545957224b094780dba0002fbb27fa51256af49ebc4fb82f1d2cfc4994d40475940d16359cac1ee8b1df68a9fa75ea6bfbc512fb14c31f3fcee02b2bd0d949f7d2488c2c83b6fdd8c82b7fe33306659c60fc1f88a4de6eee2b0c7185d5820f50085f68fb0282e530c142633c5911c9bc2912994b75ff0a4db9205159564b901b60a502f1a9a270ed9cc3fdd9bf16dd7f50876decd8ec3035e04a4d697d92f567122849742a90ec858b41b8dad3018422ee19284ea6f63589571d14a8db9c313880165c20febbf2336396b7c9991591bdecec2480672d7e765533620e4968011f920f8ece7e22b5787a3e13cc525861b2bcb9ae3e03d8628d401e182a23a32ff85e739f9cb7b4422fe75c3ebd2d423ef2a1fdb5ffaf30e8fb2ac1efaea3a005ad444a0bfe9ce233a30fe8949d5817878eb419e204c32d8dad7571ee5eb6c8880cd87a01f76028ae9dae7b5d70a05f0eb73b1e0d7b85ec3741451e4d30c932e8a2a44c6d2ebd06b3cb64c5bb386f012c413f3ac47f0d0382cd734e3df17948ea144f6c3e58883c53130b3c09edbd41b1cb4723a3be1765d50e5de6d049aa997656521ef25b205ed5e8a4009a4f2427f66a75f7ea56c9ad3a329341c5bdef43bf55b31115daecab325c9f06aa6792c523d090abffe33b4d48226db3d8f6ad166681127e13e2fd64e54c82814250df5b6100914f25d3cd30115d1eca4c667e4a9c6e652058511261fbd1a22089a05acbc1646d06bdb5750cc69687304b30bf851389b1037c437f9f9d82ad1af42092a586d17451b92bfd2e9ba701eb2e0d539d3f7d265e6507d6ac0ec99fb175cec78f3ceb06f141aff67198a09a0aea60c5a2fb44a87b4a510ec855c1ae971def2f6ebf8cde7d38d8d6652f29461ac9373f00a0c0275ca48d057a54c386bd5307afd3171fb6379b9bf65136401c92d02d492649e4f603d5fa97fe316d41110934d1be8b4b3d2458c5ecaeb13ca7643c269a5e85cebd6f7170c3e44c51865394004cf3b06e62cb22b109eb41ef5b2088c60e31a8ddfb39eb8d3e96186c42c90ef65f3c3f82dc8874710a0aabecc74dc3eaf69a4039fea1bbec2e102ac7860b9f393cb13340367133122bd3a587146000eb92206b42ced285d0b46765cc145ae55b8b339a3a635072df6dcccd575a81827f52bfbac9c9312c55dd949fb970ccab502a14a5a370af94c8eb54817ea4978aa1c7cc47c38a7ba7fab155091d75fca1cbaa00df3987fb64a16935418820730336453c7258d0340efb3d089e5acb365f82ff44084035f77046e0b48869bb1b5bc52c7cb51c5c5256a12e0630cc9b96388083029ef6a204b30401ddcef2c1f11ac92eb730ab4f16223a33f10e34def22f1e6cb6480ea427bac92bb467af5c10b2bcddf261665b32300280352cc5ad86934b7415cb96ae6359b03f4211fd780b95c57e7fd9dc5fac8fd778cb9f7cf9076fb2cf1a1df9578fbb22780d9fd0a2fd708b2d67271466fee358067747f999dbef881d3079f68da83b6014ef0f935a0d8ab4c438c0452c0022601c0df236e2ebd30e3eb62d45b5842c67129e9256bcebd7011040f3b1f584d0ef67eda44823ef3fe4cfc88364f05f1000589ef7ec0529d31c71ae850bbf6c8372edb45a43e91ceeb81feb816e9b1baae892a456105cd465fc07e83dec01d990a44b13472c3968bf373a62c29c05a4804ad41f01b20260104d3a5b7fb2b08b242d0e5a2abdc1a4a73bec78b8ccaa60bb4ca59f039d3c54607618678f2651f723b2f24ec88459c8bde0f4ae7f045298b1bafe2a617c1689dcb0a0db1794f642e09ee1785c6cbded83cdea4b7043b7a5ec7fb59ffc206a910a613718642e8e7a976db41e20ea867de5c834636c77e9ad1e700af84ac611eb98b895e5d34f6845e7222b840cb8b62ca82a4f2b7cb0e994149cb4fd11d2cac41635ce3a3989bbe7ceb9b399c3d703fc36a3a317fc305147e01af3a066599a88730045ff27ce3a86d83c1bf6f23fb495f05c6fad9443735f31468dcfcfcb02ba555efc7e5ec7f9990b495bbc4d8f32ab20855bd8dc694aba17ac24726394ac091b53265e65990b9e82beadc6a32f6beaad0ad540c60bbc5d75d7deb54c56908e3aaf06e999ffb45c4d9907e8365148d7a1bf68fd3b52055bf21e959949db312c07a9ba6ecf4606f8c7b7a5a55d1a2c284cdcfc4e40d3913b73a945e19626713374a235d9e5422a2f6ac239542fc400bb93cf4963662606985af4e981f58e146bea517c4c8b1db5f574d3f7cb718cb25280711bd697b0cae01942b0b8872c73de0dd0f491ae45c16f3b127c97f3485966e37fed629a8893dcc0bacb1040cddad4963a596e924e83e333725d294066e6ddcd09cd4ca8f3d866f86546762dbbec981898f2d5fc3a0f0b08775dd123421899cdeac7c27baa13bceb5b7c6f0daac16f201e9fe18d179fe925b6e679af14963ddac14b65425442f1222069ec82379f6cef94b8b1a50fad3d63cd0ed9e86147f3dab7d7bf0dc58391141d897ab1b058067986ea7c3707c7d89496e2c734747a482ba56688a7b1115d5f7344565f85764e442ae5a74fe3f4778dd376c07be59e6dc85db14a655b6c02078d33f93b1469096a496f7adad5e3f2c10e2850f8c142f59cb96db02214d3bd9a0e2456b06260206d4c15d6447cdb535f29d9512b78793e6b056d50964abf72cc3e22f1a98a2e3d0a6542329b18d52cb9cf414bb481710182b9ae17b0ebba5e35b4ffcf581d0d6ec6d262b6d2184e43d3699248d726a58cae0ee383b8005bd31accb7eafab40b12e7f5620cf487abd873dfe65e0cae3da28e0219281af01d486896260aab9c4c39477a63f13966aeb87d652875b5da8aee0ec6c4846a467da5625359590e2476850767517986dfddaee1f8adcb252236741898f46353a9219b6b7dab103db6876494505f43fbf73d1d47e4cb4501a67f4bef9ea2b50ee74743ba39221cabdfc4a43fa00e0b3b993840d50157b19f95a88a9f3c9187faef8d8fa24cae7577600a1255ff5879aca950746c6606e2a1f2cedbc7b6d42a41ceb76793d63d630de428d05bc737183039b77e67ecfbfadb2786b2ea3087606ff1e4383d0aafcffe0aa3f11e60c7133aa2b56915bcec0b188d5b70fee97862a9c56c366f756b3a642eff6529b2324f42fc8acf38b06fb7f307baf367634ae78f2447e0910adb6ddb2688223f9f7d54262be84195e78d338bea803401b8544a2e59c5bf6b66fbc492cd0ea959e218598cc2804bdf5e23b230f34ee7d194cf76286cb654521223ee774b1ed2b8981516882a5934e142b9200f3f69ca4539e8c2dafb20653ce00b1a324d5d2a87c1b92fa74602d802ad5a0d8452ef951006ac4831a6929d12f78d21cbf2faa1e7d623c6e49e6b2758b45aff2972a00b8046fab5954a2e7948ea0a86205f50d567c19b873b8a7f410f0698a6966fc7cd706615b930a091b5da0021f72de9f2badf440ac70ca42892b1306a1f17ba2d2359c1cf158889f86c39beb89dd237da86c0e0233808f9c3ee81c81755a3cf90310f77d3ef1d8d96d157e94c28da645cb0aca76c992713d5fe223b916149d1a229f32011040aeff7cc5e949bad9c7bed2d7240b3ab5115679edfd0f4669cac09ba26abe7c30bb12ea6039d309b02014aa2fc02ea8a126c0342feec2796b59382bf2ba4767bacfefbb7a76bd762e7e97a0c03f31b514050d9f9e5dc7a3adde3376ecbb3126954ee867f5a44713a1c140ae784a926202b2aaf704ab873597395229d310fb1dcffc1f27228ab76275560e21aeedbe12836581d545a9e9c68fe88439657af475eadeb93386403b616ba2274a60460e6cf4ce34f21c3857643beef4b243f362eca2069ce9f2a7710b1106826c89252f2e40bf3d11c7ceddfa7d495f450a9eb9412593501edc3850348f185f28e8a0cccbecb927b1bc3e221c325396c4d75b2b60fe90ca0ce4cf0e6c35a25c5f4b26f7541044ad40d6c30e562e32b2dc022af7bdfbf7fc3ed2eeda96622b8ee585397ba0ac0486c20cd61a6714f4ae649f75febd9a4c27b78cbe339e35b51e9fd7d44b0f3fc43e7ba54de82274eae32bd4001fe0c40fcbbcbfd821d75bf94edd55932609e3bc32b213bdc9d527ff513ef2e7fbc9284e64a269c84b5c31e22b0169dafd6701416b3d34a4f21a672cb1b6e62bb805cba0d9d6e230ec13e3dc87c105af12742af3197d0c6a2ee100c18b1c64c488638ade73b74976ffa08a5aa92546fc376d811129e78ac1fa08163c0cb07ef1d9319fb5e8747b8d9600f3044e8c84e7f4df0b68e307dc489360584bc9b48634e79408f3e6a01642c563898d8c7477d6e2bd1ffb013e7e315f323e67cf6411cb618f17b03d4da872c8b1f1444c1a18ee3a0bcf8837ca13337826d0b517cee875ebe6fbb21f7eb3721502b54d1191c5d165d81d2415edd8718b70236a42b29234d21aabf3b5dba9fb78558b3fd35972b330c1c68c8881138e9c861be3400b25a709fddef6c492a239f5a5e248f8b20920c10ec7de21878b9596bf515e9ef0c3f8f8eaee59252ba00d4db2c1f91f772293243ead734e12dc55e454c0ab1be20a4d96021bf252b0ca4d9c051ac7a1f91467faa4c616afdf11d6f5ec374e42fcf61f4f401d7d3938ee4e6e4a3b239eb2a0f8d9bc645b8ac9b68140fd840c8ee8687a439db046c25c873414a8e2990af7dbf71820d838dee4b1004c47b210ee7251653eff5002fd30995121cb2b3940959ffee120872b10dc176a5ba28dced9e682e079920424583f85c2c769deb4ceb008ac0918d1ad8dde261aa2f076ccb5135f09d0e8c0848146337d49c4cadc3ae28d0311bf17943f43d8374609d5064ca27c921eb0d214145a6712995a093266db6235cf4eb6df243dd27f3c215be943a7a29b7dba34ca9e44e740486ba3d01cb0ba137d41757cd2175e90a72d7c5328a2915f8705a45bacf808d55f0d4b2ea51a51cca27b88296debe159d519faa0ac837f004105298f6aa7b78549b69a36545ae45d95eb025eae73aa688cd285828db54f29afbeb17f79d10a75b4b670f3994040e93b0b519b1a4d6e984931545aaca38c289481bc804e40d4508d1446ddc9ff526ae76c08bdd960fb709cc746577d5e7f698adf8bbdd6b8dd385d86cfeedab993b82e97600697ccab4393befada7f80d7d8601fdc8585c45850f3f655f345f853d1cbc8b43fb3402a087496a44dc2cfcebb29b01a6b8a4e86ec2de89f1d1907930b2372e094e368ba80f7ca8190efe207787a76bbe160caa0904f103b8c5e20764c9722272c2f4d3c2081bca0ef9be5b67f5acc5504c0d2a2f06d7b38b6e8a77a9c1fa4ea4875261f75cc71ce57c0b648feb06d4a0bab3e66200a74781ba663b616dc41b7422faa69bb7d292b8aec0b8f8ec501bbd357c2cc74ce7eed2675d6f7b9b0821d1a4ef017f7784807bfc62fd4aed6a9341d274e845e1a9be04dba13ceeca0f0c7eefd3d784f3d144c153f47a259c837a2411b73f93b0f69cd42d8f9dd691b6a8f6bbed42f46eb8e503b722649ff082d54b908856ee0dbf8b0c8135102ecf58f1cb9bbca684261e328a2b656ab55988fa2980580ebb60da59d7d58f5fe775254548d91c7fb2699f60a8b491df2ee2996d6cc8312cb173caf73e4285cd6990d2aecc9659fa07cae5a89438aca93aff2fcefe189aebc148b589fd9577e0096af1192a90ff7b0830ec26acba26c4f4620331810a19d8e747347383a72cac31827a767a03a86b17c0415e07147fcf84a7d5c06dfbe5ce4eee5a571676f9412ea3234a9f4de1ddbf144f8fbefd9eb2be012c241cd5bfd629d53521ac46cbb47366d692ef7f08d9229fec6d9f3ddcf6981eda3d6b3823cce1f6e9301fda833132f6fe3f45b5e06a33dbe0217d661ff955d5df782b15e1e93f2088cc6ddf51423e56adc6d98b8df06fc7e062f2bfcf931b487810f00bf2eb5687992b8cd0f9633d37c5bcf351042f0f8817b33200e5336b83279b0cb117988178fc43777766a44d76219ad5fc5cce99f561396713488053217d1c73ea78abba474f7a1ca192e0bb28f84f37be0baa92deb725fa01e0fde6539ab320578cde610c0636ceaca27cf4e5cdee9c09f53108c27c254a3907da7d0f9397660cc998d706f63ff757d2899f8c5aaef28cec6221204e689024f141029e32b3c3b2fc0da15839f9cf0aed98bf7f68a14a31290ded8f7c77b97398b2ee5874f0819ef51594bdc41a6f47b476a466c39fbe33ad5bf2cea3153d1a19eb60fecb6e43187bacfffd6e3185bd6c43a4e9b96787cdc1c924ae067df8ae9048b86d99caef8c1b76ff28614b205af67106d4769ba82ca285fc45928e976119b78d74149c210b44e200e8be1ac67d0694a71e69cf1309335e20b57ebfa99a0729b8b1f1c6c08810f8d02506856a99f5db0a398a8067e6c24156ecdec5d0becb22c1552c7236b6705fef9b0492b084fc7275a71ba09975795556ff83a85dba99dfc72be8344c05d778d979cef08b177c80306e5abdba1506f845ea5afa8702207361988ce87470cbec4c5dc57923695c5d53ef4c8cb83f041ee64db24689a1b3264fb6ed048e6a091ea6cee182b612a0b7f2d824e5e3d8a4035312c1247cded0fd54d23ed961812f440a9b104f5d437fa2c4a3662aa0b249f566a17c0f467a922537b5d9c24709e0a786a4eb72800fb2f4af49dda347358fb5e88da6d7e659ac220c064a732afa479bbbcf129ae53e1005f390797fb4b028a8b34beb53d980dafcee3aac58971efd1bd80935a7664562a7951894acd09f4ea49dd5ceaacb988e16201e4e59d1a119e0472de8cfa890aab6bb92586c460af05dbafc61f9f5323a92398dc3b6d6f0081e231f4da51ec8704f9d968be3dbd0c191cfbfe92d15a79b8c9a4e6b09785dcffc1bd98123834a2823483a3a9ea79e21ccfb556d674180221c339eef3fe5f494f356ba67c1a217e3641b8b3a2979ec1b85fd73142ea13f2c81a47aa11eb1b127cd677d2b090b8e9d65acb6cd6cdab93248e9fd9429996c4b2de24711f7233cfdd45828aeb7fd097e35008eb232a80029833fcacbc87d48cda9262387b85383744060ac2c6628a779814907e4a199dd02a316c5af5ab0e4adcdf82598bde6c947947f6e9e0140eeab93ff9e4ca359957f5f7e60415c4d37aa7faa4676fe77f3783ab108e21746d4491b7dd1074b2216eb32449d9dfbf0df362ae7a63874d07db06fc2d250a339d34afcd99450c9b6285d0e9f50302ffa1bdd217fcb95475865906e5ca623bf0b745bf20f8e2a38b58b90ca4a419cc76bafbc2ba295d38a20e761d1551c4040312e58c6971ccba7e0ed44975237c19023cc68a1963b540f2b6bedf3dc0d6851c9dc22fa6b8e5cdf673497b31bfe7bf0e75378984ac9153dc60bbd83ccae43642affa43e1adcb6843a7dd9513adedc0cda8c45e812c04ae2adae0f0fa4f926228d61ed0f9cc91ffc5f659fc314aa7be13ee6b604a804172a810f3a10329e46b1fe911668611e9aa3f5ca8ea76d5053608a2e733c091b2f7172ea82350cfa50444bf02f43d0db8757886eb188399e4bccfc599878c20d81d48dccc965bd8615c7a094c7de71130e60fc7ee85ae3d7d850f1ba0244a0a352f08b436db525752da25a1456904c92d50e63654fdc2881566bbc1c60e1fea619172becc1a8a388d3775431941fb3929184646c9371620678ed6c95179883b1b56aeedc68eb6a04eb65e647b8478d0b9acd7dd4c5f04272cd22e97ec5501150b8569e439a3a7333ef2fdd641aad0d7a9270258ad430aac554aa09dd9ecd316d2dc6273fbe39fd0859c4be5755b73d741f0e355ff6c0ee1d94c5af47480be56ed462faebb3da53971e659d9f7dd401dc511803406f503c9fd941651994c077d4396d818ea9023cf580f1cdd4a5c3f9cb7373b24eaa7fbd9bda5256c1884275c0f1e8898fad4ea68d53891c164b3d96b62d4ba9f74fd800e44723d1d707a491789bac625e9b223cc0a4e7ccf28ff67de034c8f21d15f7e79a742c0daee210bdfe1191d4e2e5e59537c0fa1dedbc5e8542cb6a872ff69efbd458d18b7187528ea8af6fe105bcd3efebbfd58941c0a9230397ee9aa4bc3cd47065f2bc0e40df5b2d48caa80ff5a6b738cacb89ebd5daeaae212d3885e8fc09418fb305ae2e19c43e840e1328fa66261eba0bfed9e1c963ddcc9d377cf81e1c8f3c0c4201eeee337b6e952143f0752decbe17a0884375771b02afa585c6e1b28d8db29be33b57157d089633982abcba474be2dbf5c137cca681604171eacb451df24ff8314fbeb54d4e29f7a17e965adb839be84a8cfac96616078fa33e3207a3833a4218f0ff1447bc361ae83fffa74a4f208f892efed2faf320cb87fffae4ffb9455d16a37ec897d79eecf908505d035d0cf4e8d8f9fa9a6e6b97ef705a9fdeb6923d5317944f1d7646e74a5c7cb3d1222b7716e1aa6b97fc2cff1d415daf90fe1f579eb4144ac4929acf167d4b63f4745c0f9b561f4ce33b9f9ceb12685c6a369285d9af114a9a43c1d2fc0a5fed7eb91555ff249f284dcb95527b709fa86d57eec3519ef27cc56f2d7bb99f5cd989d7cc8c89fb79f81d00656c8748ed42ab015270febe51108d81f41a909b04eb0716bb63b808e6b779d729d24884b984c75826268cfa416fe0c0ac3613f10f6b7a0896c1723fc2f01e64a239ab51b8c8dc12e9a7e10ddbc26cde08b35be2210a27d1542fbbdadba8abc87f07404c5f1594aa01bf2e237d3a83ece51000e2aec0321131aae9a9618000bca847fc19b6c92d7725682d76d899736c2730fa05ead185aac03b5d7ea4ad422d75dbcbccc7301c09ddd93cb08506acb5f9f21397bb06ac3ae5213aa623b836c71f45b65ce2a0d8d610714a10218d1218eda38852e730728442640ee5cbc1decbf21c7e326643e7f7fda20d0e91bf78500b648ff0bad0f6bccc23e4f1ca34de18e5ee31769cf90a8c246204e6797452b73b582345bbec3263df89547decfa4a3518209df443dfec9ad2dd8caac0c1525d79e327dd298b65e4b9a0a265acd86c2d16e01452741c60f1af3c8debda2f75ad5418bdebfbfb66f6eb76463370d41b3d76b64b47dae6920d66d8643fc316a5b7e81d58042ee5122f311d7d5d61cf63efd2e7958076d9d3b50b28e97f4bb49c849dff903f0b28819e8f6f3e39a3310737ea7d83ee2b0050e50a715a2324b2942966ff15460aa4f195461e08f869b3286acb4403aa1a5b9698effbf7cea695ac492c74312dce7f5b361a2893a93654d3d30d82932b20099fc679f95133f9cbbf48cb5c8d7f746acea3ee1d1ce3788811d95b990245dc7d589f59ba36a62e2011201da399b1ca46f6c10e61f04af2de04d4242ffab1ba7981b50f9b90e3ea507067a5116bbdfdd5aed48b24af3d8a4bfaeecd6595d62a0641390371b2850d0399b8b07317d74bdc220146889660de890179c5b1f05b8fcd7eae888c6413e7cabdb6d3e07bedd742bd366d020fafb307ffb884c4b35f68c9566c40c71acc35bb8c3d2495a116208c7d47da1c0bace69b3eb2bc7eda9ace73e516a5cfdebe70bf704252bce7d7237d22f11710a7f954bb30c2eec2f691661a802dd08d28c733312c44fd2aa3567c74c435475acf0394650934d735b2c46bffe74176e4f4be01d5d89f607703a66e3c462232b265cd5808a1cf87475246d2ec00c5e5b2275f798b68eeb37193c5ee1e877570926dd71b56a95c1861f30c528746a9caaa4019f1cbf9d354c77eb7ce3834342305cce02d4ea44e3f4c83e91aa812ae0952912e357c3fbf917fdee48e6fced7e1afd89b1e33b425dc8fa791124149d0d182032aa4442346e37f50f993a4d561785c7f42dbf429bc145f99112825e533d8c38610ad66a948467ea20b01d83e8588f1612b6ec8aed9d06ce1f5bdd92899b9f524a2b6ead4dbd17db42dc121dbcb9c8638265f4d87d345d7675bb23ab61c7d57b44b81071090014f44712454ef58a989b715a4babd6cfb1747d5a41c6e540204698851fffcc87332f56730fe9f22738cb51b932529f2bfd70715ea5104394deb8c2d28686563a8e5d34e44b634af669b151bd186b6187729d9c8e1a05e6018a301b3782db11b09c807b58485259b6a107f5a945a8299023a38061e8d242a0dfab4a1d06c2c9636400a1982067f916b5f23fa08dc7c8f9c6eaeefe45062108c9c03c8d4badc1ead72d6066f870c273c980b09c4cc004b8dcab615e4a366ff8e5b99f60343c077e539574d468f3a0f173e38f29e6f084c220ff380cc4201d72a1f31101f59109c5f1b4e4023af840baac60cca8fa4df2fc52a28f7dc7af72c0cb50cb48f939e7fd8988d14df47316dc01acd55427631f9876fef2867ebb22e14c8b7b0c006e47cfa7439044fd3a9570a105f27e44f98a7648e0e15e2b2d43b6584eb1de58c648d662c2e43414772f611cd60aaff051171872372e55c65350a493cc98e4955289845f318ebc955a330fe7817f137c8da728ab082130d72c0dafac75798f5f37c26363a5eac80d1499ccd6ead6cb64d7b562e7cd244e34cb285e230f3c9de66f02e1e8d1b85b3807c8320927bf56a69907f6059929a03a8a3a110027cdf1232dea0070e4ef7c54bfa7466bfd7ec9341be6a15f788c6dca54c6f8c89b7722043dac68a55c27f567a04c933f1dfc278d25f2ee688b31086fe220a7b96df0b58fed7cd96ad47bcc55b94c8f358371961f289dab53a02ba6e9253b210a2cc27775083db4fcb99fc7350e06dc95780e33d0482d580d2707956a6acdef5c8b9fe2f76dd862474df0d3b62408dcffe8efe0cabbb282eaf1b61d5a6f9fcea7558f27558e62bf6d1672812d738713d4749697102d51ee97a366d88c43cfca875b3d763aed5157370d67ef1b4136a28dcffa705809397d9aa894914d444ef0ae6964c819a3c6ace881ffc7ab99a694b429b634eb27cc8b96efddd77978fd94584b89168ded8a5b997a2a26ccbdd98ced1f24bc27f6e8506c1961053535259ef6898e8fd3c418ed6b1ee2ad346ac0b8f5d68e3e23a28943db604927ca575eb9eea572cd3b806b12a9604f996fce6c29eacb616ffebf3c6a4da374e900d90ea3598a7589a6621efcf7ce71a48f1384221dcff29a58fdd0c5c3ba12061c73ac4bb1929491c399553f54e85030255c5252733ceba5294d5dc76c21d8cb08198ce5ada94d7c41496c99860d453cf95a6913b080824099d44e268cecfa044c3ef86c13b10b2d0a9e27a58b74e24281b610ea0cf5319617115f5d2c0715dbb1bd85b740044712429b2b507f2a67f7931dd143f51722aa1c4e1af81a20d3b008a6583efee1c9f0b4ca4aed076741b6ecb696cbe6ae598507af1c72f807f7a588390abe69d42cc4729f730ae593c01e0dadd3c6f80453b736a17ae45ef0b499f90de2e99c715551176eb265651b1d2e117184d2cfcf3d765bba8b24121558f850f5336880f3e14fc19a70bd95207ddc468fd9f1459bd3ebff11db913ae3efb1d1779681b65aa00031c00fd7402f50c785d0b9dba1c847af2406ad2d4813c54369219a2936933ea3bc4db6d99bed31f67550bc3fc1b7c6c70069b3a9adc8e09f364fabde1fafe3189254a39c0bcc41546934dd84b95e21e9c8e4539517efe10e575bf2d758b5ebde90519befcd99d0ff7b420cc743e2e86530b81c24027426a70b7b32a319799b130017aa5731f55fad576c956dc299ea8101cb0bfd8db447d557f11cf04a4ee23b96afdd2c8138ede393a46fcdca6aa38dbc9daea1fda864c46f09950063f7ecf741058059b19431877d732d593cd9c6ea4be965d4895d21e5e8ec47740c94f0c72364cf9760df9af7f83cbdeabc2c9865e3e8273240c3c64a1c89c005c9829dd234761b76ead37fb41b5968e3516d42530239a2150187906e9d4c745ada183412d497527d8771ff895c8fe7ee691925ba36091deca2ba83a4e963a78b02901a4867082f1d2decdffc196ab880c575c6127c417e3ad29b6d6769b0f88d8a10b3215c0ad3a0f3932de49b93f51cf5548fb86d42c5dc01c651fba6966a2c6eca4fcf932e59cf9529cb0fb3281915a6fbabd989c026a1ae1742e336f63cacd77efd92c27a15d292f7ba3351a841dbea813cb9d10931ad03d1adc106a35f5c2b5dbf5b22afb46a5023c43aacc925e8857a0bd6a53606e6066bc4aa1a440eca9001c50e1c98c6c4439f35f3fc301216c054078171c34e51b64a448a0bb1ef82438593b3f049ac6f60dabd95f385667b1ffbf38745405cfa8e4ac0d8490043c6eda27d9db92c4dbd41393f2d87e6382e8e8f478e42596a521c8fa2a2483f59f6e2da61f8425d7f34a7dc3419df7f9dca6e6a3f2dea595c5d12d50645c63be239fdbcb67bd9dc2693de8d689dd3b8e4000336fbd7c72697bd5784bcb18d8654541f6b6d8fdc33b1e63cdaae3b0ec6d8a30b1212ebce228015bb605f7cb6e3d18b237ace77655d49a544eeb3b525cdca0624f7596fe299be340e6a19ddf9d020419f67091174a3f7b8a1e98b532a0b2200cf37d0686e43233de3fde478066cd4fe7a296a45a91a479feb6ddfa09c4f578a7ee223fa8655d42385d95421d26462d6c99ec0d4f20b44c81829ba659d8934b06970b989fab6bb1f2df347c6393d55bba455f38cbb0a904e122f947158fa3d4c7c27de2fb2a361fc68e9465cb96a9fc3f67873cafd0b66a16d2ec50f2d03ea34b5bc2fcbce65692e14392adc9794fefbec2a683a9924f17b6f82f329b70cbc0bd42b1fbd40e8474c5db44163a240f27a0c93b67e5d7e8e70e345ce23c28cebe7880b82152a2077b573c8443d809cc0d2d80da4fea1e930da55fd84098748f7c1e6433235b8e8c1446d830b5863d9107755c96056ba045952a9c846a2214d501f547121cf170051af9baeb6999f5b39cfef992a3cdd009b71b8be9dcbdbbed23021f89a305994fde6c02e18485d858115262de9ee83ae9575629108a15d56a5fdb61e0a49c31c2ff4ad44d3bc39c0b5ed7ef9e22acafa2b56a4ac8a607e435ada0d2290b58c513c7edecce4f4377261fd54bdc9b0b571e720fd157cecb8b5bdda5e424a80f4da16d2194dc040891b39f76bb92a6c7813953e503ba7d9936210f1f7c2a719fca9ad7b18b831b68b1659f831d012777ee4e5b38d235e8ff4cbce7f16f72b013d2ad96e39b8cc276a55b92018038f650cbcd6be1271829eceeb0328d05ee93717ce2d96dbc2b6e2bc54874dc502cd1f800702efe8d91fa0381c20eb0e56861aafec44383384ad5f34b38895146506a954bd4141faeea3d753656c9583bb611927e895df40d5e511c5b1585928b432ce089f92645194d3dbe3f444212b27825824c97ff1980441ee2f58c32fce9d0fd22f97ee4472e9d9a74e7a3aa4a060bdaf2b18177425dc2113f66c91f9c9290014020954734d9daa2fe88f7fdded78bbd11b9384d95e9fcd574893e2b2ec565fa0ef8f5705ced8e81853c40e2138a6d78ec6b62b35ac2a5197c4b16220f50a1ea61805403728c854a1b96daea2f693ff71aafdc2a28652c70044e376c515f68a05ea1682ea79cb61f9658107c24d21ed3a976aade03ac623c21a47c2d8c4bf0334a7d87da8d12917cbc42cb0122fc11ba8e9b2a89fb40962b4269fd544d2c376603694a40586f893fb4624da1d57af11caa22a4b6c12c603aa0ea12379cc709fefeff84082535976ee0e8b0fad6dd305a145277101fea93d4c41b190b2b6c3244172d028c1011bf6c1b1679efe93582f3ed6fb7dc522f31042a39c3911daa781b1a1f5aa82e960d796ec9e0e09277221f4ff55cb12938fb1ccd386e35763f38922cf2e4559e03e50ab536f8ccf95a9f44e205b407270579e2103dbfd811d3808503872673b417720d3106016073a787724f666617c3871e7707bfbf1417ed43d611fe81787cf115a3f728284c12e38862b6cb6c80b315834e59a3fdc90573f3c2949f0e4732d4b81b50b4ec8a7f55f24f06c6dffd476d40e3033693b2150f738e823f581473e1351b4af6188869e6a1336564ddd194b61b06c070095d16f0521823413a91ea5143b5190351e7f51730bc7d22f316fec1548072a9d66f295bbc13e3699161749cc169ba001f38b959ca1c8112823e13b099801942d21acf6ac1375b72806ffada2f9aa9a92e05d0d31184bcee48bd4c3209a24cb67066c51714e03300e7ddffc3a9271068e0e79788ade53201b86e6669d18f53d0f41ff1d7a78b90ee60c7db0e34a2e0dfbcb322e233cae011cd7375267842dcdb44b09b05f487d963730d5d03342bcc19e5eed6d084ebe66f70445ba3294fdc7d038b3851ddeb88db6cebb85651100f6ae027b9fad9bed92fe2de76c8249d223fab41bd62b9990aaec313bb73687dd2b6f6482a71e011606a53fe30b95092af45f6bd6aa48bfd7abd882c3df2433702399f6fe64e9f987a86f875bafaa4c1b606eca50ef100a406cc73e78d2a57c8bc3abce19223e72e02a61dc3d5da0c5ac552ab2e07ee7d3a8f2f41b09ceeae512b8f5469697037d41e0452902d07f6d64db830bb149274e0e9bf66b45b385ec77221e41e8f8f05442f6698955ce78e6250505f1b13010fc01048d797426b4a6e0623432efd68c33796df38eb2ba5da6ab63f08177fb11c922abd40859095b315a57f28095d373507d5424fd6c357a48450e379fb5e601230694444a447556c325da548e2b952ae4c601d2d2797fd15b364784ca153ad38ae07fb651fbffaa234d5c3b68eb647e99153ca18097d11fb977970e292f3c909d3e6c205ad34f63448216245c8e987b54bd6a3da6422493f1fcd84f989105bbbdce0909277003fc5e0448c1c103c269f96ea25393626ccd42dd37aa22b3d2c71c72afbe779d2f5b542a5cbaec9bbd0a37a622c0eec81e2ca3b9386d1bc5b428fd574b860ab75092d73bb25c91e837d96b76d12a9cf9a56b8d05d77581f2a6e52d20bfd34a5d909cffd925ca8f448e68b21c5a7584d25f9817a4d85730bf5d602bd1690aeed0b980d4ee912a839b60efc7549fd85bba309c1b5305418202383899a260e234bddb92b182636b9c19cf304fb6862b5cce561fe528bd0f39e50f909f4625a7343bdc216fef2fa101cee2e5a6e166e1f47d98c5482fe1f15e9180dc80c3909f893f3f2a10d8cf12bfefaaf390d49b2faec97871cabdea4d2c7e36b7f2f754dfb292f5f3a939acd35b83f70f4d55678044bca0dbd29fb90f0c7d17aa8d7a69c9764d441c626d7b65041bcd7c6536b177fd1861abbc17b2f5b945ff67b1caa85e426f1f830bd0f5e62c020f848967b1f6e4e9ac4de5ea1619f18c5974c67057315a1d4d9b8f7d33d54aa1bea940c745b76b63cc2723b72a996f0adbcb0122e3aff0acfb31006854482d1012c755c166665c451bef9eb21ed24b1040d26a2cda151f42ecd4e2f04f79a860de0f800c16c5a28b2f84aa1d598885fa40fb3c61fa8da7967406e038db4d01a8ae46df975890f6ddf8c9dbb168ad41dc392cb8bae63f6d5d8ab3349a69b6ae0d78868deada0ade355dcbd54d4694ab24742741d552e67b5df95e667a12cb7e010470af0a270f1e50ba8053686704896030364344bf5b8f91360e7f7b9c636b478af2c8621dec2d32b6e5969f82ca0789a45606797bcfc5baf3834e10d95fbe9515bf76015d115f582ca5d860cc5c126f02e3fe5d305b0f993543352cbc1d5530b2dfdad85b7c7c03c2d32100e2de5bfe8ba912dd7a95e7ffbead926ae6ad4ee9dbb968e3e1de060330a8ce5f6b14b997c3f934ef469b31983360227968b7111c9a0cdaa550206f6d066f3b4620aa6a31db817aa7e4ac0544b1b9e9be82f757f768073439cf7d61ae93be723ff2e4f00d2eacd1375cb75664c7d390ac983ed90fdf7f5235b672ff133d25b3ffed0be6eaac9d2fab0d5f04287be0d400d7d39a1b5ccdf2fb79c99e61ae34a0ea8a797e6055075c3bbf43a168b9cc16921833ca20e30ca027849410bb4b5845e662eccedf7c562cf44cf011a43341cbcc55d0622dcc92c5778fb8d6ba8a2288b0602d84b373cec366ba01263cc7fb2761ee1fb425ef5bad7279b1129fcdd8213dbfa402cb5cf1b05eed94fd36d8f929463f2930b19c5208b68c8b93382489820d8db9adb83c6f245eecda970f79c6d0c6c1b5aa9305b251d9b89b48901478048de6e5c885e90579e58d967df5446d7c722398b70c6b818aef30e74231984ff7dc3c3dacf8e9e98360baab9563b2a01ef928de36ab2f4d0310900ad207ad4a305484da7f5f42031ec70895d1813b5fc3eb387b206765243531a82892149899478c9d22bd18d762112169f55ee9ac7dcad0028390f17849db8c797d2df7267b1fc01fb85758f6fdd1cdb75aa5d3e0d84d2457d1d4c72a202c354265357811203335cae39f9cdd819d7faaab8ac7afb8b0995f81f7ff7a59371b046eb8f8fb7fd1bec9bdcba46360d06e76aeeee67a2f680e25d478c31d36ccf2f114f5899b9a0c847fba04f0305a5e1f15658194394853c3ddf26833069c621296e9cb00d1fb3541478ffbde2c5a39b72e085e2b567762fa18a2c7e9f1ea6758c83cf3d27411f3f0631757e4442255dbe941b4cf731fa28648319739362f1bd30696a1878b59256519d24dc8be2bcbc7db370ec802eec802fb27d1e0b084c8f483ad4d369007f895b5e43baeb850691ced51ef8f5fa52b6f9ddd79cac86e3bcf0dbfacb37c75fb7565c579e193426241fbaccc18d325a2b95984ba64037014a36973937ced1cf5b81fde20b90dc8d9c011651f17f99121cec25f3ab5d9b90a66e5d427bef9f744dc62a6f012bd5b0e1c21c7218479404aae33ae9730f1b3ca3f21b592191b2c0bef6dac0bbf426baba291e30a01494636a4bcc87761525a8e7e465d2203be7eb09e36b1558d891e9b6499e6f18c59faef0133579298167aaafb4b9926da9fd2526bba59510f246ee84dc76f860eb8bece3b93ebf950594e1e29a2f8279a410855884bfd48fbced32051d6673d7b87360c9e5487cc8eed27dfcb2123abc1e981769e50c24676afae4369bc23ac34731dcc7500e623e20816d56814b3bc679f26ae8cbc58b1fd0d84312e44fe72d30e7551674720c7eae189cdc32139a9cb41e6cf9dcbcced02c11e8a48db1733496255ce0c707e4cfb19dec12e1a18b4dd826cf547adfa4c302152ed1e02dee5eeea133771b8dc949e0b14ae3bd0a2714598201ab7a390bb6a0c493cb622804baaffa43ca60ac6de18ad7e83446cae93a0cb8ac6a70d58e6bb69adeee714a97f8b76c20890148c21037d84dac049a20f66a9c4bb7d0dfaa09e31e4ce4006cfe04ebbf7f13af73372ea5fff227b5f86c6df50e93b6582ae2f86b915474545b323607325003d22ec145e9dbb5cc0c0b577ec96dde007728b497987c076c25690578ed8c458f254d7ccc8f1242056ac8f32689a4738cf396b44aadab05e0fdb648f7baa40d80fcb1f5c2e64f9783f12496c681b386612f0401387cad195af85bf1394e08f76e6dfff60e1e11446f7c951c7c0b766fe93130d453ef46fbb2ed7669d82fdb07a3f97b08c43b01838a1ca3ccc15e1f94effd239533f9df4168f9a519f7ea52b4cd613705e529d89a84855221acc9c11c56e6aceed9e2d4ed2cfb58c63c23023d468912a7fd03154122dc23c60ec94405d450a7fe4418d4344b9358649384d882abab230c4b8890d9166b33a689da49093cf31c40cdcccf9e259b3ef38e01ead6887e68c87d0f9796dbdbdb30ced8a6da9c7a84611907b0ab0e0cbe9929a6787c1dcb2980bbdfa8096c66d1d8453518e941182cc49beb1434d7b773d40b7c729811e67ad21dbe7968585e9e996803655aada2afa31fd435d524f162e14a8a90f0afb26a8788ebd8392f50599077f8e54f16182ab7e4f4ef1e222cdca8f6a29317f081c1109f15c423e326f4bc3026e10b99fc5a52c8e97e28d03454178499bbeffabc52a0ef12d1dfff8fe9d017544117137cf8fa937013a315bfdfca7fd6cb09f8e1dbe3eb75fd274005ae476b100e71f4e8da6afc980cdbf3174d5edb4764b8800402b4cf7b32b9953f535ffb0e86ee22df3a7d16d2050ef11ab830c5e4c741a0730bc47ae7157d530b34b225b4b7b31b4bf5369501a7073bd71a727a8cea767fc5f15987c76e3daa89679ea36ccd9c436dc5c69ae32be0cbdf997c1b0d8f43d21a8502d1ac8dbd0f52b9b18f5259419849e8479f77edfd0d9855e3d70d38398867c9efd1b56e3cee8b15d7b3fa1840206967084a84429b02bb9a33d7bdc43fb92b1316c88c1e0023b29642558bc13a50944653c7f32632d8f7af85f681b914bf3825e2bb85daa5a69739f2441ccaae17d9c49741544846a1f</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-shrink">
+      <input class="hbe hbe-input-field hbe-input-field-shrink" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-shrink" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-shrink">请输入密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>高数</category>
       </categories>
