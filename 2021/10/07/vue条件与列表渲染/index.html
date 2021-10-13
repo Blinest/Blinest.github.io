@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|华文行楷:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="以下笔记均来自Vue官网教程，为了方便记忆，自己进行了整理  四、条件渲染4.1. v-if类似 js 中的 if 1&lt;h1 v-if&#x3D;&quot;awesome&quot;&gt;Vue is awesome!&lt;&#x2F;h1&gt; 4.2. v-else类似 js 中的 else 12&lt;h1 v-if&#x3D;&quot;awesome&quot;&gt;Vue is awesome!&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="条件与列表渲染">
+<meta property="og:url" content="https://mdreamers.github.io/2021/10/07/vue%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/index.html">
+<meta property="og:site_name" content="追梦">
+<meta property="og:description" content="以下笔记均来自Vue官网教程，为了方便记忆，自己进行了整理  四、条件渲染4.1. v-if类似 js 中的 if 1&lt;h1 v-if&#x3D;&quot;awesome&quot;&gt;Vue is awesome!&lt;&#x2F;h1&gt; 4.2. v-else类似 js 中的 else 12&lt;h1 v-if&#x3D;&quot;awesome&quot;&gt;Vue is awesome!&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-07T07:27:16.000Z">
+<meta property="article:modified_time" content="2021-10-13T12:35:36.905Z">
+<meta property="article:author" content="lbl">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="前端框架">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mdreamers.github.io/2021/10/07/vue%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>条件与列表渲染 | 追梦</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">追梦</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Learning is the ladder of progress</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/10/07/vue%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          条件与列表渲染
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-07 15:27:16" itemprop="dateCreated datePublished" datetime="2021-10-07T15:27:16+08:00">2021-10-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-13 20:35:36" itemprop="dateModified" datetime="2021-10-13T20:35:36+08:00">2021-10-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>以下笔记均来自<a target="_blank" rel="noopener" href="https://cn.vuejs.org/">Vue</a>官网教程，为了方便记忆，自己进行了整理</p>
+</blockquote>
+<h1 id="四、条件渲染"><a href="#四、条件渲染" class="headerlink" title="四、条件渲染"></a>四、条件渲染</h1><h2 id="4-1-v-if"><a href="#4-1-v-if" class="headerlink" title="4.1. v-if"></a>4.1. <code>v-if</code></h2><p>类似 js 中的 if</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-if</span>=<span class="string">&quot;awesome&quot;</span>&gt;</span>Vue is awesome!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-2-v-else"><a href="#4-2-v-else" class="headerlink" title="4.2. v-else"></a>4.2. <code>v-else</code></h2><p>类似 js 中的 else</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-if</span>=<span class="string">&quot;awesome&quot;</span>&gt;</span>Vue is awesome!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-else</span>&gt;</span>Oh no 😢<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="4-3-v-else-if"><a href="#4-3-v-else-if" class="headerlink" title="4.3. v-else-if"></a>4.3. <code>v-else-if</code></h2><p>类似 js 中的 else if</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;type === &#x27;A&#x27;&quot;</span>&gt;</span></span><br><span class="line">  A</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-else-if</span>=<span class="string">&quot;type === &#x27;B&#x27;&quot;</span>&gt;</span></span><br><span class="line">  B</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-else-if</span>=<span class="string">&quot;type === &#x27;C&#x27;&quot;</span>&gt;</span></span><br><span class="line">  C</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-else</span>&gt;</span></span><br><span class="line">  Not A/B/C</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-4-⭐用-key-管理可复用的元素"><a href="#4-4-⭐用-key-管理可复用的元素" class="headerlink" title="4.4. ⭐用 key 管理可复用的元素"></a>4.4. ⭐用 <code>key</code> 管理可复用的元素</h2><p>Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从头开始渲染。这么做除了使 Vue 变得非常快之外，还有其它一些好处。例如，如果你允许用户在不同的登录方式之间切换：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-if</span>=<span class="string">&quot;loginType === &#x27;username&#x27;&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>Username<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">placeholder</span>=<span class="string">&quot;Enter your username&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-else</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">placeholder</span>=<span class="string">&quot;Enter your email address&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>那么在上面的代码中切换 <code>loginType</code> 将不会清除用户已经输入的内容。因为两个模板使用了相同的元素，<code>&lt;input&gt;</code> 不会被替换掉——仅仅是替换了它的 <code>placeholder</code>。</p>
+<p>这样也不总是符合实际需求，所以 Vue 为你提供了一种方式来表达“这两个元素是完全独立的，不要复用它们”。<strong>只需添加一个具有唯一值的 <code>key</code> attribute 即可</strong>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-if</span>=<span class="string">&quot;loginType === &#x27;username&#x27;&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>Username<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">placeholder</span>=<span class="string">&quot;Enter your username&quot;</span> <span class="attr">key</span>=<span class="string">&quot;username-input&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-else</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">placeholder</span>=<span class="string">&quot;Enter your email address&quot;</span> <span class="attr">key</span>=<span class="string">&quot;email-input&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意，<code>&lt;label&gt;</code> 元素仍然会被高效地复用，因为它们没有添加 <code>key</code> attribute。</p>
+<p><strong>也就是说key的作用就是给元素起一个独一无二的ID</strong>，这样就可以防止相同模板不进行替换。</p>
+<h2 id="4-5-v-show"><a href="#4-5-v-show" class="headerlink" title="4.5. v-show"></a>4.5. <code>v-show</code></h2><p><code>v-show</code> 与 <code>v-if</code> 的区别就是<code>v-show</code> 只是 <strong>简单地切换元素的display</strong>，而<code>v-if</code> 是 “真正” 的条件渲染。</p>
+<h1 id="五、列表渲染"><a href="#五、列表渲染" class="headerlink" title="五、列表渲染"></a>五、列表渲染</h1><h2 id="5-1-用v-for-遍历数组"><a href="#5-1-用v-for-遍历数组" class="headerlink" title="5.1. 用v-for 遍历数组"></a>5.1. 用<code>v-for</code> 遍历数组</h2><p>我们可以用 <code>v-for</code>  来迭代数组中的值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;example-1&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--这里通过 遍历得到items数组中每个item对象中的message属性值，并动态绑定key来保证其唯一性--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.message&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; item.message &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> example1 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">el</span>: <span class="string">&#x27;#example-1&#x27;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">items</span>: [</span><br><span class="line">      &#123; <span class="attr">message</span>: <span class="string">&#x27;Foo&#x27;</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">message</span>: <span class="string">&#x27;Bar&#x27;</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<ul>
+<li>Foo</li>
+<li>Bar</li>
+</ul>
+<hr>
+<p><strong>这里<code>v-for</code> 可传入第二个参数，即当前索引值</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;example-2&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;(item, index) in items&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; index &#125;&#125; : &#123;&#123; item &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> example2 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">el</span>: <span class="string">&#x27;#example-2&#x27;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">items</span>: [</span><br><span class="line">      &#123; <span class="attr">message</span>: <span class="string">&#x27;Foo&#x27;</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">message</span>: <span class="string">&#x27;Bar&#x27;</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<ul>
+<li>1 : Foo</li>
+<li>2 : Bar</li>
+</ul>
+<p>当然我们也可以用 <code>of</code> 来替代 <code>in</code> 作为分隔符</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;item of items&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-2-用-v-for-遍历对象"><a href="#5-2-用-v-for-遍历对象" class="headerlink" title="5.2. 用 v-for 遍历对象"></a>5.2. 用 <code>v-for</code> 遍历对象</h2><p><strong>这里的遍历是依次遍历对象中的键值</strong></p>
+<p><strong>例子：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;v-for-object&quot;</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;value in object&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; value &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">el</span>: <span class="string">&#x27;#v-for-object&#x27;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">object</span>: &#123;</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;How to do lists in Vue&#x27;</span>,</span><br><span class="line">      <span class="attr">author</span>: <span class="string">&#x27;Jane Doe&#x27;</span>,</span><br><span class="line">      <span class="attr">publishedAt</span>: <span class="string">&#x27;2016-04-10&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<ul>
+<li>How to lists in Vue</li>
+<li>Jane Doe</li>
+<li>2016-04-10</li>
+</ul>
+<hr>
+<p><strong>这里 <code>v-for</code> 可传入第二个参数，即键名</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;(value, name) in object&quot;</span>&gt;</span></span><br><span class="line">  &#123;&#123; name &#125;&#125; : &#123;&#123; value &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<p>title : How to do lists in Vue<br>author : Jane Doe<br>publishedAt : 2016-04-10</p>
+<hr>
+<p>还可以用第三个参数作为索引：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;(value, name, index) in object&quot;</span>&gt;</span></span><br><span class="line">  &#123;&#123; index &#125;&#125;. &#123;&#123; name &#125;&#125;: &#123;&#123; value &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>结果</p>
+<ol>
+<li><p>title : How to do lists in Vue</p>
+</li>
+<li><p>author : Jane Doe</p>
+</li>
+<li>publishedAt : 2016-04-10</li>
+</ol>
+<h2 id="5-3-维护状态"><a href="#5-3-维护状态" class="headerlink" title="5.3. 维护状态"></a>5.3. 维护状态</h2><p>Vue的默认更新策略是”就地更新 “。即不会移动匹配数据项的顺序，并且保证它们在每个索引位置正确渲染。</p>
+<p><strong>通过 <code>key</code> 给 Vue 一个提示</strong>，以便它能跟踪到每个节点的身份，从而有利于重用和重新排序现有元素，其实就类似于链表的地址。</p>
+<p><strong>所以说使用 <code>v-for</code> 时尽量提供 <code>key</code></strong></p>
+<p><strong>注意点：</strong></p>
+<p><strong>不要使用对象或数组之类的非基本类型值</strong>作为 <code>v-for</code> 的 <code>key</code>。<strong>请用字符串或数值类型的值</strong>。</p>
+<h2 id="5-4-数组更新检测"><a href="#5-4-数组更新检测" class="headerlink" title="5.4. 数组更新检测"></a>5.4. 数组更新检测</h2><h3 id="5-4-1-改变原始数组"><a href="#5-4-1-改变原始数组" class="headerlink" title="5.4.1. 改变原始数组"></a>5.4.1. 改变原始数组</h3><p>这里就用到了js中操作数组的一些方法</p>
+<ul>
+<li><code>push()</code></li>
+<li><code>pop()</code></li>
+<li><code>shift()</code></li>
+<li><code>unshift()</code></li>
+<li><code>splice()</code></li>
+<li><code>sort()</code></li>
+<li><code>reverse()</code></li>
+</ul>
+<p>通过这些方法可以改变原始数组</p>
+<h3 id="5-4-2-生成新数组"><a href="#5-4-2-生成新数组" class="headerlink" title="5.4.2. 生成新数组"></a>5.4.2. 生成新数组</h3><p>当然 js 中还有一些操作数组的方法并不是改变原始数组，而是<strong>返回一个新数组</strong>，如 <code>filter()</code> 、<code>concat()</code>、<code>slice()</code>。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vue/" rel="tag"># vue</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" rel="tag"># 前端框架</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/05/Class%E4%B8%8EStyle%E7%BB%91%E5%AE%9A/" rel="prev" title="三、Class 与 Style 绑定">
+      <i class="fa fa-chevron-left"></i> 三、Class 与 Style 绑定
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/09/vue%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/" rel="next" title="六、事件处理">
+      六、事件处理 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93"><span class="nav-number">1.</span> <span class="nav-text">四、条件渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-v-if"><span class="nav-number">1.1.</span> <span class="nav-text">4.1. v-if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-v-else"><span class="nav-number">1.2.</span> <span class="nav-text">4.2. v-else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-v-else-if"><span class="nav-number">1.3.</span> <span class="nav-text">4.3. v-else-if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E2%AD%90%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">1.4.</span> <span class="nav-text">4.4. ⭐用 key 管理可复用的元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-v-show"><span class="nav-number">1.5.</span> <span class="nav-text">4.5. v-show</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93"><span class="nav-number">2.</span> <span class="nav-text">五、列表渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E7%94%A8v-for-%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84"><span class="nav-number">2.1.</span> <span class="nav-text">5.1. 用v-for 遍历数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E7%94%A8-v-for-%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.</span> <span class="nav-text">5.2. 用 v-for 遍历对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E7%BB%B4%E6%8A%A4%E7%8A%B6%E6%80%81"><span class="nav-number">2.3.</span> <span class="nav-text">5.3. 维护状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-%E6%95%B0%E7%BB%84%E6%9B%B4%E6%96%B0%E6%A3%80%E6%B5%8B"><span class="nav-number">2.4.</span> <span class="nav-text">5.4. 数组更新检测</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-1-%E6%94%B9%E5%8F%98%E5%8E%9F%E5%A7%8B%E6%95%B0%E7%BB%84"><span class="nav-number">2.4.1.</span> <span class="nav-text">5.4.1. 改变原始数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-2-%E7%94%9F%E6%88%90%E6%96%B0%E6%95%B0%E7%BB%84"><span class="nav-number">2.4.2.</span> <span class="nav-text">5.4.2. 生成新数组</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lbl"
+      src="/images/wallhaven-m9q6e9.jpg">
+  <p class="site-author-name" itemprop="name">lbl</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+       <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+	<!--网易云-->
+    <div class="aplayer"
+      data-id="2773494627"
+      data-server="netease"
+      data-type="playlist"
+      data-fixed="false"
+      data-autoplay="false"
+      data-list-folded="true"
+      data-mutex="true"
+      data-order="random"
+      data-loop="all"
+      data-volume="0.4"
+      data-theme="#FADFA3"
+      date-preload="auto" >
+    </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lbl</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">194k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:56</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>
