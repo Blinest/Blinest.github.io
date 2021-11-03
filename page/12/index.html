@@ -185,6 +185,539 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://121.40.247.90/2021/06/30/1-numpy%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/30/1-numpy%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">1.numpy入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-30 22:30:29" itemprop="dateCreated datePublished" datetime="2021-06-30T22:30:29+08:00">2021-06-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-25 16:00:52" itemprop="dateModified" datetime="2021-09-25T16:00:52+08:00">2021-09-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/numpy/" itemprop="url" rel="index"><span itemprop="name">numpy</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>8.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>因为在matplotlib和pandas中都需要用到pandas，所以我想先将numpy文档中的基本代码都实现一遍，也算作是numpy的入门，后面先将matplotlib和pandas暂时放一放，对numpy进行深入学习，当然因为numpy是对数组进行处理，所以也会将其和线性代数结合在一块儿进行学习，基本掌握之后，在花几天时间进行巩固，然后将其运用到matplotlib和pandas的学习中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h1 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h1><h2 id="array创建"><a href="#array创建" class="headerlink" title="array创建"></a>array创建</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment"># 一维数组</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 2, 3])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]]) <span class="comment"># 二维数组，2行3列</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [4, 5, 6]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]],dtype=<span class="built_in">complex</span>) <span class="comment">#创建时指定数组类型</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[1.+0.j, 2.+0.j, 3.+0.j],
+       [1.+0.j, 2.+0.j, 3.+0.j]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.randn(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([-0.21304205, -0.6656218 ,  0.33403836])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0., 0., 0.])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.empty(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0., 0., 0.])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ones(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1., 1., 1.])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.full(<span class="number">3</span>,<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0.5, 0.5, 0.5])
+</code></pre><h2 id="arange函数"><a href="#arange函数" class="headerlink" title="arange函数"></a>arange函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">10</span>,<span class="number">30</span>,<span class="number">6</span>) <span class="comment">#类似等差数列，缺点是浮点精度有限，不可能预测所获得元素的数量 </span></span><br></pre></td></tr></table></figure>
+<pre><code>array([10, 16, 22, 28])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a=np.arange(<span class="number">6</span>)</span><br><span class="line">b=np.arange(<span class="number">6</span>).reshape(<span class="number">2</span>,<span class="number">3</span>)<span class="comment">#2行3列</span></span><br><span class="line">c=np.arange(<span class="number">9</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;--------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;--------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br></pre></td></tr></table></figure>
+<pre><code>[0 1 2 3 4 5]
+--------------
+[[0 1 2]
+ [3 4 5]]
+--------------
+[[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+</code></pre><h2 id="linspace函数"><a href="#linspace函数" class="headerlink" title="linspace函数"></a>linspace函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linspace(<span class="number">1</span>,<span class="number">3</span>,<span class="number">9</span>)<span class="comment">#接受所要元素的数量而不是步长(arrang函数)</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([1.  , 1.25, 1.5 , 1.75, 2.  , 2.25, 2.5 , 2.75, 3.  ])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.indices((<span class="number">3</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[[0, 0, 0],
+        [1, 1, 1],
+        [2, 2, 2]],
+
+       [[0, 1, 2],
+        [0, 1, 2],
+        [0, 1, 2]]])
+</code></pre><h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">a = np.linspace(<span class="number">1</span>,<span class="number">10</span>,<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">b = np.arange(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">c = b-a</span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">d = a&lt;<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">e = np.sin(b)<span class="comment">#都是对应元素进行计算</span></span><br><span class="line"><span class="built_in">print</span>(e)</span><br></pre></td></tr></table></figure>
+<pre><code>[ 1.    3.25  5.5   7.75 10.  ]
+---------------
+[0 1 2 3 4]
+---------------
+[-1.   -2.25 -3.5  -4.75 -6.  ]
+---------------
+[ True False False False False]
+---------------
+[ 0.          0.84147098  0.90929743  0.14112001 -0.7568025 ]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">A = np.array( [[<span class="number">1</span>,<span class="number">1</span>],</span><br><span class="line">               [<span class="number">0</span>,<span class="number">1</span>]] )</span><br><span class="line">B = np.array( [[<span class="number">2</span>,<span class="number">0</span>],</span><br><span class="line">               [<span class="number">3</span>,<span class="number">4</span>]] )</span><br><span class="line">a=A * B    <span class="comment"># 对应元素相乘</span></span><br><span class="line">b=A @ B    <span class="comment"># 矩阵相乘                 </span></span><br><span class="line">c=A.dot(B)   </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;*&quot;</span>,a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;@&quot;</span>,b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;dot&quot;</span>,c)</span><br></pre></td></tr></table></figure>
+<pre><code>* [[2 0]
+ [0 4]]
+---------------
+@ [[5 4]
+ [3 4]]
+---------------
+dot [[5 4]
+ [3 4]]
+</code></pre><h2 id="求和，求最值···"><a href="#求和，求最值···" class="headerlink" title="求和，求最值···"></a>求和，求最值···</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = np.random.random((<span class="number">2</span>,<span class="number">3</span>))<span class="comment">#2行3列随机数</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.<span class="built_in">sum</span>())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.<span class="built_in">min</span>())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.<span class="built_in">max</span>())</span><br></pre></td></tr></table></figure>
+<pre><code>[[0.70271427 0.13052157 0.78775386]
+ [0.57059958 0.22503932 0.35158542]]
+---------------
+2.768214031975299
+---------------
+0.13052157065742465
+---------------
+0.7877538595802818
+</code></pre><h2 id="axis参数"><a href="#axis参数" class="headerlink" title="axis参数"></a>axis参数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">16</span>).reshape(<span class="number">4</span>,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;sum&quot;</span>,a.<span class="built_in">sum</span>(axis=<span class="number">1</span>))<span class="comment"># 打印出每一列的和</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;min&quot;</span>,a.<span class="built_in">min</span>(axis=<span class="number">1</span>))<span class="comment"># 打印出每一行的最小值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;cumsum&quot;</span>,a.cumsum(axis=<span class="number">1</span>))<span class="comment">#每一行累积求和</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]
+ [12 13 14 15]]
+---------------
+sum [ 6 22 38 54]
+---------------
+min [ 0  4  8 12]
+---------------
+cumsum [[ 0  1  3  6]
+ [ 4  9 15 22]
+ [ 8 17 27 38]
+ [12 25 39 54]]
+</code></pre><h2 id="索引，切片，迭代"><a href="#索引，切片，迭代" class="headerlink" title="索引，切片，迭代"></a>索引，切片，迭代</h2><h3 id="一维"><a href="#一维" class="headerlink" title="一维"></a>一维</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">2</span>])<span class="comment">#索引,打印出第三个数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">2</span>:<span class="number">5</span>])<span class="comment">#切片,从第三个数到第五个数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[::-<span class="number">1</span>])<span class="comment">#步长为-1，也就是逆序</span></span><br></pre></td></tr></table></figure>
+<pre><code>[0 1 2 3 4 5 6 7 8 9]
+---------------
+2
+---------------
+[2 3 4]
+---------------
+[9 8 7 6 5 4 3 2 1 0]
+</code></pre><h3 id="多维"><a href="#多维" class="headerlink" title="多维"></a>多维</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">25</span>).reshape(<span class="number">5</span>,<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">2</span>,<span class="number">3</span>]) <span class="comment"># 索引,第3行第4列</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">1</span>:<span class="number">5</span>,<span class="number">2</span>]) <span class="comment"># 第2行到第5行的第3个数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[:,<span class="number">2</span>]) <span class="comment"># 每行第3个数 </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">1</span>:<span class="number">5</span>,:]) <span class="comment"># 第2行到第5行的所有元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[-<span class="number">1</span>]) <span class="comment"># 表示最后一行所有元素,eq：a[-1,:]</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[...,<span class="number">2</span>]) <span class="comment"># 表示的是第3列的所有元素</span></span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3  4]
+ [ 5  6  7  8  9]
+ [10 11 12 13 14]
+ [15 16 17 18 19]
+ [20 21 22 23 24]]
+---------------
+13
+---------------
+[ 7 12 17 22]
+---------------
+[ 2  7 12 17 22]
+---------------
+[[ 5  6  7  8  9]
+ [10 11 12 13 14]
+ [15 16 17 18 19]
+ [20 21 22 23 24]]
+---------------
+[20 21 22 23 24]
+---------------
+[ 2  7 12 17 22]
+[15 16 17 18 19]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">24</span>).reshape(<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">1</span>,...]) <span class="comment"># 表示第2个里面的所有元素 </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">1</span>,...,<span class="number">1</span>,:])<span class="comment"># 表示第2个里面第2行元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[...,<span class="number">2</span>])<span class="comment"># 表示每个里面第3列元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>])<span class="comment"># 表示第3个里面的第一个元素</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[[ 0  1  2  3]
+  [ 4  5  6  7]]
+
+ [[ 8  9 10 11]
+  [12 13 14 15]]
+
+ [[16 17 18 19]
+  [20 21 22 23]]]
+---------------
+[[ 8  9 10 11]
+ [12 13 14 15]]
+---------------
+[12 13 14 15]
+---------------
+[[ 2  6]
+ [10 14]
+ [18 22]]
+---------------
+16
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a =np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> a: <span class="comment"># 循环遍历打印每行元素</span></span><br><span class="line">    <span class="built_in">print</span>(row)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a.flat: <span class="comment"># 循环打印每个元素</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+---------------
+[0 1 2 3]
+[4 5 6 7]
+[ 8  9 10 11]
+---------------
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</code></pre><h1 id="形状操作"><a href="#形状操作" class="headerlink" title="形状操作"></a>形状操作</h1><p>一个数组的形状是由每个轴的元素数量决定的</p>
+<h2 id="改变数组形状"><a href="#改变数组形状" class="headerlink" title="改变数组形状"></a>改变数组形状</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a=np.floor(<span class="number">10</span>*np.random.random((<span class="number">3</span>,<span class="number">4</span>)))</span><br><span class="line"><span class="built_in">print</span>(a.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.reshape(<span class="number">3</span>,<span class="number">4</span>))<span class="comment"># 返回一个改变后的数组，但不改变a中元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.T)<span class="comment"># a的转置，但不改变a中元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.T.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.shape)</span><br></pre></td></tr></table></figure>
+<pre><code>(3, 4)
+------------------------
+[[6. 6. 1. 4.]
+ [4. 5. 7. 3.]
+ [7. 0. 4. 7.]]
+------------------------
+[[6. 4. 7.]
+ [6. 5. 0.]
+ [1. 7. 4.]
+ [4. 3. 7.]]
+------------------------
+(4, 3)
+------------------------
+(3, 4)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a=np.arange(<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.resize((<span class="number">2</span>,<span class="number">6</span>)))<span class="comment">#resize函数可以改变a中的元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
+<pre><code>[0 1 2 3 4 5 6 7 8 9]
+------------------------
+None
+------------------------
+[[0 1 2 3 4 5]
+ [6 7 8 9 0 0]]
+</code></pre><h2 id="将不同数组堆叠在一起"><a href="#将不同数组堆叠在一起" class="headerlink" title="将不同数组堆叠在一起"></a>将不同数组堆叠在一起</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = np.linspace(<span class="number">2</span>,<span class="number">20</span>,<span class="number">4</span>).reshape(<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line">b = np.floor(<span class="number">10</span>*np.random.random((<span class="number">2</span>,<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.vstack((a,b)))<span class="comment">#垂直拼在一块</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.hstack((a,b)))<span class="comment">#水平拼在一块</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[ 2.  8.]
+ [14. 20.]]
+------------------------
+[[8. 4.]
+ [0. 7.]]
+------------------------
+[[ 2.  8.]
+ [14. 20.]
+ [ 8.  4.]
+ [ 0.  7.]]
+------------------------
+[[ 2.  8.  8.  4.]
+ [14. 20.  0.  7.]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.column_stack((a,b))<span class="comment">#此时效果感觉跟hstack差不多</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 2.,  8.,  8.,  4.],
+       [14., 20.,  0.,  7.]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a&quot;</span>,a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line">b=np.array([<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;b&quot;</span>,b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.column_stack((a,b)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.hstack((a,b)))<span class="comment">#这样子的话hstack和column_stack的区别就体现出来了</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.row_stack((a,b)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.vstack((a,b)))<span class="comment">#vtack和row_stack的没有区别</span></span><br></pre></td></tr></table></figure>
+<pre><code>a [1 2]
+------------------------
+b [3 4]
+------------------------
+[[1 3]
+ [2 4]]
+------------------------
+[1 2 3 4]
+------------------------
+[[1 2]
+ [3 4]]
+------------------------
+[[1 2]
+ [3 4]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">c = a[:,np.newaxis]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c&quot;</span>,c)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line">d = b[:,np.newaxis]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;d&quot;</span>,d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.vstack((c,d)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.row_stack((c,d))) <span class="comment"># 结果还是一样，</span></span><br><span class="line"><span class="comment"># hstack和column_stack在一维数组的堆叠中是有区别的</span></span><br><span class="line"><span class="comment"># 但是没有发现vstack和row_stack数组堆叠的区别</span></span><br></pre></td></tr></table></figure>
+<pre><code>c [[1]
+ [2]]
+------------------------
+d [[3]
+ [4]]
+------------------------
+[[1]
+ [2]
+ [3]
+ [4]]
+------------------------
+[[1]
+ [2]
+ [3]
+ [4]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">a[:,np.newaxis]<span class="comment"># newaxis可以将行向量转化成列向量</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[1],
+       [2],
+       [3],
+       [4]])
+</code></pre><p><strong>r_</strong>  和 <strong>c_</strong> 的堆叠</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = np.r_[<span class="number">1</span>:<span class="number">4</span>,<span class="number">4</span>,<span class="number">5</span>] <span class="comment"># 允许使用范围操作符 :堆叠方式感觉跟vstack类似</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line">b = np.c_[<span class="number">1</span>:<span class="number">4</span>,[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]] <span class="comment"># 堆叠方式感觉跟hstack类似</span></span><br><span class="line"><span class="built_in">print</span>(b)</span><br></pre></td></tr></table></figure>
+<pre><code>[1 2 3 4 5]
+------------------------
+[[1 4]
+ [2 5]
+ [3 6]]
+</code></pre><h2 id="将一个数组拆分成几个较小的数组"><a href="#将一个数组拆分成几个较小的数组" class="headerlink" title="将一个数组拆分成几个较小的数组"></a>将一个数组拆分成几个较小的数组</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">2</span>,<span class="number">6</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a&quot;</span>,a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(np.hsplit(a,<span class="number">3</span>))<span class="comment"># 沿数组水平轴拆分数组,返回的数组形状相同</span></span><br><span class="line"><span class="built_in">print</span>(np.hsplit(a,(<span class="number">1</span>,<span class="number">4</span>)))<span class="comment"># 表示第1列和第4列后面切一刀分成三个数组</span></span><br></pre></td></tr></table></figure>
+<pre><code>a [[ 0  1  2  3  4  5]
+ [ 6  7  8  9 10 11]]
+------------------------
+[array([[0, 1],
+       [6, 7]]), array([[2, 3],
+       [8, 9]]), array([[ 4,  5],
+       [10, 11]])]
+[array([[0],
+       [6]]), array([[1, 2, 3],
+       [7, 8, 9]]), array([[ 4,  5],
+       [10, 11]])]
+</code></pre><p>当然同理vsplit就是按垂直轴分割</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(np.vsplit(a,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>[array([[0, 1, 2, 3, 4, 5]]), array([[ 6,  7,  8,  9, 10, 11]])]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(np.array_split(a,<span class="number">2</span>)) <span class="comment"># array_split将可以数组拆分成大小相等的多个子数组</span></span><br></pre></td></tr></table></figure>
+<pre><code>[array([[0, 1, 2, 3, 4, 5]]), array([[ 6,  7,  8,  9, 10, 11]])]
+</code></pre><h1 id="拷贝和视图"><a href="#拷贝和视图" class="headerlink" title="拷贝和视图"></a>拷贝和视图</h1><h2 id="完全不复制"><a href="#完全不复制" class="headerlink" title="完全不复制"></a>完全不复制</h2><blockquote>
+<p>简单分配不会复制数组对象或其数据</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>)</span><br><span class="line">b = a</span><br><span class="line"><span class="built_in">print</span>(b <span class="keyword">is</span> a) <span class="comment"># 由此可以看出a,b是名字不同的相同数组，</span></span><br><span class="line"><span class="comment"># 这也就是python引用传递的特性，跟C语言的赋值操作不大一样</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------&quot;</span>)</span><br><span class="line">b.shape = <span class="number">3</span>,<span class="number">4</span> <span class="comment"># 通过改变b，改变a的形状</span></span><br><span class="line"><span class="built_in">print</span>(a.shape)</span><br></pre></td></tr></table></figure>
+<pre><code>True
+-------------------
+(3, 4)
+</code></pre><h2 id="视图或浅拷贝"><a href="#视图或浅拷贝" class="headerlink" title="视图或浅拷贝"></a>视图或浅拷贝</h2><blockquote>
+<p>拷贝后<strong>内存地址没发生变化</strong></p>
+</blockquote>
+<p>用view方法可以创建一个查看相同数据的新数组对象</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">c = a.view()</span><br><span class="line"><span class="built_in">print</span>(c <span class="keyword">is</span> a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(c.base <span class="keyword">is</span> a)<span class="comment"># 可以看出两者不一样，但是所存储的内容一样</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---------------------&quot;</span>)</span><br><span class="line">c.shape=<span class="number">2</span>,<span class="number">6</span></span><br><span class="line"><span class="built_in">print</span>(a.shape)<span class="comment"># a 的形状也没发生变化</span></span><br><span class="line">c[<span class="number">0</span>,<span class="number">4</span>] = <span class="number">1234</span></span><br><span class="line"><span class="built_in">print</span>(a)<span class="comment"># 神奇的事情发生了a中对应的数组元素也发生了改变</span></span><br></pre></td></tr></table></figure>
+<pre><code>False
+---------------------
+True
+---------------------
+(3, 4)
+[[   0    1    2    3]
+ [1234    5    6    7]
+ [   8    9   10   11]]
+</code></pre><p><strong>原因：切片数组会返回一个视图</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = a[:,<span class="number">1</span>:<span class="number">3</span>]</span><br><span class="line">s[:]=<span class="number">10</span> <span class="comment"># 这里s[:]是s的一个视图</span></span><br><span class="line"><span class="built_in">print</span>(a) <span class="comment"># a的值发生了变化</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[   0   10   10    3]
+ [1234   10   10    7]
+ [   8   10   10   11]]
+</code></pre><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><blockquote>
+<p><strong>内存地址已经发生了变化</strong></p>
+</blockquote>
+<p>用copy方法可以<strong>生成数组及其数据的完整副本</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">d = a.copy()</span><br><span class="line"><span class="built_in">print</span>(d <span class="keyword">is</span> a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(d.base <span class="keyword">is</span> a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------&quot;</span>)</span><br><span class="line">d[<span class="number">0</span>,<span class="number">0</span>]=<span class="number">1000</span></span><br><span class="line"><span class="built_in">print</span>(a)<span class="comment">#也就是说用了copy方法后d和a是两个值相等，但完全不同的数组</span></span><br></pre></td></tr></table></figure>
+<pre><code>False
+-------------
+False
+-------------
+[[   0   10   10    3]
+ [1234   10   10    7]
+ [   8   10   10   11]]
+</code></pre><p>有时，如果不再需要原始数组，则应在切片后调用 copy。例如，假设a是一个巨大的中间结果，最终结果b只包含a的一小部分，那么在用切片构造b时应该做一个深拷贝,这样就可以只保留部分的a，将a的所占内存释放掉</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://121.40.247.90/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/28/2-%E7%AE%97%E6%B3%95%EF%BC%88C%EF%BC%89/" class="post-title-link" itemprop="url">2.算法(用C语言实现)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-28 13:17:58" itemprop="dateCreated datePublished" datetime="2021-06-28T13:17:58+08:00">2021-06-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-16 19:13:47" itemprop="dateModified" datetime="2021-08-16T19:13:47+08:00">2021-08-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h1><h2 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h2><p>设两数为$a、b(a\geqslant b)$，求$a$和$b$的最大公约数步骤：</p>
+<ol>
+<li>用$a$除以$b(a\geqslant b)$,得$a\div b=q\cdots r_1(0\leqslant r_1)$</li>
+<li>若$r_1=0$,则$(a,b)=b$</li>
+<li>若$r_1\neq 0$,则再用$b$除以$r_1$,得$b\div r_1=q\cdots r_2(0\leqslant r_2)$</li>
+<li>若$r_2=0$，则$(a,b)=r_1$，若$r_2\neq0$,则继续用$r_1$除以$r_2$,……如此下去，直到能整除为止，<br>其最后一个余数为0的除数，即为$(a,b)$的最大公约数</li>
+</ol>
+<p>简单来说就是$a$和$b$的最大公约数等于 <strong>$a$的余数</strong> 和$b$的最大公约数</p>
+<p>C语言代码实现</p>
+<p>1.while循环实现</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min,c;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">while</span>(c!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        c = max % min;</span><br><span class="line">        max = min;</span><br><span class="line">        min = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.函数嵌套实现</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max,min;</span><br><span class="line">    max=(a&gt;b)?a:b;</span><br><span class="line">    min=(a&lt;b)?a:b;</span><br><span class="line">    <span class="keyword">if</span>(max % min==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> gcd(max,max % min);</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<p>求出最大公因数，最小公倍数也很容易得出，就是两数乘积除以最大公约数</p>
+<h2 id="更相减损术"><a href="#更相减损术" class="headerlink" title="更相减损术"></a>更相减损术</h2><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><blockquote>
+<p>基本思想：两两比较相邻记录的关键字，，如果反序就交换，直到没有反序为止</p>
+</blockquote>
+<p>步骤：（正序为例）</p>
+<ol>
+<li>比较相邻元素，如果第一个比第二个大，则两数交换。</li>
+<li>对之后的相邻元素进行同样的工作，从开始到结束,这样最后的元素就是最大的数，也就像泡泡一样浮到顶端不用管了</li>
+<li>(小循环)针对前面未排序元素重复以上步骤。</li>
+<li>(大循环)重复上述步骤，直到排序完成</li>
+</ol>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp,m=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p=a;</span><br><span class="line">    <span class="keyword">while</span>(m)<span class="comment">//如果已经是有序数组就跳出while循环，从而提高效率</span></span><br><span class="line">    &#123;</span><br><span class="line">        m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">                <span class="keyword">if</span>(*(p+j)&gt;*(p+j+<span class="number">1</span>))<span class="comment">//相邻两个数进行比较</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        m=<span class="number">1</span>;</span><br><span class="line">                        temp=*(p+j+<span class="number">1</span>);</span><br><span class="line">                        *(p+j+<span class="number">1</span>)=*(p+j);</span><br><span class="line">                        *(p+j)=temp;</span><br><span class="line">                    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>冒泡排序的复杂度分析</strong><br>最好的情况，本身有序</p>
+<p>时间复杂度为$O(n)$</p>
+<p>最坏的情况：<br>$\sum\limits_{k=2}^n(k-1)=\displaystyle\frac{n(n-1)}{2}$</p>
+<p>也就是说最坏的情况，比较了$\displaystyle\frac{n(n-1)}{2}$次</p>
+<p>时间复杂度为$O(n^2)$</p>
+<p>平均时间复杂度$O(n^2)$</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
+<p>首先在末排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后再从剩余未排序元素中继续寻找最小(大)元素，放在已排好序序列的末尾。</p>
+</blockquote>
+<p>简单来说就是从后面的数选出较小的数排到前面</p>
+<p>C语言代码实现</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp,i,j;</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)<span class="comment">//循环次数</span></span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;N;j++)<span class="comment">//一次循环的比较次数</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[i])<span class="comment">//也就是第i+1个数和后面的数比较</span></span><br><span class="line">                &#123;</span><br><span class="line">                    temp=a[j];</span><br><span class="line">                    a[j]=a[i];</span><br><span class="line">                    a[i]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>无论传入什么数据时间复杂度都是$O(n^2)$</p>
+<p>当然这种排序方法也是一般人最容易想到的排序方法n适合处理数据较少的情况。</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
+<p>就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的个数加一的有序数组<br>步骤：</p>
+<ol>
+<li>从第一个元素开始，该元素可被认为已经排好序</li>
+<li>取出下一个元素，在已经排好的数组中向前扫描</li>
+<li>如果已排序的元素大于这个取出的元素，就移到下一个位置</li>
+<li>(小循环)重复步骤3，直到找到已排序的元素小于或等于该取出元素</li>
+<li>将取出元素插入到该空出的位置</li>
+<li>(大循环)重复上述步骤<br>C语言代码实现<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,temp;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp=a[i];<span class="comment">//储存要插入的数据</span></span><br><span class="line">            <span class="keyword">for</span>(j=i<span class="number">-1</span>;temp&lt;a[j] &amp;&amp; j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j];<span class="comment">//数据向后移，给较小数据挪位</span></span><br><span class="line">            a[j+<span class="number">1</span>]=temp;<span class="comment">//插入数据</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>步骤：</p>
+<ol>
+<li>如果n=1,结束</li>
+<li>把长度为n的输入序列分成两个长度为n/2的子序列</li>
+<li>将两个子序列分别采用归并排序</li>
+<li>将两个排好序的子序列合并成一个最终的排序序列</li>
+</ol>
+<p>C语言实现</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> mid;</span><br><span class="line">	<span class="keyword">if</span>(end-start&lt;=<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		mid = (start + end)/<span class="number">2</span>; </span><br><span class="line">		mergesort(a,start,mid);<span class="comment">//递归分解数组</span></span><br><span class="line">		mergesort(a,mid+<span class="number">1</span>,end);</span><br><span class="line">		merge(a,start,end,mid);<span class="comment">//归并数组</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*归并函数*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> start,<span class="keyword">int</span> end,<span class="keyword">int</span> mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b[<span class="number">20</span>];</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=start;</span><br><span class="line">	<span class="keyword">int</span> j=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=mid &amp;&amp; j&lt;=end)<span class="comment">//两个数组pk比较大小，储存在b中</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&lt;a[j])</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			b[k++]=a[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i == mid + <span class="number">1</span>)<span class="comment">//第二个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(j &lt;= end)</span><br><span class="line">			b[k++]=a[j++];<span class="comment">//那么第二个数组直接排到后面</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(j == end + <span class="number">1</span>)<span class="comment">//第一个数组剩余的多</span></span><br><span class="line">		<span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">			b[k++]=a[i++];</span><br><span class="line">	<span class="keyword">for</span>(i=start,j=<span class="number">0</span>;j&lt;k;i++,j++)</span><br><span class="line">		a[i]=b[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	mergesort(a,<span class="number">0</span>,<span class="number">9</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h1><p>思想：</p>
+<ul>
+<li>找公共前后缀</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*KMP算法实现*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kmp</span><span class="params">(<span class="keyword">char</span> string[] ,<span class="keyword">char</span> ch[] ,<span class="keyword">int</span> next[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetNext</span><span class="params">(<span class="keyword">char</span> ch[],<span class="keyword">int</span> next[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j; </span><br><span class="line">	<span class="keyword">char</span> string[<span class="number">15</span>]=&#123;<span class="string">&#x27;\0&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;h&#x27;</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;a&#x27;</span>&#125;;</span><br><span class="line">	<span class="keyword">char</span> ch[<span class="number">9</span>]=&#123;<span class="string">&#x27;\0&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> next[<span class="number">9</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">	next[<span class="number">0</span>]=<span class="number">8</span>;</span><br><span class="line">	<span class="built_in">GetNext</span>(ch,next);</span><br><span class="line">	<span class="comment">//为啥调用完函数后,字符数组ch中的值会消失?</span></span><br><span class="line">	<span class="keyword">char</span> ch1[<span class="number">9</span>]=&#123;<span class="string">&#x27;\0&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;<span class="comment">//没找到解决办法，只好重新创建一个了~_~</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;<span class="number">9</span>;i++)<span class="comment">//打印出next数组中的值</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,next[i]);</span><br><span class="line">	j=<span class="built_in">kmp</span>(string,ch1,next);</span><br><span class="line">	<span class="keyword">if</span>(j)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;匹配成功,从第%d个开始\n&quot;</span>,j);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;匹配失败\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetNext</span><span class="params">(<span class="keyword">char</span> ch[],<span class="keyword">int</span> next[])</span><span class="comment">//得到next数组</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">1</span>,j=<span class="number">0</span>;</span><br><span class="line">	next[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=next[<span class="number">0</span>])</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(j==<span class="number">0</span>||ch[i]==ch[j])<span class="comment">//这里挺难理解的</span></span><br><span class="line">			next[++i]=++j;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			j=next[j];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kmp</span><span class="params">(<span class="keyword">char</span> string[],<span class="keyword">char</span> ch[],<span class="keyword">int</span> next[])</span><span class="comment">//字符匹配</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">1</span>,j=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(i&lt;=<span class="number">14</span>&amp;&amp;j&lt;next[<span class="number">0</span>])</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(j==<span class="number">0</span>||string[i]==ch[j])</span><br><span class="line">		&#123;</span><br><span class="line">			i++;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> j=next[j];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(j == next[<span class="number">0</span>])</span><br><span class="line">		<span class="keyword">return</span> i-next[<span class="number">0</span>]+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个算法花了很长时间，主要浪费的时间不是在思考上，而是找 bug 上，程序没有报错，但是却输出不了正确的值，用笔一步一步推演发现并没有逻辑上的错误，一点点检查才发现,字符数组ch在调用完void Getnext()函数后里面的值竟然消失了，很奇怪，用的编译器是Microsoft visual c++6.0,到网上寻找也没找到答案，最终只好创建一个新的数组 —﹏—。</p>
+<h1 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://121.40.247.90/2021/06/27/1-C%E8%AF%AD%E8%A8%80%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1118,283 +1651,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://121.40.247.90/2021/06/24/end/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/24/end/" class="post-title-link" itemprop="url">end</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-06-24 10:04:26 / 修改时间：10:20:50" itemprop="dateCreated datePublished" datetime="2021-06-24T10:04:26+08:00">2021-06-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>83</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>线性代数的内容已经基本结束，但是后面还会对于一些细节进行扩充，并结合一些几何知识进行分析，当然今后也会结合线性代数这一工具来学习高数等知识，并对其用处进行深入研究……</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://121.40.247.90/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/23/7.%E4%BA%8C%E6%AC%A1%E5%9E%8B/" class="post-title-link" itemprop="url">7.二次型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-06-23 07:18:03" itemprop="dateCreated datePublished" datetime="2021-06-23T07:18:03+08:00">2021-06-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-04 14:47:30" itemprop="dateModified" datetime="2021-07-04T14:47:30+08:00">2021-07-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>6.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h1><ol>
-<li>二次型的矩阵表示<br>$f(x_1,x_2,x_3)$<br><br>$\begin{aligned}<br>&amp;=x_1^2+5x_2^2-4x_3^2-2x_1x_2+6x_2x_3\\<br>&amp;=[x_1\;x_2\;x_3]<br>\begin{bmatrix}<br> 1&amp;-1&amp;0\\<br> -1&amp;5&amp;3\\<br> 0&amp;3&amp;-4<br>\end{bmatrix}<br>\begin{bmatrix}<br> x_1\\<br> x_2\\<br> x_3<br>\end{bmatrix}\\<br>&amp;=x^TAx<br>\end{aligned}<br>$<br><br>其中$A$是对称矩阵，即$A^T=A$<br><br>此矩阵称为二次型矩阵<br><br></li>
-<li>标准形<blockquote>
-<p>二次型只有平方项<br><br>例如，$x_1^2+x_2^2-4x_3^2$<br><br></p>
-</blockquote>
-</li>
-<li>规范形<blockquote>
-<p>标准型里面平方项系数只有$\pm1或0$<br><br>例如，$x_1^2-x_2^2+x_4^2$<br><br></p>
-</blockquote>
-</li>
-<li>正惯性指数p，负惯性指数q，符号差<blockquote>
-<p>p,q就是标准形系数正负个数<br><br>符号差就是p-q<br><br>例$x_1^2+x_2^2-4x_3^2\quad$</p>
-<p>正惯性指数=2，负惯性指数=1,符号差=1<br><br></p>
-</blockquote>
-</li>
-<li>二次型的秩<blockquote>
-<p>$r(f)=r(A)$<br><br></p>
-</blockquote>
-</li>
-<li>坐标变换<br>即$x=Cy$<br><br>这里可以参照向量空间坐标变换公式，注意$|C|\neq0$<br><br></li>
-<li>合同<blockquote>
-<p>如果$C^TAC=B$,其中$C$可逆矩阵<br><br>称矩阵A和B合同，记作$A\simeq B$</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="标准形"><a href="#标准形" class="headerlink" title="标准形"></a>标准形</h2><p>方法：<br>1.配方法；2.正交变换法</p>
-<h3 id="配方法"><a href="#配方法" class="headerlink" title="配方法"></a>配方法</h3><ul>
-<li><strong>例</strong> ：化二次型<br>$\quad f=x_1^2+2x_2^2+5_3^2+2x_1x_2+2x_1x_3+6x_2x_3$成标准形，并写出所用坐标变换。<br><br>解：<br>$\begin{aligned}<br>f<br>&amp;=x_1^2+2x_1x_2+2x_1x_3+2x_2^25x_3^2+6x_2x_3\\<br>&amp;=[x_1^2+2x_1(x_2+x_3)+(x_2+x_3)^2]\\<br>&amp;\quad -(x_2+x_3)^2+2x_2^2+5x_3^2+6x_2x_3\\<br>\\<br>&amp;=(x_1+x_2+x_3)^2+x_2^2+4x_2x_3+4x_3^2\\<br>&amp;=(x_1+x_2+x_3)^2+(x_2+x_3)^2<br>\end{aligned}<br>$<br><br>令<br>$<br>\begin{cases}<br>y_1=x_1+x_2+x_3\\<br>y_2=x_2+x_3\\<br>y_3=x_3<br>\end{cases}<br>$<br><br>即<br>$<br>\begin{cases}<br>x_1=y_1-y_2+y_3\\<br>x_2=y_2-2y_3\\<br>x_3=y_3<br>\end{cases}<br>$<br><br>坐标变换公式<br>$x=Cy$<br><br>$C=<br>\begin{bmatrix}<br>  1&amp;-1&amp;1\\<br>  0&amp;1&amp;-2\\<br>  0&amp;0&amp;1<br>\end{bmatrix}<br>$<br><br>得$f=y_1^2+y_2^2$</li>
-</ul>
-<h3 id="正交变换法"><a href="#正交变换法" class="headerlink" title="正交变换法"></a>正交变换法</h3><blockquote>
-<p>定理：任意一个二次型$f=x^TAx$，其中$A^T=A$,总存在正交变换$x=py$,(其中$P$是正交矩阵)，使二次型化为标准形<br><br>$\quad x^TAx=y^T\land y=\lambda_1y_1^2+\cdots+\lambda_n y_n^2$<br><br>($\lambda$是A的特征值)</p>
-</blockquote>
-<ul>
-<li><strong>证</strong>：<br>首先要知道二次型中$A$是实对称矩阵<br><br>因为实对称矩阵，$Q^{-1}AQ=\land$<br><br>$Q$是正交矩阵(则$Q^T=Q^{-1}$)<br><br>所以$Q^TAQ=\land$<br><br>若令$x=Qy$,则<br><br>$<br>\begin{aligned}<br>x^TAx<br>&amp;=(Qy)^TA(Qy)\\<br>&amp;=y^TQ^TAQy\\<br>&amp;=y^T\land y\\<br>&amp;=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2<br>\end{aligned}<br>$</li>
-</ul>
-<p><strong>例</strong>：将二次型<br>$f=x_1^2+x_2^2+x_3^2+4x_1x_2+4x_1x_3+4x_2x_3$<br>用正交变换化成标准形，并写出所用坐标变换。</p>
-<p><strong>解</strong>：二次型矩阵为<br>$<br>A=<br>\begin{bmatrix}<br>1&amp;2&amp;2\\<br>2&amp;1&amp;2\\<br>2&amp;2&amp;1<br>\end{bmatrix}<br>$</p>
-<p>由特征多项式<br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-1&amp;-2&amp;-2\\<br>-2&amp;\lambda-1&amp;-2\\<br>-2&amp;-2&amp;\lambda-1<br>\end{array}\right|\\<br>&amp;=(\lambda-5)(\lambda+1)^2<br>\end{aligned}<br>$</p>
-<p>$\therefore A$的特征值为5，-1，-1</p>
-<p>$\lambda=5$时，由$(5E-A)x=0$<br><br>得<br>$<br>\begin{bmatrix}<br>4&amp;-2&amp;-2\\<br>-2&amp;4&amp;-2\\<br>-2&amp;-2&amp;4<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;0&amp;-1\\<br>0&amp;1&amp;-1\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>$得到\alpha_1=(1,1,1)^T$</p>
-<p>$\lambda=-1$时，由$(-E-A)x=0$</p>
-<p>得<br>$<br>\begin{bmatrix}<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2\\<br>-2&amp;-2&amp;-2<br>\end{bmatrix}<br>\rightarrow<br>\begin{bmatrix}<br>1&amp;1&amp;1\\<br>0&amp;0&amp;0\\<br>0&amp;0&amp;0<br>\end{bmatrix}<br>$</p>
-<p>得$\alpha_2=(-1,1,0)^T，\alpha_3=(-1,0,1)^T$</p>
-<p>因为这两个向量不垂直</p>
-<p>$\therefore 将\alpha_2,\alpha_3$施密特正交化</p>
-<p>$\beta_2=\alpha_2=\begin{bmatrix}-1\\1\\0\end{bmatrix}$</p>
-<p>$<br>\beta_3=\alpha_3-\displaystyle\frac{ [\alpha_3\;\beta_2] }{ [\beta_2\;\beta_3] }\beta_2<br>=\frac12\begin{bmatrix}-1\\ -1\\2\end{bmatrix}<br>$</p>
-<p>单位化</p>
-<p>$<br>\gamma_1=\displaystyle\frac{1}{\sqrt{3} }\begin{bmatrix}1\\1\\1\end{bmatrix},<br>\gamma_2=\displaystyle\frac{1}{\sqrt{2} }\begin{bmatrix}-1\\1\\0\end{bmatrix},$<br>$\gamma_3=\displaystyle\frac{1}{\sqrt{6} }\begin{bmatrix}-1\\ -1\\2\end{bmatrix}$</p>
-<p>令<br>$<br>\;P=(\gamma_1\;\gamma_2\;\gamma_3)<br>=\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>$</p>
-<p>那么，二次型$x^TAx$经正交变换</p>
-<p>$<br>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=<br>\begin{bmatrix}<br>\displaystyle\frac{1}{\sqrt{3} }&amp;-\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp;\displaystyle\frac{1}{\sqrt{2} }&amp;-\displaystyle\frac{1}{\sqrt{6} }\\<br>\displaystyle\frac{1}{\sqrt{3} }&amp; 0 &amp;\displaystyle\frac{2}{\sqrt{6} }<br>\end{bmatrix}<br>\begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}<br>$</p>
-<p>化为标准形</p>
-<p>$f=x^TAx=y^T\land y=5y_1^2-y_2^2-y_3^2$</p>
-<p>二次型求规范形的求解步骤其实可以参照前面实对称矩阵相似对角化求解步骤</p>
-<p><strong>推论：</strong></p>
-<p>任意一个n元二次型$f=x^TAx$都存在坐标变换$x=Cz$使$f$化为规范形</p>
-<ul>
-<li><strong>例</strong>:<br>$f=y_1^2+3y_2^2-2y_3^2$<br><br>令<br>$\begin{cases}<br>y_1=z_1\\<br>y_2=\displaystyle\frac{1}{\sqrt{3} }z_2\\<br>y_3=\displaystyle\frac{1}{\sqrt{2} }z_3<br>\end{cases}<br>$<br><br>那么$f=z_1^2+z_2^2-z_3^2$</li>
-</ul>
-<p>变成规范形步骤：</p>
-<p>(配方法，正交变换法)$\;\rightarrow\;$标准形$\;\rightarrow\;$规范形</p>
-<h2 id="惯性定理"><a href="#惯性定理" class="headerlink" title="惯性定理"></a>惯性定理</h2><blockquote>
-<p>对一个二次型$x^TAx$,经坐标变换化为标准形，其正惯性指数和负惯性指数都是唯一确定的</p>
-</blockquote>
-<p>即二次型的规范形是唯一的</p>
-<ul>
-<li><strong>证</strong>：<br>大体思路：既然要证唯一性，那么就假设其不唯一，也就是能被两个不同的规范形表示，<br>那么如果证明出来这两个规范形整数项必定相等，则结论成立，这里就需要反证法，推出矛盾<br><br>设$r(C^TAC)=r(A)=r(f)=r$<br><br>如果经坐标变换$x=Py\;$和$\;x=Qz$<br><br>二次型$x^TAx$化成规范形，分别为<br><br>$f=y_1^2+y_2^2+\cdots+y_s^2-y_{s+1}^2-\cdots-y_r^2 \; (I)$<br><br>$f=z_1^2+z_2^2+\cdots+z_t^2-z_{t+1}^2-\cdots-z_r^2 \; (II)$<br><br><strong>反证法</strong><br>如果$s &lt; t$的话$\;\rightarrow\;$也就是说$(I)$的正数项和$(II)$的正数项不相等<br><br>$\qquad$由$\;y=P^{-1}x$和$\;z=Q^{-1}x$<br><br>不妨设<br><br>$\qquad y_i=c_{i1}x_1+c_{i2}x_2+\cdots+c_{in}x_n\qquad$<br><br>$\qquad z_i=d_{i1}x_1+d_{i2}x_2+\cdots+d_{in}x_n\qquad$<br><br>其中($i=1,2,\cdots,n$)<br><br><br>在这两个n元线性方程组中选择，选择$(I)$中的系数为正的项和$(II)$中系数为负的项<br><br>即$y_1—y_s,z_{t+1}—z_n$，令他们为0,构造齐次方程组,这样取就是为了推出矛盾<br><br>即<br>$<br>\begin{cases}<br>y_1=0\\<br>\cdots\\<br>y_s=0\\<br>z_{t+1}=0\\<br>\cdots\\<br>z_{n}=0<br>\end{cases}<br>$<br><br>也就是<br>$<br>\begin{cases}<br>c_{11}x_1+c_{12}x_2+\cdots c_{1n}x_n=0\\<br>\qquad\cdots\cdots\\<br>c_{s1}x_1+c_{s2}x_2+\cdots c_{sn}x_n=0\\<br>&amp;(1)\\<br>d_{(t+1)1}x_1+d_{(t+1)2}x_2+\cdots d_{(t+1)n}x_n=0\\<br>\qquad\cdots\cdots\\<br>d_{n1}x_1+d_{n2}x_2+\cdots d_{nn}x_n=0<br>\end{cases}<br>$<br><br>方程个数<br>$s+(n-t)=n+s-t&lt; n$<br><br>方程组(1)必有非零解<br><br>设$\;\eta=(k_1,k_2,\cdots,k_n)^T$是(1)的非零解<br><br>将该解代入两个n元线性方程组，可以得到$y_i,z_i$的值用$y^o_i,z^o_i表示$<br><br>因为$P,Q$均为可逆矩阵，$\eta\neq0$<br><br>$\therefore\;y^o=P^{-1}\eta=(0,\cdots,0,y_{s+1}^o,\cdots,y_n^o)^T\neq0$<br><br>$\quad\;z^o=Q^{-1}\eta=(z_1^o,\cdots,z_t^o,0,\cdots,0)^T\neq0$<br><br>把$\eta$代入$(I)$和$(II)$,有<br><br>$f(\eta)=-(y_{s+1}^o)^2-\cdots-(y_r^o)^2&lt; 0$<br><br>$f(\eta)=(z_1^o)^2+\cdots+(z_t^o)^2&gt;0$<br><br>矛盾<br><br>$\because s,t$地位相等<br><br>$\therefore\;s=t$</li>
-</ul>
-<p>由惯性定理推出:</p>
-<p>实对称矩阵$A$和$B$合同</p>
-<p>$\Leftrightarrow p_A=p_B,q_A=q_B\;$<br>(p为正惯性指数，q为负惯性指数)</p>
-<h1 id="二次型的正定性"><a href="#二次型的正定性" class="headerlink" title="二次型的正定性"></a>二次型的正定性</h1><h2 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h2><blockquote>
-<p>设二次型$f(x)=x^TAx$<br><br>如果$\forall x=(x_1,x_2,\cdots,x_n)^T\neq0$,<br><br>恒有$f(x)&gt;0$，则称$f$为正定二次型，二次型矩阵$A$称为正定矩阵</p>
-</blockquote>
-<p>正定的话，平方项系数要严格大于零，也就是说正惯性指数为n</p>
-<p>二次型经坐标变换，其正定性不变</p>
-<p>$x^TAx$正定</p>
-<p>$\Leftrightarrow\;$p(正惯性指数)=n</p>
-<p>$\Leftrightarrow\;A\simeq E$,即存在可逆矩阵$C,$</p>
-<p>$C^TAC=E(或写成A=C^TEC，E可省略)$</p>
-<p>$\Leftrightarrow\;A$特征值全大于0</p>
-<p>$\Leftrightarrow\;A$的顺序主子式 <strong>全</strong> 大于0</p>
-<p>$x^TAx$正定的必要条件$a_{ii}&gt;0$</p>
-<p><strong>例</strong>：判断二次型</p>
-<p>$2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3$</p>
-<p>是否是正定二次型。</p>
-<p><strong>解</strong>：</p>
-<ul>
-<li>顺序主子式<br>二次型矩阵<br><br>$A$=$<br>\left|\begin{array}{ccc}<br>2&amp;2&amp;-2\\<br>2&amp;5&amp;-4\\<br>-2&amp;-4&amp;5<br>\end{array}\right|<br>$<br><br>$\Delta_1=2&gt;0，\Delta_2=\left|\begin{array}{ccc}2&amp;2\\2&amp;5\end{array}\right|=6&gt;0$<br><br>$\Delta_3=|A|=10&gt;0$<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<hr>
-<ul>
-<li>特征值<br>由特征多项式<br><br>$<br>\begin{aligned}<br>|\lambda E-A|<br>&amp;=\left|\begin{array}{ccc}<br>\lambda-2&amp;-2&amp;2\\<br>-2&amp;\lambda-5&amp;4\\<br>2&amp;4&amp;\lambda-5<br>\end{array}\right|\\<br>&amp;=(\lambda-1)^2(\lambda-10)<br>\end{aligned}<br>$<br><br>$A$的特征值：1,1,10$\quad$全大于零<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<hr>
-<ul>
-<li>配方法$^*$<br><br>$<br>\begin{aligned}<br>f<br>&amp;=2x_1^2+5x_2^2+5x_3^2+4x_1x_2-4x_1x_3-8x_2x_3\\<br>&amp;=2[x_1^2+2x_1(x_2-x_3)+(x_2-x_3)^2]\\<br>&amp;\quad -2(x_2-x_3)^2+5x_2^2+5x_3^2-8x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3x_2^2+3x_3^2-4x_2x_3\\<br>&amp;=(x_1+x_2-x_3)^2+3(x_2-\frac23x_3)^2+\frac53x_3^2<br>\end{aligned}<br>$<br><br>$p=3,q=0$<br><br>$\therefore\;f\;$是正定二次型</li>
-</ul>
-<h2 id="半正定，负定，半负定矩阵"><a href="#半正定，负定，半负定矩阵" class="headerlink" title="半正定，负定，半负定矩阵"></a>半正定，负定，半负定矩阵</h2><p>根据正定可以类比出</p>
-<p>半正定$f\geqslant0$</p>
-<p>负定$f&lt;0$</p>
-<p>半负定$f\leqslant0$</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1462,7 +1722,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1531,12 +1791,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">233k</span>
+    <span title="站点总字数">235k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:32</span>
+    <span title="站点阅读时长">3:33</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
