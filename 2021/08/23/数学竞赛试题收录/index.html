@@ -27,7 +27,7 @@
 <meta property="og:description" content="第一届格林公式问题： 已知平面区域 $D&#x3D;\{(x, y) \mid 0 \leqslant x \leqslant \pi, 0 \leqslant y \leqslant \pi\} \quad L$ 为 $D$的正向边界, 试证：  \begin{aligned} &amp;(1)\oint_{L} x e^{\sin y} d y-y e^{-\sin x} d x&#x3D;\oint_{L} x e^{">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-23T13:45:30.000Z">
-<meta property="article:modified_time" content="2021-09-14T06:11:29.708Z">
+<meta property="article:modified_time" content="2021-11-12T05:38:41.726Z">
 <meta property="article:author" content="lbl">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="高数">
@@ -222,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-14 14:11:29" itemprop="dateModified" datetime="2021-09-14T14:11:29+08:00">2021-09-14</time>
+                <time title="修改时间：2021-11-12 13:38:41" itemprop="dateModified" datetime="2021-11-12T13:38:41+08:00">2021-11-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,14 +247,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.1k</span>
+              <span>7.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -301,11 +301,26 @@ e^x+e^{-x}&=\sum\limits_{n=0}^∞\frac{1}{n!}x^n+\sum\limits_{n=0}^∞(-1)^n\fra
 \lim\limits_{x\rightarrow1^-}\frac{\sum\limits_{n=0}^\infty x^{n^2} }{f(x) }=1</script><p>如何寻找 $f(x)$ 呢？利用 <strong>级数和积分的联系</strong>，级数可以说是数列的“反常积分”</p>
 <p>观察这个式子，我们会发现这种形式类似于高斯积分</p>
 <script type="math/tex; mode=display">
-\int_0^{+\infty} e^{-ax^2}dx=\frac12\sqrt\frac{\pi}{a}</script><p>而由积分审敛法</p>
+\int_0^{+\infty} e^{-ax^2}dx=\frac12\sqrt\frac{\pi}{a}</script><p>这里其实就是证明积分审敛法的不等式，当然这里要保证 $x^{n^2}$ 单调递减，由题意可以知道它确实单调递减</p>
 <script type="math/tex; mode=display">
-\int_0^{+\infty} x^{t^2}dt\leqslant\sum\limits_{n=0}^\infty x^{n^2}\leqslant1+\int_0^{+\infty} x^{t^2}dt</script><p>所以可求得其等价无穷大量</p>
+\int_0^{+\infty} x^{t^2}dt\leqslant\sum\limits_{n=0}^\infty x^{n^2}\leqslant1+\int_0^{+\infty} x^{t^2}dt</script><blockquote>
+<p>这里来证明一下积分审敛法，并引出这个不等式的由来：</p>
+<p>积分审敛法：设 $\sum\limits_{n=1}^\infty u_n$ 为正项级数，若存在 $[1,\infty)$ 内单调减少的非负连续函数 $f(x)$ ,使得 $u_n=f(n)$ ，则级数 $\sum\limits_{n=1}^\infty u_n$ 与反常积分 $\displaystyle\int_1^{+\infty}f(x)dx$ 的收敛性相同</p>
+<p>证：由已知，当 $k\leqslant x\leqslant k+1$ $(k\in Z^*)$ 时，</p>
 <script type="math/tex; mode=display">
-\int_0^{+\infty} x^{t^2}dt=\int_0^{+\infty}e^{-t^2\ln\frac{1}{x} }dt=\frac12\sqrt\frac{\pi}{\ln\frac1x}</script><p>用到了积分审敛法，说实话有点超纲……</p>
+f(k+1)\leqslant f(x)\leqslant f(k)</script><p>从而有</p>
+<script type="math/tex; mode=display">
+f(k+1)\leqslant\int_k^{k+1}f(x)dx\leqslant f(k)</script><p>故</p>
+<script type="math/tex; mode=display">
+\sum\limits_{k=1}^n f(k+1)\leqslant\sum\limits_{k=1}^n\int_k^{k+1}f(x)dx=\int_1^{n+1}f(x)dx\leqslant\sum\limits_{k=1}^nf(k)</script><p>因此，若 $\displaystyle\int_1^{+\infty}f(x)dx$ 收敛，则对任意自然数 $n$ 有，</p>
+<script type="math/tex; mode=display">
+s_n=\sum\limits_{k=0}^nf(k+1)\leqslant f(1)+\int_1^nf(x)dx\leqslant f(1)+\int_1^{+\infty}f(x)dx</script><p>从这个不等式，我们就可以知道上面那个不等式右半边的由来，</p>
+<script type="math/tex; mode=display">
+\sum\limits_{n=0}^\infty u_n\leqslant f(0)+\int_0^{+\infty}f(t)dt</script><p>故$\sum\limits_{n=1}^\infty u_n$ 收敛</p>
+</blockquote>
+<p>所以可求得其等价无穷大量</p>
+<script type="math/tex; mode=display">
+\int_0^{+\infty} x^{t^2}dt=\int_0^{+\infty}e^{-t^2\ln\frac{1}{x} }dt=\frac12\sqrt\frac{\pi}{\ln\frac1x}</script><p>用到的不等式，说实话感觉有点超纲……</p>
 <h1 id="第二届"><a href="#第二届" class="headerlink" title="第二届"></a>第二届</h1><h2 id="极限技巧"><a href="#极限技巧" class="headerlink" title="极限技巧"></a>极限技巧</h2><p><strong>问题</strong>：</p>
 <p>设$x_n=$ $(1+a)$ · $(1+a^2)$ $\cdots$ $(1+a^{2^n})$，其中$|a|&lt;1$，求$\lim\limits_{n\rightarrow+\infty}x_n$</p>
 <hr>
@@ -384,7 +399,7 @@ n^{1-\alpha}-m^{1-\alpha}&=(n-m)(1-\alpha)\xi^{-\alpha}\quad\xi\in(m,n)\\
 <h2 id="曲面积分的几何理解"><a href="#曲面积分的几何理解" class="headerlink" title="曲面积分的几何理解"></a>曲面积分的几何理解</h2><p><strong>问题</strong></p>
 <p>设函数 $f(x)$ 连续，$a,b,c$为常数，$\Sigma$ 是单位球面 $x^2+y^2+z^2=1$。记第一型曲面积分</p>
 <script type="math/tex; mode=display">
-I=\iint\limits_{\Sigma}f(ax+by+cz)dS.</script><p>求证：$I=2\pi\int_{-1}^1f(\sqrt{a^2+b^2+c^2}u)du$</p>
+I=\iint\limits_{\Sigma}f(ax+by+cz)dS.</script><p>求证：$I=2\pi\displaystyle\int_{-1}^1f(\sqrt{a^2+b^2+c^2}u)du$</p>
 <hr>
 <p><strong>分析</strong></p>
 <p>拿到这一题，直接硬解的话并不容易，我们先一步步进行分析</p>
@@ -1103,7 +1118,7 @@ u_1&=\int_0^1\frac{1}{1+t^4}dt\\
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1172,12 +1187,12 @@ u_1&=\int_0^1\frac{1}{1+t^4}dt\\
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">236k</span>
+    <span title="站点总字数">233k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:35</span>
+    <span title="站点阅读时长">3:31</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
