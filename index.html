@@ -208,10 +208,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-11-17 12:30:06 / 修改时间：23:20:06" itemprop="dateCreated datePublished" datetime="2021-11-17T12:30:06+08:00">2021-11-17</time>
+              <time title="创建时间：2021-11-17 12:30:06" itemprop="dateCreated datePublished" datetime="2021-11-17T12:30:06+08:00">2021-11-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-22 17:46:14" itemprop="dateModified" datetime="2021-11-22T17:46:14+08:00">2021-11-22</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -228,14 +234,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.1k</span>
+              <span>6.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -261,7 +267,7 @@
 <ul>
 <li><p><strong>数据：</strong>传送信息的实体，通常是有意义的符号序列</p>
 </li>
-<li><p>信号：数据的电气/电磁的表现，是数据在传输过程中的<strong>存在形式</strong></p>
+<li><p><strong>信号</strong>：数据的电气/电磁的表现，是数据在传输过程中的<strong>存在形式</strong></p>
 <ul>
 <li>数字信号：代表消息的参数取值是离散的</li>
 <li>模拟信号：代表消息的参数取值是连续的</li>
@@ -298,21 +304,21 @@
 \\
 \text{并行传输：速度快，费用高，适合近距离}\\
 \qquad\text（用于计算机内部数据传输）
-\end{cases}</script><h2 id="2-5-码元"><a href="#2-5-码元" class="headerlink" title="2.5. 码元"></a>2.5. 码元</h2><p><strong>码元</strong>是指用一个 <strong>固定时长</strong> 的 <strong>信号波形</strong>（数组脉冲），代表不同离散数值的基本波形，是数字通信中数字信号的计量单位，这个时长内的信号称为k进制码元，而 <strong>该时长称为码元宽度</strong>。当码元的离散状态有M个时（M大于2），此时码元为M进制码元。</p>
+\end{cases}</script><h2 id="2-5-码元"><a href="#2-5-码元" class="headerlink" title="2.5. 码元"></a>2.5. 码元</h2><p><strong>码元</strong> 是指用一个 <strong>固定时长</strong> 的 <strong>信号波形</strong>（数组脉冲），代表不同离散数值的基本波形，是数字通信中数字信号的计量单位，这个时长内的信号称为k进制码元，而 <strong>该时长称为码元宽度</strong>。当码元的离散状态有M个时（M大于2），此时码元为M进制码元。</p>
 <p>1 码元可以携带多个比特的信息量。例如，在使用二进制编码时，只有两种不同的码元，一种代表0状态，另一种代表1状态</p>
 <h2 id="2-6-速率、波特、带宽"><a href="#2-6-速率、波特、带宽" class="headerlink" title="2.6. 速率、波特、带宽"></a>2.6. 速率、波特、带宽</h2><p>速率也叫数据率，是指数据的传输速率，表示单位时间内传输的数据量。可以用 <strong>码元传输速率</strong> 和 <strong>信息传输速率</strong> 表示</p>
 <ul>
 <li><strong>码元传输速率：</strong>别名码元速率、波形速率、调制速率、符号速率等，它表示单位时间内数字通信系统所传输的码元个数（也可称为<strong>脉冲个数或信号变化的次数</strong>），单位是 <strong>波特（Baud）</strong>。1波特表示数字通信系统每秒传输一个码元。这里的码元可以是多进制的，也可以是二进制的，但码元速率与进制数无关<ul>
-<li>简单来说就是<strong>1s传输多少个码元</strong>（1 Baud = 1 码元/秒）</li>
+<li>简单来说就是 <strong>1s传输多少个码元</strong>（1 Baud = 1 码元/秒）</li>
 </ul>
 </li>
 <li><strong>信息传输速率：</strong>别名信息速率、比特率等，表示单位时间内数字通信系统的二进制码元个数（即比特数），单位是比特/秒（b/s）<ul>
-<li>简单来说就是<strong>1s传输多少个比特</strong></li>
+<li>简单来说就是 <strong>1s传输多少个比特</strong></li>
 </ul>
 </li>
 </ul>
 <p><strong>关系：</strong> 若一个码元携带 n bit 的信息量，则 M Baud 的码元传输速率所对应的信息传输速率为 $\text{M}\times \text{n\;bit/s}$</p>
-<p>带宽：表示在单位时间内从网络中的某一点到另一点  所能通过的 <strong>“最高数据率”</strong> ，常用来表示网络的通信线路所能传输数据的能力。单位是b/s。</p>
+<p><strong>带宽：</strong>表示在单位时间内从网络中的某一点到另一点  所能通过的 <strong>“最高数据率”</strong> ，常用来表示网络的通信线路所能传输数据的能力。单位是b/s。</p>
 <h1 id="三、编码与调制"><a href="#三、编码与调制" class="headerlink" title="三、编码与调制"></a>三、编码与调制</h1><h2 id="3-1-基带信号与宽带信号"><a href="#3-1-基带信号与宽带信号" class="headerlink" title="3.1. 基带信号与宽带信号"></a>3.1. 基带信号与宽带信号</h2><p><strong>信道：</strong>信号的传输媒介。一般用来表示向某一个方向传送信息的介质，因此一条通信线路往往包含一条发送信道和一条接受信道</p>
 <script type="math/tex; mode=display">
 \text{信道}\;
@@ -331,7 +337,7 @@
 \end{cases}</script><p><strong>信道上的信号：</strong></p>
 <ul>
 <li><strong>基带信号：</strong>将数字信号1和0直接用两种不同的电压表示，再送到 <strong>数字信道</strong> 上去（<strong>基带传输</strong>）。来自信源的信号，像计算机输出的代表各种文字或图像文件的数据信号都属于基带信号。基带信号就是发出的 <strong>直接表达了要传输的信息的信号</strong>，比如我们说话的声波就是基带信号</li>
-<li><strong>宽带信号：</strong>把基带信号进行调制后形成的频分复用模拟信号，再传送到 <strong>模拟信道</strong>上去传输（<strong>宽带信道</strong>）。把基带信号经过 <strong>载波调制</strong> 后，把信号的 <strong>频率范围搬移</strong>到 <strong>较高的频段</strong>以便在信道中传输（即仅在一段频率范围内能够通过信道）。</li>
+<li><strong>宽带信号：</strong>把基带信号进行调制后形成的频分复用模拟信号，再传送到 <strong>模拟信道</strong>上去传输（<strong>宽带信道</strong>）。把基带信号经过 <strong>载波调制</strong> 后，把信号的 <strong>频率范围搬移</strong> 到 <strong>较高的频段</strong> 以便在信道中传输（即仅在一段频率范围内能够通过信道）。</li>
 </ul>
 <p>所以在传输距离较近时，计算机网络采用基带传输</p>
 <p>传输距离较远，采用宽带传输方式</p>
@@ -452,6 +458,51 @@
 <p>带宽受限有噪声条件下的信息传输速率</p>
 <p>信道的极限数据传输速率 $=\text{W}\log_2(1+\dfrac{S}{N})\text{（b/s）}$</p>
 <p>要想提高数据率，就要提高带宽/信噪比</p>
+<h1 id="五、物理层传输介质"><a href="#五、物理层传输介质" class="headerlink" title="五、物理层传输介质"></a>五、物理层传输介质</h1><h2 id="5-1-传输介质及分类"><a href="#5-1-传输介质及分类" class="headerlink" title="5.1. 传输介质及分类"></a>5.1. 传输介质及分类</h2><p>传输介质也称传输媒体/传输媒介，它就是数据传输系统中在发送设备和接收设备之间的<strong>物理通路</strong>。</p>
+<p><strong>传输媒体并不是物理层。</strong>传输媒体在物理层的下面，因为物理层是体系结构的第一层，因此有时称传输媒体为0层，在传输媒体中传输的是信号，但传输媒体并不知道所传输的信号代表什么意思。但物理层规定了电气特性，因此能够识别所传送的比特流。</p>
+<script type="math/tex; mode=display">
+\text{传输介质}
+\begin{cases}
+\text{导向性传输介质}\rightarrow \text{电磁波被导向沿着固体媒介传播}\\
+\\
+\text{非导向型传输介质}\rightarrow\text{自由空间，介质可以是空气、真空、海水等}
+\end{cases}</script><h2 id="5-2-导向型传输介质"><a href="#5-2-导向型传输介质" class="headerlink" title="5.2. 导向型传输介质"></a>5.2. 导向型传输介质</h2><h3 id="5-2-1-双绞线-？"><a href="#5-2-1-双绞线-？" class="headerlink" title="5.2.1. 双绞线 ？"></a>5.2.1. 双绞线 ？</h3><p>双绞线是古老的、又最常用的传输介质，它由两根采用一定规则并排绞合的、相互绝缘的<strong>铜导线</strong>组成。</p>
+<p><strong>绞合可以减少对相邻导线的电磁干扰</strong></p>
+<p><img src="/2021/11/17/2-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/8.png" style="zoom:50%;"></p>
+<h3 id="5-2-2-同轴电缆"><a href="#5-2-2-同轴电缆" class="headerlink" title="5.2.2. 同轴电缆"></a>5.2.2. 同轴电缆</h3><p>同轴电缆由<strong>导体铜质芯线</strong>、<strong>绝缘层</strong>、<strong>网状编织屏蔽层</strong>和<strong>塑料外层</strong>构成。按特性阻抗数值的不同，通常将同轴电缆分为两类：50 $\Omega$ 同轴电缆和75 $\Omega$同轴电缆。其中，50 $\Omega$ 同轴电缆主要用于传送基带数字信号，又称为<strong>基带同轴电缆</strong>，它在局域网中得到广泛应用；75 $\Omega$ 同轴电缆主要用于传送宽带信号，又称为<strong>宽带同轴电缆</strong>，它主要用于有线电视系统。</p>
+<p><img src="/2021/11/17/2-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/9.png" style="zoom:50%;"></p>
+<h3 id="5-2-3-光纤"><a href="#5-2-3-光纤" class="headerlink" title="5.2.3. 光纤"></a>5.2.3. 光纤</h3><p>光纤通信就是利用光导纤维（简称光纤）传递光脉冲来进行通信。由光脉冲表示1、无光脉冲表示 0 。而可见光的频率大约是 $10^8$ MHz，因此光纤通信系统的<strong>带宽远远大于</strong>目前其他各种传输媒体的带宽。</p>
+<p>光纤在发送端有光源，可以采用发光二极管或半导体激光器，它们在电脉冲作用下能产生光电二极管做成光检测器，在检测到光脉冲时可还原出电脉冲。</p>
+<p>光纤主要<strong>纤芯（实心的！）</strong>和<strong>包层</strong>构成，光波通过纤芯进行传导，包层较纤芯有较低的折射率。当光线从高折射率的介质向低折射率的介质时，其折射角将大于入射角。因此，如果入射角足够大，就会出现<strong>全反射</strong>，即光线碰到包层时候就会折射回纤芯、这个过程不断重复，光也就沿着光纤传输下去</p>
+<p><img src="/2021/11/17/2-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/10.png" style="zoom:50%;"></p>
+<p><strong>超低损耗，传送超远距离</strong></p>
+<p>光纤的特点：</p>
+<p>1、传输<strong>损耗小</strong>，中继距离长，对远距离传输特别经济。</p>
+<p>2、<strong>抗雷电和电磁干扰性好。</strong></p>
+<p>3、无串音干扰，保密性好，也<strong>不易被窃听或截取数据</strong>。</p>
+<p>4、<strong>体积小，重量轻。</strong></p>
+<h2 id="5-3-非导向型传输介质"><a href="#5-3-非导向型传输介质" class="headerlink" title="5.3. 非导向型传输介质"></a>5.3. 非导向型传输介质</h2><p><strong>无线电波</strong>（信号向<strong>所有方向</strong>传播）：较强穿透能力，可传远距离，广泛用于通信领域（如手机通信）</p>
+<p><strong>微波</strong>（信号<strong>固定方向</strong>传播）：微波通信频率较高、频段范围宽，因此数据率很高。</p>
+<ul>
+<li>地面微波接力通信</li>
+<li>卫星通信<ul>
+<li>优点：通信容量大、距离远、覆盖广、广播通信和多址通信</li>
+<li>缺点：传播时延长、受气候影响大、误码率高、成本高</li>
+</ul>
+</li>
+</ul>
+<p><strong>红外线、激光</strong>（信号<strong>固定方向</strong>传播）：把要传输的信号分别转换为各自的信号格式，即红外光信号和激光信号，再在空间中传播。</p>
+<h1 id="六、物理层设备"><a href="#六、物理层设备" class="headerlink" title="六、物理层设备"></a>六、物理层设备</h1><h2 id="6-1-中继器"><a href="#6-1-中继器" class="headerlink" title="6.1. 中继器"></a>6.1. 中继器</h2><p>诞生原因：由于存在损耗，在线路上传输的信号功率会逐渐衰减，衰减到一定程度时将会造成信号失真，因此会导致接受错误。</p>
+<p>中继器的功能：对信号进行<strong>再生和还原</strong>，对衰减的信号进行放大，保持与原数据相同，以增加信号传输的距离，延长网络的长度</p>
+<p><strong>中继器的两端：</strong></p>
+<ul>
+<li>两端的网络部分是网段，而不是子网，适用于完全相同的两类网络的互连，且两个网段速率要相同。</li>
+<li>中继器只将任何电缆端上的数据发送到另一段电缆上，它仅作用于信号的电气部分，不并管数据中是否有错误数据或不适于网段的数据。</li>
+<li>两端可连相同媒体，也可连不同媒体。</li>
+<li>中继器两端的网段一定要是同一个协议。</li>
+</ul>
+<p><strong>5-4-3规则：</strong> 网络标准中都对信号的延迟范围作了具体的规定，因而中继器只能在规定的范围内进行，否则会网络故障</p>
+<h2 id="6-2-集线器（多口中继器）"><a href="#6-2-集线器（多口中继器）" class="headerlink" title="6.2. 集线器（多口中继器）"></a>6.2. 集线器（多口中继器）</h2><p><strong>集线器的功能</strong>：对信号进行再生<strong>放大转发</strong> ，对衰减的信号进行放大，接着转发到其他所有（除输入端口外）处于工作状态的端口上，以增加信号传输的距离，延长网络的长度。不具备信号的定向传送能力，是一个共享式设备。</p>
 
       
     </div>
@@ -1023,12 +1074,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">242k</span>
+    <span title="站点总字数">243k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:40</span>
+    <span title="站点阅读时长">3:41</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
