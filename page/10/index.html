@@ -185,6 +185,284 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/20/5-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/20/5-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">5.CSS盒子模型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-20 17:14:00 / 修改时间：18:32:01" itemprop="dateCreated datePublished" datetime="2021-07-20T17:14:00+08:00">2021-07-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="盒子模型组成"><a href="#盒子模型组成" class="headerlink" title="盒子模型组成"></a>盒子模型组成</h2><p><strong>盒子模型：</strong> 就是把HTML页面中的 <strong>布局元素看作是一个矩形的盒子</strong>，或者说是一个盛装内容的容器。</p>
+<p>CSS盒子模型包括：边框，外边距，内边距，内容。</p>
+<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><div style="width: 300px; height: 200px; border:5px solid #CCE8CF;text-align: center;line-height: 300px"><span style="width: 150px; height: 100px; border:5px solid #CCE8CF;  display:inline-block;"></span></div>
+
+<p><strong>border</strong> 属性用于设置边框，三部分：边框宽度、样式、颜色</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-width</td>
+<td style="text-align:left">边框粗细，单位是px</td>
+</tr>
+<tr>
+<td style="text-align:left">border-style</td>
+<td style="text-align:left">边框样式</td>
+</tr>
+<tr>
+<td style="text-align:left">border-color</td>
+<td style="text-align:left">边框颜色</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="边框的复合写法"><a href="#边框的复合写法" class="headerlink" title="边框的复合写法"></a>边框的复合写法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border</span>: border-width border-style border-color;</span><br></pre></td></tr></table></figure>
+<p><strong>没有顺序</strong>，但一般按照此顺序书写</p>
+<h3 id="边框的分开写法"><a href="#边框的分开写法" class="headerlink" title="边框的分开写法"></a>边框的分开写法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-top</span>: <span class="number">1px</span> solid red;</span><br><span class="line">只设定上边框，其余的同理</span><br></pre></td></tr></table></figure>
+<h3 id="表格的细线边框"><a href="#表格的细线边框" class="headerlink" title="表格的细线边框"></a>表格的细线边框</h3><p><strong>border-collapse</strong> 属性控制浏览器绘制 <strong>表格边框</strong> 的方式，它控制相邻单元格的边框。</p>
+<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-collapse</span>: collapse;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>collapse是合并的意思</li>
+<li>border-collapse: collapse;表示相邻边框合并在一起</li>
+</ul>
+<h3 id="边框影响盒子的实际大小"><a href="#边框影响盒子的实际大小" class="headerlink" title="边框影响盒子的实际大小"></a>边框影响盒子的实际大小</h3><p>边框会额外增加盒子的实际大小</p>
+<p>解决方案:</p>
+<ol>
+<li>测量盒子大小的时候，不量边框</li>
+<li>如果测量的时候包含了边框，则需要盒子长宽减去边框宽度</li>
+</ol>
+<h2 id="内边距（padding）"><a href="#内边距（padding）" class="headerlink" title="内边距（padding）"></a>内边距（padding）</h2><p>padding属性用于设置内边距，即边框与内容之间的距离。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">padding-left</td>
+<td style="text-align:left">左内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-right</td>
+<td style="text-align:left">右内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-top</td>
+<td style="text-align:left">上内边距</td>
+</tr>
+<tr>
+<td style="text-align:left">padding-bottom</td>
+<td style="text-align:left">下内边距</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="padding复合写法"><a href="#padding复合写法" class="headerlink" title="padding复合写法"></a>padding复合写法</h3><p><strong>padding</strong> 属性可以有一到四个值</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值的个数</th>
+<th style="text-align:left">意思</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1个值 padding: 5px;</td>
+<td style="text-align:left">上下左右内边距都是5px</td>
+</tr>
+<tr>
+<td style="text-align:left">2个值 padding: 5px;10px;</td>
+<td style="text-align:left">上下内边距是5px，左右内边距是10px</td>
+</tr>
+<tr>
+<td style="text-align:left">3个值 padding: 5px 10px 20px;</td>
+<td style="text-align:left">上内边距是5px，左右内边距10px，下内边距是20px</td>
+</tr>
+<tr>
+<td style="text-align:left">4个值 padding: 5px 10px 20px 30px;</td>
+<td style="text-align:left">上是5px，右是10px，下是20px，左是30px（顺时针）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="padding影响盒子实际大小"><a href="#padding影响盒子实际大小" class="headerlink" title="padding影响盒子实际大小"></a>padding影响盒子实际大小</h3><p>如果盒子已经有了宽度和高度，也就是内容和边框有了距离，添加了内边距后就会撑大盒子</p>
+<p><strong>解决方法：</strong><br>如果保证盒子跟效果图大小保持一致，则 <strong>减去多出的内边距</strong> </p>
+<p><strong>如果盒子本身没有指定长宽属性，则padding不会撑开盒子</strong></p>
+<h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><p><strong>margin</strong> 属性用于设置外边距，即控制盒子和盒子之间的距离。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">margin-left</td>
+<td style="text-align:left">左外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-right</td>
+<td style="text-align:left">右外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-top</td>
+<td style="text-align:left">上外边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-bottom</td>
+<td style="text-align:left">下外边距</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>简写方式和padding一样</strong></p>
+<p><strong>1.块级盒子水平居中</strong><br>外边距可以让块级盒子 <strong>水平居中</strong>，但是必须满足两个条件：</p>
+<ol>
+<li>盒子 <strong>必须制定宽度</strong></li>
+<li>盒子左右的外边距都设置为auto<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header</span> &#123; <span class="attribute">width</span>: <span class="number">960px</span>; <span class="attribute">margin</span>:<span class="number">0</span> auto;&#125;</span><br></pre></td></tr></table></figure>
+常见的写法，以下三种都可以：</li>
+</ol>
+<ul>
+<li>margin-left: auto; margin-right: auto;</li>
+<li>margin: auto;</li>
+<li>margin: 0 auto;</li>
+</ul>
+<p><strong>注意:</strong><br>以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加 <strong>text-align: center</strong> 即可</p>
+<p><strong>2.嵌套块元素垂直外边距的塌陷</strong><br>对于两个嵌套关系（父子关系）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。</p>
+<p>解决方案：</p>
+<p>1.可以为父元素定义边框</p>
+<p>2.可以为父元素定义内边距</p>
+<p>3.可以为父元素添加 <strong>overflow: hidden</strong></p>
+<p>还有其他方法，比如浮动，固定，绝对定位的盒子不会有塌陷问题</p>
+<h2 id="清除内外边距"><a href="#清除内外边距" class="headerlink" title="清除内外边距"></a>清除内外边距</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>:行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距，但是转换为块级和行内块元素就可以了</p>
+<h1 id="圆角边框"><a href="#圆角边框" class="headerlink" title="圆角边框"></a>圆角边框</h1><p>border-radius 属性用于设置元素的外边框圆角<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: length;</span><br><span class="line">这里length可以用百分比表示，例如<span class="number">50%</span>表示是高度的<span class="number">50%</span></span><br></pre></td></tr></table></figure><br>radius 半径（圆的半径）原理：（椭）圆与边框的交集形成圆角效果</p>
+<p>border-radius可以跟多个数值1~4个</p>
+<h1 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h1><p><strong>box-shadow</strong> 属性为盒子添加阴影<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: h-shadow v-shadow blur spread color inset（outset是默认值不能写）;</span><br></pre></td></tr></table></figure></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">h-shadow</td>
+<td style="text-align:left">必须，水平阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td style="text-align:left">v-shadow</td>
+<td style="text-align:left">必须，垂直阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td style="text-align:left">blur</td>
+<td style="text-align:left">可选，模糊距离</td>
+</tr>
+<tr>
+<td style="text-align:left">spread</td>
+<td style="text-align:left">可选，阴影的尺寸</td>
+</tr>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">可选，阴影的颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">inset</td>
+<td style="text-align:left">可选，将外部阴影（outset）改为内部阴影</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意</strong><br>1.默认的是外阴影（outset）,但不可以写这个单词，否则阴影无效</p>
+<p>2.盒子阴影不占用空间，不会影响其他盒子排列</p>
+<h1 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h1><p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-shadow</span>: h-shadow v-shadow blur color</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/20/4-CSS%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1044,227 +1322,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/20/0-CSS%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E8%8C%83%E5%92%8C%E7%89%B9%E6%80%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
-      <meta itemprop="name" content="lbl">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/20/0-CSS%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E8%8C%83%E5%92%8C%E7%89%B9%E6%80%A7/" class="post-title-link" itemprop="url">0.CSS的一些规范和特性</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-07-20 15:53:44 / 修改时间：18:27:16" itemprop="dateCreated datePublished" datetime="2021-07-20T15:53:44+08:00">2021-07-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="CSS代码规范"><a href="#CSS代码规范" class="headerlink" title="CSS代码规范"></a>CSS代码规范</h1><h2 id="样式格式书写"><a href="#样式格式书写" class="headerlink" title="样式格式书写"></a>样式格式书写</h2><p>(1) 紧凑格式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123; <span class="attribute">color</span>: red;<span class="attribute">font-size</span>: <span class="number">20px</span>; &#125;</span><br></pre></td></tr></table></figure></p>
-<p>(2) 展开格式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="样式大小写"><a href="#样式大小写" class="headerlink" title="样式大小写"></a>样式大小写</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">COLOR</span>: PINK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>样式选择器，属性名，属性值关键字虽然大小写都行，但最好使用 <strong>小写字母</strong> ,特殊情况除外。</p>
-<h2 id="空格规范"><a href="#空格规范" class="headerlink" title="空格规范"></a>空格规范</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>(1) 属性值前面，冒号后面，保留一个空格</p>
-<p>(2) 选择器（标签）和大括号中间保留空格</p>
-<h2 id="CSS-属性书写顺序"><a href="#CSS-属性书写顺序" class="headerlink" title="CSS 属性书写顺序"></a>CSS 属性书写顺序</h2><ol>
-<li>布局定位属性：display / position / float / clear / visibility / overflow（建议display第一个写）</li>
-<li>自身属性：width / height / margin / padding / border / background</li>
-<li>文本属性：color / font / text-decoration / text-align / vertical-align / white-space / break-word</li>
-<li>其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient…</li>
-</ol>
-<h1 id="CSS-引入方式"><a href="#CSS-引入方式" class="headerlink" title="CSS 引入方式"></a>CSS 引入方式</h1><h2 id="CSS-的三种样式表"><a href="#CSS-的三种样式表" class="headerlink" title="CSS 的三种样式表"></a>CSS 的三种样式表</h2><p>1.行内样式表（行内式）</p>
-<p>2.内部样式表（嵌入式）</p>
-<p>3.外部样式表（链接式）</p>
-<h2 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h2><p>内部样式表就是在html页面内部写样式，但是单独写到style标签内部<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#ff0</span>00;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>&lt;style&gt; 标签里理论上可以放在HTML文档的任何地方，但一般会放在文档的&lt;head&gt; 标签中</li>
-<li>通过此种方式可以方便控制当前整个页面元素样式设置</li>
-<li>代码结构清晰，但是没有实现结构与样式完全分离</li>
-</ul>
-<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2><p>在元素标签内部的sytle属性中设定CSS样式，修改一些简单样式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: red;font-size: 12px;&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><br>不推荐大量使用</p>
-<h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><p>适用于样式比较多的情况下，核心:样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用。</p>
-<p>引入外部样式表的步骤：<br>1.新建一个后缀名为.css的样式文件,把所有CSS代码都放到此文件中。 </p>
-<p>2.在HTML页面中，使用&lt;link&gt;标签引入这个文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css文件路径&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">rel</td>
-<td style="text-align:left">定义当前文档与被链接文档之间的关系，在这里需要指定为”stylesheet”,表示被链接文档是一个样式表文件</td>
-</tr>
-<tr>
-<td style="text-align:left">href</td>
-<td style="text-align:left">定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">样式表</th>
-<th style="text-align:left">优点</th>
-<th style="text-align:left">控制范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">行内样式表</td>
-<td style="text-align:left">书写方便，权重高</td>
-<td style="text-align:left">控制一个标签</td>
-</tr>
-<tr>
-<td style="text-align:left">内部样式表</td>
-<td style="text-align:left">部分结构和样式相分离</td>
-<td style="text-align:left">控制一个页面</td>
-</tr>
-<tr>
-<td style="text-align:left">外部样式表</td>
-<td style="text-align:left">完全实现结构和样式相分离</td>
-<td style="text-align:left">控制多个页面</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="CSS-的三大特性"><a href="#CSS-的三大特性" class="headerlink" title="CSS 的三大特性"></a>CSS 的三大特性</h1><blockquote>
-<p>CSS有三个非常重要的特性：层叠性、继承性、优先级。</p>
-</blockquote>
-<h2 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h2><p>相同选择器给设置的样式，此时一个样式就会覆盖（层叠）另一个冲突的样式。层叠性主要解决样式冲突的问题。</p>
-<p>层叠性原则：</p>
-<ul>
-<li>样式冲突：就近原则那个样式离结构近，就执行哪个样式</li>
-<li>样式不冲突，不会层叠。</li>
-</ul>
-<h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><p>CSS中的继承：<strong>子标签</strong> 会继承 <strong>父标签</strong> 的某些样式，如文本颜色和字号</p>
-<ul>
-<li>恰当使用继承可以简化代码，降低CSS样式的复杂性</li>
-<li>子标签可以继承父标签的样式（text-,font-,line- 以及color属性）</li>
-</ul>
-<p><strong>行高的继承</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: <span class="number">12px</span>/<span class="number">1.5</span> Microsoft YaHei</span><br><span class="line">    这个<span class="number">1.5</span>就是当前元素文字大小font-size的<span class="number">1.5</span>倍</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>行高可以跟单位也可以不跟单位</li>
-</ul>
-<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>当同一个元素指定多个选择器，就会有优先级产生。</p>
-<ul>
-<li>选择器相同，则执行层叠性</li>
-<li>选择器不同，则根据 <strong>选择器权重</strong> 执行</li>
-</ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选择器</th>
-<th style="text-align:left">选择器权重</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">继承或*</td>
-<td style="text-align:left">0,0,0,0</td>
-</tr>
-<tr>
-<td style="text-align:left">元素选择器</td>
-<td style="text-align:left">0,0,0,1</td>
-</tr>
-<tr>
-<td style="text-align:left">类选择器，伪类选择器</td>
-<td style="text-align:left">0,0,1,0</td>
-</tr>
-<tr>
-<td style="text-align:left">ID选择器</td>
-<td style="text-align:left">0,1,0,0</td>
-</tr>
-<tr>
-<td style="text-align:left">行内样式style=””</td>
-<td style="text-align:left">1,0,0,0</td>
-</tr>
-<tr>
-<td style="text-align:left">!important 重要的</td>
-<td style="text-align:left">无穷大</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>注意点</strong></p>
-<ul>
-<li>权重是有4组数字组成，但是不会有进位</li>
-<li>等级判断从左向右，如果某一位数值相同，则判断下一位数值。</li>
-<li><strong>继承的权重是0</strong>,如果该元素没有直接选中，不管父元素权重多高，子元素得到的权重都是0。</li>
-</ul>
-<p><strong>权重叠加</strong>：如果是复合选择器，则会有权重叠加，需要计算权重</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1336,7 +1393,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-count">74</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1405,12 +1462,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">243k</span>
+    <span title="站点总字数">246k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:41</span>
+    <span title="站点阅读时长">3:44</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
