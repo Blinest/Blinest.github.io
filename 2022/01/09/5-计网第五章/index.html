@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|华文行楷:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一、概述运输层是只有计算机才有的层次，主要提供是进程间数据通信+可靠或不可靠传输的功能，比如QQ视频聊天就是不同计算机之间，进程间的通信。 术语：  报文段（segment）：在发送端，运输层将发送应用程序进程接收到的报文转换成传输层分组，该分组成为运输层报文段。  1.1. 网络层和运输层的关系网络层提供了主机之间 的逻辑通信，而运输层提供 进程与进程之间 提供了逻辑通信 运输层最主要的两个协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5.运输层">
+<meta property="og:url" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/index.html">
+<meta property="og:site_name" content="追梦">
+<meta property="og:description" content="一、概述运输层是只有计算机才有的层次，主要提供是进程间数据通信+可靠或不可靠传输的功能，比如QQ视频聊天就是不同计算机之间，进程间的通信。 术语：  报文段（segment）：在发送端，运输层将发送应用程序进程接收到的报文转换成传输层分组，该分组成为运输层报文段。  1.1. 网络层和运输层的关系网络层提供了主机之间 的逻辑通信，而运输层提供 进程与进程之间 提供了逻辑通信 运输层最主要的两个协议">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/1.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/2.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/3.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/4.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/5.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/6.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/7.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/8.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/9.png">
+<meta property="article:published_time" content="2022-01-09T08:02:40.000Z">
+<meta property="article:modified_time" content="2022-01-17T14:49:01.794Z">
+<meta property="article:author" content="lbl">
+<meta property="article:tag" content="计算机网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/1.png">
+
+<link rel="canonical" href="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>5.运输层 | 追梦</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">追梦</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Learning is the ladder of progress</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          5.运输层
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-09 16:02:40" itemprop="dateCreated datePublished" datetime="2022-01-09T16:02:40+08:00">2022-01-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-17 22:49:01" itemprop="dateModified" datetime="2022-01-17T22:49:01+08:00">2022-01-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>运输层是只有计算机才有的层次，主要提供是进程间数据通信+可靠或不可靠传输的功能，比如QQ视频聊天就是不同计算机之间，进程间的通信。</p>
+<p><strong>术语：</strong></p>
+<ul>
+<li><strong>报文段（segment）</strong>：在发送端，运输层将发送应用程序进程接收到的报文转换成传输层分组，该分组成为运输层报文段。</li>
+</ul>
+<h2 id="1-1-网络层和运输层的关系"><a href="#1-1-网络层和运输层的关系" class="headerlink" title="1.1. 网络层和运输层的关系"></a>1.1. 网络层和运输层的关系</h2><p>网络层提供了<strong>主机之间</strong> 的逻辑通信，而运输层提供 <strong>进程与进程之间</strong> 提供了逻辑通信</p>
+<p>运输层最主要的两个协议TCP协议和UDP运输层协议</p>
+<span id="more"></span>
+<h2 id="1-2-多路复用与多路分解"><a href="#1-2-多路复用与多路分解" class="headerlink" title="1.2. 多路复用与多路分解"></a>1.2. 多路复用与多路分解</h2><p>多路复用：在源主机从不同套接字手中收集数据块，并为每个数据块封装上首部信息（这将用于分解）从而生成报文段，然后将报文段传递到网络层。就是将信收集在一起并向指定地点发送。</p>
+<p>多路分解：将运输层报文段中数据交付到正确的套接字（socket）的工作。就是将信传到每个人的手中。</p>
+<blockquote>
+<p>套接字（socket）：通信的端点，每个套接字由一个IP地址和一个端口号组成</p>
+</blockquote>
+<h2 id="1-3-端口"><a href="#1-3-端口" class="headerlink" title="1.3. 端口"></a>1.3. 端口</h2><p>端口是传输层的SAP，标识主机的应用进程</p>
+<p>端口号只有本地意义，在因特网中不同计算机的相同端口号是没有联系的。</p>
+<p>端口号长度为16bit，能表示65536个不同的端口号。</p>
+<script type="math/tex; mode=display">
+\text{端口号}
+\begin{cases}
+\textbf{服务端}\text{使用的端口号}
+\begin{cases}
+\text{数值端口号：给TCP/IP最重要的一些应用程序，让所有用户都知道 0—1023}
+\\
+\\
+\text{登记端口号：1024—49151}
+\end{cases}
+\\
+\\
+\textbf{客户端}\text{使用的端口号：仅在客户端运行时才动态选择的端口号 49152—66535}
+\end{cases}</script><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>应用程序</th>
+<th>熟知端口号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FTP</td>
+<td>21</td>
+</tr>
+<tr>
+<td>TELNET</td>
+<td>23</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>25</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>53</td>
+</tr>
+<tr>
+<td>TFTP</td>
+<td>69</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>80</td>
+</tr>
+<tr>
+<td>SNMP</td>
+<td>161</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="二、UDP协议"><a href="#二、UDP协议" class="headerlink" title="二、UDP协议"></a>二、UDP协议</h1><blockquote>
+<p>无连接的用户数据报协议</p>
+</blockquote>
+<p>UDP只在IP数据报服务之上增加了很少功能，即复用分用和差错检测功能</p>
+<p>传送数据报之前不需要建立连接，收到UDP报文后也不需要给出任何确认。</p>
+<p>特点：不可靠，无连接，时延小，适用于小文件。</p>
+<h2 id="2-1-UDP首部格式"><a href="#2-1-UDP首部格式" class="headerlink" title="2.1. UDP首部格式"></a>2.1. UDP首部格式</h2><p><img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/1.png" style="zoom: 33%;"></p>
+<p>UDP长度：UDP用户数据报的<strong>整个</strong>长度，也就是首部+数据字段 </p>
+<p>UDP检验：检测整个UDP数据报是否有错，错就丢弃</p>
+<h2 id="2-2-UDP校验"><a href="#2-2-UDP校验" class="headerlink" title="2.2. UDP校验"></a>2.2. UDP校验</h2><p><img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/2.png" style="zoom: 67%;"></p>
+<p><img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/3.png" style="zoom: 67%;"></p>
+<p><strong>在发送端：</strong><br>1、填上伪首部</p>
+<p>2、全0填充校验和字段</p>
+<p>3、全0填充数据部分（UDP数据报要看成许多4B的字串接起来）</p>
+<p>4、伪首部+首部+数据部分采用二进制反码求和</p>
+<p>5、把和求反码填入检验和字段</p>
+<p>6、去掉伪首部，发送</p>
+<p><strong>在接收端：</strong></p>
+<p>1、填上伪首部</p>
+<p>2、伪首部+首部+数据部分采用二进制反码求和</p>
+<p>3、结果全为1则无差错，否则丢弃数据报 / 交给应用层附上出错的警告</p>
+<h1 id="三、TCP-协议"><a href="#三、TCP-协议" class="headerlink" title="三、TCP 协议"></a>三、TCP 协议</h1><blockquote>
+<p>面向连接的传输控制协议</p>
+</blockquote>
+<p>传送数据之前必须建立连接，数据传送结束后要释放来连接。不提供广播或多播服务。由于TCP要提供可靠的面向连接的传输服务，因此不可避免增加了许多开销：确认、流量控制、计时器及连接管理等。</p>
+<p>特点：可靠，面向连接，时延大，适用于大文件。</p>
+<h2 id="3-1-TCP报文段首部格式"><a href="#3-1-TCP报文段首部格式" class="headerlink" title="3.1. TCP报文段首部格式"></a>3.1. TCP报文段首部格式</h2><p> <img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/4.png" style="zoom: 67%;"></p>
+<p><strong>序号：</strong>在一个TCP连接中传送的字节流中的每一个字节流中的每一个字节都按顺序编号，本字段表示报文段所发送数据的<strong>第一个字节的序号</strong></p>
+<p><strong>确认号：</strong> 期望收到对方下一个报文段的第一个数据字节的序号。若确认号为N，则证明到序号 N-1 为止的所有数据都以正确收到。 </p>
+<p><strong>数据偏移（首部长度）：</strong>TCP报文段的数据起始处距离TCP报文段的起始处有多远，以 4B 为单位，即1个数值是 4B</p>
+<p><strong>6个控制位</strong></p>
+<ul>
+<li><strong>紧急位URG</strong>：URG=1 时，表明此报文段有紧急数据，是最高优先级的数据，应尽快传送，不用在缓存里排队，配合紧急指针字段使用</li>
+<li><strong>确认位ACK</strong>：ACK=1 时，确认号有效，在连接建立后所有传送的报文段都必须报ACK置为1</li>
+<li>推送位PSH：PSH=1 时，接收方尽快交付接收应用进程，不再等到缓存填满再向上交付</li>
+<li>复位PST：RST=1 时，表明TCP连接中出现严重差错，必须释放连接，然后重新建立传输连接。</li>
+<li><strong>同步位SYN</strong>：SYN=1 时，表明是一个连接请求/连接接受报文</li>
+<li><strong>终止位FIN</strong>：FIN=1 时，表明此报文段发送方数据已发完，要求释放连接。</li>
+</ul>
+<blockquote>
+<p>urgency 紧急 </p>
+<p>acknowledgement 确认 </p>
+<p>push 推送 </p>
+<p>reset 复位 </p>
+<p>synchornize 同步 </p>
+<p>finish 结束</p>
+</blockquote>
+<p><strong>窗口：</strong>指的是发送本报文段的一方的接收窗口，即现在允许对方发送的数据量</p>
+<p><strong>检验和：</strong>检验首部+数据，检验时要加上12B伪首部，第四个字段为6</p>
+<p><strong>紧急指针：</strong>URG=1时才有意义，指出本报文段中紧急数据的字节数。</p>
+<p><strong>选项：</strong>最大报文字段长度MSS、窗口扩大、时间戳、选择确认……</p>
+<h2 id="3-2-TCP连接管理"><a href="#3-2-TCP连接管理" class="headerlink" title="3.2. TCP连接管理"></a>3.2. TCP连接管理</h2><p>TCP连接传输三个阶段：连接建立—数据传输—连接释放</p>
+<p>连接建立的图示：</p>
+<p><img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/5.png" style="zoom: 67%;"></p>
+<p>ROUND 1：</p>
+<p>客户端发送<strong>连接请求报文段</strong>，无应用层数据。SYN=1，seq=x（随机）</p>
+<p>ROUND 2：</p>
+<p>服务器端为该TCP连接<strong>分配缓存和变量</strong>，并向客户端返回<strong>确认报文段</strong>，允许连接，无应用层数据。SYN=1，ACK=1，seq=y（随机），ack=x+1</p>
+<p>ROUND 3：</p>
+<p>客户端为该TCP连接<strong>分配缓存和变量</strong>，并向服务器端返回确认的确认，可以携带数据。SYN=0，ACK=1，seq=x+1，ack=y+1</p>
+<h3 id="SYN洪范攻击"><a href="#SYN洪范攻击" class="headerlink" title="SYN洪范攻击"></a>SYN洪范攻击</h3><p>SYN洪范攻击发生在OSI第四层，这种方式利用TCP协议的特性，就是三次握手。攻击者发送TCP SYN，SYN是TCP三次握手中的<strong>第一个数据包</strong>，而当服务器返回ACK后，该攻击者就不对其进行再确认，那这个TCP连接就处于挂起状态，也就是所谓的半连接状态，服务器收不到再确认的话，还会重复发送ACK给攻击者。这样更加会浪费服务器的资源。攻击者就对服务器发送非常大量的这种TCP连接，由于每一个都没法完成三次握手，所以在服务器上，这些TCP连接会因为挂起状态而消耗CPU和内存，最后服务器可能死机，就无法为正常用户提供服务了。</p>
+<p>解决方法：SYN cookie</p>
+<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p><img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/6.png" style="zoom: 67%;"></p>
+<p>ROUND 1：</p>
+<p>客户端发送<strong>连接释放报文段</strong>，停止发送数据，主动关闭TCP连接。 FIN=1，seq=u</p>
+<p>ROUND 2：</p>
+<p>服务器端回送一个确认报文段，客户到服务器这个方向的连接就释放了——半关闭状态。ACK=1，seq=v，ack=u+1</p>
+<p>ROUND 3：</p>
+<p>服务器端发完数据，就发出连接释放报文段，主动关闭TCP连接。FIN=1，ACK=1，seq=w，ack=u+1</p>
+<p>ROUND 4：</p>
+<p>客户端回送一个确认报文段，再等到时间计时器设置为2MSL（最长报文段寿命）后，连接彻底关闭。ACK=1，seq=w，ack=w+1</p>
+<h2 id="3-3-TCP可靠传输"><a href="#3-3-TCP可靠传输" class="headerlink" title="3.3. TCP可靠传输"></a>3.3. TCP可靠传输</h2><p>可靠：保证接收方进程从缓存区读出的字节流与发送方发出的字节流是完全一样的。</p>
+<p>校验：与UDP校验一样，<strong>增加伪首部</strong></p>
+<p>序号、确认、重传</p>
+<h2 id="3-4-TCP流量控制"><a href="#3-4-TCP流量控制" class="headerlink" title="3.4. TCP流量控制"></a>3.4. TCP流量控制</h2><p>流量控制：让<strong>发送方慢点</strong>，要让接收方来得及接收</p>
+<p>TCP利用<strong>滑动窗口</strong>机制实现流浪控制</p>
+<p>在通信过程中，接收方根据自己接收缓存的大小，动态地调整发送方的发送窗口大小，即接收窗口rwnd，发送方的发送窗口取接收窗口rwnd和拥塞窗口cwnd的最小值。</p>
+<p>A向B发送数据，连接建立时，B告诉A：“我的rwnd=400（字节）”，设每个报文段100B，报文段序号初始值为1。</p>
+<p><img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/7.png" style="zoom: 67%;"></p>
+<p>TCP为每个连接设有一个持续计时器，只要TCP连接的一方收到对方的零窗口通知，就启动持续计时器。</p>
+<p>若持续计时器设置的时间到期，就发送一个零窗口<strong>探测报文段</strong>。接收方收到探测报文段时给出现在的窗口值。</p>
+<p>若窗口仍为0，那么发送方就重新设置持续计时器。</p>
+<h2 id="3-5-TCP拥塞控制"><a href="#3-5-TCP拥塞控制" class="headerlink" title="3.5. TCP拥塞控制"></a>3.5. TCP拥塞控制</h2><p>出现拥塞的条件：<br>对资源需求的总和 &gt; 可用资源</p>
+<p>网络中有许多资源同时呈现供应不足，网络性能变坏，网络吞吐量将随输入负荷增大而下降。</p>
+<p>拥塞控制：防止过多的数据注入到网络中。</p>
+<p>拥塞控制的四种算法：<br>慢开始，拥塞避免，快重传，快恢复 </p>
+<h3 id="慢开始和拥塞避免"><a href="#慢开始和拥塞避免" class="headerlink" title="慢开始和拥塞避免"></a>慢开始和拥塞避免</h3><p> <img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/8.png" style="zoom: 67%;"></p>
+<p>cwnd=1，表示一个最大报文段长度MSS。</p>
+<p><strong>一个传输轮次</strong>：发送了一批报文段并收到它们的确认的时间。指的是一个往返时延RTT</p>
+<h3 id="快重传和快恢复"><a href="#快重传和快恢复" class="headerlink" title="快重传和快恢复"></a>快重传和快恢复</h3><p><img src="/2022/01/09/5-%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0/9.png" style="zoom: 67%;"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"># 计算机网络</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/01/2022%E5%B9%B41%E6%9C%881%E6%97%A5/" rel="prev" title="2022年1月1日">
+      <i class="fa fa-chevron-left"></i> 2022年1月1日
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/" rel="next" title="6.应用层">
+      6.应用层 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="nav-text">一、概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E7%BD%91%E7%BB%9C%E5%B1%82%E5%92%8C%E8%BF%90%E8%BE%93%E5%B1%82%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">1.1. 网络层和运输层的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E4%B8%8E%E5%A4%9A%E8%B7%AF%E5%88%86%E8%A7%A3"><span class="nav-text">1.2. 多路复用与多路分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E7%AB%AF%E5%8F%A3"><span class="nav-text">1.3. 端口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81UDP%E5%8D%8F%E8%AE%AE"><span class="nav-text">二、UDP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-UDP%E9%A6%96%E9%83%A8%E6%A0%BC%E5%BC%8F"><span class="nav-text">2.1. UDP首部格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-UDP%E6%A0%A1%E9%AA%8C"><span class="nav-text">2.2. UDP校验</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81TCP-%E5%8D%8F%E8%AE%AE"><span class="nav-text">三、TCP 协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-TCP%E6%8A%A5%E6%96%87%E6%AE%B5%E9%A6%96%E9%83%A8%E6%A0%BC%E5%BC%8F"><span class="nav-text">3.1. TCP报文段首部格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-TCP%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86"><span class="nav-text">3.2. TCP连接管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SYN%E6%B4%AA%E8%8C%83%E6%94%BB%E5%87%BB"><span class="nav-text">SYN洪范攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E7%9A%84%E8%BF%9E%E6%8E%A5%E9%87%8A%E6%94%BE"><span class="nav-text">TCP的连接释放</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-TCP%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93"><span class="nav-text">3.3. TCP可靠传输</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-TCP%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="nav-text">3.4. TCP流量控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6"><span class="nav-text">3.5. TCP拥塞控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%85%A2%E5%BC%80%E5%A7%8B%E5%92%8C%E6%8B%A5%E5%A1%9E%E9%81%BF%E5%85%8D"><span class="nav-text">慢开始和拥塞避免</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%87%8D%E4%BC%A0%E5%92%8C%E5%BF%AB%E6%81%A2%E5%A4%8D"><span class="nav-text">快重传和快恢复</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lbl"
+      src="/images/wallhaven-m9q6e9.jpg">
+  <p class="site-author-name" itemprop="name">lbl</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+       <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+	<!--网易云-->
+    <div class="aplayer"
+      data-id="2773494627"
+      data-server="netease"
+      data-type="playlist"
+      data-fixed="false"
+      data-autoplay="false"
+      data-list-folded="true"
+      data-mutex="true"
+      data-order="random"
+      data-loop="all"
+      data-volume="0.4"
+      data-theme="#FADFA3"
+      date-preload="auto" >
+    </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lbl</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">265k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:01</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+    </div>
+</body>
+</html>
