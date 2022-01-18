@@ -28,8 +28,13 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://mdreamers.github.io/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/1.png">
 <meta property="og:image" content="https://mdreamers.github.io/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/2.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/3.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/4.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/5.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/6.png">
+<meta property="og:image" content="https://mdreamers.github.io/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/7.png">
 <meta property="article:published_time" content="2022-01-17T08:34:11.000Z">
-<meta property="article:modified_time" content="2022-01-17T15:06:11.119Z">
+<meta property="article:modified_time" content="2022-01-18T06:42:57.289Z">
 <meta property="article:author" content="lbl">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
@@ -216,10 +221,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-01-17 16:34:11 / 修改时间：23:06:11" itemprop="dateCreated datePublished" datetime="2022-01-17T16:34:11+08:00">2022-01-17</time>
+              <time title="创建时间：2022-01-17 16:34:11" itemprop="dateCreated datePublished" datetime="2022-01-17T16:34:11+08:00">2022-01-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-18 14:42:57" itemprop="dateModified" datetime="2022-01-18T14:42:57+08:00">2022-01-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -243,14 +254,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>463</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -278,11 +289,7 @@
 <li>虚拟终端</li>
 <li>查询服务和远程作业登录</li>
 </ul>
-<p>应用层的重要协议：</p>
-<p>FTP</p>
-<p>SMTP、POP3</p>
-<p>HTTP</p>
-<p>DNS</p>
+<p>应用层的重要协议：FTP、SMTP、POP3、HTTP、DNS</p>
 <h1 id="二、网络应用模型"><a href="#二、网络应用模型" class="headerlink" title="二、网络应用模型"></a>二、网络应用模型</h1><p>客户/服务器模型（Client/Server）</p>
 <p>P2P模型（Peer-to-peer）</p>
 <h2 id="客户-服务器（c-s）模型"><a href="#客户-服务器（c-s）模型" class="headerlink" title="客户/服务器（c/s）模型"></a>客户/服务器（c/s）模型</h2><p><img src="/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/1.png" style="zoom: 67%;"></p>
@@ -300,14 +307,93 @@
 </ul>
 <p>应用：Web，文件传输FTP，远程登陆，电子邮件</p>
 <h2 id="P2P模型"><a href="#P2P模型" class="headerlink" title="P2P模型"></a>P2P模型</h2><p><img src="/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/2.png" style="zoom: 67%;"></p>
-<p>不存在永远在线的服务器</p>
-<p>每个主机可以<strong>提供服务</strong>，也可以<strong>请求服务</strong></p>
-<p>任意端系统/节点之间可以<strong>直接通讯</strong></p>
-<p>节点间歇性接入网络</p>
-<p>节点可能改变IP地址</p>
-<p>可扩展性好</p>
-<p>网络健壮性强</p>
-<h1 id="DNS系统"><a href="#DNS系统" class="headerlink" title="DNS系统"></a>DNS系统</h1><h1 id="文件传输协议-FTP"><a href="#文件传输协议-FTP" class="headerlink" title="文件传输协议 FTP"></a>文件传输协议 FTP</h1><h1 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h1><h1 id="万维网和HTTP协议"><a href="#万维网和HTTP协议" class="headerlink" title="万维网和HTTP协议"></a>万维网和HTTP协议</h1>
+<p><strong>特点：</strong></p>
+<ul>
+<li><p>不存在永远在线的服务器</p>
+</li>
+<li><p>每个主机可以<strong>提供服务</strong>，也可以<strong>请求服务</strong></p>
+</li>
+<li><p>任意端系统/节点之间可以<strong>直接通讯</strong></p>
+</li>
+<li><p>节点间歇性接入网络</p>
+</li>
+<li><p>节点可能改变IP地址</p>
+</li>
+<li><p>可扩展性好</p>
+</li>
+<li><p>网络健壮性强</p>
+</li>
+</ul>
+<h1 id="三、DNS系统"><a href="#三、DNS系统" class="headerlink" title="三、DNS系统"></a>三、DNS系统</h1><h2 id="3-1-域名"><a href="#3-1-域名" class="headerlink" title="3.1. 域名"></a>3.1. 域名</h2><p>www.baidu.com</p>
+<ul>
+<li><p>www是三级域名</p>
+</li>
+<li><p>baidu是二级域名</p>
+</li>
+<li><p>com是顶级域名</p>
+</li>
+</ul>
+<p><strong>顶级域名</strong></p>
+<ul>
+<li>国家顶级域名：cn，us，uk</li>
+<li>通用顶级域名：com，net，org，gov，int，aero，museum，travel</li>
+<li>基础结构域名/反向域名：arpa</li>
+</ul>
+<p><strong>二级域名</strong></p>
+<ul>
+<li>类别域名：ac，com，edu，gov，mil，net，org</li>
+<li>行政区域名，用于我国各省、自治区、直辖市：bj，js</li>
+<li>自己注册</li>
+</ul>
+<p><strong>三级域名</strong></p>
+<p><strong>四级域名</strong></p>
+<h2 id="3-2-域名服务器"><a href="#3-2-域名服务器" class="headerlink" title="3.2. 域名服务器"></a>3.2. 域名服务器</h2><p><strong>根域名服务器</strong></p>
+<p><strong>顶级域名服务器：</strong>管理该顶级域名服务器注册的所有二级域名</p>
+<p><strong>权限域名服务器：</strong>负责一个区的域名服务器</p>
+<p><strong>本地域名服务器：</strong>当一个主机发出DNS查询请求时，这个查询请求报文就发送给本地域名服务器</p>
+<h3 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a>域名解析过程</h3><p><strong>递归查询：</strong>靠别人</p>
+<p><strong>迭代查询：</strong>靠自己</p>
+<p><img src="/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/3.png" style="zoom: 67%;"></p>
+<blockquote>
+<p>递归是别人帮忙查, 迭代是别人告诉去哪查,你自己去查</p>
+</blockquote>
+<h1 id="四、文件传送协议-FTP"><a href="#四、文件传送协议-FTP" class="headerlink" title="四、文件传送协议 FTP"></a>四、文件传送协议 FTP</h1><p>文件传送协议FTP（File Transfer Protocol）</p>
+<p>提供不同种类主机系统（硬、软件体系等都可以）之间的文件传输能力</p>
+<p>简单文件传送协议TFTP（Trivial File Transfer Protocol）</p>
+<h2 id="4-1-FTP服务器和用户端"><a href="#4-1-FTP服务器和用户端" class="headerlink" title="4.1. FTP服务器和用户端"></a>4.1. FTP服务器和用户端</h2><p>FTP是基于客户/服务器（c/s）的协议。</p>
+<p>用户通过一个客户及程序连接至在远程计算机上运行的服务器程序</p>
+<p>依照FTP协议提供服务，进行文件传送的计算机就是 <strong>FTP服务器</strong></p>
+<p>连接FTP服务器，遵循FTP协议与服务器传送文件的电脑就是 <strong>FTP客户端</strong></p>
+<h2 id="4-2-FTP工作原理"><a href="#4-2-FTP工作原理" class="headerlink" title="4.2. FTP工作原理"></a>4.2. FTP工作原理</h2><p><strong>登录</strong>：输入ftp地址，用户名/密码 或 匿名登陆</p>
+<p>FTP使用TCP实现可靠传输</p>
+<p><img src="/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/4.png" style="zoom: 67%;"></p>
+<p><strong>控制连接</strong>始终保持</p>
+<p><strong>数据连接</strong>保持一会</p>
+<p>是否使用TCP 20端口建立数据连接与<strong>传送模式</strong>有关</p>
+<p><strong>主动</strong>方式使用TCP 20端口</p>
+<p><strong>被动</strong>方式由服务器和客户端自行协商决定（端口&gt;1024）</p>
+<p><strong>FTP传输模式</strong></p>
+<ul>
+<li>文本模式：ASCLL模式，以文本序列传输数据</li>
+<li>二进制模式：Binary模式，以二进制序列传输数据</li>
+</ul>
+<h1 id="五、电子邮件"><a href="#五、电子邮件" class="headerlink" title="五、电子邮件"></a>五、电子邮件</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>1071378062.@qq.com</p>
+<h2 id="组成结构"><a href="#组成结构" class="headerlink" title="组成结构"></a>组成结构</h2><p><img src="/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/5.png" style="zoom: 67%;"></p>
+<h1 id="六、万维网和HTTP协议"><a href="#六、万维网和HTTP协议" class="headerlink" title="六、万维网和HTTP协议"></a>六、万维网和HTTP协议</h1><h2 id="2-1-万维网概述"><a href="#2-1-万维网概述" class="headerlink" title="2.1. 万维网概述"></a>2.1. 万维网概述</h2><p>万维网WWW（World Wide Web）是一个大规模的、联机式的信息储藏所/资料空间，是无数个网络站点和网页的集合</p>
+<p>通过统一资源定位符<strong>URL</strong>来标识资源（文字、视频、音频……）</p>
+<p><strong>URL一般形式：</strong></p>
+<p>&lt;协议&gt;://&lt;主机&gt;:&lt;端口&gt;/&lt;路径&gt;</p>
+<p>协议：http，ftp</p>
+<p>主机：域名，IP地址</p>
+<p>例如：<a target="_blank" rel="noopener" href="http://www.pku.edu.cn">http://www.pku.edu.cn</a></p>
+<p>万维网以客户/服务器方式工作，用户使用的浏览器就是万维网客户程序，万维网文档所驻留的主机运行服务器程序。</p>
+<h2 id="2-2-超文本传输协议HTTP"><a href="#2-2-超文本传输协议HTTP" class="headerlink" title="2.2. 超文本传输协议HTTP"></a>2.2. 超文本传输协议HTTP</h2><p>https443</p>
+<h3 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h3><p>HTTP是无状态的</p>
+<p>但是在实际工作中，一些万维网站点常常希望能够识别用户。</p>
+<p>Cookie是存储在用户主机中的文本文件，记录一段时间内用户（使用识别码识别，如“123456”）的访问记录。</p>
+<h3 id="HTTP的连接方式"><a href="#HTTP的连接方式" class="headerlink" title="HTTP的连接方式"></a>HTTP的连接方式</h3><p><img src="/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/6.png" style="zoom: 67%;"></p>
+<h3 id="超文本传输协议HTTP—报文结构"><a href="#超文本传输协议HTTP—报文结构" class="headerlink" title="超文本传输协议HTTP—报文结构"></a>超文本传输协议HTTP—报文结构</h3><p><img src="/2022/01/17/6-%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0/7.png" style="zoom: 67%;"></p>
+
     </div>
 
     
@@ -387,7 +473,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E6%A8%A1%E5%9E%8B"><span class="nav-text">二、网络应用模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7-%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88c-s%EF%BC%89%E6%A8%A1%E5%9E%8B"><span class="nav-text">客户&#x2F;服务器（c&#x2F;s）模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P2P%E6%A8%A1%E5%9E%8B"><span class="nav-text">P2P模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DNS%E7%B3%BB%E7%BB%9F"><span class="nav-text">DNS系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE-FTP"><span class="nav-text">文件传输协议 FTP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6"><span class="nav-text">电子邮件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%87%E7%BB%B4%E7%BD%91%E5%92%8CHTTP%E5%8D%8F%E8%AE%AE"><span class="nav-text">万维网和HTTP协议</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E6%A8%A1%E5%9E%8B"><span class="nav-text">二、网络应用模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7-%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88c-s%EF%BC%89%E6%A8%A1%E5%9E%8B"><span class="nav-text">客户&#x2F;服务器（c&#x2F;s）模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P2P%E6%A8%A1%E5%9E%8B"><span class="nav-text">P2P模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81DNS%E7%B3%BB%E7%BB%9F"><span class="nav-text">三、DNS系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%9F%9F%E5%90%8D"><span class="nav-text">3.1. 域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">3.2. 域名服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="nav-text">域名解析过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%96%87%E4%BB%B6%E4%BC%A0%E9%80%81%E5%8D%8F%E8%AE%AE-FTP"><span class="nav-text">四、文件传送协议 FTP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E7%94%A8%E6%88%B7%E7%AB%AF"><span class="nav-text">4.1. FTP服务器和用户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-FTP%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-text">4.2. FTP工作原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6"><span class="nav-text">五、电子邮件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E6%88%90%E7%BB%93%E6%9E%84"><span class="nav-text">组成结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%B8%87%E7%BB%B4%E7%BD%91%E5%92%8CHTTP%E5%8D%8F%E8%AE%AE"><span class="nav-text">六、万维网和HTTP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E4%B8%87%E7%BB%B4%E7%BD%91%E6%A6%82%E8%BF%B0"><span class="nav-text">2.1. 万维网概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AEHTTP"><span class="nav-text">2.2. 超文本传输协议HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">HTTP协议的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F"><span class="nav-text">HTTP的连接方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AEHTTP%E2%80%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84"><span class="nav-text">超文本传输协议HTTP—报文结构</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -403,20 +489,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">77</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -472,12 +558,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">265k</span>
+    <span title="站点总字数">266k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:01</span>
+    <span title="站点阅读时长">4:02</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
