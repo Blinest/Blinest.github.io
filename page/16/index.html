@@ -185,6 +185,442 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/18/2.%E7%9F%A9%E9%98%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/18/2.%E7%9F%A9%E9%98%B5/" class="post-title-link" itemprop="url">2.矩阵</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-18 18:23:27" itemprop="dateCreated datePublished" datetime="2021-06-18T18:23:27+08:00">2021-06-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-26 16:32:34" itemprop="dateModified" datetime="2021-06-26T16:32:34+08:00">2021-06-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>如果A和B都是m$\times$n矩阵，称A和B是 <strong>同型矩阵</strong></p>
+<h2 id="几类特殊的矩阵"><a href="#几类特殊的矩阵" class="headerlink" title="几类特殊的矩阵"></a>几类特殊的矩阵</h2><h3 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h3><p>$<br>\quad\begin{pmatrix}<br>    {\large a}_{11}    \\<br>     &amp; {\large a}_{22}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}^{\large n}<br>$</p>
+<p>$=<br>\begin{pmatrix}<br>    {\large a}_{11}^n    \\<br>     &amp; {\large a}_{22}^n\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large a}_{nn}^n<br>\end{pmatrix}<br>$<br><br><br><br>$<br>\qquad\begin{pmatrix}<br>    {\large k}    \\<br>     &amp; {\large k}\\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; {\large k}<br>\end{pmatrix}$</p>
+<p>$=\large k<br>\begin{pmatrix}<br>    1    \\<br>     &amp; 1 \\<br>     &amp;     &amp; \ddots \\<br>     &amp;     &amp;     &amp; 1<br>\end{pmatrix}<br>$</p>
+<h3 id="初等矩阵"><a href="#初等矩阵" class="headerlink" title="初等矩阵"></a>初等矩阵</h3><blockquote>
+<p>单位矩阵经 <strong>一次初等变换</strong> 所得到的矩阵</p>
+</blockquote>
+<p>可以是行变换,也可以是列变换</p>
+<p>左乘是行变换，右乘是列变换</p>
+<ol>
+<li>互换两行两列的位置：<br>$E(i,j)$表示交换第$i$行(列)和第$j$行(列)<br><br></li>
+<li>以数$k\neq0$乘某行或某列：<br>$E(i(k))$表示第$i$行(列)乘$k$<br><br></li>
+<li>以数$k$乘某行(列)加到另一行(列)上去：<br>$E(i,j(k))$表示$j$行(列)乘$k$加到$i$行(列)</li>
+</ol>
+<p><strong>等价矩阵：</strong></p>
+<blockquote>
+<p>矩阵A经过有限次初等变换变成矩阵B，记作A$\cong$B</p>
+</blockquote>
+<h3 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h3><blockquote>
+<p>满足$A^T=A$</p>
+</blockquote>
+<h3 id="反对称矩阵"><a href="#反对称矩阵" class="headerlink" title="反对称矩阵"></a>反对称矩阵</h3><blockquote>
+<p>满足$A^T=-A$</p>
+</blockquote>
+<h3 id="幂零矩阵"><a href="#幂零矩阵" class="headerlink" title="幂零矩阵"></a>幂零矩阵</h3><blockquote>
+<p>对方阵$A$,如果存在正整数m，使得$A^m=0$,则称$A$为幂零矩阵</p>
+</blockquote>
+<h3 id="幂等矩阵"><a href="#幂等矩阵" class="headerlink" title="幂等矩阵"></a>幂等矩阵</h3><blockquote>
+<p>满足$A^2=A$</p>
+</blockquote>
+<h3 id="对合矩阵"><a href="#对合矩阵" class="headerlink" title="对合矩阵"></a>对合矩阵</h3><blockquote>
+<p>满足$A^2=E$</p>
+</blockquote>
+<h2 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h2><p>令$A=[{\large a}_{ij}]_{m\times s},B=[{\large b}_{ij}]_{s\times n}$<br><br>$AB=C=[{\large c}_{ij}]_{m\times n}$<br><br>${\large c}_{ij}={\large\sum\limits_{k=1}^s}{\large a}_{ik}{\large b}_{kj}$</p>
+<h3 id="特殊"><a href="#特殊" class="headerlink" title="特殊:"></a>特殊:</h3><p>$\quad A=[{\large a}_{1j}]_{1\times s}$</p>
+<p>$\quad A^T=[{\large a}_{j1}]_{s\times1}$</p>
+<p>$\quad 则\;AA^T=\sum\limits_{j=1}^n{\large a}_j^2$</p>
+<p>$\therefore\;$<strong>行在前列在后就是一个数</strong></p>
+<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><blockquote>
+<p>$AB=BA=I$</p>
+<ul>
+<li>$<br>A=<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>$<br>$<br>B=<br>\begin{pmatrix}<br>   \displaystyle\frac{1}{ {\large a}_{11} }\\<br>   &amp; \displaystyle\frac{1}{ {\large a}_{22} }\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp;\displaystyle\frac{1}{ {\large a}_{nn} }<br>\end{pmatrix}<br>$<br><br><br>$<br>\because<br>\begin{pmatrix}<br>  {\large a}_{11}\\<br>  \\<br>   &amp; {\large a}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}<br>\end{pmatrix}<br>\begin{pmatrix}<br>  {\large b}_{11}\\<br>  \\<br>   &amp; {\large b}_{22}\\<br>   &amp;     &amp; \ddots \\<br>   &amp;     &amp;     &amp; {\large b}_{nn}<br>\end{pmatrix}<br>$<br><br><br>$<br>=\begin{pmatrix}<br>  {\large a}_{11}{\large b}_{11} \\<br>  \\<br>   &amp; {\large a}_{22}{\large b}_{22}\\<br>   \\<br>   &amp;     &amp; \ddots\\<br>   \\<br>   &amp;     &amp;     &amp; {\large a}_{nn}{\large b}_{nn}<br>\end{pmatrix}<br>$</li>
+</ul>
+</blockquote>
+<p>$\therefore AB=BA=I$<br><br>$\therefore A^{-1}=B$<br><br>一些可逆矩阵的证明要想到从定义的角度出发</p>
+<hr>
+<p>$AA^{ * } =A^{ * }A=|A|I$</p>
+<p>推论：</p>
+<ol>
+<li>$A^{-1}=\displaystyle{ \frac{A^*}{|A|} }\longrightarrow即\;|A|\not=0,\;A^{-1}存在$</li>
+</ol>
+<p>$\therefore$求逆矩阵先 <strong>看行列式是否为零</strong></p>
+<ol>
+<li>伴随矩阵$A^{ * }$的一些常用结论 <ul>
+<li>$|A^*|=|A|^{n-1}$</li>
+<li>$(A^{ * })^{ * }=|A|^{n-2}A$</li>
+<li>若$A$可逆，且$A^{ * }$可逆,$(A^{ * })^{-1}=(A^{-1})^{ * }=\displaystyle\frac{1}{|A|}A$</li>
+<li>$(AB)^{ * }=B^{ * }A^{ * }$</li>
+<li>$(A^{ * })^T=(A^T)^{ * }$</li>
+</ul>
+</li>
+<li><strong>A如果可逆，那么A一定可以表示为有限个初等矩阵的乘积</strong></li>
+</ol>
+<p>$P_t\cdots P_2P_1A=I$</p>
+<p><br></p>
+<p>$\because P_t\cdots P_2P_1A=I$</p>
+<p>$\therefore A^{-1}=P_t\cdots P_2\;P_1$</p>
+<p>$\;P_t\cdots P_2\;P_1\;I=A^{-1}$<br><br><br>$P_t\cdots P_2\;P_1\;A=I$<br><br>$P_t\cdots P_2\;P_1\;I=A^{-1}$</p>
+<p>由这两个式子可得：</p>
+<p>A经过行初等变换变成$I$</p>
+<p>$I$就经过同样的行初等变换变成$A^{-1}$</p>
+<p>$<br>\therefore[A\;|\;I\,]\rightarrow\cdots\rightarrow[\,I\;|\;A^{-1}]<br>$<br><br>或者可以这么理解<br>$A^{-1}[A|I]=[I|A^{-1}]$<br><br>用分块矩阵的思想，这样理解更加直观,其实这样求解的原因<br>就是$A$和$I$可以经过相同的变换变成$I$和$A^{-1}$</p>
+<p><strong>推广</strong></p>
+<p>$AX=B$<br>如果A可逆，$X=A^{-1}B$</p>
+<p>令$P=A^{-1}$</p>
+<p>由</p>
+<p>$\;PA=I$<br><br>$PB=X$</p>
+<p>有$\;[A|B]=[I|X]$</p>
+<p>即$\;$遇到$A^{-1}B$时，可以将$A，B$拼在一起将$A$化成单位矩阵就是所求的$X$</p>
+<h2 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h2><h3 id="分成四块"><a href="#分成四块" class="headerlink" title="分成四块"></a>分成四块</h3><p>$<br>\left(\begin{array}{cc|ccc}<br>     1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\<br>     3 &amp; 4 &amp; 0 &amp; 0 &amp; 0\\<br>     \hline<br>     0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 1 &amp; 1\\<br>     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br>\end{array}\right)=<br>\left(\begin{array}{cc}<br>     A &amp; O\\<br>     O &amp; B<br>\end{array}\right)<br>$</p>
+<p>分块后的矩阵满足四个区域整体满足</p>
+<p>矩阵的加法</p>
+<p>对角矩阵的乘法</p>
+<p>逆矩阵</p>
+<h3 id="按行分块"><a href="#按行分块" class="headerlink" title="按行分块"></a>按行分块</h3><ul>
+<li>$<br>\left(\begin{array}{ccc}<br>a_{11}&amp;a_{12}&amp;a_{13}\\<br>\hdashline<br>a_{21}&amp;a_{22}&amp;a_{23}\\<br>\hdashline<br>a_{31}&amp;a_{32}&amp;a_{33}<br>\end{array}\right)<br>=\begin{bmatrix}<br>\alpha_1^T\\<br>\alpha_2^T\\<br>\alpha_3^T<br>\end{bmatrix}<br>$<br><br>按行分块一般会加转置符号，主要原因时默认$\alpha$是列向量<h3 id="按列分块"><a href="#按列分块" class="headerlink" title="按列分块"></a>按列分块</h3>类比按行分块<br><br>一般证明的时候会选择按列分块</li>
+</ul>
+<h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><blockquote>
+<p>秩与线性方程组的解有着密切的联系，所以要将线性方程组和秩结合起来，<br>而这样就容易理解后面的n元向量的一些秩的表示形式</p>
+</blockquote>
+<ul>
+<li>矩阵A的一个k阶子式:<br><br>$\qquad$矩阵A中随便找k行随便找k列，按原来次序排列构成的行列式</li>
+</ul>
+<h3 id="秩的性质"><a href="#秩的性质" class="headerlink" title="秩的性质"></a>秩的性质</h3><ol>
+<li>$0\leqslant r(A_{m\times n})\leqslant min(m,n)$<br><br><br></li>
+<li>$r(A^T)=r(A)$<br><br><br></li>
+<li>$r(A+B)\leqslant r(A)+r(B)$<br><br><br></li>
+<li>$r(kA)=r(A)(k\neq0)\;\leftarrow\; r(A)=r(-A)，r(A-E)=r(E-A)$<br><br><br></li>
+<li><p>$r(AB)\leqslant min(r(A),r(B))$<br><br><br></p>
+</li>
+<li><p>如P.Q可逆，则<br>$r(PAQ)=r(A)$<br><br><br></p>
+</li>
+<li>$\;r\left[\begin{array}{cc} A&amp;O\\O&amp;B\end{array}\right]=r(A)+r(B)$<br><br><br></li>
+<li>$max(r(A),r(B))\leqslant r(A，B)\leqslant r(A+B)\leqslant r(A)+r(B)$<br><br>$r(A+B)\leqslant r(A)+r(B)$的证明(三秩相等)<br><br>$<br>\begin{aligned}<br>&amp;设r(A)=r,极大线性无关组：\alpha_{i1}\alpha_{i2}\cdots\alpha_{ir}\\<br>&amp;\quad r(B)=t,极大线性无关组：\beta_{j1}\beta_{j2}\cdots\beta_{jt}\\<br>&amp;A+B=(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\end{aligned}<br>$<br><br><br>$<br>\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n可由\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt}线性表示$<br><br>$则r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\rightarrow在向量组线性表示里$<br><br><br>$<br>\begin{aligned}<br>\therefore r(A+B)&amp;=r(\alpha_1+\beta_1,\alpha_2+\beta_2,\cdots,\alpha_n+\beta_n)\\<br>\\<br>&amp;\leqslant r(\alpha_{i1},\cdots,\alpha_{ir},\beta_{j1},\cdots,\beta_{jt})\leqslant r+t=r(A)+r(B)<br>\end{aligned}<br>$</li>
+</ol>
+<p>当然理解起来很好理解，因为假设r(A)=m,r(B)=n,r(A+B)的秩必定小于m+n</p>
+<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>前提$AB=BA$,<br>那么$(A+B)^n=\sum\limits_{i=0}^nC_n^iA^iB^{n-i}$</p>
+<p>矩阵跟线性变换有着紧密的联系，左乘对应行变换，右乘对应列变换，而后面会继续深入学习矩阵的几何意义……</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/18/1.%E8%A1%8C%E5%88%97%E5%BC%8F/" class="post-title-link" itemprop="url">1.行列式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-18 11:41:31" itemprop="dateCreated datePublished" datetime="2021-06-18T11:41:31+08:00">2021-06-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-26 15:55:53" itemprop="dateModified" datetime="2021-06-26T15:55:53+08:00">2021-06-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>$<br>\begin{cases}<br>{\large a}_1x + {\large b}_1y = {\large c}_1&amp;&amp;(1)\\<br>{\large a}_2x + {\large b}_2y = {\large c}_2&amp;&amp;(2)<br>\end{cases}<br>$</p>
+<p>方程组有唯一解:<br>$<br>x=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large c}_1&amp;{\large b}_1\\<br>    {\large c}_2&amp;{\large b}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p>$<br>y=\displaystyle<br>{<br>\frac{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large c}_1\\<br>    {\large a}_2&amp;{\large c}_2<br>\end{array}\right|}<br>{\left|\begin{array}{}<br>    {\large a}_1&amp;{\large b}_1\\<br>    {\large a}_2&amp;{\large b}_2<br>\end{array}\right|}<br>}<br>$</p>
+<p><strong>例</strong><br></p>
+<p>$<br>\begin{cases}<br>3x + 2y = 5\\<br>5x - 7y = 29<br>\end{cases}<br>$</p>
+<p>解：由于系数行列式<br></p>
+<p>$<br>D=\left|\begin{array}{ccc}<br>   3 &amp;2\\<br>    5 &amp;-7<br>\end{array}\right|=-31\neq0<br>$</p>
+<p>方程组有唯一解,又<br>$<br>D_1=\left|\begin{array}{ccc}<br>        5&amp;2\\<br>        29&amp;-7<br>    \end{array}\right|=-93<br>$</p>
+<p>$<br>D_2=\left|\begin{array}{ccc}<br>        3&amp;5\\<br>        5&amp;29<br>    \end{array}\right|=62\\<br>$</p>
+<p>故方程组的解为：</p>
+<p>$<br>\begin{cases}<br>    x=\displaystyle{\frac{D_1}{D}=3}\\<br>    \\<br>    y=\displaystyle{\frac{D_2}{D}=-2}<br>\end{cases}<br>$</p>
+<h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h2><p>$\tau(3\;2\;1)=2+1=3$</p>
+<ul>
+<li><strong>行列式的定义计算</strong>:每一行元素错开相乘<br>$\qquad\qquad\qquad\tau(3\;2\;1)：$表示行列式3$\;$2$\;$1列逆序数值<br><br>$\qquad\qquad\qquad\tau$为偶时，正数<br><br>$\qquad\qquad\qquad\tau$为奇时，负数  </li>
+</ul>
+<h2 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h2><p>行列式互换(<strong>转置</strong>)，行列式的值不变   </p>
+<ul>
+<li><strong>即</strong><br>$<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1n}\\<br>{\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2n}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{n1}&amp;{\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|=<br>\left|\begin{array}{ccc}<br>{\large a}_{11}&amp;{\large a}_{21}&amp;\cdots&amp;{\large a}_{n1}\\<br>{\large a}_{12}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{n2}\\<br>\vdots&amp;\vdots&amp;     &amp;\vdots\\<br>{\large a}_{1n}&amp;{\large a}_{2n}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>一般项：<br>$<br>{\large a}_{1j_1}\quad{\large a}_{2j_2}\;\cdots\;\;{\large a}_{nj_n}\qquad<br>{\large a}_{j_{_1}1}\quad{\large a}_{j_{_2}2}\;\cdots\;\;{\large a}_{j_{_n}n}<br>$<br><br><br>某行所有元素都是两个数的和，<br>则可把行列式写成两个行列式值和，<br>字母行列式的求解要想到拆行或列<br><br>$\quad<br>\left|\begin{array}{ccc}<br>  \vdots     &amp;     \vdots  &amp;     &amp; \vdots\\<br>  {\large a}_{i1}+{\large b}_{i1} &amp; {\large a}_{i2}+{\large b}_{i2} &amp; \cdots&amp; {\large a}_{in}+{\large b}_{in}\\<br>  \vdots     &amp;      \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br>$=<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large a}_{i1} &amp; {\large a}_{i2} &amp; \cdots&amp; {\large a}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|+<br>\left|\begin{array}{ccc}<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>   {\large b}_{i1} &amp; {\large b}_{i2} &amp; \cdots&amp; {\large b}_{in}\\<br>  \vdots  &amp; \vdots &amp;     &amp; \vdots\\<br>\end{array}\right|<br>$<br><br><br><br><strong>证：</strong><br>$<br>\begin{aligned}<br>左<br>&amp;= \sum (-1)^{\tau(j_1\;j_2\cdots j_n)}\;{\large a}_{1j_1}\cdots({\large a}_{ij_i}+{\large b}_{ij_i})\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;= \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large a}_{ij_i}\cdots {\large a}_{nj_n}\\<br>\\<br>&amp;\quad+ \sum(-1)^{\tau(j_1\;j_2\cdots j_n)} \; {\large a}_{1j_1}\cdots{\large b}_{ij_i}\cdots {\large a}_{nj_n}<br>\end{aligned}<br>$</li>
+</ul>
+<p><strong>其他的性质:</strong></p>
+<ul>
+<li><p>如果行列式的值为0，则矩阵是<u><strong>奇异矩阵</strong></u>，也就是矩阵没有逆矩阵。</p>
+</li>
+<li><p>$|A|\not=0\Leftrightarrow r(A)=n\Leftrightarrow$矩阵可逆$\Leftrightarrow A\;$的行(列)向量线性组无关$\Leftrightarrow A\;$的特征值$\lambda\not=0$</p>
+</li>
+<li><p>（方阵）$|AB|=|A||B|$</p>
+</li>
+<li><p>$|A^{-1}|=\displaystyle\frac{1}{|A|}$</p>
+</li>
+<li><p>$|2A|=2^n|A|$</p>
+</li>
+</ul>
+<h2 id="代数余子式"><a href="#代数余子式" class="headerlink" title="代数余子式"></a>代数余子式</h2><p><strong>注意：代数余子式${\large a}_{ij}$需要带正负号，而代数余子式不需要，这里注意区分</strong></p>
+<ul>
+<li>$D={\large a}_{11}{\large a}_{11}+{\large a}_{12}{\large a}_{12}+\cdots+{\large a}_{1n}{\large a}_{1n}=\sum\limits_{j=1}^n{\large a}_{1j}{\large a}_{1j}$<br><br>$D={\large a}_{11}{\large a}_{11}+{\large a}_{21}{\large a}_{21}+\cdots+{\large a}_{n1}{\large a}_{n1}=\sum\limits_{i=1}^n{\large a}_{i1}{\large a}_{i1}$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(i=1,2,\cdots,n)\quad i行$<br><br>$D=\sum\limits_{j=1}^n {\large a}_{ij}{\large a}_{ij}\quad(j=1,2,\cdots,n)\quad j列$</li>
+</ul>
+<h2 id="特殊的行列式"><a href="#特殊的行列式" class="headerlink" title="特殊的行列式"></a>特殊的行列式</h2><h3 id="三角行列式"><a href="#三角行列式" class="headerlink" title="三角行列式"></a>三角行列式</h3><p>上三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; {\large a}_{12} &amp;\cdots&amp; {\large a}_{1n}\\<br>    0   &amp; {\large a}_{22} &amp;\cdots&amp; {\large a}_{2n}\\<br>    \vdots&amp;\vdots&amp;   &amp;\vdots\\<br>    0   &amp; 0   &amp;\cdots&amp; {\large a}_{nn}\\<br>\end{array}\right|<br>$</p>
+<p>下三角：</p>
+<p>$<br>\left|\begin{array}{ccc}<br>    {\large a}_{11} &amp; 0    &amp;\cdots&amp; 0\\<br>    {\large a}_{21} &amp; {\large a}_{22}&amp;\cdots&amp; 0\\<br>    \vdots&amp;\vdots &amp;    &amp;\vdots\\<br>    {\large a}_{n1} &amp; {\large a}_{n2}&amp;\cdots&amp;{\large a}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>$Det={\large a}_{11}{\large a}_{22}{\large a}_{33}\cdots {\large a}_{nn}$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这个可以通过逆序数理解</span></span><br></pre></td></tr></table></figure>
+<h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p>$<br>\qquad\left|\begin{array}{ccc}<br>    1  &amp;  1  &amp;  1  &amp; \cdots &amp; 1\\<br>    {\large a}_1 &amp; {\large a}_2 &amp; {\large a}_3 &amp; \cdots &amp; {\large a}_n\\<br>    {\large a}_1^2&amp;{\large a}_2^2&amp;{\large a}_3^2&amp; \cdots&amp; {\large a}_n^2\\<br>    \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>    {\large a}_1^{n-1}&amp;{\large a}_2^{n-1}&amp;{\large a}_3^{n-1}&amp;\cdots&amp;{\large a}_n^{n-1}<br>\end{array}\right|$</p>
+<p>$\;{\large=}\prod\limits_{1\leqslant j&lt;i\leqslant n}({\large a}_i-{\large a}_j)<br>$</p>
+<p><strong>应用</strong>  </p>
+<p>$D=<br>\left|\begin{array}{ccc}1&amp;1&amp;1\\{\large a}&amp;{\large b}&amp;{\large c}\\{\large a}^3&amp;{\large b}^3&amp;{\large c}^3\end{array}\right|的值$</p>
+<ul>
+<li>首先构造(注意积累)<br><br>$<br>\begin{aligned}<br>D_4&amp;=\left|\begin{array}{ccc}<br>1&amp;1&amp;1&amp;1\\<br>{\large a}&amp;{\large b}&amp;{\large c}&amp;{\large x}\\<br>{\large a}^2&amp;{\large b}^2&amp;{\large c}^2&amp;{\large x}^2\\<br>{\large a}^3&amp;{\large b}^3&amp;{\large c}^3&amp;{\large x}^3\\<br>\end{array}\right|\\<br>&amp;=1\cdot {\large a}_{14}+{\large x}\cdot {\large a}_{24}+{\large x}^2\cdot(-D)+{\large x}^3 \cdot {\large a}_{44}\\<br>&amp;=({\large x}-{\large c})({\large x}-{\large b})({\large x}-{\large a})({\large c}-{\large b})({\large c}-{\large a})({\large b}-{\large a})<br>\end{aligned}$<br>$\longrightarrow D\;$的值就是${\large x}_2$系数的负数</li>
+</ul>
+<h3 id="拉普拉斯展开式"><a href="#拉普拉斯展开式" class="headerlink" title="拉普拉斯展开式"></a>拉普拉斯展开式</h3><ul>
+<li>有一块全是零的行列式</li>
+</ul>
+<hr>
+<ul>
+<li>主对角线<br><br>$\quad<br>\left|\begin{array}{cccc:cccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}&amp;0&amp;0&amp;\cdots&amp;0\\<br>   \vdots&amp; \vdots  &amp; &amp; \vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}&amp;0&amp;0&amp;\cdots&amp;0\\<br>  \hdashline<br>  {\large c}_{11}&amp;{\large c}_{12}&amp;\cdots&amp;{\large c}_{1m}&amp;{\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large c}_{21}&amp;{\large c}_{22}&amp;\cdots&amp;{\large c}_{2m}&amp;{\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large c}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large c}_{mm}&amp;{\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br><br>${\large=}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;\cdots&amp;{\large a}_{1m}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;\cdots&amp;{\large a}_{2m}\\<br>  \vdots&amp;\vdots&amp;    &amp;\vdots\\<br>  {\large a}_{m1}&amp;{\large c}_{m2}&amp;\cdots&amp;{\large a}_{mm}\\<br>\end{array}\right|<br>$ $\cdot<br>\left|\begin{array}{ccc}<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;\cdots&amp;{\large b}_{1n}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;\cdots&amp;{\large b}_{2n}\\<br>  \vdots&amp;\vdots&amp;&amp;\vdots\\<br>  {\large b}_{n1}&amp;{\large b}_{n2}&amp;\cdots&amp;{\large b}_{nn}\\<br>\end{array}\right|<br>$<br><br></li>
+<li>副对角线<br><br>例<br><br>$\quad<br>\left|\begin{array}{cc:ccc}<br>  0&amp;0&amp;{\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  0&amp;0&amp;{\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  0&amp;0&amp;{\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}\\<br>  \hdashline<br>  {\large b}_{11}&amp;{\large b}_{12}&amp;{\large c}_{11}&amp;{\large c}_{12}&amp;{\large c}_{13}\\<br>  {\large b}_{21}&amp;{\large b}_{22}&amp;{\large c}_{21}&amp;{\large c}_{22}&amp;{\large c}_{23}<br>\end{array}\right|<br>$<br><br>$=(-1)^{3\times2}<br>\left|\begin{array}{ccc}<br>  {\large a}_{11}&amp;{\large a}_{12}&amp;{\large a}_{13}\\<br>  {\large a}_{21}&amp;{\large a}_{22}&amp;{\large a}_{23}\\<br>  {\large a}_{31}&amp;{\large a}_{31}&amp;{\large a}_{33}<br>\end{array}\right|<br>\cdot<br>\left|\begin{array}{cc}<br>  {\large b}_{11}&amp;{\large b}_{12}\\<br>  {\large b}_{21}&amp;{\large b}_{22}<br>\end{array}\right|<br>$<br><br>$\qquad\uparrow$<br><br>$3\times2\;表示:\;A\;的阶数\times B\;的阶数$<br><br>$\qquad \qquad\quad\; ps:$当然也可以交换列，转化成主对角线的拉普拉斯展开<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 分块求解行列式</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>目前对于行列式的笔记就到这儿，后面会继续深入研究……</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
+      <meta itemprop="name" content="lbl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="追梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/16/0.%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/" class="post-title-link" itemprop="url">0. 知识储备</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-16 23:09:57" itemprop="dateCreated datePublished" datetime="2021-06-16T23:09:57+08:00">2021-06-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-25 23:30:58" itemprop="dateModified" datetime="2021-06-25T23:30:58+08:00">2021-06-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">线性代数</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="和号-sum"><a href="#和号-sum" class="headerlink" title="和号$\sum$"></a>和号$\sum$</h1><p>${\large a}_1+{\large a}_2+\cdots+{\large a}_n<br>=\sum\limits_{i=1}^n {\large a}_i$</p>
+<p>${\large a}_{11}+{\large a}_{12}+\cdots+{\large a}_{1m}<br>=\sum\limits_{j=1}^n {\large a}_{1j}$</p>
+<p>${\large a}_1x_1+{\large a}_2x_2+{\large a}_3x_3<br>=\sum\limits_{i=1}^3 {\large a}_ix_i$</p>
+<p>$\sum\limits_{i=1}^3 ({\large a}_i+{\large b}_i)x_i<br>=\sum\limits_{i=1}^3 {\large a}_ix_i+<br>\sum\limits_{i=1}^3 {\large b}_ix_i$</p>
+<p>$\sum\limits_{i=1}^n {\large a}_i<br>=\sum\limits_{j=1}^n {\large a}_j$</p>
+<p>$\sum\limits_{i=1}^n k{\large a}_i<br>=k\sum\limits_{i=1}^n {\large a}_i$<br><br></p>
+<ul>
+<li>双和号<br>$<br>\begin{array}{lll}<br>{\large a}_{11} + {\large a}_{12} + \cdots+ {\large a}_{1n}<br>= \sum\limits_{j=1}^n {\large a}_{1j}\\<br>{\large a}_{21} + {\large a}_{22} + \cdots+ {\large a}_{2n}<br>= \sum\limits_{j=1}^n {\large a}_{2j}\\<br>\vdots\qquad\quad\vdots\qquad\quad\;\qquad\vdots\\<br>{\large a}_{m1} + {\large a}_{m2} + \cdots + {\large a}_{mm}<br>= \sum\limits_{j=1}^n {\large a}_{mj}\\<br>\downarrow\qquad\quad\downarrow\qquad\qquad\downarrow\\<br>\sum\limits_{i=1}^m {\large a}_{i1}\,<br>\sum\limits_{i=1}^m {\large a}_{i2}\;\cdots\;<br>\sum\limits_{i=1}^m {\large a}_{in}<br>\end{array}<br>$<br><br>先横着相加再竖着相加：<br>$\sum\limits_{j=1}^n {\large a}_{1j}+\sum\limits_{j=1}^n<br>{\large a}_{2j}+\cdots+\sum\limits_{j=1}^n<br>{\large a}_{mj}=\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}$<br><br>按竖着相加再横着相加：<br>$\sum\limits_{i=1}^m {\large a}_{i1}+<br>\sum\limits_{i=1}^m {\large a}_{i2}+\cdots+\sum\limits_{i=1}^m<br>{\large a}_{in}=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>所以$\sum\limits_{i=1}^m\sum\limits_{j=1}^n {\large a}_{ij}<br>=\sum\limits_{j=1}^n\sum\limits_{i=1}^m {\large a}_{ij}$<br><br>未完待续……</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/06/15/%E5%88%9D%E5%85%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -427,20 +863,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-count">80</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -496,12 +932,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">266k</span>
+    <span title="站点总字数">267k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:02</span>
+    <span title="站点阅读时长">4:03</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
@@ -665,6 +1101,59 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
