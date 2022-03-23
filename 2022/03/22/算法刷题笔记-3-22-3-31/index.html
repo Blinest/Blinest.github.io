@@ -19,21 +19,20 @@
     var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="CSS 的背景背景颜色background-color 属性定义了元素的背景颜色1background-color: 颜色值;一般情况下元素背景颜色默认值是 transparent(透明)，我们也可以手动指定背景颜色为透明色。 背景图片background-image 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置1backgroun">
+  <meta name="description" content="3.22stack.peek() 和 stack.pop() 的区别 peek()  是不删除取出，pop() 是取出并删除 摩尔投票法多数元素">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3.CSS的背景">
-<meta property="og:url" content="https://mdreamers.github.io/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/index.html">
+<meta property="og:title" content="算法刷题笔记(3.22-3.31)">
+<meta property="og:url" content="https://mdreamers.github.io/2022/03/22/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0-3-22-3-31/index.html">
 <meta property="og:site_name" content="追梦">
-<meta property="og:description" content="CSS 的背景背景颜色background-color 属性定义了元素的背景颜色1background-color: 颜色值;一般情况下元素背景颜色默认值是 transparent(透明)，我们也可以手动指定背景颜色为透明色。 背景图片background-image 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置1backgroun">
+<meta property="og:description" content="3.22stack.peek() 和 stack.pop() 的区别 peek()  是不删除取出，pop() 是取出并删除 摩尔投票法多数元素">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-20T08:41:01.000Z">
-<meta property="article:modified_time" content="2021-09-14T09:09:12.280Z">
+<meta property="article:published_time" content="2022-03-22T00:43:24.000Z">
+<meta property="article:modified_time" content="2022-03-23T14:33:28.255Z">
 <meta property="article:author" content="lbl">
-<meta property="article:tag" content="CSS">
-<meta property="article:tag" content="前端">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://mdreamers.github.io/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/">
+<link rel="canonical" href="https://mdreamers.github.io/2022/03/22/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0-3-22-3-31/">
 
 
 <script id="page-configurations">
@@ -46,7 +45,7 @@
   };
 </script>
 
-  <title>3.CSS的背景 | 追梦</title>
+  <title>算法刷题笔记(3.22-3.31) | 追梦</title>
   
 
 
@@ -192,7 +191,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2021/07/20/3-CSS%E7%9A%84%E8%83%8C%E6%99%AF/">
+    <link itemprop="mainEntityOfPage" href="https://mdreamers.github.io/2022/03/22/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0-3-22-3-31/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/wallhaven-m9q6e9.jpg">
@@ -205,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          3.CSS的背景
+          算法刷题笔记(3.22-3.31)
         </h1>
 
         <div class="post-meta">
@@ -215,14 +214,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-07-20 16:41:01" itemprop="dateCreated datePublished" datetime="2021-07-20T16:41:01+08:00">2021-07-20</time>
+              <time title="创建时间：2022-03-22 08:43:24" itemprop="dateCreated datePublished" datetime="2022-03-22T08:43:24+08:00">2022-03-22</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-14 17:09:12" itemprop="dateModified" datetime="2021-09-14T17:09:12+08:00">2021-09-14</time>
+                <time title="修改时间：2022-03-23 22:33:28" itemprop="dateModified" datetime="2022-03-23T22:33:28+08:00">2022-03-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,7 +229,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
                 </span>
             </span>
 
@@ -247,7 +246,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -266,102 +265,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="CSS-的背景"><a href="#CSS-的背景" class="headerlink" title="CSS 的背景"></a>CSS 的背景</h1><h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><strong>background-color</strong> 属性定义了元素的背景颜色<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: 颜色值;</span><br></pre></td></tr></table></figure><br>一般情况下元素背景颜色默认值是 <strong>transparent(透明)</strong>，我们也可以手动指定背景颜色为透明色。</p>
-<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p><strong>background-image</strong> 属性描述了元素的背景图像，实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">绝对或相对位置</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h2><p>如果需要在HTML页面上对背景图像进行平铺，可以使用 <strong>background-repeat</strong> 属性<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat | no-repeat | repeat-x | repeat-y </span><br></pre></td></tr></table></figure></p>
-<h2 id="背景图片位置"><a href="#背景图片位置" class="headerlink" title="背景图片位置"></a>背景图片位置</h2><p>利用 <strong>bcakground-positon</strong> 属性可以改变图片在背景中的位置。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br></pre></td></tr></table></figure><br>参数代表的意思是：x坐标和y坐标，可以使用方位名词或者精确单位</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数值</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">length</td>
-<td style="text-align:left">百分数 / 由浮点数字和单位标识符组成的长度值</td>
-</tr>
-<tr>
-<td style="text-align:left">position</td>
-<td style="text-align:left">方位名词：<br>top / center / bottom <br>left / center / right </td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>1.参数是方位名词</strong></p>
-<ul>
-<li>如果指定的两个值都是方位名词，则两个值前后顺序无关，比如left top和top left 效果一样</li>
-<li>如果指定了一个方位名词，另一个省略，则第二个值<strong>默认居中对齐</strong></li>
-</ul>
-<p><strong>2.参数是精确单位</strong></p>
-<ul>
-<li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个肯定是y坐标</li>
-<li>如果只指定一个数值，那该数值一定是x坐标，另一个<strong>默认垂直居中</strong></li>
-</ul>
-<p><strong>3.参数是混合单位</strong></p>
-<ul>
-<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标</li>
-</ul>
-<h2 id="背景图像固定（背景附着）"><a href="#背景图像固定（背景附着）" class="headerlink" title="背景图像固定（背景附着）"></a>背景图像固定（背景附着）</h2><p><strong>background-attachment</strong> 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
-<p>background-attachment后期可以制作时差滚动效果<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: <span class="built_in">fixed</span>(固定) | <span class="built_in">scroll</span>(滚动) </span><br></pre></td></tr></table></figure></p>
-<h2 id="背景复合写法"><a href="#背景复合写法" class="headerlink" title="背景复合写法"></a>背景复合写法</h2><p>我们可以将这些属性合并写在同一个属性background中，<strong>约定的顺序</strong>为：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</span><br></pre></td></tr></table></figure>
-<h2 id="背景色半透明"><a href="#背景色半透明" class="headerlink" title="背景色半透明"></a>背景色半透明</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>rgba也就是red、green、blue、alpha</strong></p>
-<ul>
-<li>最后一个参数是 <strong>alpha</strong> 透明度，取值范围0~1之间</li>
-<li><strong>习惯上把0.3的0省略</strong>，写为background: rgba(0,0,0,.3);</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">作用</th>
-<th style="text-align:left">值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">background-color</td>
-<td style="text-align:left">背景颜色</td>
-<td style="text-align:left">预定义颜色值、十六进制、RGB代码</td>
-</tr>
-<tr>
-<td style="text-align:left">background-image</td>
-<td style="text-align:left">背景图片</td>
-<td style="text-align:left">url(图片路径)</td>
-</tr>
-<tr>
-<td style="text-align:left">background-repeat</td>
-<td style="text-align:left">是否平铺</td>
-<td style="text-align:left">repeat / no-repeat / repeat-x / repeat-y</td>
-</tr>
-<tr>
-<td style="text-align:left">background-position</td>
-<td style="text-align:left">背景位置</td>
-<td style="text-align:left">length / positon 分别是x和y坐标</td>
-</tr>
-<tr>
-<td style="text-align:left">background-attachment</td>
-<td style="text-align:left">背景附着</td>
-<td style="text-align:left">scroll(滚动) / fixed(固定)</td>
-</tr>
-<tr>
-<td style="text-align:left">背景简写</td>
-<td style="text-align:left">减少代码量</td>
-<td style="text-align:left"><strong>background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置;</strong></td>
-</tr>
-<tr>
-<td style="text-align:left">背景色半透明</td>
-<td style="text-align:left">背景颜色半透明</td>
-<td style="text-align:left">background:rgba(0,0,0,.3); 后面<strong>必须是4个值</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
+        <h1 id="3-22"><a href="#3-22" class="headerlink" title="3.22"></a>3.22</h1><p><code>stack.peek()</code> 和 <code>stack.pop()</code> 的区别</p>
+<p><code>peek()</code>  是不删除取出，<code>pop()</code> 是取出并删除</p>
+<h2 id="摩尔投票法"><a href="#摩尔投票法" class="headerlink" title="摩尔投票法"></a>摩尔投票法</h2><p><strong>多数元素</strong></p>
+<span id="more"></span>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> res = nums[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    <span class="comment">//遇到友军阵容增加</span></span><br><span class="line">        <span class="keyword">if</span> (res == nums[i])</span><br><span class="line">            count++;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//遭遇敌军，对拼消耗</span></span><br><span class="line">            count--;</span><br><span class="line">        <span class="comment">//该批友军阵亡，换下一批作为友军记录</span></span><br><span class="line">            <span class="keyword">if</span> (count == <span class="number">0</span>) &#123;</span><br><span class="line">                res = nums[i + <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="3-23"><a href="#3-23" class="headerlink" title="3.23"></a>3.23</h1><h2 id="常数时间插入、删除和获取随机元素"><a href="#常数时间插入、删除和获取随机元素" class="headerlink" title="常数时间插入、删除和获取随机元素"></a>常数时间插入、删除和获取随机元素</h2><p>首先这一题的难点在于所有方法平均时间复杂度是 O(1)</p>
+<p>这道题很好的利用了map插入删除时间复杂度O(1)和动态数组有序可以使用random 随机抽取的特点。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RandomizedSet</span> </span>&#123;</span><br><span class="line">    Map&lt;Integer,Integer&gt; map;</span><br><span class="line">    List&lt;Integer&gt; list;</span><br><span class="line">    Random random = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RandomizedSet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(map.containsKey(val)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        map.put(val, list.size());</span><br><span class="line">        list.add(list.size(), val);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!map.containsKey(val)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="comment">// 将该值的索引拿到，和最后一个数进行替换，将这个数移到最后一个位置</span></span><br><span class="line">        <span class="keyword">int</span> index = map.get(val);</span><br><span class="line">        <span class="keyword">int</span> lastElement = list.get(list.size() - <span class="number">1</span>);</span><br><span class="line">        list.set(index, lastElement);</span><br><span class="line">        map.put(lastElement, index);</span><br><span class="line">        list.remove(list.size() - <span class="number">1</span>);</span><br><span class="line">        map.remove(val);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getRandom</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> list.get(random.nextInt(list.size()));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="random类"><a href="#random类" class="headerlink" title="random类"></a>random类</h3><p><code>nextInt(int n)</code>方法：返回一个伪随机数，范围在0(包括)和指定值 n (不包括)之间的 int 值。</p>
+<p>由于这里是0—n-1，如果想要获取1—n就可以加一，以此类推。</p>
+<p><strong>随机数种子</strong></p>
+<p>指定种子，以某个种子作为随机数</p>
+<p><code>setSeed(long seed)</code> ：只要定好种子，比如 <code>random.setSeed(9)</code> 那么后面返回的就是固定的随机数。</p>
+<p><strong><code>Random random = new Random()</code></strong>：没有给种子，用的是默认种子，是当前时间的毫秒值</p>
+<p><strong><code>Random random = new Random(99)</code></strong>：指定种子，后面返回的就是固定值</p>
 
     </div>
 
@@ -371,8 +289,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/CSS/" rel="tag"># CSS</a>
-              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
           </div>
 
         
@@ -381,13 +298,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/07/20/2-CSS%E5%AD%97%E4%BD%93%E4%B8%8E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/" rel="prev" title="2.CSS字体与文本属性">
-      <i class="fa fa-chevron-left"></i> 2.CSS字体与文本属性
+    <a href="/2022/03/12/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0-3-12-3-21/" rel="prev" title="算法刷题笔记(3.12-3.21)">
+      <i class="fa fa-chevron-left"></i> 算法刷题笔记(3.12-3.21)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/07/20/4-CSS%E7%9A%84%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/" rel="next" title="4.CSS的元素显示模式">
-      4.CSS的元素显示模式 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -446,7 +360,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-%E7%9A%84%E8%83%8C%E6%99%AF"><span class="nav-text">CSS 的背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2"><span class="nav-text">背景颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="nav-text">背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%B9%B3%E9%93%BA"><span class="nav-text">背景平铺</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E4%BD%8D%E7%BD%AE"><span class="nav-text">背景图片位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E5%83%8F%E5%9B%BA%E5%AE%9A%EF%BC%88%E8%83%8C%E6%99%AF%E9%99%84%E7%9D%80%EF%BC%89"><span class="nav-text">背景图像固定（背景附着）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%A4%8D%E5%90%88%E5%86%99%E6%B3%95"><span class="nav-text">背景复合写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%89%B2%E5%8D%8A%E9%80%8F%E6%98%8E"><span class="nav-text">背景色半透明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#3-22"><span class="nav-text">3.22</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%A9%E5%B0%94%E6%8A%95%E7%A5%A8%E6%B3%95"><span class="nav-text">摩尔投票法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-23"><span class="nav-text">3.23</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E6%95%B0%E6%97%B6%E9%97%B4%E6%8F%92%E5%85%A5%E3%80%81%E5%88%A0%E9%99%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E9%9A%8F%E6%9C%BA%E5%85%83%E7%B4%A0"><span class="nav-text">常数时间插入、删除和获取随机元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#random%E7%B1%BB"><span class="nav-text">random类</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -700,6 +614,59 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
