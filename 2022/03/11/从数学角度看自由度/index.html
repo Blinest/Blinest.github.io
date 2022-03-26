@@ -19,15 +19,15 @@
     var CONFIG = {"hostname":"mdreamers.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="这段时间机械原理学了自由度，为探究其原理,所以就想用一篇文章记录,希望能够对自己的学习有些帮助吧 前置知识自由度计算公式：$F&#x3D;3n-2P_L-P_H$ 低副($P_L$)：移动副，转动副 高副($P_H$)：平面高副 自由度的判断的特殊情况： 复合铰链：两个以上的构件同在一处以转动副相连 局部自由度：不影响机构输出运动的自由度 虚约束：存在重复约束的机构 I级机构：机架和主动件构成 II级构件：">
+  <meta name="description" content="这段时间机械原理学了自由度，为探究其原理，所以就想用一篇文章来进行理解和记录，希望能够对自己的学习有些帮助吧 前置知识自由度计算公式：$F&#x3D;3n-2P_L-P_H$ 低副($P_L$)：移动副，转动副 高副($P_H$)：平面高副 自由度的判断的特殊情况： 复合铰链：两个以上的构件同在一处以转动副相连 局部自由度：不影响机构输出运动的自由度 虚约束：存在重复约束的机构 I级机构：机架和主动件构成">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从数学角度看自由度">
 <meta property="og:url" content="https://mdreamers.github.io/2022/03/11/%E4%BB%8E%E6%95%B0%E5%AD%A6%E8%A7%92%E5%BA%A6%E7%9C%8B%E8%87%AA%E7%94%B1%E5%BA%A6/index.html">
 <meta property="og:site_name" content="追梦">
-<meta property="og:description" content="这段时间机械原理学了自由度，为探究其原理,所以就想用一篇文章记录,希望能够对自己的学习有些帮助吧 前置知识自由度计算公式：$F&#x3D;3n-2P_L-P_H$ 低副($P_L$)：移动副，转动副 高副($P_H$)：平面高副 自由度的判断的特殊情况： 复合铰链：两个以上的构件同在一处以转动副相连 局部自由度：不影响机构输出运动的自由度 虚约束：存在重复约束的机构 I级机构：机架和主动件构成 II级构件：">
+<meta property="og:description" content="这段时间机械原理学了自由度，为探究其原理，所以就想用一篇文章来进行理解和记录，希望能够对自己的学习有些帮助吧 前置知识自由度计算公式：$F&#x3D;3n-2P_L-P_H$ 低副($P_L$)：移动副，转动副 高副($P_H$)：平面高副 自由度的判断的特殊情况： 复合铰链：两个以上的构件同在一处以转动副相连 局部自由度：不影响机构输出运动的自由度 虚约束：存在重复约束的机构 I级机构：机架和主动件构成">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-11T03:13:28.000Z">
-<meta property="article:modified_time" content="2022-03-26T03:42:57.230Z">
+<meta property="article:modified_time" content="2022-03-26T13:01:27.407Z">
 <meta property="article:author" content="lbl">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-26 11:42:57" itemprop="dateModified" datetime="2022-03-26T11:42:57+08:00">2022-03-26</time>
+                <time title="修改时间：2022-03-26 21:01:27" itemprop="dateModified" datetime="2022-03-26T21:01:27+08:00">2022-03-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -246,7 +246,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>377</span>
+              <span>417</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这段时间机械原理学了自由度，为探究其原理,所以就想用一篇文章记录,希望能够对自己的学习有些帮助吧</p>
+        <p>这段时间机械原理学了自由度，为探究其原理，所以就想用一篇文章来进行理解和记录，希望能够对自己的学习有些帮助吧</p>
 <h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><p>自由度计算公式：$F=3n-2P_L-P_H$</p>
 <p>低副($P_L$)：移动副，转动副</p>
 <p>高副($P_H$)：平面高副</p>
@@ -277,13 +277,14 @@
 <p><strong>II级构件</strong>：2杆3低副</p>
 <p><strong>III级构件</strong>：4杆6低副</p>
 <p><strong>高副低代</strong></p>
-<h1 id="数学解释"><a href="#数学解释" class="headerlink" title="数学解释"></a>数学解释</h1><h2 id="低副"><a href="#低副" class="headerlink" title="低副"></a>低副</h2><p>约束掉2个自由度，也就是说只能做简单运动，平移或旋转</p>
-<h2 id="高副"><a href="#高副" class="headerlink" title="高副"></a>高副</h2><p>约束掉1个自由度，也就是说在旋转的同时还可以进行平移，</p>
+<h1 id="数学解释"><a href="#数学解释" class="headerlink" title="数学解释"></a>数学解释</h1><p>由于机械原理中讨论的自由度都是在平面中，所以这里也都简化在平面上来理解</p>
+<h2 id="低副"><a href="#低副" class="headerlink" title="低副"></a>低副</h2><p>约束掉2个自由度，也就是说只能做简单运动，平移或旋转</p>
+<h2 id="高副"><a href="#高副" class="headerlink" title="高副"></a>高副</h2><p>约束掉1个自由度，也就是说在旋转的同时还可以进行平移</p>
 <h2 id="自由度"><a href="#自由度" class="headerlink" title="自由度"></a>自由度</h2><p><strong>对于空间构件：</strong></p>
 <p>自由度就是构件可以沿x,y,z轴移动和旋转，最多6个自由度</p>
 <p><strong>对于平面构件：</strong></p>
 <p>自由度就是构件可以沿x,y轴移动和平面旋转，最多有3个自由度</p>
-<h2 id="高副低代"><a href="#高副低代" class="headerlink" title="高副低代"></a>高副低代</h2><p>一个高副其实可以用两个低副+一个活动构件来代替。</p>
+<h2 id="高副低代"><a href="#高副低代" class="headerlink" title="高副低代"></a>高副低代</h2><p>一个高副其实可以用两个低副 + 一个活动构件来代替。</p>
 
     </div>
 
@@ -452,12 +453,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">300k</span>
+    <span title="站点总字数">303k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:33</span>
+    <span title="站点阅读时长">4:35</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
